@@ -1,7 +1,7 @@
 import React from 'react';
 import { cn } from '../utils/lib';
 
-export const Button = ({ children, className = '', variant = 'primary', onClick }) => {
+export const Button = ({ children, className = '', variant = 'primary', ...props }) => {
   const baseStyles = 'px-4 py-2 rounded-md font-medium';
   const variantStyles = {
     primary: 'bg-blue-500 text-white hover:bg-blue-600',
@@ -11,8 +11,8 @@ export const Button = ({ children, className = '', variant = 'primary', onClick 
 
   return (
     <button
+    {...props}
       className={cn(`${baseStyles} ${variantStyles[variant] || ''} ${className}`)}
-      onClick={onClick}
     >
       {children}
     </button>
