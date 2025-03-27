@@ -17,7 +17,6 @@ function App() {
           timeout: 1000
         })
       }} className="mt-5 bg-red-500">Browse Components</Button>
-     
     </div>
     </>
   )
