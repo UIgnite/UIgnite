@@ -10,7 +10,7 @@ function App() {
       <h1 className="text-6xl font-bold tracking-wide text-orange-500 ">
         UIgnite 🔥
       </h1>
-      <Button className="mt-5 bg-red-500">Browse Components</Button>
+      <Button className="mt-5  bg-red-500">Browse Components</Button>
      
     </div>
     </>
