@@ -3,7 +3,7 @@ import { useToast } from "./hooks/toast"
 
 
 function App() {
-  const toast = useToast()  
+  const toast = useToast()
 
   return (
     <>
@@ -14,7 +14,7 @@ function App() {
       <Button onClick={()=>{
         toast.showToast("New toast here", {
           desc: "I am the new desc.",
-          timeout: 1000
+          timeout: 7000
         })
       }} className="mt-5 bg-red-500">Browse Components</Button>
     </div>

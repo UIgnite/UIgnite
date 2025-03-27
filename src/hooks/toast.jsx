@@ -11,35 +11,55 @@ import {
 const ToastContext = createContext(null);
 
 const ToastProvider = ({ children }) => {
-  const toastRef = useRef(null);
-
-  const [title, setTitle] = useState("Toast is here");
-  const [options, setOptions] = useState({
-    variant: "default",
-    desc: null,
-    timeout: 3000,
-  });
+  const [toasts, setToasts] = useState([]);
+  const [hovered, setHovered] = useState(false);
 
   const handleShowToast = useCallback(
     (ttle, opt) => {
-      setTitle(ttle);
-      setOptions((options) => ({ ...options, ...opt }));
-      if (toastRef.current) {
-        if (toastRef.current.classList.contains("-bottom-20")) {
-          toastRef.current.classList.replace("-bottom-20", "bottom-10");
-          setTimeout(() => {
-            toastRef.current.classList.replace("bottom-10", "-bottom-20");
-          }, options.timeout);
-        }
-      }
+      const toast = {
+        id: crypto.randomUUID(),
+        title: ttle,
+        options: {
+          variant: "default",
+          desc: null,
+          timeout: 5000,
+          ...opt,
+        },
+      };
+      setToasts((toasts) => {
+        const newToasts = toasts;
+        newToasts.length > 2 ? newToasts.splice(1, 1) : null;
+        return [...newToasts, toast];
+      });
+      setTimeout(() => {
+        setToasts((toasts) => {
+          const lToasts = [...toasts];
+          const index = lToasts.findIndex((value) => value.id == toast.id);
+          if (index <= -1) return lToasts;
+          lToasts.splice(index, 1);
+          return lToasts;
+        });
+      }, toast.options.timeout);
     },
-    [setTitle, setOptions, toastRef, options, title]
+    [setToasts, hovered, setHovered]
   );
 
   return (
     <ToastContext.Provider value={{ showToast: handleShowToast }}>
       {children}
-      <Toast ref={toastRef} title={title} options={options} />
+      <div onMouseEnter={()=>setHovered(true)} onMouseLeave={()=>setHovered(false)}>
+        {toasts.map((toast, idx) =>
+          toast.options.timeout ? (
+            <Toast
+              idx={idx}
+              key={idx}
+              title={toast.title}
+              options={toast.options}
+              hovered={hovered}
+            />
+          ) : null
+        )}
+      </div>
     </ToastContext.Provider>
   );
 };
