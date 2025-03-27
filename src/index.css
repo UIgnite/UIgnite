@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+.tooltip {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+}
+
+.tooltip-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
