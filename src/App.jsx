@@ -1,4 +1,5 @@
 import { Button } from "./components/Button"
+import Tooltip from "./components/Tooltip.jsx"
 import { useToast } from "./hooks/toast"
 
 
@@ -17,7 +18,10 @@ function App() {
           timeout: 7000
         })
       }} className="mt-5 bg-red-500">Browse Components</Button>
-    </div>
+    
+      <Tooltip className="" title={"I am Tooltip "} options={ { delay : 300 }} > Hover me</Tooltip>
+     </div>
+    
     </>
   )
 }
