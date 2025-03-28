@@ -8,8 +8,11 @@ import {
   useRef,
 } from "react";
 
+// creating toast context using react createContent
 const ToastContext = createContext(null);
 
+
+// ToastProvider to wrap all the code to use toast in entire application
 const ToastProvider = ({ children }) => {
   const [toasts, setToasts] = useState([]);
   const [hovered, setHovered] = useState(false);
@@ -47,7 +50,10 @@ const ToastProvider = ({ children }) => {
   return (
     <ToastContext.Provider value={{ showToast: handleShowToast }}>
       {children}
-      <div onMouseEnter={()=>setHovered(true)} onMouseLeave={()=>setHovered(false)}>
+      <div
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+      >
         {toasts.map((toast, idx) =>
           toast.options.timeout ? (
             <Toast
