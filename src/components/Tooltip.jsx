@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { cn } from "../utils/lib.js";
 
-const Tooltip = ({ children, title, options  }) => {
+export const Tooltip = ({ children, title, options  }) => {
   const [visible, setVisible] = useState(false);
   let timeout;
 
@@ -22,7 +22,7 @@ const Tooltip = ({ children, title, options  }) => {
       {visible && (
         <div
           style={options.tootipStyle}
-          className={ cn("absolute bottom-full text-xs font-sans font-medium -translate-y-2 mt-5 px-4 py-1 rounded-md  text-black bg-white shadow-lg transition-opacity duration-300 opacity-100", options.tooltipClassName )} >
+          className={ cn("absolute bottom-full left-1/2 -translate-x-1/2 text-sm text-center w-28 h-8 font-sans font-medium  px-4 py-1 rounded-md  text-black bg-white shadow-lg transition-opacity duration-300 opacity-100", options.tooltipClassName )} >
           {title}
         </div>
       )}
@@ -41,4 +41,4 @@ const Tooltip = ({ children, title, options  }) => {
   );
 };
 
-export default Tooltip;
+
