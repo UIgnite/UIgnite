@@ -1,7 +1,7 @@
 import { Button } from "./components/Button"
 import Tooltip from "./components/Tooltip.jsx"
 import { useToast } from "./hooks/toast"
-
+import Accordion from "./components/Accordion.jsx"
 
 function App() {
   const toast = useToast()
@@ -20,6 +20,8 @@ function App() {
       }} className="mt-5 bg-red-500">Browse Components</Button>
     
       <Tooltip className="" title={"I am Tooltip "} options={ { delay : 300 }} > Hover me</Tooltip>
+      <Accordion className="" title={"I am title "} content={"this is content"}></Accordion>
+      <Accordion className="" title={"I am title "} content={"this is content"}></Accordion>
      </div>
     
     </>

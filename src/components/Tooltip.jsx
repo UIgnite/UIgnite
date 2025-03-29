@@ -18,8 +18,7 @@ const Tooltip = ({ children, title, options  }) => {
   }
 
   return (
-    <div className={cn("relative inline-block mt-20", options.containerClassName) }>
-     
+    <div className={cn("relative inline-block mt-10", options.containerClassName) }>
       {visible && (
         <div
           style={options.tootipStyle}
@@ -34,6 +33,7 @@ const Tooltip = ({ children, title, options  }) => {
         onMouseLeave={hideTooltip}
         
         aria-label={title}
+        className=" hover:bg-gray-800 px-2 py-1 rounded-sm"
       >
         {children}
       </div>
