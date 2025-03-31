@@ -10,3 +10,20 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+1.  Button  -> Saurav
+2.  Toast   -> Adi
+3.  TextArea    -> Janvi
+4.  Resizable   -> Adi
+5.  Tooltip     -> Ram
+6.  Accordion   -> Ram
+7.  Form       -> Aman
+8.  Skeleton    -> Saurav
+9.  Avatar      -> Aman
+10. Dropdown    -> Adi
+11. Navbar      -> Ansh 
+12. Input OTP   -> Aman
+13. Input       -> Aman
+14. Date Picker -> Sagar
+15. Sonner      -> Adi
