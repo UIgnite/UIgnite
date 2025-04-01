@@ -33,7 +33,7 @@ export const Tooltip = ({ children, title, options  }) => {
         onMouseLeave={hideTooltip}
         
         aria-label={title}
-        className=" hover:bg-gray-800 px-2 py-1 rounded-sm"
+        className=""
       >
         {children}
       </div>
