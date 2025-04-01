@@ -14,7 +14,7 @@ const Accordion = ({title, content}) => {
 
   return (
     <>
-    <div >
+    <div>
       <div onClick={toggleAccordion} className=' hover:bg-gray-800 flex items-center justify-between min-w-2xs rounded-md min-h-md ease-in-out'>
         <div className='ml-2 px-2 py-2'> {title} </div> 
         <svg className={`mr-2 transform transition-transform duration-300 ${visible ? "rotate-180" : "rotate-0"}`}

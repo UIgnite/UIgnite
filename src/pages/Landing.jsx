@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../components/Button";
 import { Link } from "react-router-dom";
+import Accordion from "../components/Accordion";
 
 const Landing = () => {
   return (
@@ -36,6 +37,8 @@ const Landing = () => {
         <Button className="bg-gray-50 text-black hover:bg-gray-100">
         <Link to="/components">Browse Components</Link>
         </Button>
+
+        <Accordion title={"this is title "} content={"this is content"} ></Accordion>
       </div>
     </div>
   );
