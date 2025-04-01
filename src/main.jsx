@@ -11,12 +11,14 @@ import {
 } from "react-router-dom";
 import Landing from "./pages/Landing.jsx";
 import Components from "./pages/Components.jsx";
+import PricingPage from "./pages/PricingPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>     
         <Route path="/" element={<Landing/>} />
         <Route path="components" element={<Components/>} />
+        <Route path="pricing" element={<PricingPage/>}/>
        
     </>
   )

@@ -11,7 +11,7 @@ const Components = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center h-screen  text-center bg-zinc-700">
+      <div className="flex flex-col items-center justify-center h-screen text-center bg-zinc-700">
         <Button
           onClick={() => {
             toast.showToast("New toast here", {
