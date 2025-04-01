@@ -27,6 +27,8 @@ const Components = () => {
 
         <Avatar url={"piyush-sir.png"} alt={"user"} />
         <Avatar url={"hitesh-sir.png"} alt={"user"} />
+        <Button variant="dark" className="mt-10" isLoading></Button>
+        <Button variant="gradient" className="mt-10">Click Me</Button>
       </div>
     </>
   );
