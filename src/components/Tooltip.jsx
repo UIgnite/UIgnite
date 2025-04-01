@@ -13,7 +13,7 @@ export const Tooltip = ({ children, title, options  }) => {
   const hideTooltip = () =>{
     timeout = setTimeout(() =>{
       clearTimeout(timeout)
-      setVisible(false)
+      setVisible(false)       
     },options.delay)
   }
 
