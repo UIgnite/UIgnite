@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../components/Button";
 import { Tooltip } from "../components/Tooltip";
 import { useToast } from "../hooks/toast";
 import Avatar from "../components/Avatar";
+import { DatePicker } from "../components/DatePicker";
 
 const Components = () => {
   const toast = useToast();
+  const [selectedDate, setSelectedDate] = useState(null);
+
   return (
     <>
       <div className="flex flex-col items-center justify-center h-screen  text-center bg-zinc-700">
@@ -27,6 +30,21 @@ const Components = () => {
 
         <Avatar url={"piyush-sir.png"} alt={"user"} />
         <Avatar url={"hitesh-sir.png"} alt={"user"} />
+
+        <div className="mt-5 p-4 bg-white rounded-md">
+          <h3 className="text-lg font-semibold mb-2">Date Picker</h3>
+          <DatePicker
+            value={selectedDate}
+            onChange={setSelectedDate}
+            placeholder="Select a date"
+            className="w-64"
+          />
+          {selectedDate && (
+            <p className="mt-2 text-gray-600">
+              Selected Date: {selectedDate.toLocaleDateString()}
+            </p>
+          )}
+        </div>
       </div>
     </>
   );
