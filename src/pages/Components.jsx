@@ -45,6 +45,11 @@ const Components = () => {
             </p>
           )}
         </div>
+
+        <Button variant="dark" className="mt-10" isLoading></Button>
+        <Button variant="gradient" className="mt-10">
+          Click Me
+        </Button>
       </div>
     </>
   );
