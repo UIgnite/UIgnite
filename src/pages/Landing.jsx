@@ -38,7 +38,6 @@ const Landing = () => {
         <Link to="/components">Browse Components</Link>
         </Button>
 
-        <Accordion title={"this is title "} content={"this is content"} ></Accordion>
       </div>
     </div>
   );

@@ -3,6 +3,8 @@ import { Button } from "../components/Button";
 import { Tooltip } from "../components/Tooltip";
 import { useToast } from "../hooks/toast";
 import Avatar from "../components/Avatar";
+import Accordion from "../components/Accordion";
+import AccordionWrapper from "../components/AccordionWrapper";
 import { DatePicker } from "../components/DatePicker";
 
 const Components = () => {
@@ -50,6 +52,23 @@ const Components = () => {
         <Button variant="gradient" className="mt-10">
           Click Me
         </Button>
+
+        <AccordionWrapper>
+          <Accordion
+            title="Title 1"
+            content="Content 1"
+            className="bg-gray-900"
+            defaultOpen
+            open
+          />
+          <Accordion
+            title="Title 2"
+            content="Content 2"
+            className="bg-gray-700"
+            defaultOpen={false}
+            open
+          />
+        </AccordionWrapper>
       </div>
     </>
   );
