@@ -5,11 +5,13 @@ import { useToast } from "../hooks/toast";
 import Avatar from "../components/Avatar";
 import Accordion from "../components/Accordion";
 import AccordionWrapper from "../components/AccordionWrapper";
+import Navbar from "../components/Navbar";
 
 const Components = () => {
   const toast = useToast();
   return (
     <>
+    <Navbar></Navbar>
       <div className="flex flex-col items-center justify-center h-screen  text-center bg-zinc-700">
         <Button
           onClick={() => {
