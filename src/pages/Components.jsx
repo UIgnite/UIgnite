@@ -3,6 +3,8 @@ import { Button } from "../components/Button";
 import { Tooltip } from "../components/Tooltip";
 import { useToast } from "../hooks/toast";
 import Avatar from "../components/Avatar";
+import Accordion from "../components/Accordion";
+import AccordionWrapper from "../components/AccordionWrapper";
 
 const Components = () => {
   const toast = useToast();
@@ -29,9 +31,15 @@ const Components = () => {
         <Avatar url={"hitesh-sir.png"} alt={"user"} />
         <Button variant="dark" className="mt-10" isLoading></Button>
         <Button variant="gradient" className="mt-10">Click Me</Button>
+        
+        <AccordionWrapper >
+          <Accordion title="Title 1" content="Content 1" className="bg-gray-900" defaultOpen open />
+          <Accordion title="Title 2" content="Content 2" className="bg-gray-700" defaultOpen={false} open />
+        </AccordionWrapper>
+      
       </div>
     </>
   );
 };
-
+ 
 export default Components;

@@ -1,18 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "../utils/lib";
 
 export default function Resizable({
-  element1,
-  element2,
   className,
   defaultPosition,
   horizontal: horizontalValue,
+  children,
 }) {
-  const [draggerId] = useState(
-    `dragger-${horizontalValue ? "h" : "v"}-${Math.floor(
-      Math.random() * 10000
-    )}`
-  );
+  // refrence of the container
+  const containerRef = useRef(null);
+  const draggerRef = useRef(null);
+
   const [dividerPosition, setDividerPosition] = useState(
     defaultPosition ?? horizontalValue
       ? window.innerHeight - window.innerHeight / 3
@@ -21,33 +19,37 @@ export default function Resizable({
   const [mouseX, setMouseX] = useState(0);
   const [mouseDown, setMouseDown] = useState(false);
 
-  React.useEffect(() => {
+  const handleMouseUpDown = useCallback(() => {
     const controller = new AbortController();
-    const dragger = document.getElementById(draggerId);
-    if (!dragger) return;
-    dragger.addEventListener(
-      "mousedown",
-      () => {
-        setMouseDown(true);
-      },
-      {
-        signal: controller.signal,
-      }
-    );
+    if (draggerRef.current) {
+      draggerRef.current.addEventListener(
+        "mousedown",
+        () => {
+          setMouseDown(true);
+        },
+        {
+          signal: controller.signal,
+        }
+      );
 
-    dragger.addEventListener(
-      "mouseup",
-      () => {
-        setMouseDown(false);
-      },
-      {
-        signal: controller.signal,
-      }
-    );
+      draggerRef.current.addEventListener(
+        "mouseup",
+        () => {
+          setMouseDown(false);
+        },
+        {
+          signal: controller.signal,
+        }
+      );
+    }
     return () => {
       controller.abort();
     };
-  }, [draggerId]);
+  }, [draggerRef.current, setMouseDown]);
+
+  React.useEffect(() => {
+    handleMouseUpDown();
+  }, [draggerRef]);
 
   useEffect(() => {
     if (mouseDown) setDividerPosition(mouseX);
@@ -55,6 +57,7 @@ export default function Resizable({
 
   return (
     <div
+      ref={containerRef}
       onMouseMove={(ev) => {
         setMouseX(horizontalValue ? ev.clientY : ev.clientX);
       }}
@@ -69,10 +72,10 @@ export default function Resizable({
           height: horizontalValue ? dividerPosition : "100%",
         }}
       >
-        {element1}
+        {children[0]}
       </div>
       <div
-        id={draggerId}
+        ref={draggerRef}
         className={`${
           horizontalValue
             ? "w-auto h-1 cursor-row-resize"
@@ -93,13 +96,17 @@ export default function Resizable({
         style={{
           width: horizontalValue
             ? "w-full"
-            : window.innerWidth - dividerPosition,
+            : containerRef.current
+            ? containerRef.current.offsetWidth - dividerPosition
+            : 0,
           height: horizontalValue
-            ? window.innerHeight - dividerPosition
+            ? containerRef.current
+              ? containerRef.current.offsetHeight - dividerPosition
+              : 0
             : "h-full",
         }}
       >
-        {element2}
+        {children[1]}
       </div>
     </div>
   );

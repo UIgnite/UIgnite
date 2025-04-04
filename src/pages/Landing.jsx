@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "../components/Button";
 import { Link } from "react-router-dom";
 import Accordion from "../components/Accordion";
+import VideoPlayer from "../components/VideoPlayer.jsx";
 
 const Landing = () => {
   return (
@@ -33,12 +34,12 @@ const Landing = () => {
 
       {/* Main Page  */}
       <div className="flex-grow flex flex-col items-center justify-center">
-        
+        <div className="py-10">
+          <VideoPlayer />
+        </div>
         <Button className="bg-gray-50 text-black hover:bg-gray-100">
-        <Link to="/components">Browse Components</Link>
+          <Link to="/components">Browse Components</Link>
         </Button>
-
-        <Accordion title={"this is title "} content={"this is content"} ></Accordion>
       </div>
     </div>
   );
