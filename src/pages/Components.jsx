@@ -6,7 +6,7 @@ import Avatar from "../components/Avatar";
 import Accordion from "../components/Accordion";
 import AccordionWrapper from "../components/AccordionWrapper";
 import MessageBot from "../components/MessageBot";
-import Navbar from "../components/Navbar";
+import { Textarea } from "../components/Textarea";
 
 const Components = () => {
   const toast = useToast();
@@ -43,7 +43,9 @@ const Components = () => {
         <MessageBot url={"/piyush-sir.png"} alt={"/hitesh-sir.png"}>
             
         </MessageBot>
-      
+
+        <Textarea>
+        </Textarea>
       </div>
     </>
   );

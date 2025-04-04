@@ -72,7 +72,7 @@ const MessageBot = ({ orgName="UIgnite", themeColor = "bg-gray-800" , url, alt }
                       />
                     )}
                     <div key={index}
-                      className=  {`p-2 min-w-[80%] overflow-x-clip rounded-md  ${msg.sender === "user" ? "bg-gray-200 self-start text-left mr-30000 " :"bg-orange-200 self-end text-right ml-9 "}`}> 
+                      className=  {` text-black p-2 min-w-[80%] overflow-x-clip rounded-md  ${msg.sender === "user" ? "bg-gray-200 self-start text-left mr-30000 " :"bg-orange-200 self-end text-right ml-9 "}`}> 
                         {msg.text}
                     </div>
                     {msg.sender==="bot" && (
@@ -92,7 +92,7 @@ const MessageBot = ({ orgName="UIgnite", themeColor = "bg-gray-800" , url, alt }
               <input
                 type="text"
                 placeholder="Type a message..."
-                className=" p-2 border rounded-md outline-none min-w-[80%]"
+                className=" p-2 text-black border rounded-md outline-none min-w-[80%]"
 
                 onChange={(e)=>{
                   setInput(e.target.value)
