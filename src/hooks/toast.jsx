@@ -40,6 +40,7 @@ const ToastProvider = ({ children }) => {
           const index = lToasts.findIndex((value) => value.id == toast.id);
           if (index <= -1) return lToasts;
           lToasts.splice(index, 1);
+          if(lToasts.length <= 1) setHovered(false);
           return lToasts;
         });
       }, toast.options.timeout);

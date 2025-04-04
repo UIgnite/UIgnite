@@ -4,8 +4,8 @@ import { cva } from "class-variance-authority";
 import { Spinner } from "./Spinner";
 
 export const Button = (
-  { children, size, className = "",isLoading,icon,variant, ...props },
-  ref
+  { children, size, className = "",isLoading,icon,variant,ref, ...props},
+  
 ) => {
   const buttonVariants = cva(
     "inline-flex items-center cursor-pointer justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",

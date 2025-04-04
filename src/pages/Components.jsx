@@ -6,6 +6,7 @@ import Avatar from "../components/Avatar";
 import Accordion from "../components/Accordion";
 import AccordionWrapper from "../components/AccordionWrapper";
 import { DatePicker } from "../components/DatePicker";
+import MessageBot from "../components/MessageBot";
 
 const Components = () => {
   const toast = useToast();
@@ -27,7 +28,7 @@ const Components = () => {
         </Button>
 
         <Tooltip className="" title={"I am Tooltip "} options={{ delay: 300 }}>
-          <Button>Hover me</Button>
+          <Button variant="dark"> Hover Me </Button>
         </Tooltip>
 
         <Avatar url={"piyush-sir.png"} alt={"user"} />
@@ -69,6 +70,11 @@ const Components = () => {
             open
           />
         </AccordionWrapper>
+
+        <MessageBot
+          url={"/piyush-sir.png"}
+          alt={"/hitesh-sir.png"}
+        ></MessageBot>
       </div>
     </>
   );
