@@ -6,13 +6,32 @@ import Avatar from "../components/Avatar";
 import Accordion from "../components/Accordion";
 import AccordionWrapper from "../components/AccordionWrapper";
 import MessageBot from "../components/MessageBot";
+import Navbar from "../components/Navbar";
+
+import lightLogo from "../assets/uignitelight.png";
+import darkLogo from "../assets/uignitelight.png";
+import lightGithub from "../assets/GD.png";
+import darkGithub from "../assets/GL.png";
+import lightThemeIcon from "../assets/dark.png";
+import darkThemeIcon from "../assets/light.png";
+
 import { Textarea } from "../components/Textarea";
 
 const Components = () => {
-  const toast = useToast();
+  const toast = useToast(); // Correct placement
+
   return (
     <>
-      <div className="flex flex-col items-center justify-center h-screen  text-center bg-zinc-700">
+      <Navbar
+        lightLogo={lightLogo}
+        darkLogo={darkLogo}
+        lightGithub={lightGithub}
+        darkGithub={darkGithub}
+        lightThemeIcon={lightThemeIcon}
+        darkThemeIcon={darkThemeIcon}
+      />
+
+      <div className="flex flex-col items-center justify-center h-screen text-center bg-zinc-700">
         <Button
           onClick={() => {
             toast.showToast("New toast here", {
@@ -26,19 +45,20 @@ const Components = () => {
         </Button>
 
         <Tooltip className="" title={"I am Tooltip "} options={{ delay: 300 }}>
-          <Button variant="dark"  >  Hover Me  </Button>
+          <Button variant="dark"> Hover Me </Button>
         </Tooltip>
 
         <Avatar url={"/piyush-sir.png"} alt={"user"} />
         <Avatar url={"/hitesh-sir.png"} alt={"user"} />
-        <Button variant="dark" className="mt-10" isLoading></Button>
+
+        <Button variant="dark" className="mt-10" isLoading />
         <Button variant="gradient" className="mt-10">Click Me</Button>
-        
-        <AccordionWrapper >
+
+        <AccordionWrapper>
           <Accordion title="Title 1" content="Content 1" className="bg-gray-900" defaultOpen open />
           <Accordion title="Title 2" content="Content 2" className="bg-gray-700" defaultOpen={false} open />
         </AccordionWrapper>
-
+        <MessageBot url={"/piyush-sir.png"} alt={"/hitesh-sir.png"} />
         <MessageBot url={"/piyush-sir.png"} alt={"/hitesh-sir.png"}>
             
         </MessageBot>
@@ -49,5 +69,5 @@ const Components = () => {
     </>
   );
 };
- 
+
 export default Components;
