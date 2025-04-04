@@ -12,6 +12,7 @@ import {
 import Landing from "./pages/Landing.jsx";
 import Components from "./pages/Components.jsx";
 import PricingPage from "./pages/PricingPage.jsx";
+import LandingTest from "./pages/LandingTest.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
         <Route path="/" element={<Landing/>} />
         <Route path="components" element={<Components/>} />
         <Route path="pricing" element={<PricingPage/>}/>
+        <Route path="landing-test" element={<LandingTest/>} />
        
     </>
   )
