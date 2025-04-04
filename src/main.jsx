@@ -19,7 +19,6 @@ const router = createBrowserRouter(
         <Route path="/" element={<Landing/>} />
         <Route path="components" element={<Components/>} />
         <Route path="pricing" element={<PricingPage/>}/>
-       
     </>
   )
 );
