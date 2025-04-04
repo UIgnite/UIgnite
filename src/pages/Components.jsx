@@ -7,13 +7,31 @@ import Accordion from "../components/Accordion";
 import AccordionWrapper from "../components/AccordionWrapper";
 import { DatePicker } from "../components/DatePicker";
 import MessageBot from "../components/MessageBot";
+import Navbar from "../components/Navbar";
+
+import lightLogo from "../assets/uignitelight.png";
+import darkLogo from "../assets/uignitelight.png";
+import lightGithub from "../assets/GD.png";
+import darkGithub from "../assets/GL.png";
+import lightThemeIcon from "../assets/dark.png";
+import darkThemeIcon from "../assets/light.png";
+
+import { Textarea } from "../components/Textarea";
 
 const Components = () => {
-  const toast = useToast();
-  const [selectedDate, setSelectedDate] = useState(null);
+  const toast = useToast(); // Correct placement
 
   return (
     <>
+      <Navbar
+        lightLogo={lightLogo}
+        darkLogo={darkLogo}
+        lightGithub={lightGithub}
+        darkGithub={darkGithub}
+        lightThemeIcon={lightThemeIcon}
+        darkThemeIcon={darkThemeIcon}
+      />
+
       <div className="flex flex-col items-center justify-center h-screen text-center bg-zinc-700">
         <Button
           onClick={() => {
@@ -31,8 +49,8 @@ const Components = () => {
           <Button variant="dark"> Hover Me </Button>
         </Tooltip>
 
-        <Avatar url={"piyush-sir.png"} alt={"user"} />
-        <Avatar url={"hitesh-sir.png"} alt={"user"} />
+        <Avatar url={"/piyush-sir.png"} alt={"user"} />
+        <Avatar url={"/hitesh-sir.png"} alt={"user"} />
 
         <div className="mt-5 p-4 bg-gray-800 rounded-md">
           <h3 className="text-lg font-semibold mb-2 text-white">Date Picker</h3>
@@ -49,8 +67,7 @@ const Components = () => {
             </p>
           )}
         </div>
-
-        <Button variant="dark" className="mt-10" isLoading></Button>
+        <Button variant="dark" className="mt-10" isLoading />
         <Button variant="gradient" className="mt-10">
           Click Me
         </Button>
@@ -71,11 +88,13 @@ const Components = () => {
             open
           />
         </AccordionWrapper>
-
+        <MessageBot url={"/piyush-sir.png"} alt={"/hitesh-sir.png"} />
         <MessageBot
           url={"/piyush-sir.png"}
           alt={"/hitesh-sir.png"}
         ></MessageBot>
+
+        <Textarea></Textarea>
       </div>
     </>
   );

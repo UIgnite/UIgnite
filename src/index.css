@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap');
 @import "tailwindcss";
-
+@custom-variant dark (&:where(.dark, .dark *));
 
 body{
     font-family: 'Recursive', sans-serif;
@@ -15,3 +15,4 @@ body{
     opacity: 1;
     transform: translateY(0);
 }
+
