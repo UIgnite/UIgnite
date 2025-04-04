@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap');
 @import "tailwindcss";
 
+
+body{
+    font-family: 'Recursive', sans-serif;
+}
 .tooltip {
     opacity: 0;
     transform: translateY(10px);

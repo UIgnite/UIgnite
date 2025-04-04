@@ -15,7 +15,6 @@ const AccordionWrapper = ({ children  }) => {
                     onToggle: () => setActiveIndex(activeIndex === index ? null : index),
                 })
             )}
-            
         </div>
     </>
   )
