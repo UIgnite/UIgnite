@@ -15,6 +15,7 @@ import darkGithub from "../assets/GL.png";
 import lightThemeIcon from "../assets/dark.png";
 import darkThemeIcon from "../assets/light.png";
 
+import { Textarea } from "../components/Textarea";
 
 const Components = () => {
   const toast = useToast(); // Correct placement
@@ -57,8 +58,13 @@ const Components = () => {
           <Accordion title="Title 1" content="Content 1" className="bg-gray-900" defaultOpen open />
           <Accordion title="Title 2" content="Content 2" className="bg-gray-700" defaultOpen={false} open />
         </AccordionWrapper>
-
         <MessageBot url={"/piyush-sir.png"} alt={"/hitesh-sir.png"} />
+        <MessageBot url={"/piyush-sir.png"} alt={"/hitesh-sir.png"}>
+            
+        </MessageBot>
+
+        <Textarea>
+        </Textarea>
       </div>
     </>
   );
