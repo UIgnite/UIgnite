@@ -6,12 +6,14 @@ import Avatar from "../components/Avatar";
 import Accordion from "../components/Accordion";
 import AccordionWrapper from "../components/AccordionWrapper";
 import MessageBot from "../components/MessageBot";
+import Navbar from "../components/Navbar";
 
 const Components = () => {
   const toast = useToast();
   return (
     <>
       <div className="flex flex-col items-center justify-center h-screen  text-center bg-zinc-700">
+        <Navbar/>
         <Button
           onClick={() => {
             toast.showToast("New toast here", {
