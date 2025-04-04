@@ -27,7 +27,7 @@ import { themes } from "../utils/theme.js";
     const currentTheme = themes[theme];
   
     return (
-      <div className={`rounded-3xl p-8 flex flex-col h-full relative transition-all duration-300 transform hover:scale-105 ${
+      <div className={`rounded-xl p-8 flex flex-col h-full relative transition-all duration-300 transform hover:scale-105 ${
         highlighted ? currentTheme.highlightedCard : currentTheme.cardBackground
       } ${popular ? 'ring-2 ring-offset-2 ring-offset-slate-900 ring-cyan-500' : ''}`}>
         {popular && (
