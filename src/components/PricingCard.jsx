@@ -1,37 +1,5 @@
 // Theme definitions
-export const themes = {
-    dark: {
-      name: "Dark",
-      background: "bg-slate-900",
-      cardBackground: "bg-slate-800",
-      highlightedCard: "bg-slate-700",
-      headerText: "text-green-400",
-      priceText: "text-white",
-      descriptionText: "text-gray-300",
-      checkmarkBg: "bg-green-600", 
-      checkmarkText: "text-white",
-      featureText: "text-gray-300",
-      selectBg: "bg-slate-700",
-      selectText: "text-white",
-      border: "border-green-900"
-    },
-    neon: {
-      name: "Neon",
-      background: "bg-slate-900",
-      cardBackground: "bg-black",
-      highlightedCard: "bg-indigo-900",
-      headerText: "text-blue-500",
-      priceText: "text-white",
-      descriptionText: "text-gray-300",
-      checkmarkBg: "bg-blue-600",
-      checkmarkText: "text-white",
-      featureText: "text-gray-300",
-      selectBg: "bg-indigo-900",
-      selectText: "text-cyan-400",
-      border: "border-indigo-700"
-    },
-    
-  };
+import { themes } from "../utils/theme.js";
   
   export const ThemeSelector = ({ currentTheme, setTheme }) => {
     return (
@@ -55,7 +23,7 @@ export const themes = {
     );
   };
   
-  export const PricingCard = ({ title, price, description, features, highlighted = false, theme, popular = false }) => {
+  export const PricingCard = ({ title, price,validity, description, features, highlighted = false, theme, popular = false }) => {
     const currentTheme = themes[theme];
   
     return (
@@ -69,9 +37,9 @@ export const themes = {
         )}
         
         <div className={`${currentTheme.headerText} text-sm mb-2`}>{title}</div>
-        <div className={`text-4xl font-bold ${currentTheme.priceText} mb-4`}>{price}</div>
-        <p className={`${currentTheme.descriptionText} mb-8`}>{description}</p>
-        
+        <div className={`text-4xl font-bold ${currentTheme.priceText} mb-4`}>{price} <span className="-ml-2 text-2xl">{validity}</span></div>
+        <p className={`${currentTheme.descriptionText} mb-4`}>{description}</p>
+        <hr className={`${currentTheme.line} mb-4 border-1.8 w-[96%]`}/>
         <div className="flex-grow">
           {features.map((feature, index) => (
             <div key={index} className="flex items-start mb-4 group">

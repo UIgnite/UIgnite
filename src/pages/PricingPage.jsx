@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ThemeSelector,PricingCard,themes } from '../components/PricingCard';
+import { ThemeSelector,PricingCard } from '../components/PricingCard';
+import { themes } from '../utils/theme.js';
 
 
 const PricingSection = () => {
@@ -19,7 +20,8 @@ const PricingSection = () => {
     },
     {
         title: "Custom Components",
-        price: "$60/mo",
+        price: "$60",
+        validity:"/month",
         description: "Standalone components tailored to your needs and easily integrated. Perfect for website elements or sections.",
         features: [
             "Bespoke design and branding",
@@ -32,7 +34,8 @@ const PricingSection = () => {
     },
     {
         title: "Pages",
-        price: "$100/mo",
+        price: "$100",
+        validity:"/month",
         description: "Best for early-stage startups and businesses that need a marketing site and ongoing developmental work.",
         features: [
             "Tailored component library",
@@ -61,6 +64,7 @@ const PricingSection = () => {
               key={index}
               title={plan.title}
               price={plan.price}
+              validity={plan.validity}
               description={plan.description}
               features={plan.features}
               highlighted={plan.highlighted}
