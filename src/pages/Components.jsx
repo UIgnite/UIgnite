@@ -8,13 +8,27 @@ import AccordionWrapper from "../components/AccordionWrapper";
 import MessageBot from "../components/MessageBot";
 import Navbar from "../components/Navbar";
 
+import lightLogo from "../assets/uignitelight.png";
+import darkLogo from "../assets/uignitelight.png";
+import lightGithub from "../assets/GD.png";
+import darkGithub from "../assets/GL.png";
+import lightThemeIcon from "../assets/dark.png";
+import darkThemeIcon from "../assets/light.png";
+
+
 const Components = () => {
   const toast = useToast(); // Correct placement
 
   return (
     <>
-      {/* Navbar should be inside the return statement */}
-      <Navbar />
+      <Navbar
+        lightLogo={lightLogo}
+        darkLogo={darkLogo}
+        lightGithub={lightGithub}
+        darkGithub={darkGithub}
+        lightThemeIcon={lightThemeIcon}
+        darkThemeIcon={darkThemeIcon}
+      />
 
       <div className="flex flex-col items-center justify-center h-screen text-center bg-zinc-700">
         <Button
