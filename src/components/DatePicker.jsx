@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Calendar, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "../utils/lib";
 
 function DatePicker({
@@ -6,209 +7,256 @@ function DatePicker({
   onChange,
   value,
   placeholder = "Select date...",
+  darkMode = false,
 }) {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [currentMonth, setCurrentMonth] = useState(
     value ? new Date(value) : new Date()
   );
+  const [showYears, setShowYears] = useState(false);
 
-  // reference for clicking outside the datepicker
+  // Reference if outside clicks
   const calendarRef = useRef(null);
   const inputRef = useRef(null);
 
-  // outside click hone par datepicker band hone k liye
+  // clicks outside the datepicker to close it
   useEffect(() => {
-    function handleClickOutside(event) {
+    function closeOnOutsideClick(e) {
       if (
-        open &&
+        isOpen &&
         calendarRef.current &&
-        inputRef.current &&
-        !calendarRef.current.contains(event.target) &&
-        !inputRef.current.contains(event.target)
+        !calendarRef.current.contains(e.target) &&
+        !inputRef.current.contains(e.target)
       ) {
-        setOpen(false);
+        setIsOpen(false);
+        setShowYears(false);
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [open]);
+    document.addEventListener("mousedown", closeOnOutsideClick);
+    return () => document.removeEventListener("mousedown", closeOnOutsideClick);
+  }, [isOpen]);
 
-  // function to handle month navigate hone par
-  const toPreviousMonth = () => {
+  // to previous month
+  function prevMonth() {
     setCurrentMonth((prev) => {
-      const date = new Date(prev);
-      date.setMonth(date.getMonth() - 1);
-      return date;
+      let newDate = new Date(prev);
+      newDate.setMonth(newDate.getMonth() - 1);
+      return newDate;
     });
-  };
+  }
 
-  const toNextMonth = () => {
+  // to next month
+  function nextMonth() {
     setCurrentMonth((prev) => {
-      const date = new Date(prev);
-      date.setMonth(date.getMonth() + 1);
-      return date;
+      let newDate = new Date(prev);
+      newDate.setMonth(newDate.getMonth() + 1);
+      return newDate;
     });
-  };
+  }
 
-  // function date select hone par
-  const handleDateSelect = (date) => {
+  // Selecting a specific year
+  function pickYear(year) {
+    setCurrentMonth((prev) => {
+      let newDate = new Date(prev);
+      newDate.setFullYear(year);
+      return newDate;
+    });
+    setShowYears(false);
+  }
+
+  // Selecting a specific date
+  function selectDate(date) {
     onChange(date);
-    setOpen(false);
-  };
+    setIsOpen(false);
+  }
 
-  // month and year k liye formatted string
-  const monthYear = currentMonth.toLocaleString("en-US", {
+  // current month and year
+  const monthAndYear = currentMonth.toLocaleString("en-US", {
     month: "long",
     year: "numeric",
   });
 
-  // days ki list generate karne k liye
-  const daysInMonth = (year, month) => {
+  // days in current month
+  function getDaysInMonth(year, month) {
     return new Date(year, month + 1, 0).getDate();
-  };
+  }
 
-  // function first day of month ka pata karne k liye
-  const firstDayOfMonth = (year, month) => {
+  function getFirstDay(year, month) {
     return new Date(year, month, 1).getDay();
-  };
+  }
 
-  // function days array generate karne k liye
-  const generateCalendarDays = () => {
+  // calendar grid
+  function renderCalendar() {
     const year = currentMonth.getFullYear();
     const month = currentMonth.getMonth();
-    const days = daysInMonth(year, month);
-    const firstDay = firstDayOfMonth(year, month);
+    const daysCount = getDaysInMonth(year, month);
+    const firstDay = getFirstDay(year, month);
 
-    const calendarDays = [];
+    let days = [];
 
-    // Empty slots for days before the first day of the month
     for (let i = 0; i < firstDay; i++) {
-      calendarDays.push(<div key={`empty-${i}`} className="w-10 h-10"></div>);
+      days.push(<div key={`empty-${i}`} className="h-8"></div>);
     }
 
-    // Actual days of the month
-    for (let day = 1; day <= days; day++) {
+    // Calendar days
+    for (let day = 1; day <= daysCount; day++) {
       const date = new Date(year, month, day);
+
+      // if this date is selected
       const isSelected =
         value &&
-        date.getDate() === value.getDate() &&
-        date.getMonth() === value.getMonth() &&
-        date.getFullYear() === value.getFullYear();
+        value.getDate() === day &&
+        value.getMonth() === month &&
+        value.getFullYear() === year;
 
-      // Check if the date is today
+      // if this date is today
+      const today = new Date();
       const isToday =
-        date.getDate() === new Date().getDate() &&
-        date.getMonth() === new Date().getMonth() &&
-        date.getFullYear() === new Date().getFullYear();
+        today.getDate() === day &&
+        today.getMonth() === month &&
+        today.getFullYear() === year;
 
-      calendarDays.push(
+      days.push(
         <button
-          key={`day-${day}`}
-          onClick={() => handleDateSelect(date)}
+          key={day}
+          onClick={() => selectDate(date)}
           className={cn(
-            "w-10 h-10 flex items-center justify-center rounded-full text-sm focus:outline-none",
+            "h-8 w-8 rounded-full flex items-center justify-center text-sm",
             isSelected
-              ? "bg-blue-500 text-white hover:bg-blue-600"
+              ? darkMode
+                ? "bg-blue-600 text-white"
+                : "bg-blue-500 text-white"
               : isToday
-              ? "border border-blue-200 hover:bg-gray-200"
-              : "hover:bg-gray-200"
+              ? darkMode
+                ? "border border-blue-400 text-gray-200"
+                : "border border-blue-300 text-gray-800"
+              : darkMode
+              ? "text-gray-200 hover:bg-gray-700"
+              : "text-gray-800 hover:bg-gray-100"
           )}
-          tabIndex={0}
-          aria-label={`${date.toLocaleDateString("en-US", {
-            month: "long",
-            day: "numeric",
-            year: "numeric",
-          })}`}
-          aria-selected={isSelected ? "true" : "false"}
         >
           {day}
         </button>
       );
     }
 
-    return calendarDays;
-  };
+    return days;
+  }
+
+  // year options
+  const currentYear = new Date().getFullYear();
+  const yearOptions = [];
+  for (let i = currentYear - 10; i <= currentYear + 10; i++) {
+    yearOptions.push(i);
+  }
 
   return (
-    <div className={cn("relative inline-block", className)}>
+    <div className={cn("relative", className)}>
+      {/* Date input field */}
       <div
         ref={inputRef}
-        className="border rounded-md p-2 flex items-center justify-between cursor-pointer"
-        onClick={() => setOpen(!open)}
-        tabIndex={0}
-        role="button"
-        aria-haspopup="dialog"
-        aria-expanded={open}
-        aria-label="Select date"
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            setOpen(!open);
-            e.preventDefault();
-          }
-        }}
+        className={cn(
+          "border rounded p-2 flex items-center justify-between cursor-pointer",
+          darkMode
+            ? "bg-gray-800 text-gray-200 border-gray-700"
+            : "bg-white text-gray-800 border-gray-300"
+        )}
+        onClick={() => setIsOpen(!isOpen)}
       >
         <span>{value ? value.toLocaleDateString() : placeholder}</span>
-        <svg
-          className="w-4 h-4"
-          viewBox="0 0 20 20"
-          fill="none"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-          />
-        </svg>
+        <Calendar size={18} className="text-gray-400" />
       </div>
 
-      {open && (
+      {/* Calendar dropdown */}
+      {isOpen && (
         <div
           ref={calendarRef}
-          className="absolute mt-1 bg-white border rounded-md shadow-lg p-4 z-10 w-64"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Calendar"
+          className={cn(
+            "absolute mt-1 border rounded shadow-md p-3 z-10 w-64",
+            darkMode
+              ? "bg-gray-800 border-gray-700 text-gray-200"
+              : "bg-white border-gray-200 text-gray-800"
+          )}
         >
-          {/* Month and Year Navigation */}
-          <div className="flex justify-between items-center mb-2">
+          {/* Header with month/year and navigation */}
+          <div className="flex items-center justify-between mb-2">
             <button
-              type="button"
-              onClick={toPreviousMonth}
-              className="w-8 h-8 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:outline-none"
-              aria-label="Previous month"
+              onClick={prevMonth}
+              className="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
             >
-              &lt;
+              <ChevronLeft size={18} />
             </button>
-            <div className="text-lg font-semibold">{monthYear}</div>
+
+            <div className="relative">
+              <button
+                className="font-medium"
+                onClick={() => setShowYears(!showYears)}
+              >
+                {monthAndYear}
+              </button>
+
+              {/* Year selector */}
+              {showYears && (
+                <div
+                  className={cn(
+                    "absolute top-full mt-1 border rounded shadow max-h-40 overflow-y-auto w-32 z-20",
+                    darkMode
+                      ? "bg-gray-800 border-gray-700"
+                      : "bg-white border-gray-200"
+                  )}
+                >
+                  {yearOptions.map((year) => (
+                    <button
+                      key={year}
+                      className={cn(
+                        "block w-full text-left px-2 py-1",
+                        currentMonth.getFullYear() === year
+                          ? "bg-blue-100 dark:bg-blue-900"
+                          : "hover:bg-gray-100 dark:hover:bg-gray-700"
+                      )}
+                      onClick={() => pickYear(year)}
+                    >
+                      {year}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <button
-              type="button"
-              onClick={toNextMonth}
-              className="w-8 h-8 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:outline-none"
-              aria-label="Next month"
+              onClick={nextMonth}
+              className="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
             >
-              &gt;
+              <ChevronRight size={18} />
             </button>
           </div>
 
-          {/* Day headers */}
-          <div className="grid grid-cols-7 gap-2 mb-2">
-            {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
-              <div
-                key={day}
-                className="text-center font-semibold text-gray-700"
-              >
+          {/* Weekday headers */}
+          <div className="grid grid-cols-7 gap-1 mb-1">
+            {["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"].map((day) => (
+              <div key={day} className="text-center text-xs font-medium">
                 {day}
               </div>
             ))}
           </div>
 
-          {/* Calendar days */}
-          <div className="grid grid-cols-7 gap-2">{generateCalendarDays()}</div>
+          {/* Calendar grid */}
+          <div className="grid grid-cols-7 gap-1">{renderCalendar()}</div>
+
+          {/* Today button */}
+          <div className="mt-2 text-center">
+            <button
+              className="text-sm text-blue-500 hover:underline"
+              onClick={() => {
+                const today = new Date();
+                setCurrentMonth(today);
+                selectDate(today);
+              }}
+            >
+              Today
+            </button>
+          </div>
         </div>
       )}
     </div>

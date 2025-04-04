@@ -34,16 +34,17 @@ const Components = () => {
         <Avatar url={"piyush-sir.png"} alt={"user"} />
         <Avatar url={"hitesh-sir.png"} alt={"user"} />
 
-        <div className="mt-5 p-4 bg-white rounded-md">
-          <h3 className="text-lg font-semibold mb-2">Date Picker</h3>
+        <div className="mt-5 p-4 bg-gray-800 rounded-md">
+          <h3 className="text-lg font-semibold mb-2 text-white">Date Picker</h3>
           <DatePicker
             value={selectedDate}
             onChange={setSelectedDate}
             placeholder="Select a date"
             className="w-64"
+            darkMode={true}
           />
           {selectedDate && (
-            <p className="mt-2 text-gray-600">
+            <p className="mt-2 text-gray-400">
               Selected Date: {selectedDate.toLocaleDateString()}
             </p>
           )}
