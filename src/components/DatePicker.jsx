@@ -200,7 +200,7 @@ function DatePicker({
               {showYears && (
                 <div
                   className={cn(
-                    "absolute top-full mt-1 border rounded shadow max-h-40 overflow-y-auto w-32 z-20",
+                    "absolute top-full mt-1 border rounded shadow max-h-40 overflow-y-auto  w-32 z-20 scrollbar-hide",
                     darkMode
                       ? "bg-gray-800 border-gray-700"
                       : "bg-white border-gray-200"
