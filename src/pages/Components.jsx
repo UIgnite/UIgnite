@@ -32,6 +32,13 @@ const Components = () => {
         darkGithub={darkGithub}
         lightThemeIcon={lightThemeIcon}
         darkThemeIcon={darkThemeIcon}
+        
+        navLinks={[
+          { label: "Home", href: "#home" },
+          { label: "Docs", href: "#docs" },
+          { label: "Components", href: "#components" },
+          { label: "Team", href: "#team" },
+        ]}
       />
 
       <div className="flex flex-col items-center justify-center text-center bg-zinc-700">
