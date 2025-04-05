@@ -8,6 +8,7 @@ import AccordionWrapper from "../components/AccordionWrapper";
 import { DatePicker } from "../components/DatePicker";
 import MessageBot from "../components/MessageBot";
 import Navbar from "../components/Navbar";
+import NavMenu from "../components/NavMenu";
 
 import lightLogo from "../assets/uignitelight.png";
 import darkLogo from "../assets/uignitelight.png";
@@ -53,6 +54,7 @@ const Components = () => {
         >
           Browse Components
         </Button>
+          <NavMenu />
 
         <Tooltip className="" title={"I am Tooltip "} options={{ delay: 300 }}>
           <Button variant="dark"> Hover Me </Button>
