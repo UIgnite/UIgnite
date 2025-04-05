@@ -17,6 +17,7 @@ import lightThemeIcon from "../assets/dark.png";
 import darkThemeIcon from "../assets/light.png";
 
 import { Textarea } from "../components/Textarea";
+import Testimonials from "../components/Testimonials";
 
 const Components = () => {
   const toast = useToast(); // Correct placement
@@ -33,7 +34,7 @@ const Components = () => {
         darkThemeIcon={darkThemeIcon}
       />
 
-      <div className="flex flex-col items-center justify-center h-screen text-center bg-zinc-700">
+      <div className="flex flex-col items-center justify-center text-center bg-zinc-700">
         <Button
           onClick={() => {
             toast.showToast("New toast here", {
@@ -96,6 +97,24 @@ const Components = () => {
         ></MessageBot>
 
         <Textarea></Textarea>
+
+        <div className="flex gap-4">
+          <Testimonials
+            imageSrc="piyush-sir.png"
+            name="Piyush Sir"
+            title="Co-founder of OnlyFans"
+            rating={0}
+            message="Bhai mujhe to literally lgta tumlog ka bhut ganda hoga!"
+          />
+
+          <Testimonials
+            imageSrc=""
+            name="Aman Kumar"
+            title="Berozgar"
+            rating={5}
+            message="Mujhe bhi yahi lgta h sir! Innlog ko smjhao ye nhi smjh rhe."
+          />
+        </div>
       </div>
     </>
   );
