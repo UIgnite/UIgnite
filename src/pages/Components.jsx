@@ -17,6 +17,7 @@ import lightThemeIcon from "../assets/dark.png";
 import darkThemeIcon from "../assets/light.png";
 
 import { Textarea } from "../components/Textarea";
+import Testimonials from "../components/Testimonials";
 
 const Components = () => {
   const toast = useToast(); // Correct placement
@@ -31,9 +32,16 @@ const Components = () => {
         darkGithub={darkGithub}
         lightThemeIcon={lightThemeIcon}
         darkThemeIcon={darkThemeIcon}
+        
+        navLinks={[
+          { label: "Home", href: "#home" },
+          { label: "Docs", href: "#docs" },
+          { label: "Components", href: "#components" },
+          { label: "Team", href: "#team" },
+        ]}
       />
 
-      <div className="flex flex-col items-center justify-center h-screen text-center bg-zinc-700">
+      <div className="flex flex-col items-center justify-center text-center bg-zinc-700">
         <Button
           onClick={() => {
             toast.showToast("New toast here", {
@@ -95,7 +103,9 @@ const Components = () => {
           alt={"/hitesh-sir.png"}
         ></MessageBot>
 
-        <Textarea></Textarea>
+        <Textarea 
+        placeholder="Type your message here..." 
+        className="w-96 h-30 max-w-full my-4"></Textarea>
       </div>
     </>
   );
