@@ -96,25 +96,9 @@ const Components = () => {
           alt={"/hitesh-sir.png"}
         ></MessageBot>
 
-        <Textarea></Textarea>
-
-        <div className="flex gap-4">
-          <Testimonials
-            imageSrc="piyush-sir.png"
-            name="Piyush Sir"
-            title="Co-founder of OnlyFans"
-            rating={0}
-            message="Bhai mujhe to literally lgta tumlog ka bhut ganda hoga!"
-          />
-
-          <Testimonials
-            imageSrc=""
-            name="Aman Kumar"
-            title="Berozgar"
-            rating={5}
-            message="Mujhe bhi yahi lgta h sir! Innlog ko smjhao ye nhi smjh rhe."
-          />
-        </div>
+        <Textarea 
+        placeholder="Type your message here..." 
+        className="w-96 h-30 max-w-full my-4"></Textarea>
       </div>
     </>
   );
