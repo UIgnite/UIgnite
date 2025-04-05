@@ -31,7 +31,7 @@ import { themes } from "../utils/theme.js";
         highlighted ? currentTheme.highlightedCard : currentTheme.cardBackground
       } ${popular ? 'ring-2 ring-offset-2 ring-offset-slate-900 ring-cyan-500' : ''}`}>
         {popular && (
-          <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-cyan-500 text-black rounded-full text-sm font-bold">
+          <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-1 x` text-black rounded-full text-sm font-bold">
             Most Popular
           </div>
         )}
