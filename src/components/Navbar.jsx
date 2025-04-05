@@ -35,8 +35,8 @@ const Navbar = ({
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full flex items-center justify-between p-4 shadow-lg transition-all duration-300 z-50 ${
-        isDark ? "bg-[#0f0f0f] text-white" : "bg-[#f7f7f7] text-black"
+      className={`fixed top-0 left-0 w-full flex items-center justify-between p-4 shadow-lg transition-all duration-300 z-50 border-b-1 px-6 ${
+        isDark ? "bg-[#0f0f0f] text-white" : "bg-[#f7f7f7] text-black border-black"
       }`}
     >
       {/* Logo Section */}
