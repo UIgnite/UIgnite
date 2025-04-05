@@ -26,11 +26,13 @@ If you are developing a production application, we recommend using TypeScript an
 10. Dropdown    -> Adi    ✅
 11. Navbar      -> Ansh   ✅
 12. Input OTP   -> Aman   ✅
-13. Input       -> Aman   ✅ 
+13. Input       -> Aman   ✅
 14. Date Picker -> Sagar  ✅
 15. Sonner      -> Adi    ✅
 16. Pricing     -> Saurav ✅
 17. Message bot -> Ram    ✅
 18. Switch      ->        ✅
 19. Testimonial -> Aman   ✅
+20. Alert DialogBox -> 
+21. File Drop 
 

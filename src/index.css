@@ -1,9 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap");
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+@theme{
+  --color-dark-primary: #0f0f0f;
+  --color-dark-secondary: #222;
+  --color-light-primary: #F7F7F7;
+  --color-light-secondary: #f4f4f5;
+}
 
 body {
   font-family: "Recursive", sans-serif;
+  
 }
 .tooltip {
   opacity: 0;
