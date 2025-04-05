@@ -23,7 +23,7 @@ const Navbar = ({
     if (isSelected) {
       return `rounded-full px-4 py-2 font-semibold transition duration-300 ${
         isDark
-          ? "bg-gray-700 hover:bg-gray-600 border-2 border-solid border-white shadow-[0_1px_90px_rgba(255,255,255,1)]"
+          ? "bg-gray-700 hover:bg-gray-600 border-2 border-solid border-white shadow-[0_1px_50px_rgba(255,255,255,0.4)]"
           : "bg-gray-300 hover:bg-gray-400 border-2 border-solid"
       }`;
     } else {
@@ -35,7 +35,7 @@ const Navbar = ({
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full flex items-center justify-between p-4 shadow-lg transition-all duration-300 z-50 border-b-1 px-6 ${
+      className={`fixed top-0 left-0 w-full flex items-center justify-between p-4 shadow-lg transition-all duration-300 z-50 px-6 btn-gradient-1 ${
         isDark ? "bg-[#0f0f0f] text-white" : "bg-[#f7f7f7] text-black border-black"
       }`}
     >

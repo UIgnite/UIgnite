@@ -41,7 +41,7 @@ const Components = () => {
         ]}
       />
 
-      <div className="flex flex-col items-center justify-center text-center bg-zinc-700">
+      <div className="flex flex-col items-center justify-center text-center bg-[#0f0f0f]">
         <Button
           onClick={() => {
             toast.showToast("New toast here", {
