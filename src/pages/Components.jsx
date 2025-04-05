@@ -8,6 +8,7 @@ import AccordionWrapper from "../components/AccordionWrapper";
 import { DatePicker } from "../components/DatePicker";
 import MessageBot from "../components/MessageBot";
 import Navbar from "../components/Navbar";
+import NavMenu from "../components/NavMenu";
 
 import lightLogo from "../assets/uignitelight.png";
 import darkLogo from "../assets/uignitelight.png";
@@ -41,7 +42,7 @@ const Components = () => {
         ]}
       />
 
-      <div className="flex flex-col items-center justify-center text-center bg-zinc-700">
+      <div className="flex flex-col items-center justify-center text-center bg-[#0f0f0f]">
         <Button
           onClick={() => {
             toast.showToast("New toast here", {
@@ -53,6 +54,7 @@ const Components = () => {
         >
           Browse Components
         </Button>
+          <NavMenu />
 
         <Tooltip className="" title={"I am Tooltip "} options={{ delay: 300 }}>
           <Button variant="dark"> Hover Me </Button>
