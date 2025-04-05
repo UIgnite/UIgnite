@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "../utils/lib"; // Ensure you have the cn utility
+import { cn } from "../utils/lib";
 
 export const Textarea = ({ className, ...props }) => {
   return (

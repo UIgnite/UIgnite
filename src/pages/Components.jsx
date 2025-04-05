@@ -96,7 +96,9 @@ const Components = () => {
           alt={"/hitesh-sir.png"}
         ></MessageBot>
 
-        <Textarea></Textarea>
+        <Textarea 
+        placeholder="Type your message here..." 
+        className="w-96 h-30 max-w-full my-4"></Textarea>
       </div>
     </>
   );
