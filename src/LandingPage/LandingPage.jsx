@@ -1,5 +1,5 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
+import React from "react";
+import Navbar from "../components/Navbar";
 
 import lightLogo from "../assets/uignitelight.png";
 import darkLogo from "../assets/uignitelight.png";
@@ -10,19 +10,23 @@ import darkThemeIcon from "../assets/light.png";
 
 const LandingPage = () => {
   return (
-        
-        <div className='h-screen'>
-            <Navbar
-                lightLogo={lightLogo}
-                darkLogo={darkLogo}
-                lightGithub={lightGithub}
-                darkGithub={darkGithub}
-                lightThemeIcon={lightThemeIcon}
-                darkThemeIcon={darkThemeIcon}
-            />
-        </div>
-   
-  )
-}
+    <div className="h-screen">
+      <Navbar
+        lightLogo={lightLogo}
+        darkLogo={darkLogo}
+        lightGithub={lightGithub}
+        darkGithub={darkGithub}
+        lightThemeIcon={lightThemeIcon}
+        darkThemeIcon={darkThemeIcon}
+        navLinks={[
+          { label: "Home", href: "#home" },
+          { label: "Docs", href: "#docs" },
+          { label: "Components", href: "#components" },
+          { label: "Team", href: "#team" },
+        ]}
+      />
+    </div>
+  );
+};
 
-export default LandingPage
+export default LandingPage;

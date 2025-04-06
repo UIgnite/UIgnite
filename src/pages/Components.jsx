@@ -76,10 +76,11 @@ const Components = () => {
             </p>
           )}
         </div>
-        <Button variant="dark" className="mt-10" isLoading />
+        <Button  className="mt-10" isLoading />
         <Button variant="gradient" className="mt-10">
           Click Me
         </Button>
+
 
         <AccordionWrapper>
           <Accordion
@@ -97,6 +98,8 @@ const Components = () => {
             open
           />
         </AccordionWrapper>
+
+
         <MessageBot url={"/piyush-sir.png"} alt={"/hitesh-sir.png"} />
         <MessageBot
           url={"/piyush-sir.png"}
@@ -106,6 +109,16 @@ const Components = () => {
         <Textarea 
         placeholder="Type your message here..." 
         className="w-96 h-30 max-w-full my-4"></Textarea>
+
+        <Testimonials 
+          imageSrc="/piyush-sir.png"
+          name="Piyush Sir"
+          title="Co-founder of OnlyFans"
+          // rating={O}
+          message="Bhai mujhe to literally lgta tumlog ka bhut ganda hoga!"
+          
+        ></Testimonials>
+
       </div>
     </>
   );
