@@ -13,6 +13,8 @@ import Landing from "./pages/Landing.jsx";
 import Components from "./pages/Components.jsx";
 import PricingPage from "./pages/PricingPage.jsx";
 import LandingPage from "./LandingPage/LandingPage.jsx";
+import { ThemeProvider } from "./hooks/theme.jsx";
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,12 +28,12 @@ const router = createBrowserRouter(
 );
 
 createRoot(document.getElementById("root")).render(
-    <StrictMode>
+   
+      <ThemeProvider>
     <ToastProvider>
-      <RouterProvider router={router}>
-      <App />
-      </RouterProvider>
+      <RouterProvider router={router}/>
     </ToastProvider>
-    </StrictMode>
+    </ThemeProvider>
+   
  
 );
