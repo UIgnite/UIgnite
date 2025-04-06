@@ -10,12 +10,12 @@ import MessageBot from "../components/MessageBot";
 import Navbar from "../components/Navbar";
 import NavMenu from "../components/NavMenu";
 
-import lightLogo from "../assets/uignitelight.png";
-import darkLogo from "../assets/uignitelight.png";
-import lightGithub from "../assets/GD.png";
-import darkGithub from "../assets/GL.png";
-import lightThemeIcon from "../assets/dark.png";
-import darkThemeIcon from "../assets/light.png";
+import lightLogo from "../../public/Darklogo.svg";
+import darkLogo from "../../public/Logo.svg";
+import lightGithub from "../../public/GD.png";
+import darkGithub from "../../public/GL.png";
+import lightThemeIcon from "../../public/dark.png";
+import darkThemeIcon from "../../public/light.png";
 
 import { Textarea } from "../components/Textarea";
 import Testimonials from "../components/Testimonials";
