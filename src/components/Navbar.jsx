@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useTheme } from "../hooks/theme";
 
 const Navbar = ({
   lightLogo,
@@ -9,13 +10,11 @@ const Navbar = ({
   darkThemeIcon,
   navLinks = [], // expects [{ label: "Home", href: "#home" }, ...]
 }) => {
-  const [isDark, setIsDark] = useState(localStorage.getItem("theme") === "dark");
-  const [selectedNav, setSelectedNav] = useState(navLinks[0]?.label || "");
+  // Get theme from localStorage on mount
+ const{theme,toggleTheme} = useTheme();
 
-  useEffect(() => {
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-    document.body.classList.toggle("dark-mode", isDark);
-  }, [isDark]);
+  const [selectedNav, setSelectedNav] = useState(navLinks[0]?.label || "");
+  const isDark = theme === "dark";
 
   const getNavClass = (label) => {
     const isSelected = selectedNav === label;
@@ -45,7 +44,7 @@ const Navbar = ({
       </div>
 
       {/* Navigation Links */}
-      <ul className="flex space-x-8">
+      <ul className="flex space-x-5">
         {navLinks.map(({ label, href }) => (
           <li key={label}>
             <a
@@ -69,7 +68,7 @@ const Navbar = ({
           />
         </a>
 
-        <button className="focus:outline-none" onClick={() => setIsDark(!isDark)}>
+        <button className="focus:outline-none" onClick={toggleTheme}>
           <img
             src={isDark ? darkThemeIcon : lightThemeIcon}
             alt="Theme Toggle"
