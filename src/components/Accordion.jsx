@@ -47,16 +47,16 @@ const AccordionWrapper = ({ children  }) => {
   const [activeIndex, setActiveIndex] = useState(null);
   return (
     <>
-        <div>
-            {React.Children.map(children, (child, index) =>
-                React.cloneElement(child, {
-                    isOpen: activeIndex === index,
-                    onToggle: () => setActiveIndex(activeIndex === index ? null : index),
-                })
-            )}
-        </div>
+      <div>
+        {React.Children.map(children, (child, index) =>
+          React.cloneElement(child, {
+              isOpen: activeIndex === index,
+              onToggle: () => setActiveIndex(activeIndex === index ? null : index),
+          })
+        )}
+      </div>
     </>
   )
 }
 
-export { AccordionWrapper, Accordion}
+export { AccordionWrapper, Accordion }
