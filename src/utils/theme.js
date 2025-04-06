@@ -16,20 +16,20 @@ export const themes = {
       border: "border-green-900"
     },
     neon: {
-      name: "Neon",
+      name: "Darcula",
       background: "bg-slate-900",
       cardBackground: "bg-black",
-      highlightedCard: "bg-indigo-900",
-      headerText: "text-blue-500",
+      highlightedCard: "bg-[#0D1520]",
+      headerText: "text-blue-400",
       priceText: "text-white",
       descriptionText: "text-gray-300",
       line:"text-gray-800",
-      checkmarkBg: "bg-blue-600",
+      checkmarkBg: "bg-blue-500",
       checkmarkText: "text-white",
       featureText: "text-gray-300",
-      selectBg: "bg-indigo-900",
+      selectBg: "bg-[#0D1520]",
       selectText: "text-cyan-400",
-      border: "border-indigo-700"
+      border: "border-blue-500"
     },
     
   };

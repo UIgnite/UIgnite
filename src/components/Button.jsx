@@ -20,7 +20,8 @@ export const Button = (
           link: "text-blue-400 underline-offset-4 hover:underline",
           glass: "bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20",
           gradient: "bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700",
-          dark:"bg-black text-white hover:bg-black/70"
+          dark:"bg-black text-white hover:bg-black/70",
+          light:"bg-gray-50 text-black hover:bg-gray-100",
        
         },
         size: {
