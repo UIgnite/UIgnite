@@ -10,15 +10,9 @@ import MessageBot from "../components/MessageBot";
 import Navbar from "../components/Navbar";
 import NavMenu from "../components/NavMenu";
 
-import lightLogo from "../assets/uignitelight.png";
-import darkLogo from "../assets/uignitelight.png";
-import lightGithub from "../assets/GD.png";
-import darkGithub from "../assets/GL.png";
-import lightThemeIcon from "../assets/dark.png";
-import darkThemeIcon from "../assets/light.png";
-
 import { Textarea } from "../components/Textarea";
 import Testimonials from "../components/Testimonials";
+import Skeleton from "../components/Skeleton";
 
 const Components = () => {
   const toast = useToast(); // Correct placement
@@ -27,12 +21,12 @@ const Components = () => {
   return (
     <>
       <Navbar
-        lightLogo={lightLogo}
-        darkLogo={darkLogo}
-        lightGithub={lightGithub}
-        darkGithub={darkGithub}
-        lightThemeIcon={lightThemeIcon}
-        darkThemeIcon={darkThemeIcon}
+        lightLogo={"/Darklogo.svg?url"}
+        darkLogo={"/Logo.svg"}
+        lightGithub={"/GD.png"}
+        darkGithub={"/GL.png"}
+        lightThemeIcon={"/dark.png"}
+        darkThemeIcon={"/light.png"}
         navLinks={[
           { label: "Home", href: "#home" },
           { label: "Docs", href: "#docs" },
@@ -41,7 +35,7 @@ const Components = () => {
         ]}
       />
 
-      <div className="flex flex-col items-center justify-center text-center bg-[#0f0f0f]">
+      <div className="flex flex-col items-center justify-center text-center">
         <Button
           onClick={() => {
             toast.showToast("New toast here", {
@@ -54,6 +48,18 @@ const Components = () => {
           Browse Components
         </Button>
         <NavMenu />
+
+        <div className="flex items-center space-x-4 mt-8">
+          <Skeleton className="h-12 w-12 rounded-full" />
+          <div className="space-y-2">
+            <Skeleton className="h-4 w-[250px]" />
+            <Skeleton className="h-4 w-[200px]" />
+          </div>
+        </div>
+
+        <Tooltip className="" title={"I am Tooltip "} options={{ delay: 300 }}>
+          <Button variant="dark"> Hover Me </Button>
+        </Tooltip>
 
         <Avatar url={"/piyush-sir.png"} alt={"user"} />
         <Avatar url={"/hitesh-sir.png"} alt={"user"} />
@@ -134,17 +140,8 @@ const Components = () => {
 
         <Textarea
           placeholder="Type your message here..."
-          className="w-96 h-10 max-w-full my-4"
+          className="w-96 h-30 max-w-full my-4"
         ></Textarea>
-
-        <Testimonials
-          imageSrc="/piyush-sir.png"
-          name="Piyush Sir"
-          title="Co-founder of OnlyFans"
-          // rating={O}
-          message="Bhai mujhe to literally lgta tumlog ka bhut ganda hoga!"
-        ></Testimonials>
-
       </div>
     </>
   );
