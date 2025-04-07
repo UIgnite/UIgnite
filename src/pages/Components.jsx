@@ -10,13 +10,6 @@ import MessageBot from "../components/MessageBot";
 import Navbar from "../components/Navbar";
 import NavMenu from "../components/NavMenu";
 
-import lightLogo from "../../public/Darklogo.svg";
-import darkLogo from "../../public/Logo.svg";
-import lightGithub from "../../public/GD.png";
-import darkGithub from "../../public/GL.png";
-import lightThemeIcon from "../../public/dark.png";
-import darkThemeIcon from "../../public/light.png";
-
 import { Textarea } from "../components/Textarea";
 import Testimonials from "../components/Testimonials";
 import Skeleton from "../components/Skeleton";
@@ -28,12 +21,12 @@ const Components = () => {
   return (
     <>
       <Navbar
-        lightLogo={lightLogo}
-        darkLogo={darkLogo}
-        lightGithub={lightGithub}
-        darkGithub={darkGithub}
-        lightThemeIcon={lightThemeIcon}
-        darkThemeIcon={darkThemeIcon}
+        lightLogo={"/Darklogo.svg?url"}
+        darkLogo={"/Logo.svg"}
+        lightGithub={"/GD.png"}
+        darkGithub={"/GL.png"}
+        lightThemeIcon={"/dark.png"}
+        darkThemeIcon={"/light.png"}
         navLinks={[
           { label: "Home", href: "#home" },
           { label: "Docs", href: "#docs" },
