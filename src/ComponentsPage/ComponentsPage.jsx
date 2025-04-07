@@ -1,7 +1,8 @@
 import React from 'react'
 import { Tab, Tabs, TabContent, TabList } from '../components/Tabs'
 
-const componentPage = () => {
+
+const ComponentsPage = () => {
   return (
     <div>
         
@@ -9,4 +10,4 @@ const componentPage = () => {
   )
 }
 
-export default componentPage
+export default ComponentsPage
