@@ -3,12 +3,7 @@ import Navbar from "../components/Navbar";
 import { Button } from "../components/Button";
 import { motion } from "framer-motion"; 
 
-import lightLogo from "../assets/uignitelight.png";
-import darkLogo from "../assets/uidark.png";
-import lightGithub from "../assets/GD.png";
-import darkGithub from "../assets/GL.png";
-import lightThemeIcon from "../assets/dark.png";
-import darkThemeIcon from "../assets/light.png";
+
 
 function LandingPage() {
   return (
@@ -80,12 +75,12 @@ function LandingPage() {
       <div className="relative z-10">
         {/* Navbar */}
         <Navbar
-          lightLogo={lightLogo}
-          darkLogo={darkLogo}
-          lightGithub={lightGithub}
-          darkGithub={darkGithub}
-          lightThemeIcon={lightThemeIcon}
-          darkThemeIcon={darkThemeIcon}
+            lightLogo={"/Darklogo.svg?url"}
+            darkLogo={"/Logo.svg"}
+            lightGithub={"/GD.png"}
+            darkGithub={"/GL.png"}
+            lightThemeIcon={"/dark.png"}
+            darkThemeIcon={"/light.png"}
           navLinks={[
             { label: "Home", href: "#home" },
             { label: "Docs", href: "#docs" },
