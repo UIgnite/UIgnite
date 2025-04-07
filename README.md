@@ -24,7 +24,7 @@ If you are developing a production application, we recommend using TypeScript an
 8.  Skeleton    -> Saurav   ?
 9.  Avatar      -> Aman     ✅
 10. Dropdown    -> Adi      ✅
-11. Navbar      -> Ansh     ✅
+11. Navbar      -> Rohit    ✅
 12. Input OTP   -> Aman     ✅
 13. Input       -> Aman     ✅
 14. Date Picker -> Sagar    ✅
@@ -36,4 +36,6 @@ If you are developing a production application, we recommend using TypeScript an
 20. Alert DilogBox -> JNV   
 21. File Drop   -> Adi
 22. Tabs        -> 
+23. NavMenu     -> Ansh     
+
  
