@@ -6,7 +6,7 @@ const Tabs = ({ children, defaultVal = "preview", className = "" }) => {
 
   return (
     <>
-      <div className={`mt-4 w-[60%] min`}>
+      <div className={`bg-neutral-800 mt-4 w-[60%] min`}>
         { React.Children.map(children, (child, index) =>{
           return React.cloneElement(child, {
             activeTab, setActiveTab
@@ -19,7 +19,7 @@ const Tabs = ({ children, defaultVal = "preview", className = "" }) => {
 
 const TabList = ({children, activeTab, setActiveTab}) => {
     return(
-      <div className="p-2 flex space-x-2 bg-gray-700 rounded-md border-2" >
+      <div className="p-2 flex space-x-2 bg-neutral-800 rounded-md border-2" >
         {React.Children.map(children, (child, index) =>
           React.cloneElement(child, { activeTab, setActiveTab})
         )}
@@ -43,7 +43,7 @@ const Tab = ({ title="Here is the Title", value, activeTab="preview", setActiveT
 
 const TabContent = ({ value , activeTab,   content }) => {
     if( activeTab === value)
-    return <div className="overflow-x-auto bg-gray-700 mt-4"> 
+    return <div className="overflow-x-auto bg-neutral-800 mt-4"> 
       {content}
     </div>
 };
