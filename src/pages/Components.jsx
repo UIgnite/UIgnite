@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Button } from "../components/Button";
 import { Tooltip } from "../components/Tooltip";
+import { Accordion, AccordionWrapper } from "../components/Accordion";
+import { Tabs,TabList, TabContent, Tab } from "../components/Tabs";
 import { useToast } from "../hooks/toast";
 import Avatar from "../components/Avatar";
-import Accordion from "../components/Accordion";
-import AccordionWrapper from "../components/AccordionWrapper";
 import { DatePicker } from "../components/DatePicker";
 import MessageBot from "../components/MessageBot";
 import Navbar from "../components/Navbar";
@@ -64,25 +64,56 @@ const Components = () => {
         <Avatar url={"/piyush-sir.png"} alt={"user"} />
         <Avatar url={"/hitesh-sir.png"} alt={"user"} />
 
-        <div className="mt-5 p-4 bg-gray-800 rounded-md">
-          <h3 className="text-lg font-semibold mb-2 text-white">Date Picker</h3>
-          <DatePicker
-            value={selectedDate}
-            onChange={setSelectedDate}
-            placeholder="Select a date"
-            className="w-64"
-            darkMode={true}
-          />
-          {selectedDate && (
-            <p className="mt-2 text-gray-400">
-              Selected Date: {selectedDate.toLocaleDateString()}
-            </p>
-          )}
-        </div>
-        <Button variant="dark" className="mt-10" isLoading />
+        <DatePicker
+          value={selectedDate}
+          onChange={setSelectedDate}
+          placeholder="Select a date"
+          className="w-64"
+          darkMode={true}
+        />
+
+        {selectedDate && (
+          <p className="mt-2 text-gray-400">
+            Selected Date: {selectedDate.toLocaleDateString()}
+          </p>
+        )}
+
+        <Button className="mt-10" isLoading />
         <Button variant="gradient" className="mt-10">
           Click Me
         </Button>
+        
+        <Tabs defaultVal="preview" >
+          <TabList>
+            <Tab title="Preview" value="preview"></Tab>
+            <Tab title="Code" value="code"></Tab>
+          </TabList>
+          <TabContent content="this is preview"  value="preview"></TabContent>
+          <TabContent 
+            content= {
+              <pre className="text-left">
+                <code >
+{`
+  const TabList = ({children, activeTab, setActiveTab}) => {
+          return(
+        <div className="p-2 flex space-x-2 bg-gray-700 rounded-md border-2" >
+          {React.Children.map(children, (child, index) =>
+            React.cloneElement(child, { activeTab, setActiveTab})
+          )}
+        </div>
+      )
+  };
+`}
+                </code>
+              </pre>
+            }
+            value="code"></TabContent>
+        </Tabs>
+
+
+        <Tooltip className="" title={"I am Tooltip "} options={{ delay: 300 }}>
+          <Button variant="dark"> Hover Me </Button>
+        </Tooltip>
 
         <AccordionWrapper>
           <Accordion
@@ -100,6 +131,7 @@ const Components = () => {
             open
           />
         </AccordionWrapper>
+
         <MessageBot url={"/piyush-sir.png"} alt={"/hitesh-sir.png"} />
         <MessageBot
           url={"/piyush-sir.png"}
