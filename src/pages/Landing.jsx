@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../components/Button";
 import { Link } from "react-router-dom";
-import Accordion from "../components/Accordion";
+import {Accordion} from "../components/Accordion";
 import VideoPlayer from "../components/VideoPlayer.jsx";
 
 const Landing = () => {

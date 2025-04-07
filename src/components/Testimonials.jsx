@@ -6,8 +6,8 @@ const Testimonials = ({ imageSrc, name, title, rating = 5, message }) => {
       <div className="flex items-center justify-between">
         <div className="flex gap-2 justify-center items-center">
           <img
-            src={imageSrc ? imageSrc : "placeholder_user.png"}
-            alt={name}
+            src={imageSrc ? imageSrc : "hitesh-sir.png"}
+            alt={"../hitesh-sir.png"}
             className="w-10 h-10 rounded-full object-cover"
           />
           <div className="flex flex-col items-start">

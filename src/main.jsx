@@ -14,6 +14,7 @@ import Components from "./pages/Components.jsx";
 import PricingPage from "./pages/PricingPage.jsx";
 import LandingPage from "./LandingPage/LandingPage.jsx";
 import { ThemeProvider } from "./hooks/theme.jsx";
+import { ComponentsPage } from "./ComponentsPage/componentsPage.jsx";
 
 
 const router = createBrowserRouter(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
         <Route path="components" element={<Components/>} />
         <Route path="pricing" element={<PricingPage/>}/>
         <Route path="landing" element={<LandingPage/>}/>
+        <Route path="ComponentsPage" element={<ComponentsPage/>}/>
     </>
   )
 );
