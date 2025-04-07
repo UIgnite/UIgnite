@@ -110,7 +110,7 @@ export default function VideoPlayer({}) {
         width: 741,
         height: 416,
       }}
-      className={`relative group`}
+      className={`relative group shadow-xl rounded overflow-hidden`}
       data-played={played}
     >
       <style>
