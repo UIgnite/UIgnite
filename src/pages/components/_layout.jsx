@@ -6,7 +6,7 @@ export default function ComponentLayout() {
   const { componentId } = useParams();
 
   return (
-    <div className="w-full flex h-[calc(100vh-80px)] overflow-y-hidden">
+    <div className="w-full px-8 py-6 flex h-[calc(100vh-80px)] overflow-y-hidden">
       <div className="w-sm h-full overflow-y-scroll scrollable-content flex flex-col gap-y-2 justify-start">
         <div>
           <div className="font-medium">Components</div>
