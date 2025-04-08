@@ -11,7 +11,6 @@ import Navbar from "../components/Navbar";
 import NavMenu from "../components/NavMenu";
 
 import { Textarea } from "../components/Textarea";
-import Testimonials from "../components/Testimonials";
 import Skeleton from "../components/Skeleton";
 
 const Components = () => {
