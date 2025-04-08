@@ -9,7 +9,7 @@ const Navbar = () => {
       {/* logo */}
       <div className="flex flex-row gap-12 items-center justify-between text-[0.9rem] lg:justify-start">
         <Link href="/" className="flex items-center gap-2">
-          <img src="favicon.png" className="w-8 object-contain" alt="Logo" />
+          <img src="/favicon.png" className="w-8 object-contain" alt="Logo" />
           <h4 className="text-2xl font-semibold -mt-1">
             UI<span className="text-primary">gnite</span>
           </h4>
