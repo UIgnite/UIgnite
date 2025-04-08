@@ -7,19 +7,21 @@ import PricingSection from "./pages/PricingPage";
 import Navbar from "./components/website/Navbar";
 import Footer from "./components/website/Footer";
 import NotFound from "./components/website/NotFound";
+import Test from "./pages/Test";
 
 const App = () => {
   return (
-    <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <Navbar />
       <Routes>
+        <Route path="/test" element={<Test />} />
         <Route path="/" element={<Home />} />
         <Route path="/docs" element={<Landing />} />
         <Route path="/components/:component" element={<Components />} />
         <Route path="/pricing" element={<PricingSection />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
