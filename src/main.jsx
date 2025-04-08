@@ -1,41 +1,16 @@
-import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
-import { ToastProvider } from "./hooks/toast.jsx";
-import {
-  Route,
-  RouterProvider,
-  createBrowserRouter,
-  createRoutesFromElements,
-} from "react-router-dom";
-import Landing from "./pages/Landing.jsx";
-import Components from "./pages/Components.jsx";
-import PricingPage from "./pages/PricingPage.jsx";
-import LandingPage from "./LandingPage/LandingPage.jsx";
+import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "./hooks/theme.jsx";
-import { ComponentsPage } from "./ComponentsPage/componentsPage.jsx";
-
-
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <>     
-        <Route path="/" element={<Landing/>} />
-        <Route path="components" element={<Components/>} />
-        <Route path="pricing" element={<PricingPage/>}/>
-        <Route path="landing" element={<LandingPage/>}/>
-        <Route path="ComponentsPage" element={<ComponentsPage/>}/>
-    </>
-  )
-);
+import { ToastProvider } from "./hooks/toast.jsx";
 
 createRoot(document.getElementById("root")).render(
-   
-      <ThemeProvider>
+  <ThemeProvider>
     <ToastProvider>
-      <RouterProvider router={router}/>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </ToastProvider>
-    </ThemeProvider>
-   
- 
+  </ThemeProvider>
 );
