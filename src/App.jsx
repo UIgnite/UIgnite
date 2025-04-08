@@ -7,20 +7,23 @@ import NotFound from "./components/website/NotFound";
 import Test from "./pages/Test";
 import Component from "./pages/components";
 import RootLayout from "./pages/_layout";
+import ComponentLayout from "./pages/components/_layout";
 
 const App = () => {
   return (
-      <Routes>
-        <Route element={<RootLayout/>}>
+    <Routes>
+      <Route element={<RootLayout />}>
         <Route path="/test" element={<Test />} />
         <Route path="/" element={<Home />} />
         <Route path="/docs" element={<Landing />} />
-        <Route path="/components/" element={<Component />} />
-        <Route path="/components/:component" element={<Component />} />
+        <Route element={<ComponentLayout />}>
+          <Route path="/components/" element={<Component />} />
+          <Route path="/components/:componentId" element={<Component />} />
+        </Route>
         <Route path="/pricing" element={<PricingSection />} />
         <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
+      </Route>
+    </Routes>
   );
 };
 
