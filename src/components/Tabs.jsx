@@ -6,7 +6,7 @@ const Tabs = ({ children, defaultVal = "preview", className = "" }) => {
 
   return (
     <>
-      <div className={`bg-neutral-800 mt-4 w-[60%] min`}>
+      <div className={`bg-neutral-800 mt-4 w-[90%] min`}>
         {React.Children.map(children, (child, index) => {
           return React.cloneElement(child, {
             activeTab,
@@ -41,7 +41,7 @@ const Tab = ({
     <button
       onClick={() => setActiveTab(value)}
       className={` px-4 py-1 m-2 rounded-md text-sm font-medium 
-        ${isActive ? "bg-green-800 text-gray hover:bg-green-700" : "bg-gray-600 text-white hover:bg-gray-500"}
+        ${isActive ? "bg- text-gray hover:bg-green-700" : "bg-gray-600 text-white hover:bg-gray-500"}
       `}
     >
       {title}
