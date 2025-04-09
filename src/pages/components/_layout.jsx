@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet, useParams } from "react-router-dom";
-import ComponentList from "./ComponentList"; 
-import {components} from "../../utils/lib"
+import ComponentList from "./ComponentList";
+import { components } from "../../utils/lib";
 
 export default function ComponentLayout() {
   const { componentId } = useParams();
@@ -14,14 +14,9 @@ export default function ComponentLayout() {
           <div>
             <div className="font-med ">Components</div>
             <ul className="text-gray-400 my-4 flex flex-col gap-y-2">
-              <li>Button</li>
-              <li>Avatar</li>
-              <li>Avatar</li>
-              <li>Avatar</li>
-              <li>Avatar</li>
-              <li>Avatar</li>
-              <li>Avatar</li>
-              <li>Avatar</li>
+              {components.map( (component, index) => (
+                <button className="text-left cursor-pointer hover:text-white">{component.name }</button>
+              ))}
              
             </ul>
           </div>
@@ -31,8 +26,6 @@ export default function ComponentLayout() {
       <div className="flex-grow h-full px-4 scrollable-content overflow-y-scroll">
         {componentId ? <Outlet /> : <ComponentList />}
       </div>
-
-      
     </div>
   );
 }
