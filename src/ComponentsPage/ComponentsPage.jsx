@@ -24,9 +24,7 @@ import {
   duotoneDark,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-
-
-const ComponentsPage = ({ codeString = "", }) => {
+const ComponentsPage = ({ codeString = "" }) => {
   const syntaxHighlighterElement = (
     <SyntaxHighlighter
       language="javascript"

@@ -25,7 +25,6 @@ const App = () => {
         <Route path="/pricing" element={<PricingSection />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/testing" element={<ComponentContent />} />
-
       </Route>
     </Routes>
   );

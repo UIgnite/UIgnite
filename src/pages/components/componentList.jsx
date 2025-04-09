@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function ComponentList() {
   return (
     <div className="w-full h-full grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-2  xl:grid-cols-2">
-      {["", "","", "","", "",].map((_, idx) => (
+      {["", "", "", "", "", ""].map((_, idx) => (
         <ComponentCard key={idx} />
       ))}
     </div>
