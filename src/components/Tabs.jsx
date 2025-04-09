@@ -18,9 +18,11 @@ const Tabs = ({ children, defaultVal = "preview", className = "" }) => {
   );
 };
 
-const TabList = ({ children, activeTab, setActiveTab, className="" }) => {
+const TabList = ({ children, activeTab, setActiveTab, className = "" }) => {
   return (
-    <div className={`p-2 flex space-x-2  rounded-md border-1 border-gray-700  ${className}`}>
+    <div
+      className={`p-2 flex space-x-2  rounded-md border-1 border-gray-700  ${className}`}
+    >
       {React.Children.map(children, (child, index) =>
         React.cloneElement(child, { activeTab, setActiveTab }),
       )}
@@ -51,7 +53,11 @@ const Tab = ({
 
 const TabContent = ({ value, activeTab, content }) => {
   if (activeTab === value)
-    return <div className=" rounded-md  flex justify-center min-h-[100%] overflow-x-auto  mt-4">{content}</div>;
+    return (
+      <div className=" rounded-md  flex justify-center min-h-[100%] overflow-x-auto  mt-4">
+        {content}
+      </div>
+    );
 };
 
 export { Tabs, Tab, TabList, TabContent };
