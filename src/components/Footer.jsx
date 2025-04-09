@@ -1,5 +1,10 @@
 // components/Footer.jsx
-import { FaLinkedinIn, FaXTwitter, FaInstagram, FaYoutube } from "react-icons/fa6";
+import {
+  FaLinkedinIn,
+  FaXTwitter,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa6";
 import { useTheme } from "../hooks/theme";
 
 const socialIconsMap = {
@@ -101,7 +106,9 @@ const Footer = ({
       {/* Copyright */}
       <div
         className={`text-center text-sm mt-10 pt-4 border-t ${
-          isDark ? "border-gray-800 text-gray-500" : "border-gray-300 text-gray-600"
+          isDark
+            ? "border-gray-800 text-gray-500"
+            : "border-gray-300 text-gray-600"
         }`}
       >
         {copyright}
