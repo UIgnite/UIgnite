@@ -82,9 +82,9 @@ body {
 .scrollable-content::-webkit-scrollbar-thumb {
   background-color: #222; /* Color of the scrollbar thumb */
   border-radius: 10px;
-  border: 3px solid #222; /* Add space between thumb and track */
+  border: 0px solid #131313; /* Add space between thumb and track */
 }
 
 .scrollable-content::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Hover effect */
+  background-color: rgb(69, 69, 69); /* Hover effect */
 }

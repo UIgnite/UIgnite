@@ -6,6 +6,8 @@ import {
   dark,
   docco,
   a11yDark,
+  nightOwl,
+  monokai,
   atelierHeathDark,
   atelierLakesideDark,
   atelierSulphurpoolDark,
@@ -29,18 +31,18 @@ const Preview = ({ codeString = "" }) => {
   const syntaxHighlighterElement = (
     <SyntaxHighlighter
       language="javascript"
-      style={stackoverflowDark}
-      className="m-6 max-w-[90%] bg-black"
+      style={nightOwl}
+      className=" h-[100%] max-w-[100%] rounded-md scrollable-content bg-black"
     >
       {codeString}
     </SyntaxHighlighter>
   );
 
   const textAreaComp = (
-    <div className="w-[100%]">
+    <div className="w-[100%] flex justify-center">
       <Textarea
         placeholder="Type your message here..."
-        className="w-96 h-30 max-w-full my-4"
+        className="w-96 scrollable-content h-30 max-w-full my-4"
       ></Textarea>
     </div>
   );
