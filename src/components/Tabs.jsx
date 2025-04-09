@@ -6,7 +6,7 @@ const Tabs = ({ children, defaultVal = "preview", className = "" }) => {
 
   return (
     <>
-      <div className={`bg-neutral-800 mt-4 w-[90%] min`}>
+      <div className={` mt-4 w-[90%] min ${className}`}>
         {React.Children.map(children, (child, index) => {
           return React.cloneElement(child, {
             activeTab,
@@ -18,9 +18,9 @@ const Tabs = ({ children, defaultVal = "preview", className = "" }) => {
   );
 };
 
-const TabList = ({ children, activeTab, setActiveTab }) => {
+const TabList = ({ children, activeTab, setActiveTab, className="" }) => {
   return (
-    <div className="p-2 flex space-x-2 bg-neutral-800 rounded-md border-2">
+    <div className={`p-2 flex space-x-2  rounded-md border-1 border-gray-700  ${className}`}>
       {React.Children.map(children, (child, index) =>
         React.cloneElement(child, { activeTab, setActiveTab }),
       )}
@@ -40,8 +40,8 @@ const Tab = ({
   return (
     <button
       onClick={() => setActiveTab(value)}
-      className={` px-4 py-1 m-2 rounded-md text-sm font-medium 
-        ${isActive ? "bg- text-gray hover:bg-green-700" : "bg-gray-600 text-white hover:bg-gray-500"}
+      className={` px-4 py-1 m-2 rounded-md text-md font-medium 
+        ${isActive ? " text-white" : " text-gray-600 hover:text-white"}
       `}
     >
       {title}
@@ -51,7 +51,7 @@ const Tab = ({
 
 const TabContent = ({ value, activeTab, content }) => {
   if (activeTab === value)
-    return <div className="overflow-x-auto bg-neutral-800 mt-4">{content}</div>;
+    return <div className=" rounded-md  flex justify-center min-h-[100%] overflow-x-auto  mt-4">{content}</div>;
 };
 
 export { Tabs, Tab, TabList, TabContent };
