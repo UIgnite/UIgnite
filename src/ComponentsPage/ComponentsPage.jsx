@@ -1,8 +1,28 @@
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { stackoverflowDark, schoolBook,darcula,dark,docco, a11yDark, atelierHeathDark, atelierLakesideDark, atelierSulphurpoolDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import { Tab, Tabs, TabContent, TabList } from '../components/Tabs';
-import { Textarea } from '../components/Textarea';
-import {   coy, funky,okaidia ,zTouch ,solarizedlight, tomorrow, prism, atomDark, duotoneDark} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import SyntaxHighlighter from "react-syntax-highlighter";
+import {
+  stackoverflowDark,
+  schoolBook,
+  darcula,
+  dark,
+  docco,
+  a11yDark,
+  atelierHeathDark,
+  atelierLakesideDark,
+  atelierSulphurpoolDark,
+} from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { Tab, Tabs, TabContent, TabList } from "../components/Tabs";
+import { Textarea } from "../components/Textarea";
+import {
+  coy,
+  funky,
+  okaidia,
+  zTouch,
+  solarizedlight,
+  tomorrow,
+  prism,
+  atomDark,
+  duotoneDark,
+} from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const ComponentsPage = () => {
   const codeString = `export const Textarea = ({ className, ...props }) => {
@@ -20,7 +40,7 @@ const ComponentsPage = () => {
 
   const syntaxHighlighterElement = (
     <SyntaxHighlighter
-      language="javascript" 
+      language="javascript"
       style={stackoverflowDark}
       className="m-6 max-w-[90%] bg-black"
     >
@@ -28,14 +48,14 @@ const ComponentsPage = () => {
     </SyntaxHighlighter>
   );
 
-  const textAreaComp =(
-    <div className='w-[100%]'>
+  const textAreaComp = (
+    <div className="w-[100%]">
       <Textarea
         placeholder="Type your message here..."
-            className="w-96 h-30 max-w-full my-4"
+        className="w-96 h-30 max-w-full my-4"
       ></Textarea>
     </div>
-  )
+  );
 
   return (
     <div className="h-[100vh] flex flex-col">

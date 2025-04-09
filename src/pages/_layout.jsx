@@ -4,10 +4,9 @@ import Navbar from "../components/website/Navbar";
 
 export default function RootLayout() {
   return (
-      <>
+    <>
       <Navbar />
       <Outlet />
-      </>
-    
+    </>
   );
 }

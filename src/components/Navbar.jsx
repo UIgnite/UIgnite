@@ -35,14 +35,18 @@ const Navbar = ({
   return (
     <nav
       className={`fixed top-0 left-0 w-full flex items-center justify-between p-4  transition-all duration-300 z-50 px-6  ${
-        isDark ? "bg-transparent text-white" : "bg-[#f7f7f7] text-black border-black"
+        isDark
+          ? "bg-transparent text-white"
+          : "bg-[#f7f7f7] text-black border-black"
       }`}
     >
-
       <div className="flex items-center">
-        <img src={isDark ? darkLogo : lightLogo} alt="Logo" className="h-10 w-auto" />
+        <img
+          src={isDark ? darkLogo : lightLogo}
+          alt="Logo"
+          className="h-10 w-auto"
+        />
       </div>
-
 
       <ul className="hidden md:flex space-x-5">
         {navLinks.map(({ label, href }) => (
@@ -117,7 +121,7 @@ const Navbar = ({
                 className={getNavClass(label)}
                 onClick={() => {
                   setSelectedNav(label);
-                  setMenuOpen(false);  
+                  setMenuOpen(false);
                 }}
               >
                 {label}

@@ -1,40 +1,40 @@
 [
-    {
-        "id": "button",
-        "name": "Button",
+  {
+    "id": "button",
+    "name": "Button",
+    "desc": "",
+    "path": "/components/Button.jsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Install dependencies",
+        "code-block": "npm i motion clsx tailwind-merge @tabler/icons-react",
+        "path": "/components/Button.jsx"
+      },
+      {
+        "title": "Add utils file",
+        "code-block": "npm i motion clsx tailwind-merge @tabler/icons-react",
+        "path": "/components/Button.jsx"
+      },
+      {
+        "title": "Install dependencies",
+        "code-block": "npm i motion clsx tailwind-merge @tabler/icons-react",
+        "path": "/components/Button.jsx"
+      }
+    ],
+    "props": [
+      {
+        "prop": "",
+        "type": "",
         "desc": "",
-        "path": "/components/Button.jsx",
-        "previewImageUrl": "",
-        "installation": [
-            {
-                "title": "Install dependencies",
-                "code-block": "npm i motion clsx tailwind-merge @tabler/icons-react",
-                "path": "/components/Button.jsx"
-            },
-            {
-                "title": "Add utils file",
-                "code-block": "npm i motion clsx tailwind-merge @tabler/icons-react",
-                "path": "/components/Button.jsx"
-            },
-            {
-                "title": "Install dependencies",
-                "code-block": "npm i motion clsx tailwind-merge @tabler/icons-react",
-                "path": "/components/Button.jsx"
-            }
-        ],
-        "props": [
-            {
-                "prop": "",
-                "type": "",
-                "desc": "",
-                "defaultValue": ""
-            },
-            {
-                "prop": "",
-                "type": "",
-                "desc": "",
-                "defaultValue": ""
-            }
-        ]
-    }
+        "defaultValue": ""
+      },
+      {
+        "prop": "",
+        "type": "",
+        "desc": "",
+        "defaultValue": ""
+      }
+    ]
+  }
 ]

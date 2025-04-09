@@ -11,7 +11,6 @@ import {
 // creating toast context using react createContent
 const ToastContext = createContext(null);
 
-
 // ToastProvider to wrap all the code to use toast in entire application
 const ToastProvider = ({ children }) => {
   const [toasts, setToasts] = useState([]);
@@ -40,12 +39,12 @@ const ToastProvider = ({ children }) => {
           const index = lToasts.findIndex((value) => value.id == toast.id);
           if (index <= -1) return lToasts;
           lToasts.splice(index, 1);
-          if(lToasts.length <= 1) setHovered(false);
+          if (lToasts.length <= 1) setHovered(false);
           return lToasts;
         });
       }, toast.options.timeout);
     },
-    [setToasts, hovered, setHovered]
+    [setToasts, hovered, setHovered],
   );
 
   return (
@@ -64,7 +63,7 @@ const ToastProvider = ({ children }) => {
               options={toast.options}
               hovered={hovered}
             />
-          ) : null
+          ) : null,
         )}
       </div>
     </ToastContext.Provider>
