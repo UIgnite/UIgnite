@@ -1,19 +1,20 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import components from "../../utils/lib"
+import {components} from "../../utils/lib"
 
 export default function ComponentList() {
   return (
-    <div className="w-full h-full grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-2  xl:grid-cols-2">
-      {components.map((_, idx) => (
-        <ComponentCard key={idx} />
+    <div className=" w-full h-full grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-2  xl:grid-cols-2">
+      {components.map((component, idx) => (
+        <ComponentCard key={idx} name={component.name} id={component.id} imageUrl={component.previewImageUrl}  desc={component.desc}  />
       ))}
     </div>
   );
 }
 
 const ComponentCard = ({
-  name = "",
+  name = "Textarea",
+  id = 'Textarea',
   imageUrl = "https://placehold.co/600x400",
   desc = "Button is a button whose role is button which is button is called button.",
 }) => {
@@ -21,14 +22,14 @@ const ComponentCard = ({
 
   return (
     <div
-      onClick={() => navigate("/components/button")}
+      onClick={() => navigate(`/components/${id}`)}
       role="button"
       tabIndex={0}
-      className="cursor-pointer group hover:bg-black/60 rounded-lg p-3 transition-colors"
+      className="min-h-80 cursor-pointer group border-1 border-gray-900 bg-gray-950  hover:bg-black/60 rounded-lg p-3 transition-colors"
     >
-      <div className="mb-2">
+      <div className="m-2 min-h-[70%] flex justify-center items-center">
         <img
-          className="group-hover:scale-105 transition-all rounded-md"
+          className="  group-hover:scale-105 transition-all rounded-md text-center"
           src={imageUrl}
           alt={name}
         />
