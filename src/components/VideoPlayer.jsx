@@ -51,28 +51,28 @@ export default function VideoPlayer({}) {
         () => setFullScreenMode(!fullScreenMode),
         {
           signal: controller.signal,
-        }
+        },
       );
 
       videoRef.current.addEventListener(
         "contextmenu",
         (evt) => evt.preventDefault(),
-        { signal: controller.signal }
+        { signal: controller.signal },
       );
 
       videoRef.current.addEventListener(
         "timeupdate",
         () => {
           setCurrentTime(
-            videoRef.current?.currentTime && videoRef.current?.currentTime
+            videoRef.current?.currentTime && videoRef.current?.currentTime,
           );
           setVideoDuration(
-            videoRef.current?.duration && videoRef.current?.duration
+            videoRef.current?.duration && videoRef.current?.duration,
           );
         },
         {
           signal: controller.signal,
-        }
+        },
       );
     }
     // abort all registered events
@@ -90,7 +90,7 @@ export default function VideoPlayer({}) {
         videoRef.current.currentTime = time;
       }
     },
-    [progressRef.current, videoRef.current, videoDuration, currentTime]
+    [progressRef.current, videoRef.current, videoDuration, currentTime],
   );
 
   const handleToogleFullScreenMode = useCallback(() => {

@@ -98,5 +98,5 @@ createRoot(document.getElementById("root")).render(
         </div>
       </BrowserRouter>
     </ToastProvider>
-  </ThemeProvider>
+  </ThemeProvider>,
 );

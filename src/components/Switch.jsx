@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Switch({ defaultState=false, }) {
+export default function Switch({ defaultState = false }) {
   const [state, setState] = useState(defaultState);
 
   return (

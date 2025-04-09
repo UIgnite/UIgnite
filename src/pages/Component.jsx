@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "../components/Button";
 import { Tooltip } from "../components/Tooltip";
 import { Accordion, AccordionWrapper } from "../components/Accordion";
-import { Tabs,TabList, TabContent, Tab } from "../components/Tabs";
+import { Tabs, TabList, TabContent, Tab } from "../components/Tabs";
 import { useToast } from "../hooks/toast";
 import Avatar from "../components/Avatar";
 import { DatePicker } from "../components/DatePicker";
@@ -81,18 +81,18 @@ const Components = () => {
         <Button variant="gradient" className="mt-10">
           Click Me
         </Button>
-        
-        <Tabs defaultVal="preview" >
+
+        <Tabs defaultVal="preview">
           <TabList>
             <Tab title="Preview" value="preview"></Tab>
             <Tab title="Code" value="code"></Tab>
           </TabList>
-          <TabContent content="this is preview"  value="preview"></TabContent>
-          <TabContent 
-            content= {
+          <TabContent content="this is preview" value="preview"></TabContent>
+          <TabContent
+            content={
               <pre className="text-left">
-                <code >
-{`
+                <code>
+                  {`
   const TabList = ({children, activeTab, setActiveTab}) => {
           return(
         <div className="p-2 flex space-x-2 bg-gray-700 rounded-md border-2" >
@@ -106,9 +106,9 @@ const Components = () => {
                 </code>
               </pre>
             }
-            value="code"></TabContent>
+            value="code"
+          ></TabContent>
         </Tabs>
-
 
         <Tooltip className="" title={"I am Tooltip "} options={{ delay: 300 }}>
           <Button variant="dark"> Hover Me </Button>

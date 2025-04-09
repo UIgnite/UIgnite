@@ -34,7 +34,9 @@ body {
 .tooltip {
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+  transition:
+    opacity 0.2s ease-in,
+    transform 0.2s ease-in;
 }
 
 .tooltip-visible {
@@ -67,10 +69,9 @@ body {
   border-image-slice: 1;
 }
 
-
 /* Custom Scrollbar Styles */
 .scrollable-content::-webkit-scrollbar {
-  width: 8px;  /* Width of the scrollbar */
+  width: 8px; /* Width of the scrollbar */
 }
 
 .scrollable-content::-webkit-scrollbar-track {
