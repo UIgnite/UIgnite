@@ -1,17 +1,33 @@
 import React from "react";
 import { Outlet, useParams } from "react-router-dom";
-import ComponentList from "./componentList";
+import ComponentList from "./ComponentList";
 
 export default function ComponentLayout() {
   const { componentId } = useParams();
 
   return (
-    <div className="w-full px-8 py-6 flex h-[calc(100vh-80px)] overflow-y-hidden">
-      <div className="w-sm h-full overflow-y-scroll scrollable-content flex flex-col gap-y-2 justify-start">
-        <div>
-          <div className="font-medium">Components</div>
-          <ul className="text-neutral-300 my-4 flex flex-col gap-y-2">
+    <div className="w-full flex h-[calc(100vh-80px)] overflow-y-hidden mt-10">
+
+        {/* Side Bar  */}
+      { componentId &&  <div className="min-w-[20%] mr-[1%] h-full overflow-y-scroll scrollable-content flex flex-col gap-y-2 justify-start">
+        <div >
+          <div className="font-med ">Components</div>
+          <ul className="text-gray-400 my-4 flex flex-col gap-y-2">
             <li>Button</li>
+            <li>Avatar</li>
+            <li>Avatar</li>
+            <li>Avatar</li>
+            <li>Avatar</li>
+            <li>Avatar</li>
+            <li>Avatar</li>
+            <li>Avatar</li>
+            <li>Avatar</li>
+            <li>Avatar</li>
+            <li>Avatar</li>
+            <li>Avatar</li>
+            <li>Avatar</li>
+            <li>Avatar</li>
+            <li>Avatar</li>
             <li>Avatar</li>
             <li>Avatar</li>
             <li>Avatar</li>
@@ -19,7 +35,9 @@ export default function ComponentLayout() {
             <li>Avatar</li>
           </ul>
         </div>
-      </div>
+      </div>}
+
+
       <div className="flex-grow h-full px-4 scrollable-content overflow-y-scroll">
         {componentId ? <Outlet /> : <ComponentList />}
       </div>
