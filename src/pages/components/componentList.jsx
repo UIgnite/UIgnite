@@ -1,12 +1,18 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import {components} from "../../utils/lib"
+import { components } from "../../utils/lib";
 
 export default function ComponentList() {
   return (
     <div className=" w-full h-full grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-2  xl:grid-cols-2">
       {components.map((component, idx) => (
-        <ComponentCard key={idx} name={component.name} id={component.id} imageUrl={component.previewImageUrl}  desc={component.desc}  />
+        <ComponentCard
+          key={idx}
+          name={component.name}
+          id={component.id}
+          imageUrl={component.previewImageUrl}
+          desc={component.desc}
+        />
       ))}
     </div>
   );
@@ -14,7 +20,7 @@ export default function ComponentList() {
 
 const ComponentCard = ({
   name = "Textarea",
-  id = 'Textarea',
+  id = "Textarea",
   imageUrl = "https://placehold.co/600x400",
   desc = "Button is a button whose role is button which is button is called button.",
 }) => {

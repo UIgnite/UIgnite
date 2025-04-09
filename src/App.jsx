@@ -10,7 +10,6 @@ import RootLayout from "./pages/_layout";
 import ComponentLayout from "./pages/components/_layout";
 // import ComponentContent from "./pages/components/ComponentContent";
 
-
 const App = () => {
   return (
     <Routes>
