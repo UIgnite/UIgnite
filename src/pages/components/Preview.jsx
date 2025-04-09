@@ -1,12 +1,11 @@
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { stackoverflowDark, schoolBook,darcula,dark,docco, a11yDark, atelierHeathDark, atelierLakesideDark, atelierSulphurpoolDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import { Tab, Tabs, TabContent, TabList } from '../components/Tabs';
-import { Textarea } from '../components/Textarea';
+import { Tab, Tabs, TabContent, TabList } from '../../components/Tabs';
+
+import { Textarea } from '../../components/Textarea';
 import {   coy, funky,okaidia ,zTouch ,solarizedlight, tomorrow, prism, atomDark, duotoneDark} from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-
-
-const ComponentsPage = ({ codeString = "", }) => {
+const Preview = ({ codeString = "", }) => {
   const syntaxHighlighterElement = (
     <SyntaxHighlighter
       language="javascript" 
@@ -27,7 +26,7 @@ const ComponentsPage = ({ codeString = "", }) => {
   )
 
   return (
-    <div className="h-[100vh] flex flex-col">
+    <div className="h-[100vh] min-w-[80%] flex flex-col">
       <Tabs defaultVal="preview">
         <TabList>
           <Tab title="Preview" value="preview" />
@@ -41,4 +40,4 @@ const ComponentsPage = ({ codeString = "", }) => {
   );
 };
 
-export { ComponentsPage };
+export { Preview };

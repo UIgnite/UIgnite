@@ -1,5 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import { Preview } from './Preview';
+import { codeString } from './codeString';
 
 export default function Component() {
 
@@ -13,6 +15,8 @@ export default function Component() {
       <div className='text-neutral-300'>
       Button is a button whose role is button which is button is called button.
       </div>
+      <Preview codeString={codeString} />
+
     </div>
   )
 }
