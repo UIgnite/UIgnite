@@ -4,7 +4,7 @@
     "name": "Accordion",
     "desc": "This is Accordian Webpart",
     "path": "/components/Accordion.jsx",
-    "previewImageUrl": "",
+    "previewImageUrl": "https://miro.medium.com/v2/resize:fit:2000/1*-2gNQX2U8p9hCae778ib4w.png",
     "installation": [
       {
         "title": "Install dependencies",
@@ -20,44 +20,6 @@
         "title": "Install dependencies",
         "code-block": "npm i motion clsx tailwind-merge @tabler/icons-react",
         "path": "/components/Button.jsx"
-      }
-    ],
-    "props": [
-      {
-        "prop": "",
-        "type": "",
-        "desc": "",
-        "defaultValue": ""
-      },
-      {
-        "prop": "",
-        "type": "",
-        "desc": "",
-        "defaultValue": ""
-      }
-    ]
-  },
-  {
-    "id": "textArea",
-    "name": "TextArea",
-    "desc": "",
-    "path": "/components/Textarea.jsx",
-    "previewImageUrl": "",
-    "installation": [
-      {
-        "title": "Install dependencies",
-        "code-block": "npm i motion clsx tailwind-merge @tabler/icons-react",
-        "path": "/components/Textarea.jsx"
-      },
-      {
-        "title": "Add utils file",
-        "code-block": "npm i motion clsx tailwind-merge @tabler/icons-react",
-        "path": "/components/Textarea.jsx"
-      },
-      {
-        "title": "Install dependencies",
-        "code-block": "npm i motion clsx tailwind-merge @tabler/icons-react",
-        "path": "/components/Textarea.jsx"
       }
     ],
     "props": [
@@ -80,7 +42,7 @@
     "name": "Avatar",
     "desc": "This is Avatar Webpart",
     "path": "/components/Avatar.jsx",
-    "previewImageUrl": "",
+    "previewImageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmYqxWggt-BB6vRVE7PbJwws15_rpMbzHSnA&s",
     "installation": [
       {
         "title": "Install dependencies",
@@ -155,7 +117,7 @@
     "id": "DatePicker",
     "name": "DatePicker",
     "desc": "This is DatePicker Webpart",
-    "path": "/components/DatePicker.jsx",
+    "path": "/components/Textarea.jsx",
     "previewImageUrl": "",
     "installation": [
       {

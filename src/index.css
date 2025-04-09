@@ -71,7 +71,7 @@ body {
 
 /* Custom Scrollbar Styles */
 .scrollable-content::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
+  width: 0px; /* Width of the scrollbar */
 }
 
 .scrollable-content::-webkit-scrollbar-track {

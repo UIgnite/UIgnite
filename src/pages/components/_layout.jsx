@@ -14,10 +14,11 @@ export default function ComponentLayout() {
           <div>
             <div className="font-med ">Components</div>
             <ul className="text-gray-400 my-4 flex flex-col gap-y-2">
-              {components.map( (component, index) => (
-                <button className="text-left cursor-pointer hover:text-white">{component.name }</button>
+              {components.map((component, index) => (
+                <button className="text-left cursor-pointer hover:text-white">
+                  {component.name}
+                </button>
               ))}
-             
             </ul>
           </div>
         </div>

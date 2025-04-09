@@ -8,8 +8,7 @@ import Test from "./pages/Test";
 import Component from "./pages/components";
 import RootLayout from "./pages/_layout";
 import ComponentLayout from "./pages/components/_layout";
-import { ComponentsPage } from "./ComponentsPage/ComponentsPage";
-import ComponentContent from "./pages/components/ComponentContent";
+// import ComponentContent from "./pages/components/ComponentContent";
 
 const App = () => {
   return (
@@ -24,7 +23,7 @@ const App = () => {
         </Route>
         <Route path="/pricing" element={<PricingSection />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/testing" element={<ComponentContent />} />
+        {/* <Route path="/testing" element={<ComponentContent />} /> */}
       </Route>
     </Routes>
   );
