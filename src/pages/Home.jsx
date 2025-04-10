@@ -14,7 +14,7 @@ const Home = () => {
             <div className="w-full max-w-6xl  flex items-center justify-center">
               <div className="text-center px-4">
                 <h1 className="text-4xl  sm:text-5xl md:text-6xl lg:text-8xl font-heading font-semibold tracking-tight text-zinc-200 mb-6">
-                  <span className="!dark text-black dark:text-white block -mb-2">
+                  <span className="!dark text-black dark:text-light-primary block -mb-2">
                     Less Tweaking
                   </span>
                   <span className="block relative py-2 bg-gradient-to-r from-blue-400 to-blue-700 text-transparent bg-clip-text">
@@ -42,31 +42,48 @@ const Home = () => {
             </div>
           </div>
 
-          <div className=" flex flex-row gap-5 z-10 relative mt-36 cursor-pointer">
-            <div className="!dark flex-1 rounded-xl flex justify-center items-center bg-gray-200 dark:bg-gray-800  h-[400px]">
-              Card
+          <div className="flex justify-center flex-col items-center gap-4">
+            <div className="text-[#f7f7f8] font-heading  font-semibold relative text-7xl">
+              Don't worry too much{" "}
             </div>
-            <div className=" !dark flex-2 rounded-xl flex justify-center items-center bg-gray-200 dark:bg-gray-800 h-[400px]">
-              Coming Soon..
+            <div className="text-[#c4c0c0] text-2xl font-heading">
+              Copy Paste and Relax
             </div>
-            <div className=" !dark flex-1 rounded-xl flex justify-center items-center bg-gray-200 dark:bg-gray-800 h-[400px]">
-              Tooltip
+          </div>
+
+          <div className=" flex flex-row gap-5 z-10 relative mt-24 cursor-pointer">
+            <div className="relative flex-1 bg-gray-200 dark:bg-[#17171c] rounded-xl flex justify-center items-center h-[400px] overflow-hidden">
+              <div className="absolute inset-0 bg-noisy pointer-events-none"></div>
+              <div className="relative z-10">Card</div>
+            </div>
+
+            <div className="relative flex-2 bg-gray-200 dark:bg-[#17171c] rounded-xl flex justify-center items-center h-[400px] overflow-hidden">
+              <div className="absolute inset-0 bg-noisy pointer-events-none"></div>
+              <div className="relative z-10">Coming Soon</div>
+            </div>
+
+            <div className="relative flex-1 bg-gray-200 dark:bg-[#17171c] rounded-xl flex justify-center items-center h-[400px] overflow-hidden">
+              <div className="absolute inset-0 bg-noisy pointer-events-none"></div>
+              <div className="relative z-10">Card</div>
             </div>
           </div>
 
           <div className=" flex flex-row gap-5 z-10 relative mt-5 cursor-pointer">
-            <div className="!dark flex-1 rounded-xl flex justify-center items-center bg-gray-200 dark:bg-gray-800  h-[400px]">
-              Coming Soon...
+            <div className="relative flex-2 bg-gray-200 dark:bg-[#17171c] rounded-xl flex justify-center items-center h-[400px] overflow-hidden">
+              <div className="absolute inset-0 bg-noisy pointer-events-none"></div>
+              <div className="relative z-10">Coming Soon</div>
             </div>
-            <div className="!dark flex-1 rounded-xl flex justify-center items-center bg-gray-200 dark:bg-gray-800 h-[400px]">
-              Coming Soon...
+
+            <div className="relative flex-2 bg-gray-200 dark:bg-[#17171c] rounded-xl flex justify-center items-center h-[400px] overflow-hidden">
+              <div className="absolute inset-0 bg-noisy pointer-events-none"></div>
+              <div className="relative z-10">Coming Soon</div>
             </div>
-            <div className="!dark flex-1 rounded-xl flex justify-center items-center bg-gray-200 dark:bg-gray-800 h-[400px]">
-              Tooltip
+
+            <div className="relative flex-2 bg-gray-200 dark:bg-[#17171c] rounded-xl flex justify-center items-center h-[400px] overflow-hidden">
+              <div className="absolute inset-0 bg-noisy pointer-events-none"></div>
+              <div className="relative z-10">Coming Soon</div>
             </div>
           </div>
-
-          {/* <div className="bg-red-600 h-[600px] mt-36">h</div> */}
         </div>
       </div>
     </CustomTheme>
