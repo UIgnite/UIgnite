@@ -5,9 +5,9 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 const Navbar = () => {
   return (
-    <div className="relative px-4 sm:px-6 lg:px-8 flex flex-col w-full py-5 mx-auto md:flex-row md:items-center md:justify-between">
+    <div className="relative max-w-[88rem] px-4 sm:px-6 lg:px-8 flex flex-col w-full py-5 mx-auto md:flex-row md:items-center md:justify-between">
       {/* logo */}
-      <div className="flex flex-row gap-12 items-center justify-between text-[0.9rem] lg:justify-start">
+      <div className="flex flex-row gap-12 items-center justify-between text-[1rem] lg:justify-start">
         <Link href="/" className="flex items-center gap-2">
           <img src="/favicon.png" className="w-8 object-contain" alt="Logo" />
           <h4 className="text-2xl font-semibold -mt-1">
@@ -47,7 +47,7 @@ const Navbar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="cursor-pointer p-2 rounded hover:bg-zinc-700">
+          <div className="!dark cursor-pointer p-2 rounded hover:bg-zinc-200 dark:hover:bg-zinc-700">
             <GitHubLogoIcon className=" h-4 w-4 " />
           </div>
         </a>

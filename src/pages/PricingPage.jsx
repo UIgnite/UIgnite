@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { ThemeSelector, PricingCard } from "../components/PricingCard";
-import { themes } from "../utils/theme.js";
+import React, { useState } from 'react';
+import { ThemeSelector,PricingCard } from '../components/PricingCard';
+
+
 
 const PricingSection = () => {
   const [currentTheme, setCurrentTheme] = useState("dark");
@@ -49,16 +50,11 @@ const PricingSection = () => {
   ];
 
   return (
-    <div
-      className={`${themes[currentTheme].background} min-h-screen py-16 px-4 sm:px-6 lg:px-8`}
-    >
+    <div className={`min-h-screen py-16 px-4 sm:px-6 lg:px-8`}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-white mb-4">Pricing Plans</h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Choose the perfect plan for your project needs with flexible options
-            and powerful features.
-          </p>
+          <h1 className="text-4xl font-bold  mb-4">Pricing Plans</h1>
+          <p className="!dark text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Choose the perfect plan for your project needs with flexible options and powerful features.</p>
         </div>
 
         <ThemeSelector currentTheme={currentTheme} setTheme={setCurrentTheme} />

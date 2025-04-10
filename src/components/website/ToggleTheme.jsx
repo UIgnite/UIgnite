@@ -8,10 +8,7 @@ const ThemeToggle = () => {
 
   return (
     <button
-      className={`cursor-pointer p-2 rounded ${
-        // isDark ? "hover:bg-zinc-700" : "hover:bg-zinc-200"
-        "hover:bg-zinc-700"
-      }`}
+      className={`!dark cursor-pointer p-2 rounded dark:hover:bg-zinc-700 hover:bg-zinc-200`}
       onClick={toggleTheme}
     >
       {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}

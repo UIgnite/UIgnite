@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Funnel+Display:wght@300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Recursive:wght@300..1000&display=swap");
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-dark-primary: #0f0f0f;
   --color-dark-secondary: #222;
@@ -15,6 +16,7 @@
 body {
   font-family: "Outfit", sans-serif;
 }
+
 .outfit {
   font-family: "Outfit", sans-serif;
 }
@@ -75,12 +77,14 @@ body {
 }
 
 .scrollable-content::-webkit-scrollbar-track {
-  background: #00000000; /* Background of the scrollbar track */
+  background: #00000000;
+  /* Background of the scrollbar track */
   border-radius: 10px;
 }
 
 .scrollable-content::-webkit-scrollbar-thumb {
-  background-color: #222; /* Color of the scrollbar thumb */
+  background-color: #222;
+  /* Color of the scrollbar thumb */
   border-radius: 10px;
   border: 0px solid #131313; /* Add space between thumb and track */
 }
