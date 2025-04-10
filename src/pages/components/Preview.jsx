@@ -1,40 +1,22 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
-import {
-  stackoverflowDark,
-  schoolBook,
-  darcula,
-  dark,
-  docco,
-  a11yDark,
-  nightOwl,
-  monokai,
-  atelierHeathDark,
-  atelierLakesideDark,
-  atelierSulphurpoolDark,
-} from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { Tab, Tabs, TabContent, TabList } from "../../components/Tabs";
-
 import { Textarea } from "../../components/Textarea";
-import {
-  coy,
-  funky,
-  okaidia,
-  zTouch,
-  solarizedlight,
-  tomorrow,
-  prism,
-  atomDark,
-  duotoneDark,
-} from "react-syntax-highlighter/dist/esm/styles/prism";
+import { useNavigate, useParams } from "react-router-dom";
+import { codeString } from "./codeString";
 
 const Preview = ({ codeString = "" }) => {
+  const { componentId } = useParams();
+  const currComponent = codeString.find(
+    (component) => component.id === componentId,
+  );
   const syntaxHighlighterElement = (
     <SyntaxHighlighter
       language="javascript"
       style={nightOwl}
-      className=" h-[100%] max-w-[100%] rounded-md scrollable-content bg-black"
+      className="text-left h-[100%] min-w-[100%] rounded-md scrollable-content"
     >
-      {codeString}
+      {currComponent.code}
     </SyntaxHighlighter>
   );
 

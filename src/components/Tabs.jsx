@@ -54,7 +54,7 @@ const Tab = ({
 const TabContent = ({ value, activeTab, content }) => {
   if (activeTab === value)
     return (
-      <div className=" rounded-md  flex justify-center min-h-[100%] overflow-x-auto  mt-4">
+      <div className=" rounded-md flex justify-center min-h-[100%] overflow-x-auto  mt-4">
         {content}
       </div>
     );
