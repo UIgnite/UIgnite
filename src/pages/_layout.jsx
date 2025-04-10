@@ -8,7 +8,9 @@ export default function RootLayout() {
   console.log("location: ", location);
   return (
     <>
-      {location.pathname === "/" || location.pathname === "/home" || location.pathname==="/test" ? null : (
+      {location.pathname === "/" ||
+      location.pathname === "/home" ||
+      location.pathname === "/test" ? null : (
         <Navbar />
       )}
       <Outlet />

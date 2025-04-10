@@ -1,4 +1,9 @@
-import { FaLinkedinIn, FaXTwitter, FaInstagram, FaYoutube } from "react-icons/fa6";
+import {
+  FaLinkedinIn,
+  FaXTwitter,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa6";
 
 const socialIconsMap = {
   linkedin: <FaLinkedinIn />,
@@ -16,8 +21,7 @@ const Footer = ({
   copyright,
 }) => {
   return (
-    <footer className="!dark py-10 px-6 md:px-20 transition-all shadow-lg"
-    >
+    <footer className="!dark py-10 px-6 md:px-20 transition-all shadow-lg">
       <div className="flex flex-col md:flex-row justify-between gap-10">
         {/* Logo & Description */}
         <div className="max-w-sm">
@@ -79,7 +83,8 @@ const Footer = ({
       </div>
 
       {/* Copyright */}
-      <div className="!dark text-center text-sm mt-10 pt-4 border-t 
+      <div
+        className="!dark text-center text-sm mt-10 pt-4 border-t 
         border-gray-300 text-gray-600 
         dark:border-gray-800 dark:text-gray-500"
       >
