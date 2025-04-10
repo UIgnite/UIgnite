@@ -708,22 +708,22 @@
     "path": "/components/Spinner.jsx",
     "previewImageUrl": "",
     "installation": [
-  {
-    "title": "Import the Spinner",
-    "codeBlock": "import { Spinner } from '@/components/Spinner';",
-    "path": "/components/Spinner.jsx"
-  },
-  {
-    "title": "Ensure theme hook is present",
-    "codeBlock": "// Spinner depends on useTheme to switch dot color\nimport { useTheme } from '@/hooks/theme';",
-    "path": "/hooks/theme.js"
-  },
-  {
-    "title": "Ensure `cn` utility is available",
-    "codeBlock": "",
-    "path": "/utils/lib.js"
-  }
-  ],
+      {
+        "title": "Import the Spinner",
+        "codeBlock": "import { Spinner } from '@/components/Spinner';",
+        "path": "/components/Spinner.jsx"
+      },
+      {
+        "title": "Ensure theme hook is present",
+        "codeBlock": "// Spinner depends on useTheme to switch dot color\nimport { useTheme } from '@/hooks/theme';",
+        "path": "/hooks/theme.js"
+      },
+      {
+        "title": "Ensure `cn` utility is available",
+        "codeBlock": "",
+        "path": "/utils/lib.js"
+      }
+    ],
     "props": [
       {
         "prop": "className",
