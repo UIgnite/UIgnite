@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Outfit:wght@100..900&family=Recursive:wght@300..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Funnel+Display:wght@300..800&family=Outfit:wght@100..900&family=Recursive:wght@300..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Funnel+Display:wght@300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Recursive:wght@300..1000&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;700&display=swap");
 
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
@@ -110,13 +110,17 @@ body {
 
 .animate-border {
   --border-angle: 0deg;
-  background: linear-gradient(#0f172a, #0f172a) padding-box,
-    conic-gradient(from var(--border-angle),
-      rgba(71, 85, 105, 0.48) 80%,
-      #6366f1 86%,
-      #a5b4fc 90%,
-      #6366f1 94%,
-      rgba(71, 85, 105, 0.48)) border-box;
+  background:
+    linear-gradient(#0f172a, #0f172a) padding-box,
+    conic-gradient(
+        from var(--border-angle),
+        rgba(71, 85, 105, 0.48) 80%,
+        #6366f1 86%,
+        #a5b4fc 90%,
+        #6366f1 94%,
+        rgba(71, 85, 105, 0.48)
+      )
+      border-box;
   border: 2px solid transparent;
   animation: spin-border 4s linear infinite;
 }
@@ -131,7 +135,7 @@ body {
   background-image: url("https://web.archive.org/web/20230410192050im_/https://liveblocks.io/images/noise.png");
   background-repeat: repeat;
   background-size: 182px;
-  opacity: .03
+  opacity: 0.03;
 }
 
 .IllustrationPresence_mask__Fkl05 {
