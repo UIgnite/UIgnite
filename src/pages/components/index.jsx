@@ -8,17 +8,17 @@ export default function Component() {
   const { componentId } = useParams();
   const currComponent = components.find(
     (component) =>
-      component.id.trim().toLowerCase() === componentId.trim().toLowerCase()
+      component.id.trim().toLowerCase() === componentId.trim().toLowerCase(),
   );
 
   const element = elements.find(
     (element) =>
-      element.id.toLowerCase().trim() == componentId.trim().toLowerCase()
+      element.id.toLowerCase().trim() == componentId.trim().toLowerCase(),
   );
 
   const codeStr = codeString.find(
     (element) =>
-      element.id.toLowerCase().trim() == componentId.trim().toLowerCase()
+      element.id.toLowerCase().trim() == componentId.trim().toLowerCase(),
   );
 
   if (!currComponent) {
