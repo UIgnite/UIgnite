@@ -24,7 +24,7 @@ const Home = () => {
 
                 <p className="!dark text-gray-600 text-sm sm:text-base md:text-lg max-w-md sm:max-w-lg md:max-w-prose mx-auto dark:text-zinc-400">
                   UIgnite helps you{"  "}
-                  <span className="!dark font-semibold text-blue-900 dark:text-blue-50 drop-shadow-[0_0_4px_rgba(30,64,175,0.3)] dark:drop-shadow-[0_0_4px_rgba(30,64,175,0.8)]">
+                  <span className="!dark font-semibold text-blue-900 dark:text-blue-50 drop-shadow-[0_0_4px_rgba(30,64,175,0.1)] dark:drop-shadow-[0_0_4px_rgba(30,64,175,0.8)]">
                     skip the design rabbit hole
                   </span>{" "}
                   with ready-to-use components that just look right.
@@ -41,6 +41,32 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          <div className=" flex flex-row gap-5 z-10 relative mt-36 cursor-pointer">
+            <div className="!dark flex-1 rounded-xl flex justify-center items-center bg-gray-200 dark:bg-gray-800  h-[400px]">
+              Card
+            </div>
+            <div className=" !dark flex-2 rounded-xl flex justify-center items-center bg-gray-200 dark:bg-gray-800 h-[400px]">
+              Coming Soon..
+            </div>
+            <div className=" !dark flex-1 rounded-xl flex justify-center items-center bg-gray-200 dark:bg-gray-800 h-[400px]">
+              Tooltip
+            </div>
+          </div>
+
+          <div className=" flex flex-row gap-5 z-10 relative mt-5 cursor-pointer">
+            <div className="!dark flex-1 rounded-xl flex justify-center items-center bg-gray-200 dark:bg-gray-800  h-[400px]">
+              Coming Soon...
+            </div>
+            <div className="!dark flex-1 rounded-xl flex justify-center items-center bg-gray-200 dark:bg-gray-800 h-[400px]">
+              Coming Soon...
+            </div>
+            <div className="!dark flex-1 rounded-xl flex justify-center items-center bg-gray-200 dark:bg-gray-800 h-[400px]">
+              Tooltip
+            </div>
+          </div>
+
+          {/* <div className="bg-red-600 h-[600px] mt-36">h</div> */}
         </div>
       </div>
     </CustomTheme>
