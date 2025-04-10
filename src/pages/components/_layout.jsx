@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 export default function ComponentLayout() {
   const { componentId } = useParams();
   const navigate = useNavigate();
-  console.log(componentId);
   return (
     <div className="w-full flex h-[calc(100vh-80px)] overflow-y-hidden mt-10">
       {/* Side Bar  */}

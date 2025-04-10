@@ -37,13 +37,13 @@ const Tab = ({
   className = "",
 }) => {
   const isActive = activeTab === value;
-  console.log(value, activeTab);
   return (
     <button
       onClick={() => setActiveTab(value)}
-      className={` px-6 py-2 rounded-md text-md font-medium cursor-pointer
+
+      className={cn(` px-6 py-2 rounded-md text-md font-medium cursor-pointer
         ${isActive ? " text-white bg-neutral-900" : " text-gray-600 hover:text-white"}
-      `}
+      `, className)}
     >
       {title}
     </button>
