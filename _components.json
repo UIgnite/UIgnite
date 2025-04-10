@@ -13,7 +13,7 @@
         "path": "/components/Button.jsx"
       },
       {
-        "title": "Add utils file",
+        "title": "Copy paste this code",
         "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
         "path": "/components/Button.jsx"
       },

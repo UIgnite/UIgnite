@@ -26,7 +26,7 @@ export default function Component() {
   }
 
   return (
-    <div>
+    <div className="mb-5">
       <div className="text-4xl font-semibold">{currComponent.name}</div>
       <div className="text-neutral-300">{currComponent.desc}</div>
 
@@ -35,9 +35,10 @@ export default function Component() {
         element={element ? element.element : <></>}
       />
 
-      <div className="text-4xl font-semibold"> Installation </div>
+      <div className="text-4xl mt-4 font-semibold"> Installation </div>
       <Install
         componentId={currComponent.id}
+        codeString={codeStr}
         element={element ? element.element : <></>}
       />
     </div>
