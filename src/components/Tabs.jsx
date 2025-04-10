@@ -2,12 +2,12 @@ import React from "react";
 import { useState } from "react";
 import { cn } from "../utils/lib";
 
-const Tabs = ({ children, defaultVal = "preview", className = "" }) => {
+const Tabs = ({ children, defaultVal = "", className = "" }) => {
   const [activeTab, setActiveTab] = useState(defaultVal);
 
   return (
     <>
-      <div className={` mt-4 w-[90%] min ${className}`}>
+      <div className={` mt-4 w-[90%]  ${className}`}>
         {React.Children.map(children, (child, index) => {
           return React.cloneElement(child, {
             activeTab,
@@ -32,7 +32,7 @@ const TabList = ({ children, activeTab, setActiveTab, className = "" }) => {
 const Tab = ({
   title = "Here is the Title",
   value,
-  activeTab = "preview",
+  activeTab = "",
   setActiveTab,
   className = "",
 }) => {
@@ -55,7 +55,7 @@ const Tab = ({
 const TabContent = ({ value, activeTab, content }) => {
   if (activeTab === value)
     return (
-      <div className=" rounded-md flex justify-center min-h-[100%] overflow-x-auto  mt-3">
+      <div className=" rounded-md flex  max-h-[400px] overflow-x-auto  mt-3">
         {content}
       </div>
     );
