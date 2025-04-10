@@ -21,9 +21,7 @@ const Tabs = ({ children, defaultVal = "preview", className = "" }) => {
 
 const TabList = ({ children, activeTab, setActiveTab, className = "" }) => {
   return (
-    <div
-      className={cn(`flex space-x-2  rounded-md`, className)}
-    >
+    <div className={cn(`flex space-x-2  rounded-md`, className)}>
       {React.Children.map(children, (child, index) =>
         React.cloneElement(child, { activeTab, setActiveTab }),
       )}

@@ -1,4 +1,4 @@
-import { Accordion, AccordionWrapper } from "./src/components/Accordion"
+import { Accordion, AccordionWrapper } from "./src/components/Accordion";
 
 export default [
   {

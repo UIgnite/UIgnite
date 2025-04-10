@@ -30,13 +30,22 @@ const Preview = ({ codeString = "", element }) => {
       <Tabs defaultVal="preview">
         <TabList>
           {element ? <Tab title="Preview" value="preview" /> : <></>}
-          
+
           <Tab title="Code" value="code" />
         </TabList>
 
-        {element ? <TabContent content={<div className="w-[100%] flex justify-center items-center p-10 bg-neutral-900">
-          {element}
-        </div>} value="preview" /> : <></>}
+        {element ? (
+          <TabContent
+            content={
+              <div className="w-[100%] flex justify-center items-center p-10 bg-neutral-900">
+                {element}
+              </div>
+            }
+            value="preview"
+          />
+        ) : (
+          <></>
+        )}
         <TabContent content={syntaxHighlighterElement} value="code" />
       </Tabs>
     </div>

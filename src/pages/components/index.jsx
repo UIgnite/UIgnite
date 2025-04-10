@@ -7,7 +7,8 @@ import { components } from "../../utils/lib";
 export default function Component() {
   const { componentId } = useParams();
   const currComponent = components.find(
-    (component) => component.id.trim().toLowerCase() === componentId.trim().toLowerCase(),
+    (component) =>
+      component.id.trim().toLowerCase() === componentId.trim().toLowerCase(),
   );
 
   if (!currComponent) {
