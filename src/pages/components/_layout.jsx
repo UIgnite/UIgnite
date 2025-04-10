@@ -18,6 +18,7 @@ export default function ComponentLayout() {
             <ul className="text-gray-400 my-4 flex flex-col gap-y-2">
               {components.map((component, index) => (
                 <button
+                key={index}
                   onClick={() => navigate(`/components/${component.id}`)}
                   className="text-left cursor-pointer hover:text-white"
                 >

@@ -7,7 +7,7 @@ import { components } from "../../utils/lib";
 export default function Component() {
   const { componentId } = useParams();
   const currComponent = components.find(
-    (component) => component.id === componentId,
+    (component) => component.id.trim().toLowerCase() === componentId.trim().toLowerCase(),
   );
 
   if (!currComponent) {
@@ -19,7 +19,7 @@ export default function Component() {
       <div className="text-4xl font-semibold">{currComponent.name}</div>
       <div className="text-neutral-300">{currComponent.desc}</div>
 
-      <Preview codeString={codeString} />
+      <Preview codeString={codeString} element={currComponent.element} />
     </div>
   );
 }
