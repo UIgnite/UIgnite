@@ -68,7 +68,7 @@ const Preview = ({ currComponent, element }) => {
   );
 
   return (
-    <div className="h-[100vh] min-w-[80%] flex flex-col">
+    <div className=" min-w-[80%] flex flex-col">
       <Tabs defaultVal="preview">
         <TabList>
           {element ? <Tab title="Preview" value="preview" /> : <></>}
