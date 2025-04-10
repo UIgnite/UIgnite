@@ -4,7 +4,7 @@ import { components } from "../../utils/lib";
 
 export default function ComponentList() {
   return (
-    <div className=" ml-[5%] mr-[5%]   grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-2  xl:grid-cols-2">
+    <div className=" ml-[5%] mr-[5%] grid gap-10 grid-cols-1 md:grid-cols-2">
       {components.map((component, idx) => (
         <ComponentCard
           key={idx}

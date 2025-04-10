@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { cn } from "../utils/lib";
 
 const Tabs = ({ children, defaultVal = "preview", className = "" }) => {
   const [activeTab, setActiveTab] = useState(defaultVal);
@@ -20,9 +21,7 @@ const Tabs = ({ children, defaultVal = "preview", className = "" }) => {
 
 const TabList = ({ children, activeTab, setActiveTab, className = "" }) => {
   return (
-    <div
-      className={`p-2 flex space-x-2  rounded-md border-1 border-gray-700  ${className}`}
-    >
+    <div className={cn(`flex space-x-2  rounded-md`, className)}>
       {React.Children.map(children, (child, index) =>
         React.cloneElement(child, { activeTab, setActiveTab }),
       )}
@@ -38,13 +37,15 @@ const Tab = ({
   className = "",
 }) => {
   const isActive = activeTab === value;
-  console.log(value, activeTab);
   return (
     <button
       onClick={() => setActiveTab(value)}
-      className={` px-4 py-1 m-2 rounded-md text-md font-medium 
-        ${isActive ? " text-white" : " text-gray-600 hover:text-white"}
-      `}
+      className={cn(
+        ` px-6 py-2 rounded-md text-md font-medium cursor-pointer
+        ${isActive ? " text-white bg-neutral-900" : " text-gray-600 hover:text-white"}
+      `,
+        className,
+      )}
     >
       {title}
     </button>
@@ -54,7 +55,7 @@ const Tab = ({
 const TabContent = ({ value, activeTab, content }) => {
   if (activeTab === value)
     return (
-      <div className=" rounded-md flex justify-center min-h-[100%] overflow-x-auto  mt-4">
+      <div className=" rounded-md flex justify-center min-h-[100%] overflow-x-auto  mt-3">
         {content}
       </div>
     );

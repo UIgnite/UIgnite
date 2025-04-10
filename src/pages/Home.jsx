@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../components/Button";
-import { CustomTheme } from "../utils/customTheme";
+import { CustomTheme } from "../utils/CustomTheme";
 import Navbar from "../components/website/Navbar";
 
 const Home = () => {

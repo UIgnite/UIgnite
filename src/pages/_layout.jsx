@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../components/website/Navbar";
-import { CustomTheme } from "../utils/customTheme";
+import { CustomTheme } from "../utils/CustomTheme";
 
 export default function RootLayout() {
   const location = useLocation();
