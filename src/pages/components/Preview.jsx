@@ -17,6 +17,8 @@ const Preview = ({ currComponent, element }) => {
     setTimeout(() => setCopied(false), 1000);
   }, [currComponent, setCopied]);
 
+  console.log(atomOneDarkReasonable);
+
   const syntaxHighlighterElement = (
     <div className="w-full h-full relative">
       <button
@@ -49,16 +51,15 @@ const Preview = ({ currComponent, element }) => {
           </svg>
         )}
       </button>
-      <style>
-        {`
-        pre {
-          background: rgb(22 22 22);
-        }
-      `}
-      </style>
       <SyntaxHighlighter
         language="javascript"
-        style={atomOneDarkReasonable}
+        style={{
+          ...atomOneDarkReasonable,
+          hljs: {
+            ...atomOneDarkReasonable.hljs,
+            background: "rgb(24, 24, 24)",
+          },
+        }}
         className="text-left text-sm h-full min-w-full rounded-md scrollable-content"
       >
         {currComponent.element}
