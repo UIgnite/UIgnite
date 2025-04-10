@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 import React, { useCallback, useState } from "react";
 
 const Preview = ({ currComponent, element }) => {
-
   const [copied, setCopied] = useState(false);
 
   if (!currComponent) {

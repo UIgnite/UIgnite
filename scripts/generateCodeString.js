@@ -9,7 +9,7 @@ async function getJSONstringData() {
     try {
       const content = await fs.readFile(
         path.join("../src", element.path),
-        "utf-8"
+        "utf-8",
       );
       jsonStringParse.push({
         id: element.id,
