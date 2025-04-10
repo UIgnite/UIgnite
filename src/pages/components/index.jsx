@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { Preview } from "./Preview";
 import { codeString, components, elements } from "../../utils/lib";
+import { Install } from "./Install";
 
 export default function Component() {
   const { componentId } = useParams();
@@ -31,6 +32,12 @@ export default function Component() {
 
       <Preview
         currComponent={codeStr}
+        element={element ? element.element : <></>}
+      />
+
+      <div className="text-4xl font-semibold"> Installation </div>
+      <Install
+        componentId={currComponent.id}
         element={element ? element.element : <></>}
       />
     </div>

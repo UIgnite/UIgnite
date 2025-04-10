@@ -3,24 +3,29 @@ import { atomOneDarkReasonable } from "react-syntax-highlighter/dist/esm/styles/
 import { Tab, Tabs, TabContent, TabList } from "../../components/Tabs";
 import { useParams } from "react-router-dom";
 import React, { useCallback, useState } from "react";
+import { codeString, components, elements } from "../../utils/lib";
 
-const Preview = ({ currComponent, element }) => {
+const Install = ({ componentId, element }) => {
   const [copied, setCopied] = useState(false);
 
-  if (!currComponent) {
+  console.log(componentId);
+  const currComponent = components.find(
+    (component) =>
+      component.id.trim().toLowerCase() === componentId.trim().toLowerCase(),
+  );
+  if (!componentId) {
     return <div className="text-red-500">Code not found.</div>;
   }
 
   const handleCopyCodeBlock = useCallback(() => {
-    window.navigator.clipboard.writeText(currComponent.code);
+    window.navigator.clipboard.writeText(currComponent.command);
     setCopied(true);
     setTimeout(() => setCopied(false), 1000);
   }, [currComponent, setCopied]);
 
-  console.log(atomOneDarkReasonable);
-
-  const syntaxHighlighterElement = (
-    <div className="w-full h-full relative">
+  // console.log(atomOneDarkReasonable);
+  const commandElement = (
+    <div className=" w-full h-[50px] relative">
       <button
         onClick={handleCopyCodeBlock}
         className="absolute right-2 top-2 py-1.5 px-1.5 cursor-pointer bg-neutral-900 rounded-md border border-neutral-500"
@@ -60,38 +65,40 @@ const Preview = ({ currComponent, element }) => {
             background: "rgb(24, 24, 24)",
           },
         }}
-        className="text-left text-sm h-full min-w-full rounded-md scrollable-content"
+        className="mb-7 text-left text-sm h-full min-w-full rounded-md scrollable-content"
       >
-        {currComponent.element}
+        {currComponent.command}
       </SyntaxHighlighter>
     </div>
   );
 
   return (
     <div className=" min-w-[80%] flex flex-col">
-      <Tabs defaultVal="preview">
+      <Tabs defaultVal="cli">
         <TabList>
-          {element ? <Tab title="Preview" value="preview" /> : <></>}
-
-          <Tab title="Code" value="code" />
+          <Tab title="CLI" value="cli"></Tab>
+          <Tab title="Manual" value="manual"></Tab>
         </TabList>
-
-        {element ? (
-          <TabContent
-            content={
-              <div className="w-[100%] flex justify-center items-center p-10 bg-neutral-900">
-                {element}
-              </div>
-            }
-            value="preview"
-          />
-        ) : (
-          <></>
-        )}
-        <TabContent content={syntaxHighlighterElement} value="code" />
+        <TabContent
+          content={
+            <Tabs>
+              <TabList className="bg-neutral-900 ">
+                <Tab title="npm" value="cli"></Tab>
+              </TabList>
+              <TabContent
+                defaultVal="npm"
+                content={commandElement}
+                value="cli"
+              ></TabContent>
+              <TabContent content="this in manual" value="manual"></TabContent>
+            </Tabs>
+          }
+          value="cli"
+        ></TabContent>
+        <TabContent content="this in manual" value="manual"></TabContent>
       </Tabs>
     </div>
   );
 };
 
-export { Preview };
+export { Install };

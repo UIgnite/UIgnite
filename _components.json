@@ -5,6 +5,7 @@
     "desc": "This is Accordian Webpart",
     "path": "/components/Accordion.jsx",
     "previewImageUrl": "https://miro.medium.com/v2/resize:fit:2000/1*-2gNQX2U8p9hCae778ib4w.png",
+    "command": "npx uignite add Accordian",
     "installation": [
       {
         "title": "Install dependencies",
