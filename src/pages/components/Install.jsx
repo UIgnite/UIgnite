@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import React, { useCallback, useState } from "react";
 import { codeString, components, elements } from "../../utils/lib";
 
-const Install = ({ codeString , componentId, element }) => {
+const Install = ({ codeString, componentId, element }) => {
   const [copied, setCopied] = useState(false);
 
   console.log(componentId);
@@ -73,8 +73,8 @@ const Install = ({ codeString , componentId, element }) => {
   );
 
   const installationElement = (
-    <div className="w-full" >
-      <div className="font-bold text-xl mt-3 mb-2" >
+    <div className="w-full">
+      <div className="font-bold text-xl mt-3 mb-2">
         {currComponent.installation[0].title}
       </div>
 
@@ -123,13 +123,12 @@ const Install = ({ codeString , componentId, element }) => {
           {currComponent.installation[0].codeBlock}
         </SyntaxHighlighter>
       </div>
-      
-      <div className="font-bold text-xl mt-2 mb-2" >
+
+      <div className="font-bold text-xl mt-2 mb-2">
         {currComponent.installation[1].title}
       </div>
 
       <div className=" w-full h-[50%] relative">
-      
         <SyntaxHighlighter
           language="javascript"
           style={{
@@ -145,8 +144,7 @@ const Install = ({ codeString , componentId, element }) => {
         </SyntaxHighlighter>
       </div>
     </div>
-  )
-  
+  );
 
   return (
     <div className=" min-w-[80%] flex flex-col">
@@ -159,7 +157,7 @@ const Install = ({ codeString , componentId, element }) => {
           content={
             <Tabs defaultVal="cli">
               <TabList className="bg-neutral-900 ">
-                <Tab title="npm" value="cli" ></Tab>
+                <Tab title="npm" value="cli"></Tab>
               </TabList>
               <TabContent
                 defaultVal="npm"
