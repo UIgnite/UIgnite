@@ -10,6 +10,10 @@ const Preview = ({ codeString = "" }) => {
   const currComponent = codeString.find(
     (component) => component.id === componentId,
   );
+
+  if (!currComponent) {
+    return <div className="text-red-500">Code not found.</div>;
+  }
   const syntaxHighlighterElement = (
     <SyntaxHighlighter
       language="javascript"
