@@ -1,9 +1,7 @@
-export const codeString = 
-[
+export const codeString = [
   {
-    id: 'Accordion',
-    code: 
-    `
+    id: "Accordion",
+    code: `
     <AccordionWrapper>
       <Accordion
         title="Title 1"
@@ -20,14 +18,13 @@ export const codeString =
         open
       />
     </AccordionWrapper>
-    `
+    `,
   },
   {
     id: "Avatar",
-    code: 
-    `
+    code: `
       <Avatar url={"/piyush-sir.png"} alt={"user"} />
       <Avatar url={"/hitesh-sir.png"} alt={"user"} />
-    `
-  }
+    `,
+  },
 ];

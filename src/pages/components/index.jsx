@@ -7,19 +7,17 @@ import { components } from "../../utils/lib";
 export default function Component() {
   const { componentId } = useParams();
   const currComponent = components.find(
-    (component) => component.id === componentId
+    (component) => component.id === componentId,
   );
-  
+
   if (!currComponent) {
     return <div className="text-red-500">Component not found.</div>;
   }
-  console.log(currComponent)
+  console.log(currComponent);
   return (
     <div>
       <div className="text-4xl font-semibold">{currComponent.name}</div>
-      <div className="text-neutral-300">
-        {currComponent.desc}
-      </div>
+      <div className="text-neutral-300">{currComponent.desc}</div>
 
       <Preview codeString={codeString} />
     </div>

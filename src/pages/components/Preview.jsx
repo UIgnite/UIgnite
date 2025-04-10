@@ -1,15 +1,14 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { nightOwl} from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { Tab, Tabs, TabContent, TabList } from "../../components/Tabs";
 import { Textarea } from "../../components/Textarea";
 import { useNavigate, useParams } from "react-router-dom";
 import { codeString } from "./codeString";
 
-
 const Preview = ({ codeString = "" }) => {
   const { componentId } = useParams();
   const currComponent = codeString.find(
-    (component) => component.id === componentId
+    (component) => component.id === componentId,
   );
   const syntaxHighlighterElement = (
     <SyntaxHighlighter
@@ -17,7 +16,7 @@ const Preview = ({ codeString = "" }) => {
       style={nightOwl}
       className="text-left h-[100%] min-w-[100%] rounded-md scrollable-content"
     >
-      {currComponent.code }
+      {currComponent.code}
     </SyntaxHighlighter>
   );
 
