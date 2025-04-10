@@ -1,5 +1,5 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { atomOneDarkReasonable } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { Tab, Tabs, TabContent, TabList } from "../../components/Tabs";
 import { useParams } from "react-router-dom";
 import React, { useCallback, useState } from "react";
@@ -49,9 +49,16 @@ const Preview = ({ currComponent, element }) => {
           </svg>
         )}
       </button>
+     <style>
+      {`
+        pre {
+          background: rgb(22 22 22);
+        }
+      `}
+      </style> 
       <SyntaxHighlighter
         language="javascript"
-        style={nightOwl}
+        style={atomOneDarkReasonable}
         className="text-left text-sm h-full min-w-full rounded-md scrollable-content"
       >
         {currComponent.element}
