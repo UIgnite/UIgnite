@@ -27,9 +27,9 @@ export default [
     id: "avatar",
     element: (
       <>
-      <Avatar url={"/piyush-sir.png"} alt={"user"} />
+        <Avatar url={"/piyush-sir.png"} alt={"user"} />
         <Avatar url={"/hitesh-sir.png"} alt={"user"} />
       </>
-    )
-  }
+    ),
+  },
 ];

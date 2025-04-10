@@ -49,13 +49,13 @@ const Preview = ({ currComponent, element }) => {
           </svg>
         )}
       </button>
-     <style>
-      {`
+      <style>
+        {`
         pre {
           background: rgb(22 22 22);
         }
       `}
-      </style> 
+      </style>
       <SyntaxHighlighter
         language="javascript"
         style={atomOneDarkReasonable}
