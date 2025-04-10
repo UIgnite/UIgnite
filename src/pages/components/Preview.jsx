@@ -4,11 +4,7 @@ import { Tab, Tabs, TabContent, TabList } from "../../components/Tabs";
 import { useParams } from "react-router-dom";
 import React, { useCallback, useState } from "react";
 
-const Preview = ({ codeString = "", element }) => {
-  const { componentId } = useParams();
-  const currComponent = codeString.find(
-    (component) => component.id === componentId,
-  );
+const Preview = ({ currComponent, element }) => {
 
   const [copied, setCopied] = useState(false);
 
@@ -57,9 +53,9 @@ const Preview = ({ codeString = "", element }) => {
       <SyntaxHighlighter
         language="javascript"
         style={nightOwl}
-        className="text-left h-full min-w-full rounded-md scrollable-content"
+        className="text-left text-sm h-full min-w-full rounded-md scrollable-content"
       >
-        {currComponent.code}
+        {currComponent.element}
       </SyntaxHighlighter>
     </div>
   );
