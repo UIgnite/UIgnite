@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet, useParams } from "react-router-dom";
-import ComponentList from "./ComponentList";
+import ComponentList from "./componentList";
 import { components } from "../../utils/lib";
 import { useNavigate } from "react-router-dom";
 

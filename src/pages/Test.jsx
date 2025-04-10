@@ -2,7 +2,7 @@ import React from "react";
 
 import { Button } from "../components/Button";
 import Navbar from '../components/website/Navbar';
-import { CustomTheme } from "../utils/customTheme";
+import { CustomTheme } from "../utils/CustomTheme";
 
 
 const Test = () => {

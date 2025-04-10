@@ -1,6 +1,6 @@
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import components from "../../components.json";
+import components from "../../components";
 console.log(components);
 
 export function cn(...inputs) {
