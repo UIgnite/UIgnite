@@ -87,15 +87,16 @@ export const PricingCard = ({
         ))}
       </div>
 
-      <button
-        className={`mt-8 py-3 px-4 rounded-lg font-medium transition-all cursor-pointer duration-300 ${
+      <a
+        href="https://rzp.io/rzp/FuM0wyrD"
+        className={`mt-8 py-3 px-4 rounded-lg font-medium transition-all text-center cursor-pointer duration-300 ${
           highlighted
             ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600"
             : "bg-gradient-to-r from-gray-700 to-gray-600 text-white hover:from-gray-600 hover:to-gray-500"
         }`}
       >
         Get Started
-      </button>
+      </a>
     </div>
   );
 };
