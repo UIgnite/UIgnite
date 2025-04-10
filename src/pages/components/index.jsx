@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { Preview } from "./Preview";
 import { codeString, components, elements } from "../../utils/lib";
+import { Install } from "./Install";
 
 export default function Component() {
   const { componentId } = useParams();
@@ -25,12 +26,19 @@ export default function Component() {
   }
 
   return (
-    <div>
+    <div className="mb-5">
       <div className="text-4xl font-semibold">{currComponent.name}</div>
       <div className="text-neutral-300">{currComponent.desc}</div>
 
       <Preview
         currComponent={codeStr}
+        element={element ? element.element : <></>}
+      />
+
+      <div className="text-4xl mt-4 font-semibold"> Installation </div>
+      <Install
+        componentId={currComponent.id}
+        codeString={codeStr}
         element={element ? element.element : <></>}
       />
     </div>
