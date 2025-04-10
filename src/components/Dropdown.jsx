@@ -1,7 +1,7 @@
 import React, { useCallback, useRef, useState } from "react";
 import { Button } from "./Button";
 
-export default function Dropdown({ children, button, title="Open" }) {
+export default function Dropdown({ children, button, title = "Open" }) {
   const buttonRef = useRef(null);
   const dropDownRef = useRef(null);
 

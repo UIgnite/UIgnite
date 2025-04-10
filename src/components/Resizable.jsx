@@ -12,9 +12,9 @@ export default function Resizable({
   const draggerRef = useRef(null);
 
   const [dividerPosition, setDividerPosition] = useState(
-    defaultPosition ?? horizontalValue
+    (defaultPosition ?? horizontalValue)
       ? window.innerHeight - window.innerHeight / 3
-      : window.innerWidth / 5
+      : window.innerWidth / 5,
   );
   const [mouseX, setMouseX] = useState(0);
   const [mouseDown, setMouseDown] = useState(false);
@@ -29,7 +29,7 @@ export default function Resizable({
         },
         {
           signal: controller.signal,
-        }
+        },
       );
 
       draggerRef.current.addEventListener(
@@ -39,7 +39,7 @@ export default function Resizable({
         },
         {
           signal: controller.signal,
-        }
+        },
       );
     }
     return () => {
@@ -63,7 +63,7 @@ export default function Resizable({
       }}
       className={cn(
         `w-full h-full flex ${horizontalValue ? "flex-col" : null}`,
-        className
+        className,
       )}
     >
       <div
@@ -97,8 +97,8 @@ export default function Resizable({
           width: horizontalValue
             ? "w-full"
             : containerRef.current
-            ? containerRef.current.offsetWidth - dividerPosition
-            : 0,
+              ? containerRef.current.offsetWidth - dividerPosition
+              : 0,
           height: horizontalValue
             ? containerRef.current
               ? containerRef.current.offsetHeight - dividerPosition

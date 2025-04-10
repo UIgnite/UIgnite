@@ -11,7 +11,7 @@ function DatePicker({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentMonth, setCurrentMonth] = useState(
-    value ? new Date(value) : new Date()
+    value ? new Date(value) : new Date(),
   );
   const [showYears, setShowYears] = useState(false);
 
@@ -128,16 +128,16 @@ function DatePicker({
                 ? "bg-blue-600 text-white"
                 : "bg-blue-500 text-white"
               : isToday
-              ? darkMode
-                ? "border border-blue-400 text-gray-200"
-                : "border border-blue-300 text-gray-800"
-              : darkMode
-              ? "text-gray-200 hover:bg-gray-700"
-              : "text-gray-800 hover:bg-gray-100"
+                ? darkMode
+                  ? "border border-blue-400 text-gray-200"
+                  : "border border-blue-300 text-gray-800"
+                : darkMode
+                  ? "text-gray-200 hover:bg-gray-700"
+                  : "text-gray-800 hover:bg-gray-100",
           )}
         >
           {day}
-        </button>
+        </button>,
       );
     }
 
@@ -160,7 +160,7 @@ function DatePicker({
           "border rounded p-2 flex items-center justify-between cursor-pointer",
           darkMode
             ? "bg-gray-800 text-gray-200 border-gray-700"
-            : "bg-white text-gray-800 border-gray-300"
+            : "bg-white text-gray-800 border-gray-300",
         )}
         onClick={() => setIsOpen(!isOpen)}
       >
@@ -176,7 +176,7 @@ function DatePicker({
             "absolute mt-1 border rounded shadow-md p-3 z-10 w-64",
             darkMode
               ? "bg-gray-800 border-gray-700 text-gray-200"
-              : "bg-white border-gray-200 text-gray-800"
+              : "bg-white border-gray-200 text-gray-800",
           )}
         >
           {/* Header with month/year and navigation */}
@@ -203,7 +203,7 @@ function DatePicker({
                     "absolute top-full mt-1 border rounded shadow max-h-40 overflow-y-auto  w-32 z-20 scrollbar-hide",
                     darkMode
                       ? "bg-gray-800 border-gray-700"
-                      : "bg-white border-gray-200"
+                      : "bg-white border-gray-200",
                   )}
                 >
                   {yearOptions.map((year) => (
@@ -213,7 +213,7 @@ function DatePicker({
                         "block w-full text-left px-2 py-1",
                         currentMonth.getFullYear() === year
                           ? "bg-blue-100 dark:bg-blue-900"
-                          : "hover:bg-gray-100 dark:hover:bg-gray-700"
+                          : "hover:bg-gray-100 dark:hover:bg-gray-700",
                       )}
                       onClick={() => pickYear(year)}
                     >
