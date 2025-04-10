@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Landing from "./pages/Landing";
 import PricingSection from "./pages/PricingPage";
 import NotFound from "./components/website/NotFound";
-import Test from "./pages/Test";
+import Auth from "./pages/Auth";
 import Component from "./pages/components";
 import RootLayout from "./pages/_layout";
 import ComponentLayout from "./pages/components/_layout";
@@ -13,7 +13,7 @@ const App = () => {
   return (
     <Routes>
       <Route element={<RootLayout />}>
-        <Route path="/test" element={<Test />} />
+        <Route path="/auth" element={<Auth />} />
         <Route path="/" element={<Home />} />
         <Route path="/docs" element={<Landing />} />
         <Route element={<ComponentLayout />}>
