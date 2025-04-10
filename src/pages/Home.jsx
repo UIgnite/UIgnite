@@ -41,9 +41,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-          
-          
-        
 
           <div className=" flex flex-row gap-5 z-10 relative mt-36 cursor-pointer">
             <div className="!dark flex-1 rounded-xl flex justify-center items-center bg-gray-200 dark:bg-gray-800  h-[400px]">

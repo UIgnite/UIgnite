@@ -18,7 +18,13 @@ export const CustomTheme = ({ children }) => {
           preserveAspectRatio="xMidYMid slice"
         >
           <defs>
-            <linearGradient id="gridGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient
+              id="gridGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
               <stop offset="0%" stopColor="#333" stopOpacity="0.3" />
               <stop offset="100%" stopColor="#666" stopOpacity="0.3" />
             </linearGradient>
