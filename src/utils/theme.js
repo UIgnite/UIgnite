@@ -16,7 +16,7 @@ export const themes = {
       border: "border-green-900"
     },
     neon: {
-      name: "Darcula",
+      name: "Dracula",
       background: "bg-slate-900",
       cardBackground: "bg-black",
       highlightedCard: "bg-[#0D1520]",

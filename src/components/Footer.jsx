@@ -1,6 +1,4 @@
-// components/Footer.jsx
 import { FaLinkedinIn, FaXTwitter, FaInstagram, FaYoutube } from "react-icons/fa6";
-import { useTheme } from "../hooks/theme";
 
 const socialIconsMap = {
   linkedin: <FaLinkedinIn />,
@@ -17,30 +15,24 @@ const Footer = ({
   sections = [],
   copyright,
 }) => {
-  const { theme } = useTheme();
-  const isDark = theme === "dark";
-
   return (
-    <footer
-      className={`py-10 px-6 md:px-20 transition-all ${
-        isDark
-          ? "bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white"
-          : "bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 text-black"
-      } shadow-lg`}
+    <footer className="!dark py-10 px-6 md:px-20 transition-all shadow-lg"
     >
       <div className="flex flex-col md:flex-row justify-between gap-10">
         {/* Logo & Description */}
         <div className="max-w-sm">
           <img
-            src={isDark ? darkLogo : lightLogo}
+            src={lightLogo}
             alt="Logo"
-            className="h-10 w-auto mb-4"
+            className="h-10 w-auto mb-4 block dark:hidden"
           />
-          <p
-            className={`text-sm ${
-              isDark ? "text-gray-400" : "text-gray-700"
-            } text-shadow-md`}
-          >
+          <img
+            src={darkLogo}
+            alt="Logo"
+            className="h-10 w-auto mb-4 hidden dark:block"
+          />
+
+          <p className="!dark text-sm text-gray-700 dark:text-gray-400 text-shadow-md">
             {description}
           </p>
 
@@ -52,11 +44,9 @@ const Footer = ({
                 href={social.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 ${
-                  isDark
-                    ? "bg-gray-900 hover:bg-white hover:text-black hover:shadow-lg"
-                    : "bg-gray-200 hover:bg-black hover:text-white hover:shadow-lg"
-                }`}
+                className="!dark w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 
+                  bg-gray-200 hover:bg-black hover:text-white hover:shadow-lg 
+                  dark:bg-gray-900 dark:hover:bg-white dark:hover:text-black"
               >
                 {socialIconsMap[social.type]}
               </a>
@@ -68,25 +58,15 @@ const Footer = ({
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-sm">
           {sections.map((section, idx) => (
             <div key={idx}>
-              <h3
-                className={`font-semibold mb-4 text-shadow-lg ${
-                  isDark ? "text-white" : "text-black"
-                }`}
-              >
+              <h3 className="!dark font-semibold mb-4 text-shadow-lg text-black dark:text-white">
                 {section.title}
               </h3>
-              <ul
-                className={`space-y-2 ${
-                  isDark ? "text-gray-400" : "text-gray-600"
-                }`}
-              >
+              <ul className="!dark space-y-2 text-gray-600 dark:text-gray-400">
                 {section.links.map((link, index) => (
                   <li key={index}>
                     <a
                       href={link.href}
-                      className={`transition-all hover:underline ${
-                        isDark ? "hover:text-white" : "hover:text-black"
-                      }`}
+                      className="!dark transition-all hover:underline hover:text-black dark:hover:text-white"
                     >
                       {link.label}
                     </a>
@@ -99,10 +79,9 @@ const Footer = ({
       </div>
 
       {/* Copyright */}
-      <div
-        className={`text-center text-sm mt-10 pt-4 border-t ${
-          isDark ? "border-gray-800 text-gray-500" : "border-gray-300 text-gray-600"
-        }`}
+      <div className="!dark text-center text-sm mt-10 pt-4 border-t 
+        border-gray-300 text-gray-600 
+        dark:border-gray-800 dark:text-gray-500"
       >
         {copyright}
       </div>
