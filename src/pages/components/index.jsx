@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Preview } from "./Preview";
 import { codeString, components, elements } from "../../utils/lib";
 import { Install } from "./Install";
+import { Properties } from "./Properties";
 
 export default function Component() {
   const { componentId } = useParams();
@@ -26,11 +27,13 @@ export default function Component() {
   }
 
   return (
-    <div className="mb-5">
+    <div className="mb-5 w-[90%]">
       <div className="text-4xl font-semibold">{currComponent.name}</div>
       <div className="text-neutral-300">{currComponent.desc}</div>
 
       <Preview currComponent={codeStr} element={element} />
+
+      <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-neutral-700" />
 
       <div className="text-4xl mt-4 font-semibold"> Installation </div>
       <Install
@@ -38,6 +41,11 @@ export default function Component() {
         codeString={codeStr}
         element={element ? element.element : <></>}
       />
+
+      <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-neutral-700" />
+
+      <div className="text-4xl mt-4 font-semibold"> Props </div>
+      <Properties componentId={currComponent.id} />
     </div>
   );
 }

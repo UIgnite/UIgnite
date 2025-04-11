@@ -93,7 +93,6 @@ const Preview = ({ currComponent, element }) => {
           <TabContent content={syntaxHighlighterElement} value="code" />
         </Tabs>
       </LiveProvider>
-      
     </div>
   );
 };

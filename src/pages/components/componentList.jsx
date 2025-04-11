@@ -30,7 +30,7 @@ const ComponentCard = ({
     <div
       onClick={() => navigate(`/components/${id}`)}
       tabIndex={0}
-      className="min-h-80 cursor-pointer group border-1 border-gray-900 bg-gray-950  hover:bg-black/60 rounded-lg p-3 transition-colors"
+      className=" w-[90%] min-h-80 cursor-pointer group border-1 border-gray-900 bg-gray-950  hover:bg-black/60 rounded-lg p-3 transition-colors"
     >
       <div className="m-2 min-h-[70%] flex justify-center items-center">
         <img
