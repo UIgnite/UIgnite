@@ -13,26 +13,49 @@ If you are developing a production application, we recommend using TypeScript an
 
 // Comments likho
 
-1.  Button -> Saurav ✅
-2.  Toast -> Adi ✅
-3.  TextArea -> Janvi ✅
-4.  Resizable -> Adi ✅
-5.  Tooltip -> Ram ✅
-6.  Accordion -> Ram ✅
-7.  Form -> Aman ?
-8.  Skeleton -> Saurav ?
-9.  Avatar -> Aman ✅
-10. Dropdown -> Adi ✅
-11. Navbar -> Rohit ✅
-12. Input OTP -> Aman ✅
-13. Input -> Aman ✅
-14. Date Picker -> Sagar ✅
-15. Sonner -> Adi ✅
-16. Pricing -> Saurav ✅
-17. Message bot -> Ram ✅
-18. Switch -> Saurav ✅
-19. Testimonial -> Aman ✅
-20. Alert DilogBox -> JNV
-21. File Drop -> Adi
-22. Tabs ->
-23. NavMenu -> Ansh
+1. Accordion   -> Ram
+2. accordainwrapper  -> Ram
+3. avatar  -> Aman
+4. avatargroup  ->Jahanwee
+5. avatargroupwithhtooltip  ->Jahanwee
+6. button -> saurav
+7. datepicker -> sagar
+8. dropdown -> Aditya
+9. footer  -> Ansh
+10. input  -> Aman
+11. messagebot -> Ram
+12. navbar -> Rohit
+13. navmenu -> Ansh
+14. preview  ->Ram
+15. pricingcard ->Saurav
+16. resizable -> Aditya
+17. skeleton -> Saurav
+18. spinner -> Saurav
+19. switch -> Aditya
+20. tabs -> Ram
+21. testimonials -> Aman
+22. textarea -> Jahanwee
+23. toast -> Aditya
+24. tooltip -> Ram
+25. videoplayer ->Aditya
+26. Card -> Aman
+27. Batch ->?
+28. File drop ->
+29. Input OTP ->Saurav?
+30. Alert DialogBox -> Jahanwee
+
+//to be done:
+1. Landing page
+2. Demo website - Ansh + sagar
+3. Add a heading beta release
+4. Add pictures to avatar and avatargroup -J
+5. Make twitter handle -Ram
+6. Design docs section  
+7. Sidebar - Sagar 
+8. Carousal - Ansh Mishra 
+9. complete docs -Ram 
+10. file drop -Aditya 
+11. Intro docs -J
+12. Add pricing as custom component (optional)
+
+Launching : Accordian , Button , skeleton , card , input 
