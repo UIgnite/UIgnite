@@ -4,7 +4,7 @@ import Avatar from "./src/components/Avatar";
 export default [
   {
     id: "accordion",
-    scope: { Accordion, AccordionWrapper },
+    scope: {Accordion, AccordionWrapper} ,
     element: `
       <AccordionWrapper>
         <Accordion
@@ -26,13 +26,12 @@ export default [
   },
   {
     id: "avatar",
-    scope: { Avatar },
+    scope: {Avatar},
     element: `
       <>
         <Avatar url={"/piyush-sir.png"} alt={"user"} />
         <Avatar url={"/hitesh-sir.png"} alt={"user"} />
       </>
     `,
-  },
-  {},
+  }
 ];
