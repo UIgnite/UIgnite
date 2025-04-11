@@ -9,7 +9,7 @@ const Properties = ({ componentId }) => {
 
   return (
     <div className="w-[90%]">
-      <div class="relative w-[90%] overflow-x-auto rounded-md mt-4 ">
+      <div class="relative  overflow-x-auto rounded-md mt-4 ">
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
           <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-black dark:text-gray-400">
             <tr>

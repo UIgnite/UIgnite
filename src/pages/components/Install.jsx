@@ -43,7 +43,7 @@ const Install = ({ codeString, componentId, element }) => {
           <React.Fragment key={idx}>
             <div className="font-bold text-xl mt-3 mb-2">{item.title}</div>
 
-            <div className=" w-full h-[50px] relative">
+            <div className="w-full h-[50px] relative">
               <CopyButton copyText={item.codeBlock} />
               <SyntaxHighlighter
                 language="cli"
@@ -66,7 +66,7 @@ const Install = ({ codeString, componentId, element }) => {
   };
 
   return (
-    <div className=" min-w-[80%] flex flex-col">
+    <div className=" min-w-[90%] flex flex-col">
       <Tabs defaultVal="cli">
         <TabList>
           <Tab title="CLI" value="cli"></Tab>
