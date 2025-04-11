@@ -9,7 +9,7 @@ const Install = ({ codeString, componentId, element }) => {
   console.log(componentId);
   const currComponent = components.find(
     (component) =>
-      component.id.trim().toLowerCase() === componentId.trim().toLowerCase()
+      component.id.trim().toLowerCase() === componentId.trim().toLowerCase(),
   );
   if (!componentId) {
     return <div className="text-red-500">Code not found.</div>;
@@ -18,7 +18,7 @@ const Install = ({ codeString, componentId, element }) => {
   const CommandElement = () => {
     return (
       <div className=" w-full h-[50px] relative cli">
-        <CopyButton copyText={currComponent.command} />
+        <CopyButton copyText={`npx uignite add ${componentId}`} />
         <SyntaxHighlighter
           style={{
             ...atomOneDarkReasonable,
@@ -37,7 +37,6 @@ const Install = ({ codeString, componentId, element }) => {
   };
 
   const InstallationElement = () => {
-    
     return (
       <div className="w-full">
         {currComponent.installation.map((item, idx) => (
@@ -81,14 +80,17 @@ const Install = ({ codeString, componentId, element }) => {
               </TabList>
               <TabContent
                 defaultVal="npm"
-                content={<CommandElement/>}
+                content={<CommandElement />}
                 value="cli"
               ></TabContent>
             </Tabs>
           }
           value="cli"
         ></TabContent>
-        <TabContent content={<InstallationElement/>} value="manual"></TabContent>
+        <TabContent
+          content={<InstallationElement />}
+          value="manual"
+        ></TabContent>
       </Tabs>
     </div>
   );
