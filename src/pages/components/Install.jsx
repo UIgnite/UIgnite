@@ -32,7 +32,7 @@ const Install = ({ codeString, componentId, element }) => {
         language="cli"
         className="mb-7 text-left text-sm h-full min-w-full rounded-md scrollable-content"
       >
-        {currComponent.command}
+        {`npx uignite add ${componentId}`}
       </SyntaxHighlighter>
     </div>
   );

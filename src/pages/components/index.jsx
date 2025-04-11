@@ -30,10 +30,7 @@ export default function Component() {
       <div className="text-4xl font-semibold">{currComponent.name}</div>
       <div className="text-neutral-300">{currComponent.desc}</div>
 
-      <Preview
-        currComponent={codeStr}
-        element={element ? element.element : <></>}
-      />
+      <Preview currComponent={codeStr} element={element} />
 
       <div className="text-4xl mt-4 font-semibold"> Installation </div>
       <Install

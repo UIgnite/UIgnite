@@ -8,6 +8,7 @@ import Auth from "./pages/Auth";
 import Component from "./pages/components";
 import RootLayout from "./pages/_layout";
 import ComponentLayout from "./pages/components/_layout";
+import Components from "./pages/Component";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         </Route>
         <Route path="/pricing" element={<PricingSection />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="fullontesting" element={<Components />} />
       </Route>
     </Routes>
   );
