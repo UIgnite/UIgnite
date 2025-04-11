@@ -52,19 +52,7 @@ const Preview = ({ currComponent, element }) => {
           </svg>
         )}
       </button>
-      <LiveEditor
-        className="text-left text-sm h-full min-w-full rounded-md scrollable-content"
-        disabled
-        language="javascript"
-        style={{
-          ...atomOneDarkReasonable,
-          hljs: {
-            ...atomOneDarkReasonable.hljs,
-            background: "rgb(24, 24, 24)",
-          },
-        }}
-      />
-      {/* <SyntaxHighlighter
+      <SyntaxHighlighter
         language="javascript"
         style={{
           ...atomOneDarkReasonable,
@@ -75,8 +63,8 @@ const Preview = ({ currComponent, element }) => {
         }}
         className="text-left text-sm h-full min-w-full rounded-md scrollable-content"
       >
-        {currComponent.element}
-      </SyntaxHighlighter> */}
+        {element.element}
+      </SyntaxHighlighter>
     </div>
   );
   console.log(atomOneDarkReasonable);
@@ -105,6 +93,7 @@ const Preview = ({ currComponent, element }) => {
           <TabContent content={syntaxHighlighterElement} value="code" />
         </Tabs>
       </LiveProvider>
+      
     </div>
   );
 };
