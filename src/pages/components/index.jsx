@@ -32,7 +32,7 @@ export default function Component() {
 
       <Preview
         currComponent={codeStr}
-        element={element ? element.element : <></>}
+        element={element}
       />
 
       <div className="text-4xl mt-4 font-semibold"> Installation </div>
