@@ -13,20 +13,20 @@ If you are developing a production application, we recommend using TypeScript an
 
 // Comments likho
 
-1. Accordion   -> Ram
-2. accordainwrapper  -> Ram
-3. avatar  -> Aman
-4. avatargroup  ->Jahanwee
-5. avatargroupwithhtooltip  ->Jahanwee
+1. Accordion -> Ram
+2. accordainwrapper -> Ram
+3. avatar -> Aman
+4. avatargroup ->Jahanwee
+5. avatargroupwithhtooltip ->Jahanwee
 6. button -> saurav
 7. datepicker -> sagar
 8. dropdown -> Aditya
-9. footer  -> Ansh
-10. input  -> Aman
+9. footer -> Ansh
+10. input -> Aman
 11. messagebot -> Ram
 12. navbar -> Rohit
 13. navmenu -> Ansh
-14. preview  ->Ram
+14. preview ->Ram
 15. pricingcard ->Saurav
 16. resizable -> Aditya
 17. skeleton -> Saurav
@@ -45,17 +45,18 @@ If you are developing a production application, we recommend using TypeScript an
 30. Alert DialogBox -> Jahanwee
 
 //to be done:
+
 1. Landing page
 2. Demo website - Ansh + sagar
 3. Add a heading beta release
 4. Add pictures to avatar and avatargroup -J
 5. Make twitter handle -Ram
-6. Design docs section  
-7. Sidebar - Sagar 
-8. Carousal - Ansh Mishra 
-9. complete docs -Ram 
-10. file drop -Aditya 
+6. Design docs section
+7. Sidebar - Sagar
+8. Carousal - Ansh Mishra
+9. complete docs -Ram
+10. file drop -Aditya
 11. Intro docs -J
 12. Add pricing as custom component (optional)
 
-Launching : Accordian , Button , skeleton , card , input 
+Launching : Accordian , Button , skeleton , card , input

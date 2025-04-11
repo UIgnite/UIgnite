@@ -690,6 +690,11 @@
         "title": "Import Skeleton",
         "codeBlock": "import Skeleton from '@/components/Skeleton';",
         "path": "/components/Skeleton.jsx"
+      },
+      {
+        "title": "Import Skeleton",
+        "codeBlock": "import Skeleton from '@/components/Skeleton';",
+        "path": "/components/Skeleton.jsx"
       }
     ],
     "props": [
@@ -771,6 +776,11 @@
         "title": "Install utils",
         "codeBlock": "npm i clsx tailwind-merge",
         "path": "/utils/lib.js"
+      },
+      {
+        "title": "Wrap Tabs in context",
+        "codeBlock": "",
+        "path": "/components/Tabs.jsx"
       },
       {
         "title": "Wrap Tabs in context",
