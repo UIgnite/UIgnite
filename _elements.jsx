@@ -1,5 +1,32 @@
+// import { Button } from "./src/components/Button";
 import { Accordion, AccordionWrapper } from "./src/components/Accordion";
 import Avatar from "./src/components/Avatar";
+import AvatarGroup from "./src/components/AvatarGroup";
+import AvatarGroupWithTooltip from "./src/components/AvatarGroupWithTooltip";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./src/components/Card";
+import { DatePicker } from "./src/components/DatePicker";
+import Dropdown from "./src/components/Dropdown";
+import Input from "./src/components/Input";
+import MessageBot from "./src/components/MessageBot";
+import NavMenu from "./src/components/NavMenu";
+import { PricingCard } from "./src/components/PricingCard";
+import Resizable from "./src/components/Resizable";
+import Skeleton from "./src/components/Skeleton";
+import { Spinner } from "./src/components/Spinner";
+import Switch from "./src/components/Switch";
+import { Tabs } from "./src/components/Tabs";
+import { Textarea } from "./src/components/Textarea";
+import ToastUi from "./src/components/Toast";
+import { Tooltip } from "./src/components/Tooltip";
+import Footer from "./src/components/website/Footer";
+import Navbar from "./src/components/website/Navbar";
 
 export default [
   {
@@ -35,7 +62,7 @@ export default [
     `,
   },
   {
-    id: "avatar-group",
+    id: "avatargroup",
     scope: { AvatarGroup },
     element: `
       <AvatarGroup>
@@ -46,7 +73,7 @@ export default [
     `,
   },
   {
-    id: "avatar-group-tooltip",
+    id: "avatargrouptooltip",
     scope: { AvatarGroupWithTooltip },
     element: `
       <AvatarGroupWithTooltip
@@ -57,11 +84,11 @@ export default [
       />
     `,
   },
-  {
-    id: "button",
-    scope: { Button },
-    element: `<Button variant="default" onClick={() => alert("Clicked!")}>Click Me</Button>`,
-  },
+  // {
+  //   id: "button",
+  //   scope: { Button },
+  //   element: `<Button variant="default" onClick={() => alert("Clicked!")}>Click Me</Button>`,
+  // },
   {
     id: "card",
     scope: {
@@ -89,7 +116,7 @@ export default [
     `,
   },
   {
-    id: "date-picker",
+    id: "datepicker",
     scope: { DatePicker },
     element: `<DatePicker onChange={(date) => console.log(date)} />`,
   },
@@ -162,7 +189,7 @@ export default [
     element: `<Input placeholder="Type here..." />`,
   },
   {
-    id: "message-bot",
+    id: "messagebot",
     scope: { MessageBot },
     element: `
       <MessageBot
@@ -257,13 +284,13 @@ export default [
     `,
   },
   {
-    id: "text-area",
-    scope: { TextArea },
+    id: "textarea",
+    scope: { Textarea },
     element: `<TextArea placeholder="Write something..." />`,
   },
   {
     id: "toast",
-    scope: { Toast },
+    scope: { ToastUi },
     element: `<Toast message="This is a toast!" type="success" />`,
   },
   {
