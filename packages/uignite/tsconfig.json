@@ -1,6 +1,12 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "composite": true
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "strict": true
   },
   "files": [],
   "references": [

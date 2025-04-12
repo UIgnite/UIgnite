@@ -2,7 +2,7 @@
   "name": "uignite",
   "version": "0.0.1",
   "type": "module",
-  "private":true,
+  "private": true,
   "scripts": {
     "dev": "concurrently --names \"docs,uignite\" --prefix-colors \"red,green\" \"bun --cwd=website/docs dev\"  \"bun --cwd=packages/uignite dev\"",
     "format": "prettier . --write",
