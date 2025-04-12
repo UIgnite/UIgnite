@@ -1,9 +1,9 @@
-import { cn } from "../utils/lib";
+import {cn} from '../utils/lib';
 
 interface SkeletonParams {
-   className?:string
+  className?: string;
 }
-const Skeleton = ({ className }:SkeletonParams) => {
+const Skeleton = ({className}: SkeletonParams) => {
   return (
     <div
       className={cn(`bg-gray-600 animate-pulse rounded-full ${className}`)}

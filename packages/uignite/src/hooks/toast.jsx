@@ -1,18 +1,12 @@
-import Toast from "../components/Toast";
+import Toast from '../components/Toast';
 
-import {
-  useCallback,
-  useContext,
-  createContext,
-  useState,
-  useRef,
-} from "react";
+import {useCallback, useContext, createContext, useState, useRef} from 'react';
 
 // creating toast context using react createContent
 const ToastContext = createContext(null);
 
 // ToastProvider to wrap all the code to use toast in entire application
-const ToastProvider = ({ children }) => {
+const ToastProvider = ({children}) => {
   const [toasts, setToasts] = useState([]);
   const [hovered, setHovered] = useState(false);
 
@@ -22,7 +16,7 @@ const ToastProvider = ({ children }) => {
         id: crypto.randomUUID(),
         title: ttle,
         options: {
-          variant: "default",
+          variant: 'default',
           desc: null,
           timeout: 5000,
           ...opt,
@@ -44,11 +38,11 @@ const ToastProvider = ({ children }) => {
         });
       }, toast.options.timeout);
     },
-    [setToasts, hovered, setHovered],
+    [setToasts, hovered, setHovered]
   );
 
   return (
-    <ToastContext.Provider value={{ showToast: handleShowToast }}>
+    <ToastContext.Provider value={{showToast: handleShowToast}}>
       {children}
       <div
         onMouseEnter={() => setHovered(true)}
@@ -63,7 +57,7 @@ const ToastProvider = ({ children }) => {
               options={toast.options}
               hovered={hovered}
             />
-          ) : null,
+          ) : null
         )}
       </div>
     </ToastContext.Provider>
@@ -73,9 +67,9 @@ const ToastProvider = ({ children }) => {
 const useToast = () => {
   const context = useContext(ToastContext);
 
-  if (!context) throw new Error("Patanai ");
+  if (!context) throw new Error('Patanai ');
 
   return context;
 };
 
-export { useToast, ToastProvider };
+export {useToast, ToastProvider};

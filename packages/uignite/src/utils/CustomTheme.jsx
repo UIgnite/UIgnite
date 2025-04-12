@@ -1,7 +1,7 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react';
+import {motion} from 'framer-motion';
 
-export const CustomTheme = ({ children }) => {
+export const CustomTheme = ({children}) => {
   return (
     <div className="!dark dark:bg-black dark:text-white text-black relative overflow-hidden h-screen w-full">
       {/* Background Grid */}
@@ -9,7 +9,7 @@ export const CustomTheme = ({ children }) => {
         className="!dark absolute inset-0 hidden dark:block pointer-events-none z-0"
         style={{
           background:
-            "radial-gradient(circle at center, rgba(128, 90, 213, 0.1) 0%, transparent 80%)",
+            'radial-gradient(circle at center, rgba(128, 90, 213, 0.1) 0%, transparent 80%)',
         }}
       >
         <svg
@@ -68,16 +68,16 @@ export const CustomTheme = ({ children }) => {
 
       {/* Blobs */}
       <motion.div
-        initial={{ scale: 0.9 }}
-        animate={{ scale: [0.9, 1.1, 0.9] }}
-        transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
+        initial={{scale: 0.9}}
+        animate={{scale: [0.9, 1.1, 0.9]}}
+        transition={{repeat: Infinity, duration: 8, ease: 'easeInOut'}}
         className="!dark dark:block absolute top-20 right-20 w-64 h-64 rounded-full bg-blue-400 dark:bg-blue-600 opacity-30 blur-3xl pointer-events-none z-0"
       />
 
       <motion.div
-        initial={{ scale: 1 }}
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
+        initial={{scale: 1}}
+        animate={{scale: [1, 1.2, 1]}}
+        transition={{repeat: Infinity, duration: 10, ease: 'easeInOut'}}
         className="!dark dark:block absolute -bottom-22 -left-20 w-96 h-96 rounded-full bg-blue-500 dark:bg-blue-400 opacity-20 blur-3xl pointer-events-none z-0"
       />
 
