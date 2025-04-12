@@ -31,10 +31,10 @@ export const Tooltip = ({
     >
       {visible && (
         <div
-          style={options?.tootipStyle}
+          style={options?.tooltipStyle}
           className={cn(
-            "absolute bottom-full truncate left-1/2 -translate-x-1/2 text-sm text-center w-28 h-8 font-sans font-medium  px-4 py-1 rounded-md  text-black bg-white shadow-lg transition-opacity duration-300 opacity-100",
-            options.tooltipClassName,
+            "absolute bottom-full truncate left-1/2 -translate-x-1/2 text-sm text-center w-28 h-8 font-heading font-medium  px-4 py-1 rounded-md  text-black bg-white shadow-lg transition-opacity duration-300 opacity-100",
+            options.tooltipClassName
           )}
         >
           {title}

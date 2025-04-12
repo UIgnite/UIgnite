@@ -112,15 +112,12 @@ body {
   --border-angle: 0deg;
   background:
     linear-gradient(#0f172a, #0f172a) padding-box,
-    conic-gradient(
-        from var(--border-angle),
-        rgba(71, 85, 105, 0.48) 80%,
-        #6366f1 86%,
-        #a5b4fc 90%,
-        #6366f1 94%,
-        rgba(71, 85, 105, 0.48)
-      )
-      border-box;
+    conic-gradient(from var(--border-angle),
+      rgba(71, 85, 105, 0.48) 80%,
+      #6366f1 86%,
+      #a5b4fc 90%,
+      #6366f1 94%,
+      rgba(71, 85, 105, 0.48)) border-box;
   border: 2px solid transparent;
   animation: spin-border 4s linear infinite;
 }
@@ -145,4 +142,19 @@ body {
   mask-position: top center;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 8s linear infinite;
 }
