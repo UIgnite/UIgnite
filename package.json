@@ -1,43 +1,10 @@
 {
   "name": "uignite",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "prepare": "husky"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "@radix-ui/react-icons": "^1.3.2",
-    "@tailwindcss/vite": "^4.0.17",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "framer-motion": "^12.6.3",
-    "lucide": "^0.487.0",
-    "lucide-react": "^0.487.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0",
-    "react-live": "^4.1.8",
-    "react-router-dom": "^7.4.1",
-    "react-syntax-highlighter": "^15.6.1",
-    "tailwind-merge": "^3.0.2",
-    "tailwindcss": "^4.0.17"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.21.0",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.21.0",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "globals": "^15.15.0",
-    "husky": "^9.1.7",
-    "prettier": "^3.5.3",
-    "vite": "^6.2.0"
-  }
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
