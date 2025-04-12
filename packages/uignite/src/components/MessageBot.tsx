@@ -1,44 +1,46 @@
-import React, { useState } from "react";
-import { cn } from "../utils/lib";
+import React, {useState} from 'react';
+import {cn} from '../utils/lib';
 
 interface MessageBotParams {
-    orgName?: string,
-    themeColor?: string,
-    url?: string,
-    alt?: string
+  orgName?: string;
+  themeColor?: string;
+  url?: string;
+  alt?: string;
 }
 interface Message {
-    text: string;
-    sender: "user"|"bot";
+  text: string;
+  sender: 'user' | 'bot';
 }
 
-
 const MessageBot = ({
-  orgName = "UIgnite",
-  themeColor = "bg-gray-800",
+  orgName = 'UIgnite',
+  themeColor = 'bg-gray-800',
   url,
   alt,
 }: MessageBotParams) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState('');
   const [count, setCount] = useState(1);
   // messages will be array of objects and objects should have a sender and the text
   const [messages, setMessages] = useState<Message[]>([]);
   const sendMessage = () => {
     if (!input.trim()) return;
 
-    const newMessage: Message = { text: input, sender: "user" };
-    const updatedMessages  = [...messages, newMessage];
+    const newMessage: Message = {text: input, sender: 'user'};
+    const updatedMessages = [...messages, newMessage];
     setMessages(updatedMessages);
-    setInput("");
+    setInput('');
     // console.log(messages)
 
-    const botResponse:Message = { text: `bot response ${count + 1} `, sender: "bot" };
+    const botResponse: Message = {
+      text: `bot response ${count + 1} `,
+      sender: 'bot',
+    };
     setCount(count + 1);
     // console.log(count)
     setTimeout(() => {
       setMessages((currentMessages) => [...currentMessages, botResponse]);
-    //   console.log(messages);
+      //   console.log(messages);
     }, 800);
   };
 
@@ -79,20 +81,20 @@ const MessageBot = ({
               {messages.map((msg, index) => (
                 <>
                   <div className="flex">
-                    {msg.sender === "user" && (
+                    {msg.sender === 'user' && (
                       <img
                         className="rounded-full  m-2 h-5 w-5 object-cover"
-                        src={msg.sender == "user" ? url : alt}
+                        src={msg.sender == 'user' ? url : alt}
                         alt={alt}
                       />
                     )}
                     <div
                       key={index}
-                      className={` text-black p-2 min-w-[80%] overflow-x-clip rounded-md  ${msg.sender === "user" ? "bg-gray-200 self-start text-left mr-30000 " : "bg-orange-200 self-end text-right ml-9 "}`}
+                      className={` text-black p-2 min-w-[80%] overflow-x-clip rounded-md  ${msg.sender === 'user' ? 'bg-gray-200 self-start text-left mr-30000 ' : 'bg-orange-200 self-end text-right ml-9 '}`}
                     >
                       {msg.text}
                     </div>
-                    {msg.sender === "bot" && (
+                    {msg.sender === 'bot' && (
                       <img
                         className="rounded-full m-2 h-5 w-5 object-cover"
                         src={alt}
