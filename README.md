@@ -17,10 +17,10 @@ If you are developing a production application, we recommend using TypeScript an
 2.  Toast -> Adi ✅
 3.  TextArea -> Janvi ✅
 4.  Resizable -> Adi ✅
-5.  Tooltip -> Ram ✅
+5.  Tooltip -> Ram ✅           
 6.  Accordion -> Ram ✅
 7.  Form -> Aman ?
-8.  Skeleton -> Saurav ?
+8.  Skeleton -> Saurav ✅
 9.  Avatar -> Aman ✅
 10. Dropdown -> Adi ✅
 11. Navbar -> Rohit ✅
