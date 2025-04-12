@@ -19,7 +19,7 @@ const Accordion = ({
     <div
       className={cn(
         "border border-zinc-700 rounded-xl mb-2 overflow-hidden",
-        className
+        className,
       )}
     >
       {/* Accordion Header */}
@@ -31,7 +31,7 @@ const Accordion = ({
         <svg
           className={cn(
             "transition-transform duration-300 transform",
-            (isOpen ?? visible) ? "rotate-180" : "rotate-0"
+            (isOpen ?? visible) ? "rotate-180" : "rotate-0",
           )}
           width="20"
           height="20"
@@ -54,7 +54,7 @@ const Accordion = ({
           "transition-all duration-300 bg-zinc-800 px-4 text-white text-sm",
           (isOpen ?? visible)
             ? "max-h-96 opacity-100 py-3"
-            : "max-h-0 opacity-0 py-0 overflow-hidden"
+            : "max-h-0 opacity-0 py-0 overflow-hidden",
         )}
       >
         {content}
@@ -71,7 +71,7 @@ const AccordionWrapper = ({ children }) => {
         React.cloneElement(child, {
           isOpen: activeIndex === index,
           onToggle: () => setActiveIndex(activeIndex === index ? null : index),
-        })
+        }),
       )}
     </div>
   );
