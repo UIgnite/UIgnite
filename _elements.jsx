@@ -3,7 +3,14 @@ import { Accordion, AccordionWrapper } from "./src/components/Accordion";
 import Avatar from "./src/components/Avatar";
 import AvatarGroup from "./src/components/AvatarGroup";
 import AvatarGroupWithTooltip from "./src/components/AvatarGroupWithTooltip";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./src/components/Card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./src/components/Card";
 import { DatePicker } from "./src/components/DatePicker";
 import Dropdown from "./src/components/Dropdown";
 import Input from "./src/components/Input";
