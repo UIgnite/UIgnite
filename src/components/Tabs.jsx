@@ -23,7 +23,7 @@ const TabList = ({ children, activeTab, setActiveTab, className = "" }) => {
   return (
     <div className={cn(`flex space-x-2  rounded-md`, className)}>
       {React.Children.map(children, (child, index) =>
-        React.cloneElement(child, { activeTab, setActiveTab })
+        React.cloneElement(child, { activeTab, setActiveTab }),
       )}
     </div>
   );
@@ -44,7 +44,7 @@ const Tab = ({
         ` px-6 py-2 rounded-md text-md font-medium cursor-pointer
         ${isActive ? " text-white bg-neutral-900" : " text-gray-600 hover:text-white"}
       `,
-        className
+        className,
       )}
     >
       {title}

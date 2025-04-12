@@ -10,7 +10,7 @@ const Install = ({ codeString, componentId, element }) => {
 
   const currComponent = components.find(
     (component) =>
-      component.id.trim().toLowerCase() === componentId.trim().toLowerCase()
+      component.id.trim().toLowerCase() === componentId.trim().toLowerCase(),
   );
 
   if (!componentId) {
