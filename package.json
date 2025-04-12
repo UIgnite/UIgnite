@@ -1,10 +1,25 @@
 {
   "name": "uignite",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "type": "module",
+  "private":true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently --names \"docs,uignite\" --prefix-colors \"red,green\" \"bun --cwd=website/docs dev\"  \"bun --cwd=packages/uignite dev\"",
+    "format": "prettier . --write",
+    "build": "lerna run build",
+    "clean": "rimraf ./packages/**/dist ./website/**/dist"
   },
-  "author": "",
+  "author": "uignite team",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "lerna": "^8.2.2",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1"
+  },
+  "workspaces": [
+    "website/*",
+    "packages/*"
+  ]
 }
