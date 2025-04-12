@@ -33,7 +33,7 @@ export default function Component() {
 
       <Preview currComponent={codeStr} element={element} />
 
-      <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-neutral-700" />
+      <hr className="w-48 h-0 mx-auto my-8 border-none " />
 
       <div className="text-4xl mt-4 font-semibold"> Installation </div>
       <Install
@@ -42,7 +42,7 @@ export default function Component() {
         element={element ? element.element : <></>}
       />
 
-      <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded-sm md:my-10 dark:bg-neutral-700" />
+      <hr className="w-48 h-0 mx-auto my-8 border-none" />
 
       <div className="text-4xl mt-4 font-semibold"> Props </div>
       <Properties componentId={currComponent.id} />
