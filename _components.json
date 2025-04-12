@@ -8,17 +8,17 @@
     "installation": [
       {
         "title": "Install dependencies",
-        "codeBlock": "",
+        "codeBlock": "npm i clsx cn lucid",
         "path": "/components/Accordion.jsx"
       },
       {
-        "title": "Add utils file",
+        "title": "Copy the code",
         "codeBlock": "",
         "path": "/utils/lib.js"
       },
       {
         "title": "Tailwind setup",
-        "codeBlock": "",
+        "codeBlock": "npm i clsx tailwind-merge lucid",
         "path": "/tailwind.config.js"
       }
     ],
@@ -80,7 +80,7 @@
         "path": "/components/Avatar.jsx"
       },
       {
-        "title": "Add utils file",
+        "title": "Copy the code",
         "codeBlock": "",
         "path": "/utils/lib.js"
       },
@@ -124,7 +124,7 @@
         "path": "/components/Button.jsx"
       },
       {
-        "title": "Add utils file",
+        "title": "Copy the code",
         "codeBlock": "",
         "path": "/utils/lib.js"
       },
@@ -210,7 +210,7 @@
         "path": "/components/DatePicker.jsx"
       },
       {
-        "title": "Add utils file",
+        "title": "Copy the code",
         "codeBlock": "",
         "path": "/utils/lib.js"
       },
@@ -541,7 +541,7 @@
         "path": "/components/Textarea.jsx"
       },
       {
-        "title": "Add utils file",
+        "title": "Copy the code",
         "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
         "path": "/components/Textarea.jsx"
       },
@@ -690,6 +690,11 @@
         "title": "Import Skeleton",
         "codeBlock": "import Skeleton from '@/components/Skeleton';",
         "path": "/components/Skeleton.jsx"
+      },
+      {
+        "title": "Import Skeleton",
+        "codeBlock": "import Skeleton from '@/components/Skeleton';",
+        "path": "/components/Skeleton.jsx"
       }
     ],
     "props": [
@@ -771,6 +776,11 @@
         "title": "Install utils",
         "codeBlock": "npm i clsx tailwind-merge",
         "path": "/utils/lib.js"
+      },
+      {
+        "title": "Wrap Tabs in context",
+        "codeBlock": "",
+        "path": "/components/Tabs.jsx"
       },
       {
         "title": "Wrap Tabs in context",
@@ -990,7 +1000,7 @@
         "path": "/components/Textarea.jsx"
       },
       {
-        "title": "Add utils file",
+        "title": "Copy the code",
         "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
         "path": "/components/Textarea.jsx"
       },

@@ -3,6 +3,7 @@ import { atomOneDarkReasonable } from "react-syntax-highlighter/dist/esm/styles/
 import { Tab, Tabs, TabContent, TabList } from "../../components/Tabs";
 import { useParams } from "react-router-dom";
 import React, { useCallback, useState } from "react";
+import { LiveProvider, LivePreview, LiveEditor } from "react-live";
 
 const Preview = ({ currComponent, element }) => {
   const [copied, setCopied] = useState(false);
@@ -62,34 +63,36 @@ const Preview = ({ currComponent, element }) => {
         }}
         className="text-left text-sm h-full min-w-full rounded-md scrollable-content"
       >
-        {currComponent.element}
+        {element.element}
       </SyntaxHighlighter>
     </div>
   );
-
+  console.log(atomOneDarkReasonable);
   return (
     <div className=" min-w-[80%] flex flex-col">
-      <Tabs defaultVal="preview">
-        <TabList>
-          {element ? <Tab title="Preview" value="preview" /> : <></>}
+      <LiveProvider code={element.element} scope={element.scope}>
+        <Tabs defaultVal="preview">
+          <TabList>
+            {element ? <Tab title="Preview" value="preview" /> : <></>}
 
-          <Tab title="Code" value="code" />
-        </TabList>
+            <Tab title="Code" value="code" />
+          </TabList>
 
-        {element ? (
-          <TabContent
-            content={
-              <div className="w-[100%] flex justify-center items-center p-10 bg-neutral-900">
-                {element}
-              </div>
-            }
-            value="preview"
-          />
-        ) : (
-          <></>
-        )}
-        <TabContent content={syntaxHighlighterElement} value="code" />
-      </Tabs>
+          {element ? (
+            <TabContent
+              content={
+                <div className="w-[100%] flex justify-center items-center p-10 bg-neutral-900">
+                  <LivePreview />
+                </div>
+              }
+              value="preview"
+            />
+          ) : (
+            <></>
+          )}
+          <TabContent content={syntaxHighlighterElement} value="code" />
+        </Tabs>
+      </LiveProvider>
     </div>
   );
 };
