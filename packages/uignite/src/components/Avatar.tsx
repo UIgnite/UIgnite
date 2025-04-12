@@ -1,21 +1,28 @@
+import React from 'react';
 import {cn} from '../utils/lib';
 
-interface AvatarParamsT {
+export interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   url: string;
   alt: string;
   className?: string;
 }
 
-const Avatar = ({url, alt, className = ''}: AvatarParamsT) => {
-  return (
-    <div className="flex gap-4 mt-2">
-      <img
-        className={cn(`rounded-full h-12 w-12 object-cover`, className)}
-        src={url}
-        alt={alt}
-      />
-    </div>
-  );
-};
+const Avatar = React.forwardRef<HTMLImageElement, AvatarProps>(
+  ({url, alt, className = '', ...rest}, ref) => {
+    return (
+      <div className="flex gap-4 mt-2">
+        <img
+          ref={ref}
+          src={url}
+          alt={alt}
+          className={cn('rounded-full h-12 w-12 object-cover', className)}
+          {...rest}
+        />
+      </div>
+    );
+  }
+);
+
+Avatar.displayName = 'Avatar';
 
 export default Avatar;
