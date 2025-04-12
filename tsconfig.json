@@ -111,5 +111,5 @@
       "@pkgs/*": ["./packages/*"] // Alias for all shared libraries
     }
   },
-  "references": [{ "path": "./packages/uignite" }, { "path": "./website/docs" }]
+  "references": [{"path": "./packages/uignite"}, {"path": "./website/docs"}]
 }
