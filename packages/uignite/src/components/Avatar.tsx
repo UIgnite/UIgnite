@@ -8,7 +8,7 @@ export interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 }
 
 const Avatar = React.forwardRef<HTMLImageElement, AvatarProps>(
-  ({url, alt, className = '', ...rest}, ref) => {
+  ({url, alt, className = '', ...props}, ref) => {
     return (
       <div className="flex gap-4 mt-2">
         <img
@@ -16,7 +16,7 @@ const Avatar = React.forwardRef<HTMLImageElement, AvatarProps>(
           src={url}
           alt={alt}
           className={cn('rounded-full h-12 w-12 object-cover', className)}
-          {...rest}
+          {...props}
         />
       </div>
     );
