@@ -8,6 +8,7 @@ import Auth from "./pages/Auth";
 import Component from "./pages/components";
 import RootLayout from "./pages/_layout";
 import ComponentLayout from "./pages/components/_layout";
+import { Test } from "./pages/Test";
 import Components from "./pages/Component";
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/auth" element={<Auth />} />
         <Route path="/" element={<Home />} />
         <Route path="/docs" element={<Landing />} />
+        <Route path="/test" element={<Test />} />
         <Route element={<ComponentLayout />}>
           <Route path="/components/" element={<Component />} />
           <Route path="/components/:componentId" element={<Component />} />

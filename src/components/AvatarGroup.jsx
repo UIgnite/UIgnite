@@ -1,5 +1,6 @@
 import React from "react";
 import Avatar from "./Avatar";
+import { Tooltip } from "./Tooltip"; // make sure the path is correct
 
 const AvatarGroup = ({ avatars = [] }) => {
   return (
@@ -9,20 +10,25 @@ const AvatarGroup = ({ avatars = [] }) => {
           key={index}
           className={`
             relative transition-all duration-300 ease-in-out
-            ${index !== 0 ? "-ml-4" : ""}
+            ${index !== 0 ? "-ml-7" : ""}
             hover:z-20
           `}
         >
-          <Avatar
-            url={avatar.url}
-            alt={avatar.alt}
-            className={`
-              w-10 h-10 rounded-full object-cover
-              ring-2 ring-white shadow-md
-              hover:scale-110 hover:white-500
-              transition-transform duration-300 ease-in-out
-            `}
-          />
+          <Tooltip
+            title={`${avatar.alt}`}
+            options={{ tooltipStyle: { width: "auto" } }}
+          >
+            <Avatar
+              url={avatar.url}
+              alt={avatar.alt}
+              className={`
+                w-12 h-12 rounded-full object-cover
+                ring-2 ring-white shadow-md
+                hover:scale-110 hover:white-500
+                transition-transform duration-300 ease-in-out
+              `}
+            />
+          </Tooltip>
         </div>
       ))}
     </div>

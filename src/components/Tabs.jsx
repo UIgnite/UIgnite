@@ -55,7 +55,7 @@ const Tab = ({
 const TabContent = ({ value, activeTab, content }) => {
   if (activeTab === value)
     return (
-      <div className=" rounded-md flex  max-h-[400px] overflow-x-auto  mt-3">
+      <div className=" rounded-md flex   overflow-x-auto scrollable-content  mt-3">
         {content}
       </div>
     );
