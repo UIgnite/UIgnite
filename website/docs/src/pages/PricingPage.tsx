@@ -1,8 +1,8 @@
-import {PricingCard} from '@pkgs/uignite';
+import {PricingCard, ThemeSelector} from '@pkgs/uignite';
 import {useState} from 'react';
 
 const PricingSection = () => {
-  const [currentTheme] = useState('dark');
+  const [currentTheme,setCurrentTheme] = useState('dark');
 
   const pricingData = [
     {
@@ -58,7 +58,7 @@ const PricingSection = () => {
           </p>
         </div>
 
-        {/* <ThemeSelector currentTheme={currentTheme} setTheme={setCurrentTheme} /> */}
+        <ThemeSelector currentTheme={currentTheme} setTheme={setCurrentTheme} />
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {pricingData.map((plan, index) => (
