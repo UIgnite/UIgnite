@@ -33,7 +33,7 @@ const Tabs = ({children, defaultVal = '', className = ''}: TabsParams) => {
   return (
     <>
       <div className={` mt-4 w-[90%]  ${className}`}>
-        {React.Children.map(children, (child, index) => {
+        {React.Children.map(children, (child) => {
           return React.cloneElement(child, {
             activeTab,
             setActiveTab,
@@ -52,7 +52,7 @@ const TabList = ({
 }: TabListParams) => {
   return (
     <div className={cn(`flex space-x-2  rounded-md`, className)}>
-      {React.Children.map(children, (child, index) =>
+      {React.Children.map(children, (child) =>
         React.cloneElement(child, {activeTab, setActiveTab})
       )}
     </div>
