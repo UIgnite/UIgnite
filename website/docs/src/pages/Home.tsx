@@ -1,16 +1,16 @@
 import {useState} from 'react';
-import {Button} from '../components/Button';
-import {CustomTheme} from '../utils/CustomTheme';
-import {Navbar} from '../components/Navbar';
+import {Button} from '../../../../packages/uignite/src/components/Button';
+import {CustomTheme} from '../../../../packages/uignite/src/utils/CustomTheme';
+import {Navbar} from '../../../../packages/uignite/src/components/Navbar';
 import {motion} from 'framer-motion';
 import {Copy, Check} from 'lucide-react';
 
 import {Settings, Zap, Moon, LayoutGrid} from 'lucide-react';
-import {Card, CardHeader, CardContent, CardTitle} from '../components/Card';
-import {Accordion, AccordionWrapper} from '../components/Accordion';
-import {Input} from '../components/Input';
-import Skeleton from '../components/Skeleton';
-import Testimonials from '../components/Testimonials';
+import {Card, CardHeader, CardContent, CardTitle} from '../../../../packages/uignite/src/components/Card';
+import Accordion,{AccordionWrapper} from '../../../../packages/uignite/src/components/Accordion';
+import {Input} from '../../../../packages/uignite/src/components/Input';
+import Skeleton from '../../../../packages/uignite/src/components/Skeleton';
+import Testimonials from '../../../../packages/uignite/src/components/Testimonials';
 
 const Home = () => {
   const [isCopied, setIsCopied] = useState(false);
