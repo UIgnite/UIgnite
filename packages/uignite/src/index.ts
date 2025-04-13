@@ -1,2 +1,2 @@
-export { Button } from "./components/Button";
-export { AccordionWrapper, default as Accordion } from "./components/Accordion"
+export { Button } from "./components/Button"
+export { default as Avatar } from "./components/Avatar"
