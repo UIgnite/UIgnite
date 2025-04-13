@@ -93,4 +93,4 @@ const AccordionWrapper = ({children}: AccordionWrapperParams) => {
   );
 };
 
-export {AccordionWrapper, Accordion};
+export {AccordionWrapper, Accordion as default};
