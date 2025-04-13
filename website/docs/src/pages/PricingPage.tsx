@@ -1,51 +1,50 @@
-import {useState} from 'react';
-import {  } from '@pkgs/uignite';
+// import {useState} from 'react';
 
 const PricingSection = () => {
-  const [currentTheme, setCurrentTheme] = useState('dark');
+  // const [currentTheme, setCurrentTheme] = useState('dark');
 
-  const pricingData = [
-    {
-      title: 'Existing Components',
-      price: 'Free',
-      description:
-        'All the components that are freely available on the website are free to use.',
-      features: [
-        'Access to 100+ UI components',
-        'Open-source community support',
-        'Bi-weekly template updates',
-        'Comprehensive documentation and guides',
-      ],
-    },
-    {
-      title: 'Custom Components',
-      price: '$60',
-      validity: '/month',
-      description:
-        'Standalone components tailored to your needs and easily integrated. Perfect for website elements or sections.',
-      features: [
-        'Bespoke design and branding',
-        '24-hour priority email support',
-        'Extensive component customization',
-        'Full access to source code',
-      ],
-      highlighted: true,
-      popular: true,
-    },
-    {
-      title: 'Pages',
-      price: '$100',
-      validity: '/month',
-      description:
-        'Best for early-stage startups and businesses that need a marketing site and ongoing developmental work.',
-      features: [
-        'Tailored component library',
-        'Real-time Slack and email support',
-        'Quarterly strategy sessions',
-        'Bespoke component and page development',
-      ],
-    },
-  ];
+  // const pricingData = [
+  //   {
+  //     title: 'Existing Components',
+  //     price: 'Free',
+  //     description:
+  //       'All the components that are freely available on the website are free to use.',
+  //     features: [
+  //       'Access to 100+ UI components',
+  //       'Open-source community support',
+  //       'Bi-weekly template updates',
+  //       'Comprehensive documentation and guides',
+  //     ],
+  //   },
+  //   {
+  //     title: 'Custom Components',
+  //     price: '$60',
+  //     validity: '/month',
+  //     description:
+  //       'Standalone components tailored to your needs and easily integrated. Perfect for website elements or sections.',
+  //     features: [
+  //       'Bespoke design and branding',
+  //       '24-hour priority email support',
+  //       'Extensive component customization',
+  //       'Full access to source code',
+  //     ],
+  //     highlighted: true,
+  //     popular: true,
+  //   },
+  //   {
+  //     title: 'Pages',
+  //     price: '$100',
+  //     validity: '/month',
+  //     description:
+  //       'Best for early-stage startups and businesses that need a marketing site and ongoing developmental work.',
+  //     features: [
+  //       'Tailored component library',
+  //       'Real-time Slack and email support',
+  //       'Quarterly strategy sessions',
+  //       'Bespoke component and page development',
+  //     ],
+  //   },
+  // ];
 
   return (
     <div className={`min-h-screen py-16 px-4 sm:px-6 lg:px-8`}>
@@ -58,10 +57,10 @@ const PricingSection = () => {
           </p>
         </div>
 
-        <ThemeSelector currentTheme={currentTheme} setTheme={setCurrentTheme} />
+        {/* <ThemeSelector currentTheme={currentTheme} setTheme={setCurrentTheme} /> */}
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {pricingData.map((plan, index) => (
+          {/* {pricingData.map((plan, index) => (
             <PricingCard
               key={index}
               title={plan.title}
@@ -73,7 +72,7 @@ const PricingSection = () => {
               popular={plan.popular}
               theme={currentTheme}
             />
-          ))}
+          ))} */}
         </div>
       </div>
     </div>

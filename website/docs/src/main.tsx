@@ -3,7 +3,7 @@ import {createRoot} from 'react-dom/client';
 import './index.css';
 import App from './App.tsx';
 import {BrowserRouter} from 'react-router-dom';
-import { ThemeProvider } from '@pkgs/uignite/src/hooks/theme.tsx';
+import {  } from '@pkgs/uignite';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
