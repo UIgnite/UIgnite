@@ -2,12 +2,11 @@ import React, {useState} from 'react';
 import {ReactElement} from 'react';
 import {cn} from '../utils/lib';
 
-interface AccordionParams {
+export interface AccordionParams {
   title: string;
   content: string;
   className?: string;
   defaultOpen?: boolean;
-  open?: boolean;
   isOpen?: boolean | null;
   onToggle?: () => void;
 }
@@ -17,7 +16,6 @@ const Accordion = ({
   content,
   className = '',
   defaultOpen = false,
-  open = false,
   isOpen = null,
   onToggle,
 }: AccordionParams) => {
@@ -25,7 +23,6 @@ const Accordion = ({
   const toggleAccordion = () => {
     setVisible(!visible);
   };
-  const isVisible = isOpen ?? visible;
   return (
     <div
       className={cn(

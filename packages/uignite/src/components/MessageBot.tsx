@@ -1,13 +1,12 @@
-import React, {useState} from 'react';
-import {cn} from '../utils/lib';
+import {useState} from 'react';
 
-interface MessageBotParams {
+export interface MessageBotParams {
   orgName?: string;
   themeColor?: string;
   url?: string;
   alt?: string;
 }
-interface Message {
+export interface Message {
   text: string;
   sender: 'user' | 'bot';
 }

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {cn} from '../utils/lib.js';
 
-interface TooltipParams {
+export interface TooltipParams {
   title: string;
   options?: {
     delay?: number;
