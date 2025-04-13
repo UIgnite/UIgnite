@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {ReactElement} from 'react';
 import {cn} from '../utils/lib';
 
-interface AccordionParams {
+export interface AccordionParams {
   title: string;
   content: string;
   className?: string;

@@ -7,7 +7,7 @@ import React, {
 } from 'react';
 import {cn} from '../utils/lib';
 
-interface ResizableProps {
+export interface ResizableProps {
   className?: string;
   defaultPosition?: number;
   horizontal?: boolean;

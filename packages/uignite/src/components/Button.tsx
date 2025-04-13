@@ -3,7 +3,8 @@ import {cn} from '../utils/lib';
 import {cva} from 'class-variance-authority';
 import {Spinner} from './Spinner';
 
-interface ButtonParams extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonParams
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: 'default' | 'sm' | 'lg' | 'xl' | 'icon';
   className?: string;
   isLoading?: boolean;

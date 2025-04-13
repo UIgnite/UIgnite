@@ -1,6 +1,6 @@
 import {useCallback, useEffect, useRef, useState, MouseEvent} from 'react';
 
-interface VideoPlayerProps {
+export interface VideoPlayerProps {
   thumbnailUrl?: string;
   muted?: boolean;
   autoplay?: boolean;
