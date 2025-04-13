@@ -1,121 +1,116 @@
-import { useState } from "react";
-import { Button } from "../components/Button";
-import { CustomTheme } from "../utils/CustomTheme";
-import { Navbar } from "../components/Navbar";
-import { motion } from "framer-motion";
-import { Copy, Check } from "lucide-react";
+import {useState} from 'react';
+import {Button} from '../components/Button';
+import {CustomTheme} from '../utils/CustomTheme';
+import {Navbar} from '../components/Navbar';
+import {motion} from 'framer-motion';
+import {Copy, Check} from 'lucide-react';
 
-import { Settings, Zap, Moon, LayoutGrid } from "lucide-react";
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardTitle,
-} from "../components/Card";
-import { Accordion, AccordionWrapper } from "../components/Accordion";
-import {Input} from "../components/Input";
-import Skeleton from "../components/Skeleton";
-import Testimonials from "../components/Testimonials";
+import {Settings, Zap, Moon, LayoutGrid} from 'lucide-react';
+import {Card, CardHeader, CardContent, CardTitle} from '../components/Card';
+import {Accordion, AccordionWrapper} from '../components/Accordion';
+import {Input} from '../components/Input';
+import Skeleton from '../components/Skeleton';
+import Testimonials from '../components/Testimonials';
 
 const Home = () => {
   const [isCopied, setIsCopied] = useState(false);
-  const [email, setEmail] = useState("");
-  const [error, setError] = useState("");
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
 
-  const validateEmail = (value:string) => {
+  const validateEmail = (value: string) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!regex.test(value)) {
-      setError("Please enter a valid email address");
+      setError('Please enter a valid email address');
     } else {
-      setError("");
+      setError('');
     }
   };
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("npm i uignite");
+    navigator.clipboard.writeText('npm i uignite');
     setIsCopied(true);
     setTimeout(() => setIsCopied(false), 2000);
   };
   const features = [
     {
       icon: <Settings className="text-blue-500" size={24} />,
-      title: "Themeable",
+      title: 'Themeable',
       description:
-        "Provides a plugin to customize default themes, you can change all semantic tokens or create an entire new theme.",
+        'Provides a plugin to customize default themes, you can change all semantic tokens or create an entire new theme.',
     },
     {
       icon: <Zap className="text-blue-500" size={24} />,
-      title: "Fast",
+      title: 'Fast',
       description:
-        "Built on top of Tailwind CSS, which means no runtime styles, and no unnecessary classes in your bundle.",
+        'Built on top of Tailwind CSS, which means no runtime styles, and no unnecessary classes in your bundle.',
     },
     {
       icon: <Moon className="text-blue-500" size={24} />,
-      title: "Light & Dark UI",
+      title: 'Light & Dark UI',
       description:
-        "Automatic dark mode recognition, HeroUI automatically changes the theme when detects HTML theme prop changes.",
+        'Automatic dark mode recognition, HeroUI automatically changes the theme when detects HTML theme prop changes.',
     },
     {
       icon: <LayoutGrid className="text-blue-500" size={24} />,
-      title: "Card Title",
+      title: 'Card Title',
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quasi!",
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quasi!',
     },
   ];
 
   const testimonials = [
     {
-      imageSrc: "hitesh-sir.png",
-      name: "Hitesh Choudhary",
-      title: "Founder of ChaiCode",
+      imageSrc: 'hitesh-sir.png',
+      name: 'Hitesh Choudhary',
+      title: 'Founder of ChaiCode',
       message:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?",
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?',
       rating: 5,
     },
     {
-      imageSrc: "piyush-sir.png",
-      name: "Piyush Garg",
-      title: "Co-founder of OnlyFans",
+      imageSrc: 'piyush-sir.png',
+      name: 'Piyush Garg',
+      title: 'Co-founder of OnlyFans',
       message:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?",
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?',
       rating: 5,
     },
     {
-      imageSrc: "anirudh-sir.png",
-      name: "Anirudh Jwala",
-      title: "Gareebo ko Books Dene Wale",
+      imageSrc: 'anirudh-sir.png',
+      name: 'Anirudh Jwala',
+      title: 'Gareebo ko Books Dene Wale',
       message:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?",
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?',
       rating: 5,
     },
     {
-      imageSrc: "mukul-sir.png",
-      name: "Mukul Padwal",
-      title: "xxx",
+      imageSrc: 'mukul-sir.png',
+      name: 'Mukul Padwal',
+      title: 'xxx',
       message:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?",
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?',
       rating: 5,
     },
     {
-      imageSrc: "manu-sir.png",
-      name: "Manu Arora",
-      title: "Founder of Aceternity",
+      imageSrc: 'manu-sir.png',
+      name: 'Manu Arora',
+      title: 'Founder of Aceternity',
       message:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?",
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?',
       rating: 5,
     },
     {
-      imageSrc: "vinayak-sir.png",
-      name: "Vinayak Sarawagi",
-      title: "Founder of IntentJS",
+      imageSrc: 'vinayak-sir.png',
+      name: 'Vinayak Sarawagi',
+      title: 'Founder of IntentJS',
       message:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?",
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?',
       rating: 5,
     },
   ];
   return (
     <CustomTheme>
-      <Navbar/>
+      <Navbar />
       {/* Main Content */}
       <div className="flex justify-center items-center">
         <div className=" max-w-[1200px] ">
@@ -132,10 +127,10 @@ const Home = () => {
                 </h1>
 
                 <p className="!dark text-gray-600 text-sm sm:text-base md:text-lg max-w-md sm:max-w-lg md:max-w-prose mx-auto dark:text-zinc-400">
-                  UIgnite helps you{"  "}
+                  UIgnite helps you{'  '}
                   <span className="!dark font-semibold text-blue-900 dark:text-blue-50 drop-shadow-[0_0_4px_rgba(30,64,175,0.1)] dark:drop-shadow-[0_0_4px_rgba(30,64,175,0.8)]">
                     skip the design rabbit hole
-                  </span>{" "}
+                  </span>{' '}
                   with ready-to-use components that just look right.
                 </p>
 
@@ -180,13 +175,13 @@ const Home = () => {
           <div className="flex justify-center items-center py-10 px-4">
             <motion.div
               className="dark:text-[#f7f7f8] text-[#0d0346] font-heading max-w-6xl text-center font-semibold relative text-5xl leading-snug [text-wrap:balance]"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              viewport={{ once: true }}
+              initial={{opacity: 0, y: 50}}
+              whileInView={{opacity: 1, y: 0}}
+              transition={{duration: 0.8, ease: 'easeOut'}}
+              viewport={{once: true}}
             >
-              Component-driven UIs with{" "}
-              <span className="text-[#0990d4]">performance</span> and{" "}
+              Component-driven UIs with{' '}
+              <span className="text-[#0990d4]">performance</span> and{' '}
               <span className="text-[#0990d4]">maintainability</span> at their
               core.
             </motion.div>
@@ -265,7 +260,7 @@ const Home = () => {
                   }}
                   placeholder="Enter your email"
                   className={`w-[300px] h-[46px] text-xl px-4 rounded-md  focus:outline-none focus:ring-0 hover:outline-none bg-[#07070f] text-white 
-          ${error ? "border-red-500" : "border-gray-600"} 
+          ${error ? 'border-red-500' : 'border-gray-600'} 
           border focus:outline-none focus:ring-0 hover:outline-none`}
                 />
                 {error && <p className="text-red-400 text-sm">{error}</p>}
@@ -295,18 +290,18 @@ const Home = () => {
           <div className="text-center ">
             <motion.p
               className="text-6xl font-semibold mt-40 dark:text-[#f7f7f8] text-[#0d0346]"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              initial={{opacity: 0, y: -20}}
+              animate={{opacity: 1, y: 0}}
+              transition={{duration: 0.8, ease: 'easeOut'}}
             >
               Testimonials
             </motion.p>
 
             <motion.p
               className="text-gray-400 text-lg mt-3 max-w-2xl mx-auto"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+              initial={{opacity: 0}}
+              animate={{opacity: 1}}
+              transition={{duration: 0.8, delay: 0.3, ease: 'easeOut'}}
             >
               What our community members say about their learning journey with
               us
