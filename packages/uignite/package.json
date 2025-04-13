@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "dist/index.es.js",
-  "module": "dist/index.es.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc -b && vite build",
@@ -13,8 +13,8 @@
   },
   "exports": {
     ".": {
-      "default": "./dist/index.es.js",
-      "require": "./dist/index.es.js",
+      "default": "./dist/index.js",
+      "require": "./dist/index.js",
       "types": "./dist/index.d.ts"
     }
   },
