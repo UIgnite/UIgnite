@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-// import {ThemeToggle} from "@pkgs/uignite";
+import {ThemeToggleBtn} from "@pkgs/uignite";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 const Navbar = () => {
@@ -40,7 +40,7 @@ const Navbar = () => {
       {/* github and mode switch */}
       <div className="hidden md:flex md:justify-center md:items-center md:gap-1">
         {/* md:justify-end md:space-x-4 */}
-        {/* <ThemeToggle /> */}
+        <ThemeToggleBtn />
         <a
           href="https://github.com/UIgnite/UIgnite"
           target="_blank"

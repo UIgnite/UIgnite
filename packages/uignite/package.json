@@ -3,19 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "dist/index.js",      
-  "module": "dist/index.js",     
+  "main": "dist/index.es.js",
+  "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "dev": "vite --port 5174",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "exports": {
     ".": {
-      "default": "./dist/index.js",
-      "require": "./dist/index.js",
+      "default": "./dist/index.es.js",
+      "require": "./dist/index.es.js",
       "types": "./dist/index.d.ts"
     }
   },

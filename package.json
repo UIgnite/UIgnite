@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "concurrently --names \"docs,uignite\" --prefix-colors \"red,green\" \"bun --cwd=website/docs dev\"  \"bun --cwd=packages/uignite dev\"",
+    "dev": "concurrently --names \"docs\" --prefix-colors \"green\" \"yarn --cwd=website/docs dev\"",
     "format": "prettier . --write",
     "build": "lerna run build",
     "clean": "rimraf ./packages/**/dist ./website/**/dist"

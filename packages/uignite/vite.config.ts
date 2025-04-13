@@ -5,27 +5,6 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import dts from 'vite-plugin-dts';
 
-// function getComponentEntries(dir: string) {
-//   const files = fs.readdirSync(dir);
-//   const entries: Record<string, string> = {};
-
-//   files.forEach((file) => {
-//     const fullPath = path.resolve(dir, file);
-//     const stat = fs.statSync(fullPath);
-
-//     if (
-//       stat.isFile() &&
-//       /\.(ts|tsx)$/.test(file) &&
-//       !file.startsWith('index')
-//     ) {
-//       const name = path.parse(file).name;
-//       entries[`components/${name}`] = fullPath;
-//     }
-//   });
-
-//   return entries;
-// }
-
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
@@ -48,8 +27,6 @@ export default defineConfig({
     lib: {
       entry: {
         index: './src/index.ts',
-        hooks: './src/hooks/index.ts',
-        
       },
       fileName: (format, entryName) => `${entryName}.${format}.js`,
       formats: ['es'],
