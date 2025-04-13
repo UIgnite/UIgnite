@@ -2,12 +2,12 @@ import React from 'react';
 import Avatar from './Avatar';
 import {Tooltip} from './Tooltip';
 
-interface AvatarData {
+export interface AvatarData {
   url: string;
   alt: string;
 }
 
-interface AvatarGroupProps {
+export interface AvatarGroupProps {
   avatars?: AvatarData[];
 }
 
