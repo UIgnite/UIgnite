@@ -7,7 +7,6 @@ interface AccordionParams {
   content: string;
   className?: string;
   defaultOpen?: boolean;
-  open?: boolean;
   isOpen?: boolean | null;
   onToggle?: () => void;
 }
@@ -17,7 +16,6 @@ const Accordion = ({
   content,
   className = '',
   defaultOpen = false,
-  open = false,
   isOpen = null,
   onToggle,
 }: AccordionParams) => {
@@ -25,7 +23,6 @@ const Accordion = ({
   const toggleAccordion = () => {
     setVisible(!visible);
   };
-  const isVisible = isOpen ?? visible;
   return (
     <div
       className={cn(
