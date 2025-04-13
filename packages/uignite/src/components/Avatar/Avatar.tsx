@@ -1,5 +1,5 @@
 import React from 'react';
-import {cn} from '../utils/lib';
+import {cn} from '@/utils/lib';
 
 export interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   url: string;

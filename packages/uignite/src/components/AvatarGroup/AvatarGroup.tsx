@@ -1,6 +1,6 @@
 import React from 'react';
-import Avatar from './Avatar';
-import {Tooltip} from './Tooltip';
+import Avatar from '@/components/Avatar';
+import {Tooltip} from '@/components/Tooltip';
 
 export interface AvatarData {
   url: string;
