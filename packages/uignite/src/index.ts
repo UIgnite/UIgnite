@@ -1,2 +1,4 @@
-export {Button} from './components/Button';
-export {default as Avatar} from './components/Avatar';
+export * from './components';
+export {CustomTheme} from './utils/CustomTheme'
+export {cn} from './utils/lib'
+export {themes} from './utils/theme'

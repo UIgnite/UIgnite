@@ -9,13 +9,12 @@ import React, {
 export interface ThemeContextType {
   theme: 'light' | 'dark';
   toggleTheme(): any;
-  test(): any;
+ 
 }
 
 const ThemeContext = createContext<ThemeContextType>({
   theme: 'dark',
-  toggleTheme: () => {},
-  test: () => {},
+  toggleTheme: () => {}
 });
 
 export interface ThemeProviderProps {
@@ -38,12 +37,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({children}) => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
 
-  const test = () => {
-    console.log('Test clicked');
-  };
+  
 
   return (
-    <ThemeContext.Provider value={{theme, toggleTheme, test}}>
+    <ThemeContext.Provider value={{theme, toggleTheme}}>
       <div
         className={`${
           theme === 'dark'

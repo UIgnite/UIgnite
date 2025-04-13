@@ -1,8 +1,8 @@
-import {Link, NavLink} from 'react-router-dom';
-import {GitHubLogoIcon} from '@radix-ui/react-icons';
-import {ThemeToggle} from '../hooks/ToggleTheme';
+import { Link, NavLink } from "react-router-dom";
+// import {ThemeToggle} from "@pkgs/uignite";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
-export const Navbar = () => {
+const Navbar = () => {
   return (
     <div className="relative  max-w-[88rem] px-4 sm:px-6 lg:px-8 flex flex-col w-full py-5 mx-auto md:flex-row md:items-center md:justify-between">
       {/* logo */}
@@ -40,7 +40,7 @@ export const Navbar = () => {
       {/* github and mode switch */}
       <div className="hidden md:flex md:justify-center md:items-center md:gap-1">
         {/* md:justify-end md:space-x-4 */}
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
         <a
           href="https://github.com/UIgnite/UIgnite"
           target="_blank"
@@ -54,3 +54,5 @@ export const Navbar = () => {
     </div>
   );
 };
+
+export default Navbar;

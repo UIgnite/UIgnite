@@ -48,8 +48,10 @@ export default defineConfig({
     lib: {
       entry: {
         index: './src/index.ts',
+        hooks: './src/hooks/index.ts',
+        
       },
-      fileName: () => `index.js`,
+      fileName: (format, entryName) => `${entryName}.${format}.js`,
       formats: ['es'],
     },
     rollupOptions: {
