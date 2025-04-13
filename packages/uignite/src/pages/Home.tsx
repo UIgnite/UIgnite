@@ -7,7 +7,7 @@ import {Copy, Check} from 'lucide-react';
 
 import {Settings, Zap, Moon, LayoutGrid} from 'lucide-react';
 import {Card, CardHeader, CardContent, CardTitle} from '../components/Card';
-import {Accordion, AccordionWrapper} from '../components/Accordion';
+import Accordion,{AccordionWrapper} from '../components/Accordion';
 import {Input} from '../components/Input';
 import Skeleton from '../components/Skeleton';
 import Testimonials from '../components/Testimonials';
