@@ -22,6 +22,7 @@ export interface ButtonParams
     | 'dark'
     | 'light'
     | 'movingBorder';
+  fullWidth?: boolean;
   animatedBorder?: boolean;
   gradientBorder?: boolean;
   responsiveSize?: 'auto' | 'compact' | 'expand';
@@ -39,6 +40,7 @@ export const Button = React.forwardRef<
       isLoading = false,
       icon,
       variant = 'primary',
+      fullWidth,
       animatedBorder = false,
       gradientBorder = false,
       responsiveSize,
@@ -89,6 +91,10 @@ export const Button = React.forwardRef<
             xl: 'h-12 rounded-md px-10 min-w-[130px] text-base',
             icon: 'h-10 w-10 min-w-[40px]',
           },
+          fullWidth: {
+            true: 'w-full',
+            false: '',
+          },
           responsiveSize: {
             auto: 'md:text-base text-xs md:h-10 h-8 md:px-4 px-2',
             compact:
@@ -99,6 +105,7 @@ export const Button = React.forwardRef<
         defaultVariants: {
           variant: 'primary',
           size: 'default',
+          fullWidth: false,
           responsiveSize: undefined,
         },
       }
@@ -144,14 +151,14 @@ export const Button = React.forwardRef<
           buttonVariants({
             variant: animatedBorder || gradientBorder ? 'dark' : variant,
             size,
+            fullWidth,
             responsiveSize,
             className: cn(
               (animatedBorder || gradientBorder) &&
                 'w-full m-0 rounded-[calc(0.375rem-1px)]',
               className
             ),
-          }),
-          'w-full'
+          })
         )}
       >
         {buttonContent}
@@ -161,7 +168,10 @@ export const Button = React.forwardRef<
     const borderStyle = getBorderStyle();
 
     return borderStyle ? (
-      <div className={cn('inline-flex', 'w-full')} style={borderStyle}>
+      <div
+        className={cn('inline-flex', fullWidth && 'w-full')}
+        style={borderStyle}
+      >
         {renderButton()}
       </div>
     ) : (

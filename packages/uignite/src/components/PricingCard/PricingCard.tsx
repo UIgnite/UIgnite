@@ -8,7 +8,7 @@ interface ThemeSelectorParams {
 interface PricingParams {
   title: string;
   price: string;
-  validity: string;
+  validity?: string;
   description: string;
   features: string[];
   highlighted?: boolean;

@@ -36,7 +36,7 @@ export default defineConfig({
       include: ['src'],
       insertTypesEntry: true,
       rollupTypes: true,
-      tsconfigPath: './tsconfig.app.json'
+      tsconfigPath: './tsconfig.app.json',
     }),
   ],
   resolve: {
