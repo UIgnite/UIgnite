@@ -3,11 +3,12 @@ import {cn} from '../utils/lib';
 import {cva} from 'class-variance-authority';
 import {Spinner} from './Spinner';
 
-interface ButtonParams extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonParams
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: 'default' | 'sm' | 'lg' | 'xl' | 'icon';
   className?: string;
   isLoading?: boolean;
-  icon?: React.ReactNode; // icon should be ReactNode
+  icon?: React.ReactNode;
   variant?:
     | 'primary'
     | 'destructive'
@@ -37,7 +38,7 @@ export const Button = React.forwardRef<
       className = '',
       isLoading = false,
       icon,
-      variant = 'primary', //  default variant
+      variant = 'primary',
       animatedBorder = false,
       gradientBorder = false,
       responsiveSize,

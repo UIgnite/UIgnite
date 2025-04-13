@@ -1,6 +1,6 @@
 import {cn} from '../utils/lib';
 
-interface SpinnerProps {
+export interface SpinnerProps {
   className?: string;
 }
 

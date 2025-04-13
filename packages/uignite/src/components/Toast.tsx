@@ -1,6 +1,6 @@
 import {cn} from '../utils/lib';
 
-interface ToastUiParams {
+export interface ToastUiParams {
   idx: number;
   title: string;
   hovered?: boolean;

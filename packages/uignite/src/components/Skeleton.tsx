@@ -1,6 +1,6 @@
 import {cn} from '../utils/lib';
 
-interface SkeletonParams {
+export interface SkeletonParams {
   className?: string;
 }
 const Skeleton = ({className}: SkeletonParams) => {

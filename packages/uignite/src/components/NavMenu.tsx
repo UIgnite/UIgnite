@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface NavMenuProps {
+export interface NavMenuProps {
   items: string[];
 }
 
