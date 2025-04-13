@@ -1,13 +1,23 @@
 {
-  "name": "uignite",
+  "name": "@pkgs/uignite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "dist/index.js",      
+  "module": "dist/index.js",     
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "vite --port 5174",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
+  },
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.2",

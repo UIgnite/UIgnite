@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import { ThemeSelector,PricingCard } from '@pkgs/uignite/src/components/PricingCard/PricingCard';
+import {  } from '@pkgs/uignite';
 
 const PricingSection = () => {
   const [currentTheme, setCurrentTheme] = useState('dark');
