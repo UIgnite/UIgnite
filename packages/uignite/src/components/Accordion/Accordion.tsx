@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {ReactElement} from 'react';
-import {cn} from '../utils/lib';
+import {cn} from '../../utils/lib';
 
 export interface AccordionParams {
   title: string;
@@ -93,4 +93,4 @@ const AccordionWrapper = ({children}: AccordionWrapperParams) => {
   );
 };
 
-export {AccordionWrapper, Accordion};
+export {AccordionWrapper, Accordion as default};
