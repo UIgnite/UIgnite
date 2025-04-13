@@ -1,5 +1,4 @@
 import {cn} from '../utils/lib';
-import React from 'react';
 
 interface ToastUiParams {
   idx: number;

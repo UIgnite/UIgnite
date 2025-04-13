@@ -1,10 +1,4 @@
-import React, {
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-  MouseEvent,
-} from 'react';
+import {useCallback, useEffect, useRef, useState, MouseEvent} from 'react';
 
 interface VideoPlayerProps {
   thumbnailUrl?: string;
@@ -28,7 +22,7 @@ export default function VideoPlayer({
   const [currentTime, setCurrentTime] = useState(0);
   const [videoDuration, setVideoDuration] = useState(0);
 
-  const [volumeBtnHovered, setVolumeBtnHovered] = useState(false);
+  //   const [volumeBtnHovered, setVolumeBtnHovered] = useState(false);
 
   const handleTooglePlaying = useCallback(() => {
     setPlayed(true);

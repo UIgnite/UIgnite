@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import {cn} from '../utils/lib';
+import {useState} from 'react';
 
 interface MessageBotParams {
   orgName?: string;
