@@ -5,7 +5,6 @@
 //   FaYoutube,
 // } from "react-icons/fa6";
 
-
 // interface FooterParams {
 
 // }
@@ -52,8 +51,8 @@
 //                 href={social.link}
 //                 target="_blank"
 //                 rel="noopener noreferrer"
-//                 className="!dark w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 
-//                   bg-gray-200 hover:bg-black hover:text-white hover:shadow-lg 
+//                 className="!dark w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300
+//                   bg-gray-200 hover:bg-black hover:text-white hover:shadow-lg
 //                   dark:bg-gray-900 dark:hover:bg-white dark:hover:text-black"
 //               >
 //                 {socialIconsMap[social.type]}
@@ -88,8 +87,8 @@
 
 //       {/* Copyright */}
 //       <div
-//         className="!dark text-center text-sm mt-10 pt-4 border-t 
-//         border-gray-300 text-gray-600 
+//         className="!dark text-center text-sm mt-10 pt-4 border-t
+//         border-gray-300 text-gray-600
 //         dark:border-gray-800 dark:text-gray-500"
 //       >
 //         {copyright}
