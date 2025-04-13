@@ -1,7 +1,6 @@
-import React from 'react';
 import {motion} from 'framer-motion';
 
-export const CustomTheme = ({children}) => {
+export const CustomTheme = ({children}:React.PropsWithChildren) => {
   return (
     <div className="!dark dark:bg-black dark:text-white text-black relative overflow-hidden h-screen w-full">
       {/* Background Grid */}
