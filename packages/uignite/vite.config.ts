@@ -29,8 +29,8 @@ export default defineConfig({
         index: './src/index.ts',
       },
       fileName: (v1, v2) => {
-        console.log(v1, v2)
-        return 'index.js'
+        console.log(v1, v2);
+        return 'index.js';
       },
       formats: ['es'],
     },

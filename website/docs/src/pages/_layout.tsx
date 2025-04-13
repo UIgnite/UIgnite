@@ -1,8 +1,5 @@
-
-import { Navbar } from '@pkgs/uignite';
+import {Navbar} from '@pkgs/uignite';
 import {Outlet, useLocation} from 'react-router-dom';
-
-
 
 export function RootLayout() {
   const location = useLocation();

@@ -4,9 +4,7 @@
 
 export const Navbar = () => {
   return (
-    <div>
-
-    </div>
+    <div></div>
     // <div className="relative  max-w-[88rem] px-4 sm:px-6 lg:px-8 flex flex-col w-full py-5 mx-auto md:flex-row md:items-center md:justify-between">
     //   {/* logo */}
     //   <div className="flex flex-row gap-12 items-center justify-between text-[1rem] lg:justify-start">

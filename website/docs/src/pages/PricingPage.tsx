@@ -2,7 +2,7 @@ import {PricingCard, ThemeSelector} from '@pkgs/uignite';
 import {useState} from 'react';
 
 const PricingSection = () => {
-  const [currentTheme,setCurrentTheme] = useState('dark');
+  const [currentTheme, setCurrentTheme] = useState('dark');
 
   const pricingData = [
     {

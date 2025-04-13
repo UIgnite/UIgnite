@@ -1,10 +1,13 @@
 import {BrowserRouter} from 'react-router-dom';
-import './index.css';
+import '../index.css';
 import {createRoot} from 'react-dom/client';
-import Home from './pages/Home.tsx';
+import App from './App.tsx';
+import {ThemeProvider} from '@pkgs/uignite/dist/index.js';
 
 createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
-    <Home />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </BrowserRouter>
 );
