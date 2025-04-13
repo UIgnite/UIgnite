@@ -28,7 +28,10 @@ export default defineConfig({
       entry: {
         index: './src/index.ts',
       },
-      fileName: (format, entryName) => `${entryName}.${format}.js`,
+      fileName: (v1, v2) => {
+        console.log(v1, v2)
+        return 'index.js'
+      },
       formats: ['es'],
     },
     rollupOptions: {

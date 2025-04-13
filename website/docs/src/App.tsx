@@ -1,8 +1,8 @@
 import {Route, Routes} from 'react-router-dom';
 import Home from './pages/Home';
 import PricingSection from './pages/PricingPage';
-import { NotFoundPage } from './pages/NotFoundPage';
-import { RootLayout } from './pages/_layout';
+import {NotFoundPage} from './pages/NotFoundPage';
+import {RootLayout} from './pages/_layout';
 
 const App = () => {
   return (
