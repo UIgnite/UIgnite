@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {cn} from '../utils/lib.js';
+import {cn} from '@/utils/lib.js';
 
 export interface TooltipParams {
   title: string;

@@ -1,5 +1,5 @@
 import React, {useCallback, useRef, useState} from 'react';
-import {Button} from './Button';
+import {Button} from '../Button/Button';
 
 export default function Dropdown({
   children,

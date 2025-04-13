@@ -1,5 +1,5 @@
 import React from 'react';
-import {Input} from './Input';
+import {Input} from '@/components/Input';
 import {
   Card,
   CardContent,
@@ -7,8 +7,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from './Card';
-import {Button} from './Button';
+} from '@/components/Card';
+import {Button} from '@/components/Button';
 
 const SignIn: React.FC = () => {
   return (

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import {cn} from '../utils/lib';
+import {cn} from '@/utils/lib';
 import {cva} from 'class-variance-authority';
-import {Spinner} from './Spinner';
+import {Spinner} from '@/components/Spinner';
 
 export interface ButtonParams
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
