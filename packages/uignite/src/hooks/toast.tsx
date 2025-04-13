@@ -1,4 +1,4 @@
-import { Toast } from '../components/Toast';
+import {Toast} from '../components/Toast';
 import React, {
   useCallback,
   useContext,
@@ -9,7 +9,7 @@ import React, {
 
 interface ToastOptions {
   variant?: 'default' | 'success' | 'error' | 'info' | string;
-  desc?: string ;
+  desc?: string;
   timeout?: number;
 }
 
@@ -29,7 +29,7 @@ interface ToastProviderProps {
   children: ReactNode;
 }
 
-const ToastProvider: React.FC<ToastProviderProps> = ({ children }) => {
+const ToastProvider: React.FC<ToastProviderProps> = ({children}) => {
   const [toasts, setToasts] = useState<ToastType[]>([]);
   const [hovered, setHovered] = useState<boolean>(false);
 
@@ -67,7 +67,7 @@ const ToastProvider: React.FC<ToastProviderProps> = ({ children }) => {
   );
 
   return (
-    <ToastContext.Provider value={{ showToast: handleShowToast }}>
+    <ToastContext.Provider value={{showToast: handleShowToast}}>
       {children}
       <div
         onMouseEnter={() => setHovered(true)}
@@ -95,4 +95,4 @@ const useToast = (): ToastContextType => {
   return context;
 };
 
-export { useToast, ToastProvider };
+export {useToast, ToastProvider};

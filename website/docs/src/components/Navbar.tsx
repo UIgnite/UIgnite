@@ -1,6 +1,6 @@
-import { Link, NavLink } from "react-router-dom";
-import {ThemeToggleBtn} from "@pkgs/uignite";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import {Link, NavLink} from 'react-router-dom';
+import {ThemeToggleBtn} from '@pkgs/uignite';
+import {GitHubLogoIcon} from '@radix-ui/react-icons';
 
 const Navbar = () => {
   return (

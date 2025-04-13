@@ -2,7 +2,7 @@ import {Route, Routes} from 'react-router-dom';
 import Home from '../../../website/docs/src/pages/Home';
 import PricingSection from '../../../website/docs/src/pages/PricingPage';
 import {NotFoundPage} from '../../../website/docs/src/pages/NotFoundPage';
-import {RootLayout} from '../../../../UIgnite/packages/uignite/src/Layout/_layout'
+import {RootLayout} from '../../../../UIgnite/packages/uignite/src/Layout/_layout';
 
 const App = () => {
   return (

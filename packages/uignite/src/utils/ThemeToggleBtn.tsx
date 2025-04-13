@@ -3,7 +3,7 @@ import {useTheme} from '../hooks/theme';
 
 export const ThemeToggleBtn = () => {
   const {theme, toggleTheme} = useTheme();
-  
+
   let isDark = theme === 'dark';
 
   return (

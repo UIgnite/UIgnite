@@ -1,4 +1,4 @@
-import {PricingCard } from '@pkgs/uignite';
+import {PricingCard} from '@pkgs/uignite';
 import {useState} from 'react';
 
 const PricingSection = () => {
