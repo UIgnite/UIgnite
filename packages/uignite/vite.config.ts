@@ -40,7 +40,7 @@ export default defineConfig({
         // Preserve module structure
         preserveModules: true,
         preserveModulesRoot: 'src',
-        dir: 'dist'
+        dir: 'dist',
       },
     },
   },

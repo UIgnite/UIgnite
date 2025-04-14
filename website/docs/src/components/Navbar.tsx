@@ -8,10 +8,18 @@ const Navbar = () => {
       {/* logo */}
       <div className="flex flex-row gap-12 items-center justify-between text-[1rem] lg:justify-start">
         <Link to="/" className="flex items-center gap-2">
-          <img src="/favicon.png" className="w-8 object-contain" alt="Logo" />
-          <h4 className="text-2xl font-semibold -mt-1">
-            UI<span className="text-primary">gnite</span>
-          </h4>
+          <div>
+            <img
+              src="/Light_Mode_Logo.png"
+              alt="Light Logo"
+              className="block dark:hidden w-32 -mt-2 object-contain"
+            />
+            <img
+              src="/Dark_Mode_Logo.png"
+              alt="Dark Logo"
+              className="hidden dark:block w-32 -mt-2 object-contain"
+            />
+          </div>
         </Link>
 
         {/* nav links */}
