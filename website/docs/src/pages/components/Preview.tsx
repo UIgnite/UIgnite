@@ -12,17 +12,11 @@ interface PreviewPropT {
 const Preview = ({currComponent, element}: PreviewPropT) => {
   const [copied, setCopied] = useState(false);
 
-  if (!currComponent || !element) {
-    return <div className="text-red-500">Code not found.</div>;
-  }
-
   const handleCopyCodeBlock = useCallback(() => {
     window.navigator.clipboard.writeText(currComponent.code);
     setCopied(true);
     setTimeout(() => setCopied(false), 1000);
   }, [currComponent, setCopied]);
-
-  console.log(atomOneDarkReasonable);
 
   const syntaxHighlighterElement = (
     <div className="w-full h-full relative">
@@ -71,7 +65,10 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
       </SyntaxHighlighter>
     </div>
   );
-  console.log(atomOneDarkReasonable);
+
+  if (!currComponent || !element)
+    return <div className="text-red-500">Code not found.</div>;
+
   return (
     <div className=" min-w-[80%] flex flex-col">
       <LiveProvider code={element.element} scope={element.scope}>
