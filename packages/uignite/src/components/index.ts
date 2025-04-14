@@ -5,6 +5,7 @@ export * from './Toast';
 export * from './Navbar';
 export * from './Button';
 export * from './SignIn';
+export * from './SignUp';
 export * from './Spinner';
 export * from './Tooltip';
 export * from './Carosuel';
