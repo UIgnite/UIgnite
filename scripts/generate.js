@@ -43,9 +43,8 @@ async function writeComponentContent(name, content) {
           };
         }),
       };
-      element['files'].forEach(async (file, idx)=>{
-        '/'
-        await writeComponentContent();
+      element['files'].forEach(async (_, idx)=>{
+        await writeComponentContent(`/website/docs/public/r/${element['name']}-${idx}.json`, elementSchemaJson);
       })
     }
   } catch (error) {
