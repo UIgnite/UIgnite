@@ -79,8 +79,7 @@ const Home = () => {
       imageSrc: 'anirudh-sir.png',
       name: 'Anirudh Jwala',
       title: 'Gareebo ko Books Dene Wale',
-      message:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?',
+      message: 'niet?',
       rating: 5,
     },
     {
@@ -313,6 +312,7 @@ const Home = () => {
               <div className="flex">
                 {testimonials.map((testimonial, index) => (
                   <Testimonials
+                    className=" w-[450px] max-h-[200px]"
                     key={index}
                     imageSrc={testimonial.imageSrc}
                     name={testimonial.name}

@@ -10,12 +10,12 @@ const Navbar = () => {
         <Link to="/" className="flex items-center gap-2">
           <div>
             <img
-              src="/Light_Mode_Logo.png"
+              src="/light-mode-logo.png"
               alt="Light Logo"
               className="block dark:hidden w-32 -mt-2 object-contain"
             />
             <img
-              src="/Dark_Mode_Logo.png"
+              src="/dark-mode-logo.png"
               alt="Dark Logo"
               className="hidden dark:block w-32 -mt-2 object-contain"
             />
