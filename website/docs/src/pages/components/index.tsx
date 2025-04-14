@@ -1,5 +1,7 @@
 import {useParams} from 'react-router-dom';
 import {Preview} from './Preview';
+import {ChevronLeft, ChevronRight} from 'lucide-react';
+
 import {
   getCodeStrById,
   getComponentById,
@@ -7,6 +9,7 @@ import {
 } from '../../utils/lib';
 import {Install} from './Install';
 import {Properties} from './Properties';
+import {Button} from '@pkgs/uignite/dist';
 
 export default function Component() {
   const {componentId} = useParams();
@@ -24,20 +27,39 @@ export default function Component() {
 
   return (
     <div className="mb-5 w-[100%]">
-      <div className="w-[90%] text-4xl font-semibold">{currComponent.name}</div>
+      <h1 id={currComponent.name} className="w-[90%] text-4xl font-semibold">
+        {currComponent.name}
+      </h1>
       <div className="w-[90%] text-neutral-300">{currComponent.desc}</div>
 
       <Preview currComponent={codeStr} element={element} />
 
       <hr className="w-48 h-0 mx-auto my-8 border-none " />
 
-      <div className="text-4xl mt-4 font-semibold"> Installation </div>
+      <h1 id="installation" className="text-4xl mt-4 font-semibold">
+        {' '}
+        Installation{' '}
+      </h1>
       <Install componentId={currComponent.id} codeString={codeStr} />
 
       <hr className="w-48 h-0 mx-auto my-8 border-none" />
 
-      <div className="text-4xl mt-4 font-semibold"> Props </div>
+      <h1 id="Props" className="text-4xl mt-4 font-semibold">
+        {' '}
+        Props
+      </h1>
       <Properties componentId={currComponent.id} />
+
+      <div className="flex justify-between w-[90%]">
+        <Button variant="ghost" icon={<ChevronLeft />}>
+          {' '}
+          Previous{' '}
+        </Button>
+        <Button variant="ghost">
+          <span className="mr-2">Next</span>
+          <ChevronRight />
+        </Button>
+      </div>
     </div>
   );
 }
