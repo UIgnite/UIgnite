@@ -11,6 +11,7 @@ import {Input} from '@pkgs/uignite';
 import {Skeleton} from '@pkgs/uignite';
 import {Testimonials} from '@pkgs/uignite';
 import Navbar from '../components/Navbar';
+import { GridBackground } from '../utils/GridBackground';
 
 const Home = () => {
   const [isCopied, setIsCopied] = useState(false);
@@ -111,6 +112,7 @@ const Home = () => {
     <CustomTheme>
       <Navbar />
       {/* Main Content */}
+      <GridBackground/>
       <div className="flex justify-center items-center">
         <div className=" max-w-[1200px] ">
           <div className=" -mt-3 z-1 px-4 md:px-8  min-h-screen flex justify-center">
