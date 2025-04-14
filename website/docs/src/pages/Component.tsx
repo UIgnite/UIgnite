@@ -105,29 +105,14 @@ const Components = () => {
 
         <Tabs defaultVal="preview">
           <TabList activeTab="">
-            <Tab
-              activeTab=""
-              setActiveTab={() => {}}
-              title="Preview"
-              value="preview"
-            ></Tab>
-            <Tab
-              activeTab=""
-              setActiveTab={() => {}}
-              title="Code"
-              value="code"
-            ></Tab>
+            <Tab title="Preview" value="preview"></Tab>
+            <Tab title="Code" value="code"></Tab>
           </TabList>
           <TabContent
-            activeTab=""
             content={<div>THis is preview</div>}
             value="preview"
           ></TabContent>
-          <TabContent
-            activeTab=""
-            content={<div></div>}
-            value="code"
-          ></TabContent>
+          <TabContent content={<div></div>} value="code"></TabContent>
         </Tabs>
 
         <Tooltip title={'I am Tooltip '} options={{delay: 300}}>
