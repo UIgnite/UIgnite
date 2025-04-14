@@ -108,6 +108,7 @@ const Home = () => {
       rating: 5,
     },
   ];
+  
   return (
     <CustomTheme>
       <Navbar />
@@ -134,8 +135,8 @@ const Home = () => {
                   with ready-to-use components that just look right.
                 </p>
 
-                <div className=" mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <Button className="!dark dark:hover:text-gray-200  bg-transparent border text-lg dark:hover:border-white/20 dark:border-blue-500 hover:border-blue-800 hover:text-blue-800 hover:bg-transparent text-blue-500 transition duration-300 rounded-lg px-6 py-6">
+                <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <Button>
                     Get Started
                   </Button>
                   <Button
