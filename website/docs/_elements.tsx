@@ -254,14 +254,6 @@ const elements = [
         <div className='w-full h-full bg-rose-200'></div>
       </Resizable>
     </div>`,
-    customPreviewElement: (
-      <div className="relative w-[500px] h-26">
-        <Resizable className="h-20">
-          <div className="w-full h-full bg-amber-200"></div>
-          <div className="w-full h-full bg-rose-200"></div>
-        </Resizable>
-      </div>
-    ),
   },
   {
     id: 'skeleton',
@@ -310,6 +302,5 @@ const elements = [
     `,
   },
 ];
-
 
 export default elements;

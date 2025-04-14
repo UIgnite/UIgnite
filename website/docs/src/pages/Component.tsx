@@ -24,15 +24,12 @@ const Components = () => {
 
   return (
     <>
-
-    <div className='relative'>
-      <Resizable className='h-20'>
-        <div className='w-full h-full bg-amber-200'></div>
-        <div className='w-full h-full bg-rose-200'></div>
-      </Resizable>
-    </div>
-
-
+      <div className="relative">
+        <Resizable className="h-20">
+          <div className="w-full h-full bg-amber-200"></div>
+          <div className="w-full h-full bg-rose-200"></div>
+        </Resizable>
+      </div>
 
       {/* <Navbar
         lightLogo={'/Darklogo.svg?url'}
