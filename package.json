@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently --names \"docs\" --prefix-colors \"green\" \"yarn --cwd=website/docs dev\"",
     "format": "prettier . --write",
-    "build": "lerna run build",
+    "build": "lerna run build --concurrency=1",
     "clean": "rimraf ./packages/**/dist ./website/**/dist"
   },
   "author": "uignite team",
