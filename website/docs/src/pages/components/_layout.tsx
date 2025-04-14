@@ -1,4 +1,3 @@
-import React from 'react';
 import {Outlet, useParams} from 'react-router-dom';
 import ComponentList from './componentList';
 import {components} from '../../utils/lib';

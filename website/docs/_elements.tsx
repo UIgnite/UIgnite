@@ -30,22 +30,26 @@ export default [
     id: 'accordion',
     scope: {Accordion, AccordionWrapper},
     element: `
-      <AccordionWrapper>
-        <Accordion
-          title="Title 1"
-          content="Content 1"
-          className="bg-gray-900"
-          defaultOpen
-          open
-        />
-        <Accordion
-          title="Title 2"
-          content="Content 2"
-          className="bg-gray-700"
-          defaultOpen={false}
-          open
-        />
-      </AccordionWrapper>
+      <div className="relative z-10">
+                <AccordionWrapper>
+                  <Accordion
+                    title="What is MobiMart?"
+                    content="MobiMart is an e-commerce platform selling mobile gadgets like earbuds, phones, and speakers."
+                  />
+                  <Accordion
+                    title="How long does delivery take?"
+                    content="Typically 2-4 business days depending on your location."
+                  />
+                  <Accordion
+                    title="Can I return a product?"
+                    content="Yes, we have a 7-day easy return policy."
+                  />
+                  <Accordion
+                    title="How long does delivery take?"
+                    content="Typically 2-4 business days depending on your location."
+                  />
+                </AccordionWrapper>
+              </div>
     `,
   },
   {

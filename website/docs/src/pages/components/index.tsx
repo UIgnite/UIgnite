@@ -16,6 +16,8 @@ export default function Component() {
 
   const codeStr = getCodeStrById(componentId);
 
+  console.log('Some', currComponent);
+
   if (!currComponent) {
     return <div className="text-red-500">Component not found.</div>;
   }
