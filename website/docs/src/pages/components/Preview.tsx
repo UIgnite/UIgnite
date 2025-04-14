@@ -74,28 +74,13 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
       <LiveProvider code={element.element} scope={element.scope}>
         <Tabs defaultVal="preview">
           <TabList activeTab="">
-            {element ? (
-              <Tab
-                activeTab=""
-                setActiveTab={() => {}}
-                title="Preview"
-                value="preview"
-              />
-            ) : (
-              <></>
-            )}
+            {element ? <Tab title="Preview" value="preview" /> : <></>}
 
-            <Tab
-              title="Code"
-              value="code"
-              activeTab=""
-              setActiveTab={() => {}}
-            />
+            <Tab title="Code" value="code" />
           </TabList>
 
           {element ? (
             <TabContent
-              activeTab=""
               content={
                 <div className="w-[100%] flex justify-center items-center p-10 bg-neutral-900">
                   <LivePreview />
@@ -106,11 +91,7 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
           ) : (
             <></>
           )}
-          <TabContent
-            activeTab=""
-            content={syntaxHighlighterElement}
-            value="code"
-          />
+          <TabContent content={syntaxHighlighterElement} value="code" />
         </Tabs>
       </LiveProvider>
     </div>
