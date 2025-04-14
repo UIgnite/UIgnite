@@ -108,7 +108,7 @@ const Home = () => {
       rating: 5,
     },
   ];
-  
+
   return (
     <CustomTheme>
       <Navbar />
