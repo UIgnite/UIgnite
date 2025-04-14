@@ -23,7 +23,7 @@ export default function Component() {
   }
 
   return (
-    <div className="mb-5 w-[90%]">
+    <div className="mb-5 w-[100%]">
       <div className="w-[90%] text-4xl font-semibold">{currComponent.name}</div>
       <div className="w-[90%] text-neutral-300">{currComponent.desc}</div>
 

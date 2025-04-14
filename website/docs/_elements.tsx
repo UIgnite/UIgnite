@@ -3,6 +3,7 @@ import {
   AccordionWrapper,
   Avatar,
   AvatarGroup,
+  Button,
   Card,
   CardContent,
   CardDescription,
@@ -85,11 +86,31 @@ const elements = [
   //     />
   //   `,
   // },
-  // {
-  //   id: "button",
-  //   scope: { Button },
-  //   element: `<Button variant="default" onClick={() => alert("Clicked!")}>Click Me</Button>`,
-  // },
+  {
+    id: 'button',
+    scope: {Button},
+    element: `
+    <div className="grid grid-cols-5 gap-10">
+            <Button variant="primary">primary</Button>
+            <Button variant="destructive">destructive</Button>
+            <Button variant="success">success</Button>
+            <Button variant="warning">warning</Button>
+            <Button variant="outline">outline</Button>
+            <Button variant="secondary">secondary</Button>
+            <Button  variant="gradient" isLoading />
+            <Button variant="ghost">ghost</Button>
+            <Button variant="glass">glass</Button>
+            <Button variant="dark">dark</Button>
+            <Button variant="light">light</Button>
+            <Button variant="gradient">gradient</Button>
+            <Button animatedBorder>animatedBorder</Button>
+            <Button gradientBorder>gradientBorder</Button>
+            <Button className="animate-border text-white font-semibold px-6 py-3 rounded-xl">
+              Hover Me
+            </Button>
+          </div> 
+    `,
+  },
   {
     id: 'card',
     scope: {
