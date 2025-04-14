@@ -1,6 +1,6 @@
-const components: any[] = [];
-const codeString: any[] = [];
-const elements: any[] = [];
+import components from '../../_components.json' with {type: 'json'};
+import elements from '../../_elements';
+import codeString from '../../_codeString';
 
 function getComponentById(compId: string | undefined) {
   if (!compId) return null;
