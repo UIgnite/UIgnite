@@ -7,7 +7,7 @@ export default function ComponentLayout() {
   const {componentId} = useParams();
   const navigate = useNavigate();
   return (
-    <div className="w-full flex h-[calc(100vh-80px)] overflow-y-hidden mt-10">
+    <div className="w-full flex h-[calc(90vh-25px)] mt-10">
       {/* Side Bar  */}
       {componentId && (
         <div className="ml-[4%] min-w-[15%] mr-[1%] h-full overflow-y-scroll scrollable-content flex flex-col gap-y-2 justify-start">
