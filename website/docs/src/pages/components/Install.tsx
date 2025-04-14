@@ -20,7 +20,7 @@ const Install = ({
 
   const CommandElement = () => {
     return (
-      <div className=" w-full h-[50px] relative cli">
+      <div className="w-full h-[44px] relative cli ">
         <CopyButton copyText={`npx uignite add ${componentId}`} />
         <SyntaxHighlighter
           style={{
@@ -31,7 +31,7 @@ const Install = ({
             },
           }}
           language="cli"
-          className="text-left text-sm h-full min-w-full rounded-md"
+          className="text-left  text-sm h-full min-w-full rounded-md  "
         >
           {`npx uignite add ${componentId}`}
         </SyntaxHighlighter>
