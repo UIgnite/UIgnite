@@ -12,7 +12,7 @@ interface PreviewPropT {
 const Preview = ({currComponent, element}: PreviewPropT) => {
   const [copied, setCopied] = useState(false);
 
-  if (!currComponent) {
+  if (!currComponent || !element) {
     return <div className="text-red-500">Code not found.</div>;
   }
 
