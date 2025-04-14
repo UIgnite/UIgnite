@@ -35,6 +35,26 @@ function getCodeStrById(compId: string | undefined) {
   );
 }
 
+function getPreviousComponentbyId(compId: string | undefined) {
+  if (!compId) return null;
+  const currInd: number = components.findIndex((comp) => comp.id === compId);
+  if (currInd === 0) {
+    return components[components.length - 1].id;
+  }
+
+  return components[currInd - 1].id;
+}
+
+function getNextComponentbyId(compId: string | undefined) {
+  if (!compId) return null;
+  const currInd: number = components.findIndex((comp) => comp.id === compId);
+
+  if (currInd == components.length - 1) {
+    return components[0].id;
+  }
+  return components[currInd + 1].id;
+}
+
 export {
   components,
   codeString,
@@ -42,4 +62,6 @@ export {
   getCodeStrById,
   getComponentById,
   getElementByCompId,
+  getPreviousComponentbyId,
+  getNextComponentbyId,
 };

@@ -6,10 +6,13 @@ import {
   getCodeStrById,
   getComponentById,
   getElementByCompId,
+  getNextComponentbyId,
+  getPreviousComponentbyId,
 } from '../../utils/lib';
 import {Install} from './Install';
 import {Properties} from './Properties';
 import {Button} from '@pkgs/uignite/dist';
+import {useNavigate} from 'react-router-dom';
 
 export default function Component() {
   const {componentId} = useParams();
@@ -19,12 +22,18 @@ export default function Component() {
 
   const codeStr = getCodeStrById(componentId);
 
-  console.log('Some', currComponent);
+  const prevComponentId = getPreviousComponentbyId(componentId);
+  const nextComponentId = getNextComponentbyId(componentId);
+
+  // console.log('Some', currComponent);
+  console.log('prev', prevComponentId);
+  console.log('next', nextComponentId);
+
+  const navigate = useNavigate();
 
   if (!currComponent) {
     return <div className="text-red-500">Component not found.</div>;
   }
-
   return (
     <div className="mb-5 w-[100%]">
       <h1 id={currComponent.name} className="w-[90%] text-4xl font-semibold">
@@ -37,26 +46,30 @@ export default function Component() {
       <hr className="w-48 h-0 mx-auto my-8 border-none " />
 
       <h1 id="installation" className="text-4xl mt-4 font-semibold">
-        {' '}
-        Installation{' '}
+        Installation
       </h1>
       <Install componentId={currComponent.id} codeString={codeStr} />
 
       <hr className="w-48 h-0 mx-auto my-8 border-none" />
 
       <h1 id="Props" className="text-4xl mt-4 font-semibold">
-        {' '}
         Props
       </h1>
       <Properties componentId={currComponent.id} />
 
-      <div className="flex justify-between w-[90%]">
-        <Button variant="ghost" icon={<ChevronLeft />}>
-          {' '}
-          Previous{' '}
+      <div className=" mt-4 flex justify-between w-[90%]">
+        <Button
+          variant="ghost"
+          icon={<ChevronLeft />}
+          onClick={() => navigate(`/components/${prevComponentId}`)}
+        >
+          {prevComponentId}
         </Button>
-        <Button variant="ghost">
-          <span className="mr-2">Next</span>
+        <Button
+          variant="ghost"
+          onClick={() => navigate(`/components/${nextComponentId}`)}
+        >
+          <span className="mr-3">{nextComponentId}</span>
           <ChevronRight />
         </Button>
       </div>

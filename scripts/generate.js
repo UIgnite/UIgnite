@@ -1,5 +1,5 @@
 import fs from 'fs/promises';
-import pth from "path"
+import pth from 'path';
 import registoryConfig from '../registry.json' with {type: 'json'};
 
 async function readComponentFile(path) {
@@ -13,8 +13,8 @@ async function readComponentFile(path) {
 
 async function writeComponentContent(name, content) {
   try {
-    const path = pth.join(content[''],`${name}.json`)
-    await fs.writeFile()
+    const path = pth.join(content[''], `${name}.json`);
+    await fs.writeFile();
   } catch (error) {
     console.error(error);
   }
@@ -43,9 +43,12 @@ async function writeComponentContent(name, content) {
           };
         }),
       };
-      element['files'].forEach(async (_, idx)=>{
-        await writeComponentContent(`/website/docs/public/r/${element['name']}-${idx}.json`, elementSchemaJson);
-      })
+      element['files'].forEach(async (_, idx) => {
+        await writeComponentContent(
+          `/website/docs/public/r/${element['name']}-${idx}.json`,
+          elementSchemaJson
+        );
+      });
     }
   } catch (error) {
     console.error(`Error occured: ${error.message}`);

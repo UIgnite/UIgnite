@@ -2,7 +2,7 @@ import {Outlet, useParams} from 'react-router-dom';
 import ComponentList from './componentList';
 import {components} from '../../utils/lib';
 import {useNavigate} from 'react-router-dom';
-import {Button} from '@pkgs/uignite/dist';
+// import {Button} from '@pkgs/uignite/dist';
 import TableOfContents from './TableOfContent';
 
 export default function ComponentLayout() {
@@ -21,7 +21,7 @@ export default function ComponentLayout() {
                   <button
                     key={index}
                     onClick={() => navigate(`/components/${component.id}`)}
-                    className="text-left cursor-pointer hover:text-white"
+                    className="text-left mt-2 cursor-pointer hover:text-white"
                   >
                     {component.name}
                   </button>
@@ -40,7 +40,9 @@ export default function ComponentLayout() {
             <h3 className="text-lg font-semibold text-white mb-2 ">
               On this page
             </h3>
-            <TableOfContents />
+            <div className=" border border-l-white border-r-0 border-b-0 border-t-0">
+              <TableOfContents />
+            </div>
           </div>
         )}
       </div>

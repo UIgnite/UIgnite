@@ -215,7 +215,7 @@ const elements = [
     element: `
       <MessageBot
         orgName="UIgnite"
-        themeColor="bg-indigo-600"
+        themeColor="bg-cyan-600"
         url="https://dummyimage.com/100x100/000/fff&text=U"
         alt="Bot avatar"
       />
