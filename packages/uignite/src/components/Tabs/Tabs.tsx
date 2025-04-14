@@ -5,19 +5,19 @@ import {ReactElement} from 'react';
 
 interface TabContentParams {
   value: string;
-  activeTab: string;
-  content: string;
+  activeTab?: string;
+  content: any;
 }
 interface TabParams {
   title: string;
   value: string;
-  activeTab: string;
-  setActiveTab: (value: string) => void;
+  activeTab?: string;
+  setActiveTab?: any;
   className?: string;
 }
 interface TabListParams {
   children: ReactElement<TabParams> | ReactElement<TabParams>[];
-  activeTab: string;
+  activeTab?: any;
   setActiveTab?: (value: string) => void;
   className?: string;
 }
