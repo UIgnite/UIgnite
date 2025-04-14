@@ -15,6 +15,7 @@ import {
   useToast,
 } from '@pkgs/uignite';
 import Navbar from '../components/Navbar';
+import Resizable from '../components/Resizable';
 // import { DatePicker } from "@pkgs/uignite";
 
 const Components = () => {
@@ -23,6 +24,16 @@ const Components = () => {
 
   return (
     <>
+
+    <div className='relative'>
+      <Resizable className='h-20'>
+        <div className='w-full h-full bg-amber-200'></div>
+        <div className='w-full h-full bg-rose-200'></div>
+      </Resizable>
+    </div>
+
+
+
       {/* <Navbar
         lightLogo={'/Darklogo.svg?url'}
         darkLogo={'/Logo.svg'}
