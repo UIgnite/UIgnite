@@ -115,7 +115,7 @@ const Home = () => {
       {/* Main Content */}
       <div className="flex justify-center items-center">
         <div className=" max-w-[1200px] ">
-          <div className=" -mt-3 z-1 px-4 md:px-8  min-h-screen flex justify-center">
+          <div className="  z-1 px-4 md:px-8  min-h-screen flex justify-center">
             <div className="w-full max-w-6xl  flex items-center justify-center">
               <div className="text-center px-4">
                 <h1 className="text-2xl  sm:text-5xl md:text-6xl lg:text-[80px] font-heading font-semibold tracking-tight text-zinc-200 mb-6">
@@ -136,7 +136,7 @@ const Home = () => {
                 </p>
 
                 <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <Button>
+                  <Button className="dark:hover:text-gray-200  bg-transparent border text-lg dark:hover:border-white/20 dark:border-blue-500 hover:border-blue-800 hover:text-blue-800 hover:bg-transparent text-blue-500 transition duration-300 rounded-lg px-6 py-6">
                     Get Started
                   </Button>
                   <Button
