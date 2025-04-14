@@ -18,6 +18,9 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
     setTimeout(() => setCopied(false), 1000);
   }, [currComponent, setCopied]);
 
+  if (!currComponent || !element)
+    return <div className="text-red-500">Code not found.</div>;
+
   const syntaxHighlighterElement = (
     <div className="w-full h-full relative">
       <button
@@ -66,9 +69,6 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
     </div>
   );
 
-  if (!currComponent || !element)
-    return <div className="text-red-500">Code not found.</div>;
-
   return (
     <div className=" min-w-[80%] flex flex-col">
       <LiveProvider code={element.element} scope={element.scope}>
@@ -82,7 +82,7 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
           {element ? (
             <TabContent
               content={
-                <div className="w-[100%] flex justify-center items-center p-10 bg-neutral-900">
+                <div className="w-[100%] flex justify-center items-center p-10 bg-neutral-900 relative">
                   <LivePreview />
                 </div>
               }

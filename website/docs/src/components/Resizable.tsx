@@ -5,7 +5,7 @@ import React, {
   useState,
   ReactNode,
 } from 'react';
-import {cn} from '@/utils/lib';
+import {cn} from '../utils/lib';
 
 export interface ResizableProps {
   className?: string;
@@ -62,7 +62,6 @@ export default function Resizable({
     <div
       ref={containerRef}
       onMouseMove={(ev: React.MouseEvent<HTMLDivElement>) => {
-        console.log(ev);
         setMouseX(horizontalValue ? ev.clientY : ev.clientX);
       }}
       className={cn(

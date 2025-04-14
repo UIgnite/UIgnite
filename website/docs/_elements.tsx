@@ -25,7 +25,7 @@ import {Toast as ToastUi} from '@pkgs/uignite';
 import Footer from './src/components/Footer';
 import Navbar from './src/components/Navbar';
 
-export default [
+const elements = [
   {
     id: 'accordion',
     scope: {Accordion, AccordionWrapper},
@@ -248,14 +248,12 @@ export default [
   {
     id: 'resizable',
     scope: {Resizable},
-    element: `<Resizable
-      className="custom-class"
-      defaultPosition={300}
-      horizontal={false}
-    >
-      <div className="bg-gray-300 p-4">Left Side Content</div>
-      <div className="bg-gray-500 p-4">Right Side Content</div>
-    </Resizable>`,
+    element: `<div className='relative w-[500px] h-26'>
+      <Resizable className='h-20'>
+        <div className='w-full h-full bg-amber-200'></div>
+        <div className='w-full h-full bg-rose-200'></div>
+      </Resizable>
+    </div>`,
   },
   {
     id: 'skeleton',
@@ -304,3 +302,5 @@ export default [
     `,
   },
 ];
+
+export default elements;
