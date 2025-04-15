@@ -32,7 +32,9 @@ const Tabs = ({children, defaultVal = '', className = ''}: TabsParams) => {
 
   return (
     <>
-      <div className={` mt-4 w-[90%]  ${className}`}>
+      <div
+        className={`  w-[90%] dark:text-white  text-black  ring-[0.5px] ring-neutral-200  dark:ring-neutral-700 rounded-md ${className}`}
+      >
         {React.Children.map(children, (child) => {
           return React.cloneElement(child, {
             activeTab,
@@ -51,7 +53,7 @@ const TabList = ({
   className = '',
 }: TabListParams) => {
   return (
-    <div className={cn(`flex space-x-2  rounded-md`, className)}>
+    <div className={cn(`flex space-x-2   rounded-md`, className)}>
       {React.Children.map(children, (child) =>
         React.cloneElement(child, {activeTab, setActiveTab})
       )}
@@ -72,7 +74,7 @@ const Tab = ({
       onClick={() => setActiveTab(value)}
       className={cn(
         ` px-6 py-2 rounded-md text-md font-medium cursor-pointer
-        ${isActive ? ' text-white bg-neutral-900' : ' text-gray-600 hover:text-white'}
+        ${isActive ? ' dark:text-white dark:bg-neutral-900 text-black bg-neutral-200 ' : ' text-gray-500 hover:text-black dark:text-gray-600 dark:hover:text-white'}
       `,
         className
       )}
@@ -85,7 +87,7 @@ const Tab = ({
 const TabContent = ({value, activeTab, content}: TabContentParams) => {
   if (activeTab === value)
     return (
-      <div className=" rounded-md flex   overflow-x-auto scrollable-content  mt-3">
+      <div className=" dark:text-white  text-black   rounded-md flex overflow-x-auto scrollable-content  mt-3">
         {content}
       </div>
     );

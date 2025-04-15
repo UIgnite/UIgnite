@@ -72,7 +72,7 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
   return (
     <div className=" min-w-[80%] flex flex-col">
       <LiveProvider code={element.element} scope={element.scope}>
-        <Tabs defaultVal="preview">
+        <Tabs className="p-3 mt-4" defaultVal="preview">
           <TabList activeTab="">
             {element ? <Tab title="Preview" value="preview" /> : <></>}
 
@@ -82,7 +82,7 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
           {element ? (
             <TabContent
               content={
-                <div className="w-[100%] flex justify-center items-center p-10 bg-neutral-900 relative">
+                <div className="w-[100%] flex justify-center items-center p-10 bg-neutral-200 dark:bg-neutral-900  relative">
                   <LivePreview />
                 </div>
               }

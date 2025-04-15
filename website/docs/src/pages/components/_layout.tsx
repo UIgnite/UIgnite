@@ -13,15 +13,15 @@ export default function ComponentLayout() {
       <div className="w-[1400px]  flex h-[calc(100vh-120px)] mt-10 ">
         {/* Side Bar  */}
         {componentId && (
-          <div className="ml-[4%] min-w-[15%] mr-[1%] h-full overflow-y-scroll scrollable-content flex flex-col gap-y-2 justify-start">
+          <div className=" ml-[4%] min-w-[15%] mr-[1%] h-full overflow-y-scroll scrollable-content lg:flex flex-col gap-y-2 justify-start hidden ">
             <div>
-              <div className="font-med ">Components</div>
-              <ul className="text-gray-400 my-4 flex flex-col gap-y-2">
+              <div className="font-med font-bold ">Components</div>
+              <ul className="text-gray-700 my-4 flex flex-col gap-y-2">
                 {components.map((component, index) => (
                   <button
                     key={index}
                     onClick={() => navigate(`/components/${component.id}`)}
-                    className="text-left mt-2 cursor-pointer hover:text-white"
+                    className="text-left  cursor-pointer p-2 rounded-md hover:bg-neutral-200 dark:hover:text-white dark:text-neutral-300 dark:hover:bg-neutral-700"
                   >
                     {component.name}
                   </button>
@@ -37,10 +37,10 @@ export default function ComponentLayout() {
 
         {componentId && (
           <div className="min-w-[20%] h-full overflow-y-scroll scrollable-content  px-4 hidden lg:block">
-            <h3 className="text-lg font-semibold text-white mb-2 ">
+            <h3 className="text-lg font-semibold dark:text-white mb-2 ">
               On this page
             </h3>
-            <div className=" border border-l-white border-r-0 border-b-0 border-t-0">
+            <div className=" border border-l-neutral-800 dark:border-l-white border-r-0 border-b-0 border-t-0">
               <TableOfContents />
             </div>
           </div>

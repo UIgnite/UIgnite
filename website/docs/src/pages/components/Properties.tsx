@@ -7,7 +7,7 @@ const Properties = ({componentId}: {componentId: string}) => {
   if (!currComponent) return <div>404 Not found</div>;
 
   return (
-    <div className="w-[90%]">
+    <div className="mt-4 border-[0.5px] border-neutral-200 dark:border-neutral-800 rounded-md  p-3 w-[90%]">
       <div className="relative  overflow-x-auto rounded-md mt-4 ">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-black dark:text-gray-400">

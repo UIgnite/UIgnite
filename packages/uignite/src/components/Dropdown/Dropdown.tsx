@@ -5,7 +5,7 @@ export default function Dropdown({
   children,
   button,
   title = 'Open',
-}: React.PropsWithChildren<{button: React.ReactNode; title?: string}>) {
+}: React.PropsWithChildren<{button?: React.ReactNode; title?: string}>) {
   const buttonRef = useRef<HTMLDivElement | null>(null);
   const dropDownRef = useRef(null);
 
