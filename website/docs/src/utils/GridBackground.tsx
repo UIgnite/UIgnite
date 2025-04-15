@@ -103,7 +103,7 @@ export function GridBackground() {
       })
 
       // Draw connections between particles
-      ctx.strokeStyle = isDark ? "rgba(59, 130, 246, 0.15)" : "rgba(59, 130, 246, 0.1)"
+      ctx.strokeStyle = isDark ? "rgba(59, 130, 246, 1)" : "rgba(59, 130, 246, 1)"
       ctx.lineWidth = 1
 
       for (let i = 0; i < particles.length; i++) {
@@ -137,7 +137,7 @@ export function GridBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 -z-10 h-full w-full bg-background transition-colors duration-300"
+      className="fixed opacity-5 inset-0 -z-10 h-full w-full bg-background transition-colors duration-300"
     />
   )
 }
