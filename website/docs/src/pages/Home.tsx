@@ -3,7 +3,6 @@ import {Button} from '@pkgs/uignite';
 import {CustomTheme} from '../utils/CustomTheme';
 import {motion} from 'framer-motion';
 import {Copy, Check} from 'lucide-react';
-
 import {Settings, Zap, Moon, LayoutGrid} from 'lucide-react';
 import {Card, CardHeader, CardContent, CardTitle} from '@pkgs/uignite';
 import {Accordion, AccordionWrapper} from '@pkgs/uignite';
@@ -11,7 +10,6 @@ import {Input} from '@pkgs/uignite';
 import {Skeleton} from '@pkgs/uignite';
 import {Testimonials} from '@pkgs/uignite';
 import Navbar from '../components/Navbar';
-import {GridBackground} from '../utils/GridBackground';
 import {GridBackground} from '../utils/GridBackground';
 
 const Home = () => {
