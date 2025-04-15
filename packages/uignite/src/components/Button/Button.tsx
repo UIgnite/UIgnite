@@ -119,6 +119,8 @@ export const Button = React.forwardRef<
           backgroundPosition: `${animationPosition.x}% ${animationPosition.y}%`,
           padding: '2px',
           borderRadius: '0.375rem',
+          animation: '5s ease infinite',
+
         };
       }
       if (gradientBorder) {

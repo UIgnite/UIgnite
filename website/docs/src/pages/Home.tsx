@@ -112,9 +112,9 @@ const Home = () => {
       <Navbar />
       {/* Main Content */}
       <GridBackground />
-      <div className="flex justify-center items-center mt-6">
-        <div className=" max-w-[1200px] w-full   px-4 sm:px-4 lg:px-4 ">
-          <div className="  z-1 px-4 md:px-8  min-h-screen flex justify-center">
+      <div className="flex justify-center  items-center ">
+        <div className=" max-w-[1200px]  w-full px-4 sm:px-4 lg:px-4 ">
+          <div className="z-1 px-4 md:px-8 min-h-screen flex justify-center mt-4 ">
             <div className="w-full max-w-6xl  flex items-center justify-center">
               <div className="text-center px-4">
                 <h1 className="text-2xl  sm:text-5xl md:text-6xl lg:text-[60px] font-heading font-semibold tracking-tight text-zinc-200 mb-6">

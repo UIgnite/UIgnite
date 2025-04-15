@@ -53,7 +53,9 @@ const Testimonials: React.FC<TestimonialsProps> = ({
         </div>
       </div>
 
-      <p className="text-base mt-2 overflow-y-auto">{message}</p>
+      <p className="text-base mt-2 overflow-y-auto scrollable-content">
+        {message}
+      </p>
     </div>
   );
 };

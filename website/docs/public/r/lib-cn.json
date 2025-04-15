@@ -1,5 +1,4 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "lib-cn",
   "type": "registry:lib",
   "dependencies": [
@@ -8,11 +7,12 @@
     "class-variance-authority",
     "tailwindcss"
   ],
+  "registryDependencies": [],
   "files": [
     {
-      "content": "import {type ClassValue, clsx} from 'clsx';\n// import components from '../../_components.json';\n// import elements from '../../_elements';\n// import codeString from '../../_codeString';\n\nimport {twMerge} from 'tailwind-merge';\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n",
+      "path": "packages/uignite/src/utils/lib.ts",
       "type": "registry:lib",
-      "path": "packages/uignite/src/utils/lib.ts"
+      "content": "import {type ClassValue, clsx} from 'clsx';\n// import components from '../../_components.json';\n// import elements from '../../_elements';\n// import codeString from '../../_codeString';\n\nimport {twMerge} from 'tailwind-merge';\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n"
     }
   ]
 }

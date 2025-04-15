@@ -1,13 +1,12 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "spinner",
   "type": "registry:ui",
   "dependencies": [],
   "files": [
     {
-      "content": "import {cn} from '@/utils/lib';\n\nexport interface SpinnerProps {\n  className?: string;\n}\n\nexport const Spinner = ({className = ''}: SpinnerProps) => {\n  return (\n    <div\n      className={cn('flex space-x-2 justify-center items-center ', className)}\n    >\n      <div\n        className={`h-3 w-3  rounded-full animate-bounce [animation-delay:-0.3s]`}\n      ></div>\n      <div\n        className={`h-3 w-3   rounded-full animate-bounce [animation-delay:-0.15s]`}\n      ></div>\n      <div className={`h-3 w-3 rounded-full animate-bounce`}></div>\n    </div>\n  );\n};\n",
+      "path": "packages/uignite/src/components/Spinner/Spinner.tsx",
       "type": "registry:ui",
-      "path": "packages/uignite/src/components/Spinner/Spinner.tsx"
+      "content": "import {cn} from '@/utils/lib';\n\nexport interface SpinnerProps {\n  className?: string;\n}\n\nexport const Spinner = ({className = ''}: SpinnerProps) => {\n  return (\n    <div\n      className={cn('flex space-x-2 justify-center items-center ', className)}\n    >\n      <div\n        className={`h-3 w-3 dark:bg-light-primary bg-dark-primary rounded-full animate-bounce [animation-delay:-0.3s]`}\n      ></div>\n      <div\n        className={`h-3 w-3 dark:bg-light-primary bg-dark-primary rounded-full animate-bounce [animation-delay:-0.15s]`}\n      ></div>\n      <div\n        className={`h-3 w-3  dark:bg-light-primary bg-dark-primary rounded-full animate-bounce`}\n      ></div>\n    </div>\n  );\n};\n"
     }
   ]
 }
