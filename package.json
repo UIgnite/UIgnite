@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "concurrently --names \"docs\" --prefix-colors \"green\" \"yarn --cwd=website/docs dev\"",
+    "dev": "concurrently --names \"docs,registry\" --prefix-colors \"green,yellow\" \"yarn --cwd=website/docs dev\" \"yarn --cwd=website/registry dev\"",
     "format": "prettier . --write",
     "build": "lerna run build --concurrency=1",
     "clean": "rimraf ./packages/**/dist ./website/**/dist"
@@ -24,6 +24,7 @@
   ],
   "dependencies": {
     "clsx": "^2.1.1",
+    "shadcn": "^2.4.0",
     "tailwind-merge": "^3.2.0"
   }
 }

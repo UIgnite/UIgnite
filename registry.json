@@ -1,13 +1,13 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "uignite",
-  "homepage": "https://uignite.in",
+  "homepage": "https://r.uignite.in",
   "items": [
     {
       "name": "accordion",
       "type": "registry:ui",
       "dependencies": [],
-      "devDependencies": ["lib-cn"],
+      "registryDependencies": ["lib-cn"],
       "files": [
         {
           "path": "packages/uignite/src/components/Accordion/Accordion.tsx",

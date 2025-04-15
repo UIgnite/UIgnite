@@ -1,13 +1,13 @@
 {
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "avatargroup",
   "type": "registry:ui",
   "dependencies": [],
+  "registryDependencies": ["lib-cn"],
   "files": [
     {
-      "content": "import React from 'react';\nimport Avatar from '@/components/Avatar';\nimport {Tooltip} from '@/components/Tooltip';\n\nexport interface AvatarData {\n  url: string;\n  alt: string;\n}\n\nexport interface AvatarGroupProps {\n  avatars?: AvatarData[];\n}\n\nconst AvatarGroup: React.FC<AvatarGroupProps> = ({avatars = []}) => {\n  return (\n    <div className=\"flex items-center mt-6 pl-2 overflow-visible\">\n      {avatars.map((avatar, index) => (\n        <div\n          key={index}\n          className={`relative transition-all duration-300 ease-in-out ${\n            index !== 0 ? '-ml-7' : ''\n          } hover:z-20`}\n        >\n          <Tooltip title={avatar.alt} options={{tooltipStyle: {width: 'auto'}}}>\n            <Avatar\n              url={avatar.url}\n              alt={avatar.alt}\n              className={`\n                w-12 h-12 rounded-full object-cover\n                ring-2 ring-white shadow-md\n                hover:scale-110 hover:white-500\n                transition-transform duration-300 ease-in-out\n              `}\n            />\n          </Tooltip>\n        </div>\n      ))}\n    </div>\n  );\n};\n\nexport default AvatarGroup;\n",
+      "path": "packages/uignite/src/components/AvatarGroup/AvatarGroup.tsx",
       "type": "registry:ui",
-      "path": "packages/uignite/src/components/AvatarGroup/AvatarGroup.tsx"
+      "content": "import React from 'react';\nimport Avatar from '@/components/Avatar';\nimport {Tooltip} from '@/components/Tooltip';\n\nexport interface AvatarData {\n  url: string;\n  alt: string;\n}\n\nexport interface AvatarGroupProps {\n  avatars?: AvatarData[];\n}\n\nconst AvatarGroup: React.FC<AvatarGroupProps> = ({avatars = []}) => {\n  return (\n    <div className=\"flex items-center mt-6 pl-2 overflow-visible\">\n      {avatars.map((avatar, index) => (\n        <div\n          key={index}\n          className={`relative transition-all duration-300 ease-in-out ${\n            index !== 0 ? '-ml-7' : ''\n          } hover:z-20`}\n        >\n          <Tooltip title={avatar.alt} options={{tooltipStyle: {width: 'auto'}}}>\n            <Avatar\n              url={avatar.url}\n              alt={avatar.alt}\n              className={`\n                w-12 h-12 rounded-full object-cover\n                ring-2 ring-white shadow-md\n                hover:scale-110 hover:white-500\n                transition-transform duration-300 ease-in-out\n              `}\n            />\n          </Tooltip>\n        </div>\n      ))}\n    </div>\n  );\n};\n\nexport default AvatarGroup;\n"
     }
   ]
 }
