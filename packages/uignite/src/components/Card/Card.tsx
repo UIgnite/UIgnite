@@ -8,7 +8,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
     <div
       ref={ref}
       className={cn(
-        'rounded-2xl border bg-card text-card-foreground shadow-md w-sm p-4',
+        'border border-neutral-200 dark:border-neutral-700 rounded-xl shadow-md w-sm px-4 py-2',
         className
       )}
       {...props}
@@ -34,9 +34,7 @@ CardTitle.displayName = 'CardTitle';
 const CardDescription: React.FC<React.HTMLAttributes<HTMLParagraphElement>> = ({
   className,
   ...props
-}) => (
-  <p className={cn('text-sm text-muted-foreground', className)} {...props} />
-);
+}) => <p className={cn('text-sm', className)} {...props} />;
 CardDescription.displayName = 'CardDescription';
 
 const CardContent: React.FC<CardSectionProps> = ({className, ...props}) => (
@@ -45,10 +43,7 @@ const CardContent: React.FC<CardSectionProps> = ({className, ...props}) => (
 CardContent.displayName = 'CardContent';
 
 const CardFooter: React.FC<CardSectionProps> = ({className, ...props}) => (
-  <div
-    className={cn('mt-4 flex items-center justify-between', className)}
-    {...props}
-  />
+  <div className={cn('mt-4', className)} {...props} />
 );
 CardFooter.displayName = 'CardFooter';
 
