@@ -19,7 +19,7 @@ const carouselVariants = cva('relative w-full', {
   },
 });
 
-const Carousel: React.FC<CarouselProps> = ({children, className}) => {
+const Carosuel: React.FC<CarouselProps> = ({children, className}) => {
   const [current, setCurrent] = useState<number>(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -66,4 +66,4 @@ const Carousel: React.FC<CarouselProps> = ({children, className}) => {
   );
 };
 
-export default Carousel;
+export {Carosuel};
