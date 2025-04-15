@@ -8,8 +8,6 @@
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 
-
-
 @theme {
   --color-dark-primary: #0f0f0f;
   --color-dark-secondary: #222;
@@ -174,7 +172,6 @@ body {
 }
 
 @keyframes growShrink {
-
   0%,
   100% {
     transform: scaleY(0.5);
@@ -203,16 +200,13 @@ body {
   animation: fade 1.2s linear infinite;
 }
 
-
 .loader-circle {
   border-width: 4px;
   border-style: solid;
   border-radius: 9999px;
   width: 2rem;
   height: 2rem;
-  border-color: #d1d5db; 
+  border-color: #d1d5db;
   border-top-color: #1d4ed8;
   animation: spin 1s linear infinite;
 }
-
-

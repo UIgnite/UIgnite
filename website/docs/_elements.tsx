@@ -249,7 +249,7 @@ const elements = [
   },
   {
     id: 'pricingCard',
-    scope: {PricingCard,Link},
+    scope: {PricingCard, Link},
     element: `
     <>
     <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 px-4">
