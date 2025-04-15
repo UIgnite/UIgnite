@@ -46,7 +46,7 @@ async function writeComponentContent(path, content) {
         dependencies: element['dependencies'],
         files: fileData,
       };
-      fileData = []
+      fileData = [];
       element['files'].forEach(async () => {
         await writeComponentContent(
           `./website/docs/public/r/${element['name']}.json`,

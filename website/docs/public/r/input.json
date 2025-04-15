@@ -1,1 +1,13 @@
-{"$schema":"https://ui.shadcn.com/schema/registry-item.json","name":"input","type":"registry:ui","dependencies":[],"files":[{"content":"import React from 'react';\nimport {cn} from '@/utils/lib';\n\nexport interface InputProps\n  extends React.InputHTMLAttributes<HTMLInputElement> {}\n\nconst Input = React.forwardRef<HTMLInputElement, InputProps>(\n  ({className, type = 'text', ...props}, ref) => {\n    return (\n      <input\n        ref={ref}\n        type={type}\n        className={cn(\n          'flex h-9 w-full rounded-md border border-input bg-transparent px-4 py-2 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-[1.2px] focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm',\n          className\n        )}\n        {...props}\n      />\n    );\n  }\n);\n\nInput.displayName = 'Input';\n\nexport {Input};\n","type":"registry:ui","path":"packages/uignite/src/components/Input/Input.tsx"}]}
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input",
+  "type": "registry:ui",
+  "dependencies": [],
+  "files": [
+    {
+      "content": "import React from 'react';\nimport {cn} from '@/utils/lib';\n\nexport interface InputProps\n  extends React.InputHTMLAttributes<HTMLInputElement> {}\n\nconst Input = React.forwardRef<HTMLInputElement, InputProps>(\n  ({className, type = 'text', ...props}, ref) => {\n    return (\n      <input\n        ref={ref}\n        type={type}\n        className={cn(\n          'flex h-9 w-full rounded-md border border-input bg-transparent px-4 py-2 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-[1.2px] focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm',\n          className\n        )}\n        {...props}\n      />\n    );\n  }\n);\n\nInput.displayName = 'Input';\n\nexport {Input};\n",
+      "type": "registry:ui",
+      "path": "packages/uignite/src/components/Input/Input.tsx"
+    }
+  ]
+}

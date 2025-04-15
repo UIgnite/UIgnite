@@ -1,1 +1,13 @@
-{"$schema":"https://ui.shadcn.com/schema/registry-item.json","name":"avatar","type":"registry:ui","dependencies":[],"files":[{"content":"import React from 'react';\nimport {cn} from '@/utils/lib';\n\nexport interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {\n  url: string;\n  alt: string;\n  className?: string;\n}\n\nconst Avatar = React.forwardRef<HTMLImageElement, AvatarProps>(\n  ({url, alt, className = '', ...props}, ref) => {\n    return (\n      <div className=\"flex gap-4 mt-2\">\n        <img\n          ref={ref}\n          src={url}\n          alt={alt}\n          className={cn('rounded-full h-12 w-12 object-cover', className)}\n          {...props}\n        />\n      </div>\n    );\n  }\n);\n\nAvatar.displayName = 'Avatar';\n\nexport default Avatar;\n","type":"registry:ui","path":"packages/uignite/src/components/Avatar/Avatar.tsx"}]}
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "avatar",
+  "type": "registry:ui",
+  "dependencies": [],
+  "files": [
+    {
+      "content": "import React from 'react';\nimport {cn} from '@/utils/lib';\n\nexport interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {\n  url: string;\n  alt: string;\n  className?: string;\n}\n\nconst Avatar = React.forwardRef<HTMLImageElement, AvatarProps>(\n  ({url, alt, className = '', ...props}, ref) => {\n    return (\n      <div className=\"flex gap-4 mt-2\">\n        <img\n          ref={ref}\n          src={url}\n          alt={alt}\n          className={cn('rounded-full h-12 w-12 object-cover', className)}\n          {...props}\n        />\n      </div>\n    );\n  }\n);\n\nAvatar.displayName = 'Avatar';\n\nexport default Avatar;\n",
+      "type": "registry:ui",
+      "path": "packages/uignite/src/components/Avatar/Avatar.tsx"
+    }
+  ]
+}
