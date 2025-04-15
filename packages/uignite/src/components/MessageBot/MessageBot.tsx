@@ -15,8 +15,8 @@ export interface Message {
 const MessageBot = ({
   orgName = 'UIgnite',
   themeColor = 'bg-blue-600',
-  url,
-  alt,
+  url = '/assets/logo.webp',
+  // alt,
 }: MessageBotParams) => {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState('');
@@ -47,10 +47,18 @@ const MessageBot = ({
   };
 
   return (
-    <div className="z-[999999] fixed bottom-5 right-5">
+    <div className="z-[1000] fixed bottom-5 right-5">
+      {/* Overlay: Jab isOpen true ho, toh poori screen dark ya blur karne ke liye */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/30 z-[1000]"
+          onClick={() => setIsOpen(false)} // Overlay click se chatbot close hoga
+        ></div>
+      )}
+
       {/* Floating Button */}
       <button
-        className={`w-16 h-16 ${themeColor} text-white rounded-full shadow-lg flex items-center justify-center text-2xl hover:scale-105 transition-transform duration-200`}
+        className={`cursor-pointer z-[1000] w-16 h-16 ${themeColor} text-white rounded-full shadow-lg flex items-center justify-center text-2xl hover:scale-105 transition-transform duration-200`}
         onClick={() => setIsOpen(!isOpen)}
       >
         💬
@@ -58,18 +66,18 @@ const MessageBot = ({
 
       {/* Chatbot Box */}
       {isOpen && (
-        <div className="fixed bottom-[6.5rem] right-8 w-80 h-[32rem] bg-white rounded-lg shadow-2xl flex flex-col overflow-hidden">
+        <div className="z-[1000] fixed bottom-[6.5rem] right-8 w-80 h-[32rem] bg-white rounded-lg shadow-2xl flex flex-col overflow-hidden">
           {/* Header */}
           <div
-            className={`p-4 ${themeColor} text-white flex justify-between items-center`}
+            className={`p-4 ${themeColor} text-white text-left items-center`}
           >
-            <span className="text-lg font-semibold">{orgName}</span>
             <button
               className="p-1 rounded-full hover:bg-white hover:text-black transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             >
-              <img src="circle-x.svg" alt="Close" className="w-5 h-5" />
+              <img src="/assets/logo.webp" alt="Close" className="w-6 h-6" />
             </button>
+            <span className="text-lg font-semibold">{orgName}</span>
           </div>
 
           {/* Messages */}
@@ -82,7 +90,7 @@ const MessageBot = ({
                 {msg.sender === 'user' && (
                   <img
                     className="rounded-full h-6 w-6 object-cover mr-2"
-                    src={url || 'default-avatar.png'}
+                    src={url || 'https://avatar.iran.liara.run/public'}
                     alt="User"
                   />
                 )}
@@ -98,7 +106,7 @@ const MessageBot = ({
                 {msg.sender === 'bot' && (
                   <img
                     className="rounded-full h-6 w-6 object-cover ml-2"
-                    src={alt || 'default-avatar.png'}
+                    src={'https://avatar.iran.liara.run/public'}
                     alt="Bot"
                   />
                 )}

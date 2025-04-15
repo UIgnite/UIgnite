@@ -33,12 +33,14 @@ const Accordion = ({
       {/* Accordion Header */}
       <div
         onClick={onToggle ?? toggleAccordion}
-        className="cursor-pointer bg-zinc-900 hover:bg-zinc-800 px-4 py-3 flex items-center justify-between transition-colors duration-300 "
+        className="cursor-pointer   bg-white hover:bg-neutral-200 dark:bg-zinc-900 dark:hover:bg-zinc-800  px-4 py-3 flex items-center justify-between transition-colors duration-300 "
       >
-        <span className="text-white font-medium  ">{title}</span>
+        <span className="text-black dark:text-white font-medium  ">
+          {title}
+        </span>
         <svg
           className={cn(
-            'transition-transform duration-300 transform',
+            'transition-transform duration-300 transform dark:text-white text-black',
             (isOpen ?? visible) ? 'rotate-180' : 'rotate-0'
           )}
           width="20"
@@ -59,10 +61,11 @@ const Accordion = ({
       {/* Accordion Content */}
       <div
         className={cn(
-          'transition-all duration-300 bg-zinc-800 px-4 text-white text-sm',
+          'transition-all duration-300  dark:bg-zinc-800 px-4 dark:text-white text-sm',
           (isOpen ?? visible)
             ? 'max-h-96 opacity-100 py-3'
-            : 'max-h-0 opacity-0 py-0 overflow-hidden'
+            : 'max-h-0 opacity-0 py-0 overflow-hidden',
+          className
         )}
       >
         {content}

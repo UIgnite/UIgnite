@@ -39,7 +39,7 @@ export default function Component() {
       <h1 id={currComponent.name} className="w-[90%] text-4xl font-semibold">
         {currComponent.name}
       </h1>
-      <div className="w-[90%] text-neutral-300">{currComponent.desc}</div>
+      <div className="w-[90%] dark:text-neutral-300">{currComponent.desc}</div>
 
       <Preview currComponent={codeStr} element={element} />
 

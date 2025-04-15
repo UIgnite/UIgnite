@@ -3,10 +3,12 @@
   "version": "0.0.1",
   "type": "module",
   "private": true,
+  "packageManager": "yarn@1.22.22",
   "scripts": {
     "dev": "concurrently --names \"docs\" --prefix-colors \"yellow\" \"yarn --cwd=website/docs dev\"",
     "format": "prettier . --write",
-    "build": "lerna run build --concurrency=1",
+    "i": "yarn; cd projects/uignite; yarn; yarn build; cd ../../website/docs; yarn; yarn build;",
+    "build": " lerna run build --concurrency=1",
     "clean": "rimraf ./packages/**/dist ./website/**/dist",
     "generate": "node ./scripts/generate.js"
   },

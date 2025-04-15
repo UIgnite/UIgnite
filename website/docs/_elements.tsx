@@ -33,25 +33,25 @@ const elements = [
     scope: {Accordion, AccordionWrapper},
     element: `
       <div className="relative z-10">
-                <AccordionWrapper>
-                  <Accordion
-                    title="What is MobiMart?"
-                    content="MobiMart is an e-commerce platform selling mobile gadgets like earbuds, phones, and speakers."
-                  />
-                  <Accordion
-                    title="How long does delivery take?"
-                    content="Typically 2-4 business days depending on your location."
-                  />
-                  <Accordion
-                    title="Can I return a product?"
-                    content="Yes, we have a 7-day easy return policy."
-                  />
-                  <Accordion
-                    title="How long does delivery take?"
-                    content="Typically 2-4 business days depending on your location."
-                  />
-                </AccordionWrapper>
-              </div>
+        <AccordionWrapper>
+          <Accordion
+            title="What is MobiMart?"
+            content="MobiMart is an e-commerce platform selling mobile gadgets like earbuds, phones, and speakers."
+          />
+          <Accordion
+            title="How long does delivery take?"
+            content="Typically 2-4 business days depending on your location."
+          />
+          <Accordion
+            title="Can I return a product?"
+            content="Yes, we have a 7-day easy return policy."
+          />
+          <Accordion
+            title="How long does delivery take?"
+            content="Typically 2-4 business days depending on your location."
+          />
+        </AccordionWrapper>
+      </div>
     `,
   },
   {
@@ -146,11 +146,13 @@ const elements = [
     id: 'dropdown',
     scope: {Dropdown},
     element: `
-      <Dropdown
-        label="Choose Option"
-        options={["Option 1", "Option 2", "Option 3"]}
-        onChange={(val) => console.log(val)}
-      />
+      <Dropdown  button={<div className=" bg-black p-2 px-4 text-gray-100  dark:bg-white dark:text-black rounded cursor-pointer">Menu</div>}   title="Options"
+      
+        >
+        <button className=" text-black px-4 py-2 text-left hover:bg-neutral-300 rounded">Profile</button>
+        <button className="text-black px-4 py-2 text-left hover:bg-neutral-300 rounded">Settings</button>
+        <button className="text-black px-4 py-2 text-left hover:bg-neutral-300 rounded">Logout</button>
+      </Dropdown> 
     `,
   },
   {

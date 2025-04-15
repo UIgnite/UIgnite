@@ -73,37 +73,25 @@ const Install = ({
 
   return (
     <div className=" min-w-[90%] flex flex-col">
-      <Tabs defaultVal="cli">
+      <Tabs className="mt-4 p-3 " defaultVal="cli">
         <TabList activeTab="">
-          <Tab
-            activeTab=""
-            setActiveTab={() => {}}
-            title="CLI"
-            value="cli"
-          ></Tab>
-          <Tab
-            activeTab=""
-            setActiveTab={() => {}}
-            title="Manual"
-            value="manual"
-          ></Tab>
+          <Tab title="CLI" value="cli"></Tab>
+          <Tab title="Manual" value="manual"></Tab>
         </TabList>
         <TabContent
-          activeTab=""
           content={
-            <Tabs defaultVal="cli">
-              <TabList activeTab="">
-                <Tab
-                  activeTab=""
-                  setActiveTab={() => {}}
-                  title="npm"
-                  value="cli"
-                ></Tab>
+            <Tabs
+              className="p-3 mt-4 border-[0.5px] dark:border-neutral-800 border-neutral-200"
+              defaultVal="cli"
+            >
+              <TabList>
+                <Tab title="npm" value="npm"></Tab>
+                <Tab title="yarn" value="yarn"></Tab>
               </TabList>
               <TabContent
                 activeTab="npm"
                 content={<CommandElement />}
-                value="cli"
+                value="npm"
               ></TabContent>
             </Tabs>
           }
