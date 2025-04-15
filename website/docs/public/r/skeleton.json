@@ -1,0 +1,12 @@
+{
+  "name": "skeleton",
+  "type": "registry:ui",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "packages/uignite/src/components/Skeleton/Skeleton.tsx",
+      "type": "registry:ui",
+      "content": "import {cn} from '@/utils/lib';\n\nexport interface SkeletonParams {\n  className?: string;\n}\nconst Skeleton = ({className}: SkeletonParams) => {\n  return (\n    <div\n      className={cn(`bg-gray-600 animate-pulse rounded-full ${className}`)}\n    ></div>\n  );\n};\n\nexport default Skeleton;\n"
+    }
+  ]
+}

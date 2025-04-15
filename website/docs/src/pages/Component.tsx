@@ -2,6 +2,7 @@ import {
   Accordion,
   AccordionWrapper,
   Avatar,
+  AvatarGroup,
   Button,
   MessageBot,
   NavMenu,
@@ -17,6 +18,20 @@ import {
 import Navbar from '../components/Navbar';
 import Resizable from '../components/Resizable';
 // import { DatePicker } from "@pkgs/uignite";
+
+// interface AvatarData {
+//   url: string;
+//   alt: string;
+// }
+
+// const  arr : AvatarData[] = [
+//   {url: "/avatars/myDp.webp",
+//   alt: "ram"
+//   },
+//   {url: "/avatars/myDp.webp",
+//     alt: "ram"
+//     },
+// ]
 
 const Components = () => {
   const toast = useToast(); // Correct placement
@@ -60,6 +75,13 @@ const Components = () => {
           Browse Components
         </Button>
         <NavMenu items={[]} />
+
+        <AvatarGroup
+          avatars={[
+            {url: './assets/avatars/myDp.webp', alt: 'ram'},
+            {url: './assets/avatars/myDp.webp', alt: 'ram'},
+          ]}
+        />
 
         <div className="flex items-center space-x-4 mt-8">
           <Skeleton className="h-12 w-12 rounded-full" />

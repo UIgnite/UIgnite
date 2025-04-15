@@ -12,4 +12,9 @@ export default defineConfig({
       '@pkgs': path.resolve(__dirname, '../../packages'),
     },
   },
+  server: {
+    allowedHosts: [
+      'a871-2409-40e4-1052-db0c-7468-1d4a-13a5-ed49.ngrok-free.app',
+    ],
+  },
 });
