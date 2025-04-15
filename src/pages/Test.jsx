@@ -11,8 +11,10 @@ import {
   CardFooter,
   CardTitle,
 } from "../components/Card";
+import AlertDialogBox from "../components/AlertDialog";
 
 export const Test = () => {
+
   return (
     <CustomTheme>
       <Navbar />
@@ -39,6 +41,15 @@ export const Test = () => {
             </Button>
           </div>
         </div>
+        
+        <div className="mt-4">
+        <AlertDialogBox
+  title="Are you absolutely sure?"
+  description="This action cannot be undone. This will permanently delete your account and remove your data from our servers."
+/>
+
+        </div>
+
         <div className="text-3xl mt-8 flex">Cards</div>
         <Card className=" mt-2">
           <CardHeader>
