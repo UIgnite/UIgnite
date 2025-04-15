@@ -120,6 +120,7 @@ export const Button = React.forwardRef<
           padding: '2px',
           borderRadius: '0.375rem',
           animation: '5s ease infinite',
+
         };
       }
       if (gradientBorder) {
