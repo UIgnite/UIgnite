@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {ReactElement} from 'react';
 import {cn} from '@/utils/lib';
+import {ChevronDown} from 'lucide-react';
 
 export interface AccordionParams {
   title: string;
@@ -26,36 +27,26 @@ const Accordion = ({
   return (
     <div
       className={cn(
-        'border border-zinc-700 rounded-xl mb-2 overflow-hidden',
+        'border-[0.5px] border-zinc-700/20 rounded-xl mt-[0.5px] overflow-hidden',
         className
       )}
     >
       {/* Accordion Header */}
+      {/* Bg color rendering inssue in switching modes  */}
       <div
         onClick={onToggle ?? toggleAccordion}
-        className="cursor-pointer   bg-white hover:bg-neutral-200 dark:bg-zinc-900 dark:hover:bg-zinc-800  px-4 py-3 flex items-center justify-between transition-colors duration-300 "
+        className="cursor-pointer dark:bg-zinc-900 dark:hover:bg-neutral-800   px-4 py-3 flex items-center justify-between  duration-300  "
       >
         <span className="text-black dark:text-white font-medium  ">
           {title}
         </span>
-        <svg
+
+        <ChevronDown
           className={cn(
-            'transition-transform duration-300 transform dark:text-white text-black',
+            'transition-transform duration-300 transform text-black dark:text-white mr-4 ',
             (isOpen ?? visible) ? 'rotate-180' : 'rotate-0'
           )}
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-        >
-          <path
-            d="M6 9l6 6 6-6"
-            stroke="#fff"
-            strokeWidth={2}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        />
       </div>
 
       {/* Accordion Content */}
@@ -64,8 +55,7 @@ const Accordion = ({
           'transition-all duration-300  dark:bg-zinc-800 px-4 dark:text-white text-sm',
           (isOpen ?? visible)
             ? 'max-h-96 opacity-100 py-3'
-            : 'max-h-0 opacity-0 py-0 overflow-hidden',
-          className
+            : 'max-h-0 opacity-0 py-0 overflow-hidden'
         )}
       >
         {content}
