@@ -11,7 +11,7 @@ import {Input} from '@pkgs/uignite';
 import {Skeleton} from '@pkgs/uignite';
 import {Testimonials} from '@pkgs/uignite';
 import Navbar from '../components/Navbar';
-import { GridBackground } from '../utils/GridBackground';
+import {GridBackground} from '../utils/GridBackground';
 
 const Home = () => {
   const [isCopied, setIsCopied] = useState(false);
@@ -112,14 +112,14 @@ const Home = () => {
     <CustomTheme>
       <Navbar />
       {/* Main Content */}
-      <GridBackground/>
-      <div className="flex justify-center items-center">
-        <div className=" max-w-[1200px] ">
-          <div className=" -mt-3 z-1 px-4 md:px-8  min-h-screen flex justify-center">
+      <GridBackground />
+      <div className="flex justify-center items-center mt-6">
+        <div className=" max-w-[1200px] w-full   px-4 sm:px-4 lg:px-4 ">
+          <div className="  z-1 px-4 md:px-8  min-h-screen flex justify-center">
             <div className="w-full max-w-6xl  flex items-center justify-center">
               <div className="text-center px-4">
-                <h1 className="text-2xl  sm:text-5xl md:text-6xl lg:text-[80px] font-heading font-semibold tracking-tight text-zinc-200 mb-6">
-                  <span className="!dark text-black dark:text-light-primary block -mb-2">
+                <h1 className="text-2xl  sm:text-5xl md:text-6xl lg:text-[60px] font-heading font-semibold tracking-tight text-zinc-200 mb-6">
+                  <span className="text-black dark:text-light-primary block -mb-2">
                     Less Tweaking
                   </span>
                   <span className="block relative py-2 bg-gradient-to-r from-blue-400 to-blue-700 text-transparent bg-clip-text">
@@ -140,7 +140,9 @@ const Home = () => {
                     Get Started
                   </Button>
                   <Button
-                    icon={!isCopied ? <Copy /> : <Check />}
+                    icon={
+                      !isCopied ? <Copy size="16px" /> : <Check size="16px" />
+                    }
                     onClick={() => handleCopy()}
                     className="bg-[#121212] dark:bg-[#000000] hover:bg-black/90 dark:hover:bg-black/50 text-white font-lg rounded-lg px-6 py-6 text-lg transition duration-300 shadow-md "
                     data-clipboard-text="npm i uginite"
@@ -149,7 +151,7 @@ const Home = () => {
                   </Button>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 p-4 mt-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 p-4 mt-6">
                   {features.map((feature, index) => (
                     <div
                       key={index}
