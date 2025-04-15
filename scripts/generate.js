@@ -46,16 +46,10 @@ async function writeComponentContent(path, content) {
         dependencies: element['dependencies'],
         files: fileData,
       };
-<<<<<<< HEAD
       fileData = []
       element['files'].forEach(async () => {
         await writeComponentContent(
           `./website/docs/public/r/${element['name']}.json`,
-=======
-      element['files'].forEach(async (_, idx) => {
-        await writeComponentContent(
-          `/website/docs/public/r/${element['name']}-${idx}.json`,
->>>>>>> c21d336a44b187b8952046e3afa4f1bc0596d5f3
           elementSchemaJson
         );
       });
