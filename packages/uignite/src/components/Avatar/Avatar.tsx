@@ -13,9 +13,12 @@ const Avatar = React.forwardRef<HTMLImageElement, AvatarProps>(
       <div className="flex gap-4 mt-2">
         <img
           ref={ref}
-          src={url}
+          src={url ? url : 'https://avatar.iran.liara.run/public'}
           alt={alt}
-          className={cn('rounded-full h-12 w-12 object-cover', className)}
+          className={cn(
+            'size-12 rounded-full border border-neutral-300',
+            className
+          )}
           {...props}
         />
       </div>

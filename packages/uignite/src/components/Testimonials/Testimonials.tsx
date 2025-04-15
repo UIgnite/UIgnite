@@ -22,14 +22,14 @@ const Testimonials: React.FC<TestimonialsProps> = ({
   return (
     <div
       className={cn(
-        `flex-shrink-0 w-88 h-60 m-4 flex flex-col gap-2 shadow-sm p-4 text-black grainy-light rounded-lg`,
+        `w-full max-w-sm sm:max-w-md md:max-w-lg m-4 flex flex-col gap-2 shadow-sm p-4 text-black grainy-light rounded-lg`,
         className
       )}
     >
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-4">
         <div className="flex gap-2 justify-center items-center">
           <img
-            src={imageSrc || '/default-avatar.png'}
+            src={imageSrc || 'https://avatar.iran.liara.run/public'}
             alt={name}
             className="w-10 h-10 rounded-full object-cover"
           />
@@ -53,7 +53,9 @@ const Testimonials: React.FC<TestimonialsProps> = ({
         </div>
       </div>
 
-      <p className="text-md mt-2 overflow-y-auto flex-grow">{message}</p>
+      <p className="text-base mt-2 overflow-y-auto scrollable-content">
+        {message}
+      </p>
     </div>
   );
 };
