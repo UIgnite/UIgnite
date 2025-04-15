@@ -2,7 +2,6 @@
   "name": "tooltip",
   "type": "registry:ui",
   "dependencies": [],
-  "registryDependencies": ["lib-cn"],
   "files": [
     {
       "path": "packages/uignite/src/components/Tooltip/Tooltip.tsx",

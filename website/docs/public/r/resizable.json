@@ -2,7 +2,6 @@
   "name": "resizable",
   "type": "registry:ui",
   "dependencies": [],
-  "registryDependencies": ["lib-cn"],
   "files": [
     {
       "path": "packages/uignite/src/components/Resizable/Resizable.tsx",

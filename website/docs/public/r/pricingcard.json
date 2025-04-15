@@ -2,7 +2,6 @@
   "name": "pricingcard",
   "type": "registry:ui",
   "dependencies": [],
-  "registryDependencies": ["lib-cn"],
   "files": [
     {
       "path": "packages/uignite/src/components/PricingCard/PricingCard.tsx",
