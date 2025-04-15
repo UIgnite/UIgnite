@@ -33,7 +33,7 @@ const Accordion = ({
       {/* Accordion Header */}
       <div
         onClick={onToggle ?? toggleAccordion}
-        className="cursor-pointer   bg-neutral-300 hover:bg-neutral-200 dark:bg-zinc-900 dark:hover:bg-zinc-800  px-4 py-3 flex items-center justify-between transition-colors duration-300 "
+        className="cursor-pointer   bg-white hover:bg-neutral-200 dark:bg-zinc-900 dark:hover:bg-zinc-800  px-4 py-3 flex items-center justify-between transition-colors duration-300 "
       >
         <span className="text-black dark:text-white font-medium  ">
           {title}
