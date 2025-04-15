@@ -8,11 +8,23 @@
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 
+
+
 @theme {
   --color-dark-primary: #0f0f0f;
   --color-dark-secondary: #222;
   --color-light-primary: #f7f7f7;
   --color-light-secondary: #f4f4f5;
+}
+
+@layer utilities {
+  .border-t-dark-primary {
+    border-top-color: var(--color-dark-primary);
+  }
+
+  .dark .border-t-light-primary {
+    border-top-color: var(--color-light-primary);
+  }
 }
 
 body {
@@ -160,3 +172,47 @@ body {
 .animate-scroll {
   animation: scroll 8s linear infinite;
 }
+
+@keyframes growShrink {
+
+  0%,
+  100% {
+    transform: scaleY(0.5);
+  }
+
+  50% {
+    transform: scaleY(1.5);
+  }
+}
+
+.animate-grow-shrink {
+  animation: growShrink 1s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.25;
+  }
+}
+
+.loader-line {
+  animation: fade 1.2s linear infinite;
+}
+
+
+.loader-circle {
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 9999px;
+  width: 2rem;
+  height: 2rem;
+  border-color: #d1d5db; 
+  border-top-color: #1d4ed8;
+  animation: spin 1s linear infinite;
+}
+
+

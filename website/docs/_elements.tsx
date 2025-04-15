@@ -25,6 +25,7 @@ import {
 import {Toast as ToastUi} from '@pkgs/uignite';
 import Footer from './src/components/Footer';
 import Navbar from './src/components/Navbar';
+import {Link} from 'react-router-dom';
 
 const elements = [
   {
@@ -102,8 +103,8 @@ const elements = [
             <Button variant="dark">dark</Button>
             <Button variant="light">light</Button>
             <Button variant="gradient">gradient</Button>
-            <Button animatedBorder>animatedBorder</Button>
-            <Button gradientBorder>gradientBorder</Button>
+            <Button animatedBorder>animated</Button>
+            <Button gradientBorder>gradBorder</Button>
             <Button className="animate-border text-white font-semibold px-6 py-3 rounded-xl">
               Hover Me
             </Button>
@@ -248,8 +249,11 @@ const elements = [
   },
   {
     id: 'pricingCard',
-    scope: {PricingCard},
-    element: `<PricingCard 
+    scope: {PricingCard,Link},
+    element: `
+    <>
+    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 px-4">
+    <PricingCard 
       title="Pro Plan"
       price="$29"
       validity="per month"
@@ -260,10 +264,32 @@ const elements = [
         "Access to premium templates",
         "Advanced analytics"
       ]}
-      highlighted={true}
+      highlighted={false}
       theme="dark"
-      popular={true}
-  />`,
+      popular={false}
+  />
+
+   <PricingCard 
+      title="Pro Plan"
+      price="$29"
+      validity="per month"
+      description="Get access to all features and premium support."
+      features={[
+        "Unlimited API requests",
+        "24/7 customer support",
+        "Access to premium templates",
+        "Advanced analytics"
+      ]}
+      highlighted={false}
+      theme="dracula"
+      popular={false}
+  />
+</div>
+<div className="ml-5 mt-5"> For the best experience, please view the <Link to="/pricing" className="text-blue-600 cursor-pointer">Pricing page</Link> on a larger screen.</div>
+</>
+  
+  
+  `,
   },
   {
     id: 'resizable',
@@ -278,12 +304,32 @@ const elements = [
   {
     id: 'skeleton',
     scope: {Skeleton},
-    element: `<Skeleton className="w-32 h-32" />`,
+    element: `
+      <div className="flex items-center space-x-4 ">
+          <Skeleton className="h-12 w-12 rounded-full" />
+          <div className="space-y-2">
+            <Skeleton className="h-4 w-[250px]" />
+            <Skeleton className="h-4 w-[200px]" />
+          </div>
+        </div>
+
+    `,
   },
   {
     id: 'spinner',
     scope: {Spinner},
-    element: `<Spinner className="h-12 w-12" />`,
+    element: `
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
+      <Spinner variant="bounce" className="my-4" />
+      <Spinner variant="bars" className="my-4" />
+      <Spinner variant="circular" className="my-4" />
+      <Spinner variant="ripple" className="my-4" />
+      <Spinner variant="terminal" className="my-4" />
+      <Spinner variant="loader" className="my-4" />
+  </div>
+
+           
+    `,
   },
   // {
   //   id: "switch",

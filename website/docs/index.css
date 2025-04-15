@@ -160,3 +160,21 @@ body {
 .animate-scroll {
   animation: scroll 8s linear infinite;
 }
+
+.animate-grow-shrink {
+  animation: growShrink 1s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.25;
+  }
+}
+
+.loader-line {
+  animation: fade 1.2s linear infinite;
+}
