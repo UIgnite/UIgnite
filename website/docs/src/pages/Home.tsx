@@ -12,6 +12,7 @@ import {Skeleton} from '@pkgs/uignite';
 import {Testimonials} from '@pkgs/uignite';
 import Navbar from '../components/Navbar';
 import {GridBackground} from '../utils/GridBackground';
+import {GridBackground} from '../utils/GridBackground';
 
 const Home = () => {
   const [isCopied, setIsCopied] = useState(false);

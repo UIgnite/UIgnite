@@ -21,7 +21,13 @@ const MessageBot = ({
   const [input, setInput] = useState('');
   const [count, setCount] = useState(1);
   // messages will be array of objects and objects should have a sender and the text
-  const [messages, setMessages] = useState<Message[]>([]);
+
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      text: `Hi I am ${orgName} bot. How can I help you?`,
+      sender: 'bot',
+    },
+  ]);
   const sendMessage = () => {
     if (!input.trim()) return;
 
@@ -47,7 +53,7 @@ const MessageBot = ({
     <>
       <div className=" fixed bottom-5 right-5">
         <button
-          className={`cursor-pointer w-16 h-16 ${themeColor} text-white rounded-full shadow-lg flex items-center justify-center text-2xl`}
+          className={` cursor-pointer w-16 h-16  text-white rounded-full shadow-lg flex items-center justify-center text-2xl  `}
           onClick={() => setIsOpen(!isOpen)}
         >
           💬

@@ -51,7 +51,7 @@ export function GridBackground() {
       draw() {
         if (!ctx) return;
         ctx.fillStyle = isDark
-          ? 'rgba(59, 130, 246, 1)'
+          ? 'rgba(59, 130, 246, 0.1)'
           : 'rgba(59, 130, 246, 0.1)';
         ctx.fillRect(this.x, this.y, this.size, this.size);
       }
