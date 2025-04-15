@@ -8,6 +8,7 @@
     "dev": "concurrently --names \"docs\" --prefix-colors \"yellow\" \"yarn --cwd=website/docs dev\"",
     "format": "prettier . --write",
     "i": "yarn; cd projects/uignite; yarn; yarn build; cd ../../website/docs; yarn; yarn build;",
+    "build": " lerna run build --concurrency=1",
     "clean": "rimraf ./packages/**/dist ./website/**/dist",
     "generate": "node ./scripts/generate.js"
   },
