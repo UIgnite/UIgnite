@@ -17,7 +17,7 @@ const TableOfContents = () => {
           <div key={index} className="m-2">
             <a
               href={`#${heading.id}`}
-              className="text-gray-400 hover:text-white"
+              className="hover:text-black text-neutral-600 dark:text-gray-400 dark:hover:text-white"
             >
               <div className="  pl-2">{heading.innerText}</div>
             </a>

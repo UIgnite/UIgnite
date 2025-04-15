@@ -69,15 +69,15 @@ const MessageBot = ({
         <div className="z-[1000] fixed bottom-[6.5rem] right-8 w-80 h-[32rem] bg-white rounded-lg shadow-2xl flex flex-col overflow-hidden">
           {/* Header */}
           <div
-            className={`p-4 ${themeColor} text-white text-left items-center`}
+            className={`p-4 ${themeColor} text-white flex justify-between items-center`}
           >
+            <span className="text-lg font-semibold">{orgName}</span>
             <button
               className="p-1 rounded-full hover:bg-white hover:text-black transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             >
-              <img src="/assets/logo.webp" alt="Close" className="w-6 h-6" />
+              <img src="/assets/logo.webp" alt="Close" className="w-5 h-5" />
             </button>
-            <span className="text-lg font-semibold">{orgName}</span>
           </div>
 
           {/* Messages */}
