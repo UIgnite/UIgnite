@@ -1,0 +1,12 @@
+{
+  "name": "textarea",
+  "type": "registry:ui",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "packages/uignite/src/components/TextArea/TextArea.tsx",
+      "type": "registry:ui",
+      "content": "import React from 'react';\nimport {cn} from '@/utils/lib';\n\nexport interface TextareaProps\n  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}\n\nexport const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(\n  ({className, ...props}, ref) => {\n    return (\n      <textarea\n        ref={ref}\n        className={cn(\n          'flex min-h-[80px] w-full rounded-xl border border-gray-700 bg-gray-800 px-4 py-3 text-sm text-white placeholder:text-gray-400 shadow-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 disabled:opacity-50 disabled:cursor-not-allowed',\n          className\n        )}\n        {...props}\n      />\n    );\n  }\n);\n\nTextarea.displayName = 'Textarea';\n"
+    }
+  ]
+}

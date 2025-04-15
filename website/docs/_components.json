@@ -1,0 +1,1028 @@
+[
+  {
+    "id": "Accordion",
+    "name": "Accordion",
+    "desc": "An interactive and accessible Accordion component with optional control, built with React. Expand content like FAQs, collapsible menus, or dramatic reveals. 🎭",
+    "path": "/components/Accordion.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Install dependencies",
+        "codeBlock": "npm i clsx cn lucid",
+        "path": "/components/Accordion.tsx"
+      },
+      {
+        "title": "Copy the code",
+        "codeBlock": "",
+        "path": "/utils/lib.ts"
+      },
+      {
+        "title": "Tailwind setup",
+        "codeBlock": "npm i clsx tailwind-merge lucid",
+        "path": "/tailwind.config.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "title",
+        "type": "string",
+        "desc": "The clickable header text for the accordion. Keep it catchy.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "content",
+        "type": "ReactNode",
+        "desc": "The content inside the accordion that expands or collapses.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "className",
+        "type": "string",
+        "desc": "Optional additional class names for styling the wrapper.",
+        "defaultValue": "\"\""
+      },
+      {
+        "prop": "defaultOpen",
+        "type": "boolean",
+        "desc": "If true, the accordion will be open by default on mount.",
+        "defaultValue": "false"
+      },
+      {
+        "prop": "open",
+        "type": "boolean",
+        "desc": "(Controlled) Determines whether the accordion is open.",
+        "defaultValue": "false"
+      },
+      {
+        "prop": "isOpen",
+        "type": "boolean",
+        "desc": "Internal flag (used with AccordionWrapper) to manage open state for grouped accordions.",
+        "defaultValue": "null"
+      },
+      {
+        "prop": "onToggle",
+        "type": "function",
+        "desc": "Callback triggered when the accordion is toggled.",
+        "defaultValue": "undefined"
+      }
+    ]
+  },
+  {
+    "id": "Avatar",
+    "name": "Avatar",
+    "desc": "A minimal, aesthetic Avatar component to show off user profile pics in a rounded and responsive way. Plug it anywhere — chat apps, dashboards, or comment sections.",
+    "path": "/components/Avatar.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Install dependencies",
+        "codeBlock": "",
+        "path": "/components/Avatar.tsx"
+      },
+      {
+        "title": "Copy the code",
+        "codeBlock": "",
+        "path": "/utils/lib.ts"
+      },
+      {
+        "title": "Tailwind setup",
+        "codeBlock": "",
+        "path": "/tailwind.config.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "url",
+        "type": "string",
+        "desc": "The image URL for the avatar. Make sure it’s a valid link or your users go faceless. 🥲",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "alt",
+        "type": "string",
+        "desc": "Alternative text for the image. Accessibility matters. ♿",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "className",
+        "type": "string",
+        "desc": "Extra Tailwind classes to style or resize the avatar your way.",
+        "defaultValue": "\"\""
+      }
+    ]
+  },
+  {
+    "id": "Button",
+    "name": "Button",
+    "desc": "A powerful, stylish, and customizable button component with support for animations, gradients, and full Tailwind-powered flexibility. Perfect for when you wanna flex your UI 🔥",
+    "path": "/components/Button.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Install dependencies",
+        "codeBlock": "",
+        "path": "/components/Button.tsx"
+      },
+      {
+        "title": "Copy the code",
+        "codeBlock": "",
+        "path": "/utils/lib.ts"
+      },
+      {
+        "title": "Tailwind setup",
+        "codeBlock": "",
+        "path": "/tailwind.config.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "children",
+        "type": "ReactNode",
+        "desc": "Anything you wanna put inside the button. Text, emoji, whatever makes it ✨click✨.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "variant",
+        "type": "\"primary\" | \"destructive\" | \"success\" | \"warning\" | \"outline\" | \"secondary\" | \"ghost\" | \"glass\" | \"gradient\" | \"dark\" | \"light\" | \"movingBorder\"",
+        "desc": "Defines the button’s vibe — choose your mood.",
+        "defaultValue": "\"primary\""
+      },
+      {
+        "prop": "size",
+        "type": "\"default\" | \"sm\" | \"lg\" | \"xl\" | \"icon\"",
+        "desc": "Size control. Want a chunky button or something cute and compact?",
+        "defaultValue": "\"default\""
+      },
+      {
+        "prop": "fullWidth",
+        "type": "boolean",
+        "desc": "Make the button stretch across the full width of its container.",
+        "defaultValue": "false"
+      },
+      {
+        "prop": "responsiveSize",
+        "type": "\"auto\" | \"compact\" | \"expand\"",
+        "desc": "Auto-scales size based on screen size. Ideal for making your UI mobile-friendly without sweating.",
+        "defaultValue": "null"
+      },
+      {
+        "prop": "isLoading",
+        "type": "boolean",
+        "desc": "Add a loading spinner inside the button. Because sometimes patience is a UX feature.",
+        "defaultValue": "false"
+      },
+      {
+        "prop": "icon",
+        "type": "ReactNode",
+        "desc": "Add an icon before the text. Works great with @tabler/icons-react or any SVG.",
+        "defaultValue": "null"
+      },
+      {
+        "prop": "animatedBorder",
+        "type": "boolean",
+        "desc": "Adds a colorful animated border. Looks like a vibe, works like a CTA. 🚀",
+        "defaultValue": "false"
+      },
+      {
+        "prop": "gradientBorder",
+        "type": "boolean",
+        "desc": "Wraps the button in a cool gradient border. Static version of animatedBorder.",
+        "defaultValue": "false"
+      },
+      {
+        "prop": "className",
+        "type": "string",
+        "desc": "Tailwind classes to customize styling even more.",
+        "defaultValue": "\"\""
+      }
+    ]
+  },
+  {
+    "id": "DatePicker",
+    "name": "DatePicker",
+    "desc": "A minimal date picker with light/dark support, year selection, and a clean calendar UI. Designed for modern dashboards and forms where UX vibes matter.",
+    "path": "/components/DatePicker.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Install dependencies",
+        "codeBlock": "npm i lucide-react",
+        "path": "/components/DatePicker.tsx"
+      },
+      {
+        "title": "Copy the code",
+        "codeBlock": "",
+        "path": "/utils/lib.ts"
+      },
+      {
+        "title": "Tailwind setup",
+        "codeBlock": "",
+        "path": "/tailwind.config.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "className",
+        "type": "string",
+        "desc": "Extra Tailwind classes for outer wrapper. Use this to align/position with your layout.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "value",
+        "type": "Date",
+        "desc": "The currently selected date. Controlled via parent.",
+        "defaultValue": "null"
+      },
+      {
+        "prop": "onChange",
+        "type": "function",
+        "desc": "Callback when a date is selected. Gets passed a Date object.",
+        "defaultValue": "() => {}"
+      },
+      {
+        "prop": "placeholder",
+        "type": "string",
+        "desc": "Placeholder text when no date is selected.",
+        "defaultValue": "\"Select date...\""
+      },
+      {
+        "prop": "darkMode",
+        "type": "boolean",
+        "desc": "Toggles dark mode styles for the input and calendar.",
+        "defaultValue": "false"
+      }
+    ]
+  },
+  {
+    "id": "Dropdown",
+    "name": "Dropdown",
+    "desc": "A sleek, no-jank Dropdown component. Tap to toggle, sprinkle your actions or menus inside. Renders a floating panel near the trigger with automatic layering.",
+    "path": "/components/Dropdown.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Install dependencies",
+        "codeBlock": "npm i clsx tailwind-merge",
+        "path": "/components/Dropdown.tsx"
+      },
+      {
+        "title": "Add Button component",
+        "codeBlock": "",
+        "path": "/components/Button.tsx"
+      },
+      {
+        "title": "Tailwind setup",
+        "codeBlock": "",
+        "path": "/tailwind.config.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "title",
+        "type": "string",
+        "desc": "Fallback text for the trigger button if no `button` prop is passed.",
+        "defaultValue": "\"Open\""
+      },
+      {
+        "prop": "button",
+        "type": "ReactNode",
+        "desc": "Custom JSX element for the dropdown trigger. Go wild or keep it minimal.",
+        "defaultValue": "null"
+      },
+      {
+        "prop": "children",
+        "type": "ReactNode",
+        "desc": "The dropdown content. Add buttons, links, filters, vibes — whatever you want inside.",
+        "defaultValue": "—"
+      }
+    ]
+  },
+  {
+    "id": "Footer",
+    "name": "Footer",
+    "desc": "A clean, modern footer component with logo, links, socials, and copyright. Dark-mode ready, responsive, and vibey. Add your brand sauce and you're good to go.",
+    "path": "/components/Footer.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Install dependencies",
+        "codeBlock": "npm i react-icons",
+        "path": "/components/Footer.tsx"
+      },
+      {
+        "title": "Add Tailwind to your project",
+        "codeBlock": "",
+        "path": "/tailwind.config.ts"
+      },
+      {
+        "title": "Optional dark mode setup",
+        "codeBlock": "",
+        "path": "/tailwind.config.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "lightLogo",
+        "type": "string (URL)",
+        "desc": "Image URL for the logo used in light mode. Keep it brand-relevant and aesthetic.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "darkLogo",
+        "type": "string (URL)",
+        "desc": "Logo URL for dark mode. Automatically swaps when `dark` class is active.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "description",
+        "type": "string",
+        "desc": "Short brand blurb or tagline that goes under the logo. Emojis welcome 👀",
+        "defaultValue": "\"\""
+      },
+      {
+        "prop": "socials",
+        "type": "Array<{ type: 'linkedin' | 'twitter' | 'instagram' | 'youtube', link: string }>",
+        "desc": "List of social icons to display. Icons come auto-packed via `react-icons`. Just pass the type and link.",
+        "defaultValue": "[]"
+      },
+      {
+        "prop": "sections",
+        "type": "Array<{ title: string, links: { label: string, href: string }[] }>",
+        "desc": "Footer link sections. Think: 'Product', 'Company', 'Support', etc. Label & link your way.",
+        "defaultValue": "[]"
+      },
+      {
+        "prop": "copyright",
+        "type": "string",
+        "desc": "Custom copyright text. Add your ©, year, company name, or some quirky message.",
+        "defaultValue": "—"
+      }
+    ]
+  },
+  {
+    "id": "Input",
+    "name": "Input",
+    "desc": "Aesthetic, minimal, and totally customizable input field for forms. Focus-ring? Yup. Dark mode? Of course. Fully vibing with Tailwind.",
+    "path": "/components/Input.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Add Tailwind & utils",
+        "codeBlock": "npm i clsx tailwind-merge",
+        "path": "/lib/utils.ts"
+      },
+      {
+        "title": "Set up Tailwind theme",
+        "codeBlock": "",
+        "path": "/tailwind.config.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "type",
+        "type": "string",
+        "desc": "HTML input type like 'text', 'email', 'password', etc. Keep it classic or go wild.",
+        "defaultValue": "\"text\""
+      },
+      {
+        "prop": "className",
+        "type": "string",
+        "desc": "Optional custom styles to override or extend default Tailwind classes.",
+        "defaultValue": "\"\""
+      },
+      {
+        "prop": "...props",
+        "type": "any",
+        "desc": "All native input props are supported. Bring your placeholder, value, onChange, whatever.",
+        "defaultValue": "—"
+      }
+    ]
+  },
+  {
+    "id": "MessageBot",
+    "name": "MessageBot",
+    "desc": "A sleek lil’ floating chatbot that talks back. Perfect for support, onboarding, or just showing off that ✨interactive ✨ flair.",
+    "path": "/components/MessageBot.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Set up chatbot component",
+        "codeBlock": "import MessageBot from '@/components/MessageBot';",
+        "path": "/components/MessageBot.tsx"
+      },
+      {
+        "title": "Customize your avatar and branding",
+        "codeBlock": "// pass your logo/avatar URLs and org name as props",
+        "path": "/pages/index.tsx"
+      }
+    ],
+    "props": [
+      {
+        "prop": "orgName",
+        "type": "string",
+        "desc": "The name displayed on top of the chatbot. Keeps it branded.",
+        "defaultValue": "\"UIgnite\""
+      },
+      {
+        "prop": "themeColor",
+        "type": "string",
+        "desc": "Tailwind class for primary color. Controls button and header theme.",
+        "defaultValue": "\"bg-gray-800\""
+      },
+      {
+        "prop": "url",
+        "type": "string",
+        "desc": "Image URL for the **user** avatar.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "alt",
+        "type": "string",
+        "desc": "Image URL for the **bot** avatar (can be same or different from user).",
+        "defaultValue": "—"
+      }
+    ]
+  },
+  {
+    "id": "Navbar",
+    "name": "Navbar",
+    "desc": "A sticky top navigation bar that supports theme toggling, responsive design, dynamic nav links, and GitHub integration. Fully vibe-checked for light & dark modes.",
+    "path": "/components/Navbar.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Import the Navbar",
+        "codeBlock": "import Navbar from '@/components/Navbar';",
+        "path": "/components/Navbar.tsx"
+      },
+      {
+        "title": "Set up theme context (required)",
+        "codeBlock": "// Ensure useTheme is implemented for toggleTheme functionality",
+        "path": "/hooks/theme.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "lightLogo",
+        "type": "string",
+        "desc": "Image path for light mode logo.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "darkLogo",
+        "type": "string",
+        "desc": "Image path for dark mode logo.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "lightGithub",
+        "type": "string",
+        "desc": "GitHub icon for light mode.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "darkGithub",
+        "type": "string",
+        "desc": "GitHub icon for dark mode.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "lightThemeIcon",
+        "type": "string",
+        "desc": "Icon for switching to light mode.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "darkThemeIcon",
+        "type": "string",
+        "desc": "Icon for switching to dark mode.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "navLinks",
+        "type": "array",
+        "desc": "Array of navigation links. Each item must have `label` and `href`.",
+        "defaultValue": "[]"
+      }
+    ]
+  },
+  {
+    "id": "NavMenu",
+    "name": "NavMenu",
+    "desc": "A center-aligned nav menu with dropdowns for each section. Smooth transitions, Tailwind styled, and fully customizable. Dropdowns appear on hover with a polished glow effect.",
+    "path": "/components/NavMenu.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Import NavMenu",
+        "codeBlock": "import NavMenu from '@/components/NavMenu';",
+        "path": "/components/NavMenu.tsx"
+      }
+    ],
+    "props": [
+      {
+        "prop": "Dropdown",
+        "type": "component",
+        "desc": "Internal component that receives and displays dropdown `content` for each menu item.",
+        "defaultValue": "—"
+      }
+    ]
+  },
+  {
+    "id": "Preview",
+    "name": "Preview",
+    "desc": "",
+    "path": "/components/Textarea.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Install dependencies",
+        "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
+        "path": "/components/Textarea.tsx"
+      },
+      {
+        "title": "Copy the code",
+        "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
+        "path": "/components/Textarea.tsx"
+      },
+      {
+        "title": "Install dependencies",
+        "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
+        "path": "/components/Textarea.tsx"
+      }
+    ],
+    "props": [
+      {
+        "prop": "",
+        "type": "",
+        "desc": "",
+        "defaultValue": ""
+      },
+      {
+        "prop": "",
+        "type": "",
+        "desc": "",
+        "defaultValue": ""
+      }
+    ]
+  },
+  {
+    "id": "PricingCard",
+    "name": "PricingCard",
+    "desc": "Flexible pricing card with theme-based styling, animated hover effects, and support for highlighting popular plans. Includes theme toggle via ThemeSelector.",
+    "path": "/components/PricingCard.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Import PricingCard and ThemeSelector",
+        "codeBlock": "import { PricingCard, ThemeSelector } from '@/components/PricingCard';",
+        "path": "/components/PricingCard.tsx"
+      },
+      {
+        "title": "Import theme styles",
+        "codeBlock": "import { themes } from '@/utils/theme';",
+        "path": "/utils/theme.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "title",
+        "type": "string",
+        "desc": "Plan title (e.g., Starter, Pro, Unlimited)",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "price",
+        "type": "string",
+        "desc": "Price of the plan (e.g., ₹499)",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "validity",
+        "type": "string",
+        "desc": "Duration label next to price (e.g., /month, /year)",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "description",
+        "type": "string",
+        "desc": "Short text describing the plan's focus or value.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "features",
+        "type": "string[]",
+        "desc": "List of features offered in the plan.",
+        "defaultValue": "[]"
+      },
+      {
+        "prop": "highlighted",
+        "type": "boolean",
+        "desc": "Apply gradient and emphasize the card visually.",
+        "defaultValue": "false"
+      },
+      {
+        "prop": "popular",
+        "type": "boolean",
+        "desc": "Shows 'Most Popular' badge on top of the card.",
+        "defaultValue": "false"
+      },
+      {
+        "prop": "theme",
+        "type": "string",
+        "desc": "Key from `themes` object to determine card styling.",
+        "defaultValue": "\"default\""
+      }
+    ]
+  },
+  {
+    "id": "Resizable",
+    "name": "Resizable",
+    "desc": "A flexible container splitter that allows users to resize two panes horizontally or vertically by dragging a divider.",
+    "path": "/components/Resizable.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Import the Resizable component",
+        "codeBlock": "import Resizable from '@/components/Resizable';",
+        "path": "/components/Resizable.tsx"
+      },
+      {
+        "title": "Optional: Utility class merge",
+        "codeBlock": "import { cn } from '@/utils/lib';",
+        "path": "/utils/lib.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "className",
+        "type": "string",
+        "desc": "Additional Tailwind classes for the outermost container.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "children",
+        "type": "[ReactNode, ReactNode]",
+        "desc": "Two children: the left/top pane and right/bottom pane.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "defaultPosition",
+        "type": "number",
+        "desc": "Initial position of the divider in pixels (overrides default).",
+        "defaultValue": "window.innerWidth / 5 or window.innerHeight - (1/3)"
+      },
+      {
+        "prop": "horizontal",
+        "type": "boolean",
+        "desc": "If true, divider is horizontal (top/bottom split). Else, it's vertical (left/right split).",
+        "defaultValue": "false"
+      }
+    ]
+  },
+  {
+    "id": "Skeleton",
+    "name": "Skeleton",
+    "desc": "A simple animated placeholder component used to indicate loading UI blocks.",
+    "path": "/components/Skeleton.tsx",
+    "installation": [
+      {
+        "title": "Import Skeleton",
+        "codeBlock": "import Skeleton from '@/components/Skeleton';",
+        "path": "/components/Skeleton.tsx"
+      },
+      {
+        "title": "Import Skeleton",
+        "codeBlock": "import Skeleton from '@/components/Skeleton';",
+        "path": "/components/Skeleton.tsx"
+      }
+    ],
+    "props": [
+      {
+        "prop": "className",
+        "type": "string",
+        "desc": "Tailwind utility classes for shape, size, spacing etc.",
+        "defaultValue": "\"rounded-full w-6 h-6\""
+      }
+    ]
+  },
+  {
+    "id": "Spinner",
+    "name": "Spinner",
+    "desc": "A minimalist 3-dot loading spinner that adapts to light and dark themes using the theme context. Smooth bounce animation included.",
+    "path": "/components/Spinner.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Import the Spinner",
+        "codeBlock": "import { Spinner } from '@/components/Spinner';",
+        "path": "/components/Spinner.tsx"
+      },
+      {
+        "title": "Ensure theme hook is present",
+        "codeBlock": "// Spinner depends on useTheme to switch dot color\nimport { useTheme } from '@/hooks/theme';",
+        "path": "/hooks/theme.ts"
+      },
+      {
+        "title": "Ensure `cn` utility is available",
+        "codeBlock": "",
+        "path": "/utils/lib.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "className",
+        "type": "string",
+        "desc": "Optional utility classes to control layout, spacing, or positioning.",
+        "defaultValue": "\"\""
+      }
+    ]
+  },
+  {
+    "id": "Switch",
+    "name": "Switch",
+    "desc": "A sleek lil' toggle — like a light switch but for devs. ✨ Great for toggling themes, states, or anything boolean.",
+    "path": "/components/Switch.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Import the component",
+        "codeBlock": "import Switch from '@/components/Switch';",
+        "path": "/components/Switch.tsx"
+      },
+      {
+        "title": "Use in your component",
+        "codeBlock": "<Switch defaultState={true} />",
+        "path": "/pages/index.tsx"
+      }
+    ],
+    "props": [
+      {
+        "prop": "defaultState",
+        "type": "boolean",
+        "desc": "Controls the initial position of the switch. `true` = ON.",
+        "defaultValue": "false"
+      }
+    ]
+  },
+  {
+    "id": "Tabs",
+    "name": "Tabs",
+    "desc": "Modular tab system that's minimal, accessible, and vibes with your theme. Say goodbye to tab chaos and hello to ✨ slick switching.",
+    "path": "/components/Tabs.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Install utils",
+        "codeBlock": "npm i clsx tailwind-merge",
+        "path": "/utils/lib.ts"
+      },
+      {
+        "title": "Wrap Tabs in context",
+        "codeBlock": "",
+        "path": "/components/Tabs.tsx"
+      },
+      {
+        "title": "Wrap Tabs in context",
+        "codeBlock": "",
+        "path": "/components/Tabs.tsx"
+      }
+    ],
+    "props": [
+      {
+        "prop": "Tabs",
+        "type": "React component",
+        "desc": "The outer shell managing tab state. Like your friendly neighborhood tab controller.",
+        "defaultValue": "defaultVal = 'preview'"
+      },
+      {
+        "prop": "TabList",
+        "type": "React component",
+        "desc": "Holds all your `<Tab />` buttons in one line. Basically the navigation bar of tabs.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "Tab",
+        "type": "React component",
+        "desc": "The clickable tab itself. Pass in `value` (the ID of the tab) and `title` (what users see).",
+        "defaultValue": "\"Here is the Title\""
+      },
+      {
+        "prop": "TabContent",
+        "type": "React component",
+        "desc": "Renders content based on the currently active tab. Only one shows at a time. Magic.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "className",
+        "type": "string",
+        "desc": "Customize vibes with Tailwind utility classes. Use it on Tabs, TabList, or Tab.",
+        "defaultValue": "\"\""
+      }
+    ]
+  },
+  {
+    "id": "Testimonials",
+    "name": "Testimonials",
+    "desc": "Drop the ✨receipts✨ with this sleek testimonial card. Profile pic? Check. Star ratings? Of course. Perfect for showing love from users, clients, or fans.",
+    "path": "/components/Testimonials.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Install Lucide for icons",
+        "codeBlock": "npm i lucide-react",
+        "path": "/components/Testimonials.tsx"
+      }
+    ],
+    "props": [
+      {
+        "prop": "imageSrc",
+        "type": "string",
+        "desc": "URL of the user's photo. Defaults to a placeholder if not provided. We love Hitesh sir, but you can change it 😅.",
+        "defaultValue": "\"hitesh-sir.png\""
+      },
+      {
+        "prop": "name",
+        "type": "string",
+        "desc": "Name of the person giving the testimonial. Show who's hyping you up.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "title",
+        "type": "string",
+        "desc": "Their role or position—like 'Web Dev at Google' or 'Your biggest fan'.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "rating",
+        "type": "number (1-5)",
+        "desc": "How many stars they gave you. Defaults to 5 (because you’re that good).",
+        "defaultValue": "5"
+      },
+      {
+        "prop": "message",
+        "type": "string",
+        "desc": "The actual testimonial message. Can be deep, sweet, or straight fire.",
+        "defaultValue": "—"
+      }
+    ]
+  },
+  {
+    "id": "Textarea",
+    "name": "Textarea",
+    "desc": "For when you've got more to say 📝 — A dark-mode ready, fully styled textarea component. Clean, smooth, and focus-ring fresh.",
+    "path": "/components/TextArea.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Add Tailwind & utils",
+        "codeBlock": "npm i clsx tailwind-merge",
+        "path": "/lib/utils.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "className",
+        "type": "string",
+        "desc": "Add your own Tailwind or custom styles if you're feelin' fancy.",
+        "defaultValue": "\"\""
+      },
+      {
+        "prop": "...props",
+        "type": "any",
+        "desc": "Standard textarea props — placeholder, onChange, value, disabled, etc. Bring your own flavor.",
+        "defaultValue": "—"
+      }
+    ]
+  },
+  {
+    "id": "ToastUi",
+    "name": "Toast Notification",
+    "desc": "Minimal toast component that slides in with ✨ style. Stacks like pancakes. Looks clean in dark & light mode. Fully customizable with classNames.",
+    "path": "/components/Toast.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Add utility support",
+        "codeBlock": "npm i clsx tailwind-merge",
+        "path": "/utils/lib.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "idx",
+        "type": "number",
+        "desc": "Index of the toast (used to dynamically space stacked toasts).",
+        "defaultValue": "0"
+      },
+      {
+        "prop": "title",
+        "type": "string",
+        "desc": "Main text shown in the toast. Keep it snappy.",
+        "defaultValue": "\"\""
+      },
+      {
+        "prop": "options",
+        "type": "object",
+        "desc": "Customization options (containerClassName, titleClassName, desc, descClassName).",
+        "defaultValue": "{}"
+      },
+      {
+        "prop": "hovered",
+        "type": "boolean",
+        "desc": "Enables hover animation with expanded spacing & scale. Fancy mode ON.",
+        "defaultValue": "false"
+      }
+    ]
+  },
+  {
+    "id": "Tooltip",
+    "name": "Tooltip",
+    "desc": "Hoverable tooltip for quick hints, labels, or sass. Comes with delay and styling props. Smooth fade. Works well with icons, buttons, or anything inline.",
+    "path": "/components/Tooltip.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Utility support",
+        "codeBlock": "npm i clsx tailwind-merge",
+        "path": "/utils/lib.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "children",
+        "type": "ReactNode",
+        "desc": "Any component or element that should show the tooltip on hover.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "title",
+        "type": "string",
+        "desc": "Tooltip content. Keep it short or it’ll get trimmed.",
+        "defaultValue": "\"\""
+      },
+      {
+        "prop": "options.delay",
+        "type": "number",
+        "desc": "Delay (in ms) before tooltip appears/disappears.",
+        "defaultValue": "300"
+      },
+      {
+        "prop": "options.containerClassName",
+        "type": "string",
+        "desc": "Optional class for the outer wrapper.",
+        "defaultValue": "\"\""
+      },
+      {
+        "prop": "options.tooltipClassName",
+        "type": "string",
+        "desc": "Extra classes to style the tooltip itself.",
+        "defaultValue": "\"\""
+      },
+      {
+        "prop": "options.tooltipStyle",
+        "type": "object",
+        "desc": "Inline styles (JS object) to override tooltip positioning or design.",
+        "defaultValue": "{}"
+      }
+    ]
+  },
+  {
+    "id": "VideoPlayer",
+    "name": "VideoPlayer",
+    "desc": "",
+    "path": "/components/Testimonials.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Install dependencies",
+        "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
+        "path": "/components/Textarea.tsx"
+      },
+      {
+        "title": "Copy the code",
+        "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
+        "path": "/components/Textarea.tsx"
+      },
+      {
+        "title": "Install dependencies",
+        "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
+        "path": "/components/Textarea.tsx"
+      }
+    ],
+    "props": [
+      {
+        "prop": "",
+        "type": "",
+        "desc": "",
+        "defaultValue": ""
+      },
+      {
+        "prop": "",
+        "type": "",
+        "desc": "",
+        "defaultValue": ""
+      }
+    ]
+  }
+]

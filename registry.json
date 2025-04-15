@@ -1,0 +1,312 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "uignite",
+  "homepage": "https://r.uignite.in",
+  "items": [
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/Accordion/Accordion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/Avatar/Avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatargroup",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/AvatarGroup/AvatarGroup.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/Button/Button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/Card/Card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "carosuel",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/Carosuel/Carosuel.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/Dropdown/Dropdown.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/Footer/Footer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/Input/Input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "messagebot",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/MessageBot/MessageBot.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "navbar",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/Navbar/Navbar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "navmenu",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/NavMenu/NavMenu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pricingcard",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/PricingCard/PricingCard.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "resizable",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/Resizable/Resizable.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "signin",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/SignIn/SignIn.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "signup",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/SignUp/SignUp.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/Skeleton/Skeleton.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/Spinner/Spinner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/Tabs/Tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "testimonials",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/Testimonials/Testimonials.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/TextArea/TextArea.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/Toast/Toast.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/Tooltip/Tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "videoplayer",
+      "type": "registry:ui",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/VideoPlayer/VideoPlayer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toasthook",
+      "type": "registry:hook",
+      "dependencies": [],
+      "registryDependencies": ["toast"],
+      "files": [
+        {
+          "path": "packages/uignite/src/hooks/toast.tsx",
+          "type": "registry:hook"
+        }
+      ]
+    },
+    {
+      "name": "themehook",
+      "type": "registry:hook",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/hooks/theme.tsx",
+          "type": "registry:hook"
+        }
+      ]
+    },
+    {
+      "name": "lib-cn",
+      "type": "registry:lib",
+      "dependencies": [
+        "tailwind-merge",
+        "clsx",
+        "class-variance-authority",
+        "tailwindcss"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/utils/lib.ts",
+          "type": "registry:lib"
+        }
+      ]
+    }
+  ]
+}
