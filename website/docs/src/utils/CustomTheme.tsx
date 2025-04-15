@@ -10,9 +10,7 @@ export const CustomTheme = ({children}: React.PropsWithChildren) => {
           background:
             'radial-gradient(circle at center, rgba(128, 90, 213, 0.1) 0%, transparent 80%)',
         }}
-      >
-      
-      </div>
+      ></div>
 
       {/* Blobs */}
       <motion.div

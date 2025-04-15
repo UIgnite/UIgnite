@@ -89,8 +89,7 @@ const elements = [
   {
     id: 'button',
     scope: {Button},
-    element: `
-    <div className="grid grid-cols-5 gap-10">
+    element: `<div className="grid grid-cols-5 gap-10">
             <Button variant="primary">primary</Button>
             <Button variant="destructive">destructive</Button>
             <Button variant="success">success</Button>
@@ -216,7 +215,7 @@ const elements = [
     element: `
       <MessageBot
         orgName="UIgnite"
-        themeColor="bg-indigo-600"
+        themeColor="bg-blue-500"
         url="https://dummyimage.com/100x100/000/fff&text=U"
         alt="Bot avatar"
       />
