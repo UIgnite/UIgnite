@@ -11,7 +11,7 @@ export default function VideoPlayer({
   thumbnailUrl,
   muted = false,
   autoplay = false,
-  loop = false
+  loop = false,
 }: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const progressRef = useRef<HTMLDivElement | null>(null);
@@ -34,16 +34,14 @@ export default function VideoPlayer({
     }
   }, [playing, videoRef.current]);
 
-  useEffect(()=>{
+  useEffect(() => {
     let timeout: NodeJS.Timeout;
-    if(autoplay && !played)
-      timeout = setTimeout(handleTooglePlaying, 0);
-    
+    if (autoplay && !played) timeout = setTimeout(handleTooglePlaying, 0);
 
-    return () =>{
-      if(timeout) clearTimeout(timeout);
-    }
-  },[autoplay, videoRef.current, played])
+    return () => {
+      if (timeout) clearTimeout(timeout);
+    };
+  }, [autoplay, videoRef.current, played]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -84,7 +82,7 @@ export default function VideoPlayer({
     return () => {
       controller.abort();
     };
-  }, [fullScreenMode,videoRef.current]);
+  }, [fullScreenMode, videoRef.current]);
 
   const handleCurrentTimeChangeClick = useCallback(
     (evt: MouseEvent<HTMLDivElement>) => {
@@ -144,12 +142,14 @@ export default function VideoPlayer({
           type="video/mp4"
         />
       </video>
-      {thumbnailUrl ? <img
-        hidden={played}
-        className="w-full h-full object-cover"
-        src={thumbnailUrl || 'https://picsum.photos/seed/picsum/1482/812'}
-        alt="Video thumbnail"
-      /> : null}
+      {thumbnailUrl ? (
+        <img
+          hidden={played}
+          className="w-full h-full object-cover"
+          src={thumbnailUrl || 'https://picsum.photos/seed/picsum/1482/812'}
+          alt="Video thumbnail"
+        />
+      ) : null}
       <div onClick={handleTooglePlaying} className="z-2 absolute inset-0" />
 
       {/* Controls */}
@@ -204,7 +204,10 @@ export default function VideoPlayer({
 
           {/* Volume */}
           <button className="px-1 py-1 cursor-pointer" data-ctrltype="volume">
-            <svg viewBox="0 0 24 24" className="size-5 fill-neutral-100 dark:fill-neutral-100">
+            <svg
+              viewBox="0 0 24 24"
+              className="size-5 fill-neutral-100 dark:fill-neutral-100"
+            >
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
@@ -215,7 +218,10 @@ export default function VideoPlayer({
 
           {/* Captions */}
           <button className="px-1 py-1 cursor-pointer" data-ctrltype="captions">
-            <svg viewBox="0 0 24 24" className="fill-neutral-100 size-5 dark:fill-neutral-100">
+            <svg
+              viewBox="0 0 24 24"
+              className="fill-neutral-100 size-5 dark:fill-neutral-100"
+            >
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
@@ -248,9 +254,8 @@ export default function VideoPlayer({
               xmlSpace="preserve"
               className="size-4 fill-neutral-100 dark:fill-neutral-100"
             >
-              <path 
-                d="M345.495 0l49.012 49.023-106.584 106.584 68.461 68.479 106.603-106.593 49.004 49.022V0zM155.615 287.914L49.022 394.507.009 345.494V512h166.506l-49.022-49.022 106.594-106.603zM356.384 287.914l-68.461 68.461 106.584 106.603L345.495 512h166.496V345.485l-49.014 49.022zM166.505 0H.009v166.506l49.013-49.013 106.593 106.593 68.472-68.479L117.501 49.023z"
-              /> {/* trimmed for brevity */}
+              <path d="M345.495 0l49.012 49.023-106.584 106.584 68.461 68.479 106.603-106.593 49.004 49.022V0zM155.615 287.914L49.022 394.507.009 345.494V512h166.506l-49.022-49.022 106.594-106.603zM356.384 287.914l-68.461 68.461 106.584 106.603L345.495 512h166.496V345.485l-49.014 49.022zM166.505 0H.009v166.506l49.013-49.013 106.593 106.593 68.472-68.479L117.501 49.023z" />{' '}
+              {/* trimmed for brevity */}
             </svg>
           </button>
         </div>

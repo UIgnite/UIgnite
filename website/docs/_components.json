@@ -198,6 +198,74 @@
     ]
   },
   {
+    "id": "Card",
+    "name": "Card",
+    "desc": "A flexible and customizable card component for displaying content, built with React.",
+    "path": "/components/Card/Card.tsx",
+    "installation": [
+      {
+        "title": "Install dependencies",
+        "codeBlock": "npm i clsx lucid",
+        "path": "/components/Card/Card.tsx"
+      },
+      {
+        "title": "Tailwind setup",
+        "codeBlock": "npm i clsx tailwind-merge lucid",
+        "path": "/tailwind.config.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "className",
+        "type": "string",
+        "desc": "Optional additional class names for styling the card wrapper.",
+        "defaultValue": "\"\""
+      }
+    ]
+  },
+  {
+    "id": "Carousel",
+    "name": "Carousel",
+    "desc": "A smooth, responsive Carousel component to slide through child elements. Includes left and right navigation with smooth scroll transitions.",
+    "path": "/components/Carousel/Carousel.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Install dependencies",
+        "codeBlock": "npm i class-variance-authority lucide-react",
+        "path": "/components/Carousel/Carousel.tsx"
+      },
+      {
+        "title": "Add utility function",
+        "codeBlock": "",
+        "path": "/lib/utils.ts"
+      },
+      {
+        "title": "Tailwind setup",
+        "codeBlock": "",
+        "path": "/tailwind.config.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "children",
+        "type": "ReactNode[]",
+        "desc": "An array of JSX elements to slide through. Each child will occupy full width.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "className",
+        "type": "string",
+        "desc": "Optional classes to customize the Carousel wrapper's styling.",
+        "defaultValue": "\"\""
+      }
+    ],
+    "usage": {
+      "title": "Basic Usage",
+      "codeBlock": "import { Carosuel } from '@/components/Carousel/Carousel';\n\nexport default function DemoCarousel() {\n  return (\n    <Carosuel className=\"h-64\">\n      <div className=\"bg-red-500 flex items-center justify-center text-white text-xl\">Slide 1</div>\n      <div className=\"bg-green-500 flex items-center justify-center text-white text-xl\">Slide 2</div>\n      <div className=\"bg-blue-500 flex items-center justify-center text-white text-xl\">Slide 3</div>\n    </Carosuel>\n  );\n}"
+    }
+  },  
+  {
     "id": "Dropdown",
     "name": "Dropdown",
     "desc": "A sleek, no-jank Dropdown component. Tap to toggle, sprinkle your actions or menus inside. Renders a floating panel near the trigger with automatic layering.",
@@ -450,29 +518,6 @@
       }
     ]
   },
-  {
-    "id": "NavMenu",
-    "name": "NavMenu",
-    "desc": "A center-aligned nav menu with dropdowns for each section. Smooth transitions, Tailwind styled, and fully customizable. Dropdowns appear on hover with a polished glow effect.",
-    "path": "/components/NavMenu/NavMenu.tsx",
-    "previewImageUrl": "",
-    "installation": [
-      {
-        "title": "Import NavMenu",
-        "codeBlock": "import NavMenu from '@/components/NavMenu';",
-        "path": "/components/NavMenu/NavMenu.tsx"
-      }
-    ],
-    "props": [
-      {
-        "prop": "Dropdown",
-        "type": "component",
-        "desc": "Internal component that receives and displays dropdown `content` for each menu item.",
-        "defaultValue": "—"
-      }
-    ]
-  },
-
   {
     "id": "PricingCard",
     "name": "PricingCard",
