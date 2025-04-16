@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {ReactElement} from 'react';
-import {cn} from '@/utils/lib';
+import {cn} from '@/lib/utils';
 import {ChevronDown} from 'lucide-react';
 
 export interface AccordionParams {

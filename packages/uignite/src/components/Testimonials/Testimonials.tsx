@@ -1,6 +1,6 @@
 import React from 'react';
 import {Star} from 'lucide-react';
-import {cn} from '@/utils/lib';
+import {cn} from '@/lib/utils';
 
 export interface TestimonialsProps {
   imageSrc?: string;

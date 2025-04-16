@@ -1,4 +1,4 @@
-import {cn} from '@/utils/lib';
+import {cn} from '@/lib/utils';
 
 export interface SkeletonParams {
   className?: string;
