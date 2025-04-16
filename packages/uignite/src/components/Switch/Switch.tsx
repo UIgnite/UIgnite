@@ -1,10 +1,10 @@
-import  { useState } from "react";
+import {useState} from 'react';
 
-interface Switch{
-    defaultState?: boolean
+interface Switch {
+  defaultState?: boolean;
 }
 
-export  function Switch({ defaultState = false }: Switch) {
+export function Switch({defaultState = false}: Switch) {
   const [state, setState] = useState<boolean>(defaultState);
 
   return (
@@ -16,7 +16,7 @@ export  function Switch({ defaultState = false }: Switch) {
     >
       <div
         className={`size-4 bg-black rounded-full absolute transition-all ease-in-out duration-300 top-1/2 ${
-          state ? "translate-x-0.5" : "translate-x-3.5"
+          state ? 'translate-x-0.5' : 'translate-x-3.5'
         } -translate-y-1/2`}
       />
     </div>

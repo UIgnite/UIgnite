@@ -1,1 +1,14 @@
-{"name":"skeleton-v0","type":"registry:component","dependencies":[],"files":[{"path":"registry/default/components/skeleton-v0.tsx","type":"registry:component","content":"import Skeleton from \"@/components/ui/Skeleton.tsx\"\r\n      <div className=\"flex items-center space-x-4 \">\r\n          <Skeleton className=\"h-12 w-12 rounded-full\" />\r\n          <div className=\"space-y-2\">\r\n            <Skeleton className=\"h-4 w-[250px]\" />\r\n            <Skeleton className=\"h-4 w-[200px]\" />\r\n          </div>\r\n        </div>\r\n\r\n    "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json","registryDependencies":["https://uignite.in/r/skeleton.json"]}
+{
+  "name": "skeleton-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "registry/default/components/skeleton-v0.tsx",
+      "type": "registry:component",
+      "content": "import Skeleton from \"@/components/ui/Skeleton.tsx\"\r\n      <div className=\"flex items-center space-x-4 \">\r\n          <Skeleton className=\"h-12 w-12 rounded-full\" />\r\n          <div className=\"space-y-2\">\r\n            <Skeleton className=\"h-4 w-[250px]\" />\r\n            <Skeleton className=\"h-4 w-[200px]\" />\r\n          </div>\r\n        </div>\r\n\r\n    "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "registryDependencies": ["https://uignite.in/r/skeleton.json"]
+}
