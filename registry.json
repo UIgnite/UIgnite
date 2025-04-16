@@ -303,7 +303,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/utils/lib.ts",
+          "path": "packages/uignite/src/lib/utils.ts",
           "type": "registry:lib"
         }
       ]

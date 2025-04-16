@@ -13,9 +13,10 @@ import ComponentPreviewPage from './pages/components';
 const App = () => {
   return (
     <Routes>
+      <Route path="/" element={<Home />} />
       <Route element={<RootLayout />}>
         <Route path="/auth" element={<Auth />} />
-        <Route path="/" element={<Home />} />
+
         <Route path="/docs" element={<Landing />} />
         <Route path="/test" element={<Test />} />
         <Route element={<ComponentLayout />}>
@@ -26,9 +27,10 @@ const App = () => {
           />
         </Route>
         <Route path="/pricing" element={<PricingSection />} />
-        <Route path="*" element={<NotFoundPage />} />
+
         <Route path="fullontesting" element={<Components />} />
       </Route>
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 };

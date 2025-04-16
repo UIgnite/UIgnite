@@ -1,4 +1,4 @@
-import {cn} from '@/utils/lib';
+import {cn} from '@/lib/utils';
 import {useEffect, useState, FC} from 'react';
 
 type SpinnerProps = {

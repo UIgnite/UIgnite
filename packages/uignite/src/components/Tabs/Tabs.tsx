@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
-import {cn} from '@/utils/lib';
+import {cn} from '@/lib/utils';
 import {ReactElement} from 'react';
 
 interface TabContentParams {
