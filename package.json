@@ -10,7 +10,7 @@
     "i": "yarn; cd projects/uignite; yarn; yarn build; cd ../../website/docs; yarn; yarn build;",
     "build": " lerna run build --concurrency=1",
     "clean": "rimraf ./packages/**/dist ./website/**/dist",
-    "generate": "node ./scripts/generate.js"
+    "generate": "node ./scripts/generate.js ; node ./scripts/generateCodeString.js"
   },
   "author": "uignite team",
   "license": "ISC",
