@@ -1,6 +1,7 @@
 import {Link, NavLink} from 'react-router-dom';
 import {ThemeToggleBtn} from '@pkgs/uignite';
 import {GitHubLogoIcon} from '@radix-ui/react-icons';
+import SearchBar from '../pages/components/Search';
 
 const Navbar = () => {
   return (
@@ -25,7 +26,13 @@ const Navbar = () => {
         {/* nav links */}
         <nav className="flex justify-end space-x-2">
           <NavLink
-            to="/pricing"
+            to="/"
+            className="cursor-pointer p-2 rounded opacity-70 hover:opacity-100"
+          >
+            <p>About</p>
+          </NavLink>
+          <NavLink
+            to="/components/Accordion"
             className="cursor-pointer p-2 rounded opacity-70 hover:opacity-100"
           >
             <p>Docs</p>
@@ -36,18 +43,13 @@ const Navbar = () => {
           >
             <p>Components</p>
           </NavLink>
-          <NavLink
-            to="/"
-            className="cursor-pointer p-2 rounded opacity-70 hover:opacity-100"
-          >
-            <p>About</p>
-          </NavLink>
         </nav>
       </div>
 
       {/* github and mode switch */}
       <div className="hidden md:flex md:justify-center md:items-center md:gap-1">
         {/* md:justify-end md:space-x-4 */}
+        <SearchBar />
         <ThemeToggleBtn />
         <a
           href="https://github.com/UIgnite/UIgnite"

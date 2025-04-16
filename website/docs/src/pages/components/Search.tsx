@@ -23,7 +23,7 @@ function Hit({hit}: any) {
 }
 
 function SearchBar() {
-  const [isSearchOpen, setIsSearchOpen] = useState(true);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
     <>

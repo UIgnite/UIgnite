@@ -18,7 +18,10 @@ import {
   Resizable,
   Skeleton,
   Spinner,
+  TabContent,
+  TabList,
   Tabs,
+  Tab,
   Textarea,
   Tooltip,
 } from '@pkgs/uignite';
@@ -328,7 +331,7 @@ const elements = [
       <Spinner variant="ripple" className="my-4" />
       <Spinner variant="terminal" className="my-4" />
       <Spinner variant="loader" className="my-4" />
-  </div>
+    </div>
 
            
     `,
@@ -340,23 +343,21 @@ const elements = [
   // },
   {
     id: 'Tabs',
-    scope: {Tabs},
+    scope: {Tabs, TabList, Tab, TabContent},
     element: `
-  
-    <div> Hi </div>
       <Tabs defaultVal="preview">
-        <TabList activeTab="">
+        <TabList className="w-[400px] ">
           <Tab title="Preview" value="preview"></Tab>
           <Tab title="Code" value="code"></Tab>
         </TabList>
         <TabContent
-          content={<div> We are using our own tab component here as well </div>}
-          value="preview"
+          content={<div className="m-2 p-2 rounded-md dark:bg-neutral-800"> Preview Content from Tab 1 </div>}
+          value="preview" 
         ></TabContent>
-        <TabContent 
-          content={<div>Thank you for using our components </div>} 
-          value="code">
-        </TabContent>
+        <TabContent className="p-2 "
+          content={<div className="m-2 p-2 rounded-md dark:bg-neutral-800"> Code Content of Tab 2 </div>} 
+          value="code"
+        ></TabContent>
       </Tabs>
     `,
   },
