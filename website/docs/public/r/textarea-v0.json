@@ -1,14 +1,1 @@
-{
-  "name": "textarea-v0",
-  "type": "registry:component",
-  "dependencies": [],
-  "files": [
-    {
-      "path": "registry/default/components/textarea-v0.tsx",
-      "type": "registry:component",
-      "content": "import TextArea from \"@/components/ui/TextArea.tsx\"<TextArea placeholder=\"Write something...\" />"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "registryDependencies": ["https://uignite.in/r/textarea.json"]
-}
+{"name":"textarea-v0","type":"registry:component","dependencies":[],"files":[{"path":"registry/default/components/textarea-v0.tsx","type":"registry:component","content":"import TextArea from \"@/components/ui/TextArea.tsx\"<TextArea placeholder=\"Write something...\" />"}],"$schema":"https://ui.shadcn.com/schema/registry-item.json","registryDependencies":["https://uignite.in/r/textarea.json"]}
