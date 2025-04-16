@@ -19,7 +19,9 @@ function getComponentById(compId: string | undefined) {
 function getElementByCompId(compId: string | undefined) {
   if (!compId) return null;
   return elements.find(
-    (element) => element.id.trim().toLowerCase() === compId.trim().toLowerCase()
+    (element) =>
+      element.id !== undefined &&
+      element.id.trim().toLowerCase() === compId.trim().toLowerCase()
   );
 }
 
