@@ -18,7 +18,6 @@ import {
 import Navbar from '../components/Navbar';
 import Resizable from '../components/Resizable';
 import SearchBar from './components/Search';
-// import { DatePicker } from "@pkgs/uignite";
 
 // interface AvatarData {
 //   url: string;
@@ -104,20 +103,7 @@ const Components = () => {
 
         <Avatar url={'/piyush-sir.png'} alt={'user'} />
         <Avatar url={'/hitesh-sir.png'} alt={'user'} />
-        {/* 
-        <DatePicker
-          value={selectedDate}
-          onChange={setSelectedDate}
-          placeholder="Select a date"
-          className="w-64"
-          darkMode={true}
-        /> */}
 
-        {/* {selectedDate && (
-          <p className="mt-2 text-gray-400">
-            Selected Date: {selectedDate.toLocaleDateString()}
-          </p>
-        )} */}
 
         <Button className="mt-10" isLoading />
         <Button variant="gradient" className="mt-10">

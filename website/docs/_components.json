@@ -198,62 +198,6 @@
     ]
   },
   {
-    "id": "DatePicker",
-    "name": "DatePicker",
-    "desc": "A minimal date picker with light/dark support, year selection, and a clean calendar UI. Designed for modern dashboards and forms where UX vibes matter.",
-    "path": "/components/DatePicker/DatePicker.tsx",
-    "previewImageUrl": "",
-    "installation": [
-      {
-        "title": "Install dependencies",
-        "codeBlock": "npm i lucide-react",
-        "path": "/components/DatePicker/DatePicker.tsx"
-      },
-      {
-        "title": "Copy the code",
-        "codeBlock": "",
-        "path": "/utils/lib.ts"
-      },
-      {
-        "title": "Tailwind setup",
-        "codeBlock": "",
-        "path": "/tailwind.config.ts"
-      }
-    ],
-    "props": [
-      {
-        "prop": "className",
-        "type": "string",
-        "desc": "Extra Tailwind classes for outer wrapper. Use this to align/position with your layout.",
-        "defaultValue": "—"
-      },
-      {
-        "prop": "value",
-        "type": "Date",
-        "desc": "The currently selected date. Controlled via parent.",
-        "defaultValue": "null"
-      },
-      {
-        "prop": "onChange",
-        "type": "function",
-        "desc": "Callback when a date is selected. Gets passed a Date object.",
-        "defaultValue": "() => {}"
-      },
-      {
-        "prop": "placeholder",
-        "type": "string",
-        "desc": "Placeholder text when no date is selected.",
-        "defaultValue": "\"Select date...\""
-      },
-      {
-        "prop": "darkMode",
-        "type": "boolean",
-        "desc": "Toggles dark mode styles for the input and calendar.",
-        "defaultValue": "false"
-      }
-    ]
-  },
-  {
     "id": "Dropdown",
     "name": "Dropdown",
     "desc": "A sleek, no-jank Dropdown component. Tap to toggle, sprinkle your actions or menus inside. Renders a floating panel near the trigger with automatic layering.",

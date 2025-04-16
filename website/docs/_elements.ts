@@ -60,37 +60,19 @@ const elements = [
   },
   {
     id: 'avatar',
-    scope: {Avatar},
+    scope: {Avatar , AvatarGroup},
     element: `
       <>
         <Avatar url={"/piyush-sir.png"} alt={"user"} />
         <Avatar url={"/hitesh-sir.png"} alt={"user"} />
+        <AvatarGroup>
+          <img src="https://i.pravatar.cc/100?img=1" alt="1" />
+          <img src="https://i.pravatar.cc/100?img=2" alt="2" />
+          <img src="https://i.pravatar.cc/100?img=3" alt="3" />
+        </AvatarGroup>
       </>
     `,
   },
-  {
-    id: 'avatargroup',
-    scope: {AvatarGroup},
-    element: `
-      <AvatarGroup>
-        <img src="https://i.pravatar.cc/100?img=1" alt="1" />
-        <img src="https://i.pravatar.cc/100?img=2" alt="2" />
-        <img src="https://i.pravatar.cc/100?img=3" alt="3" />
-      </AvatarGroup>
-    `,
-  },
-  // {
-  //   id: "avatargrouptooltip",
-  //   scope: { AvatarGroupWithTooltip },
-  //   element: `
-  //     <AvatarGroupWithTooltip
-  //       users={[
-  //         { name: "Alice", src: "https://i.pravatar.cc/100?img=4" },
-  //         { name: "Bob", src: "https://i.pravatar.cc/100?img=5" },
-  //       ]}
-  //     />
-  //   `,
-  // },
   {
     id: 'button',
     scope: {Button},
@@ -141,12 +123,7 @@ const elements = [
       </Card>
     `,
   },
-  {},
-  // {
-  //   id: "datepicker",
-  //   scope: { DatePicker },
-  //   element: `<DatePicker onChange={(date) => console.log(date)} />`,
-  // },
+ 
   {
     id: 'dropdown',
     scope: {Dropdown},

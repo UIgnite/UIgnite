@@ -1,14 +1,1 @@
-{
-  "name": "resizable-v0",
-  "type": "registry:component",
-  "dependencies": [],
-  "files": [
-    {
-      "path": "registry/default/components/resizable-v0.tsx",
-      "type": "registry:component",
-      "content": "import Resizable from \"@/components/ui/Resizable.tsx\"<div className='relative w-[500px] h-26'>\r\n      <Resizable className='h-20'>\r\n        <div className='w-full h-full bg-amber-200'></div>\r\n        <div className='w-full h-full bg-rose-200'></div>\r\n      </Resizable>\r\n    </div>"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "registryDependencies": ["https://uignite.in/r/resizable.json"]
-}
+{"name":"resizable-v0","type":"registry:component","dependencies":[],"files":[{"path":"registry/default/components/resizable-v0.tsx","type":"registry:component","content":"import Resizable from \"@/components/ui/Resizable.tsx\"<div className='relative w-[500px] h-26'>\n      <Resizable className='h-20'>\n        <div className='w-full h-full bg-amber-200'></div>\n        <div className='w-full h-full bg-rose-200'></div>\n      </Resizable>\n    </div>"}],"$schema":"https://ui.shadcn.com/schema/registry-item.json","registryDependencies":["https://uignite.in/r/resizable.json"]}
