@@ -26,10 +26,12 @@ import {
   Switch,
   Toast,
   useToast,
+  Carosuel,
 } from '@pkgs/uignite';
 import Footer from './src/components/Footer';
 import Navbar from './src/components/Navbar';
 import {Link} from 'react-router-dom';
+import {useEffect, useState} from 'react';
 import { CommandButton } from './src/components/CommandButton';
 import { AlarmClockCheck } from 'lucide-react';
 
@@ -58,6 +60,7 @@ const elements = [
         </AccordionWrapper>
       </div>
     `,
+    variation: [],
   },
   {
     id: 'avatar',
@@ -66,13 +69,10 @@ const elements = [
       <>
         <Avatar url={"/piyush-sir.png"} alt={"user"} />
         <Avatar url={"/hitesh-sir.png"} alt={"user"} />
-        <AvatarGroup>
-          <img src="https://i.pravatar.cc/100?img=1" alt="1" />
-          <img src="https://i.pravatar.cc/100?img=2" alt="2" />
-          <img src="https://i.pravatar.cc/100?img=3" alt="3" />
-        </AvatarGroup>
+        
       </>
     `,
+    variation: [],
   },
   {
     id: 'button',
@@ -98,6 +98,40 @@ const elements = [
             <CommandButton/>
           </div> 
     `,
+    variation: [
+      `
+      <div className="grid grid-cols-4 gap-10">
+        <Button variant="destructive">destructive</Button>
+        <Button variant="success">success</Button>
+        <Button variant="warning">warning</Button>
+        <Button variant="outline">outline</Button>
+      </div>
+      `,
+      `
+      <div className="grid grid-cols-4 gap-10">
+        <Button variant="secondary">secondary</Button>
+        <Button  variant="gradient" isLoading />
+        <Button variant="ghost">ghost</Button>
+        <Button variant="glass">glass</Button>
+      </div>
+      `,
+      `
+      <div className="grid grid-cols-3 gap-10">
+        <Button variant="dark">dark</Button>
+        <Button variant="light">light</Button>
+        <Button variant="gradient">gradient</Button>
+      </div>
+      `,
+      `
+      <div className="grid grid-cols-3 gap-10">
+        <Button animatedBorder>animated</Button>
+        <Button gradientBorder>gradBorder</Button>
+        <Button className="animate-border text-white font-semibold px-6 py-3 rounded-xl">
+          Hover Me
+        </Button>
+      </div>
+      `,
+    ],
   },
   {
     id: 'card',
@@ -108,22 +142,169 @@ const elements = [
       CardDescription,
       CardContent,
       CardFooter,
+      Button,
+      Avatar,
+      useState,
+      useEffect,
     },
     element: `
-      <Card>
-        <CardHeader>
-          <CardTitle>Card Title</CardTitle>
-          <CardDescription>This is a short description inside the card.</CardDescription>
+  function TwitterCard () {
+    const [status, setStatus] = useState('Follow');
+
+    function clickHandler() {
+      const final = status === 'Follow' ? 'Unfollow' : 'Follow';
+      setStatus(final);
+    }
+
+    return (
+      <Card className="mt-6 rounded-2xl shadow-lg max-h-min">
+        <CardHeader className="flex flex-row justify-between px-4 pt-2 items-center">
+          <div className="flex gap-3 items-center">
+            <Avatar url="/hitesh-sir.png" alt="avatar" />
+            <div>
+              <CardTitle className="text-base">Hitesh Chaudhary</CardTitle>
+              <CardDescription className="text-sm dark:text-gray-400">
+                @HiteshDotCom
+              </CardDescription>
+            </div>
+          </div>
+          <Button
+            onClick={clickHandler}
+            className={\`\${
+              status === 'Unfollow'
+                ? 'bg-zinc-900 hover:bg-neutral-900 dark:border dark:border-white border-2'
+                : 'bg-blue-600 hover:bg-blue-700'
+            } transform transition-all duration-200 ease-out active:scale-95 cursor-pointer text-white text-sm font-medium py-1.5 px-4 rounded-full\`}
+          >
+            {status}
+          </Button>
         </CardHeader>
-        <CardContent>
-          Here’s the main content of the card. You can add text, images, or even other components here.
+
+        <CardContent className="text-sm dark:text-gray-300 px-4 pb-2 pt-1">
+          <p>
+            Retired from corporate and full time YouTuber, x founder of LCO
+            (acquired), x CTO, Sr. Director at PW. 2 YT channels (950k & 470k),
+            stepped into 43 countries.
+          </p>
+
+          <div className="mt-2 flex items-center gap-4 text-sm dark:text-gray-400">
+            <span>
+              <span className=" font-semibold">386</span> Following
+            </span>
+            <span>
+              <span className=" font-semibold">21.6K</span> Followers
+            </span>
+          </div>
         </CardContent>
-        <CardFooter>
-          <button className="text-sm text-blue-500">Action</button>
-          <span className="text-xs text-muted-foreground">Footer note</span>
+      </Card>
+    )
+  }
+    `,
+    variation: [
+      `
+      <Card className="m-0 p-0 pb-3">
+        <div>
+          <img
+            className="object-cover rounded-t-xl"
+            src="/youtube-thumbnail-3.jpg"
+            alt=""
+          />
+        </div>
+
+        <CardContent className="px-2">
+          <h1 className="font-semibold text-lg text-zinc-800 dark:text-zinc-200">
+            Web Dev Cohort 1.0
+          </h1>
+          <p className="text-sm leading-tight text-neutral-700 dark:text-neutral-400">
+            Master full-stack web development with Web Dev Cohort. Learn HTML,
+            CSS, JS, React, Next.js, Node, Docker, databases like
+            MongoDB/PostgreSQL, DevOps with AWS (ECR, EC2, CloudFront), modern
+            workflows like Turbo Repo, TypeScript, and GitHub CI/CD.
+          </p>
+          <div className="flex gap-2 items-center mt-2">
+            <div className="font-medium text-md ">6,999 INR</div>
+            <div className="line-through text-sm text-gray-400 dark:text-gray-500">
+              8,999 INR
+            </div>
+          </div>
+          <div className="text-sm text-blue-500 dark:text-blue-400 -mt-1">
+            Save 22%
+          </div>
+          <a
+            href="https://courses.chaicode.com/learn/batch/about?bundleId=214297"
+            target="_blank"
+          >
+            <Button className="mt-3 w-full">
+              Learn More
+              <Info className="ml-2 size-4" />
+            </Button>
+          </a>
+        </CardContent>
+      </Card>
+      
+      `,
+      `
+      <Card className="m-0 p-0 h-[440px] w-[325px] rounded-3xl">
+        <CardHeader className="m-0 p-0 ">
+          <img
+            src="/saurav.png"
+            alt=""
+            className="h-[295px] w-full object-cover rounded-t-xl"
+          />
+        </CardHeader>
+        <CardContent className="flex flex-col justify-center items-center mt-5">
+          <div className="font-semibold text-2xl">Aman Gupta</div>
+          <div className="text-sm text-neutral-600 dark:text-zinc-500 ">
+            Backend Developer at OnlyDevs
+          </div>
+        </CardContent>
+        <CardFooter className="flex justify-between items-center px-4 space-mono ">
+          <div className="flex flex-col">
+            <div className="text-xs text-neutral-500 dark:text-zinc-400 ">
+              Total Commits
+            </div>
+            <div className="">100+</div>
+          </div>
+          <div className="flex flex-col">
+            <div className="text-xs text-neutral-500 dark:text-zinc-400">
+              Total PRs
+            </div>
+            <div className="">20+</div>
+          </div>
         </CardFooter>
       </Card>
+      `,
+    ],
+  },
+  {
+    id: 'Carosuel',
+    scope: {Carosuel},
+    element: ` <Carosuel className="h-full w-full   flex justify-center items-center">
+      <div className=" dark:bg-black bg-gray-100 h-full mr-4 ml-4 flex items-center justify-center text-2xl font-semibold rounded-lg shadow-md">
+        Slide 1
+      </div>
+      <div className="bg-black h-full mr-4 ml-4 flex items-center justify-center bg-gradient-to-r from-green-400 to-blue-500 text-white text-2xl font-semibold rounded-lg shadow-md">
+        Slide 2
+      </div>
+      <div className="bg-black h-full mr-4 ml-4 flex items-center justify-center bg-gradient-to-r from-pink-400 to-red-500 text-white text-2xl font-semibold rounded-lg shadow-md">
+        Slide 3
+      </div>
+      <div className="bg-black h-full mr-4 ml-4 flex items-center justify-center bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-2xl font-semibold rounded-lg shadow-md">
+        Slide 4
+      </div>
+      <div className="bg-black h-full mr-4 ml-4  flex items-center justify-center bg-gradient-to-r from-purple-400 to-indigo-500 text-white text-2xl font-semibold rounded-lg shadow-md">
+        Slide 5
+      </div>
+    </Carosuel> 
     `,
+    variation: [
+      `
+      
+      `,
+      `
+      
+      `,
+    ],
   },
 
   {
@@ -138,6 +319,7 @@ const elements = [
         <button className="text-black px-4 py-2 text-left hover:bg-neutral-300 rounded">Logout</button>
       </Dropdown> 
     `,
+    variation: [],
   },
   {
     id: 'footer',
@@ -190,11 +372,13 @@ const elements = [
         copyright="© 2025 Your Company. All rights reserved."
       />
     `,
+    variation: [],
   },
   {
     id: 'input',
     scope: {Input},
     element: `<Input placeholder="Type here..." />`,
+    variation: [],
   },
   {
     id: 'messagebot',
@@ -210,6 +394,7 @@ const elements = [
       />
     </div>
     `,
+    variation: [],
   },
   {
     id: 'navbar',
@@ -231,6 +416,7 @@ const elements = [
           className=" min-w-[50vw]"
       />
     `,
+    variation: [],
   },
   {
     id: 'pricingCard',
@@ -275,22 +461,25 @@ const elements = [
   
   
   `,
+    variation: [],
   },
   {
     id: 'resizable',
     scope: {Resizable},
-    element: `<div className='relative w-[500px] h-26'>
+    element: `
+    <div className='relative w-[500px] h-26'>
       <Resizable className='h-20'>
         <div className='w-full h-full bg-amber-200'></div>
         <div className='w-full h-full bg-rose-200'></div>
       </Resizable>
     </div>`,
+    variation: [],
   },
   {
     id: 'skeleton',
     scope: {Skeleton},
     element: `
-      <div className="flex items-center space-x-4 ">
+        <div className="flex items-center space-x-4 ">
           <Skeleton className="h-12 w-12 rounded-full" />
           <div className="space-y-2">
             <Skeleton className="h-4 w-[250px]" />
@@ -299,6 +488,7 @@ const elements = [
         </div>
 
     `,
+    variation: [],
   },
   {
     id: 'spinner',
@@ -306,18 +496,21 @@ const elements = [
     element: `
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
       <Spinner variant="bounce" className="my-4" />
-      <Spinner variant="bars" className="my-4" />
-      <Spinner variant="circular" className="my-4" />
-      <Spinner variant="ripple" className="my-4" />
-      <Spinner variant="terminal" className="my-4" />
-      <Spinner variant="loader" className="my-4" />
     </div>      
     `,
+    variation: [
+      `<Spinner variant="bars" className="my-4" />`,
+      `<Spinner variant="circular" className="my-4" />`,
+      `<Spinner variant="ripple" className="my-4" />`,
+      `<Spinner variant="terminal" className="my-4" />`,
+      `<Spinner variant="loader" className="my-4" />`,
+    ],
   },
   {
     id: 'switch',
     scope: {Switch},
     element: `<Switch defaultState={true} />`,
+    variation: [],
   },
   {
     id: 'Tabs',
@@ -338,11 +531,13 @@ const elements = [
         ></TabContent>
       </Tabs>
     `,
+    variation: [],
   },
   {
     id: 'textarea',
     scope: {TextArea},
     element: `<TextArea placeholder="Write something..." />`,
+    variation: [],
   },
   {
     id: 'toast',
@@ -366,6 +561,7 @@ const elements = [
       )
     }
     `,
+    variation: [],
   },
   {
     id: 'tooltip',
@@ -375,6 +571,7 @@ const elements = [
         <button className="px-4 py-2 bg-blue-500 text-white rounded">Hover me</button>
       </Tooltip>
     `,
+    variation: [],
   },
 ];
 

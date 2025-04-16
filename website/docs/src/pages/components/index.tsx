@@ -13,6 +13,7 @@ import {Install} from './Install';
 import {Properties} from './Properties';
 import {Button} from '@pkgs/uignite';
 import {useNavigate} from 'react-router-dom';
+import {Variants} from './Variants';
 
 export default function Component() {
   const {componentId} = useParams();
@@ -52,6 +53,17 @@ export default function Component() {
 
       <hr className="w-48 h-0 mx-auto my-8 border-none" />
 
+      {element && element?.variation.length > 0 ? (
+        <h1 id="variants" className="text-4xl mt-4 font-semibold">
+          Variants
+        </h1>
+      ) : (
+        <> </>
+      )}
+
+      <Variants componentId={currComponent.id} />
+
+      <hr className="w-48 h-0 mx-auto my-8 border-none" />
       <h1 id="Props" className="text-4xl mt-4 font-semibold">
         Props
       </h1>

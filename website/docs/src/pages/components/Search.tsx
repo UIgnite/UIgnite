@@ -28,7 +28,7 @@ function SearchBar() {
   return (
     <>
       {isSearchOpen ? (
-        <div className="fixed inset-0 flex flex-col items-center justify-center text-gray-900 dark:text-gray-100 z-10">
+        <div className="fixed inset-0 flex flex-col items-center  justify-center text-gray-900 dark:text-gray-100 z-10">
           {/* Overlay */}
           <div
             className="absolute inset-0 bg-black/40 z-0"

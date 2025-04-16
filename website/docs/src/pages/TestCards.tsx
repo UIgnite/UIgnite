@@ -7,6 +7,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
+  Input,
 } from '@pkgs/uignite';
 import {Info} from 'lucide-react';
 import {useState} from 'react';
@@ -73,7 +74,7 @@ const TestCards = () => {
         </div>
 
         <CardContent className="px-2">
-          <h1 className="font-semibold text-lg text-zinc-800 dark:text-zinc-200">
+          <h1 className="font-semibold text-2xl text-zinc-800 dark:text-zinc-200">
             Web Dev Cohort 1.0
           </h1>
           <p className="text-sm leading-tight text-neutral-700 dark:text-neutral-400">
@@ -82,13 +83,13 @@ const TestCards = () => {
             MongoDB/PostgreSQL, DevOps with AWS (ECR, EC2, CloudFront), modern
             workflows like Turbo Repo, TypeScript, and GitHub CI/CD.
           </p>
-          <div className="flex gap-2 items-center mt-2">
-            <div className="font-medium text-md ">6,999 INR</div>
-            <div className="line-through text-sm text-gray-400 dark:text-gray-500">
+          <div className="flex gap-2 items-center mt-2 funnel">
+            <div className="font-medium text-xl ">6,999 INR</div>
+            <div className="line-through text-base text-gray-400 dark:text-gray-500">
               8,999 INR
             </div>
           </div>
-          <div className="text-sm text-blue-500 dark:text-blue-400 -mt-1">
+          <div className="text-sm text-blue-500 dark:text-blue-400">
             Save 22%
           </div>
           <a
@@ -108,12 +109,12 @@ const TestCards = () => {
       <Card className="m-0 p-0 h-[440px] w-[325px] rounded-3xl">
         <CardHeader className="m-0 p-0 ">
           <img
-            src="/saurav.png"
+            src="/me.png"
             alt=""
             className="h-[295px] w-full object-cover rounded-t-xl"
           />
         </CardHeader>
-        <CardContent className="flex flex-col justify-center items-center mt-5">
+        <CardContent className="flex flex-col justify-center items-center mt-3">
           <div className="font-semibold text-2xl">Aman Gupta</div>
           <div className="text-sm text-neutral-600 dark:text-zinc-500 ">
             Backend Developer at OnlyDevs
@@ -134,8 +135,64 @@ const TestCards = () => {
           </div>
         </CardFooter>
       </Card>
+
+      <hr />
+      {/* inputs */}
+      <div className=" flex gap-12 p-12">
+        <Input placeholder="Email" />
+      </div>
     </div>
   );
 };
+
+function TwitterCard() {
+  const [status, setStatus] = useState('Follow');
+
+  function clickHandler() {
+    const final = status === 'Follow' ? 'Unfollow' : 'Follow';
+    setStatus(final);
+  }
+
+  <Card className="mt-6 rounded-2xl shadow-lg max-h-min">
+    <CardHeader className="flex flex-row justify-between px-4 pt-2 items-center">
+      <div className="flex gap-3 items-center">
+        <Avatar url="/hitesh-sir.png" alt="avatar" />
+        <div>
+          <CardTitle className="text-base">Hitesh Chaudhary</CardTitle>
+          <CardDescription className="text-sm dark:text-gray-400">
+            @HiteshDotCom
+          </CardDescription>
+        </div>
+      </div>
+      <Button
+        onClick={clickHandler}
+        className={`${
+          status === 'Unfollow'
+            ? 'bg-zinc-900 hover:bg-neutral-900 dark:border dark:border-white border-2'
+            : 'bg-blue-600 hover:bg-blue-700'
+        } transform transition-all duration-200 ease-out active:scale-95 cursor-pointer text-white text-sm font-medium py-1.5 px-4 rounded-full`}
+      >
+        {status}
+      </Button>
+    </CardHeader>
+
+    <CardContent className="text-sm dark:text-gray-300 px-4 pb-2 pt-1">
+      <p>
+        Retired from corporate and full time YouTuber, x founder of LCO
+        (acquired), x CTO, Sr. Director at PW. 2 YT channels (950k & 470k),
+        stepped into 43 countries.
+      </p>
+
+      <div className="mt-2 flex items-center gap-4 text-sm dark:text-gray-400">
+        <span>
+          <span className=" font-semibold">386</span> Following
+        </span>
+        <span>
+          <span className=" font-semibold">21.6K</span> Followers
+        </span>
+      </div>
+    </CardContent>
+  </Card>;
+}
 
 export default TestCards;
