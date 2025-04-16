@@ -1,6 +1,6 @@
-import fs from "fs/promises";
-import path from "path";
-import components from "../website/docs/_components.json" with { type: "json" };
+import fs from 'fs/promises';
+import path from 'path';
+import components from '../website/docs/_components.json' with {type: 'json'};
 
 async function getJSONstringData() {
   const jsonStringParse = [];
@@ -8,8 +8,8 @@ async function getJSONstringData() {
     const element = components[index];
     try {
       const content = await fs.readFile(
-        path.join("./packages/uignite/src", element.path),
-        "utf-8",
+        path.join('./packages/uignite/src', element.path),
+        'utf-8'
       );
       jsonStringParse.push({
         id: element.id,
@@ -26,7 +26,7 @@ async function main() {
   const jsondata = await getJSONstringData();
   const data = `export default ${JSON.stringify(jsondata)}`;
 
-  await fs.writeFile("./website/docs/_codeString.tsx", data);
+  await fs.writeFile('./website/docs/_codeString.tsx', data);
 }
 
 main();
