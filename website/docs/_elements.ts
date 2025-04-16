@@ -24,6 +24,7 @@ import {
   Tab,
   Textarea,
   Tooltip,
+  Switch,
 } from '@pkgs/uignite';
 import {Toast as ToastUi} from '@pkgs/uignite';
 import Footer from './src/components/Footer';
@@ -139,6 +140,9 @@ const elements = [
       </Card>
     `,
   },
+  {
+
+  },
   // {
   //   id: "datepicker",
   //   scope: { DatePicker },
@@ -246,6 +250,7 @@ const elements = [
           { label: "Projects", href: "#" },
           { label: "Contact", href: "#" }
         ]}
+          className=" min-w-[50vw]"
       />
     `,
   },
@@ -333,16 +338,14 @@ const elements = [
       <Spinner variant="ripple" className="my-4" />
       <Spinner variant="terminal" className="my-4" />
       <Spinner variant="loader" className="my-4" />
-    </div>
-
-           
+    </div>      
     `,
   },
-  // {
-  //   id: "switch",
-  //   scope: { Switch },
-  //   element: `<Switch defaultState={true} />`,
-  // },
+  {
+    id: "switch",
+    scope: { Switch },
+    element: `<Switch defaultState={true} />`,
+  },
   {
     id: 'Tabs',
     scope: {Tabs, TabList, Tab, TabContent},
