@@ -1,5 +1,5 @@
 import '../index.css';
 export * from './components';
-export {cn} from './utils/lib';
-export {themes} from './utils/theme';
+export {cn} from './lib/lib';
+export {themes} from './lib/theme';
 export * from './hooks';

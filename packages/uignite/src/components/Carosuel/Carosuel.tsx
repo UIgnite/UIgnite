@@ -1,5 +1,5 @@
 import React, {useState, useRef, useEffect, ReactNode} from 'react';
-import {cn} from '@/utils/lib';
+import {cn} from '@/lib/utils';
 import {cva} from 'class-variance-authority';
 import {MoveLeft, MoveRight} from 'lucide-react';
 

@@ -1,4 +1,4 @@
-import {themes} from '@/utils/theme.js';
+import {themes} from '@/lib/theme';
 
 interface ThemeSelectorParams {
   currentTheme: string;

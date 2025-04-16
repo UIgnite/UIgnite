@@ -14,7 +14,7 @@ export * from './Dropdown';
 export * from './Resizable';
 export * from './VideoPlayer';
 export * from './PricingCard';
-export * from '../utils/ThemeToggleBtn';
+export * from '../lib/ThemeToggleBtn';
 
 export {default as Avatar} from './Avatar';
 export {default as NavMenu} from './NavMenu';
