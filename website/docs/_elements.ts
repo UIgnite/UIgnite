@@ -59,7 +59,7 @@ const elements = [
   },
   {
     id: 'avatar',
-    scope: {Avatar , AvatarGroup},
+    scope: {Avatar, AvatarGroup},
     element: `
       <>
         <Avatar url={"/piyush-sir.png"} alt={"user"} />
@@ -122,7 +122,7 @@ const elements = [
       </Card>
     `,
   },
- 
+
   {
     id: 'dropdown',
     scope: {Dropdown},

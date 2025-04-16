@@ -1,1 +1,14 @@
-{"name":"input-v0","type":"registry:component","dependencies":[],"files":[{"path":"registry/default/components/input-v0.tsx","type":"registry:component","content":"import Input from \"@/components/ui/Input.tsx\"<Input placeholder=\"Type here...\" />"}],"$schema":"https://ui.shadcn.com/schema/registry-item.json","registryDependencies":["https://uignite.in/r/input.json"]}
+{
+  "name": "input-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "registry/default/components/input-v0.tsx",
+      "type": "registry:component",
+      "content": "import Input from \"@/components/ui/Input.tsx\"<Input placeholder=\"Type here...\" />"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "registryDependencies": ["https://uignite.in/r/input.json"]
+}
