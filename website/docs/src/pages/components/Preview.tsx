@@ -10,12 +10,11 @@ interface PreviewPropT {
 }
 
 const Preview = ({currComponent, element}: PreviewPropT) => {
-  console.log('currCom: ', currComponent);
   if (!currComponent || !element)
     return <div className="text-red-500">Code not found.</div>;
 
   const syntaxHighlighterElement = (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative ">
       <CopyButton copyText={element.element} />
       <SyntaxHighlighter
         language="javascript"
@@ -34,7 +33,7 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
   );
 
   return (
-    <div className=" min-w-[80%] flex flex-col">
+    <div className=" min-w-[80%] flex flex-col ">
       <LiveProvider code={element.element} scope={element.scope}>
         <Tabs className="p-3 mt-4" defaultVal="preview">
           <TabList activeTab="">
@@ -42,6 +41,7 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
             <Tab title="Code" value="code" />
           </TabList>
 
+          {/* Rendering Element  */}
           {element ? (
             <TabContent
               content={
@@ -81,6 +81,8 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
           ) : (
             <></>
           )}
+
+          {/* Rendering Code  */}
           <TabContent content={syntaxHighlighterElement} value="code" />
         </Tabs>
       </LiveProvider>

@@ -82,17 +82,13 @@ const Install = ({
           content={
             <Tabs
               className="p-3 mt-4 border-[0.5px] dark:border-neutral-800 border-neutral-200"
-              defaultVal="cli"
+              defaultVal="npm"
             >
               <TabList>
                 <Tab title="npm" value="npm"></Tab>
                 <Tab title="yarn" value="yarn"></Tab>
               </TabList>
-              <TabContent
-                activeTab="npm"
-                content={<CommandElement />}
-                value="npm"
-              ></TabContent>
+              <TabContent content={<CommandElement />} value="npm"></TabContent>
             </Tabs>
           }
           value="cli"
