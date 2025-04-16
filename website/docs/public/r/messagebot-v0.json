@@ -1,14 +1,1 @@
-{
-  "name": "messagebot-v0",
-  "type": "registry:component",
-  "dependencies": [],
-  "files": [
-    {
-      "path": "registry/default/components/messagebot-v0.tsx",
-      "type": "registry:component",
-      "content": "import MessageBot from \"@/components/ui/MessageBot.tsx\"\n    <div>\n      <div> Neeche Dekho Neecheee... </div>\n      <MessageBot\n        orgName=\"UIgnite\"\n        themeColor=\"bg-blue-500\"\n        url=\"https://dummyimage.com/100x100/000/fff&text=U\"\n        alt=\"Bot avatar\"\n      />\n    </div>\n    "
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "registryDependencies": ["https://uignite.in/r/messagebot.json"]
-}
+{"name":"messagebot-v0","type":"registry:component","dependencies":[],"files":[{"path":"registry/default/components/messagebot-v0.tsx","type":"registry:component","content":"import MessageBot from \"@/components/ui/MessageBot.tsx\"\r\n    <div>\r\n      <div> Neeche Dekho Neecheee... </div>\r\n      <MessageBot\r\n        orgName=\"UIgnite\"\r\n        themeColor=\"bg-blue-500\"\r\n        url=\"https://dummyimage.com/100x100/000/fff&text=U\"\r\n        alt=\"Bot avatar\"\r\n      />\r\n    </div>\r\n    "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json","registryDependencies":["https://uignite.in/r/messagebot.json"]}
