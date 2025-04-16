@@ -52,7 +52,6 @@ const elements = [
             content="Yes, we have a 7-day easy return policy."
             className="bg-gray-100 hover:bg-white  border-[0.5px] dark:border-neutral-800"
           />
-          
         </AccordionWrapper>
       </div>
     `,
