@@ -1,14 +1,1 @@
-{
-  "name": "toast-v0",
-  "type": "registry:component",
-  "dependencies": [],
-  "files": [
-    {
-      "path": "registry/default/components/toast-v0.tsx",
-      "type": "registry:component",
-      "content": "import ToastUi from \"@/components/ui/ToastUi.tsx\"<Toast message=\"This is a toast!\" type=\"success\" />"
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "registryDependencies": ["https://uignite.in/r/toast.json"]
-}
+{"name":"toast-v0","type":"registry:component","dependencies":[],"files":[{"path":"registry/default/components/toast-v0.tsx","type":"registry:component","content":"import useToast from \"@/components/ui/useToast.tsx\"\nimport Toast from \"@/components/ui/Toast.tsx\"\nimport Button from \"@/components/ui/Button.tsx\"\n    function ToastPreview() {\n      const toast = useToast();\n\n      return (\n        <Button\n          onClick={() => {\n            toast.showToast('Hover Me ', {\n              desc: \\"}],"$schema":"https://ui.shadcn.com/schema/registry-item.json","registryDependencies":["https://uignite.in/r/toast.json"]}

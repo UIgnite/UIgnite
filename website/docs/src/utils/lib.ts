@@ -12,6 +12,7 @@ function getComponentById(compId: string | undefined) {
   if (!compId) return null;
   return components.find(
     (component) =>
+      component.id !== undefined &&
       component.id.trim().toLowerCase() === compId.trim().toLowerCase()
   );
 }
