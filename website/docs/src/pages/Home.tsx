@@ -12,7 +12,7 @@ import {Testimonials} from '@pkgs/uignite';
 import Navbar from '../components/Navbar';
 import {GridBackground} from '../utils/GridBackground';
 import TechStack from '../utils/TechStack';
-import {VideoPlayer} from "@pkgs/uignite"
+import {VideoPlayer} from '@pkgs/uignite';
 const Home = () => {
   const [isCopied, setIsCopied] = useState(false);
   // const [email, setEmail] = useState('');
@@ -290,12 +290,12 @@ const Home = () => {
             </div>
           </div> */}
           <div className="flex items-center justify-center">
-      <VideoPlayer
-        thumbnailUrl="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
-        muted={false}
-        autoplay={false}
-      />
-    </div>
+            <VideoPlayer
+              thumbnailUrl="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+              muted={false}
+              autoplay={false}
+            />
+          </div>
           <div className="text-center ">
             <motion.p
               className="text-6xl font-semibold mt-40 dark:text-[#f7f7f8] text-[#0d0346]"

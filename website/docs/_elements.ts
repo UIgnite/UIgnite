@@ -22,11 +22,12 @@ import {
   TabList,
   Tabs,
   Tab,
-  Textarea,
+  TextArea,
   Tooltip,
   Switch,
+  Toast,
+  useToast,
 } from '@pkgs/uignite';
-import {Toast as ToastUi} from '@pkgs/uignite';
 import Footer from './src/components/Footer';
 import Navbar from './src/components/Navbar';
 import {Link} from 'react-router-dom';
@@ -366,13 +367,31 @@ const elements = [
   },
   {
     id: 'textarea',
-    scope: {Textarea},
+    scope: {TextArea},
     element: `<TextArea placeholder="Write something..." />`,
   },
   {
     id: 'toast',
-    scope: {ToastUi},
-    element: `<Toast message="This is a toast!" type="success" />`,
+    scope: {useToast, Toast, Button},
+    element: `
+    function ToastPreview() {
+      const toast = useToast();
+
+      return (
+        <Button
+          onClick={() => {
+            toast.showToast('Hover Me ', {
+              desc: \`I am the new \$\{Math.floor(Math.random() * 100) + 1\}\`,
+              timeout: 3000,
+            });
+          }}
+          className="mt-5 bg-gray-50 text-black hover:bg-gray-100"
+        >
+          Browse Components
+        </Button>
+      )
+    }
+    `,
   },
   {
     id: 'tooltip',

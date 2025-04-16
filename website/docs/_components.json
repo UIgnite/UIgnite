@@ -831,8 +831,8 @@
     ]
   },
   {
-    "id": "Textarea",
-    "name": "Textarea",
+    "id": "TextArea",
+    "name": "TextArea",
     "desc": "For when you've got more to say 📝 — A dark-mode ready, fully styled textarea component. Clean, smooth, and focus-ring fresh.",
     "path": "/components/TextArea/TextArea.tsx",
     "previewImageUrl": "",
@@ -859,8 +859,8 @@
     ]
   },
   {
-    "id": "ToastUi",
-    "name": "Toast Notification",
+    "id": "Toast",
+    "name": "Toast",
     "desc": "Minimal toast component that slides in with ✨ style. Stacks like pancakes. Looks clean in dark & light mode. Fully customizable with classNames.",
     "path": "/components/Toast/Toast.tsx",
     "previewImageUrl": "",
