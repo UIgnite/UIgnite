@@ -1,1 +1,14 @@
-{"name":"avatargroup-v0","type":"registry:component","dependencies":[],"files":[{"path":"registry/default/components/avatargroup-v0.tsx","type":"registry:component","content":"import AvatarGroup from \"@/components/ui/AvatarGroup.tsx\"\n      <AvatarGroup>\n        <img src=\"https://i.pravatar.cc/100?img=1\" alt=\"1\" />\n        <img src=\"https://i.pravatar.cc/100?img=2\" alt=\"2\" />\n        <img src=\"https://i.pravatar.cc/100?img=3\" alt=\"3\" />\n      </AvatarGroup>\n    "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json","registryDependencies":["https://uignite.in/r/avatargroup.json"]}
+{
+  "name": "avatargroup-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "registry/default/components/avatargroup-v0.tsx",
+      "type": "registry:component",
+      "content": "import AvatarGroup from \"@/components/ui/AvatarGroup.tsx\"\n      <AvatarGroup>\n        <img src=\"https://i.pravatar.cc/100?img=1\" alt=\"1\" />\n        <img src=\"https://i.pravatar.cc/100?img=2\" alt=\"2\" />\n        <img src=\"https://i.pravatar.cc/100?img=3\" alt=\"3\" />\n      </AvatarGroup>\n    "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "registryDependencies": ["https://uignite.in/r/avatargroup.json"]
+}

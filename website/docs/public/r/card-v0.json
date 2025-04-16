@@ -1,1 +1,14 @@
-{"name":"card-v0","type":"registry:component","dependencies":[],"files":[{"path":"registry/default/components/card-v0.tsx","type":"registry:component","content":"import Card from \"@/components/ui/Card.tsx\"\nimport \nCardHeader from \"@/components/ui/\nCardHeader.tsx\"\nimport \nCardTitle from \"@/components/ui/\nCardTitle.tsx\"\nimport \nCardDescription from \"@/components/ui/\nCardDescription.tsx\"\nimport \nCardContent from \"@/components/ui/\nCardContent.tsx\"\nimport \nCardFooter from \"@/components/ui/\nCardFooter.tsx\"\nimport  from \"@/components/ui/.tsx\"\n      <Card>\n        <CardHeader>\n          <CardTitle>Card Title</CardTitle>\n          <CardDescription>This is a short description inside the card.</CardDescription>\n        </CardHeader>\n        <CardContent>\n          Here’s the main content of the card. You can add text, images, or even other components here.\n        </CardContent>\n        <CardFooter>\n          <button className=\"text-sm text-blue-500\">Action</button>\n          <span className=\"text-xs text-muted-foreground\">Footer note</span>\n        </CardFooter>\n      </Card>\n    "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json","registryDependencies":["https://uignite.in/r/card.json"]}
+{
+  "name": "card-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "registry/default/components/card-v0.tsx",
+      "type": "registry:component",
+      "content": "import Card from \"@/components/ui/Card.tsx\"\nimport \nCardHeader from \"@/components/ui/\nCardHeader.tsx\"\nimport \nCardTitle from \"@/components/ui/\nCardTitle.tsx\"\nimport \nCardDescription from \"@/components/ui/\nCardDescription.tsx\"\nimport \nCardContent from \"@/components/ui/\nCardContent.tsx\"\nimport \nCardFooter from \"@/components/ui/\nCardFooter.tsx\"\nimport  from \"@/components/ui/.tsx\"\n      <Card>\n        <CardHeader>\n          <CardTitle>Card Title</CardTitle>\n          <CardDescription>This is a short description inside the card.</CardDescription>\n        </CardHeader>\n        <CardContent>\n          Here’s the main content of the card. You can add text, images, or even other components here.\n        </CardContent>\n        <CardFooter>\n          <button className=\"text-sm text-blue-500\">Action</button>\n          <span className=\"text-xs text-muted-foreground\">Footer note</span>\n        </CardFooter>\n      </Card>\n    "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "registryDependencies": ["https://uignite.in/r/card.json"]
+}
