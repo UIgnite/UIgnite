@@ -2,8 +2,17 @@ import {useState} from 'react';
 import {Button} from '@pkgs/uignite';
 import {CustomTheme} from '../utils/CustomTheme';
 import {motion} from 'framer-motion';
-import {Copy, Check} from 'lucide-react';
-import {Settings, Zap, Moon, LayoutGrid} from 'lucide-react';
+import {
+  Copy,
+  Check,
+  ShieldCheck,
+  BookOpen,
+  CheckCircle,
+  Layers,
+  Zap,
+  Moon,
+} from 'lucide-react';
+
 // import {Card, CardHeader, CardContent, CardTitle} from '@pkgs/uignite';
 // import {Accordion, AccordionWrapper} from '@pkgs/uignite';
 // import {Input} from '@pkgs/uignite';
@@ -34,28 +43,40 @@ const Home = () => {
   };
   const features = [
     {
-      icon: <Settings className="text-blue-500" size={24} />,
-      title: 'Themeable',
+      icon: <ShieldCheck className="text-blue-500" size={24} />,
+      title: 'Type-Safe by Design',
       description:
-        'Provides a plugin to customize default themes, you can change all semantic tokens or create an entire new theme.',
+        'UIgnite is built from the ground up with a fully-typed, TypeScript-first API, giving you the power of type safety with none of the guesswork.',
     },
     {
       icon: <Zap className="text-blue-500" size={24} />,
-      title: 'Fast',
+      title: 'Fast and Lightweight',
       description:
-        'Built on top of Tailwind CSS, which means no runtime styles, and no unnecessary classes in your bundle.',
+        'Built with performance in mind, UIgnite components are lightweight, ensuring your app stays fast and snappy without sacrificing design or functionality.',
     },
     {
       icon: <Moon className="text-blue-500" size={24} />,
-      title: 'Light & Dark UI',
+      title: 'Light & Dark Mode Support',
       description:
-        'Automatic dark mode recognition, HeroUI automatically changes the theme when detects HTML theme prop changes.',
+        'Every UIgnite component is built to seamlessly adapt to light and dark themes out of the box — no configuration, no overrides.',
     },
     {
-      icon: <LayoutGrid className="text-blue-500" size={24} />,
-      title: 'Card Title',
+      icon: <BookOpen className="text-blue-500" size={24} />,
+      title: 'Clear Documentation',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, quasi!',
+        'Accelerate your development with well-organized and easy-to-follow docs, helping you get up to speed quickly and build with confidence.',
+    },
+    {
+      icon: <CheckCircle className="text-blue-500" size={24} />,
+      title: 'Reliable and Consistent',
+      description:
+        'UIgnite ensures consistent behavior across all components, making it easy to build reliable apps with predictable results every time.',
+    },
+    {
+      icon: <Layers className="text-blue-500" size={24} />,
+      title: 'Modular and Customizable',
+      description:
+        'UIgnite offers a modular architecture, allowing you to easily extend, override, and customize components to fit your needs.',
     },
   ];
 
@@ -151,7 +172,7 @@ const Home = () => {
                   </Button>
                 </div>
                 <TechStack />
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 p-4 mt-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-4 mt-3">
                   {features.map((feature, index) => (
                     <div
                       key={index}
