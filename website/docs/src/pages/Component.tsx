@@ -17,6 +17,7 @@ import {
 } from '@pkgs/uignite';
 import Navbar from '../components/Navbar';
 import Resizable from '../components/Resizable';
+import Search from './components/Search';
 // import { DatePicker } from "@pkgs/uignite";
 
 // interface AvatarData {
@@ -45,6 +46,8 @@ const Components = () => {
           <div className="w-full h-full bg-rose-200"></div>
         </Resizable>
       </div>
+
+      <Search />
 
       {/* <Navbar
         lightLogo={'/Darklogo.svg?url'}
@@ -131,7 +134,10 @@ const Components = () => {
             content={<div>THis is preview</div>}
             value="preview"
           ></TabContent>
-          <TabContent content={<div></div>} value="code"></TabContent>
+          <TabContent
+            content={<div>This is content </div>}
+            value="code"
+          ></TabContent>
         </Tabs>
 
         <Tooltip title={'I am Tooltip '} options={{delay: 300}}>

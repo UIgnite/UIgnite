@@ -37,19 +37,19 @@ const elements = [
           <Accordion
             title="What is MobiMart?"
             content="MobiMart is an e-commerce platform selling mobile gadgets like earbuds, phones, and speakers."
+            className="bg-gray-100 hover:bg-white  border-[0.5px] dark:border-neutral-800"
           />
           <Accordion
             title="How long does delivery take?"
             content="Typically 2-4 business days depending on your location."
+            className="bg-gray-100 hover:bg-white  border-[0.5px] dark:border-neutral-800"
           />
           <Accordion
             title="Can I return a product?"
             content="Yes, we have a 7-day easy return policy."
+            className="bg-gray-100 hover:bg-white  border-[0.5px] dark:border-neutral-800"
           />
-          <Accordion
-            title="How long does delivery take?"
-            content="Typically 2-4 business days depending on your location."
-          />
+          
         </AccordionWrapper>
       </div>
     `,
@@ -339,15 +339,25 @@ const elements = [
   //   element: `<Switch defaultState={true} />`,
   // },
   {
-    id: 'tabs',
+    id: 'Tabs',
     scope: {Tabs},
     element: `
-      <Tabs
-        tabs={[
-          { label: "Tab 1", content: "Content 1" },
-          { label: "Tab 2", content: "Content 2" },
-        ]}
-      />
+  
+    <div> Hi </div>
+      <Tabs defaultVal="preview">
+        <TabList activeTab="">
+          <Tab title="Preview" value="preview"></Tab>
+          <Tab title="Code" value="code"></Tab>
+        </TabList>
+        <TabContent
+          content={<div> We are using our own tab component here as well </div>}
+          value="preview"
+        ></TabContent>
+        <TabContent 
+          content={<div>Thank you for using our components </div>} 
+          value="code">
+        </TabContent>
+      </Tabs>
     `,
   },
   {
