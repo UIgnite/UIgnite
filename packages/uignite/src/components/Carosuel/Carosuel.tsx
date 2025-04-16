@@ -41,9 +41,12 @@ const Carosuel: React.FC<CarouselProps> = ({children, className}) => {
 
   return (
     <div className={cn(carouselVariants(), className)}>
-      <div ref={containerRef} className="flex overflow-x-hidden scroll-smooth">
+      <div
+        ref={containerRef}
+        className="flex overflow-x-hidden scroll-smooth h-72"
+      >
         {React.Children.map(children, (child) => (
-          <div className="w-full flex-shrink-0">{child}</div>
+          <div className="w-full h-full flex-shrink-0">{child}</div>
         ))}
       </div>
 

@@ -108,7 +108,7 @@ const TestCards = () => {
       <Card className="m-0 p-0 h-[440px] w-[325px] rounded-3xl">
         <CardHeader className="m-0 p-0 ">
           <img
-            src="/me.png"
+            src="/saurav.png"
             alt=""
             className="h-[295px] w-full object-cover rounded-t-xl"
           />
