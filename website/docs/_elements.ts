@@ -32,6 +32,7 @@ import Footer from './src/components/Footer';
 import Navbar from './src/components/Navbar';
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react';
+import {Info} from 'lucide-react';
 
 const elements = [
   {
@@ -144,6 +145,7 @@ const elements = [
       Avatar,
       useState,
       useEffect,
+      Info,
     },
     element: `
   function TwitterCard () {
@@ -245,13 +247,13 @@ const elements = [
       <Card className="m-0 p-0 h-[440px] w-[325px] rounded-3xl">
         <CardHeader className="m-0 p-0 ">
           <img
-            src="/saurav.png"
+            src="/me.png"
             alt=""
             className="h-[295px] w-full object-cover rounded-t-xl"
           />
         </CardHeader>
         <CardContent className="flex flex-col justify-center items-center mt-5">
-          <div className="font-semibold text-2xl">Aman Gupta</div>
+          <div className="font-semibold text-2xl">Aman Gupta Besharam</div>
           <div className="text-sm text-neutral-600 dark:text-zinc-500 ">
             Backend Developer at OnlyDevs
           </div>
@@ -295,14 +297,7 @@ const elements = [
       </div>
     </Carosuel> 
     `,
-    variation: [
-      `
-      
-      `,
-      `
-      
-      `,
-    ],
+    variation: [],
   },
 
   {
