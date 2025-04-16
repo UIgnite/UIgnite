@@ -4,10 +4,10 @@ import {CustomTheme} from '../utils/CustomTheme';
 import {motion} from 'framer-motion';
 import {Copy, Check} from 'lucide-react';
 import {Settings, Zap, Moon, LayoutGrid} from 'lucide-react';
-import {Card, CardHeader, CardContent, CardTitle} from '@pkgs/uignite';
-import {Accordion, AccordionWrapper} from '@pkgs/uignite';
-import {Input} from '@pkgs/uignite';
-import {Skeleton} from '@pkgs/uignite';
+// import {Card, CardHeader, CardContent, CardTitle} from '@pkgs/uignite';
+// import {Accordion, AccordionWrapper} from '@pkgs/uignite';
+// import {Input} from '@pkgs/uignite';
+// import {Skeleton} from '@pkgs/uignite';
 import {Testimonials} from '@pkgs/uignite';
 import Navbar from '../components/Navbar';
 import {GridBackground} from '../utils/GridBackground';
@@ -15,17 +15,17 @@ import TechStack from '../utils/TechStack';
 import {VideoPlayer} from "@pkgs/uignite"
 const Home = () => {
   const [isCopied, setIsCopied] = useState(false);
-  const [email, setEmail] = useState('');
-  const [error, setError] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [error, setError] = useState('');
 
-  const validateEmail = (value: string) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!regex.test(value)) {
-      setError('Please enter a valid email address');
-    } else {
-      setError('');
-    }
-  };
+  // const validateEmail = (value: string) => {
+  //   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //   if (!regex.test(value)) {
+  //     setError('Please enter a valid email address');
+  //   } else {
+  //     setError('');
+  //   }
+  // };
 
   const handleCopy = () => {
     navigator.clipboard.writeText('npm i uignite');
@@ -294,7 +294,6 @@ const Home = () => {
         thumbnailUrl="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
         muted={false}
         autoplay={false}
-        className="rounded-2xl"
       />
     </div>
           <div className="text-center ">
