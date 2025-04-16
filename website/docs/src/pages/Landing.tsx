@@ -1,4 +1,4 @@
-import {Button} from '@pkgs/uignite/dist';
+import {Button} from '@pkgs/uignite';
 import {Link} from 'react-router-dom';
 
 const Landing = () => {

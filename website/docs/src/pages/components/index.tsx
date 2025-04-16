@@ -11,7 +11,7 @@ import {
 } from '../../utils/lib';
 import {Install} from './Install';
 import {Properties} from './Properties';
-import {Button} from '@pkgs/uignite/dist';
+import {Button} from '@pkgs/uignite';
 import {useNavigate} from 'react-router-dom';
 
 export default function Component() {

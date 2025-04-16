@@ -1,1 +1,14 @@
-{"name":"tooltip-v0","type":"registry:ui","dependencies":[],"files":[{"path":"registry/default/components/tooltip-v0.tsx","type":"registry:component","content":"import Tooltip from \"@/components/ui/Tooltip.tsx\"\r\n      <Tooltip title=\"This is a tooltip\" options={{ delay: 500 }}>\r\n        <button className=\"px-4 py-2 bg-blue-500 text-white rounded\">Hover me</button>\r\n      </Tooltip>\r\n    "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json","registryDependencies":["https://uignite.in/r/tooltip.json"]}
+{
+  "name": "tooltip-v0",
+  "type": "registry:ui",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "registry/default/components/tooltip-v0.tsx",
+      "type": "registry:component",
+      "content": "import Tooltip from \"@/components/ui/Tooltip.tsx\"\r\n      <Tooltip title=\"This is a tooltip\" options={{ delay: 500 }}>\r\n        <button className=\"px-4 py-2 bg-blue-500 text-white rounded\">Hover me</button>\r\n      </Tooltip>\r\n    "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "registryDependencies": ["https://uignite.in/r/tooltip.json"]
+}

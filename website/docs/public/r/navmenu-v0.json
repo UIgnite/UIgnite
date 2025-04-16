@@ -1,1 +1,14 @@
-{"name":"navmenu-v0","type":"registry:ui","dependencies":[],"files":[{"path":"registry/default/components/navmenu-v0.tsx","type":"registry:component","content":"import NavMenu from \"@/components/ui/NavMenu.tsx\"<NavMenu />"}],"$schema":"https://ui.shadcn.com/schema/registry-item.json","registryDependencies":["https://uignite.in/r/navmenu.json"]}
+{
+  "name": "navmenu-v0",
+  "type": "registry:ui",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "registry/default/components/navmenu-v0.tsx",
+      "type": "registry:component",
+      "content": "import NavMenu from \"@/components/ui/NavMenu.tsx\"<NavMenu />"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "registryDependencies": ["https://uignite.in/r/navmenu.json"]
+}

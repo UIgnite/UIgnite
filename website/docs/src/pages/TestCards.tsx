@@ -8,7 +8,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@pkgs/uignite/dist';
+} from '@pkgs/uignite';
 import {useState} from 'react';
 
 const TestCards = () => {
