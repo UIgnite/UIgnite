@@ -1,6 +1,6 @@
 {
   "name": "input-v0",
-  "type": "registry:ui",
+  "type": "registry:component",
   "dependencies": [],
   "files": [
     {

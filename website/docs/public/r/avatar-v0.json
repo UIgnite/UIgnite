@@ -1,12 +1,12 @@
 {
   "name": "avatar-v0",
-  "type": "registry:ui",
+  "type": "registry:component",
   "dependencies": [],
   "files": [
     {
       "path": "registry/default/components/avatar-v0.tsx",
       "type": "registry:component",
-      "content": "import Avatar from \"@/components/ui/Avatar.tsx\"\r\n      <>\r\n        <Avatar url={\"/piyush-sir.png\"} alt={\"user\"} />\r\n        <Avatar url={\"/hitesh-sir.png\"} alt={\"user\"} />\r\n      </>\r\n    "
+      "content": "import Avatar from \"@/components/ui/Avatar.tsx\"\n      <>\n        <Avatar url={\"/piyush-sir.png\"} alt={\"user\"} />\n        <Avatar url={\"/hitesh-sir.png\"} alt={\"user\"} />\n      </>\n    "
     }
   ],
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",

@@ -51,6 +51,7 @@ async function register(name, results) {
         {
           ...registryItem,
           name: `${element[0].id}-v0`,
+          type: 'registry:component',
           $schema: 'https://ui.shadcn.com/schema/registry-item.json',
           registryDependencies: [
             ...(registryItem.registryDependencies
