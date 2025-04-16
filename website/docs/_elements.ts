@@ -30,6 +30,8 @@ import {
 import Footer from './src/components/Footer';
 import Navbar from './src/components/Navbar';
 import {Link} from 'react-router-dom';
+import { CommandButton } from './src/components/CommandButton';
+import { AlarmClockCheck } from 'lucide-react';
 
 const elements = [
   {
@@ -74,8 +76,8 @@ const elements = [
   },
   {
     id: 'button',
-    scope: {Button},
-    element: `<div className="grid grid-cols-5 gap-10">
+    scope: {Button,CommandButton,AlarmClockCheck},
+    element: `<div className="grid grid-cols-4 gap-10">
             <Button variant="primary">primary</Button>
             <Button variant="destructive">destructive</Button>
             <Button variant="success">success</Button>
@@ -87,12 +89,13 @@ const elements = [
             <Button variant="glass">glass</Button>
             <Button variant="dark">dark</Button>
             <Button variant="light">light</Button>
-            <Button variant="gradient">gradient</Button>
-            <Button animatedBorder>animated</Button>
             <Button gradientBorder>gradBorder</Button>
+            <Button variant="gradient">gradient</Button>       
             <Button className="animate-border text-white font-semibold px-6 py-3 rounded-xl">
               Hover Me
             </Button>
+            <Button className="bg-blue-800 rounded-full" icon={<AlarmClockCheck/>}>Snooze</Button>
+            <CommandButton/>
           </div> 
     `,
   },
