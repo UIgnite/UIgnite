@@ -67,9 +67,9 @@ function SearchBar() {
         // Optional reopen button
         <button
           onClick={() => setIsSearchOpen(true)}
-          className=" flex justify-start items-center max-w-[300px] min-w-[200px] text-left cursor-pointer px-4 py-1  border-[0.5px] border-neutral-300 dark:border-neutral-700 text-neutral-400 text-sm dark:bg-neutral-900 rounded-md shadow-sm "
+          className=" flex justify-start items-center w-full  min-w-[300px] text-left cursor-pointer px-4 py-1  border-[0.5px] border-neutral-300 dark:border-neutral-700 text-neutral-400 text-sm dark:bg-neutral-900 rounded-md shadow-sm "
         >
-          <Search className="w-[15px] mr-2" />
+          <Search className="w-[18px] mr-2" />
           Search components...
         </button>
       )}
