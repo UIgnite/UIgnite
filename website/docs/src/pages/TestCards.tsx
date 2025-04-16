@@ -4,6 +4,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from '@pkgs/uignite';
@@ -82,7 +83,7 @@ const TestCards = () => {
             workflows like Turbo Repo, TypeScript, and GitHub CI/CD.
           </p>
           <div className="flex gap-2 items-center mt-2">
-            <div className="font-medium text-md">6,999 INR</div>
+            <div className="font-medium text-md ">6,999 INR</div>
             <div className="line-through text-sm text-gray-400 dark:text-gray-500">
               8,999 INR
             </div>
@@ -100,6 +101,38 @@ const TestCards = () => {
             </Button>
           </a>
         </CardContent>
+      </Card>
+
+      {/* github card */}
+
+      <Card className="m-0 p-0 h-[440px] w-[325px] rounded-3xl">
+        <CardHeader className="m-0 p-0 ">
+          <img
+            src="/me.png"
+            alt=""
+            className="h-[295px] w-full object-cover rounded-t-xl"
+          />
+        </CardHeader>
+        <CardContent className="flex flex-col justify-center items-center mt-5">
+          <div className="font-semibold text-2xl">Saurav Jha</div>
+          <div className="text-sm text-neutral-600 dark:text-zinc-500 ">
+            Backend Developer at OnlyDevs
+          </div>
+        </CardContent>
+        <CardFooter className="flex justify-between items-center px-4 space-mono ">
+          <div className="flex flex-col">
+            <div className="text-xs text-neutral-400 dark:text-zinc-400 ">
+              Total Commits
+            </div>
+            <div className="">100+</div>
+          </div>
+          <div className="flex flex-col">
+            <div className="text-xs text-neutral-400 dark:text-zinc-400">
+              Total PRs
+            </div>
+            <div className="">20+</div>
+          </div>
+        </CardFooter>
       </Card>
     </div>
   );

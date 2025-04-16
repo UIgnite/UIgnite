@@ -22,10 +22,12 @@ import {
   TabList,
   Tabs,
   Tab,
-  Textarea,
+  TextArea,
   Tooltip,
+  Switch,
+  Toast,
+  useToast,
 } from '@pkgs/uignite';
-import {Toast as ToastUi} from '@pkgs/uignite';
 import Footer from './src/components/Footer';
 import Navbar from './src/components/Navbar';
 import {Link} from 'react-router-dom';
@@ -58,37 +60,19 @@ const elements = [
   },
   {
     id: 'avatar',
-    scope: {Avatar},
+    scope: {Avatar , AvatarGroup},
     element: `
       <>
         <Avatar url={"/piyush-sir.png"} alt={"user"} />
         <Avatar url={"/hitesh-sir.png"} alt={"user"} />
+        <AvatarGroup>
+          <img src="https://i.pravatar.cc/100?img=1" alt="1" />
+          <img src="https://i.pravatar.cc/100?img=2" alt="2" />
+          <img src="https://i.pravatar.cc/100?img=3" alt="3" />
+        </AvatarGroup>
       </>
     `,
   },
-  {
-    id: 'avatargroup',
-    scope: {AvatarGroup},
-    element: `
-      <AvatarGroup>
-        <img src="https://i.pravatar.cc/100?img=1" alt="1" />
-        <img src="https://i.pravatar.cc/100?img=2" alt="2" />
-        <img src="https://i.pravatar.cc/100?img=3" alt="3" />
-      </AvatarGroup>
-    `,
-  },
-  // {
-  //   id: "avatargrouptooltip",
-  //   scope: { AvatarGroupWithTooltip },
-  //   element: `
-  //     <AvatarGroupWithTooltip
-  //       users={[
-  //         { name: "Alice", src: "https://i.pravatar.cc/100?img=4" },
-  //         { name: "Bob", src: "https://i.pravatar.cc/100?img=5" },
-  //       ]}
-  //     />
-  //   `,
-  // },
   {
     id: 'button',
     scope: {Button},
@@ -139,11 +123,7 @@ const elements = [
       </Card>
     `,
   },
-  // {
-  //   id: "datepicker",
-  //   scope: { DatePicker },
-  //   element: `<DatePicker onChange={(date) => console.log(date)} />`,
-  // },
+ 
   {
     id: 'dropdown',
     scope: {Dropdown},
@@ -218,12 +198,15 @@ const elements = [
     id: 'messagebot',
     scope: {MessageBot},
     element: `
+    <div>
+      <div> Neeche Dekho Neecheee... </div>
       <MessageBot
         orgName="UIgnite"
         themeColor="bg-blue-500"
         url="https://dummyimage.com/100x100/000/fff&text=U"
         alt="Bot avatar"
       />
+    </div>
     `,
   },
   {
@@ -243,6 +226,7 @@ const elements = [
           { label: "Projects", href: "#" },
           { label: "Contact", href: "#" }
         ]}
+          className=" min-w-[50vw]"
       />
     `,
   },
@@ -330,16 +314,14 @@ const elements = [
       <Spinner variant="ripple" className="my-4" />
       <Spinner variant="terminal" className="my-4" />
       <Spinner variant="loader" className="my-4" />
-    </div>
-
-           
+    </div>      
     `,
   },
-  // {
-  //   id: "switch",
-  //   scope: { Switch },
-  //   element: `<Switch defaultState={true} />`,
-  // },
+  {
+    id: 'switch',
+    scope: {Switch},
+    element: `<Switch defaultState={true} />`,
+  },
   {
     id: 'Tabs',
     scope: {Tabs, TabList, Tab, TabContent},
@@ -362,13 +344,31 @@ const elements = [
   },
   {
     id: 'textarea',
-    scope: {Textarea},
+    scope: {TextArea},
     element: `<TextArea placeholder="Write something..." />`,
   },
   {
     id: 'toast',
-    scope: {ToastUi},
-    element: `<Toast message="This is a toast!" type="success" />`,
+    scope: {useToast, Toast, Button},
+    element: `
+    function ToastPreview() {
+      const toast = useToast();
+
+      return (
+        <Button
+          onClick={() => {
+            toast.showToast('Hover Me ', {
+              desc: \`I am the new \$\{Math.floor(Math.random() * 100) + 1\}\`,
+              timeout: 3000,
+            });
+          }}
+          className="mt-5 bg-gray-50 text-black hover:bg-gray-100"
+        >
+          Browse Components
+        </Button>
+      )
+    }
+    `,
   },
   {
     id: 'tooltip',

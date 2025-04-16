@@ -20,8 +20,8 @@ export default function ComponentList() {
 }
 
 const ComponentCard = ({
-  name = 'Textarea',
-  id = 'Textarea',
+  name = 'Accordion',
+  id = 'Accordion',
   imageUrl = './accordion.png',
   desc = 'Button is a button whose role is button which is button is called button.',
 }) => {

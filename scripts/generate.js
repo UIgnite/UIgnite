@@ -37,11 +37,13 @@ async function register(name, results) {
         return {...file, content};
       })
     );
+
     await writeComponentContent(`./website/docs/public/r/${name}.json`, {
       ...registryItem,
       $schema: 'https://ui.shadcn.com/schema/registry-item.json',
       files: filesWithContent,
     });
+
     const element = results.filter(
       (e) => e.id.toLowerCase().trim() == name.toLowerCase().trim()
     );
