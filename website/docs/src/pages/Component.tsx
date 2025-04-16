@@ -17,7 +17,7 @@ import {
 } from '@pkgs/uignite';
 import Navbar from '../components/Navbar';
 import Resizable from '../components/Resizable';
-import Search from './components/Search';
+import SearchBar from './components/Search';
 // import { DatePicker } from "@pkgs/uignite";
 
 // interface AvatarData {
@@ -47,8 +47,6 @@ const Components = () => {
         </Resizable>
       </div>
 
-      <Search />
-
       {/* <Navbar
         lightLogo={'/Darklogo.svg?url'}
         darkLogo={'/Logo.svg'}
@@ -61,8 +59,8 @@ const Components = () => {
           {label: 'Docs', href: '#docs'},
           {label: 'Components', href: '#components'},
           {label: 'Team', href: '#team'},
-        ]}
-      /> */}
+          ]}
+          /> */}
       <Navbar />
 
       <div className="flex flex-col items-center justify-center text-center">
@@ -85,6 +83,7 @@ const Components = () => {
             {url: './assets/avatars/myDp.webp', alt: 'ram'},
           ]}
         />
+        <SearchBar />
 
         <div className="flex items-center space-x-4 mt-8">
           <Skeleton className="h-12 w-12 rounded-full" />
