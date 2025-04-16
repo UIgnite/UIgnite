@@ -4,28 +4,28 @@ import {CustomTheme} from '../utils/CustomTheme';
 import {motion} from 'framer-motion';
 import {Copy, Check} from 'lucide-react';
 import {Settings, Zap, Moon, LayoutGrid} from 'lucide-react';
-import {Card, CardHeader, CardContent, CardTitle} from '@pkgs/uignite';
-import {Accordion, AccordionWrapper} from '@pkgs/uignite';
-import {Input} from '@pkgs/uignite';
-import {Skeleton} from '@pkgs/uignite';
+// import {Card, CardHeader, CardContent, CardTitle} from '@pkgs/uignite';
+// import {Accordion, AccordionWrapper} from '@pkgs/uignite';
+// import {Input} from '@pkgs/uignite';
+// import {Skeleton} from '@pkgs/uignite';
 import {Testimonials} from '@pkgs/uignite';
 import Navbar from '../components/Navbar';
 import {GridBackground} from '../utils/GridBackground';
 import TechStack from '../utils/TechStack';
-
+import {VideoPlayer} from "@pkgs/uignite"
 const Home = () => {
   const [isCopied, setIsCopied] = useState(false);
-  const [email, setEmail] = useState('');
-  const [error, setError] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [error, setError] = useState('');
 
-  const validateEmail = (value: string) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!regex.test(value)) {
-      setError('Please enter a valid email address');
-    } else {
-      setError('');
-    }
-  };
+  // const validateEmail = (value: string) => {
+  //   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //   if (!regex.test(value)) {
+  //     setError('Please enter a valid email address');
+  //   } else {
+  //     setError('');
+  //   }
+  // };
 
   const handleCopy = () => {
     navigator.clipboard.writeText('npm i uignite');
@@ -151,7 +151,7 @@ const Home = () => {
                   </Button>
                 </div>
                 <TechStack />
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 p-4 mt-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 p-4 mt-3">
                   {features.map((feature, index) => (
                     <div
                       key={index}
@@ -190,7 +190,7 @@ const Home = () => {
             </motion.div>
           </div>
 
-          <div className=" grid grid-cols-1  lg:grid-cols-3 gap-5 z-10 relative mt-12 cursor-pointer">
+          {/* <div className=" grid grid-cols-1  lg:grid-cols-3 gap-5 z-10 relative mt-12 cursor-pointer">
             <div className="relative flex-1  bg-tranparent rounded-xl flex justify-center items-center overflow-hidden dark:shadow-[#001933] dark:shadow-xl">
               <div className="absolute inset-0 bg-transprent pointer-events-none"></div>
               <div className="relative z-10 w-full">
@@ -288,8 +288,14 @@ const Home = () => {
               <div className="absolute inset-0 bg-transparent pointer-events-none"></div>
               <div className="relative z-10 ">Coming Soon</div>
             </div>
-          </div>
-
+          </div> */}
+          <div className="flex items-center justify-center">
+      <VideoPlayer
+        thumbnailUrl="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+        muted={false}
+        autoplay={false}
+      />
+    </div>
           <div className="text-center ">
             <motion.p
               className="text-6xl font-semibold mt-40 dark:text-[#f7f7f8] text-[#0d0346]"
