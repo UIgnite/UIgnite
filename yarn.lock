@@ -5218,6 +5218,16 @@ lucide-react@^0.487.0:
   resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.487.0.tgz#c18a463404e8ef106d46a7c9cceddf9fc8b9ff6b"
   integrity sha512-aKqhOQ+YmFnwq8dWgGjOuLc8V1R9/c/yOd+zDY4+ohsR2Jo05lSGc3WsstYPIzcTpeosN7LoCkLReUUITvaIvw==
 
+lucide-react@^0.488.0:
+  version "0.488.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.488.0.tgz#1cd1fb9f653db018c48c465bb76eb20be40a69bd"
+  integrity sha512-ronlL0MyKut4CEzBY/ai2ZpKPxyWO4jUqdAkm2GNK5Zn3Rj+swDz+3lvyAUXN0PNqPKIX6XM9Xadwz/skLs/pQ==
+
+lucide@^0.488.0:
+  version "0.488.0"
+  resolved "https://registry.yarnpkg.com/lucide/-/lucide-0.488.0.tgz#cf0349989aef1288ecdf7413a7b779acdd28695d"
+  integrity sha512-AcCuN/R9ZRDEH+H47azM5RWbhUTi02+OL4QHeY6kP/MGMSislGWtRDNqj/2EJIBp/qMKpuAU1v5BLAVT0BDE/g==
+
 magic-string@^0.30.17:
   version "0.30.17"
   resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.30.17.tgz#450a449673d2460e5bbcfba9a61916a1714c7453"
