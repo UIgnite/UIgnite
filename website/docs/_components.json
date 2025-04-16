@@ -528,44 +528,7 @@
       }
     ]
   },
-  {
-    "id": "Preview",
-    "name": "Preview",
-    "desc": "",
-    "path": "/components/Textarea.tsx",
-    "previewImageUrl": "",
-    "installation": [
-      {
-        "title": "Install dependencies",
-        "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
-        "path": "/components/Textarea.tsx"
-      },
-      {
-        "title": "Copy the code",
-        "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
-        "path": "/components/Textarea.tsx"
-      },
-      {
-        "title": "Install dependencies",
-        "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
-        "path": "/components/Textarea.tsx"
-      }
-    ],
-    "props": [
-      {
-        "prop": "",
-        "type": "",
-        "desc": "",
-        "defaultValue": ""
-      },
-      {
-        "prop": "",
-        "type": "",
-        "desc": "",
-        "defaultValue": ""
-      }
-    ]
-  },
+
   {
     "id": "PricingCard",
     "name": "PricingCard",

@@ -178,3 +178,7 @@ body {
 .loader-line {
   animation: fade 1.2s linear infinite;
 }
+
+input::-webkit-search-cancel-button {
+  display: none;
+}
