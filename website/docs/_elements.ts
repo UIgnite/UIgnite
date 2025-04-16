@@ -216,14 +216,17 @@ const elements = [
   },
   {
     id: 'messagebot',
-    scope: {MessageBot},
+    scope: {MessageBot },
     element: `
+    <div>
+      <div> Neeche Dekho Neecheee... </div>
       <MessageBot
         orgName="UIgnite"
         themeColor="bg-blue-500"
         url="https://dummyimage.com/100x100/000/fff&text=U"
         alt="Bot avatar"
       />
+    </div>
     `,
   },
   {

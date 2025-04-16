@@ -36,7 +36,7 @@ function SearchBar() {
           ></div>
 
           {/* Search Box + Hits */}
-          <div className="w-[30vw] z-10">
+          <div className="w-[30vw]  z-10">
             <div className="w-full max-w-2xl">
               <InstantSearch
                 searchClient={searchClient}
@@ -46,7 +46,7 @@ function SearchBar() {
                 <SearchBox
                   placeholder="Search components..."
                   classNames={{
-                    root: 'w-full relative',
+                    root: ' relative',
                     input:
                       'w-full pl-10 pr-4 py-2 border-[0.5px] border-gray-300 dark:border-neutral-800 bg-white dark:bg-black text-gray-900 dark:text-gray-100 rounded-t-md shadow-sm focus:outline-none placeholder-gray-400 dark:placeholder-gray-500',
                     submit:
@@ -67,7 +67,7 @@ function SearchBar() {
         // Optional reopen button
         <button
           onClick={() => setIsSearchOpen(true)}
-          className=" flex justify-start items-center w-[300px] text-left cursor-pointer px-4 py-1  border-[0.5px] border-neutral-300 dark:border-neutral-700 text-neutral-400 text-sm dark:bg-neutral-900 rounded-md shadow-sm "
+          className=" flex justify-start items-center max-w-[300px] min-w-[200px] text-left cursor-pointer px-4 py-1  border-[0.5px] border-neutral-300 dark:border-neutral-700 text-neutral-400 text-sm dark:bg-neutral-900 rounded-md shadow-sm "
         >
           <Search className="w-[15px] mr-2" />
           Search components...
