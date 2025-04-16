@@ -9,6 +9,7 @@ import PricingSection from './pages/PricingPage';
 import ComponentLayout from './pages/components/_layout';
 import {NotFoundPage} from './pages/NotFoundPage';
 import ComponentPreviewPage from './pages/components';
+import TestCards from './pages/TestCards';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/auth" element={<Auth />} />
 
         <Route path="/docs" element={<Landing />} />
+        <Route path="/testcards" element={<TestCards />} />
         <Route path="/test" element={<Test />} />
         <Route element={<ComponentLayout />}>
           <Route path="/components/" element={<ComponentPreviewPage />} />
