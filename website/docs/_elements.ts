@@ -13,7 +13,6 @@ import {
   Dropdown,
   Input,
   MessageBot,
-  NavMenu,
   PricingCard,
   Resizable,
   Skeleton,
@@ -229,11 +228,6 @@ const elements = [
           className=" min-w-[50vw]"
       />
     `,
-  },
-  {
-    id: 'navmenu',
-    scope: {NavMenu},
-    element: `<NavMenu />`,
   },
   {
     id: 'pricingCard',
