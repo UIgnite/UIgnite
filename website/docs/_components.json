@@ -451,29 +451,6 @@
     ]
   },
   {
-    "id": "NavMenu",
-    "name": "NavMenu",
-    "desc": "A center-aligned nav menu with dropdowns for each section. Smooth transitions, Tailwind styled, and fully customizable. Dropdowns appear on hover with a polished glow effect.",
-    "path": "/components/NavMenu/NavMenu.tsx",
-    "previewImageUrl": "",
-    "installation": [
-      {
-        "title": "Import NavMenu",
-        "codeBlock": "import NavMenu from '@/components/NavMenu';",
-        "path": "/components/NavMenu/NavMenu.tsx"
-      }
-    ],
-    "props": [
-      {
-        "prop": "Dropdown",
-        "type": "component",
-        "desc": "Internal component that receives and displays dropdown `content` for each menu item.",
-        "defaultValue": "—"
-      }
-    ]
-  },
-
-  {
     "id": "PricingCard",
     "name": "PricingCard",
     "desc": "Flexible pricing card with theme-based styling, animated hover effects, and support for highlighting popular plans. Includes theme toggle via ThemeSelector.",
