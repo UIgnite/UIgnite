@@ -7,6 +7,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
+  Input,
 } from '@pkgs/uignite';
 import {Info} from 'lucide-react';
 import {useState} from 'react';
@@ -72,69 +73,68 @@ const TestCards = () => {
           />
         </div>
 
-          <CardContent className="px-2">
-            <h1 className="font-semibold text-2xl text-zinc-800 dark:text-zinc-200">
-              Web Dev Cohort 1.0
-            </h1>
-            <p className="text-sm leading-tight text-neutral-700 dark:text-neutral-400">
-              Master full-stack web development with Web Dev Cohort. Learn HTML,
-              CSS, JS, React, Next.js, Node, Docker, databases like
-              MongoDB/PostgreSQL, DevOps with AWS (ECR, EC2, CloudFront), modern
-              workflows like Turbo Repo, TypeScript, and GitHub CI/CD.
-            </p>
-            <div className="flex gap-2 items-center mt-2 funnel">
-              <div className="font-medium text-xl ">6,999 INR</div>
-              <div className="line-through text-base text-gray-400 dark:text-gray-500">
-                8,999 INR
-              </div>
+        <CardContent className="px-2">
+          <h1 className="font-semibold text-2xl text-zinc-800 dark:text-zinc-200">
+            Web Dev Cohort 1.0
+          </h1>
+          <p className="text-sm leading-tight text-neutral-700 dark:text-neutral-400">
+            Master full-stack web development with Web Dev Cohort. Learn HTML,
+            CSS, JS, React, Next.js, Node, Docker, databases like
+            MongoDB/PostgreSQL, DevOps with AWS (ECR, EC2, CloudFront), modern
+            workflows like Turbo Repo, TypeScript, and GitHub CI/CD.
+          </p>
+          <div className="flex gap-2 items-center mt-2 funnel">
+            <div className="font-medium text-xl ">6,999 INR</div>
+            <div className="line-through text-base text-gray-400 dark:text-gray-500">
+              8,999 INR
             </div>
-            <div className="text-sm text-blue-500 dark:text-blue-400">
-              Save 22%
-            </div>
-            <a
-              href="https://courses.chaicode.com/learn/batch/about?bundleId=214297"
-              target="_blank"
-            >
-              <Button className="mt-3 w-full">
-                Learn More
-                <Info className="ml-2 size-4" />
-              </Button>
-            </a>
-          </CardContent>
-        </Card>
+          </div>
+          <div className="text-sm text-blue-500 dark:text-blue-400">
+            Save 22%
+          </div>
+          <a
+            href="https://courses.chaicode.com/learn/batch/about?bundleId=214297"
+            target="_blank"
+          >
+            <Button className="mt-3 w-full">
+              Learn More
+              <Info className="ml-2 size-4" />
+            </Button>
+          </a>
+        </CardContent>
+      </Card>
 
       {/* github card */}
 
-        <Card className="m-0 p-0 h-[440px] w-[325px] rounded-3xl">
-          <CardHeader className="m-0 p-0 ">
-            <img
-              src="/me.png"
-              alt=""
-              className="h-[295px] w-full object-cover rounded-t-xl"
-            />
-          </CardHeader>
-          <CardContent className="flex flex-col justify-center items-center mt-3">
-            <div className="font-semibold text-2xl">Aman Gupta</div>
-            <div className="text-sm text-neutral-600 dark:text-zinc-500 ">
-              Backend Developer at OnlyDevs
+      <Card className="m-0 p-0 h-[440px] w-[325px] rounded-3xl">
+        <CardHeader className="m-0 p-0 ">
+          <img
+            src="/me.png"
+            alt=""
+            className="h-[295px] w-full object-cover rounded-t-xl"
+          />
+        </CardHeader>
+        <CardContent className="flex flex-col justify-center items-center mt-3">
+          <div className="font-semibold text-2xl">Aman Gupta</div>
+          <div className="text-sm text-neutral-600 dark:text-zinc-500 ">
+            Backend Developer at OnlyDevs
+          </div>
+        </CardContent>
+        <CardFooter className="flex justify-between items-center px-4 space-mono ">
+          <div className="flex flex-col">
+            <div className="text-xs text-neutral-500 dark:text-zinc-400 ">
+              Total Commits
             </div>
-          </CardContent>
-          <CardFooter className="flex justify-between items-center px-4 space-mono ">
-            <div className="flex flex-col">
-              <div className="text-xs text-neutral-500 dark:text-zinc-400 ">
-                Total Commits
-              </div>
-              <div className="">100+</div>
+            <div className="">100+</div>
+          </div>
+          <div className="flex flex-col">
+            <div className="text-xs text-neutral-500 dark:text-zinc-400">
+              Total PRs
             </div>
-            <div className="flex flex-col">
-              <div className="text-xs text-neutral-500 dark:text-zinc-400">
-                Total PRs
-              </div>
-              <div className="">20+</div>
-            </div>
-          </CardFooter>
-        </Card>
-      </div>
+            <div className="">20+</div>
+          </div>
+        </CardFooter>
+      </Card>
 
       <hr />
       {/* inputs */}
