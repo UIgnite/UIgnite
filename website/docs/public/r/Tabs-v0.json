@@ -1,0 +1,14 @@
+{
+  "name": "Tabs-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "registry/default/components/Tabs-v0.tsx",
+      "type": "registry:component",
+      "content": "import Tabs from \"@/components/ui/Tabs.tsx\"\n  \n    <div> Hi </div>\n      <Tabs defaultVal=\"preview\">\n        <TabList activeTab=\"\">\n          <Tab title=\"Preview\" value=\"preview\"></Tab>\n          <Tab title=\"Code\" value=\"code\"></Tab>\n        </TabList>\n        <TabContent\n          content={<div> We are using our own tab component here as well </div>}\n          value=\"preview\"\n        ></TabContent>\n        <TabContent \n          content={<div>Thank you for using our components </div>} \n          value=\"code\">\n        </TabContent>\n      </Tabs>\n    "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "registryDependencies": ["https://uignite.in/r/tabs.json"]
+}

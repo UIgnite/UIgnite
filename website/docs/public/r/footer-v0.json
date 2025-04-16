@@ -1,0 +1,14 @@
+{
+  "name": "footer-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "registry/default/components/footer-v0.tsx",
+      "type": "registry:component",
+      "content": "import Footer from \"@/components/ui/Footer.tsx\"\n      <Footer\n        lightLogo=\"https://dummyimage.com/120x40/000/fff&text=Light+Logo\"\n        darkLogo=\"https://dummyimage.com/120x40/fff/000&text=Dark+Logo\"\n        description=\"This is a simple footer with sections, social links, and a copyright notice.\"\n        socials={[\n          { type: \"linkedin\", link: \"https://linkedin.com\" },\n          { type: \"twitter\", link: \"https://twitter.com\" },\n          { type: \"instagram\", link: \"https://instagram.com\" },\n          { type: \"youtube\", link: \"https://youtube.com\" },\n        ]}\n        sections={[\n          {\n            title: \"Product\",\n            links: [\n              { label: \"Features\", href: \"#\" },\n              { label: \"Pricing\", href: \"#\" },\n              { label: \"Integrations\", href: \"#\" },\n            ],\n          },\n          {\n            title: \"Company\",\n            links: [\n              { label: \"About\", href: \"#\" },\n              { label: \"Careers\", href: \"#\" },\n              { label: \"Blog\", href: \"#\" },\n            ],\n          },\n          {\n            title: \"Support\",\n            links: [\n              { label: \"Help Center\", href: \"#\" },\n              { label: \"Terms of Service\", href: \"#\" },\n              { label: \"Privacy Policy\", href: \"#\" },\n            ],\n          },\n          {\n            title: \"Follow Us\",\n            links: [\n              { label: \"LinkedIn\", href: \"https://linkedin.com\" },\n              { label: \"Twitter\", href: \"https://twitter.com\" },\n              { label: \"Instagram\", href: \"https://instagram.com\" },\n            ],\n          },\n        ]}\n        copyright=\"© 2025 Your Company. All rights reserved.\"\n      />\n    "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "registryDependencies": ["https://uignite.in/r/footer.json"]
+}

@@ -1,4 +1,4 @@
-import {useTheme} from '@pkgs/uignite/dist';
+import {useTheme} from '@pkgs/uignite';
 import {useEffect, useRef} from 'react';
 
 export function GridBackground() {

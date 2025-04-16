@@ -11,7 +11,7 @@ async function writeComponentContent(path, content) {
   }
 }
 
-async function register(name) {
+async function register(name, results) {
   try {
     // Find the component from the registry.
     const component = registoryConfig.items.find((c) => c.name === name);
@@ -39,69 +39,61 @@ async function register(name) {
     );
     await writeComponentContent(`./website/docs/public/r/${name}.json`, {
       ...registryItem,
+      $schema: 'https://ui.shadcn.com/schema/registry-item.json',
       files: filesWithContent,
     });
+    const element = results.filter(
+      (e) => e.id.toLowerCase().trim() == name.toLowerCase().trim()
+    );
+    if (element.length > 0) {
+      await writeComponentContent(
+        `./website/docs/public/r/${element[0].id}-v0.json`,
+        {
+          ...registryItem,
+          name: `${element[0].id}-v0`,
+          type: 'registry:component',
+          $schema: 'https://ui.shadcn.com/schema/registry-item.json',
+          registryDependencies: [
+            ...(registryItem.registryDependencies
+              ? registryItem.registryDependencies
+              : []),
+            `https://uignite.in/r/${name}.json`,
+          ],
+          files: [
+            {
+              path: `registry/default/components/${element[0].id}-v0.tsx`,
+              type: 'registry:component',
+              content: `${element[0].scope.map((ele) => `import ${ele} from \"@/components/ui/${ele}.tsx\"`).join('\n')}${element[0].element}`,
+            },
+          ],
+        }
+      );
+    }
   } catch (error) {
     console.error('Error processing component request:', error);
   }
 }
 
 (async () => {
+  const regex =
+    /id:\s*'([^']*)',\s*scope:\s*{([^}]*)},\s*element:\s*`([^`]*?)`/gm;
+  const results = [];
+
+  const inputString = await fs.readFile('./website/docs/_elements.ts', 'utf-8');
+
+  let match;
+  while ((match = regex.exec(inputString)) !== null) {
+    const id = match[1];
+    const scope = match[2].trim().replaceAll(' ', '').split(',');
+    const element = match[3];
+
+    results.push({id, scope, element});
+  }
+
+  console.log(results);
+
   for (let index = 0; index < registoryConfig['items'].length; index++) {
     const element = registoryConfig['items'][index];
-    await register(element['name']);
+    await register(element['name'], results);
   }
 })();
-
-/*
-async function readComponentFile(path) {
-  try {
-    const content = await fs.readFile(path, 'utf-8');
-    return content.toString();
-  } catch (error) {
-    console.error(error);
-  }
-}
-
-
-(async () => {
-  try {
-    const items = registoryConfig['items'];
-    let fileData = [];
-    for (let index = 0; index < items.length; index++) {
-      const element = items[index];
-
-      for (let idx = 0; idx < element['files'].length; idx++) {
-        const file = element['files'][idx];
-        const content = await readComponentFile(file['path']);
-        if (!content)
-          return console.log(
-            'Something went wrong during reading file content'
-          );
-        fileData.push({
-          content,
-          type: file['type'],
-          path: file['path'],
-        });
-      }
-
-      const elementSchemaJson = {
-        $schema: 'https://ui.shadcn.com/schema/registry-item.json',
-        name: element['name'],
-        type: element['type'],
-        dependencies: element['dependencies'],
-        files: fileData,
-      };
-      fileData = [];
-      element['files'].forEach(async () => {
-        await writeComponentContent(
-          `./website/docs/public/r/${element['name']}.json`,
-          elementSchemaJson
-        );
-      });
-    }
-  } catch (error) {
-    console.error(`Error occured: ${error.message}`);
-  }
-})();
-*/
