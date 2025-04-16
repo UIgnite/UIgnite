@@ -1,1 +1,14 @@
-{"name":"toast-v0","type":"registry:ui","dependencies":[],"files":[{"path":"registry/default/components/toast-v0.tsx","type":"registry:component","content":"import ToastUi from \"@/components/ui/ToastUi.tsx\"<Toast message=\"This is a toast!\" type=\"success\" />"}],"$schema":"https://ui.shadcn.com/schema/registry-item.json","registryDependencies":["https://uignite.in/r/toast.json"]}
+{
+  "name": "toast-v0",
+  "type": "registry:ui",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "registry/default/components/toast-v0.tsx",
+      "type": "registry:component",
+      "content": "import ToastUi from \"@/components/ui/ToastUi.tsx\"<Toast message=\"This is a toast!\" type=\"success\" />"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "registryDependencies": ["https://uignite.in/r/toast.json"]
+}

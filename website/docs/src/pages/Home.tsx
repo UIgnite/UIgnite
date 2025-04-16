@@ -150,7 +150,7 @@ const Home = () => {
                     npm i uginite
                   </Button>
                 </div>
-                <TechStack/>
+                <TechStack />
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 p-4 mt-6">
                   {features.map((feature, index) => (
                     <div
@@ -174,8 +174,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-
-         
 
           <div className="flex justify-center items-center py-10 px-4">
             <motion.div

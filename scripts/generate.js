@@ -42,21 +42,31 @@ async function register(name, results) {
       $schema: 'https://ui.shadcn.com/schema/registry-item.json',
       files: filesWithContent,
     });
-    const element = results.filter(e=>e.id.toLowerCase().trim()==name.toLowerCase().trim());
-    if(element.length > 0){
-      await writeComponentContent(`./website/docs/public/r/${element[0].id}-v0.json`, {
-        ...registryItem,
-        name: `${element[0].id}-v0`,
-        $schema: 'https://ui.shadcn.com/schema/registry-item.json',
-        registryDependencies: [...(registryItem.registryDependencies ? registryItem.registryDependencies : []), `https://uignite.in/r/${name}.json`],
-        files: [
-          { 
-            path: `registry/default/components/${element[0].id}-v0.tsx`,
-            type:"registry:component",
-            content: `${element[0].scope.map(ele=>(`import ${ele} from \"@/components/ui/${ele}.tsx\"`)).join('\n')}${element[0].element}`
-          }
-        ]
-      })
+    const element = results.filter(
+      (e) => e.id.toLowerCase().trim() == name.toLowerCase().trim()
+    );
+    if (element.length > 0) {
+      await writeComponentContent(
+        `./website/docs/public/r/${element[0].id}-v0.json`,
+        {
+          ...registryItem,
+          name: `${element[0].id}-v0`,
+          $schema: 'https://ui.shadcn.com/schema/registry-item.json',
+          registryDependencies: [
+            ...(registryItem.registryDependencies
+              ? registryItem.registryDependencies
+              : []),
+            `https://uignite.in/r/${name}.json`,
+          ],
+          files: [
+            {
+              path: `registry/default/components/${element[0].id}-v0.tsx`,
+              type: 'registry:component',
+              content: `${element[0].scope.map((ele) => `import ${ele} from \"@/components/ui/${ele}.tsx\"`).join('\n')}${element[0].element}`,
+            },
+          ],
+        }
+      );
     }
   } catch (error) {
     console.error('Error processing component request:', error);
@@ -64,7 +74,8 @@ async function register(name, results) {
 }
 
 (async () => {
-  const regex = /id:\s*'([^']*)',\s*scope:\s*{([^}]*)},\s*element:\s*`([^`]*?)`/gm;
+  const regex =
+    /id:\s*'([^']*)',\s*scope:\s*{([^}]*)},\s*element:\s*`([^`]*?)`/gm;
   const results = [];
 
   const inputString = await fs.readFile('./website/docs/_elements.ts', 'utf-8');
@@ -72,13 +83,13 @@ async function register(name, results) {
   let match;
   while ((match = regex.exec(inputString)) !== null) {
     const id = match[1];
-    const scope = match[2].trim().replaceAll(" ", '').split(',');
+    const scope = match[2].trim().replaceAll(' ', '').split(',');
     const element = match[3];
 
-    results.push({ id,scope, element });
+    results.push({id, scope, element});
   }
 
-  console.log(results)
+  console.log(results);
 
   for (let index = 0; index < registoryConfig['items'].length; index++) {
     const element = registoryConfig['items'][index];
