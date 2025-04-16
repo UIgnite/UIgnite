@@ -67,44 +67,6 @@ export const Test = () => {
             />
           </CardContent>
         </Card>
-
-        <Card className="w-[550px] dark:shadow-black dark:bg-[#040000] mt-8  rounded-2xl shadow-lg border-none">
-          <CardHeader className="flex flex-row justify-between items-start p-4">
-            <div className="flex gap-3 items-center">
-              <img
-                src="https://pbs.twimg.com/profile_images/1724344976715468800/MasktpKz_400x400.jpg"
-                alt="hitesh Chaudhary"
-                className="w-12 h-12 rounded-full object-cover"
-              />
-              <div>
-                <CardTitle className="text-base">Hitesh Chaudhary</CardTitle>
-                <CardDescription className="text-sm dark:text-gray-400">
-                  @HiteshDotCom
-                </CardDescription>
-              </div>
-            </div>
-            <Button className="bg-blue-500 cursor-pointer hover:bg-blue-600 text-white text-sm font-medium py-1.5 px-4 rounded-full">
-              Follow
-            </Button>
-          </CardHeader>
-
-          <CardContent className="text-sm dark:text-gray-300 px-4 pb-4">
-            <p>
-              retired from corporate and full time YouTuber, x founder of LCO
-              (acquired), x CTO, Sr. Director at PW. 2 YT channels (950k &
-              470k), stepped into 43 countries..
-            </p>
-
-            <div className="mt-4 flex items-center gap-4 text-sm dark:text-gray-400">
-              <span>
-                <span className=" font-semibold">85</span> Following
-              </span>
-              <span>
-                <span className=" font-semibold">55.5K</span> Followers
-              </span>
-            </div>
-          </CardContent>
-        </Card>
       </div>
     </CustomTheme>
   );
