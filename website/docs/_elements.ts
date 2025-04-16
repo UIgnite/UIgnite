@@ -140,9 +140,7 @@ const elements = [
       </Card>
     `,
   },
-  {
-
-  },
+  {},
   // {
   //   id: "datepicker",
   //   scope: { DatePicker },
@@ -220,7 +218,7 @@ const elements = [
   },
   {
     id: 'messagebot',
-    scope: {MessageBot },
+    scope: {MessageBot},
     element: `
     <div>
       <div> Neeche Dekho Neecheee... </div>
@@ -342,8 +340,8 @@ const elements = [
     `,
   },
   {
-    id: "switch",
-    scope: { Switch },
+    id: 'switch',
+    scope: {Switch},
     element: `<Switch defaultState={true} />`,
   },
   {

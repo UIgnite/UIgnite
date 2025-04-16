@@ -43,7 +43,7 @@ async function register(name, results) {
       $schema: 'https://ui.shadcn.com/schema/registry-item.json',
       files: filesWithContent,
     });
-    
+
     const element = results.filter(
       (e) => e.id.toLowerCase().trim() == name.toLowerCase().trim()
     );
