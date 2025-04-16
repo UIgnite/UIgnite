@@ -114,20 +114,20 @@ const TestCards = () => {
           />
         </CardHeader>
         <CardContent className="flex flex-col justify-center items-center mt-5">
-          <div className="font-semibold text-2xl">Saurav Jha</div>
+          <div className="font-semibold text-2xl">Aman Gupta</div>
           <div className="text-sm text-neutral-600 dark:text-zinc-500 ">
             Backend Developer at OnlyDevs
           </div>
         </CardContent>
         <CardFooter className="flex justify-between items-center px-4 space-mono ">
           <div className="flex flex-col">
-            <div className="text-xs text-neutral-400 dark:text-zinc-400 ">
+            <div className="text-xs text-neutral-500 dark:text-zinc-400 ">
               Total Commits
             </div>
             <div className="">100+</div>
           </div>
           <div className="flex flex-col">
-            <div className="text-xs text-neutral-400 dark:text-zinc-400">
+            <div className="text-xs text-neutral-500 dark:text-zinc-400">
               Total PRs
             </div>
             <div className="">20+</div>
