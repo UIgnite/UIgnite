@@ -1,6 +1,5 @@
-import { motion } from 'framer-motion';
-import {Tooltip} from '@pkgs/uignite'
-
+import {motion} from 'framer-motion';
+import {Tooltip} from '@pkgs/uignite';
 
 interface Tech {
   name: string;
@@ -13,7 +12,10 @@ const techStack: Tech[] = [
   {
     name: 'TypeScript',
     svg: (
-     <img className="w-10 h-10 md:w-14 md:h-14 rounded-lg" src="https://images.icon-icons.com/2415/PNG/512/typescript_original_logo_icon_146317.png"/>
+      <img
+        className="w-10 h-10 md:w-14 md:h-14 rounded-lg"
+        src="https://images.icon-icons.com/2415/PNG/512/typescript_original_logo_icon_146317.png"
+      />
     ),
   },
   {
@@ -74,7 +76,13 @@ const techStack: Tech[] = [
         aria-label="Framer Motion"
       >
         <defs>
-          <linearGradient id="framerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient
+            id="framerGradient"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="100%"
+          >
             <stop offset="0%" stopColor="#ff0080" />
             <stop offset="50%" stopColor="#7928ca" />
             <stop offset="100%" stopColor="#007cf0" />
@@ -84,32 +92,30 @@ const techStack: Tech[] = [
         <path d="M20 12l-8 8l-4 -4" />
       </svg>
     ),
-  }
+  },
 ];
 export default function TechStack() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-6 py-10 -mt-8">
-    {techStack.map((tech, index) => (
-      <motion.div
-        key={index}
-        animate={{
-          y: [0, -8, 0], // float up and down
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="flex flex-col items-center gap-2 text-center group"
-        title={tech.name}
-      >
-        <div className="transition-transform duration-300 ">
-          <Tooltip title = {tech.name}> {tech.svg}</Tooltip>
-        </div>
-        
-      </motion.div>
-    ))}
-  </div>
-  
+      {techStack.map((tech, index) => (
+        <motion.div
+          key={index}
+          animate={{
+            y: [0, -8, 0], // float up and down
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+          className="flex flex-col items-center gap-2 text-center group"
+          title={tech.name}
+        >
+          <div className="transition-transform duration-300 ">
+            <Tooltip title={tech.name}> {tech.svg}</Tooltip>
+          </div>
+        </motion.div>
+      ))}
+    </div>
   );
 }

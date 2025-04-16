@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@pkgs/uignite';
-import {Info} from 'lucide-react';
+import {Info, ShieldCheck} from 'lucide-react';
 import {useState} from 'react';
 
 const TestCards = () => {
@@ -101,6 +101,9 @@ const TestCards = () => {
           </a>
         </CardContent>
       </Card>
+
+      {/* features */}
+      <ShieldCheck />
     </div>
   );
 };
