@@ -1,3 +1,4 @@
+import {MessageCircle} from 'lucide-react';
 import {useState} from 'react';
 
 export interface MessageBotParams {
@@ -61,7 +62,7 @@ const MessageBot = ({
         className={`cursor-pointer z-[1000] w-16 h-16 ${themeColor} text-white rounded-full shadow-lg flex items-center justify-center text-2xl hover:scale-105 transition-transform duration-200`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        💬
+        <MessageCircle />
       </button>
 
       {/* Chatbot Box */}

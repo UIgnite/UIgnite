@@ -23,7 +23,7 @@ export const Variants = ({componentId}: {componentId: string}) => {
             background: 'rgb(24, 24, 24)',
           },
         }}
-        className="text-left text-sm h-full min-w-full rounded-md scrollable-content"
+        className="text-left text-sm h-full overflow-scroll max-h-[40vh] rounded-md scrollable-content"
       >
         {currVariant}
       </SyntaxHighlighter>
@@ -34,7 +34,7 @@ export const Variants = ({componentId}: {componentId: string}) => {
     <div>
       {currElement.variation.map((currVariant) => (
         <LiveProvider code={currVariant} scope={currElement.scope}>
-          <Tabs className="p-3 mt-4" defaultVal="preview">
+          <Tabs className="p-3 mt-4 mb-12" defaultVal="preview">
             <TabList activeTab="">
               {currElement ? <Tab title="Preview" value="preview" /> : <></>}
               <Tab title="Code" value="code" />
