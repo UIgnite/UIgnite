@@ -1,18 +1,1 @@
-<<<<<<< HEAD
-{"name":"skeleton-v0","type":"registry:component","dependencies":[],"registryDependencies":["https://080a-104-28-199-189.ngrok-free.app/r/skeleton.json"],"files":[{"path":"registry/default/components/skeleton-v0.tsx","type":"registry:component","content":"import {Skeleton} from \"@/components/ui/Skeleton\"\n              function Component(){\n                return (\n        <div className=\"flex items-center space-x-4 \">\n          <Skeleton className=\"h-12 w-12 rounded-full\" />\n          <div className=\"space-y-2\">\n            <Skeleton className=\"h-4 w-[250px]\" />\n            <Skeleton className=\"h-4 w-[200px]\" />\n          </div>\n        </div>\n\n    )\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
-=======
-{
-  "name": "skeleton-v0",
-  "type": "registry:component",
-  "dependencies": [],
-  "registryDependencies": ["https://uignite.in/r/skeleton.json"],
-  "files": [
-    {
-      "path": "registry/default/components/skeleton-v0.tsx",
-      "type": "registry:component",
-      "content": "import Skeleton from \"@/components/ui/Skeleton.tsx\"\n              function Component(){\n                return (\r\n        <div className=\"flex items-center space-x-4 \">\r\n          <Skeleton className=\"h-12 w-12 rounded-full\" />\r\n          <div className=\"space-y-2\">\r\n            <Skeleton className=\"h-4 w-[250px]\" />\r\n            <Skeleton className=\"h-4 w-[200px]\" />\r\n          </div>\r\n        </div>\r\n\r\n    )\n              }\n              "
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
-}
->>>>>>> c2c830a0373599bead4655913fb85d18ddc17095
+{"name":"skeleton-v0","type":"registry:component","dependencies":[],"registryDependencies":["https://080a-104-28-199-189.ngrok-free.app/r/skeleton.json"],"files":[{"path":"registry/default/components/skeleton-v0.tsx","type":"registry:component","content":"import {Skeleton} from \"@/components/ui/Skeleton\"\n              function Component(){\n                return (\r\n        <div className=\"flex items-center space-x-4 \">\r\n          <Skeleton className=\"h-12 w-12 rounded-full\" />\r\n          <div className=\"space-y-2\">\r\n            <Skeleton className=\"h-4 w-[250px]\" />\r\n            <Skeleton className=\"h-4 w-[200px]\" />\r\n          </div>\r\n        </div>\r\n    )\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}

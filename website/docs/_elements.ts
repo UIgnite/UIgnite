@@ -2,7 +2,6 @@ import {
   Accordion,
   AccordionWrapper,
   Avatar,
-  AvatarGroup,
   Button,
   Card,
   CardContent,
@@ -79,7 +78,7 @@ const elements = [
   },
   {
     id: 'avatar',
-    scope: {Avatar, AvatarGroup},
+    scope: {Avatar},
     element: `
       <>
         <Avatar url={"/piyush-sir.png"} alt={"user"} />
@@ -439,7 +438,7 @@ const elements = [
       <MessageBot
         orgName="UIgnite"
         themeColor="bg-blue-500"
-        url="https://dummyimage.com/100x100/000/fff&text=U"
+        url=""
         alt="Bot avatar"
       />
     </div>
