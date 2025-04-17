@@ -23,7 +23,6 @@ import {
   Tab,
   TextArea,
   Tooltip,
-  Switch,
   Toast,
   useToast,
   Carosuel,
@@ -32,11 +31,12 @@ import {
 } from '@pkgs/uignite';
 import Footer from './src/components/Footer';
 import Navbar from './src/components/Navbar';
-import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { Eye, EyeOff, Info } from 'lucide-react';
-import { CommandButton } from './src/components/CommandButton';
-import { AlarmClockCheck } from 'lucide-react';
+import {Link} from 'react-router-dom';
+import {useEffect, useState} from 'react';
+import {Eye, EyeOff, Info} from 'lucide-react';
+import {CommandButton} from './src/components/CommandButton';
+import {AlarmClockCheck} from 'lucide-react';
+import { Switch } from './src/components/Switch';
 
 const elements = [
   {

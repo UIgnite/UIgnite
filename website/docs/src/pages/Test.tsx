@@ -9,7 +9,7 @@ import {
   CardFooter,
   CardTitle,
 } from '@pkgs/uignite';
-import {AlertDialogBox} from '@pkgs/uignite';
+// import {AlertDialogBox} from '@pkgs/uignite';
 
 export const Test = () => {
   return (
@@ -38,7 +38,7 @@ export const Test = () => {
             </Button>
           </div>
         </div>
-        <AlertDialogBox
+        {/* <AlertDialogBox
           title="Delete account?"
           description="This action cannot be undone. Are you sure you want to delete your account permanently?"
         />

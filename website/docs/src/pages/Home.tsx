@@ -22,7 +22,7 @@ import Navbar from '../components/Navbar';
 import {GridBackground} from '../utils/GridBackground';
 import TechStack from '../utils/TechStack';
 import {VideoPlayer} from '@pkgs/uignite';
-import Footer from './Footer';
+import Footer from '../components/Footer';
 const Home = () => {
   const [isCopied, setIsCopied] = useState(false);
   // const [email, setEmail] = useState('');
@@ -214,9 +214,11 @@ const Home = () => {
 
           <div className="flex items-center justify-center">
             <VideoPlayer
+              src="https://res.cloudinary.com/do2tmd6xp/video/upload/f_auto:video,q_auto/chitiuerm8vfgaugsrkr"
               thumbnailUrl="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
-              muted={false}
-              autoplay={false}
+              muted
+              autoplay
+              loop
             />
           </div>
           <div className="text-center ">
