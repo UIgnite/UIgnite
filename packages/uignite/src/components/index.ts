@@ -16,12 +16,12 @@ export * from './Dropdown';
 export * from './Resizable';
 export * from './VideoPlayer';
 export * from './PricingCard';
+export * from './Footer';
 export * from '../lib/ThemeToggleBtn';
 
 export * from './Avatar';
 export * from './Skeleton';
 export * from './MessageBot';
-export * from './AvatarGroup';
 export * from './Testimonials';
 export * from './Accordion';
 export * from './AlertDialogBox';
