@@ -43,7 +43,7 @@ const Footer = () => {
 
           {/* other sections like product getStarted legal */}
           <div className="flex gap-16 mt-3">
-            <div className="text-zinc-600 dark:text-zinc-400 flex flex-col gap-2">
+            <div className="text-zinc-500 dark:text-zinc-400 flex flex-col gap-2">
               <h2 className="text-zinc-800 dark:text-zinc-100 font-semibold">
                 Quick Links
               </h2>
@@ -66,7 +66,7 @@ const Footer = () => {
                 Contribute
               </Link>
             </div>
-            <div className="text-zinc-600 dark:text-zinc-400 flex flex-col gap-2">
+            <div className="text-zinc-500 dark:text-zinc-400 flex flex-col gap-2">
               <h2 className="text-zinc-800 dark:text-zinc-100 font-semibold">
                 Product
               </h2>
@@ -89,7 +89,7 @@ const Footer = () => {
                 Pricing
               </Link>
             </div>
-            <div className="text-zinc-600 dark:text-zinc-400 flex flex-col gap-2">
+            <div className="text-zinc-500 dark:text-zinc-400 flex flex-col gap-2">
               <h2 className="text-zinc-800 dark:text-zinc-100 font-semibold">
                 Legal
               </h2>
