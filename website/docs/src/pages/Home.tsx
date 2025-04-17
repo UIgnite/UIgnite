@@ -216,8 +216,9 @@ const Home = () => {
             <VideoPlayer
               src="https://res.cloudinary.com/do2tmd6xp/video/upload/f_auto:video,q_auto/chitiuerm8vfgaugsrkr"
               thumbnailUrl="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
-              muted={false}
-              autoplay={false}
+              muted
+              autoplay
+              loop
             />
           </div>
           <div className="text-center ">

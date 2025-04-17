@@ -15,7 +15,7 @@ const Footer = () => {
           {/* website */}
           <div className="flex flex-col gap-6">
             {/* logo */}
-            <div className="w-40 h-12 transition-all duration-300 ease-in-out hover:scale-105  cursor-pointer -ml-4">
+            <div className="w-56 h-16 transition-all duration-300 ease-in-out hover:scale-105  cursor-pointer -ml-4">
               <img
                 alt="UIgnite"
                 className="h-full w-full"
@@ -28,16 +28,16 @@ const Footer = () => {
             </div>
 
             {/* tagline */}
-            <p className="text-gray-600 dark:text-gray-500 w-72">
+            <p className="text-gray-600 dark:text-zinc-400 w-72">
               UIgnite brings together design, performance, and TypeScript — so
               you can ship faster with confidence.
             </p>
 
             {/* socials */}
-            <div className="flex gap-4">
-              <FiGithub className=" text-gray-600 hover:text-blue-600 dark:hover:text-gray-50 size-5 cursor-pointer" />
-              <FaDiscord className=" text-gray-600 hover:text-blue-600 dark:hover:text-gray-50 size-5 cursor-pointer" />
-              <FaXTwitter className=" text-gray-600 hover:text-blue-600 dark:hover:text-gray-50 size-5 cursor-pointer" />
+            <div className="flex gap-4 text-zinc-500 ">
+              <FiGithub className="hover:text-blue-600 dark:hover:text-gray-50 size-5 cursor-pointer transition-all duration-200 ease-in-out hover:scale-105" />
+              <FaDiscord className="hover:text-blue-600 dark:hover:text-gray-50 size-5 cursor-pointer transition-all duration-200 ease-in-out hover:scale-105" />
+              <FaXTwitter className="hover:text-blue-600 dark:hover:text-gray-50 size-5 cursor-pointer transition-all duration-200 ease-in-out hover:scale-105" />
             </div>
           </div>
 
