@@ -1,3 +1,4 @@
+import {Avatar, Input} from '@pkgs/uignite';
 import {MessageCircle} from 'lucide-react';
 import {useState} from 'react';
 
@@ -16,8 +17,7 @@ export interface Message {
 const MessageBot = ({
   orgName = 'UIgnite',
   themeColor = 'bg-blue-600',
-  url = '/assets/logo.webp',
-  // alt,
+  url = '/uignite-bot.png',
 }: MessageBotParams) => {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState('');
@@ -59,7 +59,7 @@ const MessageBot = ({
 
       {/* Floating Button */}
       <button
-        className={`cursor-pointer z-[1000] w-16 h-16 ${themeColor} text-white rounded-full shadow-lg flex items-center justify-center text-2xl hover:scale-105 transition-transform duration-200`}
+        className={`cursor-pointer z-[1000] size-14 ${themeColor} text-white rounded-full shadow-lg flex items-center justify-center text-2xl hover:scale-105 transition-transform duration-200`}
         onClick={() => setIsOpen(!isOpen)}
       >
         <MessageCircle />
@@ -70,29 +70,32 @@ const MessageBot = ({
         <div className="z-[1000] fixed bottom-[6.5rem] right-8 w-80 h-[32rem] bg-white rounded-lg shadow-2xl flex flex-col overflow-hidden">
           {/* Header */}
           <div
-            className={`p-4 ${themeColor} text-white text-left items-center`}
+            className={`p-2 bg-neutral-800 text-white text-left items-center`}
           >
             <button
-              className="p-1 rounded-full hover:bg-white hover:text-black transition-colors duration-200"
+              className="p-1 rounded-full  transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             >
-              <img src="/assets/logo.webp" alt="Close" className="w-6 h-6" />
+              <img
+                src="/dark-mode-logo.png"
+                alt="Close"
+                className="w-28 h-8 object-cover"
+              />
             </button>
-            <span className="text-lg font-semibold">{orgName}</span>
           </div>
 
           {/* Messages */}
-          <div className="flex-1 px-3 py-4 overflow-y-auto space-y-3 bg-gray-50">
+          <div className="flex-1 px-3 py-4 overflow-y-auto space-y-3 bg-gray-50 scrollable-content">
             {messages.map((msg, index) => (
               <div
                 key={index}
                 className={`flex items-end ${msg.sender === 'user' ? 'justify-start' : 'justify-end'}`}
               >
                 {msg.sender === 'user' && (
-                  <img
-                    className="rounded-full h-6 w-6 object-cover mr-2"
-                    src={url || 'https://avatar.iran.liara.run/public'}
+                  <Avatar
+                    url="https://avatar.iran.liara.run/public"
                     alt="User"
+                    className="mr-2 size-10"
                   />
                 )}
                 <div
@@ -105,28 +108,23 @@ const MessageBot = ({
                   {msg.text}
                 </div>
                 {msg.sender === 'bot' && (
-                  <img
-                    className="rounded-full h-6 w-6 object-cover ml-2"
-                    src={'https://avatar.iran.liara.run/public'}
-                    alt="Bot"
-                  />
+                  <img src={url} className="ml-2 size-10" alt="" />
                 )}
               </div>
             ))}
           </div>
 
           {/* Input Area */}
-          <div className="p-3 border border-t border-  flex items-center gap-2">
-            <input
-              type="text"
+          <div className="p-3 border-t border-t-zinc-200 flex items-center gap-2">
+            <Input
               placeholder="Type a message..."
-              className="flex-1 p-2 border dark:border-gray-400 text-black rounded-md dark:text:black text-sm"
+              className="flex-1 text-sm text-zinc-800"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
             />
             <button
-              className={`px-4 py-2 ${themeColor} text-white rounded-md hover:opacity-90 transition`}
+              className={`px-4 py-2 ${themeColor} text-white cursor-pointer rounded-md hover:opacity-90 transition`}
               onClick={sendMessage}
             >
               ➤
