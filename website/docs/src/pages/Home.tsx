@@ -22,7 +22,7 @@ import Navbar from '../components/Navbar';
 import {GridBackground} from '../utils/GridBackground';
 import TechStack from '../utils/TechStack';
 import {VideoPlayer} from '@pkgs/uignite';
-import Footer from './Footer';
+import Footer from '../components/Footer';
 const Home = () => {
   const [isCopied, setIsCopied] = useState(false);
   // const [email, setEmail] = useState('');
