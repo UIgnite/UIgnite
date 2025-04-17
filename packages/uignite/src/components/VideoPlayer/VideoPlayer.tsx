@@ -138,7 +138,7 @@ export default function VideoPlayer({
         className="w-full h-full"
       >
         <source
-          src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          src="https://res.cloudinary.com/do2tmd6xp/video/upload/f_auto:video,q_auto/chitiuerm8vfgaugsrkr"
           type="video/mp4"
         />
       </video>
