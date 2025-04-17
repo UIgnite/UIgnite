@@ -23,7 +23,7 @@ export const Variants = ({componentId}: {componentId: string}) => {
             background: 'rgb(24, 24, 24)',
           },
         }}
-        className="text-left text-sm h-full min-w-full rounded-md scrollable-content"
+        className="text-left text-sm h-full overflow-scroll max-h-[40vh] rounded-md scrollable-content"
       >
         {currVariant}
       </SyntaxHighlighter>
