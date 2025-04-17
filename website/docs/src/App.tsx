@@ -35,6 +35,7 @@ const App = () => {
 
         <Route path="fullontesting" element={<Components />} />
       </Route>
+
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

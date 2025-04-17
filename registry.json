@@ -6,7 +6,8 @@
     {
       "name": "accordion",
       "type": "registry:ui",
-      "dependencies": [],
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/Accordion/Accordion.tsx",
@@ -18,6 +19,7 @@
       "name": "avatar",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/Avatar/Avatar.tsx",
@@ -29,6 +31,10 @@
       "name": "avatargroup",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [
+        "https://uignite.in/r/Avatar.json",
+        "https://uignite.in/r/Tooltip.json"
+      ],
       "files": [
         {
           "path": "packages/uignite/src/components/AvatarGroup/AvatarGroup.tsx",
@@ -39,7 +45,8 @@
     {
       "name": "button",
       "type": "registry:ui",
-      "dependencies": [],
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": ["https://uignite.in/r/Spinner.json"],
       "files": [
         {
           "path": "packages/uignite/src/components/Button/Button.tsx",
@@ -51,6 +58,7 @@
       "name": "card",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/Card/Card.tsx",
@@ -61,7 +69,8 @@
     {
       "name": "carosuel",
       "type": "registry:ui",
-      "dependencies": [],
+      "dependencies": ["class-variance-authority", "lucide-react"],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/Carosuel/Carosuel.tsx",
@@ -73,6 +82,7 @@
       "name": "dropdown",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": ["https://uignite.in/r/Button.json"],
       "files": [
         {
           "path": "packages/uignite/src/components/Dropdown/Dropdown.tsx",
@@ -84,6 +94,7 @@
       "name": "footer",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/Footer/Footer.tsx",
@@ -95,6 +106,7 @@
       "name": "input",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/Input/Input.tsx",
@@ -106,6 +118,7 @@
       "name": "messagebot",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/MessageBot/MessageBot.tsx",
@@ -116,7 +129,8 @@
     {
       "name": "navbar",
       "type": "registry:ui",
-      "dependencies": [],
+      "dependencies": ["react"],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/Navbar/Navbar.tsx",
@@ -128,6 +142,7 @@
       "name": "navmenu",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/NavMenu/NavMenu.tsx",
@@ -139,6 +154,7 @@
       "name": "pricingcard",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/PricingCard/PricingCard.tsx",
@@ -150,6 +166,7 @@
       "name": "resizable",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/Resizable/Resizable.tsx",
@@ -161,6 +178,7 @@
       "name": "signin",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/SignIn/SignIn.tsx",
@@ -172,6 +190,7 @@
       "name": "signup",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/SignUp/SignUp.tsx",
@@ -183,6 +202,7 @@
       "name": "skeleton",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/Skeleton/Skeleton.tsx",
@@ -194,6 +214,7 @@
       "name": "spinner",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/Spinner/Spinner.tsx",
@@ -205,6 +226,7 @@
       "name": "tabs",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/Tabs/Tabs.tsx",
@@ -215,7 +237,8 @@
     {
       "name": "testimonials",
       "type": "registry:ui",
-      "dependencies": [],
+      "dependencies": ["lucide-react"],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/Testimonials/Testimonials.tsx",
@@ -227,6 +250,7 @@
       "name": "textarea",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/TextArea/TextArea.tsx",
@@ -238,6 +262,7 @@
       "name": "toast",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/Toast/Toast.tsx",
@@ -249,6 +274,7 @@
       "name": "tooltip",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/Tooltip/Tooltip.tsx",
@@ -260,6 +286,7 @@
       "name": "videoplayer",
       "type": "registry:ui",
       "dependencies": [],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/VideoPlayer/VideoPlayer.tsx",
