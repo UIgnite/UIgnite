@@ -38,11 +38,15 @@ export const Test = () => {
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
+
+=======
         <AlertDialogBox
           title="Delete account?"
           description="This action cannot be undone. Are you sure you want to delete your account permanently?"
           variant="destructive"
         />
+>>>>>>> 4be243d2867980edc8ff2ef8092e406ea1242d83
         <div className="text-3xl mt-8 flex">Cards</div>
 
         <Card className=" mt-2">

@@ -18,10 +18,12 @@ const Install = ({
     return <div className="text-red-500">Code not found.</div>;
   }
 
-  const CommandElement = () => {
+  const CommandElement = ({val = 'npx'}) => {
     return (
       <div className="w-full h-[44px] relative cli ">
-        <CopyButton copyText={`npx uignite add ${componentId}`} />
+        <CopyButton
+          copyText={`${val} shadcn add https://uignite.in/r/${componentId}.json `}
+        />
         <SyntaxHighlighter
           style={{
             ...atomOneDarkReasonable,
@@ -33,7 +35,7 @@ const Install = ({
           language="cli"
           className="text-left  text-sm h-full min-w-full rounded-md  "
         >
-          {`npx uignite add ${componentId}`}
+          {`${val} shadcn add https://uignite.in/r/${componentId}.json `}
         </SyntaxHighlighter>
       </div>
     );
@@ -85,16 +87,27 @@ const Install = ({
               defaultVal="npm"
             >
               <TabList>
+                <Tab title="bun" value="bun"></Tab>
                 <Tab title="npm" value="npm"></Tab>
                 <Tab title="yarn" value="yarn"></Tab>
               </TabList>
-              <TabContent content={<CommandElement />} value="npm"></TabContent>
+              <TabContent
+                content={<CommandElement val="bunx" />}
+                value="bun"
+              ></TabContent>
+              <TabContent
+                content={<CommandElement val="npx" />}
+                value="npm"
+              ></TabContent>
+              <TabContent
+                content={<CommandElement val="yarn" />}
+                value="yarn"
+              ></TabContent>
             </Tabs>
           }
           value="cli"
         ></TabContent>
         <TabContent
-          activeTab=""
           content={<InstallationElement />}
           value="manual"
         ></TabContent>
