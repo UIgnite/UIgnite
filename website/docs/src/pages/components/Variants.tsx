@@ -23,7 +23,7 @@ export const Variants = ({componentId}: {componentId: string}) => {
             background: 'rgb(24, 24, 24)',
           },
         }}
-        className="text-left text-sm h-full min-w-full rounded-md scrollable-content"
+        className="text-left text-sm h-full overflow-scroll max-h-[40vh] rounded-md scrollable-content"
       >
         {currVariant}
       </SyntaxHighlighter>
@@ -39,7 +39,7 @@ export const Variants = ({componentId}: {componentId: string}) => {
               {currElement ? <Tab title="Preview" value="preview" /> : <></>}
               <Tab title="Code" value="code" />
             </TabList>
-            {currVariant ? (
+            {currVariant ? ( 
               <TabContent
                 content={
                   <div className="w-[100%] flex justify-center items-center p-10 bg-neutral-200 dark:bg-neutral-900  relative">
