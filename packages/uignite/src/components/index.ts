@@ -25,3 +25,4 @@ export {default as MessageBot} from './MessageBot';
 export {default as AvatarGroup} from './AvatarGroup';
 export {default as Testimonials} from './Testimonials';
 export {default as Accordion, AccordionWrapper} from './Accordion';
+export {default as AlertDialogBox} from './AlertDialogBox';

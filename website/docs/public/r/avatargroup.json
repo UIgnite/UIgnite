@@ -2,11 +2,15 @@
   "name": "avatargroup",
   "type": "registry:ui",
   "dependencies": [],
+  "registryDependencies": [
+    "https://uignite.in/r/Avatar.json",
+    "https://uignite.in/r/Tooltip.json"
+  ],
   "files": [
     {
       "path": "packages/uignite/src/components/AvatarGroup/AvatarGroup.tsx",
       "type": "registry:ui",
-      "content": "import React from 'react';\nimport Avatar from '@/components/Avatar';\nimport {Tooltip} from '@/components/Tooltip';\n\nexport interface AvatarData {\n  url: string;\n  alt: string;\n}\n\nexport interface AvatarGroupProps {\n  avatars?: AvatarData[];\n}\n\nconst AvatarGroup: React.FC<AvatarGroupProps> = ({avatars = []}) => {\n  return (\n    <div className=\"flex items-center mt-6 pl-2 overflow-visible\">\n      {avatars.map((avatar, index) => (\n        <div\n          key={index}\n          className={`relative transition-all duration-300 ease-in-out ${\n            index !== 0 ? '-ml-7' : ''\n          } hover:z-20`}\n        >\n          <Tooltip title={avatar.alt} options={{tooltipStyle: {width: 'auto'}}}>\n            <Avatar\n              url={avatar.url}\n              alt={avatar.alt}\n              className={`\n                w-12 h-12 rounded-full object-cover\n                ring-2 ring-white shadow-md\n                hover:scale-110 hover:white-500\n                transition-transform duration-300 ease-in-out\n              `}\n            />\n          </Tooltip>\n        </div>\n      ))}\n    </div>\n  );\n};\n\nexport default AvatarGroup;\n"
+      "content": "import React from 'react';\r\nimport Avatar from '@/components/Avatar';\r\nimport {Tooltip} from '@/components/Tooltip';\r\n\r\nexport interface AvatarData {\r\n  url: string;\r\n  alt: string;\r\n}\r\n\r\nexport interface AvatarGroupProps {\r\n  avatars?: AvatarData[];\r\n}\r\n\r\nconst AvatarGroup: React.FC<AvatarGroupProps> = ({avatars = []}) => {\r\n  return (\r\n    <div className=\"flex items-center mt-6 pl-2 overflow-visible\">\r\n      {avatars.map((avatar, index) => (\r\n        <div\r\n          key={index}\r\n          className={`relative transition-all duration-300 ease-in-out ${\r\n            index !== 0 ? '-ml-7' : ''\r\n          } hover:z-20`}\r\n        >\r\n          <Tooltip title={avatar.alt} options={{tooltipStyle: {width: 'auto'}}}>\r\n            <Avatar\r\n              url={avatar.url}\r\n              alt={avatar.alt}\r\n              className={`\r\n                w-12 h-12 rounded-full object-cover\r\n                ring-2 ring-white shadow-md\r\n                hover:scale-110 hover:white-500\r\n                transition-transform duration-300 ease-in-out\r\n              `}\r\n            />\r\n          </Tooltip>\r\n        </div>\r\n      ))}\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default AvatarGroup;\r\n"
     }
   ],
   "$schema": "https://ui.shadcn.com/schema/registry-item.json"

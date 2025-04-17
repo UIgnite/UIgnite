@@ -2,6 +2,7 @@
   "name": "textarea-v0",
   "type": "registry:component",
   "dependencies": [],
+  "registryDependencies": ["https://uignite.in/r/textarea.json"],
   "files": [
     {
       "path": "registry/default/components/textarea-v0.tsx",
@@ -9,6 +10,5 @@
       "content": "import TextArea from \"@/components/ui/TextArea.tsx\"<TextArea placeholder=\"Write something...\" />"
     }
   ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "registryDependencies": ["https://uignite.in/r/textarea.json"]
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
 }

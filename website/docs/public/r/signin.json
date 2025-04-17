@@ -2,6 +2,7 @@
   "name": "signin",
   "type": "registry:ui",
   "dependencies": [],
+  "registryDependencies": [],
   "files": [
     {
       "path": "packages/uignite/src/components/SignIn/SignIn.tsx",

@@ -2,6 +2,7 @@
   "name": "videoplayer",
   "type": "registry:ui",
   "dependencies": [],
+  "registryDependencies": [],
   "files": [
     {
       "path": "packages/uignite/src/components/VideoPlayer/VideoPlayer.tsx",

@@ -2,6 +2,7 @@
   "name": "input",
   "type": "registry:ui",
   "dependencies": [],
+  "registryDependencies": [],
   "files": [
     {
       "path": "packages/uignite/src/components/Input/Input.tsx",
