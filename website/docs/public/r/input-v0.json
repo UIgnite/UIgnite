@@ -6,7 +6,7 @@
     {
       "path": "registry/default/components/input-v0.tsx",
       "type": "registry:component",
-      "content": "import Input from \"@/components/ui/Input.tsx\"<Input placeholder=\"Type here...\" />"
+      "content": "import Input from \"@/components/ui/Input.tsx\"\nimport EyeOff from \"@/components/ui/EyeOff.tsx\"\nimport Eye from \"@/components/ui/Eye.tsx\"\nimport useState from \"@/components/ui/useState.tsx\"<Input placeholder=\"Type here...\" />"
     }
   ],
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",

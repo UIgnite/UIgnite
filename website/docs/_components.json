@@ -411,6 +411,51 @@
     ]
   },
   {
+    "id": "InputOtp",
+    "name": "InputOtp",
+    "desc": "A sleek lil input for taking OTP ",
+    "path": "/components/InputOTP/InputOTP.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Set up chatbot component",
+        "codeBlock": "import InputOPT from '@/components/InputOTP';",
+        "path": "/components/MessageBot/MessageBot.tsx"
+      },
+      {
+        "title": "Customize your avatar and branding",
+        "codeBlock": "// pass your logo/avatar URLs and org name as props",
+        "path": "/pages/index.tsx"
+      }
+    ],
+    "props": [
+      {
+        "prop": "orgName",
+        "type": "string",
+        "desc": "The name displayed on top of the chatbot. Keeps it branded.",
+        "defaultValue": "\"UIgnite\""
+      },
+      {
+        "prop": "themeColor",
+        "type": "string",
+        "desc": "Tailwind class for primary color. Controls button and header theme.",
+        "defaultValue": "\"bg-gray-800\""
+      },
+      {
+        "prop": "url",
+        "type": "string",
+        "desc": "Image URL for the **user** avatar.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "alt",
+        "type": "string",
+        "desc": "Image URL for the **bot** avatar (can be same or different from user).",
+        "defaultValue": "—"
+      }
+    ]
+  },
+  {
     "id": "MessageBot",
     "name": "MessageBot",
     "desc": "A sleek lil’ floating chatbot that talks back. Perfect for support, onboarding, or just showing off that ✨interactive ✨ flair.",

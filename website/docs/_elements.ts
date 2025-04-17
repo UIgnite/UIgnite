@@ -27,14 +27,15 @@ import {
   Toast,
   useToast,
   Carosuel,
+  InputOTP,
 } from '@pkgs/uignite';
 import Footer from './src/components/Footer';
 import Navbar from './src/components/Navbar';
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react';
-import {Info} from 'lucide-react';
-import { CommandButton } from './src/components/CommandButton';
-import { AlarmClockCheck } from 'lucide-react';
+import {Eye, EyeOff, Info} from 'lucide-react';
+import {CommandButton} from './src/components/CommandButton';
+import {AlarmClockCheck} from 'lucide-react';
 
 const elements = [
   {
@@ -77,7 +78,7 @@ const elements = [
   },
   {
     id: 'button',
-    scope: {Button,CommandButton,AlarmClockCheck},
+    scope: {Button, CommandButton, AlarmClockCheck},
     element: `
             <Button>Click Me</Button>
     `,
@@ -266,7 +267,8 @@ const elements = [
   {
     id: 'Carosuel',
     scope: {Carosuel},
-    element: ` <Carosuel className="h-full w-full   flex justify-center items-center">
+    element: ` 
+    <Carosuel className="h-full w-full   flex justify-center items-center">
       <div className=" dark:bg-black bg-gray-100 h-full mr-4 ml-4 flex items-center justify-center text-2xl font-semibold rounded-lg shadow-md">
         Slide 1
       </div>
@@ -356,8 +358,62 @@ const elements = [
   },
   {
     id: 'input',
-    scope: {Input},
+    scope: {Input, EyeOff, Eye, useState},
     element: `<Input placeholder="Type here..." />`,
+    variation: [
+      `
+      <Input type="file" className="file:me-3" />
+      `,
+      `
+      <div className="flex rounded-md shadow-xs">
+          <span
+            className="h-9 p-2 rounded-md border border-gray-400 dark:border-zinc-700
+            rounded-e-none text-base shadow-sm transition-colors placeholder:text-muted-foreground 
+           border-input bg-background text-muted-foreground inline-flex items-center
+            rounded-s-md px-3  text-zinc-500"
+          >
+            https://
+          </span>
+          <Input
+            className="-ms-px rounded-s-none shadow-none dark:font-light"
+            placeholder="www.uignite.in"
+            type="text"
+          />
+        </div>
+      `,
+      `
+      <Input type="email" value="chaicode@gmail.com" disabled />
+      `,
+      `
+        function PasswordInput() {
+          const [show, setShow] = useState(false);
+
+          return (
+            <div className="relative">
+              <Input
+                type={show ? 'text' : 'password'}
+                className="w-full pr-10"
+                placeholder="Password"
+                defaultValue={'uignite'}
+              />
+              <div
+                onClick={() => setShow((prev) => !prev)}
+                className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground"
+              >
+                {show ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+              </div>
+            </div>
+          );
+        }
+      `,
+    ],
+  },
+  {
+    id: 'inputotp',
+    scope: {InputOTP},
+    element: `
+      <InputOTP length = {6}/> 
+    `,
     variation: [],
   },
   {
@@ -403,41 +459,41 @@ const elements = [
     scope: {PricingCard, Link},
     element: `
     <>
-    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 px-4">
-    <PricingCard 
-      title="Pro Plan"
-      price="$29"
-      validity="per month"
-      description="Get access to all features and premium support."
-      features={[
-        "Unlimited API requests",
-        "24/7 customer support",
-        "Access to premium templates",
-        "Advanced analytics"
-      ]}
-      highlighted={false}
-      theme="dark"
-      popular={false}
-  />
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 px-4">
+      <PricingCard 
+        title="Pro Plan"
+        price="$29"
+        validity="per month"
+        description="Get access to all features and premium support."
+        features={[
+          "Unlimited API requests",
+          "24/7 customer support",
+          "Access to premium templates",
+          "Advanced analytics"
+        ]}
+        highlighted={false}
+        theme="dark"
+        popular={false}
+      />
 
-   <PricingCard 
-      title="Pro Plan"
-      price="$29"
-      validity="per month"
-      description="Get access to all features and premium support."
-      features={[
-        "Unlimited API requests",
-        "24/7 customer support",
-        "Access to premium templates",
-        "Advanced analytics"
-      ]}
-      highlighted={false}
-      theme="dracula"
-      popular={false}
-  />
-</div>
-<div className="ml-5 mt-5"> For the best experience, please view the <Link to="/pricing" className="text-blue-600 cursor-pointer">Pricing page</Link> on a larger screen.</div>
-</>
+      <PricingCard 
+          title="Pro Plan"
+          price="$29"
+          validity="per month"
+          description="Get access to all features and premium support."
+          features={[
+            "Unlimited API requests",
+            "24/7 customer support",
+            "Access to premium templates",
+            "Advanced analytics"
+          ]}
+          highlighted={false}
+          theme="dracula"
+          popular={false}
+      />
+      </div>
+      <div className="ml-5 mt-5"> For the best experience, please view the <Link to="/pricing" className="text-blue-600 cursor-pointer">Pricing page</Link> on a larger screen.</div>
+    </>
   
   
   `,
@@ -469,7 +525,7 @@ const elements = [
 
     `,
     variation: [
-          `
+      `
           <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
         <h2 className="text-lg font-semibold mb-4">Product Card</h2>
         <Skeleton className="h-48 w-full rounded-lg mb-4" />
@@ -482,7 +538,7 @@ const elements = [
         </div>
       </div>
           `,
-          `
+      `
            <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
         <h2 className="text-lg font-semibold mb-4">Social Media Post</h2>
         <div className="flex items-center mb-4">
@@ -500,7 +556,7 @@ const elements = [
       </div>
 
           `,
-          `
+      `
          <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
         <h2 className="text-lg font-semibold mb-4">Profile Card</h2>
         <div className="flex flex-col items-center mb-6">
@@ -526,7 +582,7 @@ const elements = [
       </div>
 
           `,
-          `
+      `
           <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
         <h2 className="text-lg font-semibold mb-4">Notification</h2>
         <div className="flex gap-4">
@@ -540,7 +596,7 @@ const elements = [
 
 
           `,
-         `
+      `
          <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
         <h2 className="text-lg font-semibold mb-4">Inovice Bill</h2>
   <Skeleton className="h-5 w-1/2 mb-3" />
@@ -556,7 +612,8 @@ const elements = [
 </div>
 
 
-         `,`  <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
+         `,
+      `  <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
         <h2 className="text-lg font-semibold mb-4">Media Player</h2>
         <div className="flex gap-4" >
             <Skeleton className="h-16 w-16 rounded-lg" />
@@ -567,9 +624,7 @@ const elements = [
               </div>
               </div>
           </div>`,
-
     ],
-
   },
   {
     id: 'spinner',
@@ -597,18 +652,18 @@ const elements = [
     id: 'Tabs',
     scope: {Tabs, TabList, Tab, TabContent},
     element: `
-      <Tabs defaultVal="preview">
+      <Tabs defaultVal="Before">
         <TabList className="w-[400px] ">
-          <Tab title="Preview" value="preview"></Tab>
-          <Tab title="Code" value="code"></Tab>
+          <Tab title="Before" value="before"></Tab>
+          <Tab title="After" value="after"></Tab>
         </TabList>
         <TabContent
           content={<div className="m-2 p-2 rounded-md dark:bg-neutral-800"> Preview Content from Tab 1 </div>}
-          value="preview" 
+          value="before" 
         ></TabContent>
         <TabContent className="p-2 "
           content={<div className="m-2 p-2 rounded-md dark:bg-neutral-800"> Code Content of Tab 2 </div>} 
-          value="code"
+          value="after"
         ></TabContent>
       </Tabs>
     `,
@@ -648,8 +703,8 @@ const elements = [
     id: 'tooltip',
     scope: {Tooltip},
     element: `
-      <Tooltip title="This is a tooltip" options={{ delay: 500 }}>
-        <button className="px-4 py-2 bg-blue-500 text-white rounded">Hover me</button>
+      <Tooltip title="Tooltip" options={{ delay: 500 }}>
+        <button className="cursor-pointer px-4 py-2 bg-neutral-800 text-white rounded">Hover me</button>
       </Tooltip>
     `,
     variation: [],
