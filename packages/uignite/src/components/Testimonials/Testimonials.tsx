@@ -60,4 +60,4 @@ const Testimonials: React.FC<TestimonialsProps> = ({
   );
 };
 
-export default Testimonials;
+export {Testimonials};

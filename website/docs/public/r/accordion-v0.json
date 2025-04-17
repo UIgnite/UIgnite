@@ -1,1 +1,18 @@
+<<<<<<< HEAD
 {"name":"accordion-v0","type":"registry:component","dependencies":["lucide-react"],"registryDependencies":["https://080a-104-28-199-189.ngrok-free.app/r/accordion.json"],"files":[{"path":"registry/default/components/accordion-v0.tsx","type":"registry:component","content":"import {Accordion} from \"@/components/ui/Accordion\"\nimport {AccordionWrapper} from \"@/components/ui/AccordionWrapper\"\n              function Component(){\n                return (\n      <div className=\"relative z-10\">\n        <AccordionWrapper>\n          <Accordion\n            title=\"What is MobiMart?\"\n            content=\"MobiMart is an e-commerce platform selling mobile gadgets like earbuds, phones, and speakers.\"\n            className=\"bg-gray-100 hover:bg-white  border-[0.5px] dark:border-neutral-800\"\n          />\n          <Accordion\n            title=\"How long does delivery take?\"\n            content=\"Typically 2-4 business days depending on your location.\"\n            className=\"bg-gray-100 hover:bg-white  border-[0.5px] dark:border-neutral-800\"\n          />\n          <Accordion\n            title=\"Can I return a product?\"\n            content=\"Yes, we have a 7-day easy return policy.\"\n            className=\"bg-gray-100 hover:bg-white  border-[0.5px] dark:border-neutral-800\"\n          />\n        </AccordionWrapper>\n      </div>\n    )\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
+=======
+{
+  "name": "accordion-v0",
+  "type": "registry:component",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": ["https://uignite.in/r/accordion.json"],
+  "files": [
+    {
+      "path": "registry/default/components/accordion-v0.tsx",
+      "type": "registry:component",
+      "content": "import Accordion from \"@/components/ui/Accordion.tsx\"\nimport AccordionWrapper from \"@/components/ui/AccordionWrapper.tsx\"\n              function Component(){\n                return (\r\n      <div className=\"relative z-10\">\r\n        <AccordionWrapper>\r\n          <Accordion\r\n            title=\"What is MobiMart?\"\r\n            content=\"MobiMart is an e-commerce platform selling mobile gadgets like earbuds, phones, and speakers.\"\r\n            className=\"bg-gray-100 hover:bg-white  border-[0.5px] dark:border-neutral-800\"\r\n          />\r\n          <Accordion\r\n            title=\"How long does delivery take?\"\r\n            content=\"Typically 2-4 business days depending on your location.\"\r\n            className=\"bg-gray-100 hover:bg-white  border-[0.5px] dark:border-neutral-800\"\r\n          />\r\n          <Accordion\r\n            title=\"Can I return a product?\"\r\n            content=\"Yes, we have a 7-day easy return policy.\"\r\n            className=\"bg-gray-100 hover:bg-white  border-[0.5px] dark:border-neutral-800\"\r\n          />\r\n        </AccordionWrapper>\r\n      </div>\r\n    )\n              }\n              "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}
+>>>>>>> c2c830a0373599bead4655913fb85d18ddc17095

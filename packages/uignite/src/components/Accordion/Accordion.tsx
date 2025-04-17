@@ -86,4 +86,4 @@ const AccordionWrapper = ({children}: AccordionWrapperParams) => {
   );
 };
 
-export {AccordionWrapper, Accordion as default};
+export {AccordionWrapper, Accordion};

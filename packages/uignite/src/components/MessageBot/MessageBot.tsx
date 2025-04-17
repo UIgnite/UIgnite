@@ -138,4 +138,4 @@ const MessageBot = ({
   );
 };
 
-export default MessageBot;
+export {MessageBot};
