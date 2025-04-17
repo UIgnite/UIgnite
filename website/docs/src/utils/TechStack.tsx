@@ -1,5 +1,4 @@
 import {motion} from 'framer-motion';
-import {Tooltip} from '@pkgs/uignite';
 
 interface Tech {
   name: string;
@@ -96,7 +95,7 @@ const techStack: Tech[] = [
 ];
 export default function TechStack() {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-6 py-10 -mt-8">
+    <div className="flex flex-wrap items-center justify-center gap-6 py-10 ">
       {techStack.map((tech, index) => (
         <motion.div
           key={index}
@@ -111,8 +110,8 @@ export default function TechStack() {
           className="flex flex-col items-center gap-2 text-center group"
           title={tech.name}
         >
-          <div className="transition-transform duration-300 ">
-            <Tooltip title={tech.name}> {tech.svg}</Tooltip>
+          <div className=" transition-transform duration-300 ">
+            {tech.svg}
           </div>
         </motion.div>
       ))}
