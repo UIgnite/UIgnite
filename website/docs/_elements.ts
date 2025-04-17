@@ -27,6 +27,7 @@ import {
   useToast,
   Carosuel,
   InputOTP,
+  AlertDialogBox,
 } from '@pkgs/uignite';
 import Footer from './src/components/Footer';
 import Navbar from './src/components/Navbar';
@@ -40,55 +41,66 @@ import { Switch } from './src/components/Switch';
 const elements = [
   {
     id: 'accordion',
-    scope: {Accordion, AccordionWrapper},
+    scope: { Accordion, AccordionWrapper },
     element: `
-      <div className="relative z-10">
-        <AccordionWrapper>
-          <Accordion
-            title="What is MobiMart?"
-            content="MobiMart is an e-commerce platform selling mobile gadgets like earbuds, phones, and speakers."
-            className="bg-gray-100 hover:bg-white  border-[0.5px] dark:border-neutral-800"
-          />
-          <Accordion
-            title="How long does delivery take?"
-            content="Typically 2-4 business days depending on your location."
-            className="bg-gray-100 hover:bg-white  border-[0.5px] dark:border-neutral-800"
-          />
-          <Accordion
-            title="Can I return a product?"
-            content="Yes, we have a 7-day easy return policy."
-            className="bg-gray-100 hover:bg-white  border-[0.5px] dark:border-neutral-800"
-          />
-        </AccordionWrapper>
-      </div>
+<div className="relative z-10">
+  <AccordionWrapper>
+    <Accordion
+      title="What is MobiMart?"
+      content="MobiMart is an e-commerce platform selling mobile gadgets like earbuds, phones, and speakers."
+      className="bg-gray-100 hover:bg-white border-[0.5px] dark:border-neutral-800"
+    />
+    <Accordion
+      title="How long does delivery take?"
+      content="Typically 2-4 business days depending on your location."
+      className="bg-gray-100 hover:bg-white border-[0.5px] dark:border-neutral-800"
+    />
+    <Accordion
+      title="Can I return a product?"
+      content="Yes, we have a 7-day easy return policy."
+      className="bg-gray-100 hover:bg-white border-[0.5px] dark:border-neutral-800"
+    />
+  </AccordionWrapper>
+</div>
+
+    `,
+    variation: [],
+  },
+  {
+    id: 'AlertDialogBox',
+    scope: { Button, AlertDialogBox, useState },
+    element: `
+      <AlertDialogBox
+        title="Delete account?"
+        description="This action cannot be undone. Are you sure you want to delete your account permanently?"
+      />
     `,
     variation: [],
   },
   {
     id: 'avatar',
-    scope: {Avatar, AvatarGroup},
+    scope: { Avatar, AvatarGroup },
     element: `
       <>
         <Avatar url={"/piyush-sir.png"} alt={"user"} />
         <Avatar url={"/hitesh-sir.png"} alt={"user"} />
-        
       </>
     `,
     variation: [],
   },
   {
     id: 'button',
-    scope: {Button, CommandButton, AlarmClockCheck},
+    scope: { Button, CommandButton, AlarmClockCheck },
     element: `
-            <Button>Click Me</Button>
+      <Button>Click Me</Button>
     `,
     variation: [
       `
       <div className="grid grid-cols-4 gap-10">
         <Button variant="primary">primary</Button>
         <Button variant="secondary">secondary</Button>
-         <Button variant="outline">outline</Button>
-          <Button variant="glass">glass</Button>
+        <Button variant="outline">outline</Button>
+        <Button variant="glass">glass</Button>
       </div>
       `,
       `
@@ -97,7 +109,6 @@ const elements = [
         <Button variant="destructive">destructive</Button>
         <Button variant="warning">warning</Button>
         <Button variant="ghost">ghost</Button>
-       
       </div>
       `,
       `
@@ -105,7 +116,7 @@ const elements = [
         <Button variant="dark">dark</Button>
         <Button variant="light">light</Button>
         <Button variant="gradient">gradient</Button>
-         <Button className="animate-border text-white font-semibold px-6 py-3 rounded-xl">
+        <Button className="animate-border text-white font-semibold px-6 py-3 rounded-xl">
           Hover Me
         </Button>
       </div>
@@ -229,7 +240,6 @@ const elements = [
           </a>
         </CardContent>
       </Card>
-      
       `,
       `
       <Card className="m-0 p-0 h-[440px] w-[325px] rounded-3xl">
@@ -266,7 +276,7 @@ const elements = [
   },
   {
     id: 'Carosuel',
-    scope: {Carosuel},
+    scope: { Carosuel },
     element: ` 
     <Carosuel className="h-full w-full   flex justify-center items-center">
       <div className=" dark:bg-black bg-gray-100 h-full mr-4 ml-4 flex items-center justify-center text-2xl font-semibold rounded-lg shadow-md">
@@ -291,11 +301,15 @@ const elements = [
 
   {
     id: 'dropdown',
-    scope: {Dropdown},
+    scope: { Dropdown },
     element: `
-      <Dropdown  button={<div className=" bg-black p-2 px-4 text-gray-100  dark:bg-white dark:text-black rounded cursor-pointer">Menu</div>}   title="Options"
-      
-        >
+      <Dropdown 
+        button={
+        <div className=" bg-black p-2 px-4 text-gray-100  dark:bg-white dark:text-black rounded cursor-pointer">
+          Menu
+        </div>}   
+        title="Options"
+      >
         <button className=" text-black px-4 py-2 text-left hover:bg-neutral-300 rounded">Profile</button>
         <button className="text-black px-4 py-2 text-left hover:bg-neutral-300 rounded">Settings</button>
         <button className="text-black px-4 py-2 text-left hover:bg-neutral-300 rounded">Logout</button>
@@ -305,7 +319,7 @@ const elements = [
   },
   {
     id: 'footer',
-    scope: {Footer},
+    scope: { Footer },
     element: `
       <Footer
         lightLogo="https://dummyimage.com/120x40/000/fff&text=Light+Logo"
@@ -358,7 +372,7 @@ const elements = [
   },
   {
     id: 'input',
-    scope: {Input, EyeOff, Eye, useState},
+    scope: { Input, EyeOff, Eye, useState },
     element: `<Input placeholder="Type here..." />`,
     variation: [
       `
@@ -369,7 +383,7 @@ const elements = [
           <span
             className="h-9 p-2 rounded-md border border-gray-400 dark:border-zinc-700
             rounded-e-none text-base shadow-sm transition-colors placeholder:text-muted-foreground 
-           border-input bg-background text-muted-foreground inline-flex items-center
+            border-input bg-background text-muted-foreground inline-flex items-center
             rounded-s-md px-3  text-zinc-500"
           >
             https://
@@ -410,7 +424,7 @@ const elements = [
   },
   {
     id: 'inputotp',
-    scope: {InputOTP},
+    scope: { InputOTP },
     element: `
       <InputOTP length = {6}/> 
     `,
@@ -418,7 +432,7 @@ const elements = [
   },
   {
     id: 'messagebot',
-    scope: {MessageBot},
+    scope: { MessageBot },
     element: `
     <div>
       <div> Neeche Dekho Neecheee... </div>
@@ -434,7 +448,7 @@ const elements = [
   },
   {
     id: 'navbar',
-    scope: {Navbar},
+    scope: { Navbar },
     element: `
       <Navbar
         lightLogo="https://dummyimage.com/100x40/ffffff/000000&text=Light+Logo"
@@ -456,7 +470,7 @@ const elements = [
   },
   {
     id: 'pricingCard',
-    scope: {PricingCard, Link},
+    scope: { PricingCard, Link },
     element: `
     <>
       <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 px-4">
@@ -475,7 +489,6 @@ const elements = [
         theme="dark"
         popular={false}
       />
-
       <PricingCard 
           title="Pro Plan"
           price="$29"
@@ -494,14 +507,12 @@ const elements = [
       </div>
       <div className="ml-5 mt-5"> For the best experience, please view the <Link to="/pricing" className="text-blue-600 cursor-pointer">Pricing page</Link> on a larger screen.</div>
     </>
-  
-  
   `,
     variation: [],
   },
   {
     id: 'resizable',
-    scope: {Resizable},
+    scope: { Resizable },
     element: `<div className='relative w-[500px] h-26'>
       <Resizable className='h-20'>
         <div className='w-full h-full bg-amber-200'></div>
@@ -511,7 +522,7 @@ const elements = [
   },
   {
     id: 'skeleton',
-    scope: {Skeleton},
+    scope: { Skeleton },
     element: `
         <div className="flex items-center space-x-4 ">
           <Skeleton className="h-12 w-12 rounded-full" />
@@ -520,11 +531,10 @@ const elements = [
             <Skeleton className="h-4 w-[200px]" />
           </div>
         </div>
-
     `,
     variation: [
       `
-          <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
+      <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
         <h2 className="text-lg font-semibold mb-4">Product Card</h2>
         <Skeleton className="h-48 w-full rounded-lg mb-4" />
         <Skeleton className="h-6 w-3/4 mb-2" />
@@ -537,7 +547,7 @@ const elements = [
       </div>
           `,
       `
-           <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
+      <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
         <h2 className="text-lg font-semibold mb-4">Social Media Post</h2>
         <div className="flex items-center mb-4">
           <Skeleton className="h-10 w-10 rounded-full" />
@@ -550,12 +560,10 @@ const elements = [
         <Skeleton className="h-4 w-5/6 mb-2" />
         <Skeleton className="h-4 w-4/5 mb-4" />
         <Skeleton className="h-56 w-full rounded-lg mb-4" />
-       
       </div>
-
           `,
       `
-         <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
+      <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
         <h2 className="text-lg font-semibold mb-4">Profile Card</h2>
         <div className="flex flex-col items-center mb-6">
           <Skeleton className="h-24 w-24 rounded-full mb-4" />
@@ -578,10 +586,9 @@ const elements = [
         </div>
         <Skeleton className="h-14 w-full rounded-md" />
       </div>
-
           `,
       `
-          <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
+      <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
         <h2 className="text-lg font-semibold mb-4">Notification</h2>
         <div className="flex gap-4">
         <Skeleton className="h-6 w-6 rounded-full" />
@@ -591,42 +598,39 @@ const elements = [
         </div>
         </div>
       </div>
-
-
           `,
       `
-         <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
+      <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
         <h2 className="text-lg font-semibold mb-4">Inovice Bill</h2>
-  <Skeleton className="h-5 w-1/2 mb-3" />
-  <div className="space-y-2">
-    <Skeleton className="h-4 w-full" />
-    <Skeleton className="h-4 w-[80%]" />
-    <Skeleton className="h-4 w-[60%]" />
-  </div>
-  <div className="flex justify-between items-center mt-4">
-    <Skeleton className="h-4 w-1/3" />
-    <Skeleton className="h-5 w-20 rounded-md" />
-  </div>
-</div>
-
-
+        <Skeleton className="h-5 w-1/2 mb-3" />
+        <div className="space-y-2">
+          <Skeleton className="h-4 w-full" />
+          <Skeleton className="h-4 w-[80%]" />
+          <Skeleton className="h-4 w-[60%]" />
+        </div>
+        <div className="flex justify-between items-center mt-4">
+          <Skeleton className="h-4 w-1/3" />
+          <Skeleton className="h-5 w-20 rounded-md" />
+        </div>
+      </div>
          `,
-      `  <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
+      `  
+      <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
         <h2 className="text-lg font-semibold mb-4">Media Player</h2>
         <div className="flex gap-4" >
-            <Skeleton className="h-16 w-16 rounded-lg" />
-              <div className="space-y-2">
-                <Skeleton className="h-5 w-[220px]" />
-                <Skeleton className="h-4 w-[160px]" />
-                <Skeleton className="h-4 w-[180px]" />
-              </div>
-              </div>
-          </div>`,
+          <Skeleton className="h-16 w-16 rounded-lg" />
+          <div className="space-y-2">
+            <Skeleton className="h-5 w-[220px]" />
+            <Skeleton className="h-4 w-[160px]" />
+            <Skeleton className="h-4 w-[180px]" />
+          </div>
+        </div>
+      </div>`,
     ],
   },
   {
     id: 'spinner',
-    scope: {Spinner},
+    scope: { Spinner },
     element: `
     <div className="grid grid-cols-1">
       <Spinner variant="bounce" className="my-4" />
@@ -642,13 +646,13 @@ const elements = [
   },
   {
     id: 'switch',
-    scope: {Switch},
+    scope: { Switch },
     element: `<Switch defaultState={true} />`,
     variation: [],
   },
   {
     id: 'Tabs',
-    scope: {Tabs, TabList, Tab, TabContent},
+    scope: { Tabs, TabList, Tab, TabContent },
     element: `
       <Tabs defaultVal="Before">
         <TabList className="w-[400px] ">
@@ -669,13 +673,13 @@ const elements = [
   },
   {
     id: 'textarea',
-    scope: {TextArea},
+    scope: { TextArea },
     element: `<TextArea placeholder="Write something..." />`,
     variation: [],
   },
   {
     id: 'toast',
-    scope: {useToast, Toast, Button},
+    scope: { useToast, Toast, Button },
     element: `
     function ToastPreview() {
       const toast = useToast();
@@ -699,7 +703,7 @@ const elements = [
   },
   {
     id: 'tooltip',
-    scope: {Tooltip},
+    scope: { Tooltip },
     element: `
       <Tooltip title="Tooltip" options={{ delay: 500 }}>
         <button className="cursor-pointer px-4 py-2 bg-neutral-800 text-white rounded">Hover me</button>
