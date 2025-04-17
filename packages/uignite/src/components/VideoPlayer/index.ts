@@ -1,1 +1,1 @@
-export {default as VideoPlayer} from './VideoPlayer';
+export {VideoPlayer} from './VideoPlayer';

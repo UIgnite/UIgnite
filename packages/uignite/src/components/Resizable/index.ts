@@ -1,1 +1,1 @@
-export {default as Resizable} from './Resizable';
+export {Resizable} from './Resizable';

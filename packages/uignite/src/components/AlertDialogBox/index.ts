@@ -1,1 +1,1 @@
-export {default} from './AlertDialogBox';
+export {AlertDialogBox} from './AlertDialogBox';

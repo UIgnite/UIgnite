@@ -1,1 +1,1 @@
-export {default} from './MessageBot';
+export {MessageBot} from './MessageBot';
