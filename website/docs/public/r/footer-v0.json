@@ -2,6 +2,7 @@
   "name": "footer-v0",
   "type": "registry:component",
   "dependencies": [],
+  "registryDependencies": ["https://uignite.in/r/footer.json"],
   "files": [
     {
       "path": "registry/default/components/footer-v0.tsx",
@@ -9,6 +10,5 @@
       "content": "import Footer from \"@/components/ui/Footer.tsx\"\r\n      <Footer\r\n        lightLogo=\"https://dummyimage.com/120x40/000/fff&text=Light+Logo\"\r\n        darkLogo=\"https://dummyimage.com/120x40/fff/000&text=Dark+Logo\"\r\n        description=\"This is a simple footer with sections, social links, and a copyright notice.\"\r\n        socials={[\r\n          { type: \"linkedin\", link: \"https://linkedin.com\" },\r\n          { type: \"twitter\", link: \"https://twitter.com\" },\r\n          { type: \"instagram\", link: \"https://instagram.com\" },\r\n          { type: \"youtube\", link: \"https://youtube.com\" },\r\n        ]}\r\n        sections={[\r\n          {\r\n            title: \"Product\",\r\n            links: [\r\n              { label: \"Features\", href: \"#\" },\r\n              { label: \"Pricing\", href: \"#\" },\r\n              { label: \"Integrations\", href: \"#\" },\r\n            ],\r\n          },\r\n          {\r\n            title: \"Company\",\r\n            links: [\r\n              { label: \"About\", href: \"#\" },\r\n              { label: \"Careers\", href: \"#\" },\r\n              { label: \"Blog\", href: \"#\" },\r\n            ],\r\n          },\r\n          {\r\n            title: \"Support\",\r\n            links: [\r\n              { label: \"Help Center\", href: \"#\" },\r\n              { label: \"Terms of Service\", href: \"#\" },\r\n              { label: \"Privacy Policy\", href: \"#\" },\r\n            ],\r\n          },\r\n          {\r\n            title: \"Follow Us\",\r\n            links: [\r\n              { label: \"LinkedIn\", href: \"https://linkedin.com\" },\r\n              { label: \"Twitter\", href: \"https://twitter.com\" },\r\n              { label: \"Instagram\", href: \"https://instagram.com\" },\r\n            ],\r\n          },\r\n        ]}\r\n        copyright=\"© 2025 Your Company. All rights reserved.\"\r\n      />\r\n    "
     }
   ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "registryDependencies": ["https://uignite.in/r/footer.json"]
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
 }
