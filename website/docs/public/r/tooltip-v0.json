@@ -1,14 +1,1 @@
-{
-  "name": "tooltip-v0",
-  "type": "registry:component",
-  "dependencies": [],
-  "registryDependencies": ["https://uignite.in/r/tooltip.json"],
-  "files": [
-    {
-      "path": "registry/default/components/tooltip-v0.tsx",
-      "type": "registry:component",
-      "content": "import Tooltip from \"@/components/ui/Tooltip.tsx\"\r\n      <Tooltip title=\"Tooltip\" options={{ delay: 500 }}>\r\n        <button className=\"cursor-pointer px-4 py-2 bg-neutral-800 text-white rounded\">Hover me</button>\r\n      </Tooltip>\r\n    "
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
-}
+{"name":"tooltip-v0","type":"registry:component","dependencies":[],"registryDependencies":["https://uignite.in/r/tooltip.json"],"files":[{"path":"registry/default/components/tooltip-v0.tsx","type":"registry:component","content":"import Tooltip from \"@/components/ui/Tooltip.tsx\"\n              function Component(){\n                return (\r\n      <Tooltip title=\"Tooltip\" options={{ delay: 500 }}>\r\n        <button className=\"cursor-pointer px-4 py-2 bg-neutral-800 text-white rounded\">Hover me</button>\r\n      </Tooltip>\r\n    )\n              }\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}

@@ -1,14 +1,1 @@
-{
-  "name": "Tabs-v0",
-  "type": "registry:component",
-  "dependencies": [],
-  "registryDependencies": ["https://uignite.in/r/tabs.json"],
-  "files": [
-    {
-      "path": "registry/default/components/Tabs-v0.tsx",
-      "type": "registry:component",
-      "content": "import Tabs from \"@/components/ui/Tabs.tsx\"\nimport TabList from \"@/components/ui/TabList.tsx\"\nimport Tab from \"@/components/ui/Tab.tsx\"\nimport TabContent from \"@/components/ui/TabContent.tsx\"\r\n      <Tabs defaultVal=\"Before\">\r\n        <TabList className=\"w-[400px] \">\r\n          <Tab title=\"Before\" value=\"before\"></Tab>\r\n          <Tab title=\"After\" value=\"after\"></Tab>\r\n        </TabList>\r\n        <TabContent\r\n          content={<div className=\"m-2 p-2 rounded-md dark:bg-neutral-800\"> Preview Content from Tab 1 </div>}\r\n          value=\"before\" \r\n        ></TabContent>\r\n        <TabContent className=\"p-2 \"\r\n          content={<div className=\"m-2 p-2 rounded-md dark:bg-neutral-800\"> Code Content of Tab 2 </div>} \r\n          value=\"after\"\r\n        ></TabContent>\r\n      </Tabs>\r\n    "
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
-}
+{"name":"Tabs-v0","type":"registry:component","dependencies":[],"registryDependencies":["https://uignite.in/r/tabs.json"],"files":[{"path":"registry/default/components/Tabs-v0.tsx","type":"registry:component","content":"import Tabs from \"@/components/ui/Tabs.tsx\"\nimport TabList from \"@/components/ui/TabList.tsx\"\nimport Tab from \"@/components/ui/Tab.tsx\"\nimport TabContent from \"@/components/ui/TabContent.tsx\"\n              function Component(){\n                return (\r\n      <Tabs defaultVal=\"Before\">\r\n        <TabList className=\"w-[400px] \">\r\n          <Tab title=\"Before\" value=\"before\"></Tab>\r\n          <Tab title=\"After\" value=\"after\"></Tab>\r\n        </TabList>\r\n        <TabContent\r\n          content={<div className=\"m-2 p-2 rounded-md dark:bg-neutral-800\"> Preview Content from Tab 1 </div>}\r\n          value=\"before\" \r\n        ></TabContent>\r\n        <TabContent className=\"p-2 \"\r\n          content={<div className=\"m-2 p-2 rounded-md dark:bg-neutral-800\"> Code Content of Tab 2 </div>} \r\n          value=\"after\"\r\n        ></TabContent>\r\n      </Tabs>\r\n    )\n              }\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
