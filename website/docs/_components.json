@@ -4,7 +4,7 @@
     "name": "Accordion",
     "desc": "An interactive and accessible Accordion component with optional control, built with React. Expand content like FAQs, collapsible menus, or dramatic reveals. 🎭",
     "path": "/components/Accordion/Accordion.tsx",
-    "previewImageUrl": "",
+    "previewImageUrl": "/assets/previewimages/accordian.png",
     "installation": [
       {
         "title": "Install dependencies",
@@ -72,7 +72,7 @@
     "name": "Avatar",
     "desc": "A minimal, aesthetic Avatar component to show off user profile pics in a rounded and responsive way. Plug it anywhere — chat apps, dashboards, or comment sections.",
     "path": "/components/Avatar/Avatar.tsx",
-    "previewImageUrl": "",
+    "previewImageUrl": "/assets/previewimages/avatar.png",
     "installation": [
       {
         "title": "Install dependencies",
@@ -202,6 +202,7 @@
     "name": "Card",
     "desc": "A flexible and customizable card component for displaying content, built with React.",
     "path": "/components/Card/Card.tsx",
+    "previewImageUrl": "/assets/previewimages/card.png",
     "installation": [
       {
         "title": "Install dependencies",
@@ -228,7 +229,7 @@
     "name": "Carousel",
     "desc": "A smooth, responsive Carousel component to slide through child elements. Includes left and right navigation with smooth scroll transitions.",
     "path": "/components/Carousel/Carousel.tsx",
-    "previewImageUrl": "",
+    "previewImageUrl": "/assets/previewimages/carousel.png",
     "installation": [
       {
         "title": "Install dependencies",
@@ -376,7 +377,7 @@
     "name": "Input",
     "desc": "Aesthetic, minimal, and totally customizable input field for forms. Focus-ring? Yup. Dark mode? Of course. Fully vibing with Tailwind.",
     "path": "/components/Input/Input.tsx",
-    "previewImageUrl": "",
+    "previewImageUrl": "/assets/previewimages/input.png",
     "installation": [
       {
         "title": "Add Tailwind & utils",
@@ -460,7 +461,7 @@
     "name": "Navbar",
     "desc": "A sticky top navigation bar that supports theme toggling, responsive design, dynamic nav links, and GitHub integration. Fully vibe-checked for light & dark modes.",
     "path": "/components/Navbar/Navbar.tsx",
-    "previewImageUrl": "",
+    "previewImageUrl": "/assets/previewimages/navbar.png",
     "installation": [
       {
         "title": "Import the Navbar",
@@ -546,7 +547,7 @@
     "name": "PricingCard",
     "desc": "Flexible pricing card with theme-based styling, animated hover effects, and support for highlighting popular plans. Includes theme toggle via ThemeSelector.",
     "path": "/components/PricingCard/PricingCard.tsx",
-    "previewImageUrl": "",
+    "previewImageUrl": "/assets/previewimages/pricingcard.png",
     "installation": [
       {
         "title": "Import PricingCard and ThemeSelector",
@@ -718,7 +719,7 @@
     "name": "Switch",
     "desc": "A sleek lil' toggle — like a light switch but for devs. ✨ Great for toggling themes, states, or anything boolean.",
     "path": "/components/Switch/Switch.tsx",
-    "previewImageUrl": "",
+    "previewImageUrl": "/assets/previewimages/toggle.png",
     "installation": [
       {
         "title": "Import the component",
@@ -847,7 +848,7 @@
     "name": "TextArea",
     "desc": "For when you've got more to say 📝 — A dark-mode ready, fully styled textarea component. Clean, smooth, and focus-ring fresh.",
     "path": "/components/TextArea/TextArea.tsx",
-    "previewImageUrl": "",
+    "previewImageUrl": "/assets/previewimages/textarea.png",
     "installation": [
       {
         "title": "Add Tailwind & utils",
