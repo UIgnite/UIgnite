@@ -25,9 +25,10 @@ export default function Resizable({
   const draggerRef = useRef<null | HTMLDivElement>(null);
 
   const [dividerPosition, setDividerPosition] = useState(
-    defaultPosition ?? (horizontalValue
-      ? window.innerHeight - window.innerHeight / 3
-      : window.innerWidth / 5)
+    defaultPosition ??
+      (horizontalValue
+        ? window.innerHeight - window.innerHeight / 3
+        : window.innerWidth / 5)
   );
   const [mouseX, setMouseX] = useState(0);
   const [mouseDown, setMouseDown] = useState(false);
@@ -69,7 +70,7 @@ export default function Resizable({
         (ev) => {
           if (horizontalValue) setMouseX(ev.clientY);
           else {
-            setMouseX(ev.clientX)
+            setMouseX(ev.clientX);
           }
         },
         {
