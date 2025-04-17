@@ -1,18 +1,1 @@
-<<<<<<< HEAD
-{"name":"avatar-v0","type":"registry:component","dependencies":[],"registryDependencies":["https://080a-104-28-199-189.ngrok-free.app/r/avatar.json"],"files":[{"path":"registry/default/components/avatar-v0.tsx","type":"registry:component","content":"import {Avatar} from \"@/components/ui/Avatar\"\nimport {AvatarGroup} from \"@/components/ui/AvatarGroup\"\n              function Component(){\n                return (\n      <>\n        <Avatar url={\"/piyush-sir.png\"} alt={\"user\"} />\n        <Avatar url={\"/hitesh-sir.png\"} alt={\"user\"} />\n        \n      </>\n    )\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
-=======
-{
-  "name": "avatar-v0",
-  "type": "registry:component",
-  "dependencies": [],
-  "registryDependencies": ["https://uignite.in/r/avatar.json"],
-  "files": [
-    {
-      "path": "registry/default/components/avatar-v0.tsx",
-      "type": "registry:component",
-      "content": "import Avatar from \"@/components/ui/Avatar.tsx\"\nimport AvatarGroup from \"@/components/ui/AvatarGroup.tsx\"\n              function Component(){\n                return (\r\n      <>\r\n        <Avatar url={\"/piyush-sir.png\"} alt={\"user\"} />\r\n        <Avatar url={\"/hitesh-sir.png\"} alt={\"user\"} />\r\n        \r\n      </>\r\n    )\n              }\n              "
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
-}
->>>>>>> c2c830a0373599bead4655913fb85d18ddc17095
+{"name":"avatar-v0","type":"registry:component","dependencies":[],"registryDependencies":["https://080a-104-28-199-189.ngrok-free.app/r/avatar.json"],"files":[{"path":"registry/default/components/avatar-v0.tsx","type":"registry:component","content":"import {Avatar} from \"@/components/ui/Avatar\"\nimport {AvatarGroup} from \"@/components/ui/Avatar\"\n              function Component(){\n                return (\r\n      <>\r\n        <Avatar url={\"/piyush-sir.png\"} alt={\"user\"} />\r\n        <Avatar url={\"/hitesh-sir.png\"} alt={\"user\"} />\r\n      </>\r\n    )\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}

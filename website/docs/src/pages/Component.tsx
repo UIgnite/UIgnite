@@ -2,10 +2,8 @@ import {
   Accordion,
   AccordionWrapper,
   Avatar,
-  AvatarGroup,
   Button,
   MessageBot,
-  NavMenu,
   Skeleton,
   Tab,
   TabContent,
@@ -74,14 +72,7 @@ const Components = () => {
         >
           Browse Components
         </Button>
-        <NavMenu items={[]} />
 
-        <AvatarGroup
-          avatars={[
-            {url: './assets/avatars/ram.webp', alt: 'ram'},
-            {url: './assets/avatars/ram.webp', alt: 'ram'},
-          ]}
-        />
         <SearchBar />
 
         <div className="flex items-center space-x-4 mt-8">
