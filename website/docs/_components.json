@@ -68,6 +68,44 @@
     ]
   },
   {
+    "id": "AlertDialogBox",
+    "name": "AlertDialogBox",
+    "desc": "A simple and reusable alert dialog for confirming critical user actions like deleting data, logging out, or other irreversible steps.",
+    "path": "/components/AlertDialogBox/AlertDialogBox.tsx",
+    "previewImageUrl": "/assets/previewimages/alertdialogbox.png",
+    "installation": [
+      {
+        "title": "Install dependencies",
+        "codeBlock": "",
+        "path": "/components/AlertDialogBox/AlertDialogBox.tsx"
+      },
+      {
+        "title": "Copy the code",
+        "codeBlock": "",
+        "path": "/utils/lib.ts"
+      },
+      {
+        "title": "Tailwind setup",
+        "codeBlock": "",
+        "path": "/tailwind.config.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "title",
+        "type": "string",
+        "desc": "The heading text displayed at the top of the alert dialog.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "description",
+        "type": "string",
+        "desc": "The description message that explains the alert action.",
+        "defaultValue": "—"
+      }
+    ]
+  },
+  {
     "id": "Avatar",
     "name": "Avatar",
     "desc": "A minimal, aesthetic Avatar component to show off user profile pics in a rounded and responsive way. Plug it anywhere — chat apps, dashboards, or comment sections.",

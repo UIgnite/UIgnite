@@ -1,7 +1,11 @@
 {
   "name": "button-v0",
   "type": "registry:component",
-  "dependencies": [],
+  "dependencies": ["class-variance-authority"],
+  "registryDependencies": [
+    "https://uignite.in/r/Spinner.json",
+    "https://uignite.in/r/button.json"
+  ],
   "files": [
     {
       "path": "registry/default/components/button-v0.tsx",
@@ -9,6 +13,5 @@
       "content": "import Button from \"@/components/ui/Button.tsx\"\nimport CommandButton from \"@/components/ui/CommandButton.tsx\"\nimport AlarmClockCheck from \"@/components/ui/AlarmClockCheck.tsx\"\r\n            <Button>Click Me</Button>\r\n    "
     }
   ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "registryDependencies": ["https://uignite.in/r/button.json"]
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
 }

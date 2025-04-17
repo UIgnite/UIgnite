@@ -210,3 +210,14 @@ body {
   border-top-color: #1d4ed8;
   animation: spin 1s linear infinite;
 }
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  @apply bg-neutral-200 rounded-full size-2 cursor-pointer;
+}
+
+.slider::-webkit-slider-thumb:active {
+  @apply cursor-grabbing;
+}
