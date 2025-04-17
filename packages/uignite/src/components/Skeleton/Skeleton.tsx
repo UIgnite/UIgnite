@@ -6,7 +6,7 @@ export interface SkeletonParams {
 const Skeleton = ({className}: SkeletonParams) => {
   return (
     <div
-      className={cn(`bg-gray-600 animate-pulse rounded-full ${className}`)}
+      className={cn(`dark:bg-gray-600 bg-gray-400 animate-pulse rounded-full ${className}`)}
     ></div>
   );
 };

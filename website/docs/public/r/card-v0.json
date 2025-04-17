@@ -1,1 +1,14 @@
-{"name":"card-v0","type":"registry:component","dependencies":[],"files":[{"path":"registry/default/components/card-v0.tsx","type":"registry:component","content":"import Card from \"@/components/ui/Card.tsx\"\nimport \r\nCardHeader from \"@/components/ui/\r\nCardHeader.tsx\"\nimport \r\nCardTitle from \"@/components/ui/\r\nCardTitle.tsx\"\nimport \r\nCardDescription from \"@/components/ui/\r\nCardDescription.tsx\"\nimport \r\nCardContent from \"@/components/ui/\r\nCardContent.tsx\"\nimport \r\nCardFooter from \"@/components/ui/\r\nCardFooter.tsx\"\nimport  from \"@/components/ui/.tsx\"\r\n      <Card>\r\n        <CardHeader>\r\n          <CardTitle>Card Title</CardTitle>\r\n          <CardDescription>This is a short description inside the card.</CardDescription>\r\n        </CardHeader>\r\n        <CardContent>\r\n          Here’s the main content of the card. You can add text, images, or even other components here.\r\n        </CardContent>\r\n        <CardFooter>\r\n          <button className=\"text-sm text-blue-500\">Action</button>\r\n          <span className=\"text-xs text-muted-foreground\">Footer note</span>\r\n        </CardFooter>\r\n      </Card>\r\n    "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json","registryDependencies":["https://uignite.in/r/card.json"]}
+{
+  "name": "card-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "registry/default/components/card-v0.tsx",
+      "type": "registry:component",
+      "content": "import Card from \"@/components/ui/Card.tsx\"\nimport \nCardHeader from \"@/components/ui/\nCardHeader.tsx\"\nimport \nCardTitle from \"@/components/ui/\nCardTitle.tsx\"\nimport \nCardDescription from \"@/components/ui/\nCardDescription.tsx\"\nimport \nCardContent from \"@/components/ui/\nCardContent.tsx\"\nimport \nCardFooter from \"@/components/ui/\nCardFooter.tsx\"\nimport \nButton from \"@/components/ui/\nButton.tsx\"\nimport \nAvatar from \"@/components/ui/\nAvatar.tsx\"\nimport \nuseState from \"@/components/ui/\nuseState.tsx\"\nimport \nuseEffect from \"@/components/ui/\nuseEffect.tsx\"\nimport  from \"@/components/ui/.tsx\"\n  function TwitterCard () {\n    const [status, setStatus] = useState('Follow');\n\n    function clickHandler() {\n      const final = status === 'Follow' ? 'Unfollow' : 'Follow';\n      setStatus(final);\n    }\n\n    return (\n      <Card className=\"mt-6 rounded-2xl shadow-lg max-h-min\">\n        <CardHeader className=\"flex flex-row justify-between px-4 pt-2 items-center\">\n          <div className=\"flex gap-3 items-center\">\n            <Avatar url=\"/hitesh-sir.png\" alt=\"avatar\" />\n            <div>\n              <CardTitle className=\"text-base\">Hitesh Chaudhary</CardTitle>\n              <CardDescription className=\"text-sm dark:text-gray-400\">\n                @HiteshDotCom\n              </CardDescription>\n            </div>\n          </div>\n          <Button\n            onClick={clickHandler}\n            className={\\"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "registryDependencies": ["https://uignite.in/r/card.json"]
+}

@@ -6,7 +6,7 @@ import {
 } from 'react-google-recaptcha-v3';
 import CopyButton from './components/copyButton';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomOneDarkReasonable } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import {atomOneDarkReasonable} from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export default function FeedbackForm() {
   const [recaptchaToken, setRecaptchaToken] = useState('');
@@ -284,14 +284,14 @@ export default function FeedbackForm() {
       );
     }
             
-            `
+            `;
 
   return (
     <div className="w-screen flex flex-col h-screen overflow-hidden items-center">
       <title>UIgnite | Feeback Form</title>
       <section className="border dark:bg-neutral-900 dark:border-neutral-800 px-8 pt-10 rounded-lg lg:mt-12 border-neutral-200 bg-white relative">
-        <div className='absolute right-26 z-20 top-1'>
-        <CopyButton copyText={codeBlock} />
+        <div className="absolute right-26 z-20 top-1">
+          <CopyButton copyText={codeBlock} />
         </div>
         <Button
           onClick={() => setViewCode(!viewCode)}
@@ -301,22 +301,22 @@ export default function FeedbackForm() {
           View Code
         </Button>
         {viewCode ? (
-          <div className='max-w-3xl max-h-[70vh] overflow-y-scroll scrollable-content'>
+          <div className="max-w-3xl max-h-[70vh] overflow-y-scroll scrollable-content">
             <div className="w-full h-full relative ">
-      <SyntaxHighlighter
-        language="javascript"
-        style={{
-          ...atomOneDarkReasonable,
-          hljs: {
-            ...atomOneDarkReasonable.hljs,
-            background: 'rgb(24, 24, 24)',
-          },
-        }}
-        className="text-left text-sm h-full min-w-full rounded-md scrollable-content"
-      >
-        {codeBlock}
-      </SyntaxHighlighter>
-    </div>
+              <SyntaxHighlighter
+                language="javascript"
+                style={{
+                  ...atomOneDarkReasonable,
+                  hljs: {
+                    ...atomOneDarkReasonable.hljs,
+                    background: 'rgb(24, 24, 24)',
+                  },
+                }}
+                className="text-left text-sm h-full min-w-full rounded-md scrollable-content"
+              >
+                {codeBlock}
+              </SyntaxHighlighter>
+            </div>
           </div>
         ) : (
           <React.Fragment>

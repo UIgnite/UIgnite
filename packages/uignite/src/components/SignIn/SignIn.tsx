@@ -12,22 +12,28 @@ import {Button} from '@/components/Button';
 
 const SignIn: React.FC = () => {
   return (
-    <Card className="w-[360px]">
+    <Card className="w-[420px] py-6 px-10 text-zinc-800 dark:text-zinc-200">
       <CardHeader>
-        <CardTitle className="text-2xl">Sign In</CardTitle>
-        <CardDescription>Welcome back! Please sign in.</CardDescription>
+        <CardTitle className="text-4xl">Sign In</CardTitle>
+        <CardDescription className="text-base font-normal">
+          Welcome back! Please sign in.
+        </CardDescription>
       </CardHeader>
 
       <CardContent>
-        <form>
+        <form className="mt-4">
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email" className="font-medium">
+                Email
+              </label>
               <Input id="email" placeholder="Enter your email" type="email" />
             </div>
 
             <div className="flex flex-col space-y-1.5">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password" className="font-medium">
+                Password
+              </label>
               <Input
                 id="password"
                 placeholder="Enter your password"
@@ -40,7 +46,7 @@ const SignIn: React.FC = () => {
                 <input
                   id="remember"
                   type="checkbox"
-                  className="h-4 w-4 rounded border border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-500"
+                  className="h-4 w-4 rounded border border-gray-300"
                 />
                 <label htmlFor="remember">Remember me</label>
               </div>
@@ -53,7 +59,7 @@ const SignIn: React.FC = () => {
       </CardContent>
 
       <CardFooter className="flex flex-col space-y-2">
-        <Button className="w-full">Sign In</Button>
+        <Button className="w-full text-base">Sign In</Button>
         <p className="text-sm text-center">
           Not registered?{' '}
           <a href="#" className="text-blue-500 hover:underline">

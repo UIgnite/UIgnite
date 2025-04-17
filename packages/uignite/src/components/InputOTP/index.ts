@@ -1,0 +1,1 @@
+export {InputOTP} from './InputOTP';
