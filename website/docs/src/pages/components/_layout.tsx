@@ -4,6 +4,8 @@ import {components} from '../../utils/lib';
 import {useNavigate} from 'react-router-dom';
 // import {Button} from '@pkgs/uignite/dist';
 import TableOfContents from './TableOfContent';
+import {Introduction} from './Introduction';
+import {Installation} from './Installation';
 
 export default function ComponentLayout() {
   const {componentId} = useParams();
@@ -49,9 +51,15 @@ export default function ComponentLayout() {
         <div className="flex-grow h-full px-4 scrollable-content overflow-y-scroll">
           {componentId ? (
             componentId === 'Introduction' ? (
-              <> Intro </>
+              <>
+                {' '}
+                <Introduction />{' '}
+              </>
             ) : componentId === 'Installation' ? (
-              <> Install</>
+              <>
+                {' '}
+                <Installation />
+              </>
             ) : (
               <Outlet />
             )

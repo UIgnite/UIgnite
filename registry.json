@@ -32,8 +32,8 @@
       "type": "registry:ui",
       "dependencies": [],
       "registryDependencies": [
-        "https://uignite.in/r/Avatar.json",
-        "https://uignite.in/r/Tooltip.json"
+        "https://080a-104-28-199-189.ngrok-free.app/r/Avatar.json",
+        "https://080a-104-28-199-189.ngrok-free.app/r/Tooltip.json"
       ],
       "files": [
         {
@@ -46,7 +46,9 @@
       "name": "button",
       "type": "registry:ui",
       "dependencies": ["class-variance-authority"],
-      "registryDependencies": ["https://uignite.in/r/Spinner.json"],
+      "registryDependencies": [
+        "https://080a-104-28-199-189.ngrok-free.app/r/Spinner.json"
+      ],
       "files": [
         {
           "path": "packages/uignite/src/components/Button/Button.tsx",
@@ -82,7 +84,9 @@
       "name": "dropdown",
       "type": "registry:ui",
       "dependencies": [],
-      "registryDependencies": ["https://uignite.in/r/Button.json"],
+      "registryDependencies": [
+        "https://080a-104-28-199-189.ngrok-free.app/r/Button.json"
+      ],
       "files": [
         {
           "path": "packages/uignite/src/components/Dropdown/Dropdown.tsx",

@@ -15,10 +15,7 @@ interface PricingParams {
   theme: string;
   popular?: boolean;
 }
-export const ThemeSelector = ({
-  currentTheme,
-  setTheme,
-}: ThemeSelectorParams) => {
+const ThemeSelector = ({currentTheme, setTheme}: ThemeSelectorParams) => {
   return (
     <div className="flex justify-center mb-12">
       <div
@@ -42,7 +39,7 @@ export const ThemeSelector = ({
   );
 };
 
-export const PricingCard = ({
+const PricingCard = ({
   title,
   price,
   validity,
@@ -117,3 +114,5 @@ export const PricingCard = ({
     </div>
   );
 };
+
+export {PricingCard, ThemeSelector};

@@ -28,7 +28,7 @@ export interface ButtonParams
   responsiveSize?: 'auto' | 'compact' | 'expand';
 }
 
-export const Button = React.forwardRef<
+const Button = React.forwardRef<
   HTMLButtonElement,
   React.PropsWithChildren<ButtonParams>
 >(
@@ -183,3 +183,5 @@ export const Button = React.forwardRef<
 );
 
 Button.displayName = 'Button';
+
+export {Button};

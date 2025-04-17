@@ -51,7 +51,7 @@ function speedReducer(
   }
 }
 
-export default function VideoPlayer({
+function VideoPlayer({
   src,
   thumbnailUrl,
   muted = false,
@@ -417,3 +417,5 @@ export default function VideoPlayer({
     </div>
   );
 }
+
+export {VideoPlayer};
