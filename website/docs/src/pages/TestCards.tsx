@@ -142,17 +142,12 @@ const TestCards = () => {
       {/* inputs */}
       <div className=" flex flex-col gap-12 p-24 w-[620px] border">
         {/* normal input component */}
-        <Input
-          className="w-full focus-visible:ring-neutral-500 dark:focus-visible:ring-zinc-500
-          placeholder:text-gray-400 dark:placeholder:text-zinc-600"
-          type="email"
-          placeholder="Email"
-        />
+        <Input className="" type="email" placeholder="Email" />
 
-        {/* disabled input */}
-        <Input className="w-full" placeholder="Email" disabled />
+        {/* Disabled Input */}
+        <Input type="email" value="chaicode@gmail.com" disabled />
 
-        {/* input start text */}
+        {/* Input with Start Text */}
         <div className="flex rounded-md shadow-xs">
           <span
             className="h-9 p-2 rounded-md border border-gray-400 dark:border-zinc-700
@@ -163,17 +158,17 @@ const TestCards = () => {
             https://
           </span>
           <Input
-            className="-ms-px rounded-s-none shadow-none dark:font-light focus-visible:ring-neutral-500 dark:focus-visible:ring-zinc-500"
+            className="-ms-px rounded-s-none shadow-none dark:font-light"
             placeholder="www.chaicode.com"
             type="text"
           />
         </div>
 
-        {/* show password */}
+        {/* Password Input */}
         <PasswordInput />
 
-        {/* file upload */}
-        <Input type="file" className="file:me-3 file:border-0 file:border-e" />
+        {/* File Upload */}
+        <Input type="file" className="file:me-3" />
       </div>
     </div>
   );
