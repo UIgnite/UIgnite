@@ -1,7 +1,7 @@
 import React, {useCallback, useRef, useState} from 'react';
 import {Button} from '@/components/Button';
 
-export default function Dropdown({
+function Dropdown({
   children,
   button,
   title = 'Open',
@@ -42,3 +42,5 @@ export default function Dropdown({
     </React.Fragment>
   );
 }
+
+export {Dropdown};

@@ -1,7 +1,7 @@
 import {GitHubLogoIcon} from '@radix-ui/react-icons';
 import {ThemeToggleBtn} from '@/lib/ThemeToggleBtn';
 
-export const Navbar = () => {
+const Navbar = () => {
   return (
     <div className="relative  max-w-[88rem] px-4 sm:px-6 lg:px-8 flex flex-col w-full py-5 mx-auto md:flex-row md:items-center md:justify-between">
       {/* logo */}
@@ -51,3 +51,5 @@ export const Navbar = () => {
     </div>
   );
 };
+
+export {Navbar};

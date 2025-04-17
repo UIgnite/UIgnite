@@ -14,7 +14,7 @@ export interface ResizableProps {
   children: [ReactNode, ReactNode]; // exactly two children expected
 }
 
-export default function Resizable({
+function Resizable({
   className,
   defaultPosition,
   horizontal: horizontalValue,
@@ -115,3 +115,5 @@ export default function Resizable({
     </div>
   );
 }
+
+export {Resizable};

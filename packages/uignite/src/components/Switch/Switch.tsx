@@ -1,10 +1,10 @@
 import {useState} from 'react';
 
-interface Switch {
+interface SwitchPropT {
   defaultState?: boolean;
 }
 
-export function Switch({defaultState = false}: Switch) {
+function Switch({defaultState = false}: SwitchPropT) {
   const [state, setState] = useState<boolean>(defaultState);
 
   return (
@@ -22,3 +22,5 @@ export function Switch({defaultState = false}: Switch) {
     </div>
   );
 }
+
+export {Switch};

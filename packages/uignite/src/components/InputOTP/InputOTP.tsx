@@ -5,7 +5,7 @@ interface InputOTPProps {
   onOTPSubmit?: (otp: string) => void;
 }
 
-export const InputOTP: React.FC<InputOTPProps> = ({
+const InputOTP: React.FC<InputOTPProps> = ({
   length = 4,
   onOTPSubmit = () => {},
 }) => {
@@ -75,3 +75,5 @@ export const InputOTP: React.FC<InputOTPProps> = ({
     </div>
   );
 };
+
+export {InputOTP};

@@ -14,7 +14,7 @@ type SpinnerProps = {
   text?: string;
 };
 
-export const Spinner: FC<SpinnerProps> = ({
+const Spinner: FC<SpinnerProps> = ({
   className = '',
   variant = 'bounce',
   text = 'Loading...',
@@ -161,3 +161,5 @@ export const Spinner: FC<SpinnerProps> = ({
     </div>
   );
 };
+
+export {Spinner};

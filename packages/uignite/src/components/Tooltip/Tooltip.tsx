@@ -10,7 +10,7 @@ export interface TooltipParams {
   };
 }
 
-export const Tooltip = ({
+const Tooltip = ({
   children,
   title = '',
   options = {
@@ -61,3 +61,5 @@ export const Tooltip = ({
     </div>
   );
 };
+
+export {Tooltip};

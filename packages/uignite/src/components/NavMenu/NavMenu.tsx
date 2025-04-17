@@ -54,4 +54,4 @@ const NavMenu: React.FC<NavMenuProps> = ({items}) => {
   );
 };
 
-export default NavMenu;
+export {NavMenu};

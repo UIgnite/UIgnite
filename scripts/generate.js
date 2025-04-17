@@ -11,6 +11,10 @@ async function writeComponentContent(path, content) {
   }
 }
 
+function mapScopeToFilename(content) {
+  return {};
+}
+
 async function register(name, results) {
   try {
     // Find the component from the registry.
@@ -34,31 +38,45 @@ async function register(name, results) {
       registryItem.files.map(async (file) => {
         const filePath = path.join(process.cwd(), file.path);
         const content = await fs.readFile(filePath, 'utf8');
-        console.log(file.path.split('/')[file.path.split('/').length-1])
-        const filename = file.path.split('/')[file.path.split('/').length-1].split('.')[0]
-        console.log(filename)
-        const newPath = `registry/default/ui/${filename}.tsx`
-        return {...file, content,path: newPath};
+
+        const filename = file.path
+          .split('/')
+          [file.path.split('/').length - 1].split('.')[0];
+        const newPath = `registry/default/ui/${filename}.tsx`;
+        return {...file, content, path: newPath, filename};
       })
     );
 
-    await writeComponentContent(`./website/docs/public/r/${name.toLowerCase()}.json`, {
-      ...registryItem,
-      $schema: 'https://ui.shadcn.com/schema/registry-item.json',
-      files: filesWithContent,
-      registryDependencies: [
-        ...(registryItem.registryDependencies
-          ? registryItem.registryDependencies.map(item=>item.trim().toLowerCase())
-          : []),
-        `https://080a-104-28-199-189.ngrok-free.app/r/${name}.json`,
-      ],
-    });
+    // import ...[] from "@/components/ui/"
+    // [([Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter] => card), ([Button, ButtonName] => card)]
+    // [ Card => card, CardHeader => card, Button => button ]
+
+    await writeComponentContent(
+      `./website/docs/public/r/${name.toLowerCase()}.json`,
+      {
+        ...registryItem,
+        $schema: 'https://ui.shadcn.com/schema/registry-item.json',
+        files: filesWithContent,
+        registryDependencies: [
+          ...(registryItem.registryDependencies
+            ? registryItem.registryDependencies.map((item) =>
+                item.trim().toLowerCase()
+              )
+            : []),
+          `https://080a-104-28-199-189.ngrok-free.app/r/${name}.json`,
+        ],
+      }
+    );
 
     const element = results.filter(
       (e) => e.id.toLowerCase().trim() == name.toLowerCase().trim()
     );
     if (element.length > 0) {
-      console.log(registryItem.registryDependencies.map(item=>item.trim().toLowerCase()))
+      console.log(
+        registryItem.registryDependencies.map((item) =>
+          item.trim().toLowerCase()
+        )
+      );
       await writeComponentContent(
         `./website/docs/public/r/${element[0].id}-v0.json`,
         {
@@ -68,7 +86,9 @@ async function register(name, results) {
           $schema: 'https://ui.shadcn.com/schema/registry-item.json',
           registryDependencies: [
             ...(registryItem.registryDependencies
-              ? registryItem.registryDependencies.map(item=>item.trim().toLowerCase())
+              ? registryItem.registryDependencies.map((item) =>
+                  item.trim().toLowerCase()
+                )
               : []),
             `https://080a-104-28-199-189.ngrok-free.app/r/${name}.json`,
           ],
@@ -76,12 +96,13 @@ async function register(name, results) {
             {
               path: `registry/default/components/${element[0].id}-v0.tsx`,
               type: 'registry:component',
-              content: `${element[0].scope.map((ele) => `import {${ele}} from \"@/components/ui/${ele}\"`).join('\n')}
+              content: `${element[0].scope.map((ele) => `import {${ele}} from \"@/components/ui/${filesWithContent.find((e) => e.filename.toLowerCase() == element[0].id.toLowerCase()).filename}\"`).join('\n')}
               function Component(){
                 return (${element[0].element})
               }
               export default Component
-              `, },
+              `,
+            },
           ],
         }
       );

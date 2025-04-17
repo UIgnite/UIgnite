@@ -12,12 +12,7 @@ export interface ToastUiParams {
   };
 }
 
-export default function ToastUi({
-  idx,
-  title,
-  options,
-  hovered = false,
-}: ToastUiParams) {
+function Toast({idx, title, options, hovered = false}: ToastUiParams) {
   return (
     <div
       style={{
@@ -54,3 +49,5 @@ export default function ToastUi({
     </div>
   );
 }
+
+export {Toast};
