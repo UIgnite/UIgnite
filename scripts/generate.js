@@ -34,20 +34,28 @@ async function register(name, results) {
       registryItem.files.map(async (file) => {
         const filePath = path.join(process.cwd(), file.path);
         const content = await fs.readFile(filePath, 'utf8');
-        return {...file, content,path:`registry/default/ui/${name.toLowerCase()}`};
+        const newPath = `registry/default/ui/${name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()}.tsx`
+        return {...file, content,path: newPath};
       })
     );
 
-    await writeComponentContent(`./website/docs/public/r/${name}.json`, {
+    await writeComponentContent(`./website/docs/public/r/${name.toLowerCase()}.json`, {
       ...registryItem,
       $schema: 'https://ui.shadcn.com/schema/registry-item.json',
       files: filesWithContent,
+      registryDependencies: [
+        ...(registryItem.registryDependencies
+          ? registryItem.registryDependencies.map(item=>item.trim().toLowerCase())
+          : []),
+        `https://080a-104-28-199-189.ngrok-free.app/r/${name}.json`,
+      ],
     });
 
     const element = results.filter(
       (e) => e.id.toLowerCase().trim() == name.toLowerCase().trim()
     );
     if (element.length > 0) {
+      console.log(registryItem.registryDependencies.map(item=>item.trim().toLowerCase()))
       await writeComponentContent(
         `./website/docs/public/r/${element[0].id}-v0.json`,
         {
@@ -57,18 +65,19 @@ async function register(name, results) {
           $schema: 'https://ui.shadcn.com/schema/registry-item.json',
           registryDependencies: [
             ...(registryItem.registryDependencies
-              ? registryItem.registryDependencies
+              ? registryItem.registryDependencies.map(item=>item.trim().toLowerCase())
               : []),
-            `https://uignite.in/r/${name}.json`,
+            `https://080a-104-28-199-189.ngrok-free.app/r/${name}.json`,
           ],
           files: [
             {
               path: `registry/default/components/${element[0].id}-v0.tsx`,
               type: 'registry:component',
-              content: `${element[0].scope.map((ele) => `import ${ele} from \"@/components/ui/${ele}.tsx\"`).join('\n')}
+              content: `${element[0].scope.map((ele) => `import {${ele}} from \"@/components/ui/${ele}\"`).join('\n')}
               function Component(){
                 return (${element[0].element})
               }
+              export default Component
               `, },
           ],
         }
@@ -94,8 +103,6 @@ async function register(name, results) {
 
     results.push({id, scope, element});
   }
-
-  console.log(results);
 
   for (let index = 0; index < registoryConfig['items'].length; index++) {
     const element = registoryConfig['items'][index];
