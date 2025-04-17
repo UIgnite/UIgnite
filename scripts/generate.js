@@ -34,7 +34,7 @@ async function register(name, results) {
       registryItem.files.map(async (file) => {
         const filePath = path.join(process.cwd(), file.path);
         const content = await fs.readFile(filePath, 'utf8');
-        return {...file, content};
+        return {...file, content,path:`registry/default/ui/${name.toLowerCase()}`};
       })
     );
 
@@ -65,8 +65,11 @@ async function register(name, results) {
             {
               path: `registry/default/components/${element[0].id}-v0.tsx`,
               type: 'registry:component',
-              content: `${element[0].scope.map((ele) => `import ${ele} from \"@/components/ui/${ele}.tsx\"`).join('\n')}${element[0].element}`,
-            },
+              content: `${element[0].scope.map((ele) => `import ${ele} from \"@/components/ui/${ele}.tsx\"`).join('\n')}
+              function Component(){
+                return (${element[0].element})
+              }
+              `, },
           ],
         }
       );
