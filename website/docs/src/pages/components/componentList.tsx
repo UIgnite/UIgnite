@@ -35,7 +35,7 @@ const ComponentCard = ({
     >
       <div className="mb-3 h-[70%] flex justify-center items-center overflow-hidden rounded-lg">
         <img
-          className="group-hover:scale-105 transition-transform duration-300 rounded-md object-cover max-h-full"
+          className=" grayscale-[100%] hover:grayscale-0 group-hover:scale-105 transition-transform duration-300 rounded-md object-cover max-h-full"
           src={imageUrl}
           alt={name}
         />
