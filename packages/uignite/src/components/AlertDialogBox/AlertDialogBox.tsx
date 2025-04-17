@@ -16,7 +16,7 @@ const AlertDialogBox = ({title, description}: AlertDialogBoxProps) => {
       {isOpen && (
         <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
           <div className="bg-white rounded-xl p-6 w-[90%] max-w-md shadow-lg">
-            <h2 className="text-lg font-bold mb-2">{title}</h2>
+            <h2 className="text-lg font-bold mb-2 dark:text-grey text-white">{title}</h2>
             <p className="text-gray-600 mb-4">{description}</p>
             <div className="flex justify-end gap-2">
               <Button

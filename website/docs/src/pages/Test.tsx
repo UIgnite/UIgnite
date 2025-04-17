@@ -41,8 +41,8 @@ export const Test = () => {
         {/* <AlertDialogBox
           title="Delete account?"
           description="This action cannot be undone. Are you sure you want to delete your account permanently?"
-          variant="destructive"
-        /> */}
+        /> */ }
+
         <div className="text-3xl mt-8 flex">Cards</div>
 
         <Card className=" mt-2">
@@ -78,3 +78,4 @@ export const Test = () => {
     </CustomTheme>
   );
 };
+
