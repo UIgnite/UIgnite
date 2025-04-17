@@ -78,8 +78,8 @@ const Components = () => {
 
         <AvatarGroup
           avatars={[
-            {url: './assets/avatars/myDp.webp', alt: 'ram'},
-            {url: './assets/avatars/myDp.webp', alt: 'ram'},
+            {url: './assets/avatars/ram.webp', alt: 'ram'},
+            {url: './assets/avatars/ram.webp', alt: 'ram'},
           ]}
         />
         <SearchBar />
