@@ -13,27 +13,35 @@ import {Button} from '@/components/Button';
 
 const SignUp: React.FC = () => {
   return (
-    <Card className="w-[360px]">
+    <Card className="w-[420px] py-6 px-10 text-zinc-800 dark:text-zinc-200">
       <CardHeader>
-        <CardTitle className="text-2xl">Sign Up</CardTitle>
-        <CardDescription>Create a new account to get started.</CardDescription>
+        <CardTitle className="text-4xl">Sign Up</CardTitle>
+        <CardDescription className="text-base font-normal">
+          Create a new account to get started.
+        </CardDescription>
       </CardHeader>
 
       <CardContent>
-        <form>
+        <form className="mt-4">
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name" className="font-medium">
+                Name
+              </label>
               <Input id="name" placeholder="Enter your name" />
             </div>
 
             <div className="flex flex-col space-y-1.5">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email" className="font-medium">
+                Email
+              </label>
               <Input id="email" type="email" placeholder="Enter your email" />
             </div>
 
             <div className="flex flex-col space-y-1.5">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password" className="font-medium">
+                Password
+              </label>
               <Input
                 id="password"
                 type="password"
@@ -44,9 +52,9 @@ const SignUp: React.FC = () => {
         </form>
       </CardContent>
 
-      <CardFooter className="flex flex-col gap-2">
-        <Button className="w-full">Create Account</Button>
-        <p className="text-sm text-muted-foreground text-center">
+      <CardFooter className="flex flex-col gap-2 mt-8">
+        <Button className="w-full text-base">Create Account</Button>
+        <p className="text-sm text-center">
           Already have an account?{' '}
           <a href="#" className="text-blue-500 hover:underline">
             Login here

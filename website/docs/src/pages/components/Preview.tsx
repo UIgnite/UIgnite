@@ -25,7 +25,7 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
             background: 'rgb(24, 24, 24)',
           },
         }}
-        className="text-left text-sm h-full min-w-full rounded-md scrollable-content"
+        className="text-left text-sm h-full max-h-[50vh] rounded-md scrollable-content"
       >
         {element.element}
       </SyntaxHighlighter>
