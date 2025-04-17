@@ -34,7 +34,10 @@ async function register(name, results) {
       registryItem.files.map(async (file) => {
         const filePath = path.join(process.cwd(), file.path);
         const content = await fs.readFile(filePath, 'utf8');
-        const newPath = `registry/default/ui/${name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()}.tsx`
+        console.log(file.path.split('/')[file.path.split('/').length-1])
+        const filename = file.path.split('/')[file.path.split('/').length-1].split('.')[0]
+        console.log(filename)
+        const newPath = `registry/default/ui/${filename}.tsx`
         return {...file, content,path: newPath};
       })
     );

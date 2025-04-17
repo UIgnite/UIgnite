@@ -1,17 +1,1 @@
-{
-  "name": "button-v0",
-  "type": "registry:component",
-  "dependencies": ["class-variance-authority"],
-  "registryDependencies": [
-    "https://bfc3-2401-4900-8899-b2e1-e823-9f9-734c-d8d2.ngrok-free.app/r/spinner.json",
-    "https://bfc3-2401-4900-8899-b2e1-e823-9f9-734c-d8d2.ngrok-free.app/r/button.json"
-  ],
-  "files": [
-    {
-      "path": "registry/default/components/button-v0.tsx",
-      "type": "registry:component",
-      "content": "import Button from \"@/components/ui/Button.tsx\"\nimport CommandButton from \"@/components/ui/CommandButton.tsx\"\nimport AlarmClockCheck from \"@/components/ui/AlarmClockCheck.tsx\"\n              function Component(){\n                return (\r\n            <Button>Click Me</Button>\r\n    )\n              }\n              "
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
-}
+{"name":"button-v0","type":"registry:component","dependencies":["class-variance-authority"],"registryDependencies":["https://080a-104-28-199-189.ngrok-free.app/r/spinner.json","https://080a-104-28-199-189.ngrok-free.app/r/button.json"],"files":[{"path":"registry/default/components/button-v0.tsx","type":"registry:component","content":"import {Button} from \"@/components/ui/Button\"\nimport {CommandButton} from \"@/components/ui/CommandButton\"\nimport {AlarmClockCheck} from \"@/components/ui/AlarmClockCheck\"\n              function Component(){\n                return (\n            <Button>Click Me</Button>\n    )\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
