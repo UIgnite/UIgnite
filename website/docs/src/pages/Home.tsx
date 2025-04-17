@@ -2,9 +2,6 @@ import {useState} from 'react';
 import {Button} from '@pkgs/uignite';
 import {CustomTheme} from '../utils/CustomTheme';
 import {motion} from 'framer-motion';
-import {FiGithub} from 'react-icons/fi';
-import {FaDiscord} from 'react-icons/fa';
-import {FaXTwitter} from 'react-icons/fa6';
 import {
   Copy,
   Check,
@@ -137,7 +134,7 @@ const Home = () => {
       <Navbar />
       {/* Main Content */}
       <GridBackground />
-      <div className="flex justify-center  items-center ">
+      <div className="flex justify-center items-center ">
         <div className=" max-w-[1200px]  w-full px-4 sm:px-4 lg:px-4 ">
           <div className="z-1 px-4 md:px-8 min-h-screen flex justify-center mt-4 ">
             <div className="w-full max-w-6xl  flex items-center justify-center">
@@ -358,64 +355,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-
-          {/* footer */}
-          <div className="h-[550px]  py-24 w-full">
-            {/*  footer*/}
-
-            <div className="border-t-zinc-500 border-t">
-              <div className="mt-4 flex justify-between">
-                {/* website */}
-                <div className="flex flex-col gap-6">
-                  {/* logo */}
-                  <div className="w-40 h-12 transition-all duration-300 ease-in-out hover:h-14 hover:w-44 cursor-pointer -ml-4">
-                    <img
-                      alt="UIgnite"
-                      className="h-full w-full"
-                      src="/dark-mode-logo.png"
-                    />
-                  </div>
-
-                  {/* tagline */}
-                  <p className="text-gray-500 w-72">
-                    Cut the noise, keep the power — build stunning UIs with
-                    minimal setup and maximum speed.
-                    {/* UIgnite brings together design, performance, and TypeScript — so you can ship faster with confidence. */}
-                  </p>
-
-                  {/* socials */}
-                  <div className="flex gap-4">
-                    <FiGithub className=" text-gray-500 hover:text-gray-50 size-5 cursor-pointer" />
-                    <FaDiscord className="text-gray-500 hover:text-gray-50 size-5 cursor-pointer" />
-                    <FaXTwitter className="text-gray-500 hover:text-gray-50 size-5 cursor-pointer" />
-                  </div>
-                </div>
-
-                {/* other sections like resources docs legal */}
-                <div className="flex gap-5">
-                  <div>
-                    <h1>Quick Links</h1>
-                    <p>Get Started</p>
-                    <p>Feedback</p>
-                    <p>Contribute</p>
-                  </div>
-                  <div>
-                    <h1>Product</h1>
-                    <p>Components</p>
-                    <p>Documentation</p>
-                    <p>Pricing</p>
-                  </div>
-                  <div>
-                    <h1>Legal</h1>
-                    <p>Privacy Policy</p>
-                    <p>Terms of Service</p>
-                    <p>Licence</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* footer ended */}
         </div>
       </div>
     </CustomTheme>

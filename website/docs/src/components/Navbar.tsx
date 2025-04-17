@@ -1,11 +1,18 @@
-import {Link, NavLink} from 'react-router-dom';
+import {Link, NavLink, useLocation} from 'react-router-dom';
 import {ThemeToggleBtn} from '@pkgs/uignite';
 import {GitHubLogoIcon} from '@radix-ui/react-icons';
 import SearchBar from '../pages/components/Search';
+import {useEffect} from 'react';
 
 const Navbar = () => {
+  const {pathname} = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
-    <div className="relative  max-w-[88rem] px-4 sm:px-6 lg:px-8 flex flex-col w-full py-5 mx-auto md:flex-row md:items-center md:justify-between">
+    <div className="relative max-w-[88rem] px-4 sm:px-6 lg:px-8 flex flex-col w-full py-5 mx-auto md:flex-row md:items-center md:justify-between">
       {/* logo */}
       <div className="flex flex-row gap-12 items-center justify-between text-[1rem] lg:justify-start">
         <Link to="/" className="flex items-center gap-2">
