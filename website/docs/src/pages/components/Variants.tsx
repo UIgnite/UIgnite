@@ -39,7 +39,7 @@ export const Variants = ({componentId}: {componentId: string}) => {
               {currElement ? <Tab title="Preview" value="preview" /> : <></>}
               <Tab title="Code" value="code" />
             </TabList>
-            {currVariant ? ( 
+            {currVariant ? (
               <TabContent
                 content={
                   <div className="w-[100%] flex justify-center items-center p-10 bg-neutral-200 dark:bg-neutral-900  relative">

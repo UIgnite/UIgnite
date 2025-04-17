@@ -1,4 +1,4 @@
-import { MessageCircle } from 'lucide-react';
+import {MessageCircle} from 'lucide-react';
 import {useState} from 'react';
 
 export interface MessageBotParams {
