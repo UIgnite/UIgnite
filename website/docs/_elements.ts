@@ -275,13 +275,12 @@ const elements = [
   },
   {
     id: 'resizable',
-    scope: {Resizable},
-    element: `<div className='relative w-[500px] h-26'>
-      <Resizable className='h-20'>
-        <div className='w-full h-full bg-amber-200'></div>
-        <div className='w-full h-full bg-rose-200'></div>
-      </Resizable>
-    </div>`,
+    scope: {Button, Link},
+    element: `
+    <Link to='/resizable-preview'>
+      <Button>Open Resizable Preview</Button>
+    </Link>
+    `,
   },
   {
     id: 'skeleton',
