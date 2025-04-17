@@ -1,6 +1,7 @@
 export * from './Tabs';
 export * from './Card';
 export * from './Input';
+export * from './InputOTP';
 export * from './Toast';
 export * from './Navbar';
 export * from './Button';

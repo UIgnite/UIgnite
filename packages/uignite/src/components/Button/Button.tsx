@@ -72,7 +72,8 @@ export const Button = React.forwardRef<
             destructive: 'bg-red-500 text-white hover:bg-red-600',
             success: 'bg-[#00b306] text-white hover:bg-green-600',
             warning: 'bg-[#ff8a00] text-white hover:bg-yellow-600',
-            outline: 'border border-gray-500 bg-transparent hover:bg-gray-700',
+            outline:
+              'border border-gray-500 bg-transparent hover:bg-gray-700 hover:text-white',
             secondary: 'bg-rose-500 text-white hover:bg-rose-400',
             ghost:
               'dark:hover:bg-gray-700 dark:text-white text-gray-700 hover:bg-gray-800 hover:text-gray-100',

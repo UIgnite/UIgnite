@@ -33,6 +33,8 @@ import Navbar from './src/components/Navbar';
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import {Info} from 'lucide-react';
+import { CommandButton } from './src/components/CommandButton';
+import { AlarmClockCheck } from 'lucide-react';
 
 const elements = [
   {
@@ -75,59 +77,44 @@ const elements = [
   },
   {
     id: 'button',
-    scope: {Button},
+    scope: {Button,CommandButton,AlarmClockCheck},
     element: `
-          <div className="grid grid-cols-5 gap-10">
-            <Button variant="primary">primary</Button>
-            <Button variant="destructive">destructive</Button>
-            <Button variant="success">success</Button>
-            <Button variant="warning">warning</Button>
-            <Button variant="outline">outline</Button>
-            <Button variant="secondary">secondary</Button>
-            <Button  variant="gradient" isLoading />
-            <Button variant="ghost">ghost</Button>
-            <Button variant="glass">glass</Button>
-            <Button variant="dark">dark</Button>
-            <Button variant="light">light</Button>
-            <Button variant="gradient">gradient</Button>
-            <Button animatedBorder>animated</Button>
-            <Button gradientBorder>gradBorder</Button>
-            <Button className="animate-border text-white font-semibold px-6 py-3 rounded-xl">
-              Hover Me
-            </Button>
-          </div> 
+            <Button>Click Me</Button>
     `,
     variation: [
       `
       <div className="grid grid-cols-4 gap-10">
-        <Button variant="destructive">destructive</Button>
-        <Button variant="success">success</Button>
-        <Button variant="warning">warning</Button>
-        <Button variant="outline">outline</Button>
+        <Button variant="primary">primary</Button>
+        <Button variant="secondary">secondary</Button>
+         <Button variant="outline">outline</Button>
+          <Button variant="glass">glass</Button>
       </div>
       `,
       `
       <div className="grid grid-cols-4 gap-10">
-        <Button variant="secondary">secondary</Button>
-        <Button  variant="gradient" isLoading />
+        <Button variant="success">success</Button>
+        <Button variant="destructive">destructive</Button>
+        <Button variant="warning">warning</Button>
         <Button variant="ghost">ghost</Button>
-        <Button variant="glass">glass</Button>
+       
       </div>
       `,
       `
-      <div className="grid grid-cols-3 gap-10">
+      <div className="grid grid-cols-4 gap-10">
         <Button variant="dark">dark</Button>
         <Button variant="light">light</Button>
         <Button variant="gradient">gradient</Button>
-      </div>
-      `,
-      `
-      <div className="grid grid-cols-3 gap-10">
-        <Button animatedBorder>animated</Button>
-        <Button gradientBorder>gradBorder</Button>
-        <Button className="animate-border text-white font-semibold px-6 py-3 rounded-xl">
+         <Button className="animate-border text-white font-semibold px-6 py-3 rounded-xl">
           Hover Me
         </Button>
+      </div>
+      `,
+      ` <CommandButton/>`,
+      `
+      <div className="grid grid-cols-3 gap-10">
+        <Button gradientBorder>gradBorder</Button>
+        <Button  variant="gradient" isLoading />
+        <Button className="bg-blue-800 rounded-full" icon={<AlarmClockCheck/>}>Snooze</Button>
       </div>
       `,
     ],
@@ -481,13 +468,114 @@ const elements = [
         </div>
 
     `,
-    variation: [],
+    variation: [
+          `
+          <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
+        <h2 className="text-lg font-semibold mb-4">Product Card</h2>
+        <Skeleton className="h-48 w-full rounded-lg mb-4" />
+        <Skeleton className="h-6 w-3/4 mb-2" />
+        <Skeleton className="h-4 w-full mb-2" />
+        <Skeleton className="h-4 w-5/6 mb-4" />
+        <div className="flex justify-between items-center">
+          <Skeleton className="h-6 w-24" />
+          <Skeleton className="h-8 w-20 rounded-md" />
+        </div>
+      </div>
+          `,
+          `
+           <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
+        <h2 className="text-lg font-semibold mb-4">Social Media Post</h2>
+        <div className="flex items-center mb-4">
+          <Skeleton className="h-10 w-10 rounded-full" />
+          <div className="ml-3 flex-1">
+            <Skeleton className="h-4 w-32 mb-1" />
+            <Skeleton className="h-3 w-24" />
+          </div>
+        </div>
+        <Skeleton className="h-4 w-full mb-2" />
+        <Skeleton className="h-4 w-5/6 mb-2" />
+        <Skeleton className="h-4 w-4/5 mb-4" />
+        <Skeleton className="h-56 w-full rounded-lg mb-4" />
+       
+      </div>
+
+          `,
+          `
+         <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
+        <h2 className="text-lg font-semibold mb-4">Profile Card</h2>
+        <div className="flex flex-col items-center mb-6">
+          <Skeleton className="h-24 w-24 rounded-full mb-4" />
+          <Skeleton className="h-6 w-40 mb-2" />
+          <Skeleton className="h-4 w-32 mb-4" />
+        </div>
+        <div className="grid grid-cols-3 gap-2 mb-4">
+          <div className="text-center">
+            <Skeleton className="h-5 w-12 mx-auto mb-1" />
+            <Skeleton className="h-3 w-16 mx-auto" />
+          </div>
+          <div className="text-center">
+            <Skeleton className="h-5 w-12 mx-auto mb-1" />
+            <Skeleton className="h-3 w-16 mx-auto" />
+          </div>
+          <div className="text-center">
+            <Skeleton className="h-5 w-12 mx-auto mb-1" />
+            <Skeleton className="h-3 w-16 mx-auto" />
+          </div>
+        </div>
+        <Skeleton className="h-14 w-full rounded-md" />
+      </div>
+
+          `,
+          `
+          <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
+        <h2 className="text-lg font-semibold mb-4">Notification</h2>
+        <div className="flex gap-4">
+        <Skeleton className="h-6 w-6 rounded-full" />
+        <div className="flex-1 space-y-2">
+          <Skeleton className="h-4 w-[80%]" />
+          <Skeleton className="h-3 w-[60%]" />
+        </div>
+        </div>
+      </div>
+
+
+          `,
+         `
+         <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
+        <h2 className="text-lg font-semibold mb-4">Inovice Bill</h2>
+  <Skeleton className="h-5 w-1/2 mb-3" />
+  <div className="space-y-2">
+    <Skeleton className="h-4 w-full" />
+    <Skeleton className="h-4 w-[80%]" />
+    <Skeleton className="h-4 w-[60%]" />
+  </div>
+  <div className="flex justify-between items-center mt-4">
+    <Skeleton className="h-4 w-1/3" />
+    <Skeleton className="h-5 w-20 rounded-md" />
+  </div>
+</div>
+
+
+         `,`  <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
+        <h2 className="text-lg font-semibold mb-4">Media Player</h2>
+        <div className="flex gap-4" >
+            <Skeleton className="h-16 w-16 rounded-lg" />
+              <div className="space-y-2">
+                <Skeleton className="h-5 w-[220px]" />
+                <Skeleton className="h-4 w-[160px]" />
+                <Skeleton className="h-4 w-[180px]" />
+              </div>
+              </div>
+          </div>`,
+
+    ],
+
   },
   {
     id: 'spinner',
     scope: {Spinner},
     element: `
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
+    <div className="grid grid-cols-1">
       <Spinner variant="bounce" className="my-4" />
     </div>      
     `,
