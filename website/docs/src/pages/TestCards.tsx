@@ -2,7 +2,6 @@ import {FiGithub, FiLinkedin} from 'react-icons/fi';
 import {FaDiscord, FaInstagram} from 'react-icons/fa';
 import {FaXTwitter} from 'react-icons/fa6';
 import {SlSocialYoutube} from 'react-icons/sl';
-import {Link} from 'react-router-dom';
 import {useTheme} from '@pkgs/uignite';
 
 const TestCards = () => {
