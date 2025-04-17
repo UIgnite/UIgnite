@@ -2,7 +2,6 @@ import {FiGithub, FiLinkedin} from 'react-icons/fi';
 import {FaDiscord, FaInstagram} from 'react-icons/fa';
 import {FaXTwitter} from 'react-icons/fa6';
 import {SlSocialYoutube} from 'react-icons/sl';
-import {Link} from 'react-router-dom';
 import {useTheme} from '@pkgs/uignite';
 
 const TestCards = () => {
@@ -34,17 +33,35 @@ const TestCards = () => {
 
             {/* socials */}
             <div className="flex gap-4 text-zinc-500 ">
-              <FiGithub className="transition-all duration-200 ease-in-out hover:scale-105 dark:hover:text-orange-500 hover:text-zinc-700 size-5 cursor-pointer" />
+              <a href="https://github.com/hiteshchoudhary" target="_blank">
+                <FiGithub className="transition-all duration-200 ease-in-out hover:scale-105 dark:hover:text-orange-500 hover:text-zinc-700 size-5 cursor-pointer" />
+              </a>
 
-              <FiLinkedin className="transition-all duration-200 ease-in-out hover:scale-105 dark:hover:text-orange-500 hover:text-zinc-700 size-5 cursor-pointer" />
+              <a href="https://discord.com/invite/WDrH3zuWFb" target="_blank">
+                <FaDiscord className="transition-all duration-200 ease-in-out hover:scale-105 dark:hover:text-orange-500 hover:text-zinc-700 size-5 cursor-pointer" />
+              </a>
 
-              <FaDiscord className="transition-all duration-200 ease-in-out hover:scale-105 dark:hover:text-orange-500 hover:text-zinc-700 size-5 cursor-pointer" />
+              <a href="https://x.com/hiteshdotcom" target="_blank">
+                <FaXTwitter className="transition-all duration-200 ease-in-out hover:scale-105 dark:hover:text-orange-500 hover:text-zinc-700 size-5 cursor-pointer" />
+              </a>
 
-              <FaInstagram className="transition-all duration-200 ease-in-out hover:scale-105 dark:hover:text-orange-500 hover:text-zinc-700 size-5 cursor-pointer" />
+              <a
+                href="https://www.linkedin.com/in/hiteshchoudhary"
+                target="_blank"
+              >
+                <FiLinkedin className="transition-all duration-200 ease-in-out hover:scale-105 dark:hover:text-orange-500 hover:text-zinc-700 size-5 cursor-pointer" />
+              </a>
 
-              <FaXTwitter className="transition-all duration-200 ease-in-out hover:scale-105 dark:hover:text-orange-500 hover:text-zinc-700 size-5 cursor-pointer" />
+              <a
+                href="https://www.instagram.com/hiteshchoudharyofficial"
+                target="_blank"
+              >
+                <FaInstagram className="transition-all duration-200 ease-in-out hover:scale-105 dark:hover:text-orange-500 hover:text-zinc-700 size-5 cursor-pointer" />
+              </a>
 
-              <SlSocialYoutube className="transition-all duration-200 ease-in-out hover:scale-105 dark:hover:text-orange-500 hover:text-zinc-700 size-5 cursor-pointer" />
+              <a href="https://www.youtube.com/@chaiaurcode" target="_blank">
+                <SlSocialYoutube className="transition-all duration-200 ease-in-out hover:scale-105 dark:hover:text-orange-500 hover:text-zinc-700 size-5 cursor-pointer" />
+              </a>
             </div>
           </div>
 
@@ -54,78 +71,84 @@ const TestCards = () => {
               <h2 className="text-zinc-800 dark:text-zinc-100 font-semibold">
                 Product
               </h2>
-              <Link
-                to={'/components'}
+              <a
+                href="https://courses.chaicode.com/learn"
+                target="_blank"
                 className="cursor-pointer dark:hover:text-orange-400 hover:text-zinc-700"
               >
                 Courses
-              </Link>
-              <Link
-                to={'/components/Accordion'}
+              </a>
+              <a
+                href="https://courses.chaicode.com/learn/view-all?show=batch&type=17"
+                target="_blank"
                 className="cursor-pointer dark:hover:text-orange-400 hover:text-zinc-700"
               >
                 Cohort
-              </Link>
-              <Link
-                to={'/pricing'}
+              </a>
+              <a
+                href="https://courses.chaicode.com/learn/batch/about?bundleId=226894"
+                target="_blank"
                 className="cursor-pointer dark:hover:text-orange-400 hover:text-zinc-700"
               >
                 Coding Hero
-              </Link>
-              <Link
-                to={'/pricing'}
+              </a>
+              <a
+                href="https://masterji.co/login"
+                target="_blank"
                 className="cursor-pointer dark:hover:text-orange-400 hover:text-zinc-700"
               >
-                MasterJi
-              </Link>
+                MasterJI
+              </a>
             </div>
             <div className="text-zinc-500 dark:text-zinc-400 flex flex-col gap-2">
               <h2 className="text-zinc-800 dark:text-zinc-100 font-semibold">
                 Resources
               </h2>
-              <Link
-                to={'/'}
+
+              <a
+                href="https://freeapi.app/"
+                target="_blank"
                 className="cursor-pointer dark:hover:text-orange-400 hover:text-zinc-700"
               >
                 FreeAPI
-              </Link>
-              <Link
-                to={'/feedback'}
+              </a>
+              <a
+                href="https://chaidocs.vercel.app/"
+                target="_blank"
                 className="cursor-pointer dark:hover:text-orange-400 hover:text-zinc-700"
               >
                 ChaiDocs
-              </Link>
+              </a>
             </div>
 
             <div className="text-zinc-500 dark:text-zinc-400 flex flex-col gap-2">
               <h2 className="text-zinc-800 dark:text-zinc-100 font-semibold">
                 Legal
               </h2>
-
-              <Link
-                to={'/'}
+              <a
+                href="#"
                 className="cursor-pointer dark:hover:text-orange-400 hover:text-zinc-700"
               >
                 Terms of Service
-              </Link>
-              <Link
-                to={'/'}
+              </a>
+              <a
+                href="#"
                 className="cursor-pointer dark:hover:text-orange-400 hover:text-zinc-700"
               >
                 Privacy Policy
-              </Link>
-              <Link
-                to={'/'}
+              </a>
+              <a
+                href="#"
                 className="cursor-pointer dark:hover:text-orange-400 hover:text-zinc-700"
               >
                 Pricing Policy
-              </Link>
-              <Link
-                to={'/'}
+              </a>
+              <a
+                href="#"
                 className="cursor-pointer dark:hover:text-orange-400 hover:text-zinc-700"
               >
                 Refund Policy
-              </Link>
+              </a>
             </div>
           </div>
         </div>
