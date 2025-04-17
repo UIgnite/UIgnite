@@ -22,6 +22,7 @@ import Navbar from '../components/Navbar';
 import {GridBackground} from '../utils/GridBackground';
 import TechStack from '../utils/TechStack';
 import {VideoPlayer} from '@pkgs/uignite';
+import Footer from './Footer';
 const Home = () => {
   const [isCopied, setIsCopied] = useState(false);
   // const [email, setEmail] = useState('');
@@ -211,107 +212,9 @@ const Home = () => {
             </motion.div>
           </div>
 
-          {/* <div className=" grid grid-cols-1  lg:grid-cols-3 gap-5 z-10 relative mt-12 cursor-pointer">
-            <div className="relative flex-1  bg-tranparent rounded-xl flex justify-center items-center overflow-hidden dark:shadow-[#001933] dark:shadow-xl">
-              <div className="absolute inset-0 bg-transprent pointer-events-none"></div>
-              <div className="relative z-10 w-full">
-                <Card className="bg-gradient-to-b from-[#000000] to-[#000000] border-none w-full py-6 ">
-                  <CardHeader>
-                    <p className=" text-xs font-bold ml-2 text-muted-foreground text-light-primary ">
-                      Daily Mix
-                    </p>
-                    <p className=" text-sm font-bold ml-2 text-muted-foreground text-gray-500 ">
-                      15 Tracks
-                    </p>
-                    <div className="flex flex-row">
-                      <CardTitle className="text-md mt-[15px] ml-2 text-gray-100">
-                        Frontend Radio
-                      </CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <img
-                      src="https://i.pinimg.com/736x/e8/d0/9d/e8d09dc7491d9801c8edb409a40186c7.jpg"
-                      alt="Arijit Singh"
-                      className="rounded-xl w-full h-80 object-cover"
-                    />
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-
-            <div className="relative flex-2 bg-gray-200 dark:bg-transparent backdrop-blur-lg border-none dark:shadow-blue-900 dark:shadow-md rounded-xl flex justify-center items-center h-[430px] overflow-hidden border border-white/30 ">
-              <div className="absolute inset-0 bg-transparent pointer-events-none"></div>
-              <div className="relative z-10 ">Coming Soon</div>
-            </div>
-
-            <div className="relative flex-1 bg-transparent rounded-xl flex justify-center items-center h-[430px] px-2 overflow-hidden">
-              <div className="absolute inset-0 bg-transparent pointer-events-none"></div>
-              <div className="relative z-10">
-                <AccordionWrapper>
-                  <Accordion
-                    title="What is MobiMart?"
-                    content="MobiMart is an e-commerce platform selling mobile gadgets like earbuds, phones, and speakers."
-                  />
-                  <Accordion
-                    title="How long does delivery take?"
-                    content="Typically 2-4 business days depending on your location."
-                  />
-                  <Accordion
-                    title="Can I return a product?"
-                    content="Yes, we have a 7-day easy return policy."
-                  />
-                  <Accordion
-                    title="How long does delivery take?"
-                    content="Typically 2-4 business days depending on your location."
-                  />
-                </AccordionWrapper>
-              </div>
-            </div>
-          </div>
-
-          <div className=" flex flex-row gap-5 z-10 relative mt-5 cursor-pointer justify-center items-center">
-            <div className="relative flex-2 bg-[#07070f] dark:shadow-[#07070f] dark:shadow-xl rounded-xl flex justify-center items-center h-[250px] overflow-hidden">
-              <div className="absolute inset-0 bg-noisy pointer-events-none"></div>
-              <div className="relative z-10 flex flex-col gap-2">
-                <p className="text-light-primary">Input with error</p>
-                <Input
-                  type="email"
-                  value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                    validateEmail(e.target.value);
-                  }}
-                  placeholder="Enter your email"
-                  className={`w-[300px] h-[46px] text-xl px-4 rounded-md  focus:outline-none focus:ring-0 hover:outline-none bg-[#07070f] text-white 
-          ${error ? 'border-red-500' : 'border-gray-600'} 
-          border focus:outline-none focus:ring-0 hover:outline-none`}
-                />
-                {error && <p className="text-red-400 text-sm">{error}</p>}
-              </div>
-            </div>
-
-            <div className="relative flex-2 bg-gray-800 dark:bg-[#17171c] rounded-xl flex justify-center items-center h-[380px] overflow-hidden">
-              <div className="absolute inset-0 bg-noisy pointer-events-none"></div>
-              <div className="relative z-10">
-                <div className="flex items-center space-x-4 mt-8">
-                  <Skeleton className="h-12 w-12 rounded-full" />
-                  <div className="space-y-2">
-                    <Skeleton className="h-4 w-[250px]" />
-                    <Skeleton className="h-4 w-[200px]" />
-                  </div>
-                </div>
-                <Skeleton className="h-44 w-full rounded-lg mt-3" />
-              </div>
-            </div>
-
-            <div className="relative flex-2 bg-gray-200 dark:bg-transparent backdrop-blur-lg border-none dark:shadow-blue-900 dark:shadow-md rounded-xl flex justify-center items-center h-[430px] overflow-hidden border border-white/30 ">
-              <div className="absolute inset-0 bg-transparent pointer-events-none"></div>
-              <div className="relative z-10 ">Coming Soon</div>
-            </div>
-          </div> */}
           <div className="flex items-center justify-center">
             <VideoPlayer
+              src="https://res.cloudinary.com/do2tmd6xp/video/upload/f_auto:video,q_auto/chitiuerm8vfgaugsrkr"
               thumbnailUrl="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
               muted={false}
               autoplay={false}
@@ -355,6 +258,8 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          <Footer />
         </div>
       </div>
     </CustomTheme>

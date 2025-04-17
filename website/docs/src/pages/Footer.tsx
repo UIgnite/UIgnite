@@ -2,10 +2,10 @@ import {FiGithub} from 'react-icons/fi';
 import {FaDiscord} from 'react-icons/fa';
 import {FaXTwitter} from 'react-icons/fa6';
 import {Link} from 'react-router-dom';
-const FooterX = () => {
+const Footer = () => {
   return (
     <div className="w-full h-full">
-      <div className="border-t-zinc-800 border-t"></div>
+      <div className="border-t-zinc-800 border-t mt-6"></div>
       <div className="max-w-[1200px] flex flex-col w-full py-5 justify-between mx-auto pb-12">
         <div className="mt-4 flex justify-between">
           {/* website */}
@@ -21,9 +21,8 @@ const FooterX = () => {
 
             {/* tagline */}
             <p className="text-gray-500 w-72">
-              Cut the noise, keep the power — build stunning UIs with minimal
-              setup and maximum speed.
-              {/* UIgnite brings together design, performance, and TypeScript — so you can ship faster with confidence. */}
+              UIgnite brings together design, performance, and TypeScript — so
+              you can ship faster with confidence.
             </p>
 
             {/* socials */}
@@ -34,8 +33,8 @@ const FooterX = () => {
             </div>
           </div>
 
-          {/* other sections like resources docs legal */}
-          <div className="flex gap-16">
+          {/* other sections like product getStarted legal */}
+          <div className="flex gap-16 mt-3">
             <div className="text-zinc-400 flex flex-col gap-2">
               <h1 className="text-zinc-100 font-semibold">Quick Links</h1>
               <Link to={'/'} className="cursor-pointer hover:text-zinc-200">
@@ -86,9 +85,17 @@ const FooterX = () => {
             </div>
           </div>
         </div>
+        <div className="border-t-zinc-800 border-t mt-6 mb-4"></div>
+        <div className="flex justify-between">
+          <div>© 2025 UIgnite. All rights reserved.</div>
+          <div>
+            Built with ❤️ by{' '}
+            <span className="underline cursor-pointer">UIgnite</span>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default FooterX;
+export default Footer;

@@ -1,7 +1,8 @@
 {
   "name": "button",
   "type": "registry:ui",
-  "dependencies": [],
+  "dependencies": ["class-variance-authority"],
+  "registryDependencies": ["https://uignite.in/r/Spinner.json"],
   "files": [
     {
       "path": "packages/uignite/src/components/Button/Button.tsx",
