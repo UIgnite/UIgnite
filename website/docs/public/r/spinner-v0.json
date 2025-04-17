@@ -1,1 +1,14 @@
-{"name":"spinner-v0","type":"registry:component","dependencies":[],"files":[{"path":"registry/default/components/spinner-v0.tsx","type":"registry:component","content":"import Spinner from \"@/components/ui/Spinner.tsx\"\r\n    <div className=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4\">\r\n      <Spinner variant=\"bounce\" className=\"my-4\" />\r\n      <Spinner variant=\"bars\" className=\"my-4\" />\r\n      <Spinner variant=\"circular\" className=\"my-4\" />\r\n      <Spinner variant=\"ripple\" className=\"my-4\" />\r\n      <Spinner variant=\"terminal\" className=\"my-4\" />\r\n      <Spinner variant=\"loader\" className=\"my-4\" />\r\n    </div>      \r\n    "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json","registryDependencies":["https://uignite.in/r/spinner.json"]}
+{
+  "name": "spinner-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "registry/default/components/spinner-v0.tsx",
+      "type": "registry:component",
+      "content": "import Spinner from \"@/components/ui/Spinner.tsx\"\n    <div className=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4\">\n      <Spinner variant=\"bounce\" className=\"my-4\" />\n    </div>      \n    "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "registryDependencies": ["https://uignite.in/r/spinner.json"]
+}

@@ -1,32 +1,33 @@
 import React, {
+  ReactNode,
   useCallback,
   useEffect,
   useRef,
   useState,
-  ReactNode,
 } from 'react';
 import {cn} from '../utils/lib';
 
-export interface ResizableProps {
+interface ResizablePropT {
   className?: string;
   defaultPosition?: number;
   horizontal?: boolean;
-  children: [ReactNode, ReactNode]; // exactly two children expected
+  children: [ReactNode, ReactNode];
 }
 
 export default function Resizable({
-  className,
+  className = '',
+  horizontal: horizontalValue = false,
   defaultPosition,
-  horizontal: horizontalValue,
   children,
-}: ResizableProps) {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const draggerRef = useRef<HTMLDivElement | null>(null);
+}: ResizablePropT) {
+  // refrence of the container
+  const containerRef = useRef<null | HTMLDivElement>(null);
+  const draggerRef = useRef<null | HTMLDivElement>(null);
 
   const [dividerPosition, setDividerPosition] = useState(
-    (defaultPosition ?? horizontalValue)
+    defaultPosition ?? (horizontalValue
       ? window.innerHeight - window.innerHeight / 3
-      : window.innerWidth / 5
+      : window.innerWidth / 5)
   );
   const [mouseX, setMouseX] = useState(0);
   const [mouseDown, setMouseDown] = useState(false);
@@ -36,23 +37,55 @@ export default function Resizable({
     if (draggerRef.current) {
       draggerRef.current.addEventListener(
         'mousedown',
-        () => setMouseDown(true),
-        {signal: controller.signal}
+        () => {
+          setMouseDown(true);
+        },
+        {
+          signal: controller.signal,
+        }
       );
+
       draggerRef.current.addEventListener(
         'mouseup',
-        () => setMouseDown(false),
-        {signal: controller.signal}
+        () => {
+          setMouseDown(false);
+        },
+        {
+          signal: controller.signal,
+        }
       );
     }
     return () => {
       controller.abort();
     };
-  }, []);
+  }, [draggerRef.current, setMouseDown]);
 
-  useEffect(() => {
+  React.useEffect(() => {
+    const controller = new AbortController();
+
+    if (containerRef.current) {
+      containerRef.current.addEventListener(
+        'mousemove',
+        (ev) => {
+          if (horizontalValue) setMouseX(ev.clientY);
+          else {
+            setMouseX(ev.clientX)
+          }
+        },
+        {
+          signal: controller.signal,
+        }
+      );
+    }
+
+    return () => {
+      controller.abort();
+    };
+  }, [dividerPosition, containerRef.current]);
+
+  React.useEffect(() => {
     handleMouseUpDown();
-  }, [handleMouseUpDown]);
+  }, [draggerRef]);
 
   useEffect(() => {
     if (mouseDown) setDividerPosition(mouseX);
@@ -61,11 +94,8 @@ export default function Resizable({
   return (
     <div
       ref={containerRef}
-      onMouseMove={(ev: React.MouseEvent<HTMLDivElement>) => {
-        setMouseX(horizontalValue ? ev.clientY : ev.clientX);
-      }}
       className={cn(
-        `w-full h-full flex ${horizontalValue ? 'flex-col' : ''}`,
+        `w-full h-full flex ${horizontalValue ? 'flex-col' : null}`,
         className
       )}
     >
@@ -86,19 +116,19 @@ export default function Resizable({
         } relative group`}
       >
         <div
-          role="separator"
+          role="span"
           aria-checked={mouseDown ? 'true' : 'false'}
           className={`${
             horizontalValue
               ? 'top-1/2 left-0 right-0 bottom-1/2 -translate-y-1/2 h-0.5 group-hover:h-1'
               : 'top-0 left-1/2 right-1/2 bottom-0 -translate-x-1/2 w-0.5 group-hover:w-1'
-          } absolute z-10 bg-[#263147] transition-all group-hover:bg-amber-300 aria-checked:bg-amber-300`}
+          } absolute z-10  bg-[#263147] transition-all group-hover:bg-amber-300 aria-checked:bg-amber-300`}
         />
       </div>
       <div
         style={{
           width: horizontalValue
-            ? '100%'
+            ? 'w-full'
             : containerRef.current
               ? containerRef.current.offsetWidth - dividerPosition
               : 0,
@@ -106,7 +136,7 @@ export default function Resizable({
             ? containerRef.current
               ? containerRef.current.offsetHeight - dividerPosition
               : 0
-            : '100%',
+            : 'h-full',
         }}
       >
         {children[1]}

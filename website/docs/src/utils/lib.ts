@@ -29,13 +29,17 @@ function getElementByCompId(compId: string | undefined) {
 function getCodeStrById(compId: string | undefined) {
   if (!compId) return null;
   return codeString.find(
-    (codeStr) => codeStr.id.trim().toLowerCase() === compId.trim().toLowerCase()
+    (codeStr) =>
+      codeStr.id !== undefined &&
+      codeStr.id.trim().toLowerCase() === compId.trim().toLowerCase()
   );
 }
 
 function getPreviousComponentbyId(compId: string | undefined) {
   if (!compId) return null;
-  const currInd: number = components.findIndex((comp) => comp.id === compId);
+  const currInd: number = components.findIndex(
+    (comp) => comp.id !== undefined && comp.id === compId
+  );
   if (currInd === 0) {
     return components[components.length - 1].id;
   }

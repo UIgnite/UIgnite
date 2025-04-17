@@ -1,1 +1,13 @@
-{"name":"avatar","type":"registry:ui","dependencies":[],"files":[{"path":"packages/uignite/src/components/Avatar/Avatar.tsx","type":"registry:ui","content":"import React from 'react';\r\nimport {cn} from '@/lib/utils';\r\n\r\nexport interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {\r\n  url: string;\r\n  alt: string;\r\n  className?: string;\r\n}\r\n\r\nconst Avatar = React.forwardRef<HTMLImageElement, AvatarProps>(\r\n  ({url, alt, className = '', ...props}, ref) => {\r\n    return (\r\n      <div className=\"flex gap-4 mt-2\">\r\n        <img\r\n          ref={ref}\r\n          src={url ? url : 'https://avatar.iran.liara.run/public'}\r\n          alt={alt}\r\n          className={cn(\r\n            'size-12 rounded-full border border-neutral-300',\r\n            className\r\n          )}\r\n          {...props}\r\n        />\r\n      </div>\r\n    );\r\n  }\r\n);\r\n\r\nAvatar.displayName = 'Avatar';\r\n\r\nexport default Avatar;\r\n"}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
+{
+  "name": "avatar",
+  "type": "registry:ui",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "packages/uignite/src/components/Avatar/Avatar.tsx",
+      "type": "registry:ui",
+      "content": "import React from 'react';\nimport {cn} from '@/lib/utils';\n\nexport interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {\n  url: string;\n  alt: string;\n  className?: string;\n}\n\nconst Avatar = React.forwardRef<HTMLImageElement, AvatarProps>(\n  ({url, alt, className = '', ...props}, ref) => {\n    return (\n      <div className=\"flex gap-4 mt-2\">\n        <img\n          ref={ref}\n          src={url ? url : 'https://avatar.iran.liara.run/public'}\n          alt={alt}\n          className={cn(\n            'size-12 rounded-full border border-neutral-300',\n            className\n          )}\n          {...props}\n        />\n      </div>\n    );\n  }\n);\n\nAvatar.displayName = 'Avatar';\n\nexport default Avatar;\n"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

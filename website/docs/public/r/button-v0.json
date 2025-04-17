@@ -1,1 +1,14 @@
-{"name":"button-v0","type":"registry:component","dependencies":[],"files":[{"path":"registry/default/components/button-v0.tsx","type":"registry:component","content":"import Button from \"@/components/ui/Button.tsx\"<div className=\"grid grid-cols-5 gap-10\">\r\n            <Button variant=\"primary\">primary</Button>\r\n            <Button variant=\"destructive\">destructive</Button>\r\n            <Button variant=\"success\">success</Button>\r\n            <Button variant=\"warning\">warning</Button>\r\n            <Button variant=\"outline\">outline</Button>\r\n            <Button variant=\"secondary\">secondary</Button>\r\n            <Button  variant=\"gradient\" isLoading />\r\n            <Button variant=\"ghost\">ghost</Button>\r\n            <Button variant=\"glass\">glass</Button>\r\n            <Button variant=\"dark\">dark</Button>\r\n            <Button variant=\"light\">light</Button>\r\n            <Button variant=\"gradient\">gradient</Button>\r\n            <Button animatedBorder>animated</Button>\r\n            <Button gradientBorder>gradBorder</Button>\r\n            <Button className=\"animate-border text-white font-semibold px-6 py-3 rounded-xl\">\r\n              Hover Me\r\n            </Button>\r\n          </div> \r\n    "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json","registryDependencies":["https://uignite.in/r/button.json"]}
+{
+  "name": "button-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "registry/default/components/button-v0.tsx",
+      "type": "registry:component",
+      "content": "import Button from \"@/components/ui/Button.tsx\"\n          <div className=\"grid grid-cols-5 gap-10\">\n            <Button variant=\"primary\">primary</Button>\n            <Button variant=\"destructive\">destructive</Button>\n            <Button variant=\"success\">success</Button>\n            <Button variant=\"warning\">warning</Button>\n            <Button variant=\"outline\">outline</Button>\n            <Button variant=\"secondary\">secondary</Button>\n            <Button  variant=\"gradient\" isLoading />\n            <Button variant=\"ghost\">ghost</Button>\n            <Button variant=\"glass\">glass</Button>\n            <Button variant=\"dark\">dark</Button>\n            <Button variant=\"light\">light</Button>\n            <Button variant=\"gradient\">gradient</Button>\n            <Button animatedBorder>animated</Button>\n            <Button gradientBorder>gradBorder</Button>\n            <Button className=\"animate-border text-white font-semibold px-6 py-3 rounded-xl\">\n              Hover Me\n            </Button>\n          </div> \n    "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "registryDependencies": ["https://uignite.in/r/button.json"]
+}

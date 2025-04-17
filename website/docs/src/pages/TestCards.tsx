@@ -9,7 +9,7 @@ import {
   CardTitle,
   Input,
 } from '@pkgs/uignite';
-import {Info} from 'lucide-react';
+import {Eye, EyeOff, Info} from 'lucide-react';
 import {useState} from 'react';
 
 const TestCards = () => {
@@ -20,9 +20,8 @@ const TestCards = () => {
     setStatus(final);
   }
   return (
-    <div>
-      {/* cards */}
-      <div className=" flex gap-12 p-12">
+    <div className="">
+      <div className="flex gap-12 p-12">
         <Card className="mt-6 rounded-2xl shadow-lg max-h-min">
           <CardHeader className="flex flex-row justify-between px-4 pt-2 items-center">
             <div className="flex gap-3 items-center">
@@ -76,7 +75,7 @@ const TestCards = () => {
           </div>
 
           <CardContent className="px-2">
-            <h1 className="font-semibold text-lg text-zinc-800 dark:text-zinc-200">
+            <h1 className="font-semibold text-2xl text-zinc-800 dark:text-zinc-200">
               Web Dev Cohort 1.0
             </h1>
             <p className="text-sm leading-tight text-neutral-700 dark:text-neutral-400">
@@ -85,13 +84,13 @@ const TestCards = () => {
               MongoDB/PostgreSQL, DevOps with AWS (ECR, EC2, CloudFront), modern
               workflows like Turbo Repo, TypeScript, and GitHub CI/CD.
             </p>
-            <div className="flex gap-2 items-center mt-2">
-              <div className="font-medium text-md ">6,999 INR</div>
-              <div className="line-through text-sm text-gray-400 dark:text-gray-500">
+            <div className="flex gap-2 items-center mt-2 funnel">
+              <div className="font-medium text-xl ">6,999 INR</div>
+              <div className="line-through text-base text-gray-400 dark:text-gray-500">
                 8,999 INR
               </div>
             </div>
-            <div className="text-sm text-blue-500 dark:text-blue-400 -mt-1">
+            <div className="text-sm text-blue-500 dark:text-blue-400">
               Save 22%
             </div>
             <a
@@ -116,7 +115,7 @@ const TestCards = () => {
               className="h-[295px] w-full object-cover rounded-t-xl"
             />
           </CardHeader>
-          <CardContent className="flex flex-col justify-center items-center mt-5">
+          <CardContent className="flex flex-col justify-center items-center mt-3">
             <div className="font-semibold text-2xl">Aman Gupta</div>
             <div className="text-sm text-neutral-600 dark:text-zinc-500 ">
               Backend Developer at OnlyDevs
@@ -141,11 +140,59 @@ const TestCards = () => {
 
       <hr />
       {/* inputs */}
-      <div className=" flex gap-12 p-12">
-        <Input placeholder="Email" />
+      <div className=" flex flex-col gap-12 p-24 w-[620px] border">
+        {/* normal input component */}
+        <Input className="" type="email" placeholder="Email" />
+
+        {/* Disabled Input */}
+        <Input type="email" value="chaicode@gmail.com" disabled />
+
+        {/* Input with Start Text */}
+        <div className="flex rounded-md shadow-xs">
+          <span
+            className="h-9 p-2 rounded-md border border-gray-400 dark:border-zinc-700
+            rounded-e-none text-base shadow-sm transition-colors placeholder:text-muted-foreground 
+           border-input bg-background text-muted-foreground inline-flex items-center
+            rounded-s-md px-3  text-zinc-500"
+          >
+            https://
+          </span>
+          <Input
+            className="-ms-px rounded-s-none shadow-none dark:font-light"
+            placeholder="www.uignite.in"
+            type="text"
+          />
+        </div>
+
+        {/* Password Input */}
+        <PasswordInput />
+
+        {/* File Upload */}
+        <Input type="file" className="file:me-3" />
       </div>
     </div>
   );
 };
 
 export default TestCards;
+
+function PasswordInput() {
+  const [show, setShow] = useState(false);
+
+  return (
+    <div className="relative">
+      <Input
+        type={show ? 'text' : 'password'}
+        className="w-full pr-10"
+        placeholder="Password"
+        defaultValue={'uignite'}
+      />
+      <div
+        onClick={() => setShow((prev) => !prev)}
+        className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground"
+      >
+        {show ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+      </div>
+    </div>
+  );
+}
