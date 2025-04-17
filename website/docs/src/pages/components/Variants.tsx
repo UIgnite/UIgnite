@@ -34,7 +34,7 @@ export const Variants = ({componentId}: {componentId: string}) => {
     <div>
       {currElement.variation.map((currVariant) => (
         <LiveProvider code={currVariant} scope={currElement.scope}>
-          <Tabs className="p-3 mt-4" defaultVal="preview">
+          <Tabs className="p-3 mt-4 mb-12" defaultVal="preview">
             <TabList activeTab="">
               {currElement ? <Tab title="Preview" value="preview" /> : <></>}
               <Tab title="Code" value="code" />
