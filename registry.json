@@ -31,7 +31,10 @@
       "name": "avatargroup",
       "type": "registry:ui",
       "dependencies": [],
-      "registryDependencies": ["https://uignite.in/r/Avatar.json" , "https://uignite.in/r/Tooltip.json"],
+      "registryDependencies": [
+        "https://uignite.in/r/Avatar.json",
+        "https://uignite.in/r/Tooltip.json"
+      ],
       "files": [
         {
           "path": "packages/uignite/src/components/AvatarGroup/AvatarGroup.tsx",
