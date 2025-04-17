@@ -13,4 +13,4 @@ const Skeleton = ({className}: SkeletonParams) => {
   );
 };
 
-export default Skeleton;
+export {Skeleton};

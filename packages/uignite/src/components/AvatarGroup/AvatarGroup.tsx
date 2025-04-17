@@ -39,4 +39,4 @@ const AvatarGroup: React.FC<AvatarGroupProps> = ({avatars = []}) => {
   );
 };
 
-export default AvatarGroup;
+export {AvatarGroup};
