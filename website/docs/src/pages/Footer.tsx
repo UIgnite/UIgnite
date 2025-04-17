@@ -2,7 +2,7 @@ import {FiGithub} from 'react-icons/fi';
 import {FaDiscord} from 'react-icons/fa';
 import {FaXTwitter} from 'react-icons/fa6';
 import {Link} from 'react-router-dom';
-const FooterX = () => {
+const Footer = () => {
   return (
     <div className="w-full h-full">
       <div className="border-t-zinc-800 border-t mt-6"></div>
@@ -33,7 +33,7 @@ const FooterX = () => {
             </div>
           </div>
 
-          {/* other sections like resources docs legal */}
+          {/* other sections like product getStarted legal */}
           <div className="flex gap-16 mt-3">
             <div className="text-zinc-400 flex flex-col gap-2">
               <h1 className="text-zinc-100 font-semibold">Quick Links</h1>
@@ -98,4 +98,4 @@ const FooterX = () => {
   );
 };
 
-export default FooterX;
+export default Footer;
