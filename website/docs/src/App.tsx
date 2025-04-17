@@ -11,6 +11,7 @@ import {NotFoundPage} from './pages/NotFoundPage';
 import ComponentPreviewPage from './pages/components';
 import TestCards from './pages/TestCards';
 import FeedbackForm from './pages/FeedbackForm';
+import FooterX from './pages/FooterX';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Route path="/" element={<Home />} />
       <Route element={<RootLayout />}>
         <Route path="/auth" element={<Auth />} />
+        <Route path="/footerx" element={<FooterX />} />
         <Route path="feedback" element={<FeedbackForm />} />
         <Route path="/docs" element={<Landing />} />
         <Route path="/testcards" element={<TestCards />} />
