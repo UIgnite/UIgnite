@@ -2,7 +2,9 @@
   "name": "button",
   "type": "registry:ui",
   "dependencies": ["class-variance-authority"],
-  "registryDependencies": ["https://bfc3-2401-4900-8899-b2e1-e823-9f9-734c-d8d2.ngrok-free.app/r/spinner.json"],
+  "registryDependencies": [
+    "https://bfc3-2401-4900-8899-b2e1-e823-9f9-734c-d8d2.ngrok-free.app/r/spinner.json"
+  ],
   "files": [
     {
       "path": "registry/default/ui/button",

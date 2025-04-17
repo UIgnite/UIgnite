@@ -41,7 +41,7 @@ import {Switch} from './src/components/Switch';
 const elements = [
   {
     id: 'accordion',
-    scope: { Accordion, AccordionWrapper },
+    scope: {Accordion, AccordionWrapper},
     element: `
 <div className="relative z-10">
   <AccordionWrapper>
@@ -68,7 +68,7 @@ const elements = [
   },
   {
     id: 'AlertDialogBox',
-    scope: { Button, AlertDialogBox, useState },
+    scope: {Button, AlertDialogBox, useState},
     element: `
       <AlertDialogBox
         title="Delete account?"
@@ -79,7 +79,7 @@ const elements = [
   },
   {
     id: 'avatar',
-    scope: { Avatar, AvatarGroup },
+    scope: {Avatar, AvatarGroup},
     element: `
       <>
         <Avatar url={"/piyush-sir.png"} alt={"user"} />
@@ -90,7 +90,7 @@ const elements = [
   },
   {
     id: 'button',
-    scope: { Button, CommandButton, AlarmClockCheck },
+    scope: {Button, CommandButton, AlarmClockCheck},
     element: `
       <Button>Click Me</Button>
     `,
@@ -276,7 +276,7 @@ const elements = [
   },
   {
     id: 'Carosuel',
-    scope: { Carosuel },
+    scope: {Carosuel},
     element: ` 
     <Carosuel className="h-full w-full   flex justify-center items-center">
       <div className=" dark:bg-black bg-gray-100 h-full mr-4 ml-4 flex items-center justify-center text-2xl font-semibold rounded-lg shadow-md">
@@ -301,7 +301,7 @@ const elements = [
 
   {
     id: 'dropdown',
-    scope: { Dropdown },
+    scope: {Dropdown},
     element: `
       <Dropdown 
         button={
@@ -319,7 +319,7 @@ const elements = [
   },
   {
     id: 'footer',
-    scope: { Footer },
+    scope: {Footer},
     element: `
       <Footer
         lightLogo="https://dummyimage.com/120x40/000/fff&text=Light+Logo"
@@ -372,7 +372,7 @@ const elements = [
   },
   {
     id: 'input',
-    scope: { Input, EyeOff, Eye, useState },
+    scope: {Input, EyeOff, Eye, useState},
     element: `<Input placeholder="Type here..." />`,
     variation: [
       `
@@ -424,7 +424,7 @@ const elements = [
   },
   {
     id: 'inputotp',
-    scope: { InputOTP },
+    scope: {InputOTP},
     element: `
       <InputOTP length = {6}/> 
     `,
@@ -432,7 +432,7 @@ const elements = [
   },
   {
     id: 'messagebot',
-    scope: { MessageBot },
+    scope: {MessageBot},
     element: `
     <div>
       <div> Neeche Dekho Neecheee... </div>
@@ -448,7 +448,7 @@ const elements = [
   },
   {
     id: 'navbar',
-    scope: { Navbar },
+    scope: {Navbar},
     element: `
       <Navbar
         lightLogo="https://dummyimage.com/100x40/ffffff/000000&text=Light+Logo"
@@ -470,7 +470,7 @@ const elements = [
   },
   {
     id: 'pricingCard',
-    scope: { PricingCard, Link },
+    scope: {PricingCard, Link},
     element: `
     <>
       <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 px-4">
@@ -512,7 +512,7 @@ const elements = [
   },
   {
     id: 'resizable',
-    scope: { Resizable },
+    scope: {Resizable},
     element: `<div className='relative w-[500px] h-26'>
       <Resizable className='h-20'>
         <div className='w-full h-full bg-amber-200'></div>
@@ -522,7 +522,7 @@ const elements = [
   },
   {
     id: 'skeleton',
-    scope: { Skeleton },
+    scope: {Skeleton},
     element: `
         <div className="flex items-center space-x-4 ">
           <Skeleton className="h-12 w-12 rounded-full" />
@@ -630,7 +630,7 @@ const elements = [
   },
   {
     id: 'spinner',
-    scope: { Spinner },
+    scope: {Spinner},
     element: `
     <div className="grid grid-cols-1">
       <Spinner variant="bounce" className="my-4" />
@@ -646,13 +646,13 @@ const elements = [
   },
   {
     id: 'switch',
-    scope: { Switch },
+    scope: {Switch},
     element: `<Switch defaultState={true} />`,
     variation: [],
   },
   {
     id: 'Tabs',
-    scope: { Tabs, TabList, Tab, TabContent },
+    scope: {Tabs, TabList, Tab, TabContent},
     element: `
       <Tabs defaultVal="Before">
         <TabList className="w-[400px] ">
@@ -673,13 +673,13 @@ const elements = [
   },
   {
     id: 'textarea',
-    scope: { TextArea },
+    scope: {TextArea},
     element: `<TextArea placeholder="Write something..." />`,
     variation: [],
   },
   {
     id: 'toast',
-    scope: { useToast, Toast, Button },
+    scope: {useToast, Toast, Button},
     element: `
     function ToastPreview() {
       const toast = useToast();
@@ -703,7 +703,7 @@ const elements = [
   },
   {
     id: 'tooltip',
-    scope: { Tooltip },
+    scope: {Tooltip},
     element: `
       <Tooltip title="Tooltip" options={{ delay: 500 }}>
         <button className="cursor-pointer px-4 py-2 bg-neutral-800 text-white rounded">Hover me</button>
