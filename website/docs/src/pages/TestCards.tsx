@@ -159,7 +159,7 @@ const TestCards = () => {
           </span>
           <Input
             className="-ms-px rounded-s-none shadow-none dark:font-light"
-            placeholder="www.chaicode.com"
+            placeholder="www.uignite.in"
             type="text"
           />
         </div>
@@ -185,14 +185,13 @@ function PasswordInput() {
         type={show ? 'text' : 'password'}
         className="w-full pr-10"
         placeholder="Password"
-        defaultValue={'secretPassword'}
+        defaultValue={'uignite'}
       />
       <div
         onClick={() => setShow((prev) => !prev)}
         className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-muted-foreground"
       >
         {show ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-        {/* {show ? '🐵' : '🙈'} */}
       </div>
     </div>
   );
