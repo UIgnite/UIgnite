@@ -15,18 +15,18 @@ export default function ComponentLayout() {
       <div className="w-[1400px]  flex mt-10 ">
         {/* Side Bar  */}
         {
-          <div className=" ml-[4%] min-w-[15%] mr-[1%] h-full overflow-y-scroll scrollable-content lg:flex flex-col gap-y-2 justify-start hidden ">
+          <div className=" ml-[4%] min-w-[15%] mr-[1%] max-h-[90vh] overflow-y-scroll scrollable-content lg:flex flex-col gap-y-2 justify-start hidden ">
             <div>
               <div className="font-med font-bold ">Getting Started</div>
               <ul className="text-gray-700 my-4 flex flex-col gap-y-2">
                 <button
-                  className=" ml-4 text-left  cursor-pointer p-2 rounded-md hover:bg-neutral-200 dark:hover:text-white dark:text-neutral-300 dark:hover:bg-neutral-700"
+                  className=" text-left  cursor-pointer p-2 rounded-md hover:bg-neutral-200 dark:hover:text-white dark:text-neutral-300 dark:hover:bg-neutral-700"
                   onClick={() => navigate(`/components/Introduction`)}
                 >
                   Introduction
                 </button>
                 <button
-                  className=" ml-4 text-left  cursor-pointer p-2 rounded-md hover:bg-neutral-200 dark:hover:text-white dark:text-neutral-300 dark:hover:bg-neutral-700"
+                  className=" text-left  cursor-pointer p-2 rounded-md hover:bg-neutral-200 dark:hover:text-white dark:text-neutral-300 dark:hover:bg-neutral-700"
                   onClick={() => navigate('/components/Installation')}
                 >
                   Installation
@@ -38,7 +38,7 @@ export default function ComponentLayout() {
                   <button
                     key={index}
                     onClick={() => navigate(`/components/${component.id}`)}
-                    className=" ml-4  text-left  cursor-pointer p-2 rounded-md hover:bg-neutral-200 dark:hover:text-white dark:text-neutral-300 dark:hover:bg-neutral-700"
+                    className="  text-left  cursor-pointer p-2 rounded-md hover:bg-neutral-200 dark:hover:text-white dark:text-neutral-300 dark:hover:bg-neutral-700"
                   >
                     {component.name}
                   </button>
@@ -48,7 +48,7 @@ export default function ComponentLayout() {
           </div>
         }
 
-        <div className="flex-grow h-full px-4 scrollable-content overflow-y-scroll">
+        <div className="flex-grow max-h-[90vh] px-4 scrollable-content overflow-y-scroll">
           {componentId ? (
             componentId === 'Introduction' ? (
               <>

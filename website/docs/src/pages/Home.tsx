@@ -13,29 +13,16 @@ import {
   Moon,
 } from 'lucide-react';
 
-// import {Card, CardHeader, CardContent, CardTitle} from '@pkgs/uignite';
-// import {Accordion, AccordionWrapper} from '@pkgs/uignite';
-// import {Input} from '@pkgs/uignite';
-// import {Skeleton} from '@pkgs/uignite';
+
 import {Testimonials} from '@pkgs/uignite';
 import Navbar from '../components/Navbar';
 import {GridBackground} from '../utils/GridBackground';
 import TechStack from '../utils/TechStack';
 import {VideoPlayer} from '@pkgs/uignite';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 const Home = () => {
   const [isCopied, setIsCopied] = useState(false);
-  // const [email, setEmail] = useState('');
-  // const [error, setError] = useState('');
-
-  // const validateEmail = (value: string) => {
-  //   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  //   if (!regex.test(value)) {
-  //     setError('Please enter a valid email address');
-  //   } else {
-  //     setError('');
-  //   }
-  // };
 
   const handleCopy = () => {
     navigator.clipboard.writeText('npm i uignite');
@@ -158,9 +145,11 @@ const Home = () => {
                 </p>
 
                 <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <Button className="!dark dark:hover:text-gray-200  bg-transparent border text-lg dark:hover:border-white/20 dark:border-blue-500 hover:border-blue-800 hover:text-blue-800 hover:bg-transparent text-blue-500 transition duration-300 rounded-lg px-6 py-6">
-                    Get Started
-                  </Button>
+                  <Link to="/components/Installation">
+                    <Button className="!dark dark:hover:text-gray-200  bg-transparent border text-lg dark:hover:border-white/20 dark:border-blue-500 hover:border-blue-800 hover:text-blue-800 hover:bg-transparent text-blue-500 transition duration-300 rounded-lg px-6 py-6">
+                      Get Started
+                    </Button>
+                  </Link>
                   <Button
                     icon={
                       !isCopied ? <Copy size="16px" /> : <Check size="16px" />
@@ -212,13 +201,14 @@ const Home = () => {
             </motion.div>
           </div>
 
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center ">
             <VideoPlayer
               src="https://res.cloudinary.com/do2tmd6xp/video/upload/f_auto:video,q_auto/chitiuerm8vfgaugsrkr"
               thumbnailUrl="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
               muted
               autoplay
               loop
+              className="shadow-black dark:shadow-indigo-900 shadow-2xl rounded-xl"
             />
           </div>
           <div className="text-center ">
