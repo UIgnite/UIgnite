@@ -53,7 +53,7 @@ export default function Component() {
 
       <hr className="w-48 h-0 mx-auto my-8 border-none" />
 
-      {element && element?.variation.length > 0 ? (
+      {element && element.variation && element?.variation.length > 0 ? (
         <h1 id="variants" className="text-4xl mt-4 font-semibold">
           Variants
         </h1>
