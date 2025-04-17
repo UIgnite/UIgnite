@@ -32,7 +32,7 @@ const Install = ({
               background: 'rgb(24, 24, 24)',
             },
           }}
-          language="cli"
+          language="npm"
           className="text-left  text-sm h-full min-w-full rounded-md  "
         >
           {`${val} shadcn add https://uignite.in/r/${componentId}.json `}

@@ -1,1 +1,16 @@
-{"name":"toast-v0","type":"registry:component","dependencies":[],"registryDependencies":["https://080a-104-28-199-189.ngrok-free.app/r/toast.json"],"files":[{"path":"registry/default/components/toast-v0.tsx","type":"registry:component","content":"import {useToast} from \"@/components/ui/Toast\"\nimport {Toast} from \"@/components/ui/Toast\"\nimport {Button} from \"@/components/ui/Toast\"\n              function Component(){\n                return (\r\n    function ToastPreview() {\r\n      const toast = useToast();\r\n\r\n      return (\r\n        <Button\r\n          onClick={() => {\r\n            toast.showToast('Hover Me ', {\r\n              desc: \\)\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
+{
+  "name": "toast-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "registryDependencies": [
+    "https://080a-104-28-199-189.ngrok-free.app/r/toast.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/components/toast-v0.tsx",
+      "type": "registry:component",
+      "content": "import {useToast} from \"@/components/ui/Toast\"\nimport {Toast} from \"@/components/ui/Toast\"\nimport {Button} from \"@/components/ui/Toast\"\n              function Component(){\n                return (\r\n      {\r\n        scope: ['useToast'],\r\n        from: 'toast',\r\n        isHook: true,\r\n      },\r\n      {\r\n        scope: ['Toast'],\r\n        from: 'Toast',\r\n        isComp: true,\r\n      },\r\n      {\r\n        scope: ['Button'],\r\n        from: 'Button',\r\n        isComp: true,\r\n      },\r\n    )\n              }\n              export default Component\n              "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}
