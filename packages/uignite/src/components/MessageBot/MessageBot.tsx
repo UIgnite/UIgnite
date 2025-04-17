@@ -108,7 +108,7 @@ const MessageBot = ({
                   {msg.text}
                 </div>
                 {msg.sender === 'bot' && (
-                  <img src={url} className="ml-2 size-10" alt="" />
+                  <Avatar url={url} alt="bot" className="ml-2 size-10" />
                 )}
               </div>
             ))}
