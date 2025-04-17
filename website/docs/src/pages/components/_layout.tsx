@@ -10,7 +10,7 @@ export default function ComponentLayout() {
   const navigate = useNavigate();
   return (
     <div className="flex justify-center items-center">
-      <div className="w-[1400px]  flex h-[calc(100vh-120px)] mt-10 ">
+      <div className="w-[1400px]  flex mt-10 ">
         {/* Side Bar  */}
         {componentId && (
           <div className=" ml-[4%] min-w-[15%] mr-[1%] h-full overflow-y-scroll scrollable-content lg:flex flex-col gap-y-2 justify-start hidden ">
