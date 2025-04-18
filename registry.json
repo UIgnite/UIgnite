@@ -28,21 +28,6 @@
       ]
     },
     {
-      "name": "avatargroup",
-      "type": "registry:ui",
-      "dependencies": [],
-      "registryDependencies": [
-        "https://080a-104-28-199-189.ngrok-free.app/r/Avatar.json",
-        "https://080a-104-28-199-189.ngrok-free.app/r/Tooltip.json"
-      ],
-      "files": [
-        {
-          "path": "packages/uignite/src/components/AvatarGroup/AvatarGroup.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "button",
       "type": "registry:ui",
       "dependencies": ["class-variance-authority"],

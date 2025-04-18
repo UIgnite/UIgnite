@@ -1,1 +1,16 @@
-{"name":"messagebot-v0","type":"registry:component","dependencies":[],"registryDependencies":["https://080a-104-28-199-189.ngrok-free.app/r/messagebot.json"],"files":[{"path":"registry/default/components/messagebot-v0.tsx","type":"registry:component","content":"import {MessageBot} from \"@/components/ui/MessageBot\"\n              function Component(){\n                return (\r\n    <div>\r\n      <div> Neeche Dekho Neecheee... </div>\r\n      <MessageBot\r\n        orgName=\"UIgnite\"\r\n        themeColor=\"bg-blue-500\"\r\n        url=\"https://dummyimage.com/100x100/000/fff&text=U\"\r\n        alt=\"Bot avatar\"\r\n      />\r\n    </div>\r\n    )\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
+{
+  "name": "messagebot-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "registryDependencies": [
+    "https://080a-104-28-199-189.ngrok-free.app/r/messagebot.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/components/messagebot-v0.tsx",
+      "type": "registry:component",
+      "content": "import {MessageBot} from \"@/components/ui/MessageBot\"\n              function Component(){\n                return (\r\n      {\r\n        scope: ['MessageBot'],\r\n        from: 'MessageBot',\r\n        isComp: true,\r\n      },\r\n    )\n              }\n              export default Component\n              "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

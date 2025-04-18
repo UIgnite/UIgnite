@@ -27,22 +27,28 @@ import {
   Carosuel,
   InputOTP,
   AlertDialogBox,
+  Switch,
+  Footer,
+  Navbar,
 } from '@pkgs/uignite';
-import Footer from './src/components/Footer';
-import Navbar from './src/components/Navbar';
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import {Eye, EyeOff, Info} from 'lucide-react';
-import {CommandButton} from './src/components/CommandButton';
 import {AlarmClockCheck} from 'lucide-react';
-import {Switch} from './src/components/Switch';
 
 const elements = [
   {
     id: 'accordion',
     scope: {Accordion, AccordionWrapper},
+    extraScopes: [
+      {
+        scope: ['Accordion', 'AccordionWrapper'],
+        from: 'Accordion',
+        isComp: true,
+      },
+    ],
     element: `
-<div className="relative z-10">
+<div className="relative z-0">
   <AccordionWrapper>
     <Accordion
       title="What is MobiMart?"
@@ -68,6 +74,22 @@ const elements = [
   {
     id: 'AlertDialogBox',
     scope: {Button, AlertDialogBox, useState},
+    extraScopes: [
+      {
+        scope: ['Button'],
+        from: 'Button',
+        isComp: true,
+      },
+      {
+        scope: ['AlertDialogBox'],
+        from: 'AlertDialogBox',
+        isComp: true,
+      },
+      {
+        scope: ['useState'],
+        from: 'react',
+      },
+    ],
     element: `
       <AlertDialogBox
         title="Delete account?"
@@ -89,7 +111,18 @@ const elements = [
   },
   {
     id: 'button',
-    scope: {Button, CommandButton, AlarmClockCheck},
+    scope: {Button, AlarmClockCheck},
+    extraScopes: [
+      {
+        scope: ['Button'],
+        from: 'Button',
+        isComp: true,
+      },
+      {
+        scope: ['AlarmClockCheck'],
+        from: 'lucide-react',
+      },
+    ],
     element: `
       <Button>Click Me</Button>
     `,
@@ -120,7 +153,31 @@ const elements = [
         </Button>
       </div>
       `,
-      ` <CommandButton/>`,
+      ` <button className="relative shadow-sm  hover:shadow-gray-50 p-0 w-[100px] h-[100px] border-2 border-gray-500 outline-none bg-gray-100 rounded-[20px]  transition ease-in-out duration-300 hover:scale-110 active:scale-95 active:shadow-none cursor-pointer">
+      <div className="relative grid p-[10px] w-full h-full grid-cols-4 grid-rows-2 shadow-[inset_0px_-4px_0px_#dddddd,0px_-4px_0px_#f4f5f6] rounded-[20px] transition ease-in-out duration-300 z-[1]">
+        <div className="relative flex translate-y-[-2px] col-start-4 self-start justify-self-end w-4 h-4 transition ease-in-out duration-300 group-hover:translate-y-[-8px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 80 80"
+            width="16"
+            height="16"
+            fill="#aaaaaa"
+          >
+            <path
+              d="M64,48L64,48h-8V32h8c8.836,0,16-7.164,16-16S72.836,0,64,0c-8.837,0-16,7.164-16,16v8H32v-8c0-8.836-7.164-16-16-16
+              S0,7.164,0,16s7.164,16,16,16h8v16h-8l0,0l0,0C7.164,48,0,55.164,0,64s7.164,16,16,16c8.837,0,16-7.164,16-16l0,0v-8h16v7.98
+              c0,0.008-0.001,0.014-0.001,0.02c0,8.836,7.164,16,16,16s16-7.164,16-16S72.836,48.002,64,48z M64,8c4.418,0,8,3.582,8,8
+              s-3.582,8-8,8h-8v-8C56,11.582,59.582,8,64,8z M8,16c0-4.418,3.582-8,8-8s8,3.582,8,8v8h-8C11.582,24,8,20.417,8,16z M16,72
+              c-4.418,0-8-3.582-8-8s3.582-8,8-8l0,0h8v8C24,68.418,20.418,72,16,72z M32,48V32h16v16H32z M64,72c-4.418,0-8-3.582-8-8l0,0v-8
+              h7.999c4.418,0,8,3.582,8,8S68.418,72,64,72z"
+            />
+          </svg>
+        </div>
+        <p className="relative translate-y-[-2px] m-0 self-end col-span-4 row-start-2 text-center text-[16px] bg-gray-500 text-transparent [text-shadow:1px_1px_2px_rgba(255,255,255,0.5)] bg-clip-text transition ease-in-out duration-300 group-hover:translate-y-[-5px]">
+          command
+        </p>
+      </div>
+    </button>`,
       `
       <div className="grid grid-cols-3 gap-10">
         <Button gradientBorder>gradBorder</Button>
@@ -145,6 +202,33 @@ const elements = [
       useEffect,
       Info,
     },
+    extraScopes: [
+      {
+        scope: [
+          'Card',
+          'CardHeader',
+          'CardTitle',
+          'CardDescription',
+          'CardContent',
+          'CardFooter',
+        ],
+        from: 'Card',
+        isComp: true,
+      },
+      {
+        scope: ['Avatar'],
+        from: 'Avatar',
+        isComp: true,
+      },
+      {
+        scope: ['useState', 'useEffect'],
+        from: 'react',
+      },
+      {
+        scope: ['Info'],
+        from: 'lucide-react',
+      },
+    ],
     element: `
   function TwitterCard () {
     const [status, setStatus] = useState('Follow');
@@ -276,6 +360,13 @@ const elements = [
   {
     id: 'Carosuel',
     scope: {Carosuel},
+    extraScopes: [
+      {
+        scope: ['Carosuel'],
+        from: 'Carosuel',
+        isComp: true,
+      },
+    ],
     element: ` 
     <Carosuel className="h-full w-full   flex justify-center items-center">
       <div className=" dark:bg-black bg-gray-100 h-full mr-4 ml-4 flex items-center justify-center text-2xl font-semibold rounded-lg shadow-md">
@@ -301,6 +392,13 @@ const elements = [
   {
     id: 'dropdown',
     scope: {Dropdown},
+    extraScopes: [
+      {
+        scope: ['Dropdown'],
+        from: 'Dropdown',
+        isComp: true,
+      },
+    ],
     element: `
       <Dropdown 
         button={
@@ -319,6 +417,13 @@ const elements = [
   {
     id: 'footer',
     scope: {Footer},
+    extraScopes: [
+      {
+        scope: ['Footer'],
+        from: 'Footer',
+        isComp: true,
+      },
+    ],
     element: `
       <Footer
         lightLogo="https://dummyimage.com/120x40/000/fff&text=Light+Logo"
@@ -372,6 +477,21 @@ const elements = [
   {
     id: 'input',
     scope: {Input, EyeOff, Eye, useState},
+    extraScopes: [
+      {
+        scope: ['Input'],
+        from: 'Input',
+        isComp: true,
+      },
+      {
+        scope: ['EyeOff', 'Eye'],
+        from: 'lucide-react',
+      },
+      {
+        scope: ['useState'],
+        from: 'react',
+      },
+    ],
     element: `<Input placeholder="Type here..." />`,
     variation: [
       `
@@ -427,18 +547,32 @@ const elements = [
     element: `
       <InputOTP length = {6}/> 
     `,
+    extraScopes: [
+      {
+        scope: ['InputOTP'],
+        from: 'InputOTP',
+        isComp: true,
+      },
+    ],
     variation: [],
   },
   {
     id: 'messagebot',
     scope: {MessageBot},
+    extraScopes: [
+      {
+        scope: ['MessageBot'],
+        from: 'MessageBot',
+        isComp: true,
+      },
+    ],
     element: `
     <div>
       <div> Neeche Dekho Neecheee... </div>
       <MessageBot
         orgName="UIgnite"
         themeColor="bg-blue-500"
-        url="/uignite-bot.png"
+        url="https://dummyimage.com/100x100/000/fff&text=U"
         alt="Bot avatar"
       />
     </div>
@@ -448,6 +582,13 @@ const elements = [
   {
     id: 'navbar',
     scope: {Navbar},
+    extraScopes: [
+      {
+        scope: ['Navbar'],
+        from: 'Navbar',
+        isComp: true,
+      },
+    ],
     element: `
       <Navbar
         lightLogo="https://dummyimage.com/100x40/ffffff/000000&text=Light+Logo"
@@ -470,6 +611,17 @@ const elements = [
   {
     id: 'pricingCard',
     scope: {PricingCard, Link},
+    extraScopes: [
+      {
+        scope: ['PricingCard'],
+        from: 'PricingCard',
+        isComp: true,
+      },
+      {
+        scope: ['Link'],
+        from: 'react-router-dom',
+      },
+    ],
     element: `
     <>
       <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 px-4">
@@ -512,6 +664,13 @@ const elements = [
   {
     id: 'resizable',
     scope: {Resizable},
+    extraScopes: [
+      {
+        scope: ['Resizable'],
+        from: 'Resizable',
+        isComp: true,
+      },
+    ],
     element: `<div className='relative w-[500px] h-26'>
       <Resizable className='h-20'>
         <div className='w-full h-full bg-amber-200'></div>
@@ -522,6 +681,13 @@ const elements = [
   {
     id: 'skeleton',
     scope: {Skeleton},
+    extraScopes: [
+      {
+        scope: ['Skeleton'],
+        from: 'Skeleton',
+        isComp: true,
+      },
+    ],
     element: `
         <div className="flex items-center space-x-4 ">
           <Skeleton className="h-12 w-12 rounded-full" />
@@ -630,6 +796,13 @@ const elements = [
   {
     id: 'spinner',
     scope: {Spinner},
+    extraScopes: [
+      {
+        scope: ['Spinner'],
+        from: 'Spinner',
+        isComp: true,
+      },
+    ],
     element: `
     <div className="grid grid-cols-1">
       <Spinner variant="bounce" className="my-4" />
@@ -646,12 +819,25 @@ const elements = [
   {
     id: 'switch',
     scope: {Switch},
+    extraScopes: [
+      {
+        scope: ['Switch'],
+        from: 'Switch',
+        isComp: true,
+      },
+    ],
     element: `<Switch defaultState={true} />`,
     variation: [],
   },
   {
     id: 'Tabs',
     scope: {Tabs, TabList, Tab, TabContent},
+    extraScope: [
+      {
+        scope: ['Tabs', 'TabList', 'Tab', 'TabContent'],
+        from: 'Tabs',
+      },
+    ],
     element: `
       <Tabs defaultVal="Before">
         <TabList className="w-[400px] ">
@@ -673,12 +859,36 @@ const elements = [
   {
     id: 'textarea',
     scope: {TextArea},
+    extraScopes: [
+      {
+        scope: ['TextArea'],
+        from: 'TextArea',
+        isComp: true,
+      },
+    ],
     element: `<TextArea placeholder="Write something..." />`,
     variation: [],
   },
   {
     id: 'toast',
     scope: {useToast, Toast, Button},
+    extraScopes: [
+      {
+        scope: ['useToast'],
+        from: 'toast',
+        isHook: true,
+      },
+      {
+        scope: ['Toast'],
+        from: 'Toast',
+        isComp: true,
+      },
+      {
+        scope: ['Button'],
+        from: 'Button',
+        isComp: true,
+      },
+    ],
     element: `
     function ToastPreview() {
       const toast = useToast();
@@ -703,6 +913,13 @@ const elements = [
   {
     id: 'tooltip',
     scope: {Tooltip},
+    extraScopes: [
+      {
+        scope: ['Tooltip'],
+        from: 'Tooltip',
+        isComp: true,
+      },
+    ],
     element: `
       <Tooltip title="Tooltip" options={{ delay: 500 }}>
         <button className="cursor-pointer px-4 py-2 bg-neutral-800 text-white rounded">Hover me</button>

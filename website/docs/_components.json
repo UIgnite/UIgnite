@@ -15,11 +15,6 @@
         "title": "Copy the code",
         "codeBlock": "",
         "path": "/utils/lib.ts"
-      },
-      {
-        "title": "Tailwind setup",
-        "codeBlock": "npm i clsx tailwind-merge lucid",
-        "path": "/tailwind.config.ts"
       }
     ],
     "props": [
@@ -83,11 +78,6 @@
         "title": "Copy the code",
         "codeBlock": "",
         "path": "/utils/lib.ts"
-      },
-      {
-        "title": "Tailwind setup",
-        "codeBlock": "",
-        "path": "/tailwind.config.ts"
       }
     ],
     "props": [
@@ -121,11 +111,6 @@
         "title": "Copy the code",
         "codeBlock": "",
         "path": "/utils/lib.ts"
-      },
-      {
-        "title": "Tailwind setup",
-        "codeBlock": "",
-        "path": "/tailwind.config.ts"
       }
     ],
     "props": [
@@ -165,11 +150,6 @@
         "title": "Copy the code",
         "codeBlock": "",
         "path": "/utils/lib.ts"
-      },
-      {
-        "title": "Tailwind setup",
-        "codeBlock": "",
-        "path": "/tailwind.config.ts"
       }
     ],
     "props": [
@@ -248,7 +228,7 @@
         "path": "/components/Card/Card.tsx"
       },
       {
-        "title": "Tailwind setup",
+        "title": "Copy the code",
         "codeBlock": "npm i clsx tailwind-merge lucid",
         "path": "/tailwind.config.ts"
       }
@@ -275,14 +255,9 @@
         "path": "/components/Carosuel/Carosuel.tsx"
       },
       {
-        "title": "Add utility function",
+        "title": "Copy the code",
         "codeBlock": "",
         "path": "/lib/utils.ts"
-      },
-      {
-        "title": "Tailwind setup",
-        "codeBlock": "",
-        "path": "/tailwind.config.ts"
       }
     ],
     "props": [
@@ -317,14 +292,9 @@
         "path": "/components/Dropdown/Dropdown.tsx"
       },
       {
-        "title": "Add Button component",
+        "title": "Copy the code",
         "codeBlock": "",
         "path": "/components/Button/Button.tsx"
-      },
-      {
-        "title": "Tailwind setup",
-        "codeBlock": "",
-        "path": "/tailwind.config.ts"
       }
     ],
     "props": [
@@ -361,12 +331,7 @@
         "path": "/components/Footer/Footer.tsx"
       },
       {
-        "title": "Add Tailwind to your project",
-        "codeBlock": "",
-        "path": "/tailwind.config.ts"
-      },
-      {
-        "title": "Optional dark mode setup",
+        "title": "Copy the code",
         "codeBlock": "",
         "path": "/tailwind.config.ts"
       }
@@ -423,7 +388,7 @@
         "path": "/lib/utils.ts"
       },
       {
-        "title": "Set up Tailwind theme",
+        "title": "Copy the code",
         "codeBlock": "",
         "path": "/tailwind.config.ts"
       }
@@ -462,7 +427,7 @@
         "path": "/components/MessageBot/MessageBot.tsx"
       },
       {
-        "title": "Customize your avatar and branding",
+        "title": "Copy the code",
         "codeBlock": "// pass your logo/avatar URLs and org name as props",
         "path": "/pages/index.tsx"
       }
@@ -507,7 +472,7 @@
         "path": "/components/MessageBot/MessageBot.tsx"
       },
       {
-        "title": "Customize your avatar and branding",
+        "title": "Copy the code",
         "codeBlock": "// pass your logo/avatar URLs and org name as props",
         "path": "/pages/index.tsx"
       }
@@ -552,7 +517,7 @@
         "path": "/components/Navbar/Navbar.tsx"
       },
       {
-        "title": "Set up theme context (required)",
+        "title": "Copy the code",
         "codeBlock": "// Ensure useTheme is implemented for toggleTheme functionality",
         "path": "/hooks/theme.ts"
       }
@@ -615,7 +580,7 @@
         "path": "/components/PricingCard/PricingCard.tsx"
       },
       {
-        "title": "Import theme styles",
+        "title": "Copy the code",
         "codeBlock": "import { themes } from '@/utils/theme';",
         "path": "/utils/theme.ts"
       }
@@ -684,7 +649,7 @@
         "path": "/components/Resizable/Resizable.tsx"
       },
       {
-        "title": "Optional: Utility class merge",
+        "title": "Copy the code",
         "codeBlock": "import { cn } from '@/utils/lib';",
         "path": "/utils/lib.ts"
       }
@@ -728,7 +693,7 @@
         "path": "/components/Skeleton/Skeleton.tsx"
       },
       {
-        "title": "Import Skeleton",
+        "title": "Copy the code",
         "codeBlock": "import Skeleton from '@/components/Skeleton';",
         "path": "/components/Skeleton/Skeleton.tsx"
       }
@@ -755,14 +720,9 @@
         "path": "/components/Spinner/Spinner.tsx"
       },
       {
-        "title": "Ensure theme hook is present",
+        "title": "Copy the code",
         "codeBlock": "// Spinner depends on useTheme to switch dot color\nimport { useTheme } from '@/hooks/theme';",
         "path": "/hooks/theme.ts"
-      },
-      {
-        "title": "Ensure `cn` utility is available",
-        "codeBlock": "",
-        "path": "/utils/lib.ts"
       }
     ],
     "props": [
@@ -787,7 +747,7 @@
         "path": "/components/Switch/Switch.tsx"
       },
       {
-        "title": "Use in your component",
+        "title": "Copy the code",
         "codeBlock": "<Switch defaultState={true} />",
         "path": "/pages/index.tsx"
       }
@@ -814,12 +774,7 @@
         "path": "/utils/lib.ts"
       },
       {
-        "title": "Wrap Tabs in context",
-        "codeBlock": "",
-        "path": "/components/Tabs/Tabs.tsx"
-      },
-      {
-        "title": "Wrap Tabs in context",
+        "title": "Copy the code",
         "codeBlock": "",
         "path": "/components/Tabs/Tabs.tsx"
       }
@@ -868,6 +823,11 @@
         "title": "Install Lucide for icons",
         "codeBlock": "npm i lucide-react",
         "path": "/components/Testimonials/Testimonials.tsx"
+      },
+      {
+        "title": "Copy the code",
+        "codeBlock": "",
+        "path": "/components/Testimonials/Testimonials.tsx"
       }
     ],
     "props": [
@@ -914,6 +874,11 @@
         "title": "Add Tailwind & utils",
         "codeBlock": "npm i clsx tailwind-merge",
         "path": "/lib/utils.ts"
+      },
+      {
+        "title": "Copy the code",
+        "codeBlock": "npm i clsx tailwind-merge",
+        "path": "/lib/utils.ts"
       }
     ],
     "props": [
@@ -940,6 +905,11 @@
     "installation": [
       {
         "title": "Add utility support",
+        "codeBlock": "npm i clsx tailwind-merge",
+        "path": "/utils/lib.ts"
+      },
+      {
+        "title": "Copy the code",
         "codeBlock": "npm i clsx tailwind-merge",
         "path": "/utils/lib.ts"
       }
@@ -980,6 +950,11 @@
     "installation": [
       {
         "title": "Utility support",
+        "codeBlock": "npm i clsx tailwind-merge",
+        "path": "/utils/lib.ts"
+      },
+      {
+        "title": "Copy the code",
         "codeBlock": "npm i clsx tailwind-merge",
         "path": "/utils/lib.ts"
       }
@@ -1037,11 +1012,6 @@
       },
       {
         "title": "Copy the code",
-        "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
-        "path": "/components/TextArea/TextArea.tsx"
-      },
-      {
-        "title": "Install dependencies",
         "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
         "path": "/components/TextArea/TextArea.tsx"
       }

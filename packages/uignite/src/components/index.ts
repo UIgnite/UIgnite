@@ -8,6 +8,7 @@ export * from './Button';
 export * from './Switch';
 export * from './SignIn';
 export * from './SignUp';
+export * from './Footer';
 export * from './Spinner';
 export * from './Tooltip';
 export * from './Carosuel';
@@ -16,12 +17,12 @@ export * from './Dropdown';
 export * from './Resizable';
 export * from './VideoPlayer';
 export * from './PricingCard';
+export * from './Footer';
 export * from '../lib/ThemeToggleBtn';
 
 export * from './Avatar';
 export * from './Skeleton';
 export * from './MessageBot';
-
 export * from './Testimonials';
 export * from './Accordion';
 export * from './AlertDialogBox';
