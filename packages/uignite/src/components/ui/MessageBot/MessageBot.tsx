@@ -96,7 +96,6 @@ const MessageBot = ({
                   <Avatar url={url} alt="bot" className="mr-2 size-10" />
                 )}
 
-                
                 <div
                   className={`max-w-[75%] px-3 py-2 text-sm rounded-md shadow-sm ${
                     msg.sender === 'user'
