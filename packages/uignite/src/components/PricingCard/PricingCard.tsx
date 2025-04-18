@@ -1,3 +1,4 @@
+import {useTheme} from '@/hooks';
 import {Button} from '@pkgs/uignite';
 import {BsCurrencyDollar} from 'react-icons/bs';
 
@@ -20,19 +21,18 @@ const PricingCard = ({
   highlighted = false,
   popular = false,
 }: PricingParams) => {
+  const {theme} = useTheme();
   return (
     <div
       className={`rounded-xl shadow-sm w-[400px] p-8 flex flex-col h-full relative transition-all duration-200 transform hover:scale-102 ${
         highlighted
-          ? // ? 'bg-cyan-50/10 dark:bg-neutral-900'
-            // : 'bg-zinc-200/10 dark:bg-zinc-800'
-            'grainy-light dark:bg-neutral-900'
-          : 'grainy-light dark:bg-zinc-800'
+          ? `${theme === 'light' ? 'grainy-light' : ''} dark:bg-neutral-900`
+          : `${theme === 'light' ? 'grainy-light' : ''} dark:bg-zinc-800`
       } ${popular ? 'border-none ring-2 ring-offset-2 dark:ring-offset-slate-900 dark:ring-cyan-700' : ''}`}
     >
       {popular && (
         <div
-          className={`absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-zinc-900 dark:bg-cyan-700 text-zinc-200 rounded-full text-sm font-bold`}
+          className={`absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-1 ${theme === 'light' ? 'bg-zinc-900' : 'bg-cyan-700'} text-zinc-200 rounded-full text-sm font-bold`}
         >
           Most Popular
         </div>
