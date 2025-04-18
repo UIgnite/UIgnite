@@ -13,7 +13,7 @@ import {
   Input,
   MessageBot,
   PricingCard,
-  Resizable,
+  // Resizable,
   Skeleton,
   Spinner,
   TabContent,
@@ -700,23 +700,23 @@ const elements = [
   `,
     variation: [],
   },
-  {
-    id: 'resizable',
-    scope: {Resizable},
-    extraScopes: [
-      {
-        scope: ['Resizable'],
-        from: 'Resizable',
-        isComp: true,
-      },
-    ],
-    element: `<div className='relative w-[500px] h-26'>
-      <Resizable className='h-20'>
-        <div className='w-full h-full bg-amber-200'></div>
-        <div className='w-full h-full bg-rose-200'></div>
-      </Resizable>
-    </div>`,
-  },
+  // {
+  //   id: 'resizable',
+  //   scope: {Resizable},
+  //   extraScopes: [
+  //     {
+  //       scope: ['Resizable'],
+  //       from: 'Resizable',
+  //       isComp: true,
+  //     },
+  //   ],
+  //   element: `<div className='relative w-[500px] h-26'>
+  //     <Resizable className='h-20'>
+  //       <div className='w-full h-full bg-amber-200'></div>
+  //       <div className='w-full h-full bg-rose-200'></div>
+  //     </Resizable>
+  //   </div>`,
+  // },
   {
     id: 'skeleton',
     scope: {Skeleton},

@@ -1,16 +1,1 @@
-{
-  "name": "pricingCard-v0",
-  "type": "registry:component",
-  "dependencies": [],
-  "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/pricingcard.json"
-  ],
-  "files": [
-    {
-      "path": "app/page.tsx",
-      "type": "registry:component",
-      "content": "import {PricingCard} from '@/components/ui/PricingCard'\nimport {Link} from 'react-router-dom'\n ,import {PricingCard} from '@/components/ui/PricingCard'\nimport {Link} from 'react-router-dom'\n \n              function Component(){\n                return (\n    <>\n      <div className=\"flex  justify-center items-center\">\n        <PricingCard \n          title=\"Pro Plan\"\n          price=\"29\"\n          validity=\"per month\"\n          description=\"Get access to all features and premium support.\"\n          features={[\n            \"Unlimited API requests\",\n            \"24/7 customer support\",\n            \"Access to premium templates\",\n            \"Advanced analytics\"\n          ]}\n          highlighted={false}\n          theme=\"dark\"\n          popular={false}\n        />\n      </div>\n      <div className=\"ml-2 mt-5\"> For the best experience, please view the <Link to=\"/pricing\" className=\"text-blue-600 cursor-pointer\">Pricing page</Link> on a larger screen.</div>\n    </>\n  )\n              }\n              export default Component\n              "
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
-}
+{"name":"pricingCard-v0","type":"registry:component","dependencies":[],"registryDependencies":["https://d278-104-28-199-190.ngrok-free.app/r/pricingcard.json"],"files":[{"path":"app/page.tsx","type":"registry:component","content":"import {PricingCard} from '@/components/ui/PricingCard'\nimport {Link} from 'react-router-dom'\n ,import {PricingCard} from '@/components/ui/PricingCard'\nimport {Link} from 'react-router-dom'\n \n              function Component(){\n                return (\r\n    <>\r\n      <div className=\"flex  justify-center items-center\">\r\n        <PricingCard \r\n          title=\"Pro Plan\"\r\n          price=\"29\"\r\n          validity=\"per month\"\r\n          description=\"Get access to all features and premium support.\"\r\n          features={[\r\n            \"Unlimited API requests\",\r\n            \"24/7 customer support\",\r\n            \"Access to premium templates\",\r\n            \"Advanced analytics\"\r\n          ]}\r\n          highlighted={false}\r\n          theme=\"dark\"\r\n          popular={false}\r\n        />\r\n      </div>\r\n      <div className=\"ml-2 mt-5\"> For the best experience, please view the <Link to=\"/pricing\" className=\"text-blue-600 cursor-pointer\">Pricing page</Link> on a larger screen.</div>\r\n    </>\r\n  )\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
