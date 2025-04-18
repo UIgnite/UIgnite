@@ -26,6 +26,10 @@ const TestCards = () => {
       url: '/assets/avatars/jahanwee.jpg',
       alt: 'Jahanwee',
     },
+    {
+      url: '/assets/avatars/sagar.jpg',
+      alt: 'Sagar Maheshwari',
+    },
   ];
 
   return (
@@ -45,7 +49,7 @@ const TestCards = () => {
             w-12 h-12 rounded-full object-cover
             ring-2 ring-white shadow-md
             hover:scale-110 hover:white-500
-            transition-transform duration-300 ease-in-out
+            transition-transform duration-300 ease-in-out cursor-pointer
           `}
             />
           </Tooltip>
