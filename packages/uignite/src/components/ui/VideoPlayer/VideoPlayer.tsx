@@ -5,7 +5,7 @@ import React, {
   useRef,
   useState,
   MouseEvent,
-  // useReducer,
+  useReducer,
 } from 'react';
 
 export interface VideoPlayerProps {
@@ -19,39 +19,39 @@ export interface VideoPlayerProps {
   className?: string;
 }
 
-// enum SpeedReducerActionKind {
-//   INCREASE = 'INCREASE',
-//   DECREASE = 'DECREASE',
-// }
+enum SpeedReducerActionKind {
+  INCREASE = 'INCREASE',
+  DECREASE = 'DECREASE',
+}
 
-// interface SpeedReducerActionT {
-//   type: SpeedReducerActionKind;
-// }
+interface SpeedReducerActionT {
+  type: SpeedReducerActionKind;
+}
 
-// interface SpeedReducerStateT {
-//   speed: number;
-// }
+interface SpeedReducerStateT {
+  speed: number;
+}
 
-// function speedReducer(
-//   state: SpeedReducerStateT,
-//   action: SpeedReducerActionT
-// ): SpeedReducerStateT {
-//   const {type} = action;
-//   switch (type) {
-//     case SpeedReducerActionKind.INCREASE:
-//       return {
-//         ...state,
-//         speed: state.speed + 1,
-//       };
-//     case SpeedReducerActionKind.DECREASE:
-//       return {
-//         ...state,
-//         speed: state.speed - 1,
-//       };
-//     default:
-//       return state;
-//   }
-// }
+function speedReducer(
+  state: SpeedReducerStateT,
+  action: SpeedReducerActionT
+): SpeedReducerStateT {
+  const {type} = action;
+  switch (type) {
+    case SpeedReducerActionKind.INCREASE:
+      return {
+        ...state,
+        speed: state.speed + 1,
+      };
+    case SpeedReducerActionKind.DECREASE:
+      return {
+        ...state,
+        speed: state.speed >= 0 ? state.speed - 1 : state.speed,
+      };
+    default:
+      return state;
+  }
+}
 
 function VideoPlayer({
   src,
@@ -78,9 +78,9 @@ function VideoPlayer({
   const [volumeRange, setVolumeRange] = useState(defaultVolume);
 
   const [volumeBtnHovered, setVolumeBtnHovered] = useState(false);
-  // const [settingsBtnHovered, setSettingsBtnHovered] = useState(false);
+  const [settingsBtnHovered, setSettingsBtnHovered] = useState(false);
 
-  // const [state, dispatch] = useReducer(speedReducer, {speed: 1});
+  const [state, dispatch] = useReducer(speedReducer, {speed: 1});
 
   const handleTooglePlaying = useCallback(() => {
     setPlayed(true);
@@ -167,9 +167,9 @@ function VideoPlayer({
     if (videoRef.current) videoRef.current.volume = volumeRange / 100;
   }, [volumeRange]);
 
-  // useEffect(() => {
-  //   if (videoRef.current) videoRef.current.playbackRate = state.speed;
-  // }, [state.speed]);
+  useEffect(() => {
+    if (videoRef.current) videoRef.current.playbackRate = state.speed;
+  }, [state.speed]);
 
   return (
     <div
@@ -352,7 +352,7 @@ function VideoPlayer({
           </div>
 
           {/* Settings */}
-          {/* <div
+          <div
             onMouseEnter={() => setSettingsBtnHovered(true)}
             onMouseLeave={() => setSettingsBtnHovered(false)}
             className="px-1 py-1 cursor-pointer relative parent-settings"
@@ -401,7 +401,7 @@ function VideoPlayer({
                 d="M9.167 1.667c-.92 0-1.667.746-1.667 1.667v1.394a5.828 5.828 0 00-.815.472L5.47 4.498a1.666 1.666 0 00-2.27.612l-.835 1.447a1.664 1.664 0 00.605 2.271l1.215.702a5.912 5.912 0 000 .94l-1.215.702a1.664 1.664 0 00-.605 2.272L3.2 14.89a1.666 1.666 0 002.27.613l1.215-.702c.257.178.53.336.815.471v1.395c0 .92.746 1.667 1.667 1.667h1.666c.92 0 1.667-.747 1.667-1.667v-1.395c.285-.135.557-.293.815-.471l1.215.702c.788.455 1.81.184 2.269-.613l.835-1.446a1.664 1.664 0 00-.604-2.272l-1.215-.701a5.907 5.907 0 000-.941l1.215-.702a1.664 1.664 0 00.604-2.271L16.8 5.11a1.666 1.666 0 00-2.27-.612l-1.214.702a5.824 5.824 0 00-.815-.472V3.334c0-.92-.746-1.667-1.667-1.667H9.167zM12.5 10a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"
               />
             </svg>
-          </div> */}
+          </div>
 
           {/* Fullscreen */}
           <button

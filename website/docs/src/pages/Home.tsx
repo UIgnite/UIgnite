@@ -1,5 +1,9 @@
 import {useState} from 'react';
-import {Button} from '@pkgs/uignite';
+import {
+  Button,
+  Card,
+ 
+} from '@pkgs/uignite';
 import {CustomTheme} from '../utils/CustomTheme';
 import {motion} from 'framer-motion';
 import {
@@ -20,6 +24,7 @@ import TechStack from '../utils/TechStack';
 import {VideoPlayer} from '@pkgs/uignite';
 import Footer from '../components/Footer';
 import {Link} from 'react-router-dom';
+import { Heart, RefreshCw, SkipBack, Pause, SkipForward, Shuffle } from "lucide-react";
 const Home = () => {
   const [isCopied, setIsCopied] = useState(false);
 
@@ -202,7 +207,7 @@ const Home = () => {
 
           <div className="flex items-center justify-center ">
             <VideoPlayer
-              src="https://res.cloudinary.com/do2tmd6xp/video/upload/f_auto:video,q_auto/chitiuerm8vfgaugsrkr"
+              src="https://res.cloudinary.com/do2tmd6xp/video/upload/v1744979534/5xnmps_2_pr75vu.mp4"
               thumbnailUrl="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
               muted
               autoplay
@@ -210,6 +215,74 @@ const Home = () => {
               className="shadow-black dark:shadow-indigo-900 shadow-2xl rounded-xl"
             />
           </div>
+
+          {/* cards  */}
+          <div className="mt-40 flex flex-row ">
+            <div className="flex-2">
+              <p className="text-7xl font-semibold">
+                <span className="text-blue-400">Design</span> that adapts to you
+              </p>
+              <p className="mt-3 text-md text-zinc-300">
+                Uignite lets you tailor every detail with ease. With built-in
+                support for custom themes via our TailwindCSS plugin, your
+                interface can match your brand, mood, or imagination—no limits,
+                just possibilities.
+              </p>
+              
+              <Card className="bg-gradient-to-tr from-orange-500 via-pink-500 to-rose-500 p-6 mt-4 rounded-xl shadow-lg text-white w-full max-w-xl h-[50%] mx-auto">
+      <div className="flex gap-3 items-center">
+        <img
+          src="/api/placeholder/320/320"
+          alt="Album Cover"
+          className="w-32 h-32 rounded-xl object-cover"
+        />
+        <div className="flex-1">
+          <h2 className="text-xl font-semibold">Daily Mix</h2>
+          <p className="text-sm opacity-90 mb-1">12 Tracks</p>
+          <p className="text-md font-medium">Frontend Radio</p>
+          <div className="flex items-center mt-4 gap-2 text-xs">
+            <span>1:23</span>
+            <input
+              type="range"
+              defaultValue="33"
+              className="w-full accent-white"
+            />
+            <span>4:32</span>
+          </div>
+        </div>
+        <div className="text-white text-xl">
+          <button className="hover:scale-110 transition">
+            <Heart size={24} />
+          </button>
+        </div>
+      </div>
+      <div className="flex justify-center items-center gap-6 mt-6 text-2xl">
+        <button className="hover:text-white/80 transition-colors">
+          <RefreshCw size={24} />
+        </button>
+        <button className="hover:text-white/80 transition-colors">
+          <SkipBack size={24} />
+        </button>
+        <button className="bg-white text-black p-3 rounded-full hover:scale-110 transition">
+          <Pause size={24} />
+        </button>
+        <button className="hover:text-white/80 transition-colors">
+          <SkipForward size={24} />
+        </button>
+        <button className="hover:text-white/80 transition-colors">
+          <Shuffle size={24} />
+        </button>
+      </div>
+    </Card>
+              
+              
+             
+            </div>
+            <div className="flex-2 ml-4">
+              <img src="card.png" alt="" />
+            </div>
+          </div>
+
           <div className="text-center ">
             <motion.p
               className="text-6xl font-semibold mt-40 dark:text-[#f7f7f8] text-[#0d0346]"
@@ -232,20 +305,30 @@ const Home = () => {
           </div>
 
           <div className="relative w-[1200px] overflow-hidden py-10">
-            <div className="flex gap-6 animate-scroll">
-              <div className="flex">
-                {testimonials.map((testimonial, index) => (
-                  <Testimonials
-                    className=" w-[450px] max-h-[200px]"
-                    key={index}
-                    imageSrc={testimonial.imageSrc}
-                    name={testimonial.name}
-                    title={testimonial.title}
-                    message={testimonial.message}
-                    rating={testimonial.rating}
-                  />
-                ))}
-              </div>
+            <div className="flex w-max gap-2 animate-infinite-scroll">
+              {testimonials.map((testimonial, index) => (
+                <Testimonials
+                  key={`first-${index}`}
+                  className="w-[450px] max-h-[200px]"
+                  imageSrc={testimonial.imageSrc}
+                  name={testimonial.name}
+                  title={testimonial.title}
+                  message={testimonial.message}
+                  rating={testimonial.rating}
+                />
+              ))}
+
+              {testimonials.map((testimonial, index) => (
+                <Testimonials
+                  key={`second-${index}`}
+                  className="w-[450px] max-h-[200px]"
+                  imageSrc={testimonial.imageSrc}
+                  name={testimonial.name}
+                  title={testimonial.title}
+                  message={testimonial.message}
+                  rating={testimonial.rating}
+                />
+              ))}
             </div>
           </div>
 

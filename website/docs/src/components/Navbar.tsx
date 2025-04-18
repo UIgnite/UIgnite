@@ -36,7 +36,7 @@ const Navbar = () => {
             to="/"
             className="cursor-pointer p-2 rounded opacity-70 hover:opacity-100"
           >
-            <p>About</p>
+            <p>Home</p>
           </NavLink>
           <NavLink
             to="/components/Accordion"
@@ -44,12 +44,12 @@ const Navbar = () => {
           >
             <p>Docs</p>
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/components"
             className="cursor-pointer p-2 rounded opacity-70 hover:opacity-100"
           >
             <p>Components</p>
-          </NavLink>
+          </NavLink> */}
         </nav>
       </div>
 

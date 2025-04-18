@@ -30,10 +30,6 @@ import {
   Switch,
   Footer,
   Navbar,
-  VideoPlayer,
-  SignUp,
-  SignIn,
-  Testimonials,
 } from '@pkgs/uignite';
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react';
@@ -57,17 +53,17 @@ const elements = [
     <Accordion
       title="What is MobiMart?"
       content="MobiMart is an e-commerce platform selling mobile gadgets like earbuds, phones, and speakers."
-      className="bg-gray-100 hover:bg-white border-[0.5px] dark:border-neutral-800"
+      className="mb-2 border-[0.5px] dark:border-neutral-800"
     />
     <Accordion
       title="How long does delivery take?"
       content="Typically 2-4 business days depending on your location."
-      className="bg-gray-100 hover:bg-white border-[0.5px] dark:border-neutral-800"
+      className="mb-2 border-[0.5px] dark:border-neutral-800"
     />
     <Accordion
       title="Can I return a product?"
       content="Yes, we have a 7-day easy return policy."
-      className="bg-gray-100 hover:bg-white border-[0.5px] dark:border-neutral-800"
+      className="mb-2 border-[0.5px] dark:border-neutral-800"
     />
   </AccordionWrapper>
 </div>
@@ -103,69 +99,68 @@ const elements = [
   },
   {
     id: 'avatar',
-    scope: {Avatar, Tooltip},
+    scope: {Avatar,Tooltip},
     element: `
-      <>
+      <div className = "flex flex-row gap-2" >
+        <Avatar url={"/piyush-sir.png"} alt={"user"} />
         <Avatar url={"/hitesh-sir.png"} alt={"user"} />
-      </>
+      </div>
     `,
     variation: [
       `
-const AvatarGroup = () => {
-  const avatars = [
-    {
-      url: '/assets/avatars/aman.png',
-      alt: 'Aman Gupta',
-    },
-    {
-      url: '/assets/avatars/ram.jpg',
-      alt: 'Ram Bhardwaj',
-    },
-    {
-      url: '/assets/avatars/aditya.jpg',
-      alt: 'Aditya Sharma',
-    },
-    {
-      url: '/assets/avatars/saurav.png',
-      alt: 'Saurav Jha',
-    },
-    {
-      url: '/assets/avatars/rohit.jpg',
-      alt: 'Rohit Jha',
-    },
-    {
-      url: '/assets/avatars/jahanwee.jpg',
-      alt: 'Jahanwee',
-    },
-  ];
-
+     function components() {
   return (
-    <div className="flex items-center mt-6 pl-2 overflow-visible">
-      {avatars.map((avatar, index) => (
-        <div
-          key={index}
-          className={\`relative transition-all duration-300 ease-in-out \${
-            index !== 0 ? '-ml-7' : ''
-          } hover:z-20\`}
-        >
-          <Tooltip
-            title={avatar.alt}
-            options={{ tooltipStyle: { width: 'auto' } }}
-          >
-            <Avatar
-              url={avatar.url}
-              alt={avatar.alt}
-              className="w-12 h-12 rounded-full object-cover ring-2 ring-white shadow-md hover:scale-110 transition-transform duration-300 ease-in-out"
-            />
-          </Tooltip>
-        </div>
-      ))}
+    <div className="flex items-center -mt-8 pl-2 overflow-visible">
+      <div className="relative hover:z-20 transition-all duration-300 ease-in-out">
+        <Tooltip title="Aman Gupta" options={{ tooltipStyle: { width: 'auto' } }}>
+          <Avatar
+            url="/assets/avatars/aman.png"
+            alt="Aman Gupta"
+            className="w-12 h-12 rounded-full object-cover ring-2 ring-white shadow-md hover:scale-110 transition-transform duration-300 ease-in-out"
+          />
+        </Tooltip>
+      </div>
+      <div className="relative -ml-7 hover:z-20 transition-all duration-300 ease-in-out">
+        <Tooltip title="Ram Bhardwaj" options={{ tooltipStyle: { width: 'auto' } }}>
+          <Avatar
+            url="/assets/avatars/ram.jpg"
+            alt="Ram Bhardwaj"
+            className="w-12 h-12 rounded-full object-cover ring-2 ring-white shadow-md hover:scale-110 transition-transform duration-300 ease-in-out"
+          />
+        </Tooltip>
+      </div>
+      <div className="relative -ml-7 hover:z-20 transition-all duration-300 ease-in-out">
+        <Tooltip title="Aditya Sharma" options={{ tooltipStyle: { width: 'auto' } }}>
+          <Avatar
+            url="/assets/avatars/aditya.jpg"
+            alt="Aditya Sharma"
+            className="w-12 h-12 rounded-full object-cover ring-2 ring-white shadow-md hover:scale-110 transition-transform duration-300 ease-in-out"
+          />
+        </Tooltip>
+      </div>
+      <div className="relative -ml-7 hover:z-20 transition-all duration-300 ease-in-out">
+        <Tooltip title="Saurav Jha" options={{ tooltipStyle: { width: 'auto' } }}>
+          <Avatar
+            url="/assets/avatars/saurav.png"
+            alt="Saurav Jha"
+            className="w-12 h-12 rounded-full object-cover ring-2 ring-white shadow-md hover:scale-110 transition-transform duration-300 ease-in-out"
+          />
+        </Tooltip>
+      </div>
+      <div className="relative -ml-7 hover:z-20 transition-all duration-300 ease-in-out">
+        <Tooltip title="Rohit Jha" options={{ tooltipStyle: { width: 'auto' } }}>
+          <Avatar
+            url="/assets/avatars/rohit.jpg"
+            alt="Rohit Singh"
+            className="w-12 h-12 rounded-full object-cover ring-2 ring-white shadow-md hover:scale-110 transition-transform duration-300 ease-in-out"
+          />
+        </Tooltip>
+      </div>
     </div>
   );
 };
 
-
-      `,
+      `
     ],
   },
   {
@@ -256,8 +251,6 @@ const AvatarGroup = () => {
       CardContent,
       CardFooter,
       Button,
-      SignUp,
-      SignIn,
       Avatar,
       useState,
       useEffect,
@@ -288,14 +281,6 @@ const AvatarGroup = () => {
       {
         scope: ['Info'],
         from: 'lucide-react',
-      },
-      {
-        scope: ['SignUp'],
-        from: 'SignUp',
-      },
-      {
-        scope: ['SignIn'],
-        from: 'SignIn',
       },
     ],
     element: `
@@ -424,12 +409,6 @@ const AvatarGroup = () => {
         </CardFooter>
       </Card>
       `,
-      `
-      <SignIn />
-      `,
-      `
-      <SignUp />
-      `,
     ],
   },
   {
@@ -501,8 +480,8 @@ const AvatarGroup = () => {
     ],
     element: `
       <Footer
-        lightLogo="/chaicode-white.png"
-        darkLogo="/chaicode-black.png"
+        lightLogo="https://dummyimage.com/120x40/000/fff&text=Light+Logo"
+        darkLogo="https://dummyimage.com/120x40/fff/000&text=Dark+Logo"
         description="This is a simple footer with sections, social links, and a copyright notice."
         socials={[
           { type: "linkedin", link: "https://linkedin.com" },
@@ -647,7 +626,7 @@ const AvatarGroup = () => {
       <MessageBot
         orgName="UIgnite"
         themeColor="bg-blue-500"
-        url="/uignite-bot.png"
+        url="https://dummyimage.com/100x100/000/fff&text=U"
         alt="Bot avatar"
       />
     </div>
@@ -702,7 +681,7 @@ const AvatarGroup = () => {
       <div className="flex  justify-center items-center">
         <PricingCard 
           title="Pro Plan"
-          price="$29"
+          price="29"
           validity="per month"
           description="Get access to all features and premium support."
           features={[
@@ -731,8 +710,7 @@ const AvatarGroup = () => {
         isComp: true,
       },
     ],
-    element: `
-    <div className='relative w-[500px] h-26'>
+    element: `<div className='relative w-[500px] h-26'>
       <Resizable className='h-20'>
         <div className='w-full h-full bg-amber-200'></div>
         <div className='w-full h-full bg-rose-200'></div>
@@ -900,7 +878,7 @@ const AvatarGroup = () => {
       },
     ],
     element: `
-      <Tabs defaultVal="Before">
+      <Tabs defaultVal="before">
         <TabList className="w-[400px] ">
           <Tab title="Before" value="before"></Tab>
           <Tab title="After" value="after"></Tab>
@@ -909,7 +887,7 @@ const AvatarGroup = () => {
           content={<div className="m-2 p-2 rounded-md dark:bg-neutral-800"> Preview Content from Tab 1 </div>}
           value="before" 
         ></TabContent>
-        <TabContent className="p-2 "
+        <TabContent 
           content={<div className="m-2 p-2 rounded-md dark:bg-neutral-800"> Code Content of Tab 2 </div>} 
           value="after"
         ></TabContent>
@@ -972,49 +950,6 @@ const AvatarGroup = () => {
     variation: [],
   },
   {
-    id: 'Testimonials',
-    scope: {Testimonials},
-    extraScopes: [
-      {
-        scope: ['Testimonials'],
-        from: 'Testimonials',
-        isComp: true,
-      },
-    ],
-    element: `
-    function Testimonial () {
-    
-  const testimonials = [
-    {
-      imageSrc: '/piyush-sir.png',
-      name: 'Piyush Garg',
-      title: 'Co-founder of OnlyFans',
-      message:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?',
-      rating: 5,
-    },
-  ];
-
-    return (<div className="flex">
-      {testimonials.map((testimonial, index) => (
-        <Testimonials
-          className=" w-[450px] max-h-[200px]"
-          key={index}
-          imageSrc={testimonial.imageSrc}
-          name={testimonial.name}
-          title={testimonial.title}
-          message={testimonial.message}
-          rating={testimonial.rating}
-        />
-      ))}
-    </div>)
-    }
-   
-    `,
-    variation: [],
-  },
-
-  {
     id: 'tooltip',
     scope: {Tooltip},
     extraScopes: [
@@ -1028,30 +963,6 @@ const AvatarGroup = () => {
       <Tooltip title="Tooltip" options={{ delay: 500 }}>
         <button className="cursor-pointer px-4 py-2 bg-neutral-800 text-white rounded">Hover me</button>
       </Tooltip>
-    `,
-    variation: [],
-  },
-  {
-    id: 'VideoPlayer',
-    scope: {VideoPlayer},
-    extraScopes: [
-      {
-        scope: ['VideoPlayer'],
-        from: 'VideoPlayer',
-        isComp: true,
-      },
-    ],
-    element: `
-<div className="flex  items-center justify-center ">
-  <VideoPlayer
-    src="https://res.cloudinary.com/do2tmd6xp/video/upload/f_auto:video,q_auto/chitiuerm8vfgaugsrkr"
-    thumbnailUrl="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
-    muted
-    autoplay
-    loop
-    className="max-w-[80%] shadow-black dark:shadow-indigo-900 shadow-2xl rounded-xl"
-  />
-</div>
     `,
     variation: [],
   },
