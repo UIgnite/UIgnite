@@ -30,6 +30,7 @@ import {
   Switch,
   Footer,
   Navbar,
+  VideoPlayer,
 } from '@pkgs/uignite';
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react';
@@ -68,7 +69,11 @@ const elements = [
   </AccordionWrapper>
 </div>
     `,
-    variation: [],
+    variation: [
+      `
+      
+      `,
+    ],
   },
   {
     id: 'AlertDialogBox',
@@ -99,14 +104,70 @@ const elements = [
   },
   {
     id: 'avatar',
-    scope: {Avatar},
+    scope: {Avatar, Tooltip},
     element: `
       <>
-        <Avatar url={"/piyush-sir.png"} alt={"user"} />
         <Avatar url={"/hitesh-sir.png"} alt={"user"} />
       </>
     `,
-    variation: [],
+    variation: [
+      `
+const AvatarGroup = () => {
+  const avatars = [
+    {
+      url: '/assets/avatars/aman.png',
+      alt: 'Aman Gupta',
+    },
+    {
+      url: '/assets/avatars/ram.jpg',
+      alt: 'Ram Bhardwaj',
+    },
+    {
+      url: '/assets/avatars/aditya.jpg',
+      alt: 'Aditya Sharma',
+    },
+    {
+      url: '/assets/avatars/saurav.png',
+      alt: 'Saurav Jha',
+    },
+    {
+      url: '/assets/avatars/rohit.jpg',
+      alt: 'Rohit Jha',
+    },
+    {
+      url: '/assets/avatars/jahanwee.jpg',
+      alt: 'Jahanwee',
+    },
+  ];
+
+  return (
+    <div className="flex items-center mt-6 pl-2 overflow-visible">
+      {avatars.map((avatar, index) => (
+        <div
+          key={index}
+          className={\`relative transition-all duration-300 ease-in-out \${
+            index !== 0 ? '-ml-7' : ''
+          } hover:z-20\`}
+        >
+          <Tooltip
+            title={avatar.alt}
+            options={{ tooltipStyle: { width: 'auto' } }}
+          >
+            <Avatar
+              url={avatar.url}
+              alt={avatar.alt}
+              className="w-12 h-12 rounded-full object-cover ring-2 ring-white shadow-md hover:scale-110 transition-transform duration-300 ease-in-out"
+            />
+          </Tooltip>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+
+      `,
+    ],
   },
   {
     id: 'button',
@@ -670,7 +731,8 @@ const elements = [
         isComp: true,
       },
     ],
-    element: `<div className='relative w-[500px] h-26'>
+    element: `
+    <div className='relative w-[500px] h-26'>
       <Resizable className='h-20'>
         <div className='w-full h-full bg-amber-200'></div>
         <div className='w-full h-full bg-rose-200'></div>
@@ -923,6 +985,30 @@ const elements = [
       <Tooltip title="Tooltip" options={{ delay: 500 }}>
         <button className="cursor-pointer px-4 py-2 bg-neutral-800 text-white rounded">Hover me</button>
       </Tooltip>
+    `,
+    variation: [],
+  },
+  {
+    id: 'VideoPlayer',
+    scope: {VideoPlayer},
+    extraScopes: [
+      {
+        scope: ['VideoPlayer'],
+        from: 'VideoPlayer',
+        isComp: true,
+      },
+    ],
+    element: `
+<div className="flex  items-center justify-center ">
+  <VideoPlayer
+    src="https://res.cloudinary.com/do2tmd6xp/video/upload/f_auto:video,q_auto/chitiuerm8vfgaugsrkr"
+    thumbnailUrl="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+    muted
+    autoplay
+    loop
+    className="max-w-[80%] shadow-black dark:shadow-indigo-900 shadow-2xl rounded-xl"
+  />
+</div>
     `,
     variation: [],
   },
