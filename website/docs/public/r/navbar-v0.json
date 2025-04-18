@@ -2,9 +2,7 @@
   "name": "navbar-v0",
   "type": "registry:component",
   "dependencies": ["react"],
-  "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/navbar.json"
-  ],
+  "registryDependencies": ["https://uignite.in/r/navbar.json"],
   "files": [
     {
       "path": "app/page.tsx",

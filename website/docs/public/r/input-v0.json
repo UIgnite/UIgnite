@@ -2,9 +2,7 @@
   "name": "input-v0",
   "type": "registry:component",
   "dependencies": [],
-  "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/input.json"
-  ],
+  "registryDependencies": ["https://uignite.in/r/input.json"],
   "files": [
     {
       "path": "app/page.tsx",

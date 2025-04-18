@@ -2,9 +2,7 @@
   "name": "accordion-v0",
   "type": "registry:component",
   "dependencies": ["lucide-react"],
-  "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/accordion.json"
-  ],
+  "registryDependencies": ["https://uignite.in/r/accordion.json"],
   "files": [
     {
       "path": "app/page.tsx",

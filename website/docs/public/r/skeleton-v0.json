@@ -2,9 +2,7 @@
   "name": "skeleton-v0",
   "type": "registry:component",
   "dependencies": [],
-  "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/skeleton.json"
-  ],
+  "registryDependencies": ["https://uignite.in/r/skeleton.json"],
   "files": [
     {
       "path": "app/page.tsx",

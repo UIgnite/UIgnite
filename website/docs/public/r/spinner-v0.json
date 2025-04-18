@@ -2,9 +2,7 @@
   "name": "spinner-v0",
   "type": "registry:component",
   "dependencies": [],
-  "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/spinner.json"
-  ],
+  "registryDependencies": ["https://uignite.in/r/spinner.json"],
   "files": [
     {
       "path": "app/page.tsx",

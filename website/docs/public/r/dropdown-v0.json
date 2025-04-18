@@ -2,9 +2,7 @@
   "name": "dropdown-v0",
   "type": "registry:component",
   "dependencies": [],
-  "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/dropdown.json"
-  ],
+  "registryDependencies": ["https://uignite.in/r/dropdown.json"],
   "files": [
     {
       "path": "app/page.tsx",

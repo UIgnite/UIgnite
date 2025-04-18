@@ -2,9 +2,7 @@
   "name": "Carosuel-v0",
   "type": "registry:component",
   "dependencies": ["class-variance-authority", "lucide-react"],
-  "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/carosuel.json"
-  ],
+  "registryDependencies": ["https://uignite.in/r/carosuel.json"],
   "files": [
     {
       "path": "app/page.tsx",

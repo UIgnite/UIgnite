@@ -3,8 +3,8 @@
   "type": "registry:component",
   "dependencies": [],
   "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/card.json",
-    "https://d278-104-28-199-190.ngrok-free.app/r/avatar.json"
+    "https://uignite.in/r/card.json",
+    "https://uignite.in/r/avatar.json"
   ],
   "files": [
     {

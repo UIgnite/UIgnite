@@ -2,9 +2,7 @@
   "name": "button-v0",
   "type": "registry:component",
   "dependencies": ["class-variance-authority"],
-  "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/button.json"
-  ],
+  "registryDependencies": ["https://uignite.in/r/button.json"],
   "files": [
     {
       "path": "app/page.tsx",
