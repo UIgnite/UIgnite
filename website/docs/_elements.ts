@@ -649,7 +649,7 @@ const elements = [
       <MessageBot
         orgName="UIgnite"
         themeColor="bg-blue-500"
-        url="https://dummyimage.com/100x100/000/fff&text=U"
+        url="/uignite-bot.png"
         alt="Bot avatar"
       />
     </div>
