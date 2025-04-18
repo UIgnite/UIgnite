@@ -69,8 +69,7 @@
       "name": "dropdown",
       "type": "registry:ui",
       "dependencies": [],
-      "registryDependencies": [
-      ],
+      "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/ui/Dropdown/Dropdown.tsx",

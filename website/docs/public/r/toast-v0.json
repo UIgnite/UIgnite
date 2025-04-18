@@ -1,1 +1,18 @@
-{"name":"toast-v0","type":"registry:component","dependencies":[],"registryDependencies":["https://d278-104-28-199-190.ngrok-free.app/r/toast.json","https://d278-104-28-199-190.ngrok-free.app/r/toast.json","https://d278-104-28-199-190.ngrok-free.app/r/button.json"],"files":[{"path":"registry/default/components/toast-v0.tsx","type":"registry:component","content":"import {useToast} from '@/hooks/toast'\nimport {Toast} from '@/componenets/ui/Toast'\nimport {Button} from '@/componenets/ui/Button'\n,import {useToast} from '@/hooks/toast'\nimport {Toast} from '@/componenets/ui/Toast'\nimport {Button} from '@/componenets/ui/Button'\n,import {useToast} from '@/hooks/toast'\nimport {Toast} from '@/componenets/ui/Toast'\nimport {Button} from '@/componenets/ui/Button'\n\n              function Component(){\n                return (\n    function ToastPreview() {\n      const toast = useToast();\n\n      return (\n        <Button\n          onClick={() => {\n            toast.showToast('Hover Me ', {\n              desc: \\`I am the new \\$\\{Math.floor(Math.random() * 100) + 1\\}\\`,\n              timeout: 3000,\n            });\n          }}\n          className=\"mt-5 bg-gray-50 text-black hover:bg-gray-100\"\n        >\n          Browse Components\n        </Button>\n      )\n    }\n    )\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
+{
+  "name": "toast-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "registryDependencies": [
+    "https://d278-104-28-199-190.ngrok-free.app/r/toast.json",
+    "https://d278-104-28-199-190.ngrok-free.app/r/toast.json",
+    "https://d278-104-28-199-190.ngrok-free.app/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/components/toast-v0.tsx",
+      "type": "registry:component",
+      "content": "import {useToast} from '@/hooks/toast'\nimport {Toast} from '@/componenets/ui/Toast'\nimport {Button} from '@/componenets/ui/Button'\n,import {useToast} from '@/hooks/toast'\nimport {Toast} from '@/componenets/ui/Toast'\nimport {Button} from '@/componenets/ui/Button'\n,import {useToast} from '@/hooks/toast'\nimport {Toast} from '@/componenets/ui/Toast'\nimport {Button} from '@/componenets/ui/Button'\n\n              function Component(){\n                return (\n    function ToastPreview() {\n      const toast = useToast();\n\n      return (\n        <Button\n          onClick={() => {\n            toast.showToast('Hover Me ', {\n              desc: \\`I am the new \\$\\{Math.floor(Math.random() * 100) + 1\\}\\`,\n              timeout: 3000,\n            });\n          }}\n          className=\"mt-5 bg-gray-50 text-black hover:bg-gray-100\"\n        >\n          Browse Components\n        </Button>\n      )\n    }\n    )\n              }\n              export default Component\n              "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

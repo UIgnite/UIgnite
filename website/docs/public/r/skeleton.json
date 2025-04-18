@@ -1,1 +1,17 @@
-{"name":"skeleton","type":"registry:ui","dependencies":[],"registryDependencies":["https://d278-104-28-199-190.ngrok-free.app/r/skeleton.json"],"files":[{"path":"registry/default/ui/Skeleton.tsx","type":"registry:ui","content":"import {cn} from '@/lib/utils';\n\nexport interface SkeletonParams {\n  className?: string;\n}\nconst Skeleton = ({className}: SkeletonParams) => {\n  return (\n    <div\n      className={cn(\n        `dark:bg-gray-600 bg-gray-400 animate-pulse rounded-full ${className}`\n      )}\n    ></div>\n  );\n};\n\nexport {Skeleton};\n","filename":"Skeleton"}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
+{
+  "name": "skeleton",
+  "type": "registry:ui",
+  "dependencies": [],
+  "registryDependencies": [
+    "https://d278-104-28-199-190.ngrok-free.app/r/skeleton.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/ui/Skeleton.tsx",
+      "type": "registry:ui",
+      "content": "import {cn} from '@/lib/utils';\n\nexport interface SkeletonParams {\n  className?: string;\n}\nconst Skeleton = ({className}: SkeletonParams) => {\n  return (\n    <div\n      className={cn(\n        `dark:bg-gray-600 bg-gray-400 animate-pulse rounded-full ${className}`\n      )}\n    ></div>\n  );\n};\n\nexport {Skeleton};\n",
+      "filename": "Skeleton"
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

@@ -13,7 +13,7 @@ import {Button} from '@/components/ui/Button';
 
 const SignUp: React.FC = () => {
   return (
-    <Card className="w-[420px] py-6 px-10 text-zinc-800 dark:text-zinc-200">
+    <Card className=" dark:bg-zinc-900 bg-zinc-100 dark:w-[420px] py-6 px-10 text-zinc-800 dark:text-zinc-200">
       <CardHeader>
         <CardTitle className="text-4xl">Sign Up</CardTitle>
         <CardDescription className="text-base font-normal">
