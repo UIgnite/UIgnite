@@ -3,23 +3,18 @@
     "id": "Accordion",
     "name": "Accordion",
     "desc": "An interactive and accessible Accordion component with optional control, built with React. Expand content like FAQs, collapsible menus, or dramatic reveals. 🎭",
-    "path": "/components/Accordion/Accordion.tsx",
+    "path": "/components/ui/Accordion/Accordion.tsx",
     "previewImageUrl": "/assets/previewimages/accordian.png",
     "installation": [
       {
         "title": "Install dependencies",
         "codeBlock": "npm i clsx cn lucid",
-        "path": "/components/Accordion/Accordion.tsx"
+        "path": "/components/ui/Accordion/Accordion.tsx"
       },
       {
         "title": "Copy the code",
         "codeBlock": "",
         "path": "/utils/lib.ts"
-      },
-      {
-        "title": "Tailwind setup",
-        "codeBlock": "npm i clsx tailwind-merge lucid",
-        "path": "/tailwind.config.ts"
       }
     ],
     "props": [
@@ -71,23 +66,18 @@
     "id": "AlertDialogBox",
     "name": "AlertDialogBox",
     "desc": "A simple and reusable alert dialog for confirming critical user actions like deleting data, logging out, or other irreversible steps.",
-    "path": "/components/AlertDialogBox/AlertDialogBox.tsx",
+    "path": "/components/ui/AlertDialogBox/AlertDialogBox.tsx",
     "previewImageUrl": "/assets/previewimages/alertdialogbox.png",
     "installation": [
       {
         "title": "Install dependencies",
         "codeBlock": "",
-        "path": "/components/AlertDialogBox/AlertDialogBox.tsx"
+        "path": "/components/ui/AlertDialogBox/AlertDialogBox.tsx"
       },
       {
         "title": "Copy the code",
         "codeBlock": "",
         "path": "/utils/lib.ts"
-      },
-      {
-        "title": "Tailwind setup",
-        "codeBlock": "",
-        "path": "/tailwind.config.ts"
       }
     ],
     "props": [
@@ -109,23 +99,18 @@
     "id": "Avatar",
     "name": "Avatar",
     "desc": "A minimal, aesthetic Avatar component to show off user profile pics in a rounded and responsive way. Plug it anywhere — chat apps, dashboards, or comment sections.",
-    "path": "/components/Avatar/Avatar.tsx",
+    "path": "/components/ui/Avatar/Avatar.tsx",
     "previewImageUrl": "/assets/previewimages/avatar.png",
     "installation": [
       {
         "title": "Install dependencies",
         "codeBlock": "",
-        "path": "/components/Avatar/Avatar.tsx"
+        "path": "/components/ui/Avatar/Avatar.tsx"
       },
       {
         "title": "Copy the code",
         "codeBlock": "",
         "path": "/utils/lib.ts"
-      },
-      {
-        "title": "Tailwind setup",
-        "codeBlock": "",
-        "path": "/tailwind.config.ts"
       }
     ],
     "props": [
@@ -153,23 +138,18 @@
     "id": "Button",
     "name": "Button",
     "desc": "A powerful, stylish, and customizable button component with support for animations, gradients, and full Tailwind-powered flexibility. Perfect for when you wanna flex your UI 🔥",
-    "path": "/components/Button/Button.tsx",
+    "path": "/components/ui/Button/Button.tsx",
     "previewImageUrl": "",
     "installation": [
       {
         "title": "Install dependencies",
         "codeBlock": "",
-        "path": "/components/Button/Button.tsx"
+        "path": "/components/ui/Button/Button.tsx"
       },
       {
         "title": "Copy the code",
         "codeBlock": "",
         "path": "/utils/lib.ts"
-      },
-      {
-        "title": "Tailwind setup",
-        "codeBlock": "",
-        "path": "/tailwind.config.ts"
       }
     ],
     "props": [
@@ -239,16 +219,16 @@
     "id": "Card",
     "name": "Card",
     "desc": "A flexible and customizable card component for displaying content, built with React.",
-    "path": "/components/Card/Card.tsx",
+    "path": "/components/ui/Card/Card.tsx",
     "previewImageUrl": "/assets/previewimages/card.png",
     "installation": [
       {
         "title": "Install dependencies",
         "codeBlock": "npm i clsx lucid",
-        "path": "/components/Card/Card.tsx"
+        "path": "/components/ui/Card/Card.tsx"
       },
       {
-        "title": "Tailwind setup",
+        "title": "Copy the code",
         "codeBlock": "npm i clsx tailwind-merge lucid",
         "path": "/tailwind.config.ts"
       }
@@ -266,23 +246,18 @@
     "id": "Carosuel",
     "name": "Carosuel",
     "desc": "A smooth, responsive Carosuel component to slide through child elements. Includes left and right navigation with smooth scroll transitions.",
-    "path": "/components/Carosuel/Carosuel.tsx",
+    "path": "/components/ui/Carosuel/Carosuel.tsx",
     "previewImageUrl": "",
     "installation": [
       {
         "title": "Install dependencies",
         "codeBlock": "npm i class-variance-authority lucide-react",
-        "path": "/components/Carosuel/Carosuel.tsx"
+        "path": "/components/ui/Carosuel/Carosuel.tsx"
       },
       {
-        "title": "Add utility function",
+        "title": "Copy the code",
         "codeBlock": "",
         "path": "/lib/utils.ts"
-      },
-      {
-        "title": "Tailwind setup",
-        "codeBlock": "",
-        "path": "/tailwind.config.ts"
       }
     ],
     "props": [
@@ -301,30 +276,25 @@
     ],
     "usage": {
       "title": "Basic Usage",
-      "codeBlock": "import { Carosuel } from '@/components/Carosuel/Carosuel';\n\nexport default function DemoCarosuel() {\n  return (\n    <Carosuel className=\"h-64\">\n      <div className=\"bg-red-500 flex items-center justify-center text-white text-xl\">Slide 1</div>\n      <div className=\"bg-green-500 flex items-center justify-center text-white text-xl\">Slide 2</div>\n      <div className=\"bg-blue-500 flex items-center justify-center text-white text-xl\">Slide 3</div>\n    </Carosuel>\n  );\n}"
+      "codeBlock": "import { Carosuel } from '@/components/ui/Carosuel/Carosuel';\n\nexport default function DemoCarosuel() {\n  return (\n    <Carosuel className=\"h-64\">\n      <div className=\"bg-red-500 flex items-center justify-center text-white text-xl\">Slide 1</div>\n      <div className=\"bg-green-500 flex items-center justify-center text-white text-xl\">Slide 2</div>\n      <div className=\"bg-blue-500 flex items-center justify-center text-white text-xl\">Slide 3</div>\n    </Carosuel>\n  );\n}"
     }
   },
   {
     "id": "Dropdown",
     "name": "Dropdown",
     "desc": "A sleek, no-jank Dropdown component. Tap to toggle, sprinkle your actions or menus inside. Renders a floating panel near the trigger with automatic layering.",
-    "path": "/components/Dropdown/Dropdown.tsx",
+    "path": "/components/ui/Dropdown/Dropdown.tsx",
     "previewImageUrl": "",
     "installation": [
       {
         "title": "Install dependencies",
         "codeBlock": "npm i clsx tailwind-merge",
-        "path": "/components/Dropdown/Dropdown.tsx"
+        "path": "/components/ui/Dropdown/Dropdown.tsx"
       },
       {
-        "title": "Add Button component",
+        "title": "Copy the code",
         "codeBlock": "",
-        "path": "/components/Button/Button.tsx"
-      },
-      {
-        "title": "Tailwind setup",
-        "codeBlock": "",
-        "path": "/tailwind.config.ts"
+        "path": "/components/ui/Button/Button.tsx"
       }
     ],
     "props": [
@@ -352,21 +322,16 @@
     "id": "Footer",
     "name": "Footer",
     "desc": "A clean, modern footer component with logo, links, socials, and copyright. Dark-mode ready, responsive, and vibey. Add your brand sauce and you're good to go.",
-    "path": "/components/Footer/Footer.tsx",
+    "path": "/components/ui/Footer/Footer.tsx",
     "previewImageUrl": "",
     "installation": [
       {
         "title": "Install dependencies",
         "codeBlock": "npm i react-icons",
-        "path": "/components/Footer/Footer.tsx"
+        "path": "/components/ui/Footer/Footer.tsx"
       },
       {
-        "title": "Add Tailwind to your project",
-        "codeBlock": "",
-        "path": "/tailwind.config.ts"
-      },
-      {
-        "title": "Optional dark mode setup",
+        "title": "Copy the code",
         "codeBlock": "",
         "path": "/tailwind.config.ts"
       }
@@ -414,7 +379,7 @@
     "id": "Input",
     "name": "Input",
     "desc": "Aesthetic, minimal, and totally customizable input field for forms. Focus-ring? Yup. Dark mode? Of course. Fully vibing with Tailwind.",
-    "path": "/components/Input/Input.tsx",
+    "path": "/components/ui/Input/Input.tsx",
     "previewImageUrl": "/assets/previewimages/input.png",
     "installation": [
       {
@@ -423,7 +388,7 @@
         "path": "/lib/utils.ts"
       },
       {
-        "title": "Set up Tailwind theme",
+        "title": "Copy the code",
         "codeBlock": "",
         "path": "/tailwind.config.ts"
       }
@@ -453,16 +418,16 @@
     "id": "InputOtp",
     "name": "InputOtp",
     "desc": "A sleek lil input for taking OTP ",
-    "path": "/components/InputOTP/InputOTP.tsx",
+    "path": "/components/ui/InputOTP/InputOTP.tsx",
     "previewImageUrl": "",
     "installation": [
       {
         "title": "Set up chatbot component",
-        "codeBlock": "import InputOPT from '@/components/InputOTP';",
-        "path": "/components/MessageBot/MessageBot.tsx"
+        "codeBlock": "import InputOPT from '@/components/ui/InputOTP';",
+        "path": "/components/ui/MessageBot/MessageBot.tsx"
       },
       {
-        "title": "Customize your avatar and branding",
+        "title": "Copy the code",
         "codeBlock": "// pass your logo/avatar URLs and org name as props",
         "path": "/pages/index.tsx"
       }
@@ -498,16 +463,16 @@
     "id": "MessageBot",
     "name": "MessageBot",
     "desc": "A sleek lil’ floating chatbot that talks back. Perfect for support, onboarding, or just showing off that ✨interactive ✨ flair.",
-    "path": "/components/MessageBot/MessageBot.tsx",
+    "path": "/components/ui/MessageBot/MessageBot.tsx",
     "previewImageUrl": "",
     "installation": [
       {
         "title": "Set up chatbot component",
-        "codeBlock": "import MessageBot from '@/components/MessageBot';",
-        "path": "/components/MessageBot/MessageBot.tsx"
+        "codeBlock": "import MessageBot from '@/components/ui/MessageBot';",
+        "path": "/components/ui/MessageBot/MessageBot.tsx"
       },
       {
-        "title": "Customize your avatar and branding",
+        "title": "Copy the code",
         "codeBlock": "// pass your logo/avatar URLs and org name as props",
         "path": "/pages/index.tsx"
       }
@@ -543,16 +508,16 @@
     "id": "Navbar",
     "name": "Navbar",
     "desc": "A sticky top navigation bar that supports theme toggling, responsive design, dynamic nav links, and GitHub integration. Fully vibe-checked for light & dark modes.",
-    "path": "/components/Navbar/Navbar.tsx",
+    "path": "/components/ui/Navbar/Navbar.tsx",
     "previewImageUrl": "/assets/previewimages/navbar.png",
     "installation": [
       {
         "title": "Import the Navbar",
-        "codeBlock": "import Navbar from '@/components/Navbar';",
-        "path": "/components/Navbar/Navbar.tsx"
+        "codeBlock": "import Navbar from '@/components/ui/Navbar';",
+        "path": "/components/ui/Navbar/Navbar.tsx"
       },
       {
-        "title": "Set up theme context (required)",
+        "title": "Copy the code",
         "codeBlock": "// Ensure useTheme is implemented for toggleTheme functionality",
         "path": "/hooks/theme.ts"
       }
@@ -606,16 +571,16 @@
     "id": "PricingCard",
     "name": "PricingCard",
     "desc": "Flexible pricing card with theme-based styling, animated hover effects, and support for highlighting popular plans. Includes theme toggle via ThemeSelector.",
-    "path": "/components/PricingCard/PricingCard.tsx",
+    "path": "/components/ui/PricingCard/PricingCard.tsx",
     "previewImageUrl": "/assets/previewimages/pricingcard.png",
     "installation": [
       {
         "title": "Import PricingCard and ThemeSelector",
-        "codeBlock": "import { PricingCard, ThemeSelector } from '@/components/PricingCard';",
-        "path": "/components/PricingCard/PricingCard.tsx"
+        "codeBlock": "import { PricingCard, ThemeSelector } from '@/components/ui/PricingCard';",
+        "path": "/components/ui/PricingCard/PricingCard.tsx"
       },
       {
-        "title": "Import theme styles",
+        "title": "Copy the code",
         "codeBlock": "import { themes } from '@/utils/theme';",
         "path": "/utils/theme.ts"
       }
@@ -675,16 +640,16 @@
     "id": "Resizable",
     "name": "Resizable",
     "desc": "A flexible container splitter that allows users to resize two panes horizontally or vertically by dragging a divider.",
-    "path": "/components/Resizable/Resizable.tsx",
+    "path": "/components/ui/Resizable/Resizable.tsx",
     "previewImageUrl": "",
     "installation": [
       {
         "title": "Import the Resizable component",
-        "codeBlock": "import Resizable from '@/components/Resizable';",
-        "path": "/components/Resizable/Resizable.tsx"
+        "codeBlock": "import Resizable from '@/components/ui/Resizable';",
+        "path": "/components/ui/Resizable/Resizable.tsx"
       },
       {
-        "title": "Optional: Utility class merge",
+        "title": "Copy the code",
         "codeBlock": "import { cn } from '@/utils/lib';",
         "path": "/utils/lib.ts"
       }
@@ -720,17 +685,17 @@
     "id": "Skeleton",
     "name": "Skeleton",
     "desc": "A simple animated placeholder component used to indicate loading UI blocks.",
-    "path": "/components/Skeleton/Skeleton.tsx",
+    "path": "/components/ui/Skeleton/Skeleton.tsx",
     "installation": [
       {
         "title": "Import Skeleton",
-        "codeBlock": "import Skeleton from '@/components/Skeleton';",
-        "path": "/components/Skeleton/Skeleton.tsx"
+        "codeBlock": "import Skeleton from '@/components/ui/Skeleton';",
+        "path": "/components/ui/Skeleton/Skeleton.tsx"
       },
       {
-        "title": "Import Skeleton",
-        "codeBlock": "import Skeleton from '@/components/Skeleton';",
-        "path": "/components/Skeleton/Skeleton.tsx"
+        "title": "Copy the code",
+        "codeBlock": "import Skeleton from '@/components/ui/Skeleton';",
+        "path": "/components/ui/Skeleton/Skeleton.tsx"
       }
     ],
     "props": [
@@ -746,23 +711,18 @@
     "id": "Spinner",
     "name": "Spinner",
     "desc": "A minimalist 3-dot loading spinner that adapts to light and dark themes using the theme context. Smooth bounce animation included.",
-    "path": "/components/Spinner/Spinner.tsx",
+    "path": "/components/ui/Spinner/Spinner.tsx",
     "previewImageUrl": "",
     "installation": [
       {
         "title": "Import the Spinner",
-        "codeBlock": "import { Spinner } from '@/components/Spinner';",
-        "path": "/components/Spinner/Spinner.tsx"
+        "codeBlock": "import { Spinner } from '@/components/ui/Spinner';",
+        "path": "/components/ui/Spinner/Spinner.tsx"
       },
       {
-        "title": "Ensure theme hook is present",
+        "title": "Copy the code",
         "codeBlock": "// Spinner depends on useTheme to switch dot color\nimport { useTheme } from '@/hooks/theme';",
         "path": "/hooks/theme.ts"
-      },
-      {
-        "title": "Ensure `cn` utility is available",
-        "codeBlock": "",
-        "path": "/utils/lib.ts"
       }
     ],
     "props": [
@@ -778,16 +738,16 @@
     "id": "Switch",
     "name": "Switch",
     "desc": "A sleek lil' toggle — like a light switch but for devs. ✨ Great for toggling themes, states, or anything boolean.",
-    "path": "/components/Switch/Switch.tsx",
+    "path": "/components/ui/Switch/Switch.tsx",
     "previewImageUrl": "/assets/previewimages/toggle.png",
     "installation": [
       {
         "title": "Import the component",
-        "codeBlock": "import Switch from '@/components/Switch';",
-        "path": "/components/Switch/Switch.tsx"
+        "codeBlock": "import Switch from '@/components/ui/Switch';",
+        "path": "/components/ui/Switch/Switch.tsx"
       },
       {
-        "title": "Use in your component",
+        "title": "Copy the code",
         "codeBlock": "<Switch defaultState={true} />",
         "path": "/pages/index.tsx"
       }
@@ -805,7 +765,7 @@
     "id": "Tabs",
     "name": "Tabs",
     "desc": "Modular tab system that's minimal, accessible, and vibes with your theme. Say goodbye to tab chaos and hello to ✨ slick switching.",
-    "path": "/components/Tabs/Tabs.tsx",
+    "path": "/components/ui/Tabs/Tabs.tsx",
     "previewImageUrl": "",
     "installation": [
       {
@@ -814,14 +774,9 @@
         "path": "/utils/lib.ts"
       },
       {
-        "title": "Wrap Tabs in context",
+        "title": "Copy the code",
         "codeBlock": "",
-        "path": "/components/Tabs/Tabs.tsx"
-      },
-      {
-        "title": "Wrap Tabs in context",
-        "codeBlock": "",
-        "path": "/components/Tabs/Tabs.tsx"
+        "path": "/components/ui/Tabs/Tabs.tsx"
       }
     ],
     "props": [
@@ -861,13 +816,18 @@
     "id": "Testimonials",
     "name": "Testimonials",
     "desc": "Drop the ✨receipts✨ with this sleek testimonial card. Profile pic? Check. Star ratings? Of course. Perfect for showing love from users, clients, or fans.",
-    "path": "/components/Testimonials/Testimonials.tsx",
+    "path": "/components/ui/Testimonials/Testimonials.tsx",
     "previewImageUrl": "",
     "installation": [
       {
         "title": "Install Lucide for icons",
         "codeBlock": "npm i lucide-react",
-        "path": "/components/Testimonials/Testimonials.tsx"
+        "path": "/components/ui/Testimonials/Testimonials.tsx"
+      },
+      {
+        "title": "Copy the code",
+        "codeBlock": "",
+        "path": "/components/ui/Testimonials/Testimonials.tsx"
       }
     ],
     "props": [
@@ -907,11 +867,16 @@
     "id": "TextArea",
     "name": "TextArea",
     "desc": "For when you've got more to say 📝 — A dark-mode ready, fully styled textarea component. Clean, smooth, and focus-ring fresh.",
-    "path": "/components/TextArea/TextArea.tsx",
+    "path": "/components/ui/TextArea/TextArea.tsx",
     "previewImageUrl": "/assets/previewimages/textarea.png",
     "installation": [
       {
         "title": "Add Tailwind & utils",
+        "codeBlock": "npm i clsx tailwind-merge",
+        "path": "/lib/utils.ts"
+      },
+      {
+        "title": "Copy the code",
         "codeBlock": "npm i clsx tailwind-merge",
         "path": "/lib/utils.ts"
       }
@@ -935,11 +900,16 @@
     "id": "Toast",
     "name": "Toast",
     "desc": "Minimal toast component that slides in with ✨ style. Stacks like pancakes. Looks clean in dark & light mode. Fully customizable with classNames.",
-    "path": "/components/Toast/Toast.tsx",
+    "path": "/components/ui/Toast/Toast.tsx",
     "previewImageUrl": "",
     "installation": [
       {
         "title": "Add utility support",
+        "codeBlock": "npm i clsx tailwind-merge",
+        "path": "/utils/lib.ts"
+      },
+      {
+        "title": "Copy the code",
         "codeBlock": "npm i clsx tailwind-merge",
         "path": "/utils/lib.ts"
       }
@@ -975,11 +945,16 @@
     "id": "Tooltip",
     "name": "Tooltip",
     "desc": "Hoverable tooltip for quick hints, labels, or sass. Comes with delay and styling props. Smooth fade. Works well with icons, buttons, or anything inline.",
-    "path": "/components/Tooltip/Tooltip.tsx",
+    "path": "/components/ui/Tooltip/Tooltip.tsx",
     "previewImageUrl": "",
     "installation": [
       {
         "title": "Utility support",
+        "codeBlock": "npm i clsx tailwind-merge",
+        "path": "/utils/lib.ts"
+      },
+      {
+        "title": "Copy the code",
         "codeBlock": "npm i clsx tailwind-merge",
         "path": "/utils/lib.ts"
       }
@@ -1027,23 +1002,18 @@
     "id": "VideoPlayer",
     "name": "VideoPlayer",
     "desc": "",
-    "path": "/components/Testimonials/Testimonials.tsx",
+    "path": "/components/ui/Testimonials/Testimonials.tsx",
     "previewImageUrl": "",
     "installation": [
       {
         "title": "Install dependencies",
         "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
-        "path": "/components/TextArea/TextArea.tsx"
+        "path": "/components/ui/TextArea/TextArea.tsx"
       },
       {
         "title": "Copy the code",
         "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
-        "path": "/components/TextArea/TextArea.tsx"
-      },
-      {
-        "title": "Install dependencies",
-        "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
-        "path": "/components/TextArea/TextArea.tsx"
+        "path": "/components/ui/TextArea/TextArea.tsx"
       }
     ],
     "props": [

@@ -1,1 +1,16 @@
-{"name":"input-v0","type":"registry:component","dependencies":[],"registryDependencies":["https://080a-104-28-199-189.ngrok-free.app/r/input.json"],"files":[{"path":"registry/default/components/input-v0.tsx","type":"registry:component","content":"import {Input} from \"@/components/ui/Input\"\nimport {EyeOff} from \"@/components/ui/Input\"\nimport {Eye} from \"@/components/ui/Input\"\nimport {useState} from \"@/components/ui/Input\"\n              function Component(){\n                return (<Input placeholder=\"Type here...\" />)\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
+{
+  "name": "input-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "registryDependencies": [
+    "https://d278-104-28-199-190.ngrok-free.app/r/input.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/components/input-v0.tsx",
+      "type": "registry:component",
+      "content": "import {Input} from '@/componenets/ui/Input'\nimport {EyeOff, Eye} from 'lucide-react'\n import {useState} from 'react'\n ,import {Input} from '@/componenets/ui/Input'\nimport {EyeOff, Eye} from 'lucide-react'\n import {useState} from 'react'\n ,import {Input} from '@/componenets/ui/Input'\nimport {EyeOff, Eye} from 'lucide-react'\n import {useState} from 'react'\n ,import {Input} from '@/componenets/ui/Input'\nimport {EyeOff, Eye} from 'lucide-react'\n import {useState} from 'react'\n \n              function Component(){\n                return (<Input placeholder=\"Type here...\" />)\n              }\n              export default Component\n              "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

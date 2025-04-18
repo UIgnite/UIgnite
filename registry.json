@@ -10,7 +10,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/Accordion/Accordion.tsx",
+          "path": "packages/uignite/src/components/ui/Accordion/Accordion.tsx",
           "type": "registry:ui"
         }
       ]
@@ -22,22 +22,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/Avatar/Avatar.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "avatargroup",
-      "type": "registry:ui",
-      "dependencies": [],
-      "registryDependencies": [
-        "https://080a-104-28-199-189.ngrok-free.app/r/Avatar.json",
-        "https://080a-104-28-199-189.ngrok-free.app/r/Tooltip.json"
-      ],
-      "files": [
-        {
-          "path": "packages/uignite/src/components/AvatarGroup/AvatarGroup.tsx",
+          "path": "packages/uignite/src/components/ui/Avatar/Avatar.tsx",
           "type": "registry:ui"
         }
       ]
@@ -47,11 +32,11 @@
       "type": "registry:ui",
       "dependencies": ["class-variance-authority"],
       "registryDependencies": [
-        "https://080a-104-28-199-189.ngrok-free.app/r/Spinner.json"
+        "https://d278-104-28-199-190.ngrok-free.app/r/Spinner.json"
       ],
       "files": [
         {
-          "path": "packages/uignite/src/components/Button/Button.tsx",
+          "path": "packages/uignite/src/components/ui/Button/Button.tsx",
           "type": "registry:ui"
         }
       ]
@@ -63,7 +48,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/Card/Card.tsx",
+          "path": "packages/uignite/src/components/ui/Card/Card.tsx",
           "type": "registry:ui"
         }
       ]
@@ -75,7 +60,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/Carosuel/Carosuel.tsx",
+          "path": "packages/uignite/src/components/ui/Carosuel/Carosuel.tsx",
           "type": "registry:ui"
         }
       ]
@@ -84,12 +69,10 @@
       "name": "dropdown",
       "type": "registry:ui",
       "dependencies": [],
-      "registryDependencies": [
-        "https://080a-104-28-199-189.ngrok-free.app/r/Button.json"
-      ],
+      "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/Dropdown/Dropdown.tsx",
+          "path": "packages/uignite/src/components/ui/Dropdown/Dropdown.tsx",
           "type": "registry:ui"
         }
       ]
@@ -101,7 +84,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/Footer/Footer.tsx",
+          "path": "packages/uignite/src/components/ui/Footer/Footer.tsx",
           "type": "registry:ui"
         }
       ]
@@ -113,7 +96,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/Input/Input.tsx",
+          "path": "packages/uignite/src/components/ui/Input/Input.tsx",
           "type": "registry:ui"
         }
       ]
@@ -125,7 +108,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/MessageBot/MessageBot.tsx",
+          "path": "packages/uignite/src/components/ui/MessageBot/MessageBot.tsx",
           "type": "registry:ui"
         }
       ]
@@ -137,7 +120,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/Navbar/Navbar.tsx",
+          "path": "packages/uignite/src/components/ui/Navbar/Navbar.tsx",
           "type": "registry:ui"
         }
       ]
@@ -149,7 +132,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/NavMenu/NavMenu.tsx",
+          "path": "packages/uignite/src/components/ui/NavMenu/NavMenu.tsx",
           "type": "registry:ui"
         }
       ]
@@ -161,7 +144,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/PricingCard/PricingCard.tsx",
+          "path": "packages/uignite/src/components/ui/PricingCard/PricingCard.tsx",
           "type": "registry:ui"
         }
       ]
@@ -173,7 +156,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/Resizable/Resizable.tsx",
+          "path": "packages/uignite/src/components/ui/Resizable/Resizable.tsx",
           "type": "registry:ui"
         }
       ]
@@ -185,7 +168,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/SignIn/SignIn.tsx",
+          "path": "packages/uignite/src/components/ui/SignIn/SignIn.tsx",
           "type": "registry:ui"
         }
       ]
@@ -197,7 +180,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/SignUp/SignUp.tsx",
+          "path": "packages/uignite/src/components/ui/SignUp/SignUp.tsx",
           "type": "registry:ui"
         }
       ]
@@ -209,7 +192,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/Skeleton/Skeleton.tsx",
+          "path": "packages/uignite/src/components/ui/Skeleton/Skeleton.tsx",
           "type": "registry:ui"
         }
       ]
@@ -221,7 +204,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/Spinner/Spinner.tsx",
+          "path": "packages/uignite/src/components/ui/Spinner/Spinner.tsx",
           "type": "registry:ui"
         }
       ]
@@ -233,7 +216,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/Tabs/Tabs.tsx",
+          "path": "packages/uignite/src/components/ui/Tabs/Tabs.tsx",
           "type": "registry:ui"
         }
       ]
@@ -245,7 +228,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/Testimonials/Testimonials.tsx",
+          "path": "packages/uignite/src/components/ui/Testimonials/Testimonials.tsx",
           "type": "registry:ui"
         }
       ]
@@ -257,7 +240,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/TextArea/TextArea.tsx",
+          "path": "packages/uignite/src/components/ui/TextArea/TextArea.tsx",
           "type": "registry:ui"
         }
       ]
@@ -269,7 +252,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/Toast/Toast.tsx",
+          "path": "packages/uignite/src/components/ui/Toast/Toast.tsx",
           "type": "registry:ui"
         }
       ]
@@ -281,7 +264,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/Tooltip/Tooltip.tsx",
+          "path": "packages/uignite/src/components/ui/Tooltip/Tooltip.tsx",
           "type": "registry:ui"
         }
       ]
@@ -293,7 +276,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "packages/uignite/src/components/VideoPlayer/VideoPlayer.tsx",
+          "path": "packages/uignite/src/components/ui/VideoPlayer/VideoPlayer.tsx",
           "type": "registry:ui"
         }
       ]

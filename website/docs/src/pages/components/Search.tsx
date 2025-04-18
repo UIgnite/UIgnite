@@ -36,7 +36,7 @@ function SearchBar() {
           ></div>
 
           {/* Search Box + Hits */}
-          <div className="w-[30vw]  z-10">
+          <div className="w-[30vw] min-h-[500px]  z-10">
             <div className="w-full max-w-2xl">
               <InstantSearch
                 searchClient={searchClient}

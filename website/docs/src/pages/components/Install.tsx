@@ -24,6 +24,13 @@ const Install = ({
         <CopyButton
           copyText={`${val} shadcn add https://uignite.in/r/${componentId}.json `}
         />
+        <style>
+          {`
+              .cli-command code span {
+                color: #f5f5f5 !important; 
+              }
+              `}
+        </style>
         <SyntaxHighlighter
           style={{
             ...atomOneDarkReasonable,
@@ -32,8 +39,7 @@ const Install = ({
               background: 'rgb(24, 24, 24)',
             },
           }}
-          language="cli"
-          className="text-left  text-sm h-full min-w-full rounded-md  "
+          className="text-left text-white text-sm h-full min-w-full rounded-md cli-command"
         >
           {`${val} shadcn add https://uignite.in/r/${componentId}.json `}
         </SyntaxHighlighter>
@@ -48,26 +54,28 @@ const Install = ({
           item.title === 'Copy the code' ? codeString.element : item.codeBlock;
 
         return (
-          <React.Fragment key={idx}>
-            <div className="font-bold text-xl mt-3 mb-2">{item.title}</div>
+          code && (
+            <React.Fragment key={idx}>
+              <div className="font-bold text-xl mt-3 mb-2">{item.title}</div>
 
-            <div className="w-full min-h-[50px]  relative">
-              <CopyButton copyText={code} />
-              <SyntaxHighlighter
-                className="mb-7 min-h-[50px]  max-h-[400px]  scrollable-content text-left text-sm min-w-full rounded-md"
-                language="cli"
-                style={{
-                  ...atomOneDarkReasonable,
-                  hljs: {
-                    ...atomOneDarkReasonable.hljs,
-                    background: 'rgb(24, 24, 24)',
-                  },
-                }}
-              >
-                {code}
-              </SyntaxHighlighter>
-            </div>
-          </React.Fragment>
+              <div className="w-full min-h-[50px]  relative">
+                <CopyButton copyText={code} />
+                <SyntaxHighlighter
+                  className="mb-7 min-h-[50px]  max-h-[400px]  scrollable-content text-left text-sm min-w-full rounded-md"
+                  language="asdflasdf"
+                  style={{
+                    ...atomOneDarkReasonable,
+                    hljs: {
+                      ...atomOneDarkReasonable.hljs,
+                      background: 'rgb(24, 24, 24)',
+                    },
+                  }}
+                >
+                  {code}
+                </SyntaxHighlighter>
+              </div>
+            </React.Fragment>
+          )
         );
       })}
     </div>

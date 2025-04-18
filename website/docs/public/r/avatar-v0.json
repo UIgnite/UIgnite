@@ -1,1 +1,14 @@
-{"name":"avatar-v0","type":"registry:component","dependencies":[],"registryDependencies":["https://080a-104-28-199-189.ngrok-free.app/r/avatar.json"],"files":[{"path":"registry/default/components/avatar-v0.tsx","type":"registry:component","content":"import {Avatar} from \"@/components/ui/Avatar\"\nimport {AvatarGroup} from \"@/components/ui/Avatar\"\n              function Component(){\n                return (\r\n      <>\r\n        <Avatar url={\"/piyush-sir.png\"} alt={\"user\"} />\r\n        <Avatar url={\"/hitesh-sir.png\"} alt={\"user\"} />\r\n      </>\r\n    )\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
+{
+  "name": "avatar-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/default/components/avatar-v0.tsx",
+      "type": "registry:component",
+      "content": "\n              function Component(){\n                return (\n      <>\n        <Avatar url={\"/piyush-sir.png\"} alt={\"user\"} />\n        <Avatar url={\"/hitesh-sir.png\"} alt={\"user\"} />\n      </>\n    )\n              }\n              export default Component\n              "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

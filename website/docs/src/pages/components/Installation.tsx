@@ -22,23 +22,23 @@ export const Installation = () => {
 
       <section>
         <h1 className="text-2xl font-semibold mb-2">
-          Edit{' '}
-          <code className="text-sm bg-muted px-1 py-0.5 rounded">
+          Edit
+          <code className="text-xl ml-2 bg-muted px-1 py-0.5 rounded">
             tsconfig.json
           </code>
         </h1>
-        <div className="bg-muted rounded-lg  overflow-auto ">
-          <CopyButton copyText={installationDocs.tsconfigApp} />
+        <div className="bg-muted rounded-lg max-w-[90%] overflow-auto relative ">
+          <CopyButton copyText={installationDocs.tsconfig} />
           <SyntaxHighlighter
             language="json"
             style={{
               ...atomOneDarkReasonable,
               hljs: {
                 ...atomOneDarkReasonable.hljs,
-                background: 'rgb(24, 24, 24)',
+                background: '#1e1e21',
               },
             }}
-            className="text-left text-sm h-full max-h-[50vh] rounded-md scrollable-content"
+            className="text-left text-xl h-full max-h-[50vh] rounded-md scrollable-content"
           >
             {installationDocs.tsconfig}
           </SyntaxHighlighter>
@@ -46,13 +46,13 @@ export const Installation = () => {
       </section>
 
       <section>
-        <h1 className="text-2xl font-semibold mb-2">
-          Edit{' '}
-          <code className="text-sm bg-muted px-1 py-0.5 rounded">
+        <h1 className="text-2xl font-semibold mb-2 ">
+          Edit
+          <code className=" text-xl ml-2 bg-muted px-1 py-0.5 rounded">
             tsconfig.app.json
           </code>
         </h1>
-        <div className="bg-muted rounded-lg  overflow-auto relative">
+        <div className="bg-muted rounded-lg  overflow-auto relative max-w-[90%]">
           <CopyButton copyText={installationDocs.tsconfigApp} />
           <SyntaxHighlighter
             language="json"
@@ -60,10 +60,10 @@ export const Installation = () => {
               ...atomOneDarkReasonable,
               hljs: {
                 ...atomOneDarkReasonable.hljs,
-                background: 'rgb(24, 24, 24)',
+                background: '#1e1e21',
               },
             }}
-            className="text-left text-sm h-full max-h-[50vh] rounded-md scrollable-content"
+            className="text-left text-xl  h-full max-h-[50vh] rounded-md scrollable-content"
           >
             {installationDocs.tsconfigApp}
           </SyntaxHighlighter>
@@ -72,23 +72,23 @@ export const Installation = () => {
 
       <section>
         <h1 className="text-2xl font-semibold mb-2">
-          Update{' '}
-          <code className="text-sm bg-muted px-1 py-0.5 rounded">
+          Update
+          <code className="text-xl ml-2 bg-muted px-1 py-0.5 rounded">
             vite.config.ts
           </code>
         </h1>
-        <div className="bg-muted rounded-lg  overflow-auto ">
-          <CopyButton copyText={installationDocs.tsconfigApp} />
+        <div className="bg-muted rounded-lg  overflow-auto relative max-w-[90%]">
+          <CopyButton copyText={installationDocs.vite} />
           <SyntaxHighlighter
             language="typescript"
             style={{
               ...atomOneDarkReasonable,
               hljs: {
                 ...atomOneDarkReasonable.hljs,
-                background: 'rgb(24, 24, 24)',
+                background: '#1e1e21',
               },
             }}
-            className="text-left text-sm h-full max-h-[50vh] rounded-md scrollable-content"
+            className="text-left text-xl h-full max-h-[50vh] rounded-md scrollable-content"
           >
             {installationDocs.vite}
           </SyntaxHighlighter>
@@ -104,18 +104,18 @@ export const Installation = () => {
 
       <section>
         <h1 className="text-2xl font-semibold mb-2">Add Components</h1>
-        <div className="bg-muted rounded-lg  overflow-auto ">
-          <CopyButton copyText={installationDocs.tsconfigApp} />
+        <div className="bg-muted rounded-lg  overflow-auto relative max-w-[90%]">
+          <CopyButton copyText={installationDocs.addComponent} />
           <SyntaxHighlighter
             language="tsx"
             style={{
               ...atomOneDarkReasonable,
               hljs: {
                 ...atomOneDarkReasonable.hljs,
-                background: 'rgb(24, 24, 24)',
+                background: '#1e1e21',
               },
             }}
-            className="text-left text-sm h-full max-h-[50vh] rounded-md scrollable-content"
+            className="text-left text-xl  h-full max-h-[50vh] rounded-md scrollable-content"
           >
             {installationDocs.addComponent}
           </SyntaxHighlighter>

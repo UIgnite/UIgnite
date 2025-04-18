@@ -1,13 +1,11 @@
-import {useState} from 'react';
-import {ThemeSelector, PricingCard} from '@pkgs/uignite';
+import {PricingCard} from '@pkgs/uignite';
 
 const PricingSection = () => {
-  const [currentTheme, setCurrentTheme] = useState('dark');
-
   const pricingData = [
     {
-      title: 'Existing Components',
-      price: 'Free',
+      title: 'Free',
+      price: '0',
+      validity: '/month',
       description:
         'All the components that are freely available on the website are free to use.',
       features: [
@@ -19,7 +17,7 @@ const PricingSection = () => {
     },
     {
       title: 'Custom Components',
-      price: '$60',
+      price: `60`,
       validity: '/month',
       description:
         'Standalone components tailored to your needs and easily integrated. Perfect for website elements or sections.',
@@ -34,7 +32,7 @@ const PricingSection = () => {
     },
     {
       title: 'Pages',
-      price: '$100',
+      price: '100',
       validity: '/month',
       description:
         'Best for early-stage startups and businesses that need a marketing site and ongoing developmental work.',
@@ -51,14 +49,12 @@ const PricingSection = () => {
     <div className={`min-h-screen py-16 px-4 sm:px-6 lg:px-8`}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold  mb-4">Pricing Plans</h1>
-          <p className="!dark text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <h1 className="text-4xl font-bold mb-4">Pricing Plans</h1>
+          <p className="!dark text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Choose the perfect plan for your project needs with flexible options
             and powerful features.
           </p>
         </div>
-
-        <ThemeSelector currentTheme={currentTheme} setTheme={setCurrentTheme} />
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {pricingData.map((plan, index) => (
@@ -71,7 +67,7 @@ const PricingSection = () => {
               features={plan.features}
               highlighted={plan.highlighted}
               popular={plan.popular}
-              theme={currentTheme}
+              // theme={currentTheme}
             />
           ))}
         </div>

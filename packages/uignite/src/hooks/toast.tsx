@@ -1,4 +1,4 @@
-import {Toast} from '../components/Toast';
+import {Toast} from '../components/ui/Toast';
 import React, {
   useCallback,
   useContext,

@@ -1,6 +1,6 @@
 import {Avatar, Tooltip} from '@pkgs/uignite';
 
-const TestCards = () => {
+const AvatarGroup = () => {
   const avatars: {url: string; alt: string}[] = [
     {
       url: '/assets/avatars/aman.png',
@@ -55,4 +55,4 @@ const TestCards = () => {
   );
 };
 
-export default TestCards;
+export default AvatarGroup;

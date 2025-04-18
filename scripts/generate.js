@@ -11,8 +11,48 @@ async function writeComponentContent(path, content) {
   }
 }
 
-function mapScopeToFilename(content) {
-  return {};
+function getImportsMapByScope(extraScopes) {
+  // console.log(scope, extraScopes)
+  if (!extraScopes) return ``;
+  let currObjMapString = ``;
+  for (let i = 0; i < extraScopes.length; i++) {
+    let currStr;
+    let currFrom = extraScopes[i].from;
+
+    let currScope = '';
+    for (let j = 0; j < extraScopes[i].scope.length; j++) {
+      if (j == extraScopes[i].scope.length - 1) {
+        currScope += extraScopes[i].scope[j];
+      } else currScope += extraScopes[i].scope[j] + ', ';
+    }
+
+    if (extraScopes[i].isComp) {
+      currStr = `import {${currScope}} from '@/components/ui/${currFrom}'\n`;
+    } else if (extraScopes[i].isHook) {
+      currStr = `import {${currScope}} from '@/hooks/${currFrom}'\n`;
+    } else {
+      currStr = `import {${currScope}} from '${currFrom}'\n `;
+    }
+
+    currObjMapString += currStr;
+  }
+  // console.log(currObjMapString)
+  return currObjMapString;
+}
+
+function getRegistryDependencyByScope(extraScopes) {
+  let fromString = [];
+  if (!extraScopes) return fromString;
+
+  for (let i = 0; i < extraScopes.length; i++) {
+    if (extraScopes[i].isComp || extraScopes[i].isHook) {
+      let currFrom = extraScopes[i].from.toLowerCase();
+      let currFromStr = `https://d278-104-28-199-190.ngrok-free.app/r/${currFrom}.json`;
+      fromString.push(currFromStr);
+    }
+  }
+  console.log(fromString);
+  return fromString;
 }
 
 async function register(name, results) {
@@ -42,7 +82,7 @@ async function register(name, results) {
         const filename = file.path
           .split('/')
           [file.path.split('/').length - 1].split('.')[0];
-        const newPath = `registry/default/ui/${filename}.tsx`;
+        const newPath = `components/ui/${filename}.tsx`;
         return {...file, content, path: newPath, filename};
       })
     );
@@ -63,7 +103,7 @@ async function register(name, results) {
                 item.trim().toLowerCase()
               )
             : []),
-          `https://080a-104-28-199-189.ngrok-free.app/r/${name}.json`,
+          `https://d278-104-28-199-190.ngrok-free.app/r/${name}.json`,
         ],
       }
     );
@@ -72,11 +112,6 @@ async function register(name, results) {
       (e) => e.id.toLowerCase().trim() == name.toLowerCase().trim()
     );
     if (element.length > 0) {
-      console.log(
-        registryItem.registryDependencies.map((item) =>
-          item.trim().toLowerCase()
-        )
-      );
       await writeComponentContent(
         `./website/docs/public/r/${element[0].id}-v0.json`,
         {
@@ -86,17 +121,14 @@ async function register(name, results) {
           $schema: 'https://ui.shadcn.com/schema/registry-item.json',
           registryDependencies: [
             ...(registryItem.registryDependencies
-              ? registryItem.registryDependencies.map((item) =>
-                  item.trim().toLowerCase()
-                )
+              ? getRegistryDependencyByScope(element[0].extraScopes)
               : []),
-            `https://080a-104-28-199-189.ngrok-free.app/r/${name}.json`,
           ],
           files: [
             {
-              path: `registry/default/components/${element[0].id}-v0.tsx`,
+              path: `app/page.tsx`,
               type: 'registry:component',
-              content: `${element[0].scope.map((ele) => `import {${ele}} from \"@/components/ui/${filesWithContent.find((e) => e.filename.toLowerCase() == element[0].id.toLowerCase()).filename}\"`).join('\n')}
+              content: `${element[0].scope.map((ele) => getImportsMapByScope(element[0].extraScopes))}
               function Component(){
                 return (${element[0].element})
               }
@@ -114,18 +146,25 @@ async function register(name, results) {
 
 (async () => {
   const regex =
-    /id:\s*'([^']*)',\s*scope:\s*{([^}]*)},\s*element:\s*`([^`]*?)`/gm;
+    /\{\s*id:\s*'([^']*)'\s*,\s*scope:\s*\{([^}]*)\}(?:\s*,\s*extraScopes:\s*\[((?:[^[\]]|\[(?:[^[\]]|\[[^\]]*\])*\])*)\])?(?:\s*,\s*variation:\s*\[([^\]]*)\])?\s*,\s*element:\s*`((?:[^`\\]|\\.|\\`|\\$\{(?:[^{}]|\{[^}]*\})*\})*)`/g;
   const results = [];
 
   const inputString = await fs.readFile('./website/docs/_elements.ts', 'utf-8');
-
   let match;
   while ((match = regex.exec(inputString)) !== null) {
     const id = match[1];
     const scope = match[2].trim().replaceAll(' ', '').split(',');
-    const element = match[3];
 
-    results.push({id, scope, element});
+    let extraScopes;
+    if (match[3]) {
+      const cleanedExtraScope = `[${match[3]}]`
+        .replace(/(\w+):/g, '"$1":')
+        .replace(/'/g, '"')
+        .replace(/,\s*([}\]])/g, '$1');
+      extraScopes = JSON.parse(cleanedExtraScope);
+    }
+
+    results.push({id, scope, extraScopes, element: match[5]});
   }
 
   for (let index = 0; index < registoryConfig['items'].length; index++) {
