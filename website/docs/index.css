@@ -196,3 +196,17 @@ input::-webkit-search-cancel-button {
 .slider::-webkit-slider-thumb:active {
   @apply cursor-grabbing;
 }
+
+
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 43s linear infinite;
+}
