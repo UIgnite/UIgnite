@@ -1,7 +1,7 @@
 import {MessageCircle} from 'lucide-react';
 import {useState} from 'react';
-import { Avatar } from '@/components/ui/Avatar';
-import { Input } from '@/components/ui/Input';
+import {Avatar} from '@/components/ui/Avatar';
+import {Input} from '@/components/ui/Input';
 
 export interface MessageBotParams {
   orgName?: string;

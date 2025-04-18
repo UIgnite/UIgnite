@@ -23,16 +23,14 @@ const Install = ({
       <div className="w-full h-[44px] relative cli ">
         <CopyButton
           copyText={`${val} shadcn add https://uignite.in/r/${componentId}.json `}
-          />
-          <style>
-            {
-              `
+        />
+        <style>
+          {`
               .cli-command code span {
                 color: #f5f5f5 !important; 
               }
-              `
-            }
-          </style>
+              `}
+        </style>
         <SyntaxHighlighter
           style={{
             ...atomOneDarkReasonable,

@@ -1,1 +1,16 @@
-{"name":"spinner-v0","type":"registry:component","dependencies":[],"registryDependencies":["https://d278-104-28-199-190.ngrok-free.app/r/spinner.json"],"files":[{"path":"registry/default/components/spinner-v0.tsx","type":"registry:component","content":"import {Spinner} from '@/componenets/ui/Spinner'\n\n              function Component(){\n                return (\n    <div className=\"grid grid-cols-1\">\n      <Spinner variant=\"bounce\" className=\"my-4\" />\n    </div>      \n    )\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
+{
+  "name": "spinner-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "registryDependencies": [
+    "https://d278-104-28-199-190.ngrok-free.app/r/spinner.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/components/spinner-v0.tsx",
+      "type": "registry:component",
+      "content": "import {Spinner} from '@/componenets/ui/Spinner'\n\n              function Component(){\n                return (\n    <div className=\"grid grid-cols-1\">\n      <Spinner variant=\"bounce\" className=\"my-4\" />\n    </div>      \n    )\n              }\n              export default Component\n              "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

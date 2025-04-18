@@ -31,10 +31,13 @@ import {
   Footer,
   Navbar,
   VideoPlayer,
+  SignUp,
+  SignIn,
+  Testimonials,
 } from '@pkgs/uignite';
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react';
-import {Eye, EyeOff, Info} from 'lucide-react';
+import {Eye, EyeOff, Info, Star} from 'lucide-react';
 import {AlarmClockCheck} from 'lucide-react';
 
 const elements = [
@@ -257,6 +260,8 @@ const AvatarGroup = () => {
       CardContent,
       CardFooter,
       Button,
+      SignUp,
+      SignIn,
       Avatar,
       useState,
       useEffect,
@@ -287,6 +292,14 @@ const AvatarGroup = () => {
       {
         scope: ['Info'],
         from: 'lucide-react',
+      },
+      {
+        scope: ['SignUp'],
+        from: 'SignUp',
+      },
+      {
+        scope: ['SignIn'],
+        from: 'SignIn',
       },
     ],
     element: `
@@ -415,6 +428,12 @@ const AvatarGroup = () => {
         </CardFooter>
       </Card>
       `,
+      `
+      <SignIn />
+      `,
+      `
+      <SignUp />
+      `,
     ],
   },
   {
@@ -486,8 +505,8 @@ const AvatarGroup = () => {
     ],
     element: `
       <Footer
-        lightLogo="https://dummyimage.com/120x40/000/fff&text=Light+Logo"
-        darkLogo="https://dummyimage.com/120x40/fff/000&text=Dark+Logo"
+        lightLogo="/chaicode-white.png"
+        darkLogo="/chaicode-black.png"
         description="This is a simple footer with sections, social links, and a copyright notice."
         socials={[
           { type: "linkedin", link: "https://linkedin.com" },
@@ -632,7 +651,7 @@ const AvatarGroup = () => {
       <MessageBot
         orgName="UIgnite"
         themeColor="bg-blue-500"
-        url="https://dummyimage.com/100x100/000/fff&text=U"
+        url="/uignite-bot.png"
         alt="Bot avatar"
       />
     </div>
@@ -971,6 +990,49 @@ const AvatarGroup = () => {
     `,
     variation: [],
   },
+  {
+    id: 'Testimonials',
+    scope: {Testimonials},
+    extraScopes: [
+      {
+        scope: ['Testimonials'],
+        from: 'Testimonials',
+        isComp: true,
+      },
+    ],
+    element: `
+    function Testimonial () {
+    
+  const testimonials = [
+    {
+      imageSrc: '/piyush-sir.png',
+      name: 'Piyush Garg',
+      title: 'Co-founder of OnlyFans',
+      message:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?',
+      rating: 5,
+    },
+  ];
+
+    return (<div className="flex">
+      {testimonials.map((testimonial, index) => (
+        <Testimonials
+          className=" w-[450px] max-h-[200px]"
+          key={index}
+          imageSrc={testimonial.imageSrc}
+          name={testimonial.name}
+          title={testimonial.title}
+          message={testimonial.message}
+          rating={testimonial.rating}
+        />
+      ))}
+    </div>)
+    }
+   
+    `,
+    variation: [],
+  },
+
   {
     id: 'tooltip',
     scope: {Tooltip},
