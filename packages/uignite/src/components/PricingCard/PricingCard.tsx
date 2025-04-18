@@ -22,10 +22,12 @@ const PricingCard = ({
 }: PricingParams) => {
   return (
     <div
-      className={`rounded-xl shadow-sm w-[400px] p-8 flex flex-col h-full relative transition-all duration-300 transform hover:scale-105 ${
+      className={`rounded-xl shadow-sm w-[400px] p-8 flex flex-col h-full relative transition-all duration-200 transform hover:scale-102 ${
         highlighted
-          ? 'bg-cyan-50/10 dark:bg-neutral-900'
-          : 'bg-zinc-200/10 dark:bg-zinc-800'
+          ? // ? 'bg-cyan-50/10 dark:bg-neutral-900'
+            // : 'bg-zinc-200/10 dark:bg-zinc-800'
+            'grainy-light dark:bg-neutral-900'
+          : 'grainy-light dark:bg-zinc-800'
       } ${popular ? 'border-none ring-2 ring-offset-2 dark:ring-offset-slate-900 dark:ring-cyan-700' : ''}`}
     >
       {popular && (
