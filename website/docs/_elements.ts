@@ -29,11 +29,11 @@ import {
   AlertDialogBox,
   Switch,
   Footer,
-  Navbar
+  Navbar,
 } from '@pkgs/uignite';
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react';
-import {Eye, EyeOff, Info, Stethoscope} from 'lucide-react';
+import {Eye, EyeOff, Info} from 'lucide-react';
 import {AlarmClockCheck} from 'lucide-react';
 
 const elements = [
@@ -43,12 +43,12 @@ const elements = [
     extraScopes: [
       {
         scope: ['Accordion', 'AccordionWrapper'],
-        from: "Accordion",
-        isComp: true
-      }
+        from: 'Accordion',
+        isComp: true,
+      },
     ],
     element: `
-<div className="relative z-10">
+<div className="relative z-0">
   <AccordionWrapper>
     <Accordion
       title="What is MobiMart?"
@@ -77,18 +77,18 @@ const elements = [
     extraScopes: [
       {
         scope: ['Button'],
-        from: "Button",
-        isComp: true
+        from: 'Button',
+        isComp: true,
       },
       {
         scope: ['AlertDialogBox'],
-        from: "AlertDialogBox",
-        isComp: true
+        from: 'AlertDialogBox',
+        isComp: true,
       },
       {
         scope: ['useState'],
-        from: 'react'
-      }
+        from: 'react',
+      },
     ],
     element: `
       <AlertDialogBox
@@ -114,14 +114,14 @@ const elements = [
     scope: {Button, AlarmClockCheck},
     extraScopes: [
       {
-        scope: ["Button"],
-        from: "Button",
-        isComp: true
+        scope: ['Button'],
+        from: 'Button',
+        isComp: true,
       },
       {
-        scope: ["AlarmClockCheck"],
-        from: "lucide-react"
-      }
+        scope: ['AlarmClockCheck'],
+        from: 'lucide-react',
+      },
     ],
     element: `
       <Button>Click Me</Button>
@@ -204,23 +204,30 @@ const elements = [
     },
     extraScopes: [
       {
-        scope: ['Card', 'CardHeader', 'CardTitle', 'CardDescription', 'CardContent', 'CardFooter'],
-        from: "Card",
-        isComp: true
+        scope: [
+          'Card',
+          'CardHeader',
+          'CardTitle',
+          'CardDescription',
+          'CardContent',
+          'CardFooter',
+        ],
+        from: 'Card',
+        isComp: true,
       },
       {
         scope: ['Avatar'],
-        from: "Avatar",
-        isComp: true
+        from: 'Avatar',
+        isComp: true,
       },
       {
         scope: ['useState', 'useEffect'],
-        from: "react"
+        from: 'react',
       },
       {
         scope: ['Info'],
-        from: 'lucide-react'
-      }
+        from: 'lucide-react',
+      },
     ],
     element: `
   function TwitterCard () {
@@ -353,6 +360,13 @@ const elements = [
   {
     id: 'Carosuel',
     scope: {Carosuel},
+    extraScopes: [
+      {
+        scope: ['Carosuel'],
+        from: 'Carosuel',
+        isComp: true,
+      },
+    ],
     element: ` 
     <Carosuel className="h-full w-full   flex justify-center items-center">
       <div className=" dark:bg-black bg-gray-100 h-full mr-4 ml-4 flex items-center justify-center text-2xl font-semibold rounded-lg shadow-md">
@@ -378,6 +392,13 @@ const elements = [
   {
     id: 'dropdown',
     scope: {Dropdown},
+    extraScopes: [
+      {
+        scope: ['Dropdown'],
+        from: 'Dropdown',
+        isComp: true,
+      },
+    ],
     element: `
       <Dropdown 
         button={
@@ -396,6 +417,13 @@ const elements = [
   {
     id: 'footer',
     scope: {Footer},
+    extraScopes: [
+      {
+        scope: ['Footer'],
+        from: 'Footer',
+        isComp: true,
+      },
+    ],
     element: `
       <Footer
         lightLogo="https://dummyimage.com/120x40/000/fff&text=Light+Logo"
@@ -452,16 +480,16 @@ const elements = [
     extraScopes: [
       {
         scope: ['Input'],
-        from: "Input",
-        isComp: true
+        from: 'Input',
+        isComp: true,
       },
       {
         scope: ['EyeOff', 'Eye'],
-        from: "lucide-react"
+        from: 'lucide-react',
       },
       {
         scope: ['useState'],
-        from: "react"
+        from: 'react',
       },
     ],
     element: `<Input placeholder="Type here..." />`,
@@ -519,11 +547,25 @@ const elements = [
     element: `
       <InputOTP length = {6}/> 
     `,
+    extraScopes: [
+      {
+        scope: ['InputOTP'],
+        from: 'InputOTP',
+        isComp: true,
+      },
+    ],
     variation: [],
   },
   {
     id: 'messagebot',
     scope: {MessageBot},
+    extraScopes: [
+      {
+        scope: ['MessageBot'],
+        from: 'MessageBot',
+        isComp: true,
+      },
+    ],
     element: `
     <div>
       <div> Neeche Dekho Neecheee... </div>
@@ -540,6 +582,13 @@ const elements = [
   {
     id: 'navbar',
     scope: {Navbar},
+    extraScopes: [
+      {
+        scope: ['Navbar'],
+        from: 'Navbar',
+        isComp: true,
+      },
+    ],
     element: `
       <Navbar
         lightLogo="https://dummyimage.com/100x40/ffffff/000000&text=Light+Logo"
@@ -565,13 +614,13 @@ const elements = [
     extraScopes: [
       {
         scope: ['PricingCard'],
-        from: "PricingCard",
-        isComp: true
+        from: 'PricingCard',
+        isComp: true,
       },
       {
-        scope: ["Link"],
-        from: 'react-router-dom'
-      }
+        scope: ['Link'],
+        from: 'react-router-dom',
+      },
     ],
     element: `
     <>
@@ -615,6 +664,13 @@ const elements = [
   {
     id: 'resizable',
     scope: {Resizable},
+    extraScopes: [
+      {
+        scope: ['Resizable'],
+        from: 'Resizable',
+        isComp: true,
+      },
+    ],
     element: `<div className='relative w-[500px] h-26'>
       <Resizable className='h-20'>
         <div className='w-full h-full bg-amber-200'></div>
@@ -625,6 +681,13 @@ const elements = [
   {
     id: 'skeleton',
     scope: {Skeleton},
+    extraScopes: [
+      {
+        scope: ['Skeleton'],
+        from: 'Skeleton',
+        isComp: true,
+      },
+    ],
     element: `
         <div className="flex items-center space-x-4 ">
           <Skeleton className="h-12 w-12 rounded-full" />
@@ -733,6 +796,13 @@ const elements = [
   {
     id: 'spinner',
     scope: {Spinner},
+    extraScopes: [
+      {
+        scope: ['Spinner'],
+        from: 'Spinner',
+        isComp: true,
+      },
+    ],
     element: `
     <div className="grid grid-cols-1">
       <Spinner variant="bounce" className="my-4" />
@@ -749,6 +819,13 @@ const elements = [
   {
     id: 'switch',
     scope: {Switch},
+    extraScopes: [
+      {
+        scope: ['Switch'],
+        from: 'Switch',
+        isComp: true,
+      },
+    ],
     element: `<Switch defaultState={true} />`,
     variation: [],
   },
@@ -757,9 +834,9 @@ const elements = [
     scope: {Tabs, TabList, Tab, TabContent},
     extraScope: [
       {
-        scope: ["Tabs", "TabList", "Tab", "TabContent"],
-        from: "Tabs"
-      }
+        scope: ['Tabs', 'TabList', 'Tab', 'TabContent'],
+        from: 'Tabs',
+      },
     ],
     element: `
       <Tabs defaultVal="Before">
@@ -782,6 +859,13 @@ const elements = [
   {
     id: 'textarea',
     scope: {TextArea},
+    extraScopes: [
+      {
+        scope: ['TextArea'],
+        from: 'TextArea',
+        isComp: true,
+      },
+    ],
     element: `<TextArea placeholder="Write something..." />`,
     variation: [],
   },
@@ -791,19 +875,19 @@ const elements = [
     extraScopes: [
       {
         scope: ['useToast'],
-        from: "toast",
-        isHook: true
+        from: 'toast',
+        isHook: true,
       },
       {
         scope: ['Toast'],
-        from: "Toast",
-        isComp: true
+        from: 'Toast',
+        isComp: true,
       },
       {
         scope: ['Button'],
-        from: "Button",
-        isComp: true
-      }
+        from: 'Button',
+        isComp: true,
+      },
     ],
     element: `
     function ToastPreview() {
@@ -829,6 +913,13 @@ const elements = [
   {
     id: 'tooltip',
     scope: {Tooltip},
+    extraScopes: [
+      {
+        scope: ['Tooltip'],
+        from: 'Tooltip',
+        isComp: true,
+      },
+    ],
     element: `
       <Tooltip title="Tooltip" options={{ delay: 500 }}>
         <button className="cursor-pointer px-4 py-2 bg-neutral-800 text-white rounded">Hover me</button>

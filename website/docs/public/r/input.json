@@ -1,18 +1,17 @@
-<<<<<<< HEAD
-{"name":"input","type":"registry:ui","dependencies":[],"registryDependencies":["https://080a-104-28-199-189.ngrok-free.app/r/input.json"],"files":[{"path":"registry/default/ui/Input.tsx","type":"registry:ui","content":"import React from 'react';\nimport {cn} from '@/lib/utils';\n\nexport interface InputProps\n  extends React.InputHTMLAttributes<HTMLInputElement> {}\n\nconst Input = React.forwardRef<HTMLInputElement, InputProps>(\n  ({className, type = 'text', ...props}, ref) => {\n    return (\n      <input\n        ref={ref}\n        type={type}\n        className={cn(\n          'flex w-full h-9 py-1 px-2 rounded-md border border-gray-400 dark:border-zinc-700 text-base shadow-sm placeholder:text-gray-400 dark:placeholder:text-zinc-600 focus-visible:outline-none focus-visible:ring-[1.2px] focus-visible:border-none focus-visible:ring-neutral-500 dark:focus-visible:ring-zinc-500 disabled:cursor-not-allowed disabled:opacity-50',\n          className\n        )}\n        {...props}\n      />\n    );\n  }\n);\n\nInput.displayName = 'Input';\n\nexport {Input};\n"}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
-=======
 {
   "name": "input",
   "type": "registry:ui",
   "dependencies": [],
-  "registryDependencies": [],
+  "registryDependencies": [
+    "https://080a-104-28-199-189.ngrok-free.app/r/input.json"
+  ],
   "files": [
     {
-      "path": "registry/default/ui/input",
+      "path": "registry/default/ui/Input.tsx",
       "type": "registry:ui",
-      "content": "import React from 'react';\r\nimport {cn} from '@/lib/utils';\r\n\r\nexport interface InputProps\r\n  extends React.InputHTMLAttributes<HTMLInputElement> {}\r\n\r\nconst Input = React.forwardRef<HTMLInputElement, InputProps>(\r\n  ({className, type = 'text', ...props}, ref) => {\r\n    return (\r\n      <input\r\n        ref={ref}\r\n        type={type}\r\n        className={cn(\r\n          'flex w-full h-9 py-1 px-2 rounded-md border border-gray-400 dark:border-zinc-700 text-base shadow-sm placeholder:text-gray-400 dark:placeholder:text-zinc-600 focus-visible:outline-none focus-visible:ring-[1.2px] focus-visible:border-none focus-visible:ring-neutral-500 dark:focus-visible:ring-zinc-500 disabled:cursor-not-allowed disabled:opacity-50',\r\n          className\r\n        )}\r\n        {...props}\r\n      />\r\n    );\r\n  }\r\n);\r\n\r\nInput.displayName = 'Input';\r\n\r\nexport {Input};\r\n"
+      "content": "import React from 'react';\nimport {cn} from '@/lib/utils';\n\nexport interface InputProps\n  extends React.InputHTMLAttributes<HTMLInputElement> {}\n\nconst Input = React.forwardRef<HTMLInputElement, InputProps>(\n  ({className, type = 'text', ...props}, ref) => {\n    return (\n      <input\n        ref={ref}\n        type={type}\n        className={cn(\n          'flex w-full h-9 py-1 px-2 rounded-md border border-gray-400 dark:border-zinc-700 text-base shadow-sm placeholder:text-gray-400 dark:placeholder:text-zinc-600 focus-visible:outline-none focus-visible:ring-[1.2px] focus-visible:border-none focus-visible:ring-neutral-500 dark:focus-visible:ring-zinc-500 disabled:cursor-not-allowed disabled:opacity-50',\n          className\n        )}\n        {...props}\n      />\n    );\n  }\n);\n\nInput.displayName = 'Input';\n\nexport {Input};\n",
+      "filename": "Input"
     }
   ],
   "$schema": "https://ui.shadcn.com/schema/registry-item.json"
 }
->>>>>>> c2c830a0373599bead4655913fb85d18ddc17095

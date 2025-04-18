@@ -1,18 +1,16 @@
-<<<<<<< HEAD
-{"name":"pricingCard-v0","type":"registry:component","dependencies":[],"registryDependencies":["https://080a-104-28-199-189.ngrok-free.app/r/pricingcard.json"],"files":[{"path":"registry/default/components/pricingCard-v0.tsx","type":"registry:component","content":"import {PricingCard} from \"@/components/ui/PricingCard\"\nimport {Link} from \"@/components/ui/Link\"\n              function Component(){\n                return (\n    <>\n      <div className=\"grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 px-4\">\n      <PricingCard \n        title=\"Pro Plan\"\n        price=\"$29\"\n        validity=\"per month\"\n        description=\"Get access to all features and premium support.\"\n        features={[\n          \"Unlimited API requests\",\n          \"24/7 customer support\",\n          \"Access to premium templates\",\n          \"Advanced analytics\"\n        ]}\n        highlighted={false}\n        theme=\"dark\"\n        popular={false}\n      />\n\n      <PricingCard \n          title=\"Pro Plan\"\n          price=\"$29\"\n          validity=\"per month\"\n          description=\"Get access to all features and premium support.\"\n          features={[\n            \"Unlimited API requests\",\n            \"24/7 customer support\",\n            \"Access to premium templates\",\n            \"Advanced analytics\"\n          ]}\n          highlighted={false}\n          theme=\"dracula\"\n          popular={false}\n      />\n      </div>\n      <div className=\"ml-5 mt-5\"> For the best experience, please view the <Link to=\"/pricing\" className=\"text-blue-600 cursor-pointer\">Pricing page</Link> on a larger screen.</div>\n    </>\n  \n  \n  )\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
-=======
 {
   "name": "pricingCard-v0",
   "type": "registry:component",
   "dependencies": [],
-  "registryDependencies": ["https://uignite.in/r/pricingcard.json"],
+  "registryDependencies": [
+    "https://080a-104-28-199-189.ngrok-free.app/r/pricingcard.json"
+  ],
   "files": [
     {
       "path": "registry/default/components/pricingCard-v0.tsx",
       "type": "registry:component",
-      "content": "import PricingCard from \"@/components/ui/PricingCard.tsx\"\nimport Link from \"@/components/ui/Link.tsx\"\n              function Component(){\n                return (\r\n    <>\r\n      <div className=\"grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 px-4\">\r\n      <PricingCard \r\n        title=\"Pro Plan\"\r\n        price=\"$29\"\r\n        validity=\"per month\"\r\n        description=\"Get access to all features and premium support.\"\r\n        features={[\r\n          \"Unlimited API requests\",\r\n          \"24/7 customer support\",\r\n          \"Access to premium templates\",\r\n          \"Advanced analytics\"\r\n        ]}\r\n        highlighted={false}\r\n        theme=\"dark\"\r\n        popular={false}\r\n      />\r\n\r\n      <PricingCard \r\n          title=\"Pro Plan\"\r\n          price=\"$29\"\r\n          validity=\"per month\"\r\n          description=\"Get access to all features and premium support.\"\r\n          features={[\r\n            \"Unlimited API requests\",\r\n            \"24/7 customer support\",\r\n            \"Access to premium templates\",\r\n            \"Advanced analytics\"\r\n          ]}\r\n          highlighted={false}\r\n          theme=\"dracula\"\r\n          popular={false}\r\n      />\r\n      </div>\r\n      <div className=\"ml-5 mt-5\"> For the best experience, please view the <Link to=\"/pricing\" className=\"text-blue-600 cursor-pointer\">Pricing page</Link> on a larger screen.</div>\r\n    </>\r\n  \r\n  \r\n  )\n              }\n              "
+      "content": "import {PricingCard} from \"@/components/ui/PricingCard\"\nimport {Link} from \"@/components/ui/PricingCard\"\n              function Component(){\n                return (\r\n      {\r\n        scope: ['PricingCard'],\r\n        from: 'PricingCard',\r\n        isComp: true,\r\n      },\r\n      {\r\n        scope: ['Link'],\r\n        from: 'react-router-dom',\r\n      },\r\n    )\n              }\n              export default Component\n              "
     }
   ],
   "$schema": "https://ui.shadcn.com/schema/registry-item.json"
 }
->>>>>>> c2c830a0373599bead4655913fb85d18ddc17095

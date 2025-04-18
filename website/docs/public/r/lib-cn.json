@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-{"name":"lib-cn","type":"registry:lib","dependencies":["tailwind-merge","clsx","class-variance-authority","tailwindcss"],"registryDependencies":["https://080a-104-28-199-189.ngrok-free.app/r/lib-cn.json"],"files":[{"path":"registry/default/ui/utils.tsx","type":"registry:lib","content":"import {type ClassValue, clsx} from 'clsx';\n// import components from '../../_components.json';\n// import elements from '../../_elements';\n// import codeString from '../../_codeString';\n\nimport {twMerge} from 'tailwind-merge';\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n"}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
-=======
 {
   "name": "lib-cn",
   "type": "registry:lib",
@@ -10,14 +7,16 @@
     "class-variance-authority",
     "tailwindcss"
   ],
-  "registryDependencies": [],
+  "registryDependencies": [
+    "https://080a-104-28-199-189.ngrok-free.app/r/lib-cn.json"
+  ],
   "files": [
     {
-      "path": "registry/default/ui/lib-cn",
+      "path": "registry/default/ui/utils.tsx",
       "type": "registry:lib",
-      "content": "import {type ClassValue, clsx} from 'clsx';\n// import components from '../../_components.json';\n// import elements from '../../_elements';\n// import codeString from '../../_codeString';\n\nimport {twMerge} from 'tailwind-merge';\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n"
+      "content": "import {type ClassValue, clsx} from 'clsx';\n// import components from '../../_components.json';\n// import elements from '../../_elements';\n// import codeString from '../../_codeString';\n\nimport {twMerge} from 'tailwind-merge';\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n",
+      "filename": "utils"
     }
   ],
   "$schema": "https://ui.shadcn.com/schema/registry-item.json"
 }
->>>>>>> c2c830a0373599bead4655913fb85d18ddc17095

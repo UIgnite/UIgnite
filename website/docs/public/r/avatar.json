@@ -1,18 +1,17 @@
-<<<<<<< HEAD
-{"name":"avatar","type":"registry:ui","dependencies":[],"registryDependencies":["https://080a-104-28-199-189.ngrok-free.app/r/avatar.json"],"files":[{"path":"registry/default/ui/Avatar.tsx","type":"registry:ui","content":"import React from 'react';\nimport {cn} from '@/lib/utils';\n\nexport interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {\n  url: string;\n  alt: string;\n  className?: string;\n}\n\nconst Avatar = React.forwardRef<HTMLImageElement, AvatarProps>(\n  ({url, alt, className = '', ...props}, ref) => {\n    return (\n      <div className=\"flex gap-4 mt-2\">\n        <img\n          ref={ref}\n          src={url ? url : 'https://avatar.iran.liara.run/public'}\n          alt={alt}\n          className={cn(\n            'size-12 rounded-full border border-neutral-300',\n            className\n          )}\n          {...props}\n        />\n      </div>\n    );\n  }\n);\n\nAvatar.displayName = 'Avatar';\n\nexport default Avatar;\n"}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
-=======
 {
   "name": "avatar",
   "type": "registry:ui",
   "dependencies": [],
-  "registryDependencies": [],
+  "registryDependencies": [
+    "https://080a-104-28-199-189.ngrok-free.app/r/avatar.json"
+  ],
   "files": [
     {
-      "path": "registry/default/ui/avatar",
+      "path": "registry/default/ui/Avatar.tsx",
       "type": "registry:ui",
-      "content": "import React from 'react';\nimport {cn} from '@/lib/utils';\n\nexport interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {\n  url: string;\n  alt: string;\n  className?: string;\n}\n\nconst Avatar = React.forwardRef<HTMLImageElement, AvatarProps>(\n  ({url, alt, className = '', ...props}, ref) => {\n    return (\n      <div className=\"flex gap-4 mt-2\">\n        <img\n          ref={ref}\n          src={url ? url : 'https://avatar.iran.liara.run/public'}\n          alt={alt}\n          className={cn(\n            'size-12 rounded-full border border-neutral-300',\n            className\n          )}\n          {...props}\n        />\n      </div>\n    );\n  }\n);\n\nAvatar.displayName = 'Avatar';\n\nexport default Avatar;\n"
+      "content": "import React from 'react';\nimport {cn} from '@/lib/utils';\n\nexport interface AvatarProps extends React.ImgHTMLAttributes<HTMLImageElement> {\n  url: string;\n  alt: string;\n  className?: string;\n}\n\nconst Avatar = React.forwardRef<HTMLImageElement, AvatarProps>(\n  ({url, alt, className = '', ...props}, ref) => {\n    return (\n      <div className=\"flex gap-4 mt-2\">\n        <img\n          ref={ref}\n          src={url ? url : 'https://avatar.iran.liara.run/public'}\n          alt={alt}\n          className={cn(\n            'size-12 rounded-full border border-neutral-300',\n            className\n          )}\n          {...props}\n        />\n      </div>\n    );\n  }\n);\n\nAvatar.displayName = 'Avatar';\n\nexport {Avatar};\n",
+      "filename": "Avatar"
     }
   ],
   "$schema": "https://ui.shadcn.com/schema/registry-item.json"
 }
->>>>>>> c2c830a0373599bead4655913fb85d18ddc17095

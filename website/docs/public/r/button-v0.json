@@ -1,1 +1,17 @@
-{"name":"button-v0","type":"registry:component","dependencies":["class-variance-authority"],"registryDependencies":["https://080a-104-28-199-189.ngrok-free.app/r/spinner.json","https://080a-104-28-199-189.ngrok-free.app/r/button.json"],"files":[{"path":"registry/default/components/button-v0.tsx","type":"registry:component","content":"import {Button} from \"@/components/ui/Button\"\nimport {CommandButton} from \"@/components/ui/CommandButton\"\nimport {AlarmClockCheck} from \"@/components/ui/AlarmClockCheck\"\n              function Component(){\n                return (\n            <Button>Click Me</Button>\n    )\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
+{
+  "name": "button-v0",
+  "type": "registry:component",
+  "dependencies": ["class-variance-authority"],
+  "registryDependencies": [
+    "https://080a-104-28-199-189.ngrok-free.app/r/spinner.json",
+    "https://080a-104-28-199-189.ngrok-free.app/r/button.json"
+  ],
+  "files": [
+    {
+      "path": "registry/default/components/button-v0.tsx",
+      "type": "registry:component",
+      "content": "import {Button} from \"@/components/ui/Button\"\nimport {AlarmClockCheck} from \"@/components/ui/Button\"\n              function Component(){\n                return (\r\n      {\r\n        scope: ['Button'],\r\n        from: 'Button',\r\n        isComp: true,\r\n      },\r\n      {\r\n        scope: ['AlarmClockCheck'],\r\n        from: 'lucide-react',\r\n      },\r\n    )\n              }\n              export default Component\n              "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}
