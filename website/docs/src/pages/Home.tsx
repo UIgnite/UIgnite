@@ -232,7 +232,7 @@ const Home = () => {
           </div>
 
           {/* cards  */}
-          <div className="mt-40 flex flex-row ">
+          <div className="mt-40 flex flex-row">
             <div className="flex-2">
               <p className="text-7xl font-semibold ">
                 <span className="text-blue-400">Design</span> that adapts to
@@ -245,7 +245,7 @@ const Home = () => {
                 just possibilities.
               </p>
 
-              <Card className="bg-gradient-to-tr from-orange-600 via-pink-600 to-rose-600 p-6 mt-4 rounded-xl shadow-lg text-white w-full max-w-xl h-[45%] mx-auto">
+              <Card className="mb-6 bg-gradient-to-tr from-orange-600 via-pink-600 to-rose-600 p-6 mt-4 rounded-xl shadow-lg text-white w-full max-w-xl h-[45%] mx-auto">
                 <div className="flex gap-3 items-center">
                   <img
                     src="pain.png"
@@ -279,7 +279,7 @@ const Home = () => {
                   <button className="hover:text-white/80 transition-colors">
                     <SkipBack size={24} />
                   </button>
-                  <button className="bg-white text-black p-3 rounded-full hover:scale-110 transition">
+                  <button className="bg-white text-gray-700 p-3 rounded-full">
                     <Pause size={24} />
                   </button>
                   <button className="hover:text-white/80 transition-colors">
