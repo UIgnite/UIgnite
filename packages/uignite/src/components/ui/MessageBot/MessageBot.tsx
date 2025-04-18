@@ -90,15 +90,13 @@ const MessageBot = ({
             {messages.map((msg, index) => (
               <div
                 key={index}
-                className={`flex items-end ${msg.sender === 'user' ? 'justify-start' : 'justify-end'}`}
+                className={`flex items-end ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
               >
-                {msg.sender === 'user' && (
-                  <Avatar
-                    url="https://avatar.iran.liara.run/public"
-                    alt="User"
-                    className="mr-2 size-10"
-                  />
+                {msg.sender === 'bot' && (
+                  <Avatar url={url} alt="bot" className="mr-2 size-10" />
                 )}
+
+                
                 <div
                   className={`max-w-[75%] px-3 py-2 text-sm rounded-md shadow-sm ${
                     msg.sender === 'user'
@@ -108,8 +106,12 @@ const MessageBot = ({
                 >
                   {msg.text}
                 </div>
-                {msg.sender === 'bot' && (
-                  <Avatar url={url} alt="bot" className="ml-2 size-10" />
+                {msg.sender === 'user' && (
+                  <Avatar
+                    url="https://avatar.iran.liara.run/public"
+                    alt="User"
+                    className="ml-2 size-10"
+                  />
                 )}
               </div>
             ))}

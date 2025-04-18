@@ -11,7 +11,7 @@ export default function ComponentLayout() {
   const {componentId} = useParams();
   const navigate = useNavigate();
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center scroll-smooth">
       <div className="w-[1400px]  flex mt-10 ">
         {/* Side Bar  */}
         {
@@ -48,7 +48,7 @@ export default function ComponentLayout() {
           </div>
         }
 
-        <div className="flex-grow max-h-[90vh] px-4 scrollable-content overflow-y-scroll">
+        <div className="flex-grow max-h-[90vh] px-4 scrollable-content overflow-y-scroll scroll-smooth">
           {componentId ? (
             componentId === 'Introduction' ? (
               <>

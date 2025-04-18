@@ -25,7 +25,7 @@ export const Installation = () => {
               background: '#1e1e21',
             },
           }}
-          className="text-left text-xl h-full max-h-[50vh] rounded-md scrollable-content"
+          className="text-left text-sm h-full max-h-[50vh] rounded-md scrollable-content"
         >
           {code}
         </SyntaxHighlighter>
@@ -100,7 +100,7 @@ export const Installation = () => {
                 background: '#1e1e21',
               },
             }}
-            className="text-left text-xl h-full max-h-[50vh] rounded-md scrollable-content"
+            className="text-left text-sm h-full max-h-[50vh] rounded-md scrollable-content"
           >
             {installationDocs.tsconfig}
           </SyntaxHighlighter>
@@ -125,7 +125,7 @@ export const Installation = () => {
                 background: '#1e1e21',
               },
             }}
-            className="text-left text-xl  h-full max-h-[50vh] rounded-md scrollable-content"
+            className="text-left text-sm  h-full max-h-[50vh] rounded-md scrollable-content"
           >
             {installationDocs.tsconfigApp}
           </SyntaxHighlighter>
@@ -150,7 +150,7 @@ export const Installation = () => {
                 background: '#1e1e21',
               },
             }}
-            className="text-left text-xl h-full max-h-[50vh] rounded-md scrollable-content"
+            className="text-left text-sm h-full max-h-[50vh] rounded-md scrollable-content"
           >
             {installationDocs.vite}
           </SyntaxHighlighter>
@@ -173,7 +173,7 @@ export const Installation = () => {
                 background: '#1e1e21',
               },
             }}
-            className="text-left text-xl h-full max-h-[50vh] rounded-md scrollable-content"
+            className="text-left text-sm h-full max-h-[50vh] rounded-md scrollable-content"
           >
             {addComponentCode}
           </SyntaxHighlighter>
@@ -193,7 +193,7 @@ export const Installation = () => {
                 background: '#1e1e21',
               },
             }}
-            className="text-left text-xl  h-full max-h-[50vh] rounded-md scrollable-content"
+            className="text-left text-sm  h-full max-h-[50vh] rounded-md scrollable-content"
           >
             {installationDocs.addComponent}
           </SyntaxHighlighter>

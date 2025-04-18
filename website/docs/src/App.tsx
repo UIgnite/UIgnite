@@ -15,7 +15,7 @@ import About from './pages/About';
 
 const App = () => {
   return (
-    <Routes>
+    <Routes >
       <Route path="/" element={<Home />} />
       <Route element={<RootLayout />}>
         {/* <Route path="/auth" element={<Auth />} /> */}
