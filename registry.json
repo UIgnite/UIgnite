@@ -32,7 +32,7 @@
       "type": "registry:ui",
       "dependencies": ["class-variance-authority"],
       "registryDependencies": [
-        "https://080a-104-28-199-189.ngrok-free.app/r/Spinner.json"
+        "https://d278-104-28-199-190.ngrok-free.app/r/Spinner.json"
       ],
       "files": [
         {
@@ -70,7 +70,6 @@
       "type": "registry:ui",
       "dependencies": [],
       "registryDependencies": [
-        "https://080a-104-28-199-189.ngrok-free.app/r/Button.json"
       ],
       "files": [
         {

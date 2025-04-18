@@ -47,7 +47,7 @@ function getRegistryDependencyByScope(extraScopes) {
   for (let i = 0; i < extraScopes.length; i++) {
     if (extraScopes[i].isComp || extraScopes[i].isHook) {
       let currFrom = extraScopes[i].from.toLowerCase();
-      let currFromStr = `https://uigite.in/r/${currFrom}.json`;
+      let currFromStr = `https://d278-104-28-199-190.ngrok-free.app/r/${currFrom}.json`;
       fromString.push(currFromStr);
     }
   }
@@ -103,7 +103,7 @@ async function register(name, results) {
                 item.trim().toLowerCase()
               )
             : []),
-          `https://080a-104-28-199-189.ngrok-free.app/r/${name}.json`,
+          `https://d278-104-28-199-190.ngrok-free.app/r/${name}.json`,
         ],
       }
     );
@@ -123,7 +123,6 @@ async function register(name, results) {
             ...(registryItem.registryDependencies
               ? getRegistryDependencyByScope(element[0].extraScopes)
               : []),
-            `https://080a-104-28-199-189.ngrok-free.app/r/${name}.json`,
           ],
           files: [
             {
