@@ -1,1 +1,1 @@
-export {PricingCard, ThemeSelector} from './PricingCard';
+export {PricingCard} from './PricingCard';
