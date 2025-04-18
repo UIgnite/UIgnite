@@ -47,7 +47,7 @@ function getRegistryDependencyByScope(extraScopes) {
   for (let i = 0; i < extraScopes.length; i++) {
     if (extraScopes[i].isComp || extraScopes[i].isHook) {
       let currFrom = extraScopes[i].from.toLowerCase();
-      let currFromStr = `https://d278-104-28-199-190.ngrok-free.app/r/${currFrom}.json`;
+      let currFromStr = `https://uignite.in/r/${currFrom}.json`;
       fromString.push(currFromStr);
     }
   }
@@ -103,7 +103,7 @@ async function register(name, results) {
                 item.trim().toLowerCase()
               )
             : []),
-          `https://d278-104-28-199-190.ngrok-free.app/r/${name}.json`,
+          `https://uignite.in/r/${name}.json`,
         ],
       }
     );
