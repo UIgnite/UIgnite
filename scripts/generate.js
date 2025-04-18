@@ -11,9 +11,7 @@ async function writeComponentContent(path, content) {
   }
 }
 
-function mapScopeToFilename(content) {
-  return {};
-}
+function mapScopeToFilename(content) {}
 
 async function register(name, results) {
   try {
@@ -114,26 +112,26 @@ async function register(name, results) {
 
 (async () => {
   const regex =
-    /\{\s*id:\s*'([^']*)'\s*,\s*scope:\s*\{([^}]*)\}\s*,\s*extraScopes:\s*\[((?:[^[\]]|\[(?:[^[\]]|\[[^\]]*\])*\])*)\]/g;
+    /\{\s*id:\s*'([^']*)'\s*,\s*scope:\s*\{([^}]*)\}(?:\s*,\s*extraScopes:\s*\[((?:[^[\]]|\[(?:[^[\]]|\[[^\]]*\])*\])*)\])?(?:\s*,\s*variation:\s*\[([^\]]*)\])?\s*,\s*element:\s*`((?:[^`\\]|\\.|\\`|\\$\{(?:[^{}]|\{[^}]*\})*\})*)`/g;
   const results = [];
 
   const inputString = await fs.readFile('./website/docs/_elements.ts', 'utf-8');
-  // console.log( inputString)
   let match;
-  const abc = regex.exec(inputString);
-  // console.log(abc)
   while ((match = regex.exec(inputString)) !== null) {
-    // console.log("match" , match)
     const id = match[1];
     const scope = match[2].trim().replaceAll(' ', '').split(',');
-    const element = match[3];
-    // console.log(id )
-    // console.log(scope)
-    // console.log(element)
 
-    results.push({id, scope, element});
+    let extraScopes;
+    if (match[3]) {
+      const cleanedExtraScope = `[${match[3]}]`
+        .replace(/(\w+):/g, '"$1":')
+        .replace(/'/g, '"')
+        .replace(/,\s*([}\]])/g, '$1');
+      extraScopes = JSON.parse(cleanedExtraScope);
+    }
+
+    results.push({id, scope, extraScopes, element: match[5]});
   }
-  console.log(results);
 
   for (let index = 0; index < registoryConfig['items'].length; index++) {
     const element = registoryConfig['items'][index];
