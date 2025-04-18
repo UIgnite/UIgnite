@@ -34,6 +34,7 @@ import {
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import {Eye, EyeOff, Info} from 'lucide-react';
+import {Eye, EyeOff, Info} from 'lucide-react';
 import {AlarmClockCheck} from 'lucide-react';
 
 const elements = [
@@ -67,7 +68,6 @@ const elements = [
     />
   </AccordionWrapper>
 </div>
-
     `,
     variation: [],
   },
@@ -679,25 +679,10 @@ const elements = [
     ],
     element: `
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 px-4">
-      <PricingCard 
-        title="Pro Plan"
-        price="$29"
-        validity="per month"
-        description="Get access to all features and premium support."
-        features={[
-          "Unlimited API requests",
-          "24/7 customer support",
-          "Access to premium templates",
-          "Advanced analytics"
-        ]}
-        highlighted={false}
-        theme="dark"
-        popular={false}
-      />
-      <PricingCard 
+      <div className="flex  justify-center items-center">
+        <PricingCard 
           title="Pro Plan"
-          price="$29"
+          price="29"
           validity="per month"
           description="Get access to all features and premium support."
           features={[
@@ -707,11 +692,11 @@ const elements = [
             "Advanced analytics"
           ]}
           highlighted={false}
-          theme="dracula"
+          theme="dark"
           popular={false}
-      />
+        />
       </div>
-      <div className="ml-5 mt-5"> For the best experience, please view the <Link to="/pricing" className="text-blue-600 cursor-pointer">Pricing page</Link> on a larger screen.</div>
+      <div className="ml-2 mt-5"> For the best experience, please view the <Link to="/pricing" className="text-blue-600 cursor-pointer">Pricing page</Link> on a larger screen.</div>
     </>
   `,
     variation: [],
@@ -894,7 +879,7 @@ const elements = [
       },
     ],
     element: `
-      <Tabs defaultVal="Before">
+      <Tabs defaultVal="before">
         <TabList className="w-[400px] ">
           <Tab title="Before" value="before"></Tab>
           <Tab title="After" value="after"></Tab>
@@ -903,7 +888,7 @@ const elements = [
           content={<div className="m-2 p-2 rounded-md dark:bg-neutral-800"> Preview Content from Tab 1 </div>}
           value="before" 
         ></TabContent>
-        <TabContent className="p-2 "
+        <TabContent 
           content={<div className="m-2 p-2 rounded-md dark:bg-neutral-800"> Code Content of Tab 2 </div>} 
           value="after"
         ></TabContent>

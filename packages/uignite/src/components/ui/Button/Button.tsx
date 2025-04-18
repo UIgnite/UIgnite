@@ -76,7 +76,7 @@ const Button = React.forwardRef<
               'border border-gray-500 bg-transparent hover:bg-gray-700 hover:text-white',
             secondary: 'bg-rose-500 text-white hover:bg-rose-400',
             ghost:
-              'dark:hover:bg-gray-700 dark:text-white text-gray-700 hover:bg-gray-800 hover:text-gray-100',
+              'dark:hover:bg-zinc-800 dark:text-white text-gray-700 hover:bg-zinc-800 hover:text-gray-100',
             glass:
               'dark:bg-white/10 backdrop-blur-md border border-black/10 dark:border-white/20 dark:text-white dark:hover:bg-white/20 hover:bg-white/60',
             gradient:
