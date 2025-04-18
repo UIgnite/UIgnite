@@ -33,7 +33,7 @@ export default function ComponentLayout() {
                   aria-selected={componentId?.toLowerCase().trim() == component.id.toLowerCase().trim()}
                     key={index}
                     onClick={() => navigate(`/components/${component.id}`)}
-                    className="  text-left aria-selected:bg-neutral-700/50 cursor-pointer p-2 rounded-md hover:bg-neutral-200 dark:hover:text-white dark:text-neutral-300 dark:hover:bg-neutral-700"
+                    className="  text-left dark:aria-selected:bg-neutral-700/50 aria-selected:bg-neutral-200/80 cursor-pointer p-2 rounded-md hover:bg-neutral-200 dark:hover:text-white dark:text-neutral-300 dark:hover:bg-neutral-700"
                   >
                     {component.name}
                   </button>
