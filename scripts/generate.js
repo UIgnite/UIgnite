@@ -82,7 +82,7 @@ async function register(name, results) {
         const filename = file.path
           .split('/')
           [file.path.split('/').length - 1].split('.')[0];
-        const newPath = `registry/default/ui/${filename}.tsx`;
+        const newPath = `components/ui/${filename}.tsx`;
         return {...file, content, path: newPath, filename};
       })
     );
@@ -126,7 +126,7 @@ async function register(name, results) {
           ],
           files: [
             {
-              path: `registry/default/components/${element[0].id}-v0.tsx`,
+              path: `components/${element[0].id}-v0.tsx`,
               type: 'registry:component',
               content: `${element[0].scope.map((ele) => getImportsMapByScope(element[0].extraScopes))}
               function Component(){
