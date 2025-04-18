@@ -1,58 +1,80 @@
-import {Avatar, Tooltip} from '@pkgs/uignite';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter
+} from '@pkgs/uignite'
 
-const AvatarGroup = () => {
-  const avatars: {url: string; alt: string}[] = [
-    {
-      url: '/assets/avatars/aman.png',
-      alt: 'Aman Gupta',
-    },
-    {
-      url: '/assets/avatars/ram.jpg',
-      alt: 'Ram Bhardwaj',
-    },
-    {
-      url: '/assets/avatars/aditya.jpg',
-      alt: 'Aditya Sharma',
-    },
-    {
-      url: '/assets/avatars/saurav.png',
-      alt: 'Saurav Jha',
-    },
-    {
-      url: '/assets/avatars/rohit.jpg',
-      alt: 'Rohit Jha',
-    },
-    {
-      url: '/assets/avatars/jahanwee.jpg',
-      alt: 'Jahanwee',
-    },
-  ];
-
+const TestCards = () => {
   return (
-    <div className="flex items-center mt-6 pl-2 overflow-visible">
-      {avatars.map((avatar, index) => (
-        <div
-          key={index}
-          className={`relative transition-all duration-300 ease-in-out ${
-            index !== 0 ? '-ml-7' : ''
-          } hover:z-20`}
-        >
-          <Tooltip title={avatar.alt} options={{tooltipStyle: {width: 'auto'}}}>
-            <Avatar
-              url={avatar.url}
-              alt={avatar.alt}
-              className={`
-            w-12 h-12 rounded-full object-cover
-            ring-2 ring-white shadow-md
-            hover:scale-110 hover:white-500
-            transition-transform duration-300 ease-in-out
-          `}
-            />
-          </Tooltip>
-        </div>
-      ))}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+      {/* Card 1 */}
+      <Card className="bg-[#1DB954] text-white">
+        <CardHeader>
+          <CardTitle>Blinding Lights</CardTitle>
+          <CardDescription>The Weeknd</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="text-sm opacity-90">Album: After Hours</div>
+        </CardContent>
+        <CardFooter>
+          <button className="mt-2 text-sm bg-white text-[#1DB954] px-4 py-1 rounded-full hover:bg-opacity-90 transition">
+            ▶ Play
+          </button>
+        </CardFooter>
+      </Card>
+
+      {/* Card 2 */}
+      <Card className="bg-[#FF5E5E] text-white">
+        <CardHeader>
+          <CardTitle>Shape of You</CardTitle>
+          <CardDescription>Ed Sheeran</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="text-sm opacity-90">Album: Divide</div>
+        </CardContent>
+        <CardFooter>
+          <button className="mt-2 text-sm bg-white text-[#FF5E5E] px-4 py-1 rounded-full hover:bg-opacity-90 transition">
+            ▶ Play
+          </button>
+        </CardFooter>
+      </Card>
+
+      {/* Card 3 */}
+      <Card className="bg-[#3B82F6] text-white">
+        <CardHeader>
+          <CardTitle>Stay</CardTitle>
+          <CardDescription>The Kid LAROI, Justin Bieber</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="text-sm opacity-90">Album: Stay (Single)</div>
+        </CardContent>
+        <CardFooter>
+          <button className="mt-2 text-sm bg-white text-[#3B82F6] px-4 py-1 rounded-full hover:bg-opacity-90 transition">
+            ▶ Play
+          </button>
+        </CardFooter>
+      </Card>
+
+      {/* Card 4 */}
+      <Card className="bg-[#8B5CF6] text-white">
+        <CardHeader>
+          <CardTitle>Levitating</CardTitle>
+          <CardDescription>Dua Lipa</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="text-sm opacity-90">Album: Future Nostalgia</div>
+        </CardContent>
+        <CardFooter>
+          <button className="mt-2 text-sm bg-white text-[#8B5CF6] px-4 py-1 rounded-full hover:bg-opacity-90 transition">
+            ▶ Play
+          </button>
+        </CardFooter>
+      </Card>
     </div>
   );
 };
 
-export default AvatarGroup;
+export default TestCards;
