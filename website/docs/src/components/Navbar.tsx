@@ -1,5 +1,5 @@
 import {Link, NavLink, useLocation} from 'react-router-dom';
-import {ThemeToggleBtn} from '@pkgs/uignite';
+import {Button, ThemeToggleBtn} from '@pkgs/uignite';
 import {GitHubLogoIcon} from '@radix-ui/react-icons';
 import SearchBar from '../pages/components/Search';
 import {useEffect} from 'react';
@@ -56,6 +56,7 @@ const Navbar = () => {
           >
             <p>Feedback</p>
           </NavLink>
+
           {/* <NavLink
             to="/components"
             className="cursor-pointer p-2 rounded opacity-70 hover:opacity-100"
