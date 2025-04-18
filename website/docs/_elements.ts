@@ -260,7 +260,7 @@ const elements = [
       useEffect,
       Info,
       SignUp,
-      SignIn
+      SignIn,
     },
     extraScopes: [
       {
@@ -289,13 +289,13 @@ const elements = [
         from: 'lucide-react',
       },
       {
-        scope:['SignUp'],
-        from: 'SignUp'
+        scope: ['SignUp'],
+        from: 'SignUp',
       },
       {
-        scope: ["SignIn"],
-        from: 'SignIn'
-      }
+        scope: ['SignIn'],
+        from: 'SignIn',
+      },
     ],
     element: `
   function TwitterCard () {
@@ -428,7 +428,7 @@ const elements = [
       `,
       `
       <SignUp />
-      `
+      `,
     ],
   },
   {
@@ -958,7 +958,6 @@ const elements = [
      `,
     variation: [],
   },
-
 
   {
     id: 'textarea',
