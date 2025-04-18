@@ -1,5 +1,5 @@
 import {Outlet, useParams} from 'react-router-dom';
-import ComponentList from './componentList';
+// import ComponentList from './componentList';
 import {components} from '../../utils/lib';
 import {useNavigate} from 'react-router-dom';
 // import {Button} from '@pkgs/uignite/dist';
