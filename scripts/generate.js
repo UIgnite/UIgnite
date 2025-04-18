@@ -27,7 +27,7 @@ function getImportsMapByScope(extraScopes) {
     }
 
     if (extraScopes[i].isComp) {
-      currStr = `import {${currScope}} from '@/componenets/ui/${currFrom}'\n`;
+      currStr = `import {${currScope}} from '@/components/ui/${currFrom}'\n`;
     } else if (extraScopes[i].isHook) {
       currStr = `import {${currScope}} from '@/hooks/${currFrom}'\n`;
     } else {
@@ -126,7 +126,7 @@ async function register(name, results) {
           ],
           files: [
             {
-              path: `components/${element[0].id}-v0.tsx`,
+              path: `app/page.tsx`,
               type: 'registry:component',
               content: `${element[0].scope.map((ele) => getImportsMapByScope(element[0].extraScopes))}
               function Component(){
