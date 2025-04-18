@@ -1,17 +1,1 @@
-{
-  "name": "resizable-v0",
-  "type": "registry:component",
-  "dependencies": [],
-  "registryDependencies": [
-    "https://uigite.in/r/resizable.json",
-    "https://080a-104-28-199-189.ngrok-free.app/r/resizable.json"
-  ],
-  "files": [
-    {
-      "path": "registry/default/components/resizable-v0.tsx",
-      "type": "registry:component",
-      "content": "import {Resizable} from '@/componenets/ui/Resizable'\n\n              function Component(){\n                return (<div className='relative w-[500px] h-26'>\n      <Resizable className='h-20'>\n        <div className='w-full h-full bg-amber-200'></div>\n        <div className='w-full h-full bg-rose-200'></div>\n      </Resizable>\n    </div>)\n              }\n              export default Component\n              "
-    }
-  ],
-  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
-}
+{"name":"resizable-v0","type":"registry:component","dependencies":[],"registryDependencies":["https://d278-104-28-199-190.ngrok-free.app/r/resizable.json"],"files":[{"path":"registry/default/components/resizable-v0.tsx","type":"registry:component","content":"import {Resizable} from '@/componenets/ui/Resizable'\n\n              function Component(){\n                return (<div className='relative w-[500px] h-26'>\n      <Resizable className='h-20'>\n        <div className='w-full h-full bg-amber-200'></div>\n        <div className='w-full h-full bg-rose-200'></div>\n      </Resizable>\n    </div>)\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}

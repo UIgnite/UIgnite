@@ -1,5 +1,5 @@
 import React, {useCallback, useRef, useState} from 'react';
-import {Button} from '@/components/Button';
+import {Button} from '@/components/ui/Button';
 
 function Dropdown({
   children,
