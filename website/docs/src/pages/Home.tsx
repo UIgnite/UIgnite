@@ -81,7 +81,7 @@ const Home = () => {
       name: 'Hitesh Choudhary',
       title: 'Founder of ChaiCode',
       message:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?',
+        'Used UIgnite once. Now my students think I’m a Tailwind wizard. Jokes on them — it’s all prebuilt.',
       rating: 5,
     },
     {
@@ -89,22 +89,23 @@ const Home = () => {
       name: 'Piyush Garg',
       title: 'Co-founder of OnlyFans',
       message:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?',
+        'I came for the components. Stayed because the docs didn’t make me cry. 10/10, would copy-paste again.',
       rating: 5,
     },
     {
       imageSrc: 'anirudh-sir.png',
       name: 'Anirudh Jwala',
-      title: 'Gareebo ko Books Dene Wale',
-      message: 'niet?',
+      title: 'Gareebo Ko Books Dene Wala',
+      message:
+        'Tried building a form without UIgnite once. Laptop almost flew out the window. Never again.',
       rating: 5,
     },
     {
       imageSrc: 'mukul-sir.png',
       name: 'Mukul Padwal',
-      title: 'xxx',
+      title: `Everyone's Favourite TA`,
       message:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?',
+        'UIgnite’s dark mode support is so good, I forgot what light mode looks like. My retinas thank you.',
       rating: 5,
     },
     {
@@ -112,7 +113,7 @@ const Home = () => {
       name: 'Manu Arora',
       title: 'Founder of Aceternity',
       message:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?',
+        'If Aceternity UI had a long-lost sibling, it’d be UIgnite. Except this one brings snacks and types everything.',
       rating: 5,
     },
     {
@@ -120,10 +121,11 @@ const Home = () => {
       name: 'Vinayak Sarawagi',
       title: 'Founder of IntentJS',
       message:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?',
+        'UIgnite components are like intentions — pure, minimal, and surprisingly powerful. Even my backend friends use them now.',
       rating: 5,
     },
   ];
+
   return (
     <CustomTheme>
       <Navbar />
@@ -223,7 +225,8 @@ const Home = () => {
           <div className="mt-40 flex flex-row ">
             <div className="flex-2">
               <p className="text-7xl font-semibold ">
-                <span className="text-blue-400">Design</span> that adapts to you.
+                <span className="text-blue-400">Design</span> that adapts to
+                you.
               </p>
               <p className="mt-3 text-md dark:text-zinc-300 text-zinc-600">
                 Uignite lets you tailor every detail with ease. With built-in
@@ -231,58 +234,55 @@ const Home = () => {
                 interface can match your brand, mood, or imagination no limits,
                 just possibilities.
               </p>
-              
+
               <Card className="bg-gradient-to-tr from-orange-600 via-pink-600 to-rose-600 p-6 mt-4 rounded-xl shadow-lg text-white w-full max-w-xl h-[45%] mx-auto">
-      <div className="flex gap-3 items-center">
-        <img
-          src="pain.png"
-          alt="Album Cover"
-          className="w-32 h-32 rounded-xl object-cover"
-        />
-        <div className="flex-1">
-          <h2 className="text-xl font-semibold">Today Mix</h2>
-          <p className="text-sm opacity-90 mb-1">15 Tracks</p>
-          <p className="text-md font-medium">UIgnite Radio</p>
-          <div className="flex items-center mt-4 gap-2 text-xs">
-            <span>0:10</span>
-            <input
-              type="range"
-              defaultValue="34"
-              className="w-full accent-white"
-            />
-            <span>3:42</span>
-          </div>
-        </div>
-        <div className="text-white text-xl">
-          <button className="hover:scale-110 transition">
-            <Heart size={24} />
-          </button>
-        </div>
-      </div>
-      <div className="flex justify-center items-center gap-6 mt-6 text-2xl">
-        <button className="hover:text-white/80 transition-colors">
-          <RefreshCw size={24} />
-        </button>
-        <button className="hover:text-white/80 transition-colors">
-          <SkipBack size={24} />
-        </button>
-        <button className="bg-white text-black p-3 rounded-full hover:scale-110 transition">
-          <Pause size={24} />
-        </button>
-        <button className="hover:text-white/80 transition-colors">
-          <SkipForward size={24} />
-        </button>
-        <button className="hover:text-white/80 transition-colors">
-          <Shuffle size={24} />
-        </button>
-      </div>
-    </Card>
-              
-              
-             
+                <div className="flex gap-3 items-center">
+                  <img
+                    src="pain.png"
+                    alt="Album Cover"
+                    className="w-32 h-32 rounded-xl object-cover"
+                  />
+                  <div className="flex-1">
+                    <h2 className="text-xl font-semibold">Today Mix</h2>
+                    <p className="text-sm opacity-90 mb-1">15 Tracks</p>
+                    <p className="text-md font-medium">UIgnite Radio</p>
+                    <div className="flex items-center mt-4 gap-2 text-xs">
+                      <span>0:10</span>
+                      <input
+                        type="range"
+                        defaultValue="34"
+                        className="w-full accent-white"
+                      />
+                      <span>3:42</span>
+                    </div>
+                  </div>
+                  <div className="text-white text-xl">
+                    <button className="hover:scale-110 transition">
+                      <Heart size={24} />
+                    </button>
+                  </div>
+                </div>
+                <div className="flex justify-center items-center gap-6 mt-6 text-2xl">
+                  <button className="hover:text-white/80 transition-colors">
+                    <RefreshCw size={24} />
+                  </button>
+                  <button className="hover:text-white/80 transition-colors">
+                    <SkipBack size={24} />
+                  </button>
+                  <button className="bg-white text-black p-3 rounded-full hover:scale-110 transition">
+                    <Pause size={24} />
+                  </button>
+                  <button className="hover:text-white/80 transition-colors">
+                    <SkipForward size={24} />
+                  </button>
+                  <button className="hover:text-white/80 transition-colors">
+                    <Shuffle size={24} />
+                  </button>
+                </div>
+              </Card>
             </div>
             <div className="flex-2 ml-4 bg-transparent max-h-[70vh] overflow-scroll scrollable-content">
-              <img src="card.png" alt="" className='w-[600px] rounded-xl' />
+              <img src="card.png" alt="" className="w-[600px] rounded-xl" />
             </div>
           </div>
 
