@@ -1,6 +1,6 @@
 import {getElementByCompId} from '@/utils/lib';
 import {Tab, Tabs, TabContent, TabList, Button} from '@pkgs/uignite';
-import {LiveError, LivePreview, LiveProvider} from 'react-live';
+import {LivePreview, LiveProvider} from 'react-live';
 import CopyButton from './copyButton';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import {atomOneDarkReasonable} from 'react-syntax-highlighter/dist/esm/styles/hljs';

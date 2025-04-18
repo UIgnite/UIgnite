@@ -37,7 +37,7 @@ import {
 } from '@pkgs/uignite';
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react';
-import {Eye, EyeOff, Info, Star} from 'lucide-react';
+import {Eye, EyeOff, Info} from 'lucide-react';
 import {AlarmClockCheck} from 'lucide-react';
 
 const elements = [
