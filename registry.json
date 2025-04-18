@@ -126,18 +126,6 @@
       ]
     },
     {
-      "name": "navmenu",
-      "type": "registry:ui",
-      "dependencies": [],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "packages/uignite/src/components/ui/NavMenu/NavMenu.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
       "name": "pricingcard",
       "type": "registry:ui",
       "dependencies": [],

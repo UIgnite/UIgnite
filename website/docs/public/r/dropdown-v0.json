@@ -1,1 +1,16 @@
-{"name":"dropdown-v0","type":"registry:component","dependencies":[],"registryDependencies":["https://d278-104-28-199-190.ngrok-free.app/r/dropdown.json"],"files":[{"path":"app/page.tsx","type":"registry:component","content":"import {Dropdown} from '@/components/ui/Dropdown'\n\n              function Component(){\n                return (\r\n      <Dropdown \r\n        button={\r\n        <div className=\" bg-black p-2 px-4 text-gray-100  dark:bg-white dark:text-black rounded cursor-pointer\">\r\n          Menu\r\n        </div>}   \r\n        title=\"Options\"\r\n      >\r\n        <button className=\" text-black px-4 py-2 text-left hover:bg-neutral-300 rounded\">Profile</button>\r\n        <button className=\"text-black px-4 py-2 text-left hover:bg-neutral-300 rounded\">Settings</button>\r\n        <button className=\"text-black px-4 py-2 text-left hover:bg-neutral-300 rounded\">Logout</button>\r\n      </Dropdown> \r\n    )\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
+{
+  "name": "dropdown-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "registryDependencies": [
+    "https://d278-104-28-199-190.ngrok-free.app/r/dropdown.json"
+  ],
+  "files": [
+    {
+      "path": "app/page.tsx",
+      "type": "registry:component",
+      "content": "import {Dropdown} from '@/components/ui/Dropdown'\n\n              function Component(){\n                return (\r\n      <Dropdown \r\n        button={\r\n        <div className=\" bg-black p-2 px-4 text-gray-100  dark:bg-white dark:text-black rounded cursor-pointer\">\r\n          Menu\r\n        </div>}   \r\n        title=\"Options\"\r\n      >\r\n        <button className=\" text-black px-4 py-2 text-left hover:bg-neutral-300 rounded\">Profile</button>\r\n        <button className=\"text-black px-4 py-2 text-left hover:bg-neutral-300 rounded\">Settings</button>\r\n        <button className=\"text-black px-4 py-2 text-left hover:bg-neutral-300 rounded\">Logout</button>\r\n      </Dropdown> \r\n    )\n              }\n              export default Component\n              "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

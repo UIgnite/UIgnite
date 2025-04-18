@@ -99,7 +99,7 @@ const elements = [
   },
   {
     id: 'avatar',
-    scope: {Avatar,Tooltip},
+    scope: {Avatar, Tooltip},
     element: `
       <div className = "flex flex-row gap-2" >
         <Avatar url={"/piyush-sir.png"} alt={"user"} />
@@ -160,7 +160,7 @@ const elements = [
   );
 };
 
-      `
+      `,
     ],
   },
   {

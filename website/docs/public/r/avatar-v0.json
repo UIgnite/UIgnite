@@ -1,1 +1,14 @@
-{"name":"avatar-v0","type":"registry:component","dependencies":[],"registryDependencies":[],"files":[{"path":"app/page.tsx","type":"registry:component","content":",\n              function Component(){\n                return (\r\n      <div className = \"flex flex-row gap-2\" >\r\n        <Avatar url={\"/piyush-sir.png\"} alt={\"user\"} />\r\n        <Avatar url={\"/hitesh-sir.png\"} alt={\"user\"} />\r\n      </div>\r\n    )\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
+{
+  "name": "avatar-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "app/page.tsx",
+      "type": "registry:component",
+      "content": ",\n              function Component(){\n                return (\r\n      <div className = \"flex flex-row gap-2\" >\r\n        <Avatar url={\"/piyush-sir.png\"} alt={\"user\"} />\r\n        <Avatar url={\"/hitesh-sir.png\"} alt={\"user\"} />\r\n      </div>\r\n    )\n              }\n              export default Component\n              "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

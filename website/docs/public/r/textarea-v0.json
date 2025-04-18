@@ -1,1 +1,16 @@
-{"name":"textarea-v0","type":"registry:component","dependencies":[],"registryDependencies":["https://d278-104-28-199-190.ngrok-free.app/r/textarea.json"],"files":[{"path":"app/page.tsx","type":"registry:component","content":"import {TextArea} from '@/components/ui/TextArea'\n\n              function Component(){\n                return (<TextArea placeholder=\"Write something...\" />)\n              }\n              export default Component\n              "}],"$schema":"https://ui.shadcn.com/schema/registry-item.json"}
+{
+  "name": "textarea-v0",
+  "type": "registry:component",
+  "dependencies": [],
+  "registryDependencies": [
+    "https://d278-104-28-199-190.ngrok-free.app/r/textarea.json"
+  ],
+  "files": [
+    {
+      "path": "app/page.tsx",
+      "type": "registry:component",
+      "content": "import {TextArea} from '@/components/ui/TextArea'\n\n              function Component(){\n                return (<TextArea placeholder=\"Write something...\" />)\n              }\n              export default Component\n              "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

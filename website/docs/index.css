@@ -197,7 +197,6 @@ input::-webkit-search-cancel-button {
   @apply cursor-grabbing;
 }
 
-
 @keyframes infinite-scroll {
   0% {
     transform: translateX(0%);

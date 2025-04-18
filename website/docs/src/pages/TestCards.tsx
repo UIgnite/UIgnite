@@ -4,8 +4,8 @@ import {
   CardTitle,
   CardDescription,
   CardContent,
-  CardFooter
-} from '@pkgs/uignite'
+  CardFooter,
+} from '@pkgs/uignite';
 
 const TestCards = () => {
   return (
