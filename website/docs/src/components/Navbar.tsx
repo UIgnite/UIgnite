@@ -44,6 +44,18 @@ const Navbar = () => {
           >
             <p>Docs</p>
           </NavLink>
+          <NavLink
+            to="/pricing"
+            className="cursor-pointer p-2 rounded opacity-70 hover:opacity-100"
+          >
+            <p>Pricing</p>
+          </NavLink>
+          <NavLink
+            to="/feedback"
+            className="cursor-pointer p-2 rounded opacity-70 hover:opacity-100"
+          >
+            <p>Feedback</p>
+          </NavLink>
           {/* <NavLink
             to="/components"
             className="cursor-pointer p-2 rounded opacity-70 hover:opacity-100"
