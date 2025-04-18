@@ -37,7 +37,7 @@ import {
 } from '@pkgs/uignite';
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react';
-import {Eye, EyeOff, Info} from 'lucide-react';
+import {Eye, EyeOff, Info, MessageCircle} from 'lucide-react';
 import {AlarmClockCheck} from 'lucide-react';
 
 const elements = [
@@ -635,11 +635,25 @@ const elements = [
   },
   {
     id: 'messagebot',
-    scope: {MessageBot},
+    scope: {MessageBot, Avatar, Input, useState, MessageCircle},
     extraScopes: [
       {
         scope: ['MessageBot'],
         from: 'MessageBot',
+        isComp: true,
+      },
+      {
+        scope: ['Avatar'],
+        from: 'Avatar',
+        isComp: true,
+      },
+      {
+        scope: ['MessageCircle'],
+        from: 'lucide-react',
+      },
+      {
+        scope: ['Input'],
+        from: 'Input',
         isComp: true,
       },
     ],

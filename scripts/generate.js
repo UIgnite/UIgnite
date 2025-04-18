@@ -108,9 +108,11 @@ async function register(name, results) {
       }
     );
 
-    const element = results.filter(
-      (e) => e.id.toLowerCase().trim() == name.toLowerCase().trim()
-    );
+    const element = results.filter((e) => {
+      console.log('id = ', e.id);
+      console.log('name = ', name);
+      return e.id.toLowerCase().trim() == name.toLowerCase().trim();
+    });
     if (element.length > 0) {
       await writeComponentContent(
         `./website/docs/public/r/${element[0].id.toLowerCase()}-v0.json`,

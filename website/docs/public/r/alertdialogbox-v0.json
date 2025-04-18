@@ -1,13 +1,16 @@
 {
-  "name": "resizable-v0",
+  "name": "AlertDialogBox-v0",
   "type": "registry:component",
-  "dependencies": [],
-  "registryDependencies": ["https://uignite.in/r/resizable.json"],
+  "dependencies": ["react"],
+  "registryDependencies": [
+    "https://uignite.in/r/button.json",
+    "https://uignite.in/r/alertdialogbox.json"
+  ],
   "files": [
     {
       "path": "app/page.tsx",
       "type": "registry:component",
-      "content": "import {Resizable} from '@/components/ui/Resizable'\n\n              function Component(){\n                return (<div className='relative w-[500px] h-26'>\n      <Resizable className='h-20'>\n        <div className='w-full h-full bg-amber-200'></div>\n        <div className='w-full h-full bg-rose-200'></div>\n      </Resizable>\n    </div>)\n              }\n              export default Component\n              ",
+      "content": "import {Button} from '@/components/ui/Button'\nimport {AlertDialogBox} from '@/components/ui/AlertDialogBox'\nimport {useState} from 'react'\n ,import {Button} from '@/components/ui/Button'\nimport {AlertDialogBox} from '@/components/ui/AlertDialogBox'\nimport {useState} from 'react'\n ,import {Button} from '@/components/ui/Button'\nimport {AlertDialogBox} from '@/components/ui/AlertDialogBox'\nimport {useState} from 'react'\n \n              function Component(){\n                return (\n      <AlertDialogBox\n        title=\"Delete account?\"\n        description=\"This action cannot be undone. Are you sure you want to delete your account permanently?\"\n      />\n    )\n              }\n              export default Component\n              ",
       "cssVars": {
         "theme": {
           "--color-dark-primary": "#0f0f0f",

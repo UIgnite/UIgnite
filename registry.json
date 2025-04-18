@@ -18,11 +18,23 @@
     {
       "name": "avatar",
       "type": "registry:ui",
-      "dependencies": [],
+      "dependencies": ["react"],
       "registryDependencies": [],
       "files": [
         {
           "path": "packages/uignite/src/components/ui/Avatar/Avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "alertdialogbox",
+      "type": "registry:ui",
+      "dependencies": ["react"],
+      "registryDependencies": ["https://uignite.in/r/Button.json"],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/ui/AlertDialogBox/AlertDialogBox.tsx",
           "type": "registry:ui"
         }
       ]
@@ -102,8 +114,11 @@
     {
       "name": "messagebot",
       "type": "registry:ui",
-      "dependencies": [],
-      "registryDependencies": [],
+      "dependencies": ["react", "lucide-react"],
+      "registryDependencies": [
+        "https://uignite.in/r/Avatar.json",
+        "https://uignite.in/r/Input.json"
+      ],
       "files": [
         {
           "path": "packages/uignite/src/components/ui/MessageBot/MessageBot.tsx",

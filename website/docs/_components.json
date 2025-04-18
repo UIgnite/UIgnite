@@ -64,7 +64,7 @@
   },
   {
     "id": "AlertDialogBox",
-    "name": "AlertDialogBox",
+    "name": "Alert Dialog Box",
     "desc": "A simple and reusable alert dialog for confirming critical user actions like deleting data, logging out, or other irreversible steps.",
     "path": "/components/ui/AlertDialogBox/AlertDialogBox.tsx",
     "previewImageUrl": "/assets/previewimages/alertdialogbox.png",
@@ -416,7 +416,7 @@
   },
   {
     "id": "InputOtp",
-    "name": "InputOtp",
+    "name": "Input Otp",
     "desc": "A sleek lil input for taking OTP ",
     "path": "/components/ui/InputOTP/InputOTP.tsx",
     "previewImageUrl": "",
@@ -461,7 +461,7 @@
   },
   {
     "id": "MessageBot",
-    "name": "MessageBot",
+    "name": "Message Bot",
     "desc": "A lightweight, responsive floating chatbot for seamless user interaction. Ideal for support, onboarding, or adding a dynamic, conversational touch to your site.",
     "path": "/components/ui/MessageBot/MessageBot.tsx",
     "previewImageUrl": "",
@@ -569,7 +569,7 @@
   },
   {
     "id": "PricingCard",
-    "name": "PricingCard",
+    "name": "Pricing Card",
     "desc": "Flexible pricing card with theme-based styling, animated hover effects, and support for highlighting popular plans. Includes theme toggle via ThemeSelector.",
     "path": "/components/ui/PricingCard/PricingCard.tsx",
     "previewImageUrl": "/assets/previewimages/pricingcard.png",
@@ -820,7 +820,7 @@
   },
   {
     "id": "TextArea",
-    "name": "TextArea",
+    "name": "Text Area",
     "desc": "A fully styled, dark mode–ready TextArea component for extended input. Clean design, smooth interactions, and accessible focus states for a polished user experience.",
     "path": "/components/ui/TextArea/TextArea.tsx",
     "previewImageUrl": "/assets/previewimages/textarea.png",
@@ -898,7 +898,7 @@
   },
   {
     "id": "Tooltip",
-    "name": "Tooltip",
+    "name": "Tool Tip",
     "desc": "Hoverable tooltip for quick hints, labels, or sass. Comes with delay and styling props. Smooth fade. Works well with icons, buttons, or anything inline.",
     "path": "/components/ui/Tooltip/Tooltip.tsx",
     "previewImageUrl": "",
@@ -955,7 +955,7 @@
   },
   {
     "id": "VideoPlayer",
-    "name": "VideoPlayer",
+    "name": "Video Player",
     "desc": "A professional, fully responsive VideoPlayer component with intuitive controls and seamless playback. Supports multiple video formats, ensures cross-device compatibility, and integrates effortlessly with any design system.",
     "path": "/components/ui/VideoPlayer/VideoPlayer.tsx",
     "previewImageUrl": "",

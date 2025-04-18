@@ -1,7 +1,7 @@
 {
   "name": "avatar",
   "type": "registry:ui",
-  "dependencies": [],
+  "dependencies": ["react"],
   "registryDependencies": ["https://uignite.in/r/avatar.json"],
   "files": [
     {
