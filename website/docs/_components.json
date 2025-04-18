@@ -2,13 +2,13 @@
   {
     "id": "Accordion",
     "name": "Accordion",
-    "desc": "An interactive and accessible Accordion component with optional control, built with React. Expand content like FAQs, collapsible menus, or dramatic reveals. 🎭",
+    "desc": "A sleek, accessible, and customizable Accordion component for React. Perfect for FAQs, menus, or any collapsible content—fully controllable and easy to integrate.",
     "path": "/components/ui/Accordion/Accordion.tsx",
     "previewImageUrl": "/assets/previewimages/accordian.png",
     "installation": [
       {
         "title": "Install dependencies",
-        "codeBlock": "npm i clsx lucid",
+        "codeBlock": "npm i lucide-react",
         "path": "/components/ui/Accordion/Accordion.tsx"
       },
       {
@@ -117,13 +117,13 @@
       {
         "prop": "url",
         "type": "string",
-        "desc": "The image URL for the avatar. Make sure it’s a valid link or your users go faceless. 🥲",
+        "desc": "The image URL for the avatar. Make sure it’s a valid link or your users go faceless. ",
         "defaultValue": "—"
       },
       {
         "prop": "alt",
         "type": "string",
-        "desc": "Alternative text for the image. Accessibility matters. ♿",
+        "desc": "Alternative text for the image. Accessibility matters. ",
         "defaultValue": "—"
       },
       {
@@ -137,13 +137,13 @@
   {
     "id": "Button",
     "name": "Button",
-    "desc": "A powerful, stylish, and customizable button component with support for animations, gradients, and full Tailwind-powered flexibility. Perfect for when you wanna flex your UI 🔥",
+    "desc": "A powerful, stylish, and customizable button component with support for animations, gradients, and full Tailwind-powered flexibility. Perfect for when you wanna flex your UI. ",
     "path": "/components/ui/Button/Button.tsx",
     "previewImageUrl": "",
     "installation": [
       {
         "title": "Install dependencies",
-        "codeBlock": "",
+        "codeBlock": "npm i class-variance-authority",
         "path": "/components/ui/Button/Button.tsx"
       },
       {
@@ -156,7 +156,7 @@
       {
         "prop": "children",
         "type": "ReactNode",
-        "desc": "Anything you wanna put inside the button. Text, emoji, whatever makes it ✨click✨.",
+        "desc": "Anything you wanna put inside the button. Text, emoji, whatever makes it click.",
         "defaultValue": "—"
       },
       {
@@ -224,7 +224,7 @@
     "installation": [
       {
         "title": "Install dependencies",
-        "codeBlock": "npm i clsx lucid",
+        "codeBlock": "",
         "path": "/components/ui/Card/Card.tsx"
       },
       {
@@ -288,7 +288,7 @@
     "installation": [
       {
         "title": "Install dependencies",
-        "codeBlock": "npm i clsx tailwind-merge",
+        "codeBlock": "",
         "path": "/components/ui/Dropdown/Dropdown.tsx"
       },
       {
@@ -321,7 +321,7 @@
   {
     "id": "Footer",
     "name": "Footer",
-    "desc": "A clean, modern footer component with logo, links, socials, and copyright. Dark-mode ready, responsive, and vibey. Add your brand sauce and you're good to go.",
+    "desc": "A clean, modern footer component with logo, links, socials, and copyright. Dark-mode ready and responsive. Add your brand sauce and you're good to go.",
     "path": "/components/ui/Footer/Footer.tsx",
     "previewImageUrl": "",
     "installation": [
@@ -352,7 +352,7 @@
       {
         "prop": "description",
         "type": "string",
-        "desc": "Short brand blurb or tagline that goes under the logo. Emojis welcome 👀",
+        "desc": "Short brand blurb or tagline that goes under the logo. Emojis welcome ",
         "defaultValue": "\"\""
       },
       {
@@ -378,13 +378,13 @@
   {
     "id": "Input",
     "name": "Input",
-    "desc": "Aesthetic, minimal, and totally customizable input field for forms. Focus-ring? Yup. Dark mode? Of course. Fully vibing with Tailwind.",
+    "desc": "Aesthetic, minimal, and totally customizable input field for forms. Focus-ring? Yup. Dark mode? Of course.",
     "path": "/components/ui/Input/Input.tsx",
     "previewImageUrl": "/assets/previewimages/input.png",
     "installation": [
       {
         "title": "Add Tailwind & utils",
-        "codeBlock": "npm i clsx tailwind-merge",
+        "codeBlock": "",
         "path": "/lib/utils.ts"
       },
       {
@@ -423,7 +423,7 @@
     "installation": [
       {
         "title": "Set up chatbot component",
-        "codeBlock": "import InputOPT from '@/components/ui/InputOTP';",
+        "codeBlock": "",
         "path": "/components/ui/MessageBot/MessageBot.tsx"
       },
       {
@@ -462,13 +462,13 @@
   {
     "id": "MessageBot",
     "name": "MessageBot",
-    "desc": "A sleek lil’ floating chatbot that talks back. Perfect for support, onboarding, or just showing off that ✨interactive ✨ flair.",
+    "desc": "A lightweight, responsive floating chatbot for seamless user interaction. Ideal for support, onboarding, or adding a dynamic, conversational touch to your site.",
     "path": "/components/ui/MessageBot/MessageBot.tsx",
     "previewImageUrl": "",
     "installation": [
       {
         "title": "Set up chatbot component",
-        "codeBlock": "import MessageBot from '@/components/ui/MessageBot';",
+        "codeBlock": "npm i lucide-react",
         "path": "/components/ui/MessageBot/MessageBot.tsx"
       },
       {
@@ -513,7 +513,7 @@
     "installation": [
       {
         "title": "Import the Navbar",
-        "codeBlock": "import Navbar from '@/components/ui/Navbar';",
+        "codeBlock": "npm i react-icons",
         "path": "/components/ui/Navbar/Navbar.tsx"
       },
       {
@@ -576,7 +576,7 @@
     "installation": [
       {
         "title": "Import PricingCard and ThemeSelector",
-        "codeBlock": "import { PricingCard, ThemeSelector } from '@/components/ui/PricingCard';",
+        "codeBlock": "npm i react-icons",
         "path": "/components/ui/PricingCard/PricingCard.tsx"
       },
       {
@@ -645,7 +645,7 @@
     "installation": [
       {
         "title": "Import the Resizable component",
-        "codeBlock": "import Resizable from '@/components/ui/Resizable';",
+        "codeBlock": "",
         "path": "/components/ui/Resizable/Resizable.tsx"
       },
       {
@@ -689,7 +689,7 @@
     "installation": [
       {
         "title": "Import Skeleton",
-        "codeBlock": "import Skeleton from '@/components/ui/Skeleton';",
+        "codeBlock": "",
         "path": "/components/ui/Skeleton/Skeleton.tsx"
       },
       {
@@ -716,7 +716,7 @@
     "installation": [
       {
         "title": "Import the Spinner",
-        "codeBlock": "import { Spinner } from '@/components/ui/Spinner';",
+        "codeBlock": "",
         "path": "/components/ui/Spinner/Spinner.tsx"
       },
       {
@@ -737,13 +737,13 @@
   {
     "id": "Switch",
     "name": "Switch",
-    "desc": "A sleek lil' toggle — like a light switch but for devs. ✨ Great for toggling themes, states, or anything boolean.",
+    "desc": "A sleek lil' toggle — like a light switch but for devs.Great for toggling themes, states, or anything boolean.",
     "path": "/components/ui/Switch/Switch.tsx",
     "previewImageUrl": "/assets/previewimages/toggle.png",
     "installation": [
       {
         "title": "Import the component",
-        "codeBlock": "import Switch from '@/components/ui/Switch';",
+        "codeBlock": "",
         "path": "/components/ui/Switch/Switch.tsx"
       },
       {
@@ -764,13 +764,13 @@
   {
     "id": "Tabs",
     "name": "Tabs",
-    "desc": "Modular tab system that's minimal, accessible, and vibes with your theme. Say goodbye to tab chaos and hello to ✨ slick switching.",
+    "desc": "A minimal, accessible, and theme-friendly modular tab system. Designed for clean organization and smooth content switching—no more tab clutter.",
     "path": "/components/ui/Tabs/Tabs.tsx",
     "previewImageUrl": "",
     "installation": [
       {
         "title": "Install utils",
-        "codeBlock": "npm i clsx tailwind-merge",
+        "codeBlock": "",
         "path": "/utils/lib.ts"
       },
       {
@@ -815,7 +815,7 @@
   {
     "id": "Testimonials",
     "name": "Testimonials",
-    "desc": "Drop the ✨receipts✨ with this sleek testimonial card. Profile pic? Check. Star ratings? Of course. Perfect for showing love from users, clients, or fans.",
+    "desc": "Drop the receipts with this sleek testimonial card. Profile pic? Check. Star ratings? Of course. Perfect for showing love from users, clients, or fans.",
     "path": "/components/ui/Testimonials/Testimonials.tsx",
     "previewImageUrl": "",
     "installation": [
@@ -866,13 +866,13 @@
   {
     "id": "TextArea",
     "name": "TextArea",
-    "desc": "For when you've got more to say 📝 — A dark-mode ready, fully styled textarea component. Clean, smooth, and focus-ring fresh.",
+    "desc": "A fully styled, dark mode–ready TextArea component for extended input. Clean design, smooth interactions, and accessible focus states for a polished user experience.",
     "path": "/components/ui/TextArea/TextArea.tsx",
     "previewImageUrl": "/assets/previewimages/textarea.png",
     "installation": [
       {
         "title": "Add Tailwind & utils",
-        "codeBlock": "npm i clsx tailwind-merge",
+        "codeBlock": "",
         "path": "/lib/utils.ts"
       },
       {
@@ -899,13 +899,13 @@
   {
     "id": "Toast",
     "name": "Toast",
-    "desc": "Minimal toast component that slides in with ✨ style. Stacks like pancakes. Looks clean in dark & light mode. Fully customizable with classNames.",
+    "desc": "A minimal, stylish toast component with smooth slide-in animations and stackable notifications. Clean in both light and dark modes, and fully customizable via classNames.",
     "path": "/components/ui/Toast/Toast.tsx",
     "previewImageUrl": "",
     "installation": [
       {
         "title": "Add utility support",
-        "codeBlock": "npm i clsx tailwind-merge",
+        "codeBlock": "",
         "path": "/utils/lib.ts"
       },
       {
@@ -950,12 +950,12 @@
     "installation": [
       {
         "title": "Utility support",
-        "codeBlock": "npm i clsx tailwind-merge",
+        "codeBlock": "",
         "path": "/utils/lib.ts"
       },
       {
         "title": "Copy the code",
-        "codeBlock": "npm i clsx tailwind-merge",
+        "codeBlock": "",
         "path": "/utils/lib.ts"
       }
     ],
@@ -1001,33 +1001,69 @@
   {
     "id": "VideoPlayer",
     "name": "VideoPlayer",
-    "desc": "",
-    "path": "/components/ui/Testimonials/Testimonials.tsx",
+    "desc": "A professional, fully responsive VideoPlayer component with intuitive controls and seamless playback. Supports multiple video formats, ensures cross-device compatibility, and integrates effortlessly with any design system.",
+    "path": "/components/ui/VideoPlayer/VideoPlayer.tsx",
     "previewImageUrl": "",
     "installation": [
       {
         "title": "Install dependencies",
-        "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
+        "codeBlock": "npm i lucide-react",
         "path": "/components/ui/TextArea/TextArea.tsx"
       },
       {
         "title": "Copy the code",
-        "codeBlock": "npm i motion clsx tailwind-merge @tabler/icons-react",
+        "codeBlock": "",
         "path": "/components/ui/TextArea/TextArea.tsx"
       }
     ],
     "props": [
       {
-        "prop": "",
-        "type": "",
-        "desc": "",
-        "defaultValue": ""
+        "prop": "src",
+        "type": "string",
+        "desc": "The source URL of the video to play.",
+        "defaultValue": "—"
       },
       {
-        "prop": "",
-        "type": "",
-        "desc": "",
-        "defaultValue": ""
+        "prop": "srcType",
+        "type": "string",
+        "desc": "The MIME type of the video. E.g., 'video/mp4', 'video/webm'.",
+        "defaultValue": "-"
+      },
+      {
+        "prop": "thumbnailUrl",
+        "type": "string",
+        "desc": "Optional thumbnail image shown before the video plays.",
+        "defaultValue": "—"
+      },
+      {
+        "prop": "muted",
+        "type": "boolean",
+        "desc": "Whether the video should be muted by default.",
+        "defaultValue": "false"
+      },
+      {
+        "prop": "autoplay",
+        "type": "boolean",
+        "desc": "Plays the video automatically on load if set to true.",
+        "defaultValue": "false"
+      },
+      {
+        "prop": "loop",
+        "type": "boolean",
+        "desc": "Loops the video playback when it ends.",
+        "defaultValue": "false"
+      },
+      {
+        "prop": "defaultVolume",
+        "type": "number",
+        "desc": "Sets the default volume level (from 0 to 1).",
+        "defaultValue": "20"
+      },
+      {
+        "prop": "className",
+        "type": "string",
+        "desc": "Custom CSS classes for the video wrapper.",
+        "defaultValue": "—"
       }
     ]
   }

@@ -113,7 +113,7 @@ async function register(name, results) {
     );
     if (element.length > 0) {
       await writeComponentContent(
-        `./website/docs/public/r/${element[0].id}-v0.json`,
+        `./website/docs/public/r/${element[0].id.toLowerCase()}-v0.json`,
         {
           ...registryItem,
           name: `${element[0].id}-v0`,

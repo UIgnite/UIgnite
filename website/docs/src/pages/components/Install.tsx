@@ -22,7 +22,7 @@ const Install = ({
     return (
       <div className="w-full h-[44px] relative cli ">
         <CopyButton
-          copyText={`${val} shadcn add https://uignite.in/r/${componentId}.json `}
+          copyText={`${val} shadcn add https://uignite.in/r/${componentId.toLowerCase()}.json `}
         />
         <style>
           {`
@@ -41,7 +41,7 @@ const Install = ({
           }}
           className="text-left text-white text-sm h-full min-w-full rounded-md cli-command"
         >
-          {`${val} shadcn add https://uignite.in/r/${componentId}.json `}
+          {`${val} shadcn add https://uignite.in/r/${componentId.toLowerCase()}.json `}
         </SyntaxHighlighter>
       </div>
     );

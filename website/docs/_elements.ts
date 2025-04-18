@@ -645,7 +645,7 @@ const elements = [
       <div className="flex  justify-center items-center">
         <PricingCard 
           title="Pro Plan"
-          price="$29"
+          price="29"
           validity="per month"
           description="Get access to all features and premium support."
           features={[
