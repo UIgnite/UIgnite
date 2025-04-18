@@ -3,9 +3,9 @@
   "type": "registry:component",
   "dependencies": [],
   "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/toast.json",
-    "https://d278-104-28-199-190.ngrok-free.app/r/toast.json",
-    "https://d278-104-28-199-190.ngrok-free.app/r/button.json"
+    "https://uignite.in/r/toast.json",
+    "https://uignite.in/r/toast.json",
+    "https://uignite.in/r/button.json"
   ],
   "files": [
     {

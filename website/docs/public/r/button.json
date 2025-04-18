@@ -3,8 +3,8 @@
   "type": "registry:ui",
   "dependencies": ["class-variance-authority"],
   "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/spinner.json",
-    "https://d278-104-28-199-190.ngrok-free.app/r/button.json"
+    "https://uignite.in/r/spinner.json",
+    "https://uignite.in/r/button.json"
   ],
   "files": [
     {

@@ -7,9 +7,7 @@
     "class-variance-authority",
     "tailwindcss"
   ],
-  "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/lib-cn.json"
-  ],
+  "registryDependencies": ["https://uignite.in/r/lib-cn.json"],
   "files": [
     {
       "path": "components/ui/utils.tsx",
