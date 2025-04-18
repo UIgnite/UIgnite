@@ -346,7 +346,7 @@ const elements = [
           />
         </CardHeader>
         <CardContent className="flex flex-col justify-center items-center mt-5">
-          <div className="font-semibold text-2xl">Aman Gupta Besharam</div>
+          <div className="font-semibold text-2xl">Aman Gupta </div>
           <div className="text-sm text-neutral-600 dark:text-zinc-500 ">
             Backend Developer at OnlyDevs
           </div>
