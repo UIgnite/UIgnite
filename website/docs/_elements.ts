@@ -48,7 +48,7 @@ const elements = [
       },
     ],
     element: `
-<div className="relative z-10">
+<div className="relative z-0">
   <AccordionWrapper>
     <Accordion
       title="What is MobiMart?"

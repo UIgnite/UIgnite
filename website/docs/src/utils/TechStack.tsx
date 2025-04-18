@@ -110,9 +110,7 @@ export default function TechStack() {
           className="flex flex-col items-center gap-2 text-center group"
           title={tech.name}
         >
-          <div className=" transition-transform duration-300 ">
-            {tech.svg}
-          </div>
+          <div className=" transition-transform duration-300 ">{tech.svg}</div>
         </motion.div>
       ))}
     </div>

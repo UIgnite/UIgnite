@@ -23,7 +23,7 @@ export const Installation = () => {
       <section>
         <h1 className="text-2xl font-semibold mb-2">
           Edit
-          <code className="text-sm bg-muted px-1 py-0.5 rounded">
+          <code className="text-xl ml-2 bg-muted px-1 py-0.5 rounded">
             tsconfig.json
           </code>
         </h1>
@@ -38,7 +38,7 @@ export const Installation = () => {
                 background: '#1e1e21',
               },
             }}
-            className="text-left text-sm h-full max-h-[50vh] rounded-md scrollable-content"
+            className="text-left text-xl h-full max-h-[50vh] rounded-md scrollable-content"
           >
             {installationDocs.tsconfig}
           </SyntaxHighlighter>
@@ -48,7 +48,7 @@ export const Installation = () => {
       <section>
         <h1 className="text-2xl font-semibold mb-2 ">
           Edit
-          <code className="text-sm bg-muted px-1 py-0.5 rounded">
+          <code className=" text-xl ml-2 bg-muted px-1 py-0.5 rounded">
             tsconfig.app.json
           </code>
         </h1>
@@ -63,7 +63,7 @@ export const Installation = () => {
                 background: '#1e1e21',
               },
             }}
-            className="text-left text-sm h-full max-h-[50vh] rounded-md scrollable-content"
+            className="text-left text-xl  h-full max-h-[50vh] rounded-md scrollable-content"
           >
             {installationDocs.tsconfigApp}
           </SyntaxHighlighter>
@@ -73,7 +73,7 @@ export const Installation = () => {
       <section>
         <h1 className="text-2xl font-semibold mb-2">
           Update
-          <code className="text-sm bg-muted px-1 py-0.5 rounded">
+          <code className="text-xl ml-2 bg-muted px-1 py-0.5 rounded">
             vite.config.ts
           </code>
         </h1>
@@ -88,7 +88,7 @@ export const Installation = () => {
                 background: '#1e1e21',
               },
             }}
-            className="text-left text-sm h-full max-h-[50vh] rounded-md scrollable-content"
+            className="text-left text-xl h-full max-h-[50vh] rounded-md scrollable-content"
           >
             {installationDocs.vite}
           </SyntaxHighlighter>
@@ -115,7 +115,7 @@ export const Installation = () => {
                 background: '#1e1e21',
               },
             }}
-            className="text-left text-sm h-full max-h-[50vh] rounded-md scrollable-content"
+            className="text-left text-xl  h-full max-h-[50vh] rounded-md scrollable-content"
           >
             {installationDocs.addComponent}
           </SyntaxHighlighter>
