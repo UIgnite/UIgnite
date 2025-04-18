@@ -13,14 +13,13 @@ import {
   Moon,
 } from 'lucide-react';
 
-
 import {Testimonials} from '@pkgs/uignite';
 import Navbar from '../components/Navbar';
 import {GridBackground} from '../utils/GridBackground';
 import TechStack from '../utils/TechStack';
 import {VideoPlayer} from '@pkgs/uignite';
 import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 const Home = () => {
   const [isCopied, setIsCopied] = useState(false);
 

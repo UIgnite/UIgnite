@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import {cn} from '@/lib/utils';
 import React, {
   useCallback,
   useEffect,
@@ -16,7 +16,7 @@ export interface VideoPlayerProps {
   src: string;
   srcType?: string;
   defaultVolume?: number;
-  className? : string
+  className?: string;
 }
 
 enum SpeedReducerActionKind {
@@ -61,7 +61,7 @@ function VideoPlayer({
   loop = false,
   srcType,
   defaultVolume = 20,
-  className = ""
+  className = '',
 }: VideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const progressRef = useRef<HTMLDivElement | null>(null);
@@ -178,7 +178,10 @@ function VideoPlayer({
         width: 741,
         height: 416,
       }}
-      className={cn("relative group shadow-xl rounded overflow-hidden", className)}
+      className={cn(
+        'relative group shadow-xl rounded overflow-hidden',
+        className
+      )}
       data-played={played}
     >
       <style>
