@@ -1,4 +1,4 @@
-import { Skeleton } from "@pkgs/uignite";
+import {Skeleton} from '@pkgs/uignite';
 
 const AccordionSkeleton = () => {
   return (
