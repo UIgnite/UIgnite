@@ -7,7 +7,7 @@
   ],
   "files": [
     {
-      "path": "registry/default/ui/Skeleton.tsx",
+      "path": "components/ui/Skeleton.tsx",
       "type": "registry:ui",
       "content": "import {cn} from '@/lib/utils';\n\nexport interface SkeletonParams {\n  className?: string;\n}\nconst Skeleton = ({className}: SkeletonParams) => {\n  return (\n    <div\n      className={cn(\n        `dark:bg-gray-600 bg-gray-400 animate-pulse rounded-full ${className}`\n      )}\n    ></div>\n  );\n};\n\nexport {Skeleton};\n",
       "filename": "Skeleton"
