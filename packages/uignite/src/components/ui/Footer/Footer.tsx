@@ -2,7 +2,7 @@ import {FiGithub, FiLinkedin} from 'react-icons/fi';
 import {FaDiscord, FaInstagram} from 'react-icons/fa';
 import {FaXTwitter} from 'react-icons/fa6';
 import {SlSocialYoutube} from 'react-icons/sl';
-import {useTheme} from '@pkgs/uignite';
+import {useTheme} from '@/hooks/theme';
 
 const Footer = () => {
   const {theme} = useTheme();
