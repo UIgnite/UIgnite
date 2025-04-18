@@ -9,11 +9,7 @@
     {
       "path": "app/page.tsx",
       "type": "registry:component",
-<<<<<<< HEAD
       "content": "import {Resizable} from '@/components/ui/Resizable'\n\n              function Component(){\n                return (\n    <div className='relative w-[500px] h-26'>\n      <Resizable className='h-20'>\n        <div className='w-full h-full bg-amber-200'></div>\n        <div className='w-full h-full bg-rose-200'></div>\n      </Resizable>\n    </div>)\n              }\n              export default Component\n              "
-=======
-      "content": "import {Resizable} from '@/components/ui/Resizable'\n\n              function Component(){\n                return (\r\n    <div className='relative w-[500px] h-26'>\r\n      <Resizable className='h-20'>\r\n        <div className='w-full h-full bg-amber-200'></div>\r\n        <div className='w-full h-full bg-rose-200'></div>\r\n      </Resizable>\r\n    </div>)\n              }\n              export default Component\n              "
->>>>>>> 8b7c2786f90d07717e57c640fcb1628cb222083a
     }
   ],
   "$schema": "https://ui.shadcn.com/schema/registry-item.json"
