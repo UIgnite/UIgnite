@@ -1,6 +1,6 @@
 import {getElementByCompId} from '@/utils/lib';
 import {Tab, Tabs, TabContent, TabList, Button} from '@pkgs/uignite';
-import {LivePreview, LiveProvider} from 'react-live';
+import {LiveError, LivePreview, LiveProvider} from 'react-live';
 import CopyButton from './copyButton';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import {atomOneDarkReasonable} from 'react-syntax-highlighter/dist/esm/styles/hljs';
@@ -72,6 +72,7 @@ export const Variants = ({componentId}: {componentId: string}) => {
                       </div>
 
                       <LivePreview className="mt-6" />
+                      <LiveError className="mt-6" />
                     </div>
                   }
                   value="preview"
