@@ -48,6 +48,8 @@ const elements = [
       },
     ],
     element: `
+    function Component () {
+    return (
 <div className="relative z-0">
   <AccordionWrapper>
     <Accordion
@@ -67,6 +69,7 @@ const elements = [
     />
   </AccordionWrapper>
 </div>
+  )}
     `,
     variation: [],
   },
