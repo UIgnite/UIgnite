@@ -1,80 +1,108 @@
-import Navbar from '../components/Navbar';
-import {CustomTheme} from '../utils/CustomTheme';
 import {
-  Button,
   Card,
   CardHeader,
+  CardTitle,
   CardDescription,
   CardContent,
-  CardFooter,
-  CardTitle,
-} from '@pkgs/uignite';
-// import {AlertDialogBox} from '@pkgs/uignite';
+  CardFooter
+} from '@pkgs/uignite'
 
-export const Test = () => {
+const Test = () => {
   return (
-    <CustomTheme>
-      <Navbar />
-      <div className="px-18 min-h-screen mt-10 ">
-        <div>
-          <div className=" text-4xl mb-5"> Buttons</div>
-          <div className="space-x-4 space-y-4">
-            <Button variant="primary">primary</Button>
-            <Button variant="destructive">destructive</Button>
-            <Button variant="success">success</Button>
-            <Button variant="warning">warning</Button>
-            <Button variant="outline">outline</Button>
-            <Button variant="secondary">secondary</Button>
-            <Button isLoading variant="gradient" />
-            <Button variant="ghost">ghost</Button>
-            <Button variant="glass">glass</Button>
-            <Button variant="dark">dark</Button>
-            <Button variant="light">light</Button>
-            <Button variant="gradient">gradient</Button>
-            <Button animatedBorder>animatedBorder</Button>
-            <Button gradientBorder>gradientBorder</Button>
-            <Button className="animate-border text-white font-semibold px-6 py-3 rounded-xl">
-              Hover Me
-            </Button>
-          </div>
-        </div>
-        {/* <AlertDialogBox
-          title="Delete account?"
-          description="This action cannot be undone. Are you sure you want to delete your account permanently?"
-        /> */}
-
-        <div className="text-3xl mt-8 flex">Cards</div>
-
-        <Card className=" mt-2">
-          <CardHeader>
-            <CardTitle>Welcome</CardTitle>
-            <CardDescription>This is your dashboard.</CardDescription>
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+        {/* Card 1 */}
+        <Card className="bg-gradient-to-br from-[#0e933d] to-[#012f11] text-white">
+          <CardHeader className="flex items-center gap-4">
+            <img
+              src="/assets/sample-album.jpg"
+              alt="Album Cover"
+              className="w-14 h-14 rounded-md object-cover"
+            />
+            <div>
+              <CardTitle>Blinding Lights</CardTitle>
+              <CardDescription>The Weeknd</CardDescription>
+            </div>
           </CardHeader>
           <CardContent>
-            <p>Here is some main content.</p>
+            <div className="text-sm opacity-90">Album: After Hours</div>
           </CardContent>
           <CardFooter>
-            <button className="btn">Get Started</button>
+            <button className="mt-2 text-sm bg-white text-[#1DB954] px-4 py-1 rounded-full hover:bg-opacity-90 transition">
+              ▶ Play
+            </button>
           </CardFooter>
         </Card>
-
-        <Card className="mt-8 dark:bg-gray-900 border-none">
-          <CardHeader>
-            <p className="uppercase text-xs font-bold text-muted-foreground">
-              Daily Mix
-            </p>
-            <p className="text-sm text-muted-foreground">12 Tracks</p>
-            <CardTitle className="text-xl mt-1">Arijit Singh</CardTitle>
+  
+        {/* Card 2 */}
+        <Card className="bg-gradient-to-br from-[#f64949] to-[#670404] text-white">
+          <CardHeader className="flex items-center gap-4">
+            <img
+              src="/assets/sample-album.jpg"
+              alt="Album Cover"
+              className="w-14 h-14 rounded-md object-cover"
+            />
+            <div>
+              <CardTitle>Shape of You</CardTitle>
+              <CardDescription>Ed Sheeran</CardDescription>
+            </div>
           </CardHeader>
           <CardContent>
-            <img
-              src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcStrv_oPE6vni313HxiliDz1adIGEbzlBmZH7Aczogkb7bLKVGz5chCNwrPYoCHR4KXYr0UjqWiEQHbwYIU6FgaiQ"
-              alt="Arijit Singh"
-              className="rounded-xl w-full h-80 object-cover"
-            />
+            <div className="text-sm opacity-90">Album: Divide</div>
           </CardContent>
+          <CardFooter>
+            <button className="mt-2 text-sm bg-white text-[#FF5E5E] px-4 py-1 rounded-full hover:bg-opacity-90 transition">
+              ▶ Play
+            </button>
+          </CardFooter>
+        </Card>
+  
+        {/* Card 3 */}
+        <Card className="bg-gradient-to-br from-[#3B82F6] to-[#60a5fa] text-white">
+          <CardHeader className="flex items-center gap-4">
+            <img
+              src="/assets/sample-album.jpg"
+              alt="Album Cover"
+              className="w-14 h-14 rounded-md object-cover"
+            />
+            <div>
+              <CardTitle>Stay</CardTitle>
+              <CardDescription>The Kid LAROI, Justin Bieber</CardDescription>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="text-sm opacity-90">Album: Stay (Single)</div>
+          </CardContent>
+          <CardFooter>
+            <button className="mt-2 text-sm bg-white text-[#3B82F6] px-4 py-1 rounded-full hover:bg-opacity-90 transition">
+              ▶ Play
+            </button>
+          </CardFooter>
+        </Card>
+  
+        {/* Card 4 */}
+        <Card className="bg-gradient-to-br from-[#8B5CF6] to-[#a78bfa] text-white">
+          <CardHeader className="flex items-center gap-4">
+            <img
+              src="/assets/sample-album.jpg"
+              alt="Album Cover"
+              className="w-14 h-14 rounded-md object-cover"
+            />
+            <div>
+              <CardTitle>Levitating</CardTitle>
+              <CardDescription>Dua Lipa</CardDescription>
+            </div>
+          </CardHeader>
+          <CardContent>
+            <div className="text-sm opacity-90">Album: Future Nostalgia</div>
+          </CardContent>
+          <CardFooter>
+            <button className="mt-2 text-sm bg-white text-[#8B5CF6] px-4 py-1 rounded-full hover:bg-opacity-90 transition">
+              ▶ Play
+            </button>
+          </CardFooter>
         </Card>
       </div>
-    </CustomTheme>
-  );
+    );
 };
+
+export {Test};
