@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button } from '@pkgs/uignite';
+import { Button } from '@/components/ui/Button';
 
 type AlertDialogBoxProps = {
   title: string;
