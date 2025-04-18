@@ -1,0 +1,16 @@
+{
+  "name": "Testimonials-v0",
+  "type": "registry:component",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": [
+    "https://d278-104-28-199-190.ngrok-free.app/r/testimonials.json"
+  ],
+  "files": [
+    {
+      "path": "app/page.tsx",
+      "type": "registry:component",
+      "content": "import {Testimonials} from '@/components/ui/Testimonials'\n\n              function Component(){\n                return (\r\n    function Testimonial () {\r\n    \r\n  const testimonials = [\r\n    {\r\n      imageSrc: '/piyush-sir.png',\r\n      name: 'Piyush Garg',\r\n      title: 'Co-founder of OnlyFans',\r\n      message:\r\n        'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?',\r\n      rating: 5,\r\n    },\r\n  ];\r\n\r\n    return (<div className=\"flex\">\r\n      {testimonials.map((testimonial, index) => (\r\n        <Testimonials\r\n          className=\" w-[450px] max-h-[200px]\"\r\n          key={index}\r\n          imageSrc={testimonial.imageSrc}\r\n          name={testimonial.name}\r\n          title={testimonial.title}\r\n          message={testimonial.message}\r\n          rating={testimonial.rating}\r\n        />\r\n      ))}\r\n    </div>)\r\n    }\r\n   \r\n    )\n              }\n              export default Component\n              "
+    }
+  ],
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json"
+}

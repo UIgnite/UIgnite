@@ -3,14 +3,13 @@
   "type": "registry:component",
   "dependencies": [],
   "registryDependencies": [
-    "https://uigite.in/r/videoplayer.json",
-    "https://080a-104-28-199-189.ngrok-free.app/r/videoplayer.json"
+    "https://d278-104-28-199-190.ngrok-free.app/r/videoplayer.json"
   ],
   "files": [
     {
-      "path": "registry/default/components/VideoPlayer-v0.tsx",
+      "path": "app/page.tsx",
       "type": "registry:component",
-      "content": "import {VideoPlayer} from '@/componenets/ui/VideoPlayer'\n\n              function Component(){\n                return (\n<div className=\"flex items-center justify-center \">\n  <VideoPlayer\n    src=\"https://res.cloudinary.com/do2tmd6xp/video/upload/f_auto:video,q_auto/chitiuerm8vfgaugsrkr\"\n    thumbnailUrl=\"https://images.unsplash.com/photo-1507525428034-b723cf961d3e\"\n    muted\n    autoplay\n    loop\n    className=\"shadow-black dark:shadow-indigo-900 shadow-2xl rounded-xl\"\n  />\n</div>\n    )\n              }\n              export default Component\n              "
+      "content": "import {VideoPlayer} from '@/components/ui/VideoPlayer'\n\n              function Component(){\n                return (\r\n<div className=\"flex  items-center justify-center \">\r\n  <VideoPlayer\r\n    src=\"https://res.cloudinary.com/do2tmd6xp/video/upload/f_auto:video,q_auto/chitiuerm8vfgaugsrkr\"\r\n    thumbnailUrl=\"https://images.unsplash.com/photo-1507525428034-b723cf961d3e\"\r\n    muted\r\n    autoplay\r\n    loop\r\n    className=\"max-w-[80%] shadow-black dark:shadow-indigo-900 shadow-2xl rounded-xl\"\r\n  />\r\n</div>\r\n    )\n              }\n              export default Component\n              "
     }
   ],
   "$schema": "https://ui.shadcn.com/schema/registry-item.json"

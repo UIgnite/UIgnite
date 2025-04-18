@@ -7,9 +7,9 @@
   ],
   "files": [
     {
-      "path": "registry/default/ui/Skeleton.tsx",
+      "path": "components/ui/Skeleton.tsx",
       "type": "registry:ui",
-      "content": "import {cn} from '@/lib/utils';\n\nexport interface SkeletonParams {\n  className?: string;\n}\nconst Skeleton = ({className}: SkeletonParams) => {\n  return (\n    <div\n      className={cn(\n        `dark:bg-gray-600 bg-gray-400 animate-pulse rounded-full ${className}`\n      )}\n    ></div>\n  );\n};\n\nexport {Skeleton};\n",
+      "content": "import {cn} from '@/lib/utils';\r\n\r\nexport interface SkeletonParams {\r\n  className?: string;\r\n}\r\nconst Skeleton = ({className}: SkeletonParams) => {\r\n  return (\r\n    <div\r\n      className={cn(\r\n        `dark:bg-gray-600 bg-gray-400 animate-pulse rounded-full ${className}`\r\n      )}\r\n    ></div>\r\n  );\r\n};\r\n\r\nexport {Skeleton};\r\n",
       "filename": "Skeleton"
     }
   ],
