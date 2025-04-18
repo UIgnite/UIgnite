@@ -222,64 +222,67 @@ const Home = () => {
           {/* cards  */}
           <div className="mt-40 flex flex-row ">
             <div className="flex-2">
-              <p className="text-7xl font-semibold">
-                <span className="text-blue-400">Design</span> that adapts to you
+              <p className="text-7xl font-semibold ">
+                <span className="text-blue-400">Design</span> that adapts to you.
               </p>
-              <p className="mt-3 text-md text-zinc-300">
+              <p className="mt-3 text-md dark:text-zinc-300 text-zinc-600">
                 Uignite lets you tailor every detail with ease. With built-in
                 support for custom themes via our TailwindCSS plugin, your
-                interface can match your brand, mood, or imagination—no limits,
+                interface can match your brand, mood, or imagination no limits,
                 just possibilities.
               </p>
-
-              <Card className="bg-gradient-to-tr from-orange-500 via-pink-500 to-rose-500 p-6 mt-4 rounded-xl shadow-lg text-white w-full max-w-xl h-[50%] mx-auto">
-                <div className="flex gap-3 items-center">
-                  <img
-                    src="/api/placeholder/320/320"
-                    alt="Album Cover"
-                    className="w-32 h-32 rounded-xl object-cover"
-                  />
-                  <div className="flex-1">
-                    <h2 className="text-xl font-semibold">Daily Mix</h2>
-                    <p className="text-sm opacity-90 mb-1">12 Tracks</p>
-                    <p className="text-md font-medium">Frontend Radio</p>
-                    <div className="flex items-center mt-4 gap-2 text-xs">
-                      <span>1:23</span>
-                      <input
-                        type="range"
-                        defaultValue="33"
-                        className="w-full accent-white"
-                      />
-                      <span>4:32</span>
-                    </div>
-                  </div>
-                  <div className="text-white text-xl">
-                    <button className="hover:scale-110 transition">
-                      <Heart size={24} />
-                    </button>
-                  </div>
-                </div>
-                <div className="flex justify-center items-center gap-6 mt-6 text-2xl">
-                  <button className="hover:text-white/80 transition-colors">
-                    <RefreshCw size={24} />
-                  </button>
-                  <button className="hover:text-white/80 transition-colors">
-                    <SkipBack size={24} />
-                  </button>
-                  <button className="bg-white text-black p-3 rounded-full hover:scale-110 transition">
-                    <Pause size={24} />
-                  </button>
-                  <button className="hover:text-white/80 transition-colors">
-                    <SkipForward size={24} />
-                  </button>
-                  <button className="hover:text-white/80 transition-colors">
-                    <Shuffle size={24} />
-                  </button>
-                </div>
-              </Card>
+              
+              <Card className="bg-gradient-to-tr from-orange-600 via-pink-600 to-rose-600 p-6 mt-4 rounded-xl shadow-lg text-white w-full max-w-xl h-[45%] mx-auto">
+      <div className="flex gap-3 items-center">
+        <img
+          src="pain.png"
+          alt="Album Cover"
+          className="w-32 h-32 rounded-xl object-cover"
+        />
+        <div className="flex-1">
+          <h2 className="text-xl font-semibold">Today Mix</h2>
+          <p className="text-sm opacity-90 mb-1">15 Tracks</p>
+          <p className="text-md font-medium">UIgnite Radio</p>
+          <div className="flex items-center mt-4 gap-2 text-xs">
+            <span>0:10</span>
+            <input
+              type="range"
+              defaultValue="34"
+              className="w-full accent-white"
+            />
+            <span>3:42</span>
+          </div>
+        </div>
+        <div className="text-white text-xl">
+          <button className="hover:scale-110 transition">
+            <Heart size={24} />
+          </button>
+        </div>
+      </div>
+      <div className="flex justify-center items-center gap-6 mt-6 text-2xl">
+        <button className="hover:text-white/80 transition-colors">
+          <RefreshCw size={24} />
+        </button>
+        <button className="hover:text-white/80 transition-colors">
+          <SkipBack size={24} />
+        </button>
+        <button className="bg-white text-black p-3 rounded-full hover:scale-110 transition">
+          <Pause size={24} />
+        </button>
+        <button className="hover:text-white/80 transition-colors">
+          <SkipForward size={24} />
+        </button>
+        <button className="hover:text-white/80 transition-colors">
+          <Shuffle size={24} />
+        </button>
+      </div>
+    </Card>
+              
+              
+             
             </div>
-            <div className="flex-2 ml-4">
-              <img src="card.png" alt="" />
+            <div className="flex-2 ml-4 bg-transparent max-h-[70vh] overflow-scroll scrollable-content">
+              <img src="card.png" alt="" className='w-[600px] rounded-xl' />
             </div>
           </div>
 
