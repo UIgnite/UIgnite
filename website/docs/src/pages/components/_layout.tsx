@@ -21,12 +21,6 @@ export default function ComponentLayout() {
               <ul className="text-gray-700 my-4 flex flex-col gap-y-2">
                 <button
                   className=" text-left  cursor-pointer p-2 rounded-md hover:bg-neutral-200 dark:hover:text-white dark:text-neutral-300 dark:hover:bg-neutral-700"
-                  onClick={() => navigate(`/components/Introduction`)}
-                >
-                  Introduction
-                </button>
-                <button
-                  className=" text-left  cursor-pointer p-2 rounded-md hover:bg-neutral-200 dark:hover:text-white dark:text-neutral-300 dark:hover:bg-neutral-700"
                   onClick={() => navigate('/components/Installation')}
                 >
                   Installation
