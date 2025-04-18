@@ -13,7 +13,7 @@ import {
   Input,
   MessageBot,
   PricingCard,
-  Resizable,
+  // Resizable,
   Skeleton,
   Spinner,
   TabContent,
@@ -30,6 +30,10 @@ import {
   Switch,
   Footer,
   Navbar,
+  VideoPlayer,
+  Testimonials,
+  SignUp,
+  SignIn,
 } from '@pkgs/uignite';
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react';
@@ -258,6 +262,8 @@ const elements = [
       useState,
       useEffect,
       Info,
+      SignUp,
+      SignIn,
     },
     extraScopes: [
       {
@@ -284,6 +290,14 @@ const elements = [
       {
         scope: ['Info'],
         from: 'lucide-react',
+      },
+      {
+        scope: ['SignUp'],
+        from: 'SignUp',
+      },
+      {
+        scope: ['SignIn'],
+        from: 'SignIn',
       },
     ],
     element: `
@@ -411,6 +425,12 @@ const elements = [
           </div>
         </CardFooter>
       </Card>
+      `,
+      `
+        <SignIn />
+      `,
+      `
+      <SignUp />
       `,
     ],
   },
@@ -703,23 +723,23 @@ const elements = [
   `,
     variation: [],
   },
-  {
-    id: 'resizable',
-    scope: {Resizable},
-    extraScopes: [
-      {
-        scope: ['Resizable'],
-        from: 'Resizable',
-        isComp: true,
-      },
-    ],
-    element: `<div className='relative w-[500px] h-26'>
-      <Resizable className='h-20'>
-        <div className='w-full h-full bg-amber-200'></div>
-        <div className='w-full h-full bg-rose-200'></div>
-      </Resizable>
-    </div>`,
-  },
+  // {
+  //   id: 'resizable',
+  //   scope: {Resizable},
+  //   extraScopes: [
+  //     {
+  //       scope: ['Resizable'],
+  //       from: 'Resizable',
+  //       isComp: true,
+  //     },
+  //   ],
+  //   element: `<div className='relative w-[500px] h-26'>
+  //     <Resizable className='h-20'>
+  //       <div className='w-full h-full bg-amber-200'></div>
+  //       <div className='w-full h-full bg-rose-200'></div>
+  //     </Resizable>
+  //   </div>`,
+  // },
   {
     id: 'skeleton',
     scope: {Skeleton},
@@ -898,6 +918,50 @@ const elements = [
     `,
     variation: [],
   },
+
+  {
+    id: 'Testimonials',
+    scope: {Testimonials},
+    extraScopes: [
+      {
+        scope: ['Testimonials'],
+        from: 'Testimonials',
+        isComp: true,
+      },
+    ],
+    element: `
+     function Testimonial () {
+     
+   const testimonials = [
+     {
+       imageSrc: '/piyush-sir.png',
+       name: 'Piyush Garg',
+       title: 'Co-founder of OnlyFans',
+       message:
+         'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?',
+       rating: 5,
+     },
+   ];
+ 
+     return (<div className="flex">
+       {testimonials.map((testimonial, index) => (
+         <Testimonials
+           className=" w-[450px] max-h-[200px]"
+           key={index}
+           imageSrc={testimonial.imageSrc}
+           name={testimonial.name}
+           title={testimonial.title}
+           message={testimonial.message}
+           rating={testimonial.rating}
+         />
+       ))}
+     </div>)
+     }
+    
+     `,
+    variation: [],
+  },
+
   {
     id: 'textarea',
     scope: {TextArea},
@@ -966,6 +1030,30 @@ const elements = [
       <Tooltip title="Tooltip" options={{ delay: 500 }}>
         <button className="cursor-pointer px-4 py-2 bg-neutral-800 text-white rounded">Hover me</button>
       </Tooltip>
+    `,
+    variation: [],
+  },
+  {
+    id: 'VideoPlayer',
+    scope: {VideoPlayer},
+    extraScopes: [
+      {
+        scope: ['VideoPlayer'],
+        from: 'VideoPlayer',
+        isComp: true,
+      },
+    ],
+    element: `
+      <div className="flex items-center justify-center ">
+        <VideoPlayer
+          src="https://res.cloudinary.com/do2tmd6xp/video/upload/v1744979534/5xnmps_2_pr75vu.mp4"
+          thumbnailUrl="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+          muted
+          autoplay
+          loop
+          className="shadow-black dark:shadow-indigo-900 shadow-2xl rounded-xl"
+        />
+      </div>
     `,
     variation: [],
   },
