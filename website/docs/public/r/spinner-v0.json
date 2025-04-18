@@ -9,7 +9,11 @@
     {
       "path": "app/page.tsx",
       "type": "registry:component",
+<<<<<<< HEAD
       "content": "import {Spinner} from '@/components/ui/Spinner'\n\n              function Component(){\n                return (\n    <div className=\"grid grid-cols-1\">\n      <Spinner variant=\"bounce\" className=\"my-4\" />\n    </div>      \n    )\n              }\n              export default Component\n              "
+=======
+      "content": "import {Spinner} from '@/components/ui/Spinner'\n\n              function Component(){\n                return (\r\n    <div className=\"grid grid-cols-1\">\r\n      <Spinner variant=\"bounce\" className=\"my-4\" />\r\n    </div>      \r\n    )\n              }\n              export default Component\n              "
+>>>>>>> 8b7c2786f90d07717e57c640fcb1628cb222083a
     }
   ],
   "$schema": "https://ui.shadcn.com/schema/registry-item.json"

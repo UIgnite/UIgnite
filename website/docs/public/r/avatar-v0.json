@@ -7,7 +7,11 @@
     {
       "path": "app/page.tsx",
       "type": "registry:component",
+<<<<<<< HEAD
       "content": ",\n              function Component(){\n                return (\n      <>\n        <Avatar url={\"/hitesh-sir.png\"} alt={\"user\"} />\n      </>\n    )\n              }\n              export default Component\n              "
+=======
+      "content": ",\n              function Component(){\n                return (\r\n      <>\r\n        <Avatar url={\"/hitesh-sir.png\"} alt={\"user\"} />\r\n      </>\r\n    )\n              }\n              export default Component\n              "
+>>>>>>> 8b7c2786f90d07717e57c640fcb1628cb222083a
     }
   ],
   "$schema": "https://ui.shadcn.com/schema/registry-item.json"

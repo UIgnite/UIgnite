@@ -9,7 +9,11 @@
     {
       "path": "app/page.tsx",
       "type": "registry:component",
+<<<<<<< HEAD
       "content": "import {Dropdown} from '@/components/ui/Dropdown'\n\n              function Component(){\n                return (\n      <Dropdown \n        button={\n        <div className=\" bg-black p-2 px-4 text-gray-100  dark:bg-white dark:text-black rounded cursor-pointer\">\n          Menu\n        </div>}   \n        title=\"Options\"\n      >\n        <button className=\" text-black px-4 py-2 text-left hover:bg-neutral-300 rounded\">Profile</button>\n        <button className=\"text-black px-4 py-2 text-left hover:bg-neutral-300 rounded\">Settings</button>\n        <button className=\"text-black px-4 py-2 text-left hover:bg-neutral-300 rounded\">Logout</button>\n      </Dropdown> \n    )\n              }\n              export default Component\n              "
+=======
+      "content": "import {Dropdown} from '@/components/ui/Dropdown'\n\n              function Component(){\n                return (\r\n      <Dropdown \r\n        button={\r\n        <div className=\" bg-black p-2 px-4 text-gray-100  dark:bg-white dark:text-black rounded cursor-pointer\">\r\n          Menu\r\n        </div>}   \r\n        title=\"Options\"\r\n      >\r\n        <button className=\" text-black px-4 py-2 text-left hover:bg-neutral-300 rounded\">Profile</button>\r\n        <button className=\"text-black px-4 py-2 text-left hover:bg-neutral-300 rounded\">Settings</button>\r\n        <button className=\"text-black px-4 py-2 text-left hover:bg-neutral-300 rounded\">Logout</button>\r\n      </Dropdown> \r\n    )\n              }\n              export default Component\n              "
+>>>>>>> 8b7c2786f90d07717e57c640fcb1628cb222083a
     }
   ],
   "$schema": "https://ui.shadcn.com/schema/registry-item.json"
