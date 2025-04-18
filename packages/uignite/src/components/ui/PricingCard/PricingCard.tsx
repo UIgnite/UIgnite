@@ -1,5 +1,5 @@
-import {useTheme} from '@/hooks';
-import {Button} from '@pkgs/uignite';
+import {useTheme} from '@/hooks/theme';
+import {Button} from '@/components/ui/Button';
 import {BsCurrencyDollar} from 'react-icons/bs';
 
 interface PricingParams {

@@ -1,6 +1,5 @@
-// src/components/SignUpCard.tsx
 import React from 'react';
-import {Input} from '@/components/Input';
+import {Input} from '@/components/ui/Input';
 import {
   Card,
   CardContent,
@@ -8,16 +7,16 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/Card';
-import {Button} from '@/components/Button';
+} from '@/components/ui/Card';
+import {Button} from '@/components/ui/Button';
 
-const SignUp: React.FC = () => {
+const SignIn: React.FC = () => {
   return (
     <Card className="w-[420px] py-6 px-10 text-zinc-800 dark:text-zinc-200">
       <CardHeader>
-        <CardTitle className="text-4xl">Sign Up</CardTitle>
+        <CardTitle className="text-4xl">Sign In</CardTitle>
         <CardDescription className="text-base font-normal">
-          Create a new account to get started.
+          Welcome back! Please sign in.
         </CardDescription>
       </CardHeader>
 
@@ -25,17 +24,10 @@ const SignUp: React.FC = () => {
         <form className="mt-4">
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
-              <label htmlFor="name" className="font-medium">
-                Name
-              </label>
-              <Input id="name" placeholder="Enter your name" />
-            </div>
-
-            <div className="flex flex-col space-y-1.5">
               <label htmlFor="email" className="font-medium">
                 Email
               </label>
-              <Input id="email" type="email" placeholder="Enter your email" />
+              <Input id="email" placeholder="Enter your email" type="email" />
             </div>
 
             <div className="flex flex-col space-y-1.5">
@@ -44,20 +36,34 @@ const SignUp: React.FC = () => {
               </label>
               <Input
                 id="password"
+                placeholder="Enter your password"
                 type="password"
-                placeholder="Choose a password"
               />
+            </div>
+
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <input
+                  id="remember"
+                  type="checkbox"
+                  className="h-4 w-4 rounded border border-gray-300"
+                />
+                <label htmlFor="remember">Remember me</label>
+              </div>
+              <a href="#" className="text-sm text-blue-500 hover:underline">
+                Forgot password?
+              </a>
             </div>
           </div>
         </form>
       </CardContent>
 
-      <CardFooter className="flex flex-col gap-2 mt-8">
-        <Button className="w-full text-base">Create Account</Button>
+      <CardFooter className="flex flex-col space-y-2">
+        <Button className="w-full text-base">Sign In</Button>
         <p className="text-sm text-center">
-          Already have an account?{' '}
+          Not registered?{' '}
           <a href="#" className="text-blue-500 hover:underline">
-            Login here
+            Create an account
           </a>
         </p>
       </CardFooter>
@@ -65,4 +71,4 @@ const SignUp: React.FC = () => {
   );
 };
 
-export {SignUp};
+export {SignIn};

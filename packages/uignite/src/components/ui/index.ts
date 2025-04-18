@@ -18,7 +18,7 @@ export * from './Resizable';
 export * from './VideoPlayer';
 export * from './PricingCard';
 export * from './Footer';
-export * from '../lib/ThemeToggleBtn';
+export * from '../../lib/ThemeToggleBtn';
 
 export * from './Avatar';
 export * from './Skeleton';

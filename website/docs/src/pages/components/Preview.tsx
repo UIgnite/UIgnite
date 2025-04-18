@@ -49,7 +49,7 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
                   <div className=" absolute top-3 right-5">
                     <Button className="h-8  w-[100px] dark:bg-gray-50 dark:hover:bg-gray-200 dark:text-black bg-black hover:bg-black/80 text-white">
                       <a
-                        href={`https://v0.dev/chat/api/open?url=https://uignite.in/r/${currComponent.id.toLowerCase()}.json`}
+                        href={`https://v0.dev/chat/api/open?url=https://uignite.in/r/${currComponent.id.toLowerCase()}-v0.json`}
                         className="flex flex-row"
                         target="_blank"
                       >
