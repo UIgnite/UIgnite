@@ -23,7 +23,16 @@ const Install = ({
       <div className="w-full h-[44px] relative cli ">
         <CopyButton
           copyText={`${val} shadcn add https://uignite.in/r/${componentId}.json `}
-        />
+          />
+          <style>
+            {
+              `
+              .cli-command code span {
+                color: #f5f5f5 !important; 
+              }
+              `
+            }
+          </style>
         <SyntaxHighlighter
           style={{
             ...atomOneDarkReasonable,
@@ -32,8 +41,7 @@ const Install = ({
               background: 'rgb(24, 24, 24)',
             },
           }}
-          language="npm"
-          className="text-left  text-sm h-full min-w-full rounded-md  "
+          className="text-left text-white text-sm h-full min-w-full rounded-md cli-command"
         >
           {`${val} shadcn add https://uignite.in/r/${componentId}.json `}
         </SyntaxHighlighter>
@@ -56,7 +64,7 @@ const Install = ({
                 <CopyButton copyText={code} />
                 <SyntaxHighlighter
                   className="mb-7 min-h-[50px]  max-h-[400px]  scrollable-content text-left text-sm min-w-full rounded-md"
-                  language="cli"
+                  language="asdflasdf"
                   style={{
                     ...atomOneDarkReasonable,
                     hljs: {
