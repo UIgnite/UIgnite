@@ -65,7 +65,6 @@ const Navbar = () => {
           </NavLink> */}
         </nav>
       </div>
-
       {/* github and mode switch */}
       <div className="hidden md:flex md:justify-center md:items-center md:gap-10">
         {/* md:justify-end md:space-x-4 */}
