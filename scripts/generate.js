@@ -11,7 +11,49 @@ async function writeComponentContent(path, content) {
   }
 }
 
-function mapScopeToFilename(content) {}
+function getImportsMapByScope(extraScopes) {
+  // console.log(scope, extraScopes)
+  if (!extraScopes) return ``;
+  let currObjMapString = ``;
+  for (let i = 0; i < extraScopes.length; i++) {
+    let currStr;
+    let currFrom = extraScopes[i].from;
+
+    let currScope = '';
+    for (let j = 0; j < extraScopes[i].scope.length; j++) {
+      if (j == extraScopes[i].scope.length - 1) {
+        currScope += extraScopes[i].scope[j];
+      } else currScope += extraScopes[i].scope[j] + ', ';
+    }
+
+    if (extraScopes[i].isComp) {
+      currStr = `import {${currScope}} from '@/componenets/ui/${currFrom}'\n`;
+    } else if (extraScopes[i].isHook) {
+      currStr = `import {${currScope}} from '@/hooks/${currFrom}'\n`;
+    } else {
+      currStr = `import {${currScope}} from '${currFrom}'\n `;
+    }
+
+    currObjMapString += currStr;
+  }
+  // console.log(currObjMapString)
+  return currObjMapString;
+}
+
+function getRegistryDependencyByScope(extraScopes) {
+  let fromString = [];
+  if (!extraScopes) return fromString;
+
+  for (let i = 0; i < extraScopes.length; i++) {
+    if (extraScopes[i].isComp || extraScopes[i].isHook) {
+      let currFrom = extraScopes[i].from.toLowerCase();
+      let currFromStr = `https://uigite.in/r/${currFrom}.json`;
+      fromString.push(currFromStr);
+    }
+  }
+  console.log(fromString);
+  return fromString;
+}
 
 async function register(name, results) {
   try {
@@ -70,11 +112,6 @@ async function register(name, results) {
       (e) => e.id.toLowerCase().trim() == name.toLowerCase().trim()
     );
     if (element.length > 0) {
-      // console.log(
-      //   registryItem.registryDependencies.map((item) =>
-      //     item.trim().toLowerCase()
-      //   )
-      // );
       await writeComponentContent(
         `./website/docs/public/r/${element[0].id}-v0.json`,
         {
@@ -84,9 +121,7 @@ async function register(name, results) {
           $schema: 'https://ui.shadcn.com/schema/registry-item.json',
           registryDependencies: [
             ...(registryItem.registryDependencies
-              ? registryItem.registryDependencies.map((item) =>
-                  item.trim().toLowerCase()
-                )
+              ? getRegistryDependencyByScope(element[0].extraScopes)
               : []),
             `https://080a-104-28-199-189.ngrok-free.app/r/${name}.json`,
           ],
@@ -94,7 +129,7 @@ async function register(name, results) {
             {
               path: `registry/default/components/${element[0].id}-v0.tsx`,
               type: 'registry:component',
-              content: `${element[0].scope.map((ele) => `import {${ele}} from \"@/components/ui/${filesWithContent.find((e) => e.filename.toLowerCase() == element[0].id.toLowerCase()).filename}\"`).join('\n')}
+              content: `${element[0].scope.map((ele) => getImportsMapByScope(element[0].extraScopes))}
               function Component(){
                 return (${element[0].element})
               }

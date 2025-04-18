@@ -67,7 +67,6 @@ const elements = [
     />
   </AccordionWrapper>
 </div>
-
     `,
     variation: [],
   },
