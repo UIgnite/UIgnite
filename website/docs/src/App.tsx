@@ -12,6 +12,7 @@ import ComponentPreviewPage from './pages/components';
 import TestCards from './pages/TestCards';
 import FeedbackForm from './pages/FeedbackForm';
 import ResizablePreview from './pages/ResizablePreview';
+import About from './pages/About';
 
 const App = () => {
   return (
@@ -24,6 +25,9 @@ const App = () => {
         <Route path="/docs" element={<Landing />} />
         <Route path="/testcards" element={<TestCards />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/about" element={<About />}>
+          {' '}
+        </Route>
         <Route element={<ComponentLayout />}>
           <Route path="/components/" element={<ComponentPreviewPage />} />
           <Route
