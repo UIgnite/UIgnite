@@ -637,51 +637,6 @@
     ]
   },
   {
-    "id": "Resizable",
-    "name": "Resizable",
-    "desc": "A flexible container splitter that allows users to resize two panes horizontally or vertically by dragging a divider.",
-    "path": "/components/ui/Resizable/Resizable.tsx",
-    "previewImageUrl": "",
-    "installation": [
-      {
-        "title": "Import the Resizable component",
-        "codeBlock": "",
-        "path": "/components/ui/Resizable/Resizable.tsx"
-      },
-      {
-        "title": "Copy the code",
-        "codeBlock": "import { cn } from '@/utils/lib';",
-        "path": "/utils/lib.ts"
-      }
-    ],
-    "props": [
-      {
-        "prop": "className",
-        "type": "string",
-        "desc": "Additional Tailwind classes for the outermost container.",
-        "defaultValue": "—"
-      },
-      {
-        "prop": "children",
-        "type": "[ReactNode, ReactNode]",
-        "desc": "Two children: the left/top pane and right/bottom pane.",
-        "defaultValue": "—"
-      },
-      {
-        "prop": "defaultPosition",
-        "type": "number",
-        "desc": "Initial position of the divider in pixels (overrides default).",
-        "defaultValue": "window.innerWidth / 5 or window.innerHeight - (1/3)"
-      },
-      {
-        "prop": "horizontal",
-        "type": "boolean",
-        "desc": "If true, divider is horizontal (top/bottom split). Else, it's vertical (left/right split).",
-        "defaultValue": "false"
-      }
-    ]
-  },
-  {
     "id": "Skeleton",
     "name": "Skeleton",
     "desc": "A simple animated placeholder component used to indicate loading UI blocks.",

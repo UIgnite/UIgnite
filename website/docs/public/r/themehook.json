@@ -2,9 +2,7 @@
   "name": "themehook",
   "type": "registry:hook",
   "dependencies": [],
-  "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/themehook.json"
-  ],
+  "registryDependencies": ["https://uignite.in/r/themehook.json"],
   "files": [
     {
       "path": "components/ui/theme.tsx",

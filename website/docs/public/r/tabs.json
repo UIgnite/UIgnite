@@ -2,9 +2,7 @@
   "name": "tabs",
   "type": "registry:ui",
   "dependencies": [],
-  "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/tabs.json"
-  ],
+  "registryDependencies": ["https://uignite.in/r/tabs.json"],
   "files": [
     {
       "path": "components/ui/Tabs.tsx",

@@ -31,9 +31,7 @@
       "name": "button",
       "type": "registry:ui",
       "dependencies": ["class-variance-authority"],
-      "registryDependencies": [
-        "https://d278-104-28-199-190.ngrok-free.app/r/Spinner.json"
-      ],
+      "registryDependencies": ["https://uignite.in/r/Spinner.json"],
       "files": [
         {
           "path": "packages/uignite/src/components/ui/Button/Button.tsx",
@@ -121,18 +119,6 @@
       "files": [
         {
           "path": "packages/uignite/src/components/ui/Navbar/Navbar.tsx",
-          "type": "registry:ui"
-        }
-      ]
-    },
-    {
-      "name": "navmenu",
-      "type": "registry:ui",
-      "dependencies": [],
-      "registryDependencies": [],
-      "files": [
-        {
-          "path": "packages/uignite/src/components/ui/NavMenu/NavMenu.tsx",
           "type": "registry:ui"
         }
       ]

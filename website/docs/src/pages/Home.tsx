@@ -1,9 +1,5 @@
 import {useState} from 'react';
-import {
-  Button,
-  Card,
- 
-} from '@pkgs/uignite';
+import {Button, Card} from '@pkgs/uignite';
 import {CustomTheme} from '../utils/CustomTheme';
 import {motion} from 'framer-motion';
 import {
@@ -24,7 +20,14 @@ import TechStack from '../utils/TechStack';
 import {VideoPlayer} from '@pkgs/uignite';
 import Footer from '../components/Footer';
 import {Link} from 'react-router-dom';
-import { Heart, RefreshCw, SkipBack, Pause, SkipForward, Shuffle } from "lucide-react";
+import {
+  Heart,
+  RefreshCw,
+  SkipBack,
+  Pause,
+  SkipForward,
+  Shuffle,
+} from 'lucide-react';
 const Home = () => {
   const [isCopied, setIsCopied] = useState(false);
 

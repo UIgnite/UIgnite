@@ -2,9 +2,7 @@
   "name": "dropdown",
   "type": "registry:ui",
   "dependencies": [],
-  "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/dropdown.json"
-  ],
+  "registryDependencies": ["https://uignite.in/r/dropdown.json"],
   "files": [
     {
       "path": "components/ui/Dropdown.tsx",

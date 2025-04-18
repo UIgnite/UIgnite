@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import { Button } from '@pkgs/uignite';
+import {useState} from 'react';
+import {Button} from '@/components/ui/Button';
 
 type AlertDialogBoxProps = {
   title: string;
   description: string;
 };
 
-const AlertDialogBox = ({ title, description }: AlertDialogBoxProps) => {
+const AlertDialogBox = ({title, description}: AlertDialogBoxProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -19,7 +19,9 @@ const AlertDialogBox = ({ title, description }: AlertDialogBoxProps) => {
             <h2 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">
               {title}
             </h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">{description}</p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              {description}
+            </p>
             <div className="flex justify-end gap-2">
               <Button
                 onClick={() => setIsOpen(false)}
@@ -41,4 +43,4 @@ const AlertDialogBox = ({ title, description }: AlertDialogBoxProps) => {
   );
 };
 
-export { AlertDialogBox };
+export {AlertDialogBox};

@@ -2,10 +2,7 @@
   "name": "toasthook",
   "type": "registry:hook",
   "dependencies": [],
-  "registryDependencies": [
-    "toast",
-    "https://d278-104-28-199-190.ngrok-free.app/r/toasthook.json"
-  ],
+  "registryDependencies": ["toast", "https://uignite.in/r/toasthook.json"],
   "files": [
     {
       "path": "components/ui/toast.tsx",
