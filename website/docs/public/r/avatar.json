@@ -2,9 +2,7 @@
   "name": "avatar",
   "type": "registry:ui",
   "dependencies": [],
-  "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/avatar.json"
-  ],
+  "registryDependencies": ["https://uignite.in/r/avatar.json"],
   "files": [
     {
       "path": "components/ui/Avatar.tsx",

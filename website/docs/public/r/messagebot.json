@@ -2,9 +2,7 @@
   "name": "messagebot",
   "type": "registry:ui",
   "dependencies": [],
-  "registryDependencies": [
-    "https://d278-104-28-199-190.ngrok-free.app/r/messagebot.json"
-  ],
+  "registryDependencies": ["https://uignite.in/r/messagebot.json"],
   "files": [
     {
       "path": "components/ui/MessageBot.tsx",
