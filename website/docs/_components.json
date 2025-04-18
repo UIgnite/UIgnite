@@ -8,7 +8,7 @@
     "installation": [
       {
         "title": "Install dependencies",
-        "codeBlock": "npm i clsx cn lucid",
+        "codeBlock": "npm i clsx lucid",
         "path": "/components/ui/Accordion/Accordion.tsx"
       },
       {
