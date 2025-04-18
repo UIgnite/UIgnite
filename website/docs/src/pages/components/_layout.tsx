@@ -64,8 +64,10 @@ export default function ComponentLayout() {
               <Outlet />
             )
           ) : (
-            <ComponentList />
-          )}
+            // <ComponentList />
+            <Introduction />
+          )
+          }
         </div>
 
         {componentId && (
