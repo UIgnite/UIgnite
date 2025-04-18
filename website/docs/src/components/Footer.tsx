@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <div className="w-full h-full">
-      <div className="dark:border-t-zinc-800 border-t mt-6 border-t-zinc-300"></div>
+      <div className="mt-6"></div>
       <div className="max-w-[1200px] flex flex-col w-full py-5 justify-between mx-auto pb-5">
         <div className="mt-4 flex justify-between">
           {/* website */}
@@ -115,7 +115,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="dark:border-t-zinc-800 border-t border-t-zinc-300 mt-6 mb-4"></div>
+        <div className="mt-6 mb-4"></div>
         <div className="flex justify-between text-zinc-800 dark:text-zinc-300">
           <div className="">© 2025 UIgnite. All rights reserved.</div>
           <div>

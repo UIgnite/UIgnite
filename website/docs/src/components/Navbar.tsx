@@ -66,19 +66,21 @@ const Navbar = () => {
       </div>
 
       {/* github and mode switch */}
-      <div className="hidden md:flex md:justify-center md:items-center md:gap-1">
+      <div className="hidden md:flex md:justify-center md:items-center md:gap-10">
         {/* md:justify-end md:space-x-4 */}
         <SearchBar />
-        <ThemeToggleBtn />
-        <a
-          href="https://github.com/UIgnite/UIgnite"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div className="!dark cursor-pointer p-2 rounded hover:bg-zinc-200 dark:hover:bg-zinc-700">
-            <GitHubLogoIcon className=" h-4 w-4 " />
-          </div>
-        </a>
+        <div className="flex gap-1.5">
+          <ThemeToggleBtn />
+          <a
+            href="https://github.com/UIgnite/UIgnite"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="!dark cursor-pointer p-2 rounded dark:bg-zinc-800  dark:hover:bg-zinc-700 bg-zinc-100 hover:bg-zinc-200">
+              <GitHubLogoIcon className=" h-4 w-4 " />
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   );
