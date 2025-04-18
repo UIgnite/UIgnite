@@ -1,9 +1,5 @@
 import {useState} from 'react';
-import {
-  Button,
-  Card,
- 
-} from '@pkgs/uignite';
+import {Button, Card} from '@pkgs/uignite';
 import {CustomTheme} from '../utils/CustomTheme';
 import {motion} from 'framer-motion';
 import {
@@ -24,7 +20,14 @@ import TechStack from '../utils/TechStack';
 import {VideoPlayer} from '@pkgs/uignite';
 import Footer from '../components/Footer';
 import {Link} from 'react-router-dom';
-import { Heart, RefreshCw, SkipBack, Pause, SkipForward, Shuffle } from "lucide-react";
+import {
+  Heart,
+  RefreshCw,
+  SkipBack,
+  Pause,
+  SkipForward,
+  Shuffle,
+} from 'lucide-react';
 const Home = () => {
   const [isCopied, setIsCopied] = useState(false);
 
@@ -228,55 +231,52 @@ const Home = () => {
                 interface can match your brand, mood, or imagination—no limits,
                 just possibilities.
               </p>
-              
+
               <Card className="bg-gradient-to-tr from-orange-500 via-pink-500 to-rose-500 p-6 mt-4 rounded-xl shadow-lg text-white w-full max-w-xl h-[50%] mx-auto">
-      <div className="flex gap-3 items-center">
-        <img
-          src="/api/placeholder/320/320"
-          alt="Album Cover"
-          className="w-32 h-32 rounded-xl object-cover"
-        />
-        <div className="flex-1">
-          <h2 className="text-xl font-semibold">Daily Mix</h2>
-          <p className="text-sm opacity-90 mb-1">12 Tracks</p>
-          <p className="text-md font-medium">Frontend Radio</p>
-          <div className="flex items-center mt-4 gap-2 text-xs">
-            <span>1:23</span>
-            <input
-              type="range"
-              defaultValue="33"
-              className="w-full accent-white"
-            />
-            <span>4:32</span>
-          </div>
-        </div>
-        <div className="text-white text-xl">
-          <button className="hover:scale-110 transition">
-            <Heart size={24} />
-          </button>
-        </div>
-      </div>
-      <div className="flex justify-center items-center gap-6 mt-6 text-2xl">
-        <button className="hover:text-white/80 transition-colors">
-          <RefreshCw size={24} />
-        </button>
-        <button className="hover:text-white/80 transition-colors">
-          <SkipBack size={24} />
-        </button>
-        <button className="bg-white text-black p-3 rounded-full hover:scale-110 transition">
-          <Pause size={24} />
-        </button>
-        <button className="hover:text-white/80 transition-colors">
-          <SkipForward size={24} />
-        </button>
-        <button className="hover:text-white/80 transition-colors">
-          <Shuffle size={24} />
-        </button>
-      </div>
-    </Card>
-              
-              
-             
+                <div className="flex gap-3 items-center">
+                  <img
+                    src="/api/placeholder/320/320"
+                    alt="Album Cover"
+                    className="w-32 h-32 rounded-xl object-cover"
+                  />
+                  <div className="flex-1">
+                    <h2 className="text-xl font-semibold">Daily Mix</h2>
+                    <p className="text-sm opacity-90 mb-1">12 Tracks</p>
+                    <p className="text-md font-medium">Frontend Radio</p>
+                    <div className="flex items-center mt-4 gap-2 text-xs">
+                      <span>1:23</span>
+                      <input
+                        type="range"
+                        defaultValue="33"
+                        className="w-full accent-white"
+                      />
+                      <span>4:32</span>
+                    </div>
+                  </div>
+                  <div className="text-white text-xl">
+                    <button className="hover:scale-110 transition">
+                      <Heart size={24} />
+                    </button>
+                  </div>
+                </div>
+                <div className="flex justify-center items-center gap-6 mt-6 text-2xl">
+                  <button className="hover:text-white/80 transition-colors">
+                    <RefreshCw size={24} />
+                  </button>
+                  <button className="hover:text-white/80 transition-colors">
+                    <SkipBack size={24} />
+                  </button>
+                  <button className="bg-white text-black p-3 rounded-full hover:scale-110 transition">
+                    <Pause size={24} />
+                  </button>
+                  <button className="hover:text-white/80 transition-colors">
+                    <SkipForward size={24} />
+                  </button>
+                  <button className="hover:text-white/80 transition-colors">
+                    <Shuffle size={24} />
+                  </button>
+                </div>
+              </Card>
             </div>
             <div className="flex-2 ml-4">
               <img src="card.png" alt="" />

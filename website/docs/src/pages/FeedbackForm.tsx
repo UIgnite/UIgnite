@@ -254,7 +254,7 @@ export default function FeedbackForm() {
                       id={feedbackId}
                       value={feedback}
                       onChange={(e) => setFeedback(e.target.value)}
-                      className="bg-transparent rounded-lg focus-visible:ring-0 dark:text-neutral-100 dark:border-neutral-100 dark:focus-visible:border-2 ring-0 text-neutral-900"
+                      className="bg-transparent rounded-lg focus-visible:ring-0 dark:text-neutral-100 dark:border-none dark:focus-visible:border-2 ring-0 text-neutral-900"
                       placeholder="Your precious feedback here..."
                     />
                   </div>
@@ -337,6 +337,7 @@ export default function FeedbackForm() {
                   Name
                 </label>
                 <Input
+                  className="mt-1"
                   required
                   id={nameId}
                   value={name}
@@ -349,6 +350,7 @@ export default function FeedbackForm() {
                   Email
                 </label>
                 <Input
+                  className="mt-1"
                   required
                   id={emailId}
                   type="email"
@@ -366,7 +368,7 @@ export default function FeedbackForm() {
                   id={feedbackId}
                   value={feedback}
                   onChange={(e) => setFeedback(e.target.value)}
-                  className="bg-transparent rounded-lg focus-visible:ring-0 dark:text-neutral-100 dark:border-neutral-100 dark:focus-visible:border-2 ring-0 text-neutral-900"
+                  className="pl-1.5 mt-1 bg-transparent rounded-lg focus-visible:ring-0 dark:text-neutral-100 dark:border-zinc-500 dark:focus-visible:border-2 ring-0 text-neutral-900"
                   placeholder="Your precious feedback here..."
                 />
               </div>
