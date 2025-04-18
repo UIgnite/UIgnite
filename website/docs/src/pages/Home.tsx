@@ -128,6 +128,16 @@ const Home = () => {
 
   return (
     <CustomTheme>
+      <div className=" flex items-center justify-center bg-gradient-to-r from-indigo-400 to-cyan-400 py-1 px-2 font-light tracking-wide">
+        {' '}
+        <div className="inline-block mx-2 bg-cyan-800 px-4 py-1 rounded-full font-semibold">
+          Beta
+        </div>
+        <div className="text-zinc-800 font-semibold">
+          We're constantly leveling up UIgnite — more components, more features,
+          all in the works. Stay tuned, it's only getting better!
+        </div>
+      </div>
       <Navbar />
       {/* Main Content */}
       <GridBackground />
