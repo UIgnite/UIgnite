@@ -72,7 +72,7 @@ export const Variants = ({componentId}: {componentId: string}) => {
                       </div>
 
                       <LivePreview className="mt-6" />
-                      <LiveError className="mt-6" />
+                      {/* <LiveError className="mt-6" /> */}
                     </div>
                   }
                   value="preview"

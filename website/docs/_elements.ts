@@ -72,11 +72,7 @@ const elements = [
   </AccordionWrapper>
 </div>
     `,
-    variation: [
-      `
-      
-      `,
-    ],
+    variation: [],
   },
   {
     id: 'AlertDialogBox',
@@ -703,23 +699,8 @@ const AvatarGroup = () => {
     ],
     element: `
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4 px-4">
-      <PricingCard 
-        title="Pro Plan"
-        price="$29"
-        validity="per month"
-        description="Get access to all features and premium support."
-        features={[
-          "Unlimited API requests",
-          "24/7 customer support",
-          "Access to premium templates",
-          "Advanced analytics"
-        ]}
-        highlighted={false}
-        theme="dark"
-        popular={false}
-      />
-      <PricingCard 
+      <div className="flex  justify-center items-center">
+        <PricingCard 
           title="Pro Plan"
           price="$29"
           validity="per month"
@@ -731,11 +712,11 @@ const AvatarGroup = () => {
             "Advanced analytics"
           ]}
           highlighted={false}
-          theme="dracula"
+          theme="dark"
           popular={false}
-      />
+        />
       </div>
-      <div className="ml-5 mt-5"> For the best experience, please view the <Link to="/pricing" className="text-blue-600 cursor-pointer">Pricing page</Link> on a larger screen.</div>
+      <div className="ml-2 mt-5"> For the best experience, please view the <Link to="/pricing" className="text-blue-600 cursor-pointer">Pricing page</Link> on a larger screen.</div>
     </>
   `,
     variation: [],
