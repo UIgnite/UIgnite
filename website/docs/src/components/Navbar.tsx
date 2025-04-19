@@ -92,7 +92,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
           >
             <div
-              className={`${pathname === '/' ? 'dark:bg-transparent' : 'dark:bg-zinc-800'} cursor-pointer p-2 rounded   dark:hover:bg-[#305CDE] hover:bg-zinc-200`}
+              className={`${pathname === '/' ? 'dark:bg-transparent' : 'dark:bg-zinc-800'} cursor-pointer p-2 rounded   dark:hover:bg-[#305CDE] bg-zinc-100 hover:bg-zinc-200`}
             >
               <GitHubLogoIcon className=" h-4 w-4 " />
             </div>
