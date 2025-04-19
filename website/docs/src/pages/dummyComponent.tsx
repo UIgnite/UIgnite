@@ -140,3 +140,13 @@ export const Navbar = ({
   );
 };
 export default Navbar;
+
+/*
+
+
+
+
+<Button className="bg-orange-500 hover:bg-orange-600 px-4 py-2 text-sm">
+                Login
+              </Button>
+*/

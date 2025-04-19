@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 
 import {Testimonials} from '@pkgs/uignite';
-import Navbar from '../components/Navbar';
+import MainNavbar from '../components/Navbar';
 import {GridBackground} from '../utils/GridBackground';
 import TechStack from '../utils/TechStack';
 import {VideoPlayer} from '@pkgs/uignite';
@@ -118,7 +118,7 @@ const Home = () => {
 
   return (
     <CustomTheme>
-      <Navbar />
+      <MainNavbar />
       {/* Main Content */}
       <GridBackground />
       <div className="flex justify-center items-center mt-8 ">
