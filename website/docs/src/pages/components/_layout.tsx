@@ -42,21 +42,39 @@ export default function ComponentLayout() {
           <span className="text-neutral-200">{componentId}</span>
         </div>
         <div>
-          <ChevronRight className="size-4"/>
+          <ChevronRight className="size-4" />
         </div>
       </div>
       <div className="flex justify-center items-center scroll-smooth relative">
-        <div aria-hidden={!sidebarOpen} className="bg-black aria-hidden:hidden md:hidden inset-0 z-20 absolute overflow-y-auto">
-          <div className='px-2 py-2 bg-neutral-800/50'>Getting Started</div>
-          <div className='flex flex-col gap-y-1'>
-            <button onClick={()=>handleNavigation('/components/introduction')} className='text-left px-6 text-neutral-200 py-2'>Introduction</button>
-            <button onClick={()=>handleNavigation('/components/installation')} className='text-left px-6 text-neutral-200 py-2'>Installation</button>
+        <div
+          aria-hidden={!sidebarOpen}
+          className="bg-black aria-hidden:hidden md:hidden inset-0 z-20 absolute overflow-y-auto"
+        >
+          <div className="px-2 py-2 bg-neutral-800/50">Getting Started</div>
+          <div className="flex flex-col gap-y-1">
+            <button
+              onClick={() => handleNavigation('/components/introduction')}
+              className="text-left px-6 text-neutral-200 py-2"
+            >
+              Introduction
+            </button>
+            <button
+              onClick={() => handleNavigation('/components/installation')}
+              className="text-left px-6 text-neutral-200 py-2"
+            >
+              Installation
+            </button>
           </div>
-          <div className='px-2 py-2 bg-neutral-800/50'>
-            Components
-          </div>
-          <div className='flex flex-col gap-y-1'>
-            {components.map((compo)=><button onClick={()=>handleNavigation(`/components/${compo.id}`)} className='text-left px-6 text-neutral-200 py-2 aria-active:bg-neutral-900 active:bg-neutral-900'>{compo.name}</button>)}
+          <div className="px-2 py-2 bg-neutral-800/50">Components</div>
+          <div className="flex flex-col gap-y-1">
+            {components.map((compo) => (
+              <button
+                onClick={() => handleNavigation(`/components/${compo.id}`)}
+                className="text-left px-6 text-neutral-200 py-2 aria-active:bg-neutral-900 active:bg-neutral-900"
+              >
+                {compo.name}
+              </button>
+            ))}
           </div>
         </div>
 

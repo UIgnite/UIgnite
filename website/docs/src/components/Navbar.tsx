@@ -45,7 +45,7 @@ function Navbar() {
           </NavLink>
 
           {/* Desktop Links */}
-          <nav className='mt-1'>
+          <nav className="mt-1">
             {navbarLinks.map(({name, link}) => (
               <NavLink
                 key={name}

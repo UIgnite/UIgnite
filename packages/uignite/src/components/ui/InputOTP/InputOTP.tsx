@@ -24,7 +24,7 @@ const InputOTP: React.FC<InputOTPProps> = ({
     if (isNaN(Number(value))) return;
 
     const newOtp = [...otp];
-    newOtp[index] = value.slice(-1); // Only last digit
+    newOtp[index] = value.slice(-1);
     setOtp(newOtp);
 
     const combined = newOtp.join('');
@@ -54,6 +54,36 @@ const InputOTP: React.FC<InputOTPProps> = ({
     inputRefs.current[index]?.setSelectionRange(1, 1);
   };
 
+  const handlePaste = (
+    index: number,
+    e: React.ClipboardEvent<HTMLInputElement>
+  ) => {
+    e.preventDefault();
+    const pasteData = e.clipboardData.getData('Text');
+    if (!pasteData) return;
+
+    const digits = pasteData.replace(/\D/g, '').slice(0, length);
+    if (digits.length === 0) return;
+
+    const newOtp = [...otp];
+    let lastFilledIndex = index;
+
+    for (let i = 0; i < digits.length && index + i < length; i++) {
+      newOtp[index + i] = digits[i];
+      lastFilledIndex = index + i;
+    }
+
+    setOtp(newOtp);
+
+    const combined = newOtp.join('');
+    if (combined.length === length && !newOtp.includes('')) {
+      onOTPSubmit(combined);
+    }
+    const nextFocusIndex =
+      lastFilledIndex + 1 < length ? lastFilledIndex + 1 : lastFilledIndex;
+    inputRefs.current[nextFocusIndex]?.focus();
+  };
+
   return (
     <div className="flex items-center justify-center gap-3 mt-10">
       {otp.map((digit, index) => (
@@ -69,7 +99,8 @@ const InputOTP: React.FC<InputOTPProps> = ({
           onChange={(e) => handleChange(index, e)}
           onKeyDown={(e) => handleKeyDown(index, e)}
           onClick={() => handleClick(index)}
-          className="w-14 h-14 text-center text-xl -mt-4 shadow-lg  dark:shadow-black dark:text-black rounded-sm dark:bg-zinc-200 bg-zinc-800 text-white outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-150"
+          onPaste={(e) => handlePaste(index, e)}
+          className="w-14 h-14 text-center text-xl -mt-4 shadow-lg dark:shadow-black dark:text-black rounded-sm dark:bg-zinc-200 bg-zinc-800 text-white outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-150"
         />
       ))}
     </div>
