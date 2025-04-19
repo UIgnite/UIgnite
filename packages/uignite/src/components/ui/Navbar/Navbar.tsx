@@ -1,6 +1,20 @@
 import {ThemeToggleBtn} from '@/lib/ThemeToggleBtn';
 import {useTheme} from '@/hooks';
 import {Button} from '../Button';
+import {ReactNode} from 'react';
+
+export interface NavbarProps {
+  darkModeLogo: string;
+  lightModoLogo: string;
+  navbarLinks: [
+    {
+      name: string;
+      link: string;
+    },
+  ];
+  themeChangeBtn?: ReactNode;
+  loginBtnLink?: string;
+}
 
 const Navbar = () => {
   const {theme} = useTheme();

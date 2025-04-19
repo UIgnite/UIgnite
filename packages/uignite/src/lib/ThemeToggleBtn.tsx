@@ -15,7 +15,7 @@ export const ThemeToggleBtn = ({className}: ThemeToggleBtnProps) => {
     <button
       onClick={toggleTheme}
       className={cn(
-        'cursor-pointer p-2 rounded dark:bg-zinc-800 dark:hover:bg-zinc-700 bg-zinc-100 hover:bg-zinc-200',
+        'cursor-pointer p-2 rounded dark:bg-zinc-800 dark:hover:bg-zinc-700 hover:bg-zinc-200',
         className
       )}
     >
