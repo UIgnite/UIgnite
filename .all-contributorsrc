@@ -35,6 +35,13 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/94675822?v=4",
       "profile": "https://personal-portfolio-srvjha.vercel.app/",
       "contributions": ["business"]
+    },
+    {
+      "login": "JAHANWEE",
+      "name": "Jahanwee",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55875551?v=4",
+      "profile": "https://github.com/JAHANWEE",
+      "contributions": ["content"]
     }
   ],
   "contributorsPerLine": 7,
