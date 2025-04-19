@@ -29,7 +29,7 @@ function Navbar() {
 
   return (
     <header className={`w-full py-2 sm:px-6 lg:px-10 shadow-sm`}>
-      <div className="max-w-7xl mx-auto flex items-center gap-4 sm:justify-between">
+      <div className="max-w-7xl mx-auto flex items-center gap-4 sm:justify-between px-3">
         {/* Logo + Nav */}
         <div className="hidden md:flex gap-4 items-center">
           <NavLink to={'/'}>
@@ -78,9 +78,9 @@ function Navbar() {
         </button>
 
         {/* Right: Theme toggle + login + hamburger */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 w-full sm:w-auto">
           <SearchBar />
-          <div className="flex gap-1.5 ml-6">
+          <div className="flex gap-1.5 md:ml-6">
             <ThemeToggleBtn
               className={`${pathname === '/' ? 'dark:bg-transparent' : 'dark:bg-zinc-800'} cursor-pointer p-2 rounded   dark:hover:bg-[#305CDE] bg-zinc-100 hover:bg-zinc-200`}
             />

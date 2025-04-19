@@ -23,7 +23,7 @@ export default function ComponentLayout() {
     setSidebarOpen(!sidebarOpen);
   };
   return (
-    <div className="flex justify-center items-center scroll-smooth">
+    <div className="flex justify-center items-center scroll-smooth overflow-hidden h-screen w-screen">
       <button
         className="lg:hidden fixed top-4 left-4  p-2 rounded-md bg-neutral-100 dark:bg-neutral-800"
         onClick={toggleSidebar}
@@ -31,7 +31,7 @@ export default function ComponentLayout() {
         {sidebarOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
-      <div className="w-[1400px] h-[calc(90vh-25px)] flex mt-10 relative ">
+      <div className="w-[1400px] h-[calc(90vh-25px)] flex mt-10 relative">
         {/* Side Bar  */}
         <SideBar
           className={`${sidebarOpen ? 'block z-100 rounded-md bg-neutral-900 fixed max-w-[90%] w-full ml-2 lg:hidden ' : 'hidden '}`}
