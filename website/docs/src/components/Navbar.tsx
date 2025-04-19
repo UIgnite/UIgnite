@@ -1,12 +1,12 @@
 import {NavLink, useLocation} from 'react-router-dom';
-import {cn, ThemeToggleBtn, useTheme} from '@pkgs/uignite';
+import {cn, Navbar, ThemeToggleBtn, useTheme} from '@pkgs/uignite';
 import {useEffect, useState} from 'react';
 import {X, Menu} from 'lucide-react';
 
 import {GitHubLogoIcon} from '@radix-ui/react-icons';
 import SearchBar from '@/pages/components/Search';
 
-function Navbar() {
+function MainNavbar() {
   const {pathname} = useLocation();
   const navbarLinks: {
     name: string;
@@ -27,8 +27,8 @@ function Navbar() {
     setMobileMenuOpen((prev) => !prev);
   };
 
-  return (
-    <header className={`w-full py-2 sm:px-6 lg:px-10 shadow-sm`}>
+  return pathname !== '/components/Navbar' ? (
+    <header className={`w-full py-2 sm:px-6 lg:px-10`}>
       <div className="max-w-7xl mx-auto flex items-center gap-4 sm:justify-between px-3">
         {/* Logo + Nav */}
         <div className="hidden md:flex gap-4 items-center">
@@ -45,7 +45,7 @@ function Navbar() {
           </NavLink>
 
           {/* Desktop Links */}
-          <nav className='mt-1'>
+          <nav className="mt-1">
             {navbarLinks.map(({name, link}) => (
               <NavLink
                 key={name}
@@ -82,10 +82,10 @@ function Navbar() {
           <SearchBar />
           <div className="flex gap-1.5 md:ml-6">
             <ThemeToggleBtn
-              className={`${pathname === '/' ? 'dark:bg-transparent' : 'dark:bg-zinc-800'} cursor-pointer p-2 rounded   dark:hover:bg-[#305CDE] bg-zinc-100 hover:bg-zinc-200`}
+              className={`${pathname === '/' ? 'dark:bg-transparent' : 'dark:bg-transparent'} cursor-pointer p-2 rounded   dark:hover:bg-zinc-800  hover:bg-zinc-200`}
             />
             <div
-              className={`${pathname === '/' ? 'dark:bg-transparent' : 'dark:bg-zinc-800'} cursor-pointer p-2 rounded   dark:hover:bg-[#305CDE] bg-zinc-100 hover:bg-zinc-200`}
+              className={`${pathname === '/' ? 'dark:bg-transparent' : 'dark:bg-transparent'} cursor-pointer p-2 rounded   dark:hover:bg-zinc-800  hover:bg-zinc-200`}
             >
               <GitHubLogoIcon className=" h-4 w-4 " />
             </div>
@@ -133,7 +133,24 @@ function Navbar() {
         </nav>
       )}
     </header>
+  ) : (
+    <Navbar
+      className="py-3 bg-transparent dark:bg-transparent"
+      darkModeLogo="https://res.cloudinary.com/do2tmd6xp/image/upload/v1745059611/uignite/dtst2deim1sgv2g5dcm6.png"
+      lightModoLogo="https://res.cloudinary.com/do2tmd6xp/image/upload/v1745059611/uignite/gzfqtahpfc93ybugfiwr.png"
+      navbarLinks={[
+        {name: 'Cohorts', link: '/'},
+        {name: 'Udemy', link: '/'},
+        {name: 'Docs', link: '/'},
+        {name: 'Reviews', link: '/'},
+      ]}
+      loginBtnLink="/login"
+      themeChangeBtn={
+        <ThemeToggleBtn className="text-gray-200 dark:text-zinc-100 bg-orange-500 dark:bg-orange-500 hover:bg-orange-600 dark:hover:bg-orange-600" />
+      }
+      loginBtnStyle="h-9 text-gray-200 dark:text-zinc-100 bg-orange-500 dark:bg-orange-500 hover:bg-orange-600 dark:hover:bg-orange-600"
+    />
   );
 }
 
-export default Navbar;
+export default MainNavbar;
