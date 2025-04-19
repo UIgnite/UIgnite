@@ -38,15 +38,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({children}) => {
 
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
-         {/* <div
-        className={`${
-          theme === 'dark'
-            ? 'bg-dark-primary text-white'
-            : 'bg-light-primary text-black'
-        }`}
-      > */}
         {children}
-      {/* </div> */}
     </ThemeContext.Provider>
   );
 };
