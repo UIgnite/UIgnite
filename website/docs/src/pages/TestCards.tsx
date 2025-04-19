@@ -22,36 +22,37 @@ function TestCards() {
     <div className="flex justify-center items-center h-full w-full py-36">
       <div>
         <Card className="mt-6 rounded-2xl shadow-lg max-h-min">
-          <CardHeader className="flex flex-row justify-between px-4 pt-2 items-center">
-            <div className="flex gap-3 items-center">
+          <CardHeader className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 px-4 pt-4">
+            <div className="flex items-center gap-3">
               <Avatar url="/hitesh-sir.png" alt="avatar" />
               <div>
                 <CardTitle className="text-base">Hitesh Chaudhary</CardTitle>
-                <CardDescription className="text-sm dark:text-gray-400">
+                <CardDescription className="text-sm text-zinc-600 dark:text-zinc-400">
                   @HiteshDotCom
                 </CardDescription>
               </div>
             </div>
             <Button
               onClick={clickHandler}
-              className={`${
+              className={cn(
+                'transition-all duration-200 ease-out active:scale-95 text-white text-sm font-medium py-1.5 px-4 rounded-full',
                 status === 'Unfollow'
                   ? 'bg-zinc-900 hover:bg-neutral-900 dark:border dark:border-white border-2'
-                  : 'bg-blue-600 hover:bg-blue-700'
-              } transform transition-all duration-200 ease-out active:scale-95 cursor-pointer text-white text-sm font-medium py-1.5 px-4 rounded-full`}
+                  : 'bg-blue-600 hover:bg-blue-700 border-2 dark:border-transparent'
+              )}
             >
               {status}
             </Button>
           </CardHeader>
 
-          <CardContent className="text-sm dark:text-gray-300 px-4 pb-2 pt-1">
+          <CardContent className="px-4 pb-4 pt-2 text-sm text-zinc-700 dark:text-zinc-300">
             <p>
               Retired from corporate and full time YouTuber, x founder of LCO
               (acquired), x CTO, Sr. Director at PW. 2 YT channels (950k &
               470k), stepped into 43 countries.
             </p>
 
-            <div className="mt-2 flex items-center gap-4 text-sm dark:text-gray-400">
+            <div className="mt-3 flex flex-wrap gap-4 text-sm text-zinc-600 dark:text-zinc-400">
               <span>
                 <span className=" font-semibold">386</span> Following
               </span>
@@ -62,7 +63,7 @@ function TestCards() {
           </CardContent>
         </Card>
 
-        <hr className="my-12" />
+        {/* <hr className="my-12" />
         <Card className="mt-6 rounded-2xl shadow-lg w-full max-w-xl mx-auto">
           <CardHeader className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 px-4 pt-4">
             <div className="flex items-center gap-3">
@@ -103,7 +104,7 @@ function TestCards() {
               </span>
             </div>
           </CardContent>
-        </Card>
+        </Card> */}
       </div>
     </div>
   );
