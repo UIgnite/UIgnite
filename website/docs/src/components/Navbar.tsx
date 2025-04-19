@@ -6,6 +6,11 @@ import {useEffect} from 'react';
 
 const Navbar = () => {
   const {pathname} = useLocation();
+  console.log('current path -> ', pathname);
+
+  if (pathname === '/') {
+    console.log('on home page');
+  }
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -78,13 +83,17 @@ const Navbar = () => {
         {/* md:justify-end md:space-x-4 */}
         <SearchBar />
         <div className="flex gap-1.5">
-          <ThemeToggleBtn />
+          <ThemeToggleBtn
+            className={`${pathname === '/' && 'dark:bg-transparent'} dark:hover:bg-[#305CDE]`}
+          />
           <a
             href="https://github.com/UIgnite/UIgnite"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="!dark cursor-pointer p-2 rounded dark:bg-zinc-800  dark:hover:bg-zinc-700 bg-zinc-100 hover:bg-zinc-200">
+            <div
+              className={`${pathname === '/' ? 'dark:bg-transparent' : 'dark:bg-zinc-800'} cursor-pointer p-2 rounded   dark:hover:bg-[#305CDE] bg-zinc-100 hover:bg-zinc-200`}
+            >
               <GitHubLogoIcon className=" h-4 w-4 " />
             </div>
           </a>

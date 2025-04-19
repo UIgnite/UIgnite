@@ -34,15 +34,24 @@ import {
   Testimonials,
   SignUp,
   SignIn,
+  useTheme,
 } from '@pkgs/uignite';
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react';
-import {Eye, EyeOff, Info, MessageCircle} from 'lucide-react';
+import {
+  Eye,
+  EyeOff,
+  Info,
+  MessageCircle,
+  MoveLeft,
+  MoveRight,
+} from 'lucide-react';
 import {AlarmClockCheck} from 'lucide-react';
+// import { cva } from 'class-variance-authority';
 
 const elements = [
   {
-    id: 'accordion',
+    id: 'Accordion',
     scope: {Accordion, AccordionWrapper},
     extraScopes: [
       {
@@ -52,8 +61,7 @@ const elements = [
       },
     ],
     element: `
-    function Component () {
-    return (
+   
 <div className="relative z-0">
   <AccordionWrapper>
     <Accordion
@@ -73,7 +81,6 @@ const elements = [
     />
   </AccordionWrapper>
 </div>
-  )}
     `,
     variation: [],
   },
@@ -105,18 +112,24 @@ const elements = [
     variation: [],
   },
   {
-    id: 'avatar',
+    id: 'Avatar',
     scope: {Avatar, Tooltip},
+    extraScopes: [
+      {
+        scope: ['Avatar'],
+        from: 'Avatar',
+        isComp: true,
+      },
+    ],
     element: `
       <div className = "flex flex-row gap-2" >
         <Avatar url={"/piyush-sir.png"} alt={"user"} />
         <Avatar url={"/hitesh-sir.png"} alt={"user"} />
       </div>
     `,
+
     variation: [
       `
-     function components() {
-  return (
     <div className="flex items-center -mt-8 pl-2 overflow-visible">
       <div className="relative hover:z-20 transition-all duration-300 ease-in-out">
         <Tooltip title="Aman Gupta" options={{ tooltipStyle: { width: 'auto' } }}>
@@ -164,9 +177,6 @@ const elements = [
         </Tooltip>
       </div>
     </div>
-  );
-};
-
       `,
     ],
   },
@@ -301,7 +311,7 @@ const elements = [
       },
     ],
     element: `
-  function TwitterCard () {
+     function Component () {
     const [status, setStatus] = useState('Follow');
 
     function clickHandler() {
@@ -436,12 +446,16 @@ const elements = [
   },
   {
     id: 'Carosuel',
-    scope: {Carosuel},
+    scope: {Carosuel, MoveRight, MoveLeft},
     extraScopes: [
       {
         scope: ['Carosuel'],
         from: 'Carosuel',
         isComp: true,
+      },
+      {
+        scope: ['MoveLeft', 'MoveRight'],
+        from: 'lucide-react',
       },
     ],
     element: ` 
@@ -468,11 +482,16 @@ const elements = [
 
   {
     id: 'dropdown',
-    scope: {Dropdown},
+    scope: {Dropdown, Button},
     extraScopes: [
       {
         scope: ['Dropdown'],
         from: 'Dropdown',
+        isComp: true,
+      },
+      {
+        scope: ['Button'],
+        from: 'Button',
         isComp: true,
       },
     ],
@@ -493,12 +512,16 @@ const elements = [
   },
   {
     id: 'footer',
-    scope: {Footer},
+    scope: {Footer, useTheme},
     extraScopes: [
       {
         scope: ['Footer'],
         from: 'Footer',
         isComp: true,
+      },
+      {
+        scope: ['useTheme'],
+        from: '@/hooks/theme',
       },
     ],
     element: `
@@ -621,9 +644,6 @@ const elements = [
   {
     id: 'inputotp',
     scope: {InputOTP},
-    element: `
-      <InputOTP length = {6}/> 
-    `,
     extraScopes: [
       {
         scope: ['InputOTP'],
@@ -631,6 +651,10 @@ const elements = [
         isComp: true,
       },
     ],
+    element: `
+      <InputOTP length = {6}/> 
+    `,
+
     variation: [],
   },
   {
