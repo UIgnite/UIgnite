@@ -1,10 +1,7 @@
-import {useState} from 'react';
 import {Button, Card} from '@pkgs/uignite';
 import {CustomTheme} from '../utils/CustomTheme';
 import {motion} from 'framer-motion';
 import {
-  Copy,
-  Check,
   ShieldCheck,
   BookOpen,
   CheckCircle,
@@ -29,13 +26,6 @@ import {
   Shuffle,
 } from 'lucide-react';
 const Home = () => {
-  const [isCopied, setIsCopied] = useState(false);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText('npm i uignite');
-    setIsCopied(true);
-    setTimeout(() => setIsCopied(false), 2000);
-  };
   const features = [
     {
       icon: <ShieldCheck className="text-blue-500" size={24} />,
@@ -131,7 +121,7 @@ const Home = () => {
       <Navbar />
       {/* Main Content */}
       <GridBackground />
-      <div className="flex justify-center items-center ">
+      <div className="flex justify-center items-center mt-8 ">
         <div className=" max-w-[1200px]  w-full px-4 sm:px-4 lg:px-4 ">
           <div className="z-1 px-4 md:px-8 min-h-screen flex justify-center mt-4 ">
             <div className="w-full max-w-6xl  flex items-center justify-center">
@@ -160,14 +150,10 @@ const Home = () => {
                     </Button>
                   </Link>
                   <Button
-                    icon={
-                      !isCopied ? <Copy size="16px" /> : <Check size="16px" />
-                    }
-                    onClick={() => handleCopy()}
-                    className="bg-[#121212] dark:bg-[#000000] hover:bg-black/90 dark:hover:bg-black/50 text-white font-lg rounded-lg px-6 py-6 text-lg transition duration-300 shadow-md "
+                    className="hover:bg-blue-800 text-white font-lg rounded-lg px-6 py-6 text-lg transition duration-300 shadow-md "
                     data-clipboard-text="npm i uginite"
                   >
-                    npm i uginite
+                    Explore Components
                   </Button>
                 </div>
                 <TechStack />
@@ -181,7 +167,7 @@ const Home = () => {
                         <div className="dark:bg-blue-900/30 bg-gray-200 p-2 rounded-full">
                           {feature.icon}
                         </div>
-                        <h3 className="text-lg font-medium dark:text-white text-blue-950">
+                        <h3 className="text-sm sm:text-sm md:text-lg lg:text-lg xl:text-xl font-medium dark:text-white text-blue-950">
                           {feature.title}
                         </h3>
                       </div>
@@ -195,9 +181,9 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex justify-center items-center py-10 px-4">
+          <div className="flex justify-center items-center py-10 px-4 mt-10">
             <motion.div
-              className="dark:text-[#f7f7f8] text-[#0d0346] font-heading max-w-6xl text-center font-semibold relative text-5xl leading-snug [text-wrap:balance]"
+              className="dark:text-[#f7f7f8] text-[#0d0346] font-heading max-w-6xl text-center font-semibold relative text-3xl sm:text-3xl md:text-5xl lg:5xl xl:6xl leading-snug [text-wrap:balance]"
               initial={{opacity: 0, y: 50}}
               whileInView={{opacity: 1, y: 0}}
               transition={{duration: 0.8, ease: 'easeOut'}}
@@ -217,25 +203,25 @@ const Home = () => {
               muted
               autoplay
               loop
-              className="shadow-black dark:shadow-indigo-900 shadow-2xl rounded-xl"
+              className="shadow-black max-h-[200px] sm:max-h-[200px] md:max-h-full lg:max-h-full dark:shadow-indigo-900 shadow-2xl rounded-xl"
             />
           </div>
 
           {/* cards  */}
-          <div className="mt-40 flex flex-row">
+          <div className="mt-20 md:mt-40 lg:mt-40 xl:mt-40 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 px-4">
             <div className="flex-2">
-              <p className="text-7xl font-semibold ">
-                <span className="text-blue-400">Design</span> that adapts to
-                you.
+              <p className="text-4xl sm:text-7xl md:text-7xl lg:text-7xl font-semibold ">
+                <span className="dark:text-cyan-500 text-cyan-700">Design</span>{' '}
+                that <span className="text-pink-500">adapts</span> to you.
               </p>
-              <p className="mt-3 text-md dark:text-zinc-300 text-zinc-600">
+              <p className="mt-8 sm:mt-3 md:mt-3 lg:mt-3 text-md dark:text-zinc-300 text-zinc-600">
                 Uignite lets you tailor every detail with ease. With built-in
                 support for custom themes via our TailwindCSS plugin, your
                 interface can match your brand, mood, or imagination no limits,
                 just possibilities.
               </p>
 
-              <Card className="mb-6 bg-gradient-to-tr from-orange-600 via-pink-600 to-rose-600 p-6 mt-4 rounded-xl shadow-lg text-white w-full max-w-xl h-[45%] mx-auto">
+              <Card className="mb-6 border-0 dark:shadow-lg dark:shadow-black bg-gradient-to-tr from-blue-600 via-gray-900 to-black p-6 mt-4 rounded-xl  text-white w-full max-w-x h-[45%] sm:h-[45%] md:h-[45%] lg:[45%] mx-auto">
                 <div className="flex gap-3 items-center">
                   <img
                     src="pain.png"
@@ -288,7 +274,7 @@ const Home = () => {
 
           <div className="text-center ">
             <motion.p
-              className="text-6xl font-semibold mt-40 dark:text-[#f7f7f8] text-[#0d0346]"
+              className="text-4xl sm:text-4xl md:text-6xl lg:text-6xl  font-semibold mt-40 dark:text-[#f7f7f8] text-[#0d0346]"
               initial={{opacity: 0, y: -20}}
               animate={{opacity: 1, y: 0}}
               transition={{duration: 0.8, ease: 'easeOut'}}
@@ -307,7 +293,7 @@ const Home = () => {
             </motion.p>
           </div>
 
-          <div className="relative w-[1200px] overflow-hidden py-10">
+          <div className="relative w-full max-w-[1000px] md:max-w-[1200px] overflow-hidden py-10 mx-auto">
             <div className="flex w-max gap-2 animate-infinite-scroll">
               {testimonials.map((testimonial, index) => (
                 <Testimonials
