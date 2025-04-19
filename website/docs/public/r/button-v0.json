@@ -7,7 +7,7 @@
     {
       "path": "app/page.tsx",
       "type": "registry:component",
-      "content": "import {Button} from '@/components/ui/Button'\nimport {AlarmClockCheck} from 'lucide-react'\n ,import {Button} from '@/components/ui/Button'\nimport {AlarmClockCheck} from 'lucide-react'\n \n              function Component(){\n                return (\n      <Button>Click Me</Button>\n    )\n              }\n              export default Component\n              ",
+      "content": "import {Button} from '@/components/ui/Button'\nimport {AlarmClockCheck} from 'lucide-react'\n ,import {Button} from '@/components/ui/Button'\nimport {AlarmClockCheck} from 'lucide-react'\n \n              \n              function Component(){\n                return (\n      <Button>Click Me</Button>\n    )\n              }\n              export default Component\n              ",
       "cssVars": {
         "theme": {
           "--color-dark-primary": "#0f0f0f",

@@ -7,7 +7,7 @@
     {
       "path": "app/page.tsx",
       "type": "registry:component",
-      "content": "import {Spinner} from '@/components/ui/Spinner'\n\n              function Component(){\n                return (\n    <div className=\"grid grid-cols-1\">\n      <Spinner variant=\"bounce\" className=\"my-4\" />\n    </div>      \n    )\n              }\n              export default Component\n              ",
+      "content": "import {Spinner} from '@/components/ui/Spinner'\n\n              \n              function Component(){\n                return (\n    <div className=\"grid grid-cols-1\">\n      <Spinner variant=\"bounce\" className=\"my-4\" />\n    </div>      \n    )\n              }\n              export default Component\n              ",
       "cssVars": {
         "theme": {
           "--color-dark-primary": "#0f0f0f",

@@ -1,13 +1,13 @@
 {
-  "name": "Accordion-v0",
+  "name": "inputotp-v0",
   "type": "registry:component",
-  "dependencies": ["lucide-react"],
-  "registryDependencies": ["https://uignite.in/r/accordion.json"],
+  "dependencies": [],
+  "registryDependencies": ["https://uignite.in/r/inputotp.json"],
   "files": [
     {
       "path": "app/page.tsx",
       "type": "registry:component",
-      "content": "import {Accordion, AccordionWrapper} from '@/components/ui/Accordion'\n,import {Accordion, AccordionWrapper} from '@/components/ui/Accordion'\n\n              \n              function Component(){\n                return (\n   \n<div className=\"relative z-0\">\n  <AccordionWrapper>\n    <Accordion\n      title=\"What is MobiMart?\"\n      content=\"MobiMart is an e-commerce platform selling mobile gadgets like earbuds, phones, and speakers.\"\n      className=\"mb-2 border-[0.5px] dark:border-neutral-800\"\n    />\n    <Accordion\n      title=\"How long does delivery take?\"\n      content=\"Typically 2-4 business days depending on your location.\"\n      className=\"mb-2 border-[0.5px] dark:border-neutral-800\"\n    />\n    <Accordion\n      title=\"Can I return a product?\"\n      content=\"Yes, we have a 7-day easy return policy.\"\n      className=\"mb-2 border-[0.5px] dark:border-neutral-800\"\n    />\n  </AccordionWrapper>\n</div>\n    )\n              }\n              export default Component\n              ",
+      "content": "import {InputOTP} from '@/components/ui/InputOTP'\n\n              \n              function Component(){\n                return (\n      <InputOTP length = {6}/> \n    )\n              }\n              export default Component\n              ",
       "cssVars": {
         "theme": {
           "--color-dark-primary": "#0f0f0f",

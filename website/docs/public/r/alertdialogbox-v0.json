@@ -10,7 +10,7 @@
     {
       "path": "app/page.tsx",
       "type": "registry:component",
-      "content": "import {Button} from '@/components/ui/Button'\nimport {AlertDialogBox} from '@/components/ui/AlertDialogBox'\nimport {useState} from 'react'\n ,import {Button} from '@/components/ui/Button'\nimport {AlertDialogBox} from '@/components/ui/AlertDialogBox'\nimport {useState} from 'react'\n ,import {Button} from '@/components/ui/Button'\nimport {AlertDialogBox} from '@/components/ui/AlertDialogBox'\nimport {useState} from 'react'\n \n              function Component(){\n                return (\n      <AlertDialogBox\n        title=\"Delete account?\"\n        description=\"This action cannot be undone. Are you sure you want to delete your account permanently?\"\n      />\n    )\n              }\n              export default Component\n              ",
+      "content": "import {Button} from '@/components/ui/Button'\nimport {AlertDialogBox} from '@/components/ui/AlertDialogBox'\nimport {useState} from 'react'\n ,import {Button} from '@/components/ui/Button'\nimport {AlertDialogBox} from '@/components/ui/AlertDialogBox'\nimport {useState} from 'react'\n ,import {Button} from '@/components/ui/Button'\nimport {AlertDialogBox} from '@/components/ui/AlertDialogBox'\nimport {useState} from 'react'\n \n              \n              function Component(){\n                return (\n      <AlertDialogBox\n        title=\"Delete account?\"\n        description=\"This action cannot be undone. Are you sure you want to delete your account permanently?\"\n      />\n    )\n              }\n              export default Component\n              ",
       "cssVars": {
         "theme": {
           "--color-dark-primary": "#0f0f0f",

@@ -7,7 +7,7 @@
     {
       "path": "app/page.tsx",
       "type": "registry:component",
-      "content": "import {Input} from '@/components/ui/Input'\nimport {EyeOff, Eye} from 'lucide-react'\n import {useState} from 'react'\n ,import {Input} from '@/components/ui/Input'\nimport {EyeOff, Eye} from 'lucide-react'\n import {useState} from 'react'\n ,import {Input} from '@/components/ui/Input'\nimport {EyeOff, Eye} from 'lucide-react'\n import {useState} from 'react'\n ,import {Input} from '@/components/ui/Input'\nimport {EyeOff, Eye} from 'lucide-react'\n import {useState} from 'react'\n \n              function Component(){\n                return (<Input placeholder=\"Type here...\" />)\n              }\n              export default Component\n              ",
+      "content": "import {Input} from '@/components/ui/Input'\nimport {EyeOff, Eye} from 'lucide-react'\n import {useState} from 'react'\n ,import {Input} from '@/components/ui/Input'\nimport {EyeOff, Eye} from 'lucide-react'\n import {useState} from 'react'\n ,import {Input} from '@/components/ui/Input'\nimport {EyeOff, Eye} from 'lucide-react'\n import {useState} from 'react'\n ,import {Input} from '@/components/ui/Input'\nimport {EyeOff, Eye} from 'lucide-react'\n import {useState} from 'react'\n \n              \n              function Component(){\n                return (<Input placeholder=\"Type here...\" />)\n              }\n              export default Component\n              ",
       "cssVars": {
         "theme": {
           "--color-dark-primary": "#0f0f0f",

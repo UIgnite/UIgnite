@@ -13,6 +13,6 @@ export default defineConfig({
     },
   },
   server: {
-    allowedHosts: ['https://qdrqqxv8-5173.inc1.devtunnels.ms'],
+    allowedHosts: ['uignite.in'],
   },
 });
