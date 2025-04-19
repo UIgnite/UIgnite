@@ -60,11 +60,11 @@ export default function ComponentLayout() {
           </div>
         </div>
 
-        <div className="w-[1400px] h-[calc(90vh-4px)] flex mt-10 relative">
+        <div className="w-[1400px] h-full flex pt-8 relative">
           {/* Side Bar  */}
           <SideBar />
 
-          <div className="flex-grow max-h-[90vh] px-4 scrollable-content overflow-y-scroll scroll-smooth">
+          <div className="flex-grow max-h-[90vh] md:px-4 scrollable-content overflow-y-scroll scroll-smooth">
             {componentId ? (
               componentId === 'Introduction' ? (
                 <>
