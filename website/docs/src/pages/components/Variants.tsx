@@ -35,10 +35,12 @@ export const Variants = ({componentId}: {componentId: string}) => {
     <div>
       {currElement.variation &&
         currElement.variation.map((currVariant) => {
+          const currVariantCode = currVariant.code;
+          const currVarTitle = currVariant.title;
           return (
             <div>
-              <div className="text-2xl ml-2 mt-8 "> Variant Title </div>
-              <LiveProvider code={currVariant} scope={currElement.scope}>
+              <div className="text-2xl ml-2 mt-8 "> {currVarTitle} </div>
+              <LiveProvider code={currVariantCode} scope={currElement.scope}>
                 <Tabs className="p-3 mt-3 mb-12" defaultVal="preview">
                   <TabList activeTab="">
                     {currElement ? (
@@ -56,7 +58,7 @@ export const Variants = ({componentId}: {componentId: string}) => {
                     <Tab
                       title={
                         <div className="flex gap-2">
-                          <AppWindowMac /> <p>Code </p>
+                          <AppWindowMac /> <p>Code</p>
                         </div>
                       }
                       value="code"
@@ -75,7 +77,7 @@ export const Variants = ({componentId}: {componentId: string}) => {
                     <></>
                   )}
                   <TabContent
-                    content={syntaxHighlighterElement(currVariant)}
+                    content={syntaxHighlighterElement(currVariantCode)}
                     value="code"
                   />
                 </Tabs>
