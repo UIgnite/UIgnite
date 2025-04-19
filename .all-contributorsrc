@@ -28,6 +28,13 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/184942265?v=4",
       "profile": "https://github.com/akgbytes",
       "contributions": ["code"]
+    },
+    {
+      "login": "srvjha",
+      "name": "Saurav Jha",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94675822?v=4",
+      "profile": "https://personal-portfolio-srvjha.vercel.app/",
+      "contributions": ["business"]
     }
   ],
   "contributorsPerLine": 7,
