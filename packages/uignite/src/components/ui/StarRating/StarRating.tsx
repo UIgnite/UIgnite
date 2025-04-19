@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Star} from 'lucide-react';
-import {cn} from '@/utils/lib';
+import {cn} from '@/lib/utils';
 
 export interface RatingsProps {
   className?: string;
@@ -8,7 +8,7 @@ export interface RatingsProps {
   disabled?: boolean;
 }
 
-const Ratings: React.FC<RatingsProps> = ({
+const StarRating: React.FC<RatingsProps> = ({
   className,
   size = 8,
   disabled = false,
@@ -52,4 +52,4 @@ const Ratings: React.FC<RatingsProps> = ({
   );
 };
 
-export {Ratings};
+export {StarRating};
