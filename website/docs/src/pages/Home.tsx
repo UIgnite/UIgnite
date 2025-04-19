@@ -25,7 +25,9 @@ import {
   SkipForward,
   Shuffle,
 } from 'lucide-react';
+import {useState} from 'react';
 const Home = () => {
+  const [isPause, setPause] = useState(false);
   const features = [
     {
       icon: <ShieldCheck className="text-blue-500" size={24} />,
@@ -294,7 +296,12 @@ const Home = () => {
           </div>
 
           <div className="relative w-full max-w-[1000px] md:max-w-[1200px] overflow-hidden py-10 mx-auto">
-            <div className="flex w-max gap-2 animate-infinite-scroll">
+            <div
+              className="flex w-max gap-2 animate-infinite-scroll"
+              onMouseEnter={() => setPause(true)}
+              onMouseLeave={() => setPause(false)}
+              style={{animationPlayState: isPause ? 'paused' : 'running'}}
+            >
               {testimonials.map((testimonial, index) => (
                 <Testimonials
                   key={`first-${index}`}
