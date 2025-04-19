@@ -7,7 +7,7 @@
     {
       "path": "app/page.tsx",
       "type": "registry:component",
-      "content": "import {Tooltip} from '@/components/ui/Tooltip'\n\n              function Component(){\n                return (\n      <Tooltip title=\"Tooltip\" options={{ delay: 500 }}>\n        <button className=\"cursor-pointer px-4 py-2 bg-neutral-800 text-white rounded\">Hover me</button>\n      </Tooltip>\n    )\n              }\n              export default Component\n              ",
+      "content": "import {Tooltip} from '@/components/ui/Tooltip'\n\n              \n              function Component(){\n                return (\n      <Tooltip title=\"Tooltip\" options={{ delay: 500 }}>\n        <button className=\"cursor-pointer px-4 py-2 bg-neutral-800 text-white rounded\">Hover me</button>\n      </Tooltip>\n    )\n              }\n              export default Component\n              ",
       "cssVars": {
         "theme": {
           "--color-dark-primary": "#0f0f0f",

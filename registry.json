@@ -112,6 +112,18 @@
       ]
     },
     {
+      "name": "inputotp",
+      "type": "registry:ui",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "packages/uignite/src/components/ui/InputOTP/InputOTP.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "messagebot",
       "type": "registry:ui",
       "dependencies": ["react", "lucide-react"],

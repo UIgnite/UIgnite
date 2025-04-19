@@ -1,13 +1,13 @@
 {
-  "name": "avatar-v0",
+  "name": "Avatar-v0",
   "type": "registry:component",
   "dependencies": ["react"],
-  "registryDependencies": [],
+  "registryDependencies": ["https://uignite.in/r/avatar.json"],
   "files": [
     {
       "path": "app/page.tsx",
       "type": "registry:component",
-      "content": ",\n              function Component(){\n                return (\n      <div className = \"flex flex-row gap-2\" >\n        <Avatar url={\"/piyush-sir.png\"} alt={\"user\"} />\n        <Avatar url={\"/hitesh-sir.png\"} alt={\"user\"} />\n      </div>\n    )\n              }\n              export default Component\n              ",
+      "content": "import {Avatar} from '@/components/ui/Avatar'\n,import {Avatar} from '@/components/ui/Avatar'\n\n              \n              function Component(){\n                return (\n      <div className = \"flex flex-row gap-2\" >\n        <Avatar url={\"/piyush-sir.png\"} alt={\"user\"} />\n        <Avatar url={\"/hitesh-sir.png\"} alt={\"user\"} />\n      </div>\n    )\n              }\n              export default Component\n              ",
       "cssVars": {
         "theme": {
           "--color-dark-primary": "#0f0f0f",
