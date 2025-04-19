@@ -86,7 +86,7 @@ const elements = [
   },
   {
     id: 'AlertDialogBox',
-    scope: {Button, AlertDialogBox, useState},
+    scope: {Button, AlertDialogBox},
     extraScopes: [
       {
         scope: ['Button'],
