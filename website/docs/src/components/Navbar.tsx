@@ -45,14 +45,14 @@ function Navbar() {
           </NavLink>
 
           {/* Desktop Links */}
-          <nav>
+          <nav className='mt-1'>
             {navbarLinks.map(({name, link}) => (
               <NavLink
                 key={name}
                 to={link}
                 className={({isActive}) =>
                   cn(
-                    'text-sm px-3 py-2 rounded-md transition-opacity duration-200 opacity-70 hover:opacity-100',
+                    'text-sm md:text-base px-3 py-2 rounded-md transition-opacity duration-200 opacity-70 hover:opacity-100',
                     isActive &&
                       'opacity-100 font-medium text-blue-600 dark:text-blue-400'
                   )
