@@ -32,9 +32,8 @@ import {
   Navbar,
   VideoPlayer,
   Testimonials,
-  SignUp,
-  SignIn,
   useTheme,
+  cn,
 } from '@pkgs/uignite';
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react';
@@ -272,8 +271,8 @@ const elements = [
       useState,
       useEffect,
       Info,
-      SignUp,
-      SignIn,
+      cn,
+      Input,
     },
     extraScopes: [
       {
@@ -301,14 +300,6 @@ const elements = [
         scope: ['Info'],
         from: 'lucide-react',
       },
-      {
-        scope: ['SignUp'],
-        from: 'SignUp',
-      },
-      {
-        scope: ['SignIn'],
-        from: 'SignIn',
-      },
     ],
     element: `
      function Component () {
@@ -320,127 +311,243 @@ const elements = [
     }
 
     return (
-      <Card className="mt-6 rounded-2xl shadow-lg max-h-min">
-        <CardHeader className="flex flex-row justify-between px-4 pt-2 items-center">
-          <div className="flex gap-3 items-center">
-            <Avatar url="/hitesh-sir.png" alt="avatar" />
-            <div>
-              <CardTitle className="text-base">Hitesh Chaudhary</CardTitle>
-              <CardDescription className="text-sm dark:text-gray-400">
-                @HiteshDotCom
-              </CardDescription>
+      <Card className="mt-6 rounded-2xl shadow-lg max-h-min bg-zinc-100 dark:bg-zinc-900">
+          <CardHeader className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 px-4 pt-4">
+            <div className="flex items-center gap-3">
+              <Avatar url="/hitesh-sir.png" alt="avatar" />
+              <div>
+                <CardTitle className="text-base">Hitesh Chaudhary</CardTitle>
+                <CardDescription className="text-sm text-zinc-600 dark:text-zinc-400">
+                  @HiteshDotCom
+                </CardDescription>
+              </div>
             </div>
-          </div>
-          <Button
-            onClick={clickHandler}
-            className={\`\${
-              status === 'Unfollow'
-                ? 'bg-zinc-900 hover:bg-neutral-900 dark:border dark:border-white border-2'
-                : 'bg-blue-600 hover:bg-blue-700'
-            } transform transition-all duration-200 ease-out active:scale-95 cursor-pointer text-white text-sm font-medium py-1.5 px-4 rounded-full\`}
-          >
-            {status}
-          </Button>
-        </CardHeader>
+            <Button
+              onClick={clickHandler}
+              className={cn(
+                'transition-all duration-200 ease-out active:scale-95 text-white text-sm font-medium py-1.5 px-4 rounded-full',
+                status === 'Unfollow'
+                  ? 'bg-zinc-900 hover:bg-neutral-900 dark:border dark:border-white border-2'
+                  : 'bg-blue-600 hover:bg-blue-700 border-2 dark:border-transparent'
+              )}
+            >
+              {status}
+            </Button>
+          </CardHeader>
 
-        <CardContent className="text-sm dark:text-gray-300 px-4 pb-2 pt-1">
-          <p>
-            Retired from corporate and full time YouTuber, x founder of LCO
-            (acquired), x CTO, Sr. Director at PW. 2 YT channels (950k & 470k),
-            stepped into 43 countries.
-          </p>
+          <CardContent className="px-4 pb-4 pt-2 text-sm text-zinc-700 dark:text-zinc-300">
+            <p>
+              Retired from corporate and full time YouTuber, x founder of LCO
+              (acquired), x CTO, Sr. Director at PW. 2 YT channels (950k &
+              470k), stepped into 43 countries.
+            </p>
 
-          <div className="mt-2 flex items-center gap-4 text-sm dark:text-gray-400">
-            <span>
-              <span className=" font-semibold">386</span> Following
-            </span>
-            <span>
-              <span className=" font-semibold">21.6K</span> Followers
-            </span>
-          </div>
-        </CardContent>
-      </Card>
+            <div className="mt-3 flex flex-wrap gap-4 text-sm text-zinc-600 dark:text-zinc-400">
+              <span>
+                <span className=" font-semibold">386</span> Following
+              </span>
+              <span>
+                <span className=" font-semibold">21.6K</span> Followers
+              </span>
+            </div>
+          </CardContent>
+        </Card>
     )
   }
     `,
     variation: [
       `
-      <Card className="m-0 p-0 pb-3">
-        <div>
-          <img
-            className="object-cover rounded-t-xl"
-            src="/youtube-thumbnail-3.jpg"
-            alt=""
-          />
-        </div>
+       <Card className="rounded-2xl shadow-md overflow-hidden w-full max-w-md mx-auto bg-zinc-100 dark:bg-zinc-900">
+          <div className="aspect-video">
+            <img
+              src="/course-card.jpg"
+              alt="Web Dev Cohort"
+              className="object-cover w-full h-full rounded"
+            />
+          </div>
 
-        <CardContent className="px-2">
-          <h1 className="font-semibold text-lg text-zinc-800 dark:text-zinc-200">
-            Web Dev Cohort 1.0
-          </h1>
-          <p className="text-sm leading-tight text-neutral-700 dark:text-neutral-400">
-            Master full-stack web development with Web Dev Cohort. Learn HTML,
-            CSS, JS, React, Next.js, Node, Docker, databases like
-            MongoDB/PostgreSQL, DevOps with AWS (ECR, EC2, CloudFront), modern
-            workflows like Turbo Repo, TypeScript, and GitHub CI/CD.
-          </p>
-          <div className="flex gap-2 items-center mt-2">
-            <div className="font-medium text-md ">6,999 INR</div>
-            <div className="line-through text-sm text-gray-400 dark:text-gray-500">
-              8,999 INR
+          <CardContent className="px-4 pt-4 pb-5 space-y-3">
+            <h1 className="font-semibold text-xl text-zinc-800 dark:text-zinc-100">
+              Web Dev Cohort 1.0
+            </h1>
+
+            <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+              Master full-stack web development with Web Dev Cohort. Learn HTML,
+              CSS, JS, React, Next.js, Node, Docker, databases like
+              MongoDB/PostgreSQL, DevOps with AWS (ECR, EC2, CloudFront), modern
+              workflows like Turbo Repo, TypeScript, and GitHub CI/CD.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-2 pt-1">
+              <span className="font-medium text-base text-zinc-800 dark:text-zinc-100">
+                ₹6,999
+              </span>
+              <span className="line-through text-sm text-gray-400 dark:text-gray-500">
+                ₹8,999
+              </span>
+              <span className="text-sm text-blue-600 dark:text-blue-400">
+                Save 22%
+              </span>
+            </div>
+
+            <a
+              href="https://courses.chaicode.com/learn/batch/about?bundleId=214297"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="mt-2 w-full flex justify-center items-center gap-2 hover:bg-blue-700 dark:hover:bg-blue-700">
+                Learn More <Info className="size-4" />
+              </Button>
+            </a>
+          </CardContent>
+        </Card>
+      `,
+      `
+           <Card className="m-0 p-0 max-w-xs rounded-3xl shadow-md overflow-hidden mx-auto bg-zinc-100 dark:bg-zinc-900">
+          <CardHeader>
+            <img
+              src="/me.png"
+              alt=""
+              className="w-full h-72 object-cover rounded-t-xl"
+            />
+          </CardHeader>
+
+          <CardContent className="flex flex-col items-center text-center px-4 pt-2 space-y-1">
+            <div className="text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+              Aman Gupta
+            </div>
+            <div className="text-sm text-neutral-600 dark:text-zinc-400 ">
+              Backend Developer at OnlyDevs
+            </div>
+          </CardContent>
+          <CardFooter className="flex justify-around items-center px-4 text-center text-sm space-mono">
+            <div className="flex flex-col pb-3">
+              <span className="text-xs text-neutral-500 dark:text-zinc-400">
+                Total Commits
+              </span>
+              <span className="font-medium text-base text-zinc-800 dark:text-zinc-100">
+                100+
+              </span>
+            </div>
+            <div className="flex flex-col pb-3">
+              <span className="text-xs text-neutral-500 dark:text-zinc-400">
+                Total PRs
+              </span>
+              <span className="font-medium text-base text-zinc-800 dark:text-zinc-100">
+                20+
+              </span>
+            </div>
+          </CardFooter>
+        </Card>
+      `,
+      `
+          <Card className="w-[420px] dark:bg-zinc-900 bg-zinc-100 py-6 px-10 text-zinc-800 dark:text-zinc-200">
+      <CardHeader>
+        <CardTitle className="text-4xl">Sign In</CardTitle>
+        <CardDescription className="text-base font-normal">
+          Welcome back! Please sign in.
+        </CardDescription>
+      </CardHeader>
+
+      <CardContent>
+        <form className="mt-4">
+          <div className="grid w-full items-center gap-4">
+            <div className="flex flex-col space-y-1.5">
+              <label htmlFor="email" className="font-medium">
+                Email
+              </label>
+              <Input id="email" placeholder="Enter your email" type="email" />
+            </div>
+
+            <div className="flex flex-col space-y-1.5">
+              <label htmlFor="password" className="font-medium">
+                Password
+              </label>
+              <Input
+                id="password"
+                placeholder="Enter your password"
+                type="password"
+              />
+            </div>
+
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <input
+                  id="remember"
+                  type="checkbox"
+                  className="h-4 w-4 rounded border border-gray-300"
+                />
+                <label htmlFor="remember">Remember me</label>
+              </div>
+              <a href="#" className="text-sm text-blue-500 hover:underline">
+                Forgot password?
+              </a>
             </div>
           </div>
-          <div className="text-sm text-blue-500 dark:text-blue-400 -mt-1">
-            Save 22%
-          </div>
-          <a
-            href="https://courses.chaicode.com/learn/batch/about?bundleId=214297"
-            target="_blank"
-          >
-            <Button className="mt-3 w-full">
-              Learn More
-              <Info className="ml-2 size-4" />
-            </Button>
+        </form>
+      </CardContent>
+
+      <CardFooter className="flex flex-col space-y-2">
+        <Button className="w-full text-base">Sign In</Button>
+        <p className="text-sm text-center">
+          Not registered?{' '}
+          <a href="#" className="text-blue-500 hover:underline">
+            Create an account
           </a>
-        </CardContent>
-      </Card>
+        </p>
+      </CardFooter>
+    </Card>
       `,
       `
-      <Card className="m-0 p-0 h-[440px] w-[325px] rounded-3xl">
-        <CardHeader className="m-0 p-0 ">
-          <img
-            src="/me.png"
-            alt=""
-            className="h-[295px] w-full object-cover rounded-t-xl"
-          />
-        </CardHeader>
-        <CardContent className="flex flex-col justify-center items-center mt-5">
-          <div className="font-semibold text-2xl">Aman Gupta </div>
-          <div className="text-sm text-neutral-600 dark:text-zinc-500 ">
-            Backend Developer at OnlyDevs
-          </div>
-        </CardContent>
-        <CardFooter className="flex justify-between items-center px-4 space-mono ">
-          <div className="flex flex-col">
-            <div className="text-xs text-neutral-500 dark:text-zinc-400 ">
-              Total Commits
+      <Card className=" dark:bg-zinc-900 bg-zinc-100 dark:w-[420px] py-6 px-10 text-zinc-800 dark:text-zinc-200">
+      <CardHeader>
+        <CardTitle className="text-4xl">Sign Up</CardTitle>
+        <CardDescription className="text-base font-normal">
+          Create a new account to get started.
+        </CardDescription>
+      </CardHeader>
+
+      <CardContent>
+        <form className="mt-4">
+          <div className="grid w-full items-center gap-4">
+            <div className="flex flex-col space-y-1.5">
+              <label htmlFor="name" className="font-medium">
+                Name
+              </label>
+              <Input id="name" placeholder="Enter your name" />
             </div>
-            <div className="">100+</div>
-          </div>
-          <div className="flex flex-col">
-            <div className="text-xs text-neutral-500 dark:text-zinc-400">
-              Total PRs
+
+            <div className="flex flex-col space-y-1.5">
+              <label htmlFor="email" className="font-medium">
+                Email
+              </label>
+              <Input id="email" type="email" placeholder="Enter your email" />
             </div>
-            <div className="">20+</div>
+
+            <div className="flex flex-col space-y-1.5">
+              <label htmlFor="password" className="font-medium">
+                Password
+              </label>
+              <Input
+                id="password"
+                type="password"
+                placeholder="Choose a password"
+              />
+            </div>
           </div>
-        </CardFooter>
-      </Card>
-      `,
-      `
-        <SignIn />
-      `,
-      `
-      <SignUp />
+        </form>
+      </CardContent>
+
+      <CardFooter className="flex flex-col gap-2 mt-8">
+        <Button className="w-full text-base">Create Account</Button>
+        <p className="text-sm text-center">
+          Already have an account?{' '}
+          <a href="#" className="text-blue-500 hover:underline">
+            Login here
+          </a>
+        </p>
+      </CardFooter>
+    </Card>
       `,
     ],
   },
