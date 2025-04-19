@@ -1,7 +1,7 @@
 import React, {useState, useRef, useEffect, ReactNode} from 'react';
 import {cn} from '@/lib/utils';
 import {cva} from 'class-variance-authority';
-import {MoveLeft, MoveRight} from 'lucide-react';
+import {ArrowLeft, ArrowRight} from 'lucide-react';
 
 interface CarouselProps {
   children: ReactNode[];
@@ -56,14 +56,14 @@ const Carosuel: React.FC<CarouselProps> = ({children, className}) => {
         disabled={current === 0}
         className="absolute top-1/2 -left-10 cursor-pointer transform -translate-y-1/2 dark:bg-black bg-gray-100 border-1 border-gray-200 dark:border-gray-800 rounded-full p-2 shadow hover:bg-gray-200 dark:hover:bg-gray-900 disabled:opacity-40"
       >
-        <MoveLeft className="dark:text-gray-200 text-gray-900 " />
+        <ArrowLeft className="dark:text-gray-200 text-gray-900 " />
       </button>
       <button
         onClick={next}
         disabled={current === children.length - 1}
         className="absolute top-1/2 -right-10 cursor-pointer transform -translate-y-1/2 dark:bg-black bg-gray-100 border-1 border-gray-200 dark:border-gray-800 rounded-full p-2 shadow hover:bg-gray-200 dark:hover:bg-gray-900 disabled:opacity-40"
       >
-        <MoveRight className="dark:text-gray-200 text-gray-900" />
+        <ArrowRight className="dark:text-gray-200 text-gray-900" />
       </button>
     </div>
   );
