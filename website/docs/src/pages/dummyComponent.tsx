@@ -1,7 +1,7 @@
 import {ThemeToggleBtn, useTheme, Button} from '@pkgs/uignite';
 import {NavLink} from 'react-router-dom';
 import {ReactNode} from 'react';
-import {cn} from '@pkgs/uignite'; // Assuming you use a `cn` utility
+import {cn} from '@pkgs/uignite';
 import {Menu, X} from 'lucide-react';
 import {useState} from 'react';
 

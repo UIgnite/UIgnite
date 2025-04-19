@@ -70,7 +70,7 @@ function SearchBar() {
       <button
         aria-hidden={!isSearchBarOpen}
         onClick={() => setIsSearchOpen(true)}
-        className=" aria-hidden:flex justify-start items-center w-full hidden min-w-[300px] text-left cursor-pointer px-4 py-1  border-[0.5px] border-neutral-300 dark:border-neutral-700 text-neutral-400 text-sm dark:bg-neutral-900 rounded-md shadow-sm "
+        className=" aria-hidden:flex justify-start items-center w-full hidden  text-left cursor-pointer px-4 py-1  border-[0.5px] border-neutral-300 dark:border-neutral-700 text-neutral-400 text-sm dark:bg-neutral-900 rounded-md shadow-sm "
       >
         <Search className="w-[18px] mr-2" />
         Search components...
