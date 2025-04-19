@@ -37,10 +37,15 @@ export default function Component() {
   }
   return (
     <div className="mb-5 w-[100%]">
-      <h1 id={currComponent.name} className="w-[90%] text-4xl font-semibold">
+      <h1
+        id={currComponent.name}
+        className="max-w-[90%] text-4xl font-semibold"
+      >
         {currComponent.name}
       </h1>
-      <div className="w-[90%] dark:text-neutral-300">{currComponent.desc}</div>
+      <div className="max-w-[90%] dark:text-neutral-300">
+        {currComponent.desc}
+      </div>
 
       <Preview currComponent={codeStr} element={element} />
 

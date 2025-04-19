@@ -14,7 +14,7 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
     return <div className="text-red-500">Code not found.</div>;
 
   const syntaxHighlighterElement = (
-    <div className="w-full h-full relative ">
+    <div className="max-w-[80vw] w-full h-full relative ">
       <CopyButton copyText={element.element} />
       <SyntaxHighlighter
         language="javascript"
@@ -33,7 +33,7 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
   );
 
   return (
-    <div className=" min-w-[80%] flex flex-col ">
+    <div className=" min-w-[80%] sm:max-w- flex flex-col ">
       <LiveProvider code={element.element} scope={element.scope}>
         <Tabs className="p-3 mt-4" defaultVal="preview">
           <TabList activeTab="">
