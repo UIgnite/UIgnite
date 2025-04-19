@@ -13,6 +13,6 @@ export default defineConfig({
     },
   },
   server: {
-    allowedHosts: ['0aa7-2401-4900-1f3e-420d-a95c-9c9a-935a-d62e.ngrok-free.app'],
+    allowedHosts: ['uignite.in'],
   },
 });
