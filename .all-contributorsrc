@@ -9,13 +9,6 @@
   "commitConvention": "gitmoji",
   "contributors": [
     {
-      "login": "adityasharma-tech",
-      "name": "Aditya Sharma",
-      "avatar_url": "https://avatars.githubusercontent.com/u/102454760?v=4",
-      "profile": "https://adityasharma.live/",
-      "contributions": ["code"]
-    },
-    {
       "login": "rambhardwajj",
       "name": "Ram Bhardwaj",
       "avatar_url": "https://avatars.githubusercontent.com/u/90954772?v=4",
