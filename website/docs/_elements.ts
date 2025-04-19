@@ -128,7 +128,8 @@ const elements = [
 </div>
 `,
 
-    variation: [`
+    variation: [
+      `
 <div className="flex items-center -mt-8 pl-2 overflow-visible">
   <div className="relative hover:z-20 transition-all duration-300 ease-in-out">
     <Tooltip title="Aman Gupta" options={{ tooltipStyle: { width: 'auto' } }}>
@@ -195,21 +196,22 @@ const elements = [
     element: `
       <Button>Click Me</Button>
     `,
-    variation: [`
+    variation: [
+      `
 <div className="grid grid-cols-4 gap-10">
   <Button variant="primary">primary</Button>
   <Button variant="secondary">secondary</Button>
   <Button variant="outline">outline</Button>
   <Button variant="glass">glass</Button>
 </div>`,
-`
+      `
 <div className="grid grid-cols-4 gap-10">
   <Button variant="success">success</Button>
   <Button variant="destructive">destructive</Button>
   <Button variant="warning">warning</Button>
   <Button variant="ghost">ghost</Button>
 </div>`,
-`
+      `
 <div className="grid grid-cols-4 gap-10">
   <Button variant="dark">dark</Button>
   <Button variant="light">light</Button>
@@ -218,7 +220,7 @@ const elements = [
     Hover Me
   </Button>
 </div>`,
-` 
+      ` 
 <button className="relative shadow-sm  hover:shadow-gray-50 p-0 w-[100px] h-[100px] border-2 border-gray-500 outline-none bg-gray-100 rounded-[20px]  transition ease-in-out duration-300 hover:scale-110 active:scale-95 active:shadow-none cursor-pointer">
     <div className="relative grid p-[10px] w-full h-full grid-cols-4 grid-rows-2 shadow-[inset_0px_-4px_0px_#dddddd,0px_-4px_0px_#f4f5f6] rounded-[20px] transition ease-in-out duration-300 z-[1]">
       <div className="relative flex translate-y-[-2px] col-start-4 self-start justify-self-end w-4 h-4 transition ease-in-out duration-300 group-hover:translate-y-[-8px]">
@@ -244,7 +246,7 @@ const elements = [
       </p>
     </div>
 </button>`,
-`
+      `
 <div className="grid grid-cols-3 gap-10">
   <Button gradientBorder>gradBorder</Button>
   <Button  variant="gradient" isLoading />
@@ -350,7 +352,8 @@ function Component () {
   )
 }
   `,
-    variation: [`
+    variation: [
+      `
 <Card className="rounded-2xl shadow-md overflow-hidden w-full max-w-md mx-auto bg-zinc-100 dark:bg-zinc-900">
   <div className="aspect-video">
     <img
@@ -395,7 +398,7 @@ function Component () {
     </a>
   </CardContent>
 </Card>`,
-`
+      `
 <Card className="m-0 p-0 max-w-xs rounded-3xl shadow-md overflow-hidden mx-auto bg-zinc-100 dark:bg-zinc-900">
   <CardHeader>
     <img
@@ -432,7 +435,7 @@ function Component () {
     </div>
   </CardFooter>
 </Card>`,
-`
+      `
 <Card className="w-[420px] dark:bg-zinc-900 bg-zinc-100 py-6 px-10 text-zinc-800 dark:text-zinc-200">
   <CardHeader>
     <CardTitle className="text-4xl">Sign In</CardTitle>
@@ -489,7 +492,7 @@ function Component () {
     </p>
   </CardFooter>
 </Card>`,
-`
+      `
 <Card className=" dark:bg-zinc-900 bg-zinc-100 dark:w-[420px] py-6 px-10 text-zinc-800 dark:text-zinc-200">
   <CardHeader>
     <CardTitle className="text-4xl">Sign Up</CardTitle>
@@ -692,10 +695,10 @@ function Component () {
     ],
     element: `<Input placeholder="Type here..." />`,
     variation: [
-`
+      `
   <Input type="file" className="file:me-3" />
 `,
-`
+      `
 <div className="flex rounded-md shadow-xs">
     <span
       className="h-9 p-2 rounded-md border border-gray-400 dark:border-zinc-700
@@ -711,10 +714,10 @@ function Component () {
       type="text"
     />
   </div>`,
-`
+      `
   <Input type="email" value="chaicode@gmail.com" disabled />
 `,
-`
+      `
 function PasswordInput() {
   const [show, setShow] = useState(false);
 
@@ -791,7 +794,7 @@ function PasswordInput() {
   },
   {
     id: 'navbar',
-    scope: {Navbar,ThemeToggleBtn},
+    scope: {Navbar, ThemeToggleBtn},
     extraScopes: [
       {
         scope: ['Navbar'],
@@ -800,18 +803,26 @@ function PasswordInput() {
       },
     ],
     element: `
-<Navbar
-  darkModeLogo="https://res.cloudinary.com/do2tmd6xp/image/upload/v1745059611/uignite/dtst2deim1sgv2g5dcm6.png"
-  lightModoLogo="https://res.cloudinary.com/do2tmd6xp/image/upload/v1745059611/uignite/gzfqtahpfc93ybugfiwr.png"
-  navbarLinks={[
-    {name: 'Cohorts', link: '/'},
-    {name: 'Udemy', link: '/'},
-    {name: 'Docs', link: '/'},
-    {name: 'Reviews', link: '/'},
-  ]}
-  loginBtnLink="/login"
-  themeChangeBtn={<ThemeToggleBtn />}
-/>;
+<div>
+  <div> Upar Dekho Upar... </div>
+    <div className="hidden"> 
+     <Navbar
+        darkModeLogo="https://res.cloudinary.com/do2tmd6xp/image/upload/v1745059611/uignite/dtst2deim1sgv2g5dcm6.png"
+        lightModoLogo="https://res.cloudinary.com/do2tmd6xp/image/upload/v1745059611/uignite/gzfqtahpfc93ybugfiwr.png"
+        navbarLinks={[
+          {name: 'Cohorts', link: '/'},
+          {name: 'Udemy', link: '/'},
+          {name: 'Docs', link: '/'},
+          {name: 'Reviews', link: '/'},
+        ]}
+        loginBtnLink="/login"
+        themeChangeBtn={
+          <ThemeToggleBtn className="text-gray-200 dark:text-zinc-100 bg-orange-500 dark:bg-orange-500 hover:bg-orange-600 dark:hover:bg-orange-600" />
+        }
+        loginBtnStyle="h-9 text-gray-200 dark:text-zinc-100 bg-orange-500 dark:bg-orange-500 hover:bg-orange-600 dark:hover:bg-orange-600"
+      />
+  </div>
+</div>
 `,
     variation: [],
   },
@@ -889,7 +900,7 @@ function PasswordInput() {
 </div>
 `,
     variation: [
-`
+      `
 <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
   <h2 className="text-lg font-semibold mb-4">Product Card</h2>
   <Skeleton className="h-48 w-full rounded-lg mb-4" />
@@ -902,7 +913,7 @@ function PasswordInput() {
   </div>
 </div>
 `,
-`
+      `
 <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
   <h2 className="text-lg font-semibold mb-4">Social Media Post</h2>
   <div className="flex items-center mb-4">
@@ -918,7 +929,7 @@ function PasswordInput() {
   <Skeleton className="h-56 w-full rounded-lg mb-4" />
 </div>
 `,
-`
+      `
 <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
   <h2 className="text-lg font-semibold mb-4">Profile Card</h2>
   <div className="flex flex-col items-center mb-6">
@@ -943,7 +954,7 @@ function PasswordInput() {
   <Skeleton className="h-14 w-full rounded-md" />
 </div>
 `,
-`
+      `
 <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
   <h2 className="text-lg font-semibold mb-4">Notification</h2>
   <div className="flex gap-4">
@@ -955,7 +966,7 @@ function PasswordInput() {
   </div>
 </div>
 `,
-`
+      `
 <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
   <h2 className="text-lg font-semibold mb-4">Inovice Bill</h2>
   <Skeleton className="h-5 w-1/2 mb-3" />
@@ -970,7 +981,7 @@ function PasswordInput() {
   </div>
 </div>
 `,
-`  
+      `  
 <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
   <h2 className="text-lg font-semibold mb-4">Media Player</h2>
   <div className="flex gap-4" >
