@@ -34,50 +34,55 @@ export const Variants = ({componentId}: {componentId: string}) => {
   return (
     <div>
       {currElement.variation &&
-        currElement.variation.map((currVariant) => (
-          <LiveProvider code={currVariant} scope={currElement.scope}>
-            <Tabs className="p-3 mt-4 mb-12" defaultVal="preview">
-              <TabList activeTab="">
-                {currElement ? (
-                  <Tab
-                    title={
-                      <div className="flex gap-2">
-                        <Code /> <p>Preview </p>
-                      </div>
-                    }
-                    value="preview"
+        currElement.variation.map((currVariant) => {
+          return (
+            <div>
+              <div className="text-2xl ml-2 mt-8 "> Variant Title </div>
+              <LiveProvider code={currVariant} scope={currElement.scope}>
+                <Tabs className="p-3 mt-3 mb-12" defaultVal="preview">
+                  <TabList activeTab="">
+                    {currElement ? (
+                      <Tab
+                        title={
+                          <div className="flex gap-2">
+                            <Code /> <p>Preview </p>
+                          </div>
+                        }
+                        value="preview"
+                      />
+                    ) : (
+                      <></>
+                    )}
+                    <Tab
+                      title={
+                        <div className="flex gap-2">
+                          <AppWindowMac /> <p>Code </p>
+                        </div>
+                      }
+                      value="code"
+                    />
+                  </TabList>
+                  {currVariant ? (
+                    <TabContent
+                      content={
+                        <div className="w-[100%] flex justify-center items-center p-10 bg-neutral-200 dark:bg-neutral-900  relative">
+                          <LivePreview className="mt-6" />
+                        </div>
+                      }
+                      value="preview"
+                    />
+                  ) : (
+                    <></>
+                  )}
+                  <TabContent
+                    content={syntaxHighlighterElement(currVariant)}
+                    value="code"
                   />
-                ) : (
-                  <></>
-                )}
-                <Tab
-                  title={
-                    <div className="flex gap-2">
-                      <AppWindowMac /> <p>Code </p>
-                    </div>
-                  }
-                  value="code"
-                />
-              </TabList>
-              {currVariant ? (
-                <TabContent
-                  content={
-                    <div className="w-[100%] flex justify-center items-center p-10 bg-neutral-200 dark:bg-neutral-900  relative">
-                      <LivePreview className="mt-6" />
-                    </div>
-                  }
-                  value="preview"
-                />
-              ) : (
-                <></>
-              )}
-              <TabContent
-                content={syntaxHighlighterElement(currVariant)}
-                value="code"
-              />
-            </Tabs>
-          </LiveProvider>
-        ))}
+                </Tabs>
+              </LiveProvider>
+            </div>
+          );
+        })}
     </div>
   );
 };
