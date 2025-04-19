@@ -1,22 +1,36 @@
-import {useState} from 'react';
-import {Button} from '@/components/ui/Button';
+import { useState } from 'react';
+import { Button } from '@/components/ui/Button';
 
 type AlertDialogBoxProps = {
   title: string;
   description: string;
 };
 
-const AlertDialogBox = ({title, description}: AlertDialogBoxProps) => {
+const AlertDialogBox = ({ title, description }: AlertDialogBoxProps) => {
   const [isOpen, setIsOpen] = useState(false);
+
 
   return (
     <>
       <Button onClick={() => setIsOpen(true)}>Show Dialog</Button>
 
       {isOpen && (
-        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-          <div className="bg-white dark:bg-zinc-800 rounded-xl p-6 w-[90%] max-w-md shadow-lg">
-            <h2 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          {/* Overlay */}
+          <div 
+            className="fixed inset-0 bg-black/40" 
+            onClick={()=> setIsOpen(false)}
+            aria-hidden="true"
+          />
+          
+          {/* Dialog content */}
+          <div 
+            className=" z-10 w-full max-w-md p-6 bg-white dark:bg-zinc-800 rounded-xl shadow-lg mx-4"         
+          >
+            <h2 
+              id="dialog-title" 
+              className="text-lg font-bold mb-2 text-gray-900 dark:text-white"
+            >
               {title}
             </h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
@@ -43,4 +57,4 @@ const AlertDialogBox = ({title, description}: AlertDialogBoxProps) => {
   );
 };
 
-export {AlertDialogBox};
+export { AlertDialogBox };
