@@ -9,7 +9,7 @@ interface TabContentParams {
   content: any;
 }
 interface TabParams {
-  title: string;
+  title: any;
   value: string;
   activeTab?: string;
   setActiveTab?: any;
