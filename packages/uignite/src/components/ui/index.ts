@@ -6,8 +6,7 @@ export * from './Toast';
 export * from './Navbar';
 export * from './Button';
 export * from './Switch';
-export * from './SignIn';
-export * from './SignUp';
+
 export * from './Footer';
 export * from './Spinner';
 export * from './Tooltip';
