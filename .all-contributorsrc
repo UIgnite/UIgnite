@@ -1,0 +1,57 @@
+{
+  "projectName": "UIgnite",
+  "projectOwner": "UIgnite",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": ["README.md"],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "gitmoji",
+  "contributors": [
+    {
+      "login": "adityasharma-tech",
+      "name": "Aditya Sharma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102454760?v=4",
+      "profile": "https://adityasharma.live/",
+      "contributions": ["code"]
+    },
+    {
+      "login": "rambhardwajj",
+      "name": "Ram Bhardwaj",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90954772?v=4",
+      "profile": "https://github.com/rambhardwajj",
+      "contributions": ["code"]
+    },
+    {
+      "login": "akgbytes",
+      "name": "Aman Kumar Gupta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/184942265?v=4",
+      "profile": "https://github.com/akgbytes",
+      "contributions": ["code"]
+    },
+    {
+      "login": "srvjha",
+      "name": "Saurav Jha",
+      "avatar_url": "https://avatars.githubusercontent.com/u/94675822?v=4",
+      "profile": "https://personal-portfolio-srvjha.vercel.app/",
+      "contributions": ["business"]
+    },
+    {
+      "login": "JAHANWEE",
+      "name": "Jahanwee",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55875551?v=4",
+      "profile": "https://github.com/JAHANWEE",
+      "contributions": ["content"]
+    },
+    {
+      "login": "0xRoS-200",
+      "name": "Rohit Kumar Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/155361024?v=4",
+      "profile": "https://github.com/0xRoS-200",
+      "contributions": ["video"]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "linkToUsage": true
+}
+
