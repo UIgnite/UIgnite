@@ -1,0 +1,22 @@
+{
+  "projectName": "UIgnite",
+  "projectOwner": "UIgnite",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": ["README.md"],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "gitmoji",
+  "contributors": [
+    {
+      "login": "adityasharma-tech",
+      "name": "Aditya Sharma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102454760?v=4",
+      "profile": "https://adityasharma.live/",
+      "contributions": ["code"]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "linkToUsage": true
+}
+
