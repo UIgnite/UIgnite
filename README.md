@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ## Contributors ✨
 
@@ -18,7 +18,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://personal-portfolio-srvjha.vercel.app/"><img src="https://avatars.githubusercontent.com/u/94675822?v=4?s=100" width="100px;" alt="Saurav Jha"/><br /><sub><b>Saurav Jha</b></sub></a><br /><a href="#business-srvjha" title="Business development">💼</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/JAHANWEE"><img src="https://avatars.githubusercontent.com/u/55875551?v=4?s=100" width="100px;" alt="Jahanwee"/><br /><sub><b>Jahanwee</b></sub></a><br /><a href="#content-JAHANWEE" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xRoS-200"><img src="https://avatars.githubusercontent.com/u/155361024?v=4?s=100" width="100px;" alt="Rohit Kumar Singh"/><br /><sub><b>Rohit Kumar Singh</b></sub></a><br /><a href="#video-0xRoS-200" title="Videos">📹</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/sagar-1m"><img src="https://avatars.githubusercontent.com/u/113180099?v=4?s=100" width="100px;" alt="Sagar Maheshwari"/><br /><sub><b>Sagar Maheshwari</b></sub></a><br /><a href="#talk-sagar-1m" title="Talks">📢</a></td>
     </tr>
   </tbody>
   <tfoot>
