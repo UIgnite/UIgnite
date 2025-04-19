@@ -28,7 +28,7 @@ function MainNavbar() {
   };
 
   return pathname !== '/components/Navbar' ? (
-    <header className={`w-full py-2 sm:px-6 lg:px-10 shadow-sm`}>
+    <header className={`w-full py-2 sm:px-6 lg:px-10`}>
       <div className="max-w-7xl mx-auto flex items-center gap-4 sm:justify-between px-3">
         {/* Logo + Nav */}
         <div className="hidden md:flex gap-4 items-center">
@@ -82,10 +82,10 @@ function MainNavbar() {
           <SearchBar />
           <div className="flex gap-1.5 md:ml-6">
             <ThemeToggleBtn
-              className={`${pathname === '/' ? 'dark:bg-transparent' : 'dark:bg-zinc-800'} cursor-pointer p-2 rounded   dark:hover:bg-[#305CDE] bg-zinc-100 hover:bg-zinc-200`}
+              className={`${pathname === '/' ? 'dark:bg-transparent' : 'dark:bg-transparent'} cursor-pointer p-2 rounded   dark:hover:bg-zinc-800  hover:bg-zinc-200`}
             />
             <div
-              className={`${pathname === '/' ? 'dark:bg-transparent' : 'dark:bg-zinc-800'} cursor-pointer p-2 rounded   dark:hover:bg-[#305CDE] bg-zinc-100 hover:bg-zinc-200`}
+              className={`${pathname === '/' ? 'dark:bg-transparent' : 'dark:bg-transparent'} cursor-pointer p-2 rounded   dark:hover:bg-zinc-800  hover:bg-zinc-200`}
             >
               <GitHubLogoIcon className=" h-4 w-4 " />
             </div>
@@ -135,7 +135,7 @@ function MainNavbar() {
     </header>
   ) : (
     <Navbar
-      className=""
+      className="py-3 bg-transparent dark:bg-transparent"
       darkModeLogo="https://res.cloudinary.com/do2tmd6xp/image/upload/v1745059611/uignite/dtst2deim1sgv2g5dcm6.png"
       lightModoLogo="https://res.cloudinary.com/do2tmd6xp/image/upload/v1745059611/uignite/gzfqtahpfc93ybugfiwr.png"
       navbarLinks={[

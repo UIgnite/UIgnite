@@ -38,7 +38,7 @@ export const Navbar = ({
   return (
     <header
       className={cn(
-        'bg-zinc-100 dark:bg-zinc-800 w-full px-4 py-2 sm:px-6 lg:px-10 shadow-sm',
+        'bg-zinc-100 dark:bg-zinc-800 w-full px-4 py-2 sm:px-6 lg:px-10 border-b border-b-zinc-200 dark:border-b-zinc-900',
         className
       )}
     >
