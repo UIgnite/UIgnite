@@ -3,6 +3,7 @@ import {atomOneDarkReasonable} from 'react-syntax-highlighter/dist/esm/styles/hl
 import {Tab, Tabs, TabContent, TabList, Button} from '@pkgs/uignite';
 import {LiveProvider, LivePreview} from 'react-live';
 import CopyButton from './copyButton';
+import {AppWindowMac, Code} from 'lucide-react';
 
 interface PreviewPropT {
   currComponent: any;
@@ -37,8 +38,26 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
       <LiveProvider code={element.element} scope={element.scope}>
         <Tabs className="p-3 mt-4" defaultVal="preview">
           <TabList activeTab="">
-            {element ? <Tab title="Preview" value="preview" /> : <></>}
-            <Tab title="Code" value="code" />
+            {element ? (
+              <Tab
+                title={
+                  <div className="flex gap-2">
+                    <Code /> <p>Preview </p>
+                  </div>
+                }
+                value="preview"
+              />
+            ) : (
+              <></>
+            )}
+            <Tab
+              title={
+                <div className="flex gap-2">
+                  <AppWindowMac /> <p>Code </p>
+                </div>
+              }
+              value="code"
+            />
           </TabList>
 
           {/* Rendering Element  */}
@@ -82,7 +101,6 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
             <></>
           )}
 
-          {/* Rendering Code  */}
           <TabContent content={syntaxHighlighterElement} value="code" />
         </Tabs>
       </LiveProvider>

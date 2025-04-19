@@ -43,8 +43,8 @@ import {
   EyeOff,
   Info,
   MessageCircle,
-  MoveLeft,
-  MoveRight,
+  ArrowLeft,
+  ArrowRight,
 } from 'lucide-react';
 import {AlarmClockCheck} from 'lucide-react';
 // import { cva } from 'class-variance-authority';
@@ -86,7 +86,7 @@ const elements = [
   },
   {
     id: 'AlertDialogBox',
-    scope: {Button, AlertDialogBox, useState},
+    scope: {Button, AlertDialogBox},
     extraScopes: [
       {
         scope: ['Button'],
@@ -299,6 +299,52 @@ const elements = [
       },
     ],
     element: `
+<Card className="rounded-2xl shadow-md overflow-hidden w-full max-w-md mx-auto bg-zinc-100 dark:bg-zinc-900">
+<div className="aspect-video">
+  <img
+    src="/course-card.jpg"
+    alt="Web Dev Cohort"
+    className="object-cover w-full h-full rounded"
+  />
+</div>
+
+<CardContent className="px-4 pt-4 pb-5 space-y-3">
+  <h1 className="font-semibold text-xl text-zinc-800 dark:text-zinc-100">
+    Web Dev Cohort 1.0
+  </h1>
+
+  <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+    Master full-stack web development with Web Dev Cohort. Learn HTML,
+    CSS, JS, React, Next.js, Node, Docker, databases like
+    MongoDB/PostgreSQL, DevOps with AWS (ECR, EC2, CloudFront), modern
+    workflows like Turbo Repo, TypeScript, and GitHub CI/CD.
+  </p>
+
+  <div className="flex flex-wrap items-center gap-2 pt-1">
+    <span className="font-medium text-base text-zinc-800 dark:text-zinc-100">
+      ₹6,999
+    </span>
+    <span className="line-through text-sm text-gray-400 dark:text-gray-500">
+      ₹8,999
+    </span>
+    <span className="text-sm text-blue-600 dark:text-blue-400">
+      Save 22%
+    </span>
+  </div>
+
+  <a
+    href="https://courses.chaicode.com/learn/batch/about?bundleId=214297"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button className="mt-2 w-full flex justify-center items-center gap-2 hover:bg-blue-700 dark:hover:bg-blue-700">
+      Learn More <Info className="size-4" />
+    </Button>
+  </a>
+</CardContent>
+</Card>`,
+    variation: [
+      `
 function Component () {
   const [status, setStatus] = useState('Follow');
 
@@ -352,52 +398,6 @@ function Component () {
   )
 }
   `,
-    variation: [
-      `
-<Card className="rounded-2xl shadow-md overflow-hidden w-full max-w-md mx-auto bg-zinc-100 dark:bg-zinc-900">
-  <div className="aspect-video">
-    <img
-      src="/course-card.jpg"
-      alt="Web Dev Cohort"
-      className="object-cover w-full h-full rounded"
-    />
-  </div>
-
-  <CardContent className="px-4 pt-4 pb-5 space-y-3">
-    <h1 className="font-semibold text-xl text-zinc-800 dark:text-zinc-100">
-      Web Dev Cohort 1.0
-    </h1>
-
-    <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-      Master full-stack web development with Web Dev Cohort. Learn HTML,
-      CSS, JS, React, Next.js, Node, Docker, databases like
-      MongoDB/PostgreSQL, DevOps with AWS (ECR, EC2, CloudFront), modern
-      workflows like Turbo Repo, TypeScript, and GitHub CI/CD.
-    </p>
-
-    <div className="flex flex-wrap items-center gap-2 pt-1">
-      <span className="font-medium text-base text-zinc-800 dark:text-zinc-100">
-        ₹6,999
-      </span>
-      <span className="line-through text-sm text-gray-400 dark:text-gray-500">
-        ₹8,999
-      </span>
-      <span className="text-sm text-blue-600 dark:text-blue-400">
-        Save 22%
-      </span>
-    </div>
-
-    <a
-      href="https://courses.chaicode.com/learn/batch/about?bundleId=214297"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Button className="mt-2 w-full flex justify-center items-center gap-2 hover:bg-blue-700 dark:hover:bg-blue-700">
-        Learn More <Info className="size-4" />
-      </Button>
-    </a>
-  </CardContent>
-</Card>`,
       `
 <Card className="m-0 p-0 max-w-xs rounded-3xl shadow-md overflow-hidden mx-auto bg-zinc-100 dark:bg-zinc-900">
   <CardHeader>
@@ -547,7 +547,7 @@ function Component () {
   },
   {
     id: 'Carosuel',
-    scope: {Carosuel, MoveRight, MoveLeft},
+    scope: {Carosuel, ArrowRight, ArrowLeft},
     extraScopes: [
       {
         scope: ['Carosuel'],
@@ -555,7 +555,7 @@ function Component () {
         isComp: true,
       },
       {
-        scope: ['MoveLeft', 'MoveRight'],
+        scope: ['ArrowLeft', 'ArrowLeft'],
         from: 'lucide-react',
       },
     ],
