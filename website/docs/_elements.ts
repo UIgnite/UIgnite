@@ -61,7 +61,6 @@ const elements = [
       },
     ],
     element: `
-   
 <div className="relative z-0">
   <AccordionWrapper>
     <Accordion
@@ -127,9 +126,10 @@ const elements = [
   <Avatar url={"/hitesh-sir.png"} alt={"user"} />
 </div>
 `,
-
     variation: [
-      `
+      {
+        title: 'Avatar Group',
+        code: `
 <div className="flex items-center -mt-8 pl-2 overflow-visible">
   <div className="relative hover:z-20 transition-all duration-300 ease-in-out">
     <Tooltip title="Aman Gupta" options={{ tooltipStyle: { width: 'auto' } }}>
@@ -177,6 +177,7 @@ const elements = [
     </Tooltip>
   </div>
 </div>`,
+      },
     ],
   },
   {
@@ -197,21 +198,30 @@ const elements = [
       <Button>Click Me</Button>
     `,
     variation: [
-      `
+      {
+        title: '',
+        code: `
 <div className="grid grid-cols-4 gap-10">
   <Button variant="primary">primary</Button>
   <Button variant="secondary">secondary</Button>
   <Button variant="outline">outline</Button>
   <Button variant="glass">glass</Button>
 </div>`,
-      `
+      },
+      {
+        title: '',
+        code: `
 <div className="grid grid-cols-4 gap-10">
   <Button variant="success">success</Button>
   <Button variant="destructive">destructive</Button>
   <Button variant="warning">warning</Button>
   <Button variant="ghost">ghost</Button>
 </div>`,
-      `
+      },
+
+      {
+        title: '',
+        code: `
 <div className="grid grid-cols-4 gap-10">
   <Button variant="dark">dark</Button>
   <Button variant="light">light</Button>
@@ -220,7 +230,10 @@ const elements = [
     Hover Me
   </Button>
 </div>`,
-      ` 
+      },
+      {
+        title: '',
+        code: ` 
 <button className="relative shadow-sm  hover:shadow-gray-50 p-0 w-[100px] h-[100px] border-2 border-gray-500 outline-none bg-gray-100 rounded-[20px]  transition ease-in-out duration-300 hover:scale-110 active:scale-95 active:shadow-none cursor-pointer">
     <div className="relative grid p-[10px] w-full h-full grid-cols-4 grid-rows-2 shadow-[inset_0px_-4px_0px_#dddddd,0px_-4px_0px_#f4f5f6] rounded-[20px] transition ease-in-out duration-300 z-[1]">
       <div className="relative flex translate-y-[-2px] col-start-4 self-start justify-self-end w-4 h-4 transition ease-in-out duration-300 group-hover:translate-y-[-8px]">
@@ -246,12 +259,16 @@ const elements = [
       </p>
     </div>
 </button>`,
-      `
+      },
+      {
+        title: '',
+        code: `
 <div className="grid grid-cols-3 gap-10">
   <Button gradientBorder>gradBorder</Button>
   <Button  variant="gradient" isLoading />
   <Button className="bg-blue-800 rounded-full" icon={<AlarmClockCheck/>}>Snooze</Button>
 </div>`,
+      },
     ],
   },
   {
@@ -344,7 +361,9 @@ const elements = [
 </CardContent>
 </Card>`,
     variation: [
-      `
+      {
+        title: 'Twitter',
+        code: `
 function Component () {
   const [status, setStatus] = useState('Follow');
 
@@ -398,7 +417,10 @@ function Component () {
   )
 }
   `,
-      `
+      },
+      {
+        title: 'Courses Card',
+        code: `
 <Card className="m-0 p-0 max-w-xs rounded-3xl shadow-md overflow-hidden mx-auto bg-zinc-100 dark:bg-zinc-900">
   <CardHeader>
     <img
@@ -435,7 +457,10 @@ function Component () {
     </div>
   </CardFooter>
 </Card>`,
-      `
+      },
+      {
+        title: 'Sign In',
+        code: `
 <Card className="w-[420px] dark:bg-zinc-900 bg-zinc-100 py-6 px-10 text-zinc-800 dark:text-zinc-200">
   <CardHeader>
     <CardTitle className="text-4xl">Sign In</CardTitle>
@@ -492,7 +517,10 @@ function Component () {
     </p>
   </CardFooter>
 </Card>`,
-      `
+      },
+      {
+        title: 'Sign Up',
+        code: `
 <Card className=" dark:bg-zinc-900 bg-zinc-100 dark:w-[420px] py-6 px-10 text-zinc-800 dark:text-zinc-200">
   <CardHeader>
     <CardTitle className="text-4xl">Sign Up</CardTitle>
@@ -543,6 +571,7 @@ function Component () {
   </CardFooter>
 </Card>
 `,
+      },
     ],
   },
   {
@@ -695,29 +724,40 @@ function Component () {
     ],
     element: `<Input placeholder="Type here..." />`,
     variation: [
-      `
+      {
+        title: 'Choose File',
+        code: `
   <Input type="file" className="file:me-3" />
 `,
-      `
+      },
+      {
+        title: 'Link',
+        code: `
 <div className="flex rounded-md shadow-xs">
-    <span
-      className="h-9 p-2 rounded-md border border-gray-400 dark:border-zinc-700
-      rounded-e-none text-base shadow-sm transition-colors placeholder:text-muted-foreground 
-      border-input bg-background text-muted-foreground inline-flex items-center
-      rounded-s-md px-3  text-zinc-500"
-    >
-      https://
-    </span>
-    <Input
-      className="-ms-px rounded-s-none shadow-none dark:font-light"
-      placeholder="www.uignite.in"
-      type="text"
-    />
-  </div>`,
-      `
+  <span
+    className="h-9 p-2 rounded-md border border-gray-400 dark:border-zinc-700
+    rounded-e-none text-base shadow-sm transition-colors placeholder:text-muted-foreground 
+    border-input bg-background text-muted-foreground inline-flex items-center
+    rounded-s-md px-3  text-zinc-500"
+  >
+    https://
+  </span>
+  <Input
+    className="-ms-px rounded-s-none shadow-none dark:font-light"
+    placeholder="www.uignite.in"
+    type="text"
+  />
+</div>`,
+      },
+      {
+        title: 'Email',
+        code: `
   <Input type="email" value="chaicode@gmail.com" disabled />
 `,
-      `
+      },
+      {
+        title: 'Password',
+        code: `
 function PasswordInput() {
   const [show, setShow] = useState(false);
 
@@ -738,6 +778,7 @@ function PasswordInput() {
     </div>
   );
 }`,
+      },
     ],
   },
   {
@@ -900,7 +941,9 @@ function PasswordInput() {
 </div>
 `,
     variation: [
-      `
+      {
+        title: 'Product Card',
+        code: `
 <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
   <h2 className="text-lg font-semibold mb-4">Product Card</h2>
   <Skeleton className="h-48 w-full rounded-lg mb-4" />
@@ -913,7 +956,10 @@ function PasswordInput() {
   </div>
 </div>
 `,
-      `
+      },
+      {
+        title: 'Social Media Post',
+        code: `
 <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
   <h2 className="text-lg font-semibold mb-4">Social Media Post</h2>
   <div className="flex items-center mb-4">
@@ -929,7 +975,10 @@ function PasswordInput() {
   <Skeleton className="h-56 w-full rounded-lg mb-4" />
 </div>
 `,
-      `
+      },
+      {
+        title: 'Profile Card',
+        code: `
 <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
   <h2 className="text-lg font-semibold mb-4">Profile Card</h2>
   <div className="flex flex-col items-center mb-6">
@@ -954,7 +1003,10 @@ function PasswordInput() {
   <Skeleton className="h-14 w-full rounded-md" />
 </div>
 `,
-      `
+      },
+      {
+        title: 'Notification',
+        code: `
 <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
   <h2 className="text-lg font-semibold mb-4">Notification</h2>
   <div className="flex gap-4">
@@ -966,7 +1018,10 @@ function PasswordInput() {
   </div>
 </div>
 `,
-      `
+      },
+      {
+        title: 'Invoice Bill',
+        code: `
 <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
   <h2 className="text-lg font-semibold mb-4">Inovice Bill</h2>
   <Skeleton className="h-5 w-1/2 mb-3" />
@@ -981,7 +1036,10 @@ function PasswordInput() {
   </div>
 </div>
 `,
-      `  
+      },
+      {
+        title: 'Medea Player',
+        code: `  
 <div className=" rounded-lg shadow-lg dark:shadow-black p-4 w-[360px] max-w-xl">
   <h2 className="text-lg font-semibold mb-4">Media Player</h2>
   <div className="flex gap-4" >
@@ -993,6 +1051,7 @@ function PasswordInput() {
     </div>
   </div>
 </div>`,
+      },
     ],
   },
   {
@@ -1011,11 +1070,26 @@ function PasswordInput() {
 </div>      
 `,
     variation: [
-      `<Spinner variant="bars" className="my-4" />`,
-      `<Spinner variant="circular" className="my-4" />`,
-      `<Spinner variant="ripple" className="my-4" />`,
-      `<Spinner variant="terminal" className="my-4" />`,
-      `<Spinner variant="loader" className="my-4" />`,
+      {
+        title: 'Bars',
+        code: `<Spinner variant="bars" className="my-4" />`,
+      },
+      {
+        title: 'Circular',
+        code: `<Spinner variant="circular" className="my-4" />`,
+      },
+      {
+        title: 'Ripple',
+        code: `<Spinner variant="ripple" className="my-4" />`,
+      },
+      {
+        title: 'Terminal',
+        code: `<Spinner variant="terminal" className="my-4" />`,
+      },
+      {
+        title: 'Loader',
+        code: `<Spinner variant="loader" className="my-4" />`,
+      },
     ],
   },
   {
@@ -1095,7 +1169,8 @@ function Testimonial () {
           rating={testimonial.rating}
         />
       ))}
-    </div>)
+    </div>
+  )
 }
 `,
     variation: [],
