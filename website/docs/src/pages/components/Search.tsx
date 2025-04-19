@@ -9,19 +9,17 @@ const searchClient = algoliasearch(
   'cad81ce37d5240c68e6d39c8f68f520f'
 );
 
-
-
 function SearchBar() {
   const [isSearchBarOpen, setIsSearchOpen] = useState<boolean>(false);
-  function Hit({hit}: any )  {
+  function Hit({hit}: any) {
     const navigate = useNavigate();
     return (
       <div className="w-full bg-white dark:bg-black shadow-md p-2 flex items-center hover:bg-gray-100 dark:hover:bg-neutral-800 rounded-md">
         <File className="text-gray-600 dark:text-white" />
         <button
           onClick={() => {
-            navigate(`/components/${hit.name}`)
-            setIsSearchOpen(false)
+            navigate(`/components/${hit.name}`);
+            setIsSearchOpen(false);
           }}
           className="ml-2 text-neutral-600 dark:text-white"
         >
