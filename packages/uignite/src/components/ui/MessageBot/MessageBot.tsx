@@ -5,6 +5,7 @@ import {Input} from '@/components/ui/Input';
 
 export interface MessageBotParams {
   orgName?: string;
+  orgLogo?:string;
   themeColor?: string;
   url?: string;
   alt?: string;
@@ -17,6 +18,7 @@ export interface Message {
 
 const MessageBot = ({
   orgName = 'UIgnite',
+  orgLogo ="/dark-mode-logo.png",
   themeColor = 'bg-blue-600',
   url = '/uignite-bot.png',
 }: MessageBotParams) => {
@@ -78,7 +80,7 @@ const MessageBot = ({
               onClick={() => setIsOpen(false)}
             >
               <img
-                src="/dark-mode-logo.png"
+                src={orgLogo}
                 alt="Close"
                 className="w-28 h-8 object-cover"
               />

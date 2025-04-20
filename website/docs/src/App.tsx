@@ -11,14 +11,16 @@ import ComponentPreviewPage from './pages/components';
 import TestCards from './pages/TestCards';
 import FeedbackForm from './pages/FeedbackForm';
 import About from './pages/About';
+import {LandingPage} from './pages/templates/LandingPage';
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/templates" element={<LandingPage />} />
+
       <Route element={<RootLayout />}>
         <Route path="feedback" element={<FeedbackForm />} />
-        {/* <Route path="resizable-preview" element={<ResizablePreview />} /> */}
         <Route path="/docs" element={<Landing />} />
         <Route path="/testcards" element={<TestCards />} />
 
@@ -33,8 +35,6 @@ const App = () => {
           />
         </Route>
         <Route path="/pricing" element={<PricingSection />} />
-
-        {/* <Route path="fullontesting" element={<Components />} /> */}
       </Route>
 
       <Route path="*" element={<NotFoundPage />} />
