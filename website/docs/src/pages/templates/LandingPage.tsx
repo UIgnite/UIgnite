@@ -1,10 +1,13 @@
 'use client';
 
 import {
+  Accordion,
+  AccordionWrapper,
   Button,
   Footer,
   MessageBot,
   Navbar,
+  Testimonials,
   ThemeToggleBtn,
   VideoPlayer,
 } from '@pkgs/uignite';
@@ -22,6 +25,8 @@ import {FiGithub, FiLinkedin} from 'react-icons/fi';
 import {FaDiscord, FaInstagram} from 'react-icons/fa';
 import {FaXTwitter} from 'react-icons/fa6';
 import {SlSocialYoutube} from 'react-icons/sl';
+import {useState} from 'react';
+import {Info} from 'lucide-react';
 
 type MiniTemplateCardProps = {
   title: string;
@@ -139,6 +144,57 @@ export const MiniTemplateCard = ({
 };
 
 export const LandingPage = () => {
+  const [isPause, setPause] = useState(false);
+  const testimonials = [
+    {
+      imageSrc: 'hitesh-sir.png',
+      name: 'Hitesh Choudhary',
+      title: 'Founder of ChaiCode',
+      message:
+        'Used UIgnite once. Now my students think I’m a Tailwind wizard. Jokes on them — it’s all prebuilt.',
+      rating: 5,
+    },
+    {
+      imageSrc: 'piyush-sir.png',
+      name: 'Piyush Garg',
+      title: 'Co-founder of OnlyFans',
+      message:
+        'I came for the components. Stayed because the docs didn’t make me cry. 10/10, would copy-paste again.',
+      rating: 5,
+    },
+    {
+      imageSrc: 'anirudh-sir.png',
+      name: 'Anirudh Jwala',
+      title: 'Gareebo Ko Books Dene Wala',
+      message:
+        'Tried building a form without UIgnite once. Laptop almost flew out the window. Never again.',
+      rating: 5,
+    },
+    {
+      imageSrc: 'mukul-sir.png',
+      name: 'Mukul Padwal',
+      title: `Everyone's Favourite TA`,
+      message:
+        'UIgnite’s dark mode support is so good, I forgot what light mode looks like. My retinas thank you.',
+      rating: 5,
+    },
+    {
+      imageSrc: 'manu-sir.png',
+      name: 'Manu Arora',
+      title: 'Founder of Aceternity',
+      message:
+        'If Aceternity UI had a long-lost sibling, it’d be UIgnite. Except this one brings snacks and types everything.',
+      rating: 5,
+    },
+    {
+      imageSrc: 'vinayak-sir.png',
+      name: 'Vinayak Sarawagi',
+      title: 'Founder of IntentJS',
+      message:
+        'UIgnite components are like intentions — pure, minimal, and surprisingly powerful. Even my backend friends use them now.',
+      rating: 5,
+    },
+  ];
   return (
     <div className=" bg-gradient-to-b from-black to-zinc-900 text-white min-h-screen">
       {/* Navbar */}
@@ -153,7 +209,7 @@ export const LandingPage = () => {
         ]}
         loginBtnLink="/login"
         themeChangeBtn={
-          <ThemeToggleBtn className="text-gray-200 dark:text-zinc-100 bg-zinc-800/60 dark:bg-zinc-700/60 hover:bg-zinc-700 dark:hover:bg-zinc-600 rounded-full" />
+          <ThemeToggleBtn className=" hidden text-gray-200 dark:text-zinc-100 bg-zinc-800/60 dark:bg-zinc-700/60 hover:bg-zinc-700 dark:hover:bg-zinc-600 rounded-full" />
         }
         loginBtnStyle="h-9 text-gray-200 dark:text-zinc-100 bg-zinc-800/60 dark:bg-zinc-700/60 hover:bg-orange-600 dark:hover:bg-orange-600 rounded-lg transition-colors duration-200"
         className="dark:bg-black/30 backdrop-blur-md sticky top-0 z-50"
@@ -210,7 +266,7 @@ export const LandingPage = () => {
       <section className="py-24 px-6 space-y-24 max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Featured Templates
+            Students Reviews
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Premium templates designed to help you launch faster and focus on
@@ -220,47 +276,232 @@ export const LandingPage = () => {
 
         {/* Mini Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <MiniTemplateCard
-            title="Web Dev Cohort "
-            description="The most vibrant comunity ."
-            priceText="Buy now $49"
-            onBuyClick={() => alert('Redirect to payment gateway!')}
-          />
+          <Card className="rounded-2xl shadow-md overflow-hidden w-full max-w-md mx-auto bg-zinc-100 dark:bg-zinc-900">
+            <div className="aspect-video">
+              <img
+                src="/course-card.jpg"
+                alt="Web Dev Cohort"
+                className="object-cover w-full h-full rounded"
+              />
+            </div>
 
-          <MiniTemplateCard
-            title="SaaS Dashboard Page"
-            description="Complete dashboard solution with analytics, user management, and customizable widgets for SaaS applications."
-            priceText="Buy now $69"
-            onBuyClick={() => alert('Redirect to payment gateway!')}
-          />
+            <CardContent className="px-4 pt-4 pb-5 space-y-3">
+              <h1 className="font-semibold text-xl text-zinc-800 dark:text-zinc-100">
+                Web Dev Cohort 1.0
+              </h1>
 
-          <MiniTemplateCard
-            title="SaaS Documentation Page"
-            description="Full-featured e-commerce template with product listings, shopping cart, and checkout process built-in."
-            priceText="Buy now $89"
-            onBuyClick={() => alert('Redirect to payment gateway!')}
-          />
+              <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                Master full-stack web development with Web Dev Cohort. Learn
+                HTML, CSS, JS, React, Next.js, Node, Docker, databases like
+                MongoDB/PostgreSQL, DevOps with AWS (ECR, EC2, CloudFront),
+                modern workflows like Turbo Repo, TypeScript, and GitHub CI/CD.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-2 pt-1">
+                <span className="font-medium text-base text-zinc-800 dark:text-zinc-100">
+                  ₹6,999
+                </span>
+                <span className="line-through text-sm text-gray-400 dark:text-gray-500">
+                  ₹8,999
+                </span>
+                <span className="text-sm text-blue-600 dark:text-blue-400">
+                  Save 22%
+                </span>
+              </div>
+
+              <a
+                href="https://courses.chaicode.com/learn/batch/about?bundleId=214297"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="mt-2 w-full flex justify-center items-center gap-2 hover:bg-blue-700 dark:hover:bg-blue-700">
+                  Learn More <Info className="size-4" />
+                </Button>
+              </a>
+            </CardContent>
+          </Card>
+
+          <Card className="rounded-2xl shadow-md overflow-hidden w-full max-w-md mx-auto bg-zinc-100 dark:bg-zinc-900">
+            <div className="aspect-video">
+              <img
+                src="/devops.webp"
+                alt="Web Dev Cohort"
+                className="object-cover w-full h-full rounded"
+              />
+            </div>
+
+            <CardContent className="px-4 pt-4 pb-5 space-y-3">
+              <h1 className="font-semibold text-xl text-zinc-800 dark:text-zinc-100">
+                DevOps for developers
+              </h1>
+
+              <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                Master the foundations and advanced practices of modern
+                infrastructure with this comprehensive DevOps course. You'll
+                dive into Linux essentials, version control, and scripting
+                before progressing to containerization with Docker and
+                orchestration techniques. Learn .{' '}
+              </p>
+
+              <div className="flex flex-wrap items-center gap-2 pt-1">
+                <span className="font-medium text-base text-zinc-800 dark:text-zinc-100">
+                  ₹6,999
+                </span>
+                <span className="line-through text-sm text-gray-400 dark:text-gray-500">
+                  ₹8,999
+                </span>
+                <span className="text-sm text-blue-600 dark:text-blue-400">
+                  Save 22%
+                </span>
+              </div>
+
+              <a
+                href="https://courses.chaicode.com/learn/batch/DevOps-for-Developers-1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="mt-2 w-full flex justify-center items-center gap-2 hover:bg-blue-700 dark:hover:bg-blue-700">
+                  Learn More <Info className="size-4" />
+                </Button>
+              </a>
+            </CardContent>
+          </Card>
+
+          <Card className="rounded-2xl shadow-md overflow-hidden w-full max-w-md mx-auto bg-zinc-100 dark:bg-zinc-900">
+            <div className="aspect-video">
+              <img
+                src="/genai.webp"
+                alt="Web Dev Cohort"
+                className="object-cover w-full h-full rounded"
+              />
+            </div>
+
+            <CardContent className="px-4 pt-4 pb-5 space-y-3">
+              <h1 className="font-semibold text-xl text-zinc-800 dark:text-zinc-100">
+                GenAI with Python
+              </h1>
+
+              <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+                An immersive and interactive program which is totally focused on
+                Generative AI, covering foundational concepts, practical
+                applications, and tools like GPT, diffusion models, and prompt
+                engineering—built to help you innovate, prototype, and lead in
+                the AI-driven future.
+              </p>
+
+              <div className="flex flex-wrap items-center gap-2 pt-1">
+                <span className="font-medium text-base text-zinc-800 dark:text-zinc-100">
+                  ₹6,999
+                </span>
+                <span className="line-through text-sm text-gray-400 dark:text-gray-500">
+                  ₹8,999
+                </span>
+                <span className="text-sm text-blue-600 dark:text-blue-400">
+                  Save 22%
+                </span>
+              </div>
+
+              <a
+                href="https://courses.chaicode.com/learn/batch/GenAI-with-python-concept-to-deployment-projects-1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="mt-2 w-full flex justify-center items-center gap-2 hover:bg-blue-700 dark:hover:bg-blue-700">
+                  Learn More <Info className="size-4" />
+                </Button>
+              </a>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to build faster?</h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            Get started with our premium courses today and start your dev
-            journey right here
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg rounded-lg transition-all duration-300">
-              Browse Courses
-            </Button>
-            <Button className="bg-transparent border border-gray-500 hover:border-white text-white px-8 py-3 text-lg rounded-lg transition-all duration-300">
-              Contact Sales
-            </Button>
+      <section>
+        <div className="max-w-[1200px] mx-auto text-center flex justify-around gap-50">
+          <div>
+            <h2 className="text-4xl font-bold mb-6">Ready to build faster?</h2>
+            <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+              Linux, DevOps, Docker, Containers, SonarQube, Prometheus &
+              Grafana, Load balancing, zero down time deployments
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg rounded-lg transition-all duration-300">
+                Browse Courses
+              </Button>
+              <Button className="bg-transparent border border-gray-500 hover:border-white text-white px-8 py-3 text-lg rounded-lg transition-all duration-300">
+                Contact Sales
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="max-w-[1200px] mt-20 mx-auto text-center flex justify-around gap-50">
+          <h2 className="text-4xl font-bold mb-6">FAQs</h2>
+        </div>
+        <div className="max-w-[1200px] mx-auto text-center flex justify-around gap-50">
+          <div className="mt-5">
+            <AccordionWrapper>
+              <Accordion
+                title="Will there be TAs support and a dedicated community support?   "
+                content="Yes! Every cohort includes dedicated TA (Teaching Assistant) support to help you with doubts, code reviews, and project feedback. Plus, you’ll be part of an active, supportive community where you can collaborate, share resources, and grow together."
+                className=" max-w-[800px] mb-2 border-[0.5px] dark:border-orange-500  "
+              />
+              <Accordion
+                title="Will the classes be recorded and be provided to us?   "
+                content="Yes, the classes will be recorded."
+                className="max-w-[800px] mb-2 border-[0.5px] dark:border-orange-500"
+              />
+              <Accordion
+                title="What is the course duration, and when will the classes be?   "
+                content="The course duration is of 6 months."
+                className="max-w-[800px] mb-2 border-[0.5px] dark:border-orange-500"
+              />
+            </AccordionWrapper>
           </div>
         </div>
       </section>
+
+      <div className="max-w-[1200px] mt-20 mx-auto text-center flex justify-around gap-50">
+        <div>
+          <h2 className="text-4xl font-bold mb-6">Testimonials </h2>
+          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+            Hear from learners who transformed their skills and careers through
+            our hands-on, mentor-led programs. Real stories. Real impact
+          </p>
+          <div className="flex flex-wrap justify-center gap-4"></div>
+        </div>
+      </div>
+
+      <div className="relative w-full max-w-[1000px] md:max-w-[1200px] overflow-hidden py-10 mx-auto">
+        <div
+          className="flex w-max gap-2 animate-infinite-scroll"
+          onMouseEnter={() => setPause(true)}
+          onMouseLeave={() => setPause(false)}
+          style={{animationPlayState: isPause ? 'paused' : 'running'}}
+        >
+          {testimonials.map((testimonial, index) => (
+            <Testimonials
+              key={`first-${index}`}
+              imageSrc={testimonial.imageSrc}
+              name={testimonial.name}
+              title={testimonial.title}
+              message={testimonial.message}
+              rating={testimonial.rating}
+            />
+          ))}
+
+          {testimonials.map((testimonial, index) => (
+            <Testimonials
+              key={`second-${index}`}
+              className="w-[450px] max-h-[200px]"
+              imageSrc={testimonial.imageSrc}
+              name={testimonial.name}
+              title={testimonial.title}
+              message={testimonial.message}
+              rating={testimonial.rating}
+            />
+          ))}
+        </div>
+      </div>
 
       <Footer {...footerProps} />
     </div>
