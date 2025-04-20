@@ -36,6 +36,11 @@ import {
   useTheme,
   cn,
 } from '@pkgs/uignite';
+
+import {FiGithub, FiLinkedin} from 'react-icons/fi';
+import {FaDiscord, FaInstagram} from 'react-icons/fa';
+import {FaXTwitter} from 'react-icons/fa6';
+import {SlSocialYoutube} from 'react-icons/sl';
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import {
@@ -642,65 +647,104 @@ function Component () {
   },
   {
     id: 'footer',
-    scope: {Footer, useTheme},
+    scope: {
+      Footer,
+      FiGithub,
+      FiLinkedin,
+      FaDiscord,
+      FaInstagram,
+      FaXTwitter,
+      SlSocialYoutube,
+    },
     extraScopes: [
       {
         scope: ['Footer'],
         from: 'Footer',
         isComp: true,
       },
-      {
-        scope: ['useTheme'],
-        from: '@/hooks/theme',
-      },
     ],
     element: `
-<Footer
-  lightLogo="https://dummyimage.com/120x40/000/fff&text=Light+Logo"
-  darkLogo="https://dummyimage.com/120x40/fff/000&text=Dark+Logo"
-  description="This is a simple footer with sections, social links, and a copyright notice."
-  socials={[
-    { type: "linkedin", link: "https://linkedin.com" },
-    { type: "twitter", link: "https://twitter.com" },
-    { type: "instagram", link: "https://instagram.com" },
-    { type: "youtube", link: "https://youtube.com" },
-  ]}
-  sections={[
-    {
-      title: "Product",
-      links: [
-        { label: "Features", href: "#" },
-        { label: "Pricing", href: "#" },
-        { label: "Integrations", href: "#" },
-      ],
-    },
-    {
-      title: "Company",
-      links: [
-        { label: "About", href: "#" },
-        { label: "Careers", href: "#" },
-        { label: "Blog", href: "#" },
-      ],
-    },
-    {
-      title: "Support",
-      links: [
-        { label: "Help Center", href: "#" },
-        { label: "Terms of Service", href: "#" },
-        { label: "Privacy Policy", href: "#" },
-      ],
-    },
-    {
-      title: "Follow Us",
-      links: [
-        { label: "LinkedIn", href: "https://linkedin.com" },
-        { label: "Twitter", href: "https://twitter.com" },
-        { label: "Instagram", href: "https://instagram.com" },
-      ],
-    },
-  ]}
-  copyright="© 2025 Your Company. All rights reserved."
-/>
+function FooterComponent() {
+  const footerProps = {
+    logoDark: 'https://res.cloudinary.com/do2tmd6xp/image/upload/v1745059611/uignite/dtst2deim1sgv2g5dcm6.png',
+    logoLight: 'https://res.cloudinary.com/do2tmd6xp/image/upload/v1745059611/uignite/gzfqtahpfc93ybugfiwr.png',
+    tagline: 'Home for programmers',
+    socialLinks: [
+      {
+        icon: <FiGithub className="icon" />,
+        href: 'https://github.com/hiteshchoudhary',
+        label: 'GitHub',
+      },
+      {
+        icon: <FaDiscord className="icon" />,
+        href: 'https://discord.com/invite/WDrH3zuWFb',
+        label: 'Discord',
+      },
+      {
+        icon: <FaXTwitter className="icon" />,
+        href: 'https://x.com/hiteshdotcom',
+        label: 'X',
+      },
+      {
+        icon: <FiLinkedin className="icon" />,
+        href: 'https://www.linkedin.com/in/hiteshchoudhary',
+        label: 'LinkedIn',
+      },
+      {
+        icon: <FaInstagram className="icon" />,
+        href: 'https://www.instagram.com/hiteshchoudharyofficial',
+        label: 'Instagram',
+      },
+      {
+        icon: <SlSocialYoutube className="icon" />,
+        href: 'https://www.youtube.com/@chaiaurcode',
+        label: 'YouTube',
+      },
+    ],
+    linkSections: [
+      {
+        title: 'Product',
+        links: [
+          {name: 'Courses', href: 'https://courses.chaicode.com/learn'},
+          {
+            name: 'Cohort',
+            href: 'https://courses.chaicode.com/learn/view-all?show=batch&type=17',
+          },
+          {
+            name: 'Coding Hero',
+            href: 'https://courses.chaicode.com/learn/batch/about?bundleId=226894',
+          },
+          {name: 'MasterJI', href: 'https://masterji.co/login'},
+        ],
+      },
+      {
+        title: 'Resources',
+        links: [
+          {name: 'FreeAPI', href: 'https://freeapi.app/'},
+          {name: 'ChaiDocs', href: 'https://chaidocs.vercel.app/'},
+        ],
+      },
+      {
+        title: 'Legal',
+        links: [
+          {name: 'Terms of Service', href: '#'},
+          {name: 'Privacy Policy', href: '#'},
+          {name: 'Pricing Policy', href: '#'},
+          {name: 'Refund Policy', href: '#'},
+        ],
+      },
+    ],
+    copyrightText: 'ChaiCode',
+    builtByText: 'ChaiCode',
+    socialLinksStyle: 'dark:hover:text-orange-400',
+    linkStyle: 'dark:hover:text-orange-400 hover:text-zinc-800',
+    className:"border-none bg-zinc-100 dark:bg-neutral-900"
+  };
+
+  return (
+      <Footer {...footerProps} />
+  );
+};
     `,
     variation: [],
   },
@@ -1148,11 +1192,11 @@ function Testimonial () {
     
   const testimonials = [
     {
-      imageSrc: '/piyush-sir.png',
-      name: 'Piyush Garg',
-      title: 'Co-founder of OnlyFans',
+      imageSrc: 'https://res.cloudinary.com/do2tmd6xp/image/upload/v1745059612/uignite/mfwshi7elmim6aqidhgd.png',
+      name: 'Manu Arora',
+      title: 'Founder of Aceternity',
       message:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. A quidem, dolorum iusto temporibus provident totam tempore atque molestiae excepturi unde voluptates dolor culpa vero ut quia sint iste harum eveniet?',
+        'If Aceternity UI had a long-lost sibling, it’d be UIgnite. Except this one brings snacks and types everything.',
       rating: 5,
     },
   ];
@@ -1160,7 +1204,6 @@ function Testimonial () {
     return (<div className="flex">
       {testimonials.map((testimonial, index) => (
         <Testimonials
-          className=" w-[450px] max-h-[200px]"
           key={index}
           imageSrc={testimonial.imageSrc}
           name={testimonial.name}
