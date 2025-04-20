@@ -123,7 +123,7 @@ const Home = () => {
       <MainNavbar />
       {/* Main Content */}
       <GridBackground />
-      <div className="flex justify-center items-center mt-8 ">
+      <div className="flex justify-center items-center mt-8">
         <div className=" max-w-[1200px]  w-full px-4 sm:px-4 lg:px-4 ">
           <div className="z-1 px-4 md:px-8 min-h-screen flex justify-center mt-4 ">
             <div className="w-full max-w-6xl  flex items-center justify-center">
@@ -210,20 +210,20 @@ const Home = () => {
           </div>
 
           {/* cards  */}
-          <div className="mt-20 md:mt-40 lg:mt-40 xl:mt-40 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 px-4">
-            <div className="flex-2">
-              <p className="text-4xl sm:text-7xl md:text-7xl lg:text-7xl font-semibold ">
+          <div className="mt-20 md:mt-40 lg:mt-40 xl:mt-40  flex flex-col items-center justify-center gap-8 px-4">
+            <div >
+              <p className="text-4xl sm:text-7xl md:text-7xl lg:text-7xl font-semibold text-center ">
                 <span className="dark:text-cyan-500 text-cyan-700">Design</span>{' '}
-                that <span className="text-pink-500">adapts</span> to you.
+                that <span >adapts</span> to you.
               </p>
-              <p className="mt-8 sm:mt-3 md:mt-3 lg:mt-3 text-md dark:text-zinc-300 text-zinc-600">
+              <p className="mt-8 sm:mt-8 md:mt-4 lg:mt-4 text-md text-center mx-auto  max-w-[800px] dark:text-zinc-300 text-zinc-600">
                 Uignite lets you tailor every detail with ease. With built-in
                 support for custom themes via our TailwindCSS plugin, your
                 interface can match your brand, mood, or imagination no limits,
                 just possibilities.
               </p>
 
-              <Card className="mb-6 border-0 dark:shadow-lg dark:shadow-black bg-gradient-to-tr from-blue-600 via-gray-900 to-black p-6 mt-4 rounded-xl  text-white w-full max-w-x h-[45%] sm:h-[45%] md:h-[45%] lg:[45%] mx-auto">
+              <Card className="mb-6 border-0 dark:shadow-lg dark:shadow-black bg-gradient-to-tr from-blue-600 via-gray-900 to-black p-6 mt-4 rounded-xl  text-white w-full max-w-xl h-[53%] sm:h-[45%] md:h-[45%] lg:[45%] mx-auto">
                 <div className="flex gap-3 items-center">
                   <img
                     src="pain.png"
@@ -269,9 +269,7 @@ const Home = () => {
                 </div>
               </Card>
             </div>
-            <div className="flex-2 ml-4 bg-transparent max-h-[70vh] overflow-scroll scrollable-content">
-              <img src="card.png" alt="" className="w-[600px] rounded-xl" />
-            </div>
+           
           </div>
 
           <div className="text-center ">
