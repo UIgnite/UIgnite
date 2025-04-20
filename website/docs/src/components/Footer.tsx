@@ -9,9 +9,9 @@ import {FaXTwitter} from 'react-icons/fa6';
 function Footer() {
   const footerProps = {
     logoDark:
-      'https://res.cloudinary.com/do2tmd6xp/image/upload/v1745059613/uignite/xfj6lgzo51ov1nv6bben.png',
+      'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059613/uignite/xfj6lgzo51ov1nv6bben.png',
     logoLight:
-      'https://res.cloudinary.com/do2tmd6xp/image/upload/v1745059611/uignite/myjfxbyt80uuxvkbpjqu.png',
+      'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059611/uignite/myjfxbyt80uuxvkbpjqu.png',
     tagline: ` UIgnite brings together design, performance, and TypeScript — so you can ship faster with confidence.`,
     socialLinks: [
       {
@@ -120,8 +120,8 @@ const FooterComponent = ({
   const {theme} = useTheme();
 
   return (
-    <footer className={`w-full px-4 sm:px-8 md:px-10 py-6  ${className}`}>
-      <div className="max-w-7xl mx-auto py-8 flex flex-col gap-10 md:flex-row md:justify-between">
+    <footer className={`w-full px-4 sm:px-8 md:px-10 py-6 ${className}`}>
+      <div className="max-w-7xl mx-auto py-8 flex flex-col md:flex-row md:justify-between gap-10 flex-wrap">
         {/* Left Section */}
         <div className="flex flex-col gap-6 max-w-md">
           <div className="w-48 h-12 hover:scale-105 transition-all cursor-pointer -ml-10">
@@ -134,7 +134,7 @@ const FooterComponent = ({
 
           <p className="text-sm text-gray-600 dark:text-zinc-400">{tagline}</p>
 
-          {/* social links */}
+          {/* Social links */}
           <div className="flex gap-4 text-zinc-500">
             {socialLinks.map(({icon, href, label}) => (
               <a
@@ -155,13 +155,12 @@ const FooterComponent = ({
         </div>
 
         {/* Right Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-sm text-zinc-500 dark:text-zinc-400">
+        <div className="flex flex-wrap gap-10 text-sm text-zinc-500 dark:text-zinc-400">
           {linkSections.map(({title, links}) => (
-            <div key={title} className="flex flex-col gap-2">
+            <div key={title} className="min-w-[140px] flex flex-col gap-2">
               <h3 className="text-zinc-800 dark:text-zinc-100 font-semibold">
                 {title}
               </h3>
-              {/* links */}
               {links.map(({name, to}) => (
                 <Link
                   key={name}
@@ -180,11 +179,12 @@ const FooterComponent = ({
         </div>
       </div>
 
-      <div className="">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between text-sm text-zinc-800 dark:text-zinc-300 gap-3">
+      {/* Bottom line */}
+      <div>
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-zinc-800 dark:text-zinc-300 gap-2">
           <div>© 2025 {copyrightText}. All rights reserved.</div>
           <div>
-            <span>Built with ❤️ by </span>{' '}
+            <span>Built with ❤️ by </span>
             <span className="underline cursor-pointer">{builtByText}</span>
           </div>
         </div>

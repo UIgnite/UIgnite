@@ -53,54 +53,61 @@ const OurJourney = () => {
             Meet the Team Behind UIgnite
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 mt-10">
+          <div className="flex flex-wrap justify-center gap-8 mt-10">
             {[
               {
                 name: 'Aman Gupta',
                 role: 'Backend Developer at OnlyDevs',
-                img: '/me.png',
+                img: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059670/uignite/pd6vhwufdxmrvmb1r6dw.png',
                 commits: '130+',
                 prs: '20+',
               },
               {
                 name: 'Ram Bhardwaj',
                 role: 'Backend Developer at OnlyDevs',
-                img: '/assets/avatars/ram.jpg',
+                img: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059670/uignite/tgwysbhygrqweqqfcr0s.jpg',
                 commits: '150+',
                 prs: '22+',
               },
               {
                 name: 'Saurav Jha',
                 role: 'Backend Developer at OnlyDevs',
-                img: '/assets/avatars/saurav.png',
+                img: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059669/uignite/hvkxluoaw9qraiogewad.png',
                 commits: '140+',
                 prs: '24+',
               },
               {
                 name: 'Aditya Sharma',
                 role: 'Programmer at OnlyDevs',
-                img: '/assets/avatars/aditya.jpg',
+                img: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059669/uignite/hop3sfvj72wdaryxcejf.jpg',
                 commits: '200+',
                 prs: '29+',
               },
               {
                 name: 'Rohit Singh',
                 role: 'Designer and Video Editor',
-                img: '/assets/avatars/rohit.jpg',
+                img: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059668/uignite/wpv97inpphsf6guic703.jpg',
                 commits: '50+',
-                prs: '5+',
+                prs: '10+',
               },
               {
                 name: 'Jahanwee',
                 role: 'Writer and Frontend Developer',
-                img: '/assets/avatars/jahanwee.jpg',
+                img: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059668/uignite/wmdwgvjrfczaqj4nzsid.jpg',
                 commits: '50+',
-                prs: '15+',
+                prs: '10+',
+              },
+              {
+                name: 'Sagar Maheshwari',
+                role: '',
+                img: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059668/uignite/yajgy6eqmp2zxwtahk2l.jpg',
+                commits: '6',
+                prs: '2',
               },
             ].map((member) => (
               <Card
                 key={member.name}
-                className="min-h-[440px] w-full rounded-3xl transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer"
+                className="min-h-[440px] w-full sm:w-[300px] lg:w-[320px] rounded-3xl transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer"
               >
                 <CardHeader className="p-0">
                   <img

@@ -301,7 +301,7 @@ export default function DashboardPage() {
               </Card>
             </div>
 
-            <div className="max-w-[1300px] flex gap-10 flex-wrap">
+            <div className="max-w-[1200px] grid grid-cols-3 mb-6 gap-6">
               <Card className="bg-zinc-900 text-white border border-zinc-800">
                 <CardContent className="p-4">
                   <div className="flex justify-between items-center mb-4">
@@ -415,8 +415,8 @@ export default function DashboardPage() {
               </Card>
             </div>
 
-            <div className=" max-w-[1200px]  flex  justify-center items-center gap-5">
-              <Card className="bg-zinc-900  max-w-[1200px] lg:w-[800px] text-white border border-zinc-800 lg:col-span-2">
+            <div className=" max-w-[1200px]  flex justify-center items-center gap-5">
+              <Card className="bg-zinc-900  w-[1200px] text-white border border-zinc-800 lg:col-span-2">
                 <CardContent className="p-4">
                   <div className="flex justify-between items-center mb-4">
                     <p className="text-lg font-semibold">Recent Sales</p>
@@ -460,6 +460,7 @@ export default function DashboardPage() {
                   </div>
                 </CardContent>
               </Card>
+
               <div className="mt-7 mr-5">
                 <Card className="bg-zinc-900 text-white border border-zinc-800">
                   <CardContent className="p-4">

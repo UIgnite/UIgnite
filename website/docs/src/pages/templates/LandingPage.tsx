@@ -321,15 +321,15 @@ export const LandingPage = () => {
           <Card className="rounded-2xl shadow-md overflow-hidden w-full max-w-md mx-auto bg-zinc-100 dark:bg-zinc-900">
             <div className="aspect-video">
               <img
-                src="/devops.webp"
-                alt="Web Dev Cohort"
+                src="https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745145552/uignite/atszynftsed74g9ihwxv.jpg"
+                alt="DevOps for Developers"
                 className="object-cover w-full h-full rounded"
               />
             </div>
 
             <CardContent className="px-4 pt-4 pb-5 space-y-3">
               <h1 className="font-semibold text-xl text-zinc-800 dark:text-zinc-100">
-                DevOps for developers
+                DevOps for Developers
               </h1>
 
               <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
@@ -367,8 +367,8 @@ export const LandingPage = () => {
           <Card className="rounded-2xl shadow-md overflow-hidden w-full max-w-md mx-auto bg-zinc-100 dark:bg-zinc-900">
             <div className="aspect-video">
               <img
-                src="/genai.webp"
-                alt="Web Dev Cohort"
+                src="https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745145552/uignite/bfrcgrbospz5iparldlk.jpg"
+                alt="GenAI with Python"
                 className="object-cover w-full h-full rounded"
               />
             </div>
