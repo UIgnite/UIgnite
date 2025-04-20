@@ -34,9 +34,7 @@ export default function Component() {
 
   if (!currComponent) {
     return (
-      <div className="text-blue-500">
-        Ooops! This Component does not exits not found.
-      </div>
+      <div className="text-blue-500">Ooops! This Component does not exits.</div>
     );
   }
   return (
