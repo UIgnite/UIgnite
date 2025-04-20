@@ -8,7 +8,6 @@ import {
   MessageBot,
   Navbar,
   Testimonials,
-  ThemeToggleBtn,
   VideoPlayer,
 } from '@pkgs/uignite';
 
@@ -208,9 +207,6 @@ export const LandingPage = () => {
           {name: 'Reviews', link: '/'},
         ]}
         loginBtnLink="/login"
-        themeChangeBtn={
-          <ThemeToggleBtn className=" hidden text-gray-200 dark:text-zinc-100 bg-zinc-800/60 dark:bg-zinc-700/60 hover:bg-zinc-700 dark:hover:bg-zinc-600 rounded-full" />
-        }
         loginBtnStyle="h-9 text-gray-200 dark:text-zinc-100 bg-zinc-800/60 dark:bg-zinc-700/60 hover:bg-orange-600 dark:hover:bg-orange-600 rounded-lg transition-colors duration-200"
         className="dark:bg-black/30 backdrop-blur-md sticky top-0 z-50"
       />

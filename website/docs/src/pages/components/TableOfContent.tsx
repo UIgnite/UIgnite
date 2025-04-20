@@ -4,7 +4,6 @@ import {useParams} from 'react-router-dom';
 const TableOfContents = () => {
   const [headings, setHeadings] = useState<HTMLHeadingElement[]>([]);
   const {componentId} = useParams();
-  console.log(componentId);
 
   useEffect(() => {
     const allHeadings = Array.from(
