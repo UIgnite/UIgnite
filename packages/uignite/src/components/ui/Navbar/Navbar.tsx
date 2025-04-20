@@ -66,7 +66,7 @@ export const Navbar = ({
 
         {/* Theme toggle + login + hamburger */}
         <div className="flex items-center gap-3">
-          {themeChangeBtn ?? <ThemeToggleBtn />}
+          {themeChangeBtn && <ThemeToggleBtn />}
 
           {/* Desktop only */}
           {loginBtnLink && (
