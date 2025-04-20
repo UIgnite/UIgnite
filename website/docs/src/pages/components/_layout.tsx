@@ -51,8 +51,9 @@ export default function ComponentLayout() {
 
           <div className="px-2 py-2 bg-neutral-800/50">Components</div>
           <div className="flex flex-col gap-y-1">
-            {components.map((compo) => (
+            {components.map((compo, index) => (
               <button
+                key={index}
                 onClick={() => handleNavigation(`/components/${compo.id}`)}
                 className="text-left px-6 text-neutral-200 py-2 aria-active:bg-neutral-900 active:bg-neutral-900"
               >
@@ -112,7 +113,8 @@ const SideBar = ({className = ''}: SideBarProps) => {
         <div className="font-med font-bold ">Getting Started</div>
         <ul className="text-gray-700 my-4 flex flex-col gap-y-2">
           <button
-            className=" text-left  cursor-pointer p-2 rounded-md hover:bg-neutral-200 dark:hover:text-white dark:text-neutral-300 dark:hover:bg-neutral-700"
+            aria-selected={componentId?.toLowerCase().trim() == 'installation'}
+            className="dark:aria-selected:bg-neutral-700/50 aria-selected:bg-neutral-200/80 text-left  cursor-pointer p-2 rounded-md hover:bg-neutral-200 dark:hover:text-white dark:text-neutral-300 dark:hover:bg-neutral-700"
             onClick={() => handleNavigation('/components/Installation')}
           >
             Installation

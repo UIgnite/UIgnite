@@ -1174,17 +1174,25 @@ function PasswordInput() {
       },
     ],
     element: `
-<Tabs defaultVal="before" className="max-w-[300px]" >
-  <TabList className="w-[400px] ">
+<Tabs defaultVal="before" className="" >
+  <TabList className=" ">
     <Tab title="Before" value="before"></Tab>
     <Tab title="After" value="after"></Tab>
   </TabList>
   <TabContent
-    content={<div className="m-2 p-2 rounded-md dark:bg-neutral-800"> Preview Content from Tab 1 </div>}
+    content={ 
+      <div className="m-2 p-2 rounded-md dark:bg-neutral-800"> 
+        <img src="/Before.png" alt="" /> 
+      </div>
+    }
     value="before" 
   ></TabContent>
   <TabContent 
-    content={<div className="m-2 p-2 rounded-md dark:bg-neutral-800"> Code Content of Tab 2 </div>} 
+    content={
+      <div className="m-2 p-2 rounded-md dark:bg-neutral-800"> 
+        <img src="/After.png" alt="" /> 
+      </div>
+    } 
     value="after"
   ></TabContent>
 </Tabs>
