@@ -68,7 +68,7 @@ const Button = React.forwardRef<
       {
         variants: {
           variant: {
-            primary: 'bg-[#305CDE] text-white hover:bg-blue-600',
+            primary: 'bg-[#305CDE] text-white hover:bg-blue-700',
             destructive: 'bg-red-500 text-white hover:bg-red-600',
             success: 'bg-[#00b306] text-white hover:bg-green-600',
             warning: 'bg-[#ff8a00] text-white hover:bg-yellow-600',
