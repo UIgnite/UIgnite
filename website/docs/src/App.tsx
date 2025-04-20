@@ -8,7 +8,7 @@ import PricingSection from './pages/PricingPage';
 import ComponentLayout from './pages/components/_layout';
 import {NotFoundPage} from './pages/NotFoundPage';
 import ComponentPreviewPage from './pages/components';
-import TestCards from './pages/TestCards';
+// import TestCards from './pages/TestCards';
 import FeedbackForm from './pages/FeedbackForm';
 import About from './pages/About';
 
@@ -20,7 +20,7 @@ const App = () => {
         <Route path="feedback" element={<FeedbackForm />} />
         {/* <Route path="resizable-preview" element={<ResizablePreview />} /> */}
         <Route path="/docs" element={<Landing />} />
-        <Route path="/testcards" element={<TestCards />} />
+        {/* <Route path="/testcards" element={<TestCards />} /> */}
 
         <Route path="/about" element={<About />}>
           {' '}

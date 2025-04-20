@@ -223,7 +223,7 @@ const Home = () => {
                 just possibilities.
               </p>
 
-              <Card className="mb-6 border-0 dark:shadow-lg dark:shadow-black bg-gradient-to-tr from-blue-600 via-gray-900 to-black p-6 mt-4 rounded-xl  text-white w-full max-w-xl h-[53%] sm:h-[45%] md:h-[45%] lg:[45%] mx-auto">
+              <Card className="mb-6 border-0 dark:shadow-lg dark:shadow-black bg-gradient-to-tr from-blue-600 via-gray-900 to-black p-6 mt-8 rounded-xl  text-white w-full max-w-xl h-[53%] sm:h-[45%] md:h-[45%] lg:[45%] mx-auto">
                 <div className="flex gap-3 items-center">
                   <img
                     src="pain.png"
