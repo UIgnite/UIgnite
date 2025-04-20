@@ -33,7 +33,11 @@ export default function Component() {
   const navigate = useNavigate();
 
   if (!currComponent) {
-    return <div className="text-red-500">Component not found.</div>;
+    return (
+      <div className="text-blue-500">
+        Ooops! This Component does not exits not found.
+      </div>
+    );
   }
   return (
     <div className="mb-5 pl-4 -mr-50 w-[100%]">
