@@ -151,12 +151,14 @@ const Home = () => {
                       Get Started
                     </Button>
                   </Link>
-                  <Button
-                    className="hover:bg-blue-800 text-white font-lg rounded-lg px-6 py-6 text-lg transition duration-300 shadow-md "
-                    data-clipboard-text="npm i uginite"
-                  >
-                    Explore Components
-                  </Button>
+                  <Link to="/components/Accordion">
+                    <Button
+                      className="hover:bg-blue-800 text-white font-lg rounded-lg px-6 py-6 text-lg transition duration-300 shadow-md "
+                      data-clipboard-text="npm i uginite"
+                    >
+                      Explore Components
+                    </Button>
+                  </Link>
                 </div>
                 <TechStack />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-4 mt-3">
@@ -223,7 +225,7 @@ const Home = () => {
                 just possibilities.
               </p>
 
-              <Card className="mb-6 border-0 dark:shadow-lg dark:shadow-black bg-gradient-to-tr from-blue-600 via-gray-900 to-black p-6 mt-4 rounded-xl  text-white w-full max-w-xl h-[53%] sm:h-[45%] md:h-[45%] lg:[45%] mx-auto">
+              <Card className="mb-6 border-0 dark:shadow-lg dark:shadow-black bg-gradient-to-tr from-blue-600 via-gray-900 to-black p-6 mt-8 rounded-xl  text-white w-full max-w-xl h-[53%] sm:h-[45%] md:h-[45%] lg:[45%] mx-auto">
                 <div className="flex gap-3 items-center">
                   <img
                     src="pain.png"
