@@ -206,7 +206,7 @@ const elements = [
       {
         title: '',
         code: `
-<div className="grid grid-cols-4 gap-10">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10">
   <Button variant="primary">primary</Button>
   <Button variant="secondary">secondary</Button>
   <Button variant="outline">outline</Button>
@@ -216,7 +216,7 @@ const elements = [
       {
         title: '',
         code: `
-<div className="grid grid-cols-4 gap-10">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10">
   <Button variant="success">success</Button>
   <Button variant="destructive">destructive</Button>
   <Button variant="warning">warning</Button>
@@ -227,7 +227,7 @@ const elements = [
       {
         title: '',
         code: `
-<div className="grid grid-cols-4 gap-10">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10">
   <Button variant="dark">dark</Button>
   <Button variant="light">light</Button>
   <Button variant="gradient">gradient</Button>
@@ -268,7 +268,7 @@ const elements = [
       {
         title: '',
         code: `
-<div className="grid grid-cols-3 gap-10">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-10">
   <Button gradientBorder>gradBorder</Button>
   <Button  variant="gradient" isLoading />
   <Button className="bg-blue-800 rounded-full" icon={<AlarmClockCheck/>}>Snooze</Button>
