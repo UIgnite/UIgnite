@@ -38,8 +38,8 @@ function MainNavbar() {
             <img
               src={
                 theme === 'light'
-                  ? 'https://res.cloudinary.com/do2tmd6xp/image/upload/v1745059611/uignite/myjfxbyt80uuxvkbpjqu.png'
-                  : 'https://res.cloudinary.com/do2tmd6xp/image/upload/v1745059613/uignite/xfj6lgzo51ov1nv6bben.png'
+                  ? 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059611/uignite/myjfxbyt80uuxvkbpjqu.png'
+                  : 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059613/uignite/xfj6lgzo51ov1nv6bben.png'
               }
               alt="Logo"
               className="w-32 object-contain cursor-pointer"
