@@ -1173,7 +1173,7 @@ function PasswordInput() {
       },
     ],
     element: `
-<Tabs defaultVal="before">
+<Tabs defaultVal="before" className="max-w-[300px]" >
   <TabList className="w-[400px] ">
     <Tab title="Before" value="before"></Tab>
     <Tab title="After" value="after"></Tab>
@@ -1322,7 +1322,7 @@ function ToastPreview() {
     muted
     autoplay
     loop
-    className="shadow-black dark:shadow-indigo-900 shadow-2xl rounded-xl"
+    className="shadow-black dark:shadow-indigo-900 max-w-[30vw] shadow-2xl rounded-xl"
   />
 </div>
 `,
