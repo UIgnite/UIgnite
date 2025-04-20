@@ -22,81 +22,75 @@ const PricingCard = ({
   popular = false,
 }: PricingParams) => {
   const {theme} = useTheme();
+
+  const containerStyles = [
+    'rounded-xl shadow-sm p-6 sm:p-8 w-full max-w-md',
+    'flex flex-col h-full relative transition-all duration-200 transform hover:scale-[1.02]',
+    highlighted
+      ? theme === 'light'
+        ? 'grainy-light'
+        : 'dark:bg-neutral-900'
+      : theme === 'light'
+        ? 'grainy-light'
+        : 'dark:bg-zinc-800',
+    popular &&
+      'ring-2 ring-offset-2 dark:ring-offset-slate-900 dark:ring-cyan-700',
+  ]
+    .filter(Boolean)
+    .join(' ');
+
   return (
-    <div
-      className={`rounded-xl shadow-sm w-[400px] p-8 flex flex-col h-full relative transition-all duration-200 transform hover:scale-102 ${
-        highlighted
-          ? `${theme === 'light' ? 'grainy-light' : ''} dark:bg-neutral-900`
-          : `${theme === 'light' ? 'grainy-light' : ''} dark:bg-zinc-800`
-      } ${popular ? 'border-none ring-2 ring-offset-2 dark:ring-offset-slate-900 dark:ring-cyan-700' : ''}`}
-    >
+    <div className={containerStyles}>
       {popular && (
-        <div
-          className={`absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-1 ${theme === 'light' ? 'bg-zinc-900' : 'bg-cyan-700'} text-zinc-200 rounded-full text-sm font-bold`}
-        >
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-cyan-700 text-zinc-100 rounded-full text-sm font-semibold">
           Most Popular
         </div>
       )}
 
-      <div
-        className={`text-lg font-normal mb-2 ${highlighted ? ' text-zinc-800 dark:text-zinc-200' : `text-neutral-800 dark:text-zinc-200`}`}
-      >
+      <div className="text-lg font-medium text-zinc-800 dark:text-zinc-200 mb-2">
         {title}
       </div>
 
-      <div
-        className={`text-4xl font-bold mb-4 flex items-center ${highlighted ? 'text-zinc-800 dark:text-zinc-200' : `text-neutral-900 dark:text-white`}`}
-      >
-        <>
-          <BsCurrencyDollar className="inline -mr-1.5" />
-          {price}{' '}
-          <span
-            className={`text-lg ml-2 mt-1 font-normal ${highlighted ? 'text-gray-500/80' : 'text-zinc-500/80'}`}
-          >
+      <div className="text-4xl font-bold text-neutral-900 dark:text-white mb-4 flex items-end flex-wrap gap-2">
+        <BsCurrencyDollar className="inline-block -mt-1" />
+        {price}
+        {validity && (
+          <span className="text-lg font-normal text-zinc-500/80 ml-1">
             {validity}
           </span>
-        </>
+        )}
       </div>
-      <p
-        className={`mb-4 ${highlighted ? 'text-zinc-500 dark:text-zinc-300' : `text-zinc-500 dark:text-gray-300`}`}
-      >
-        {description}
-      </p>
-      <hr
-        className={`mb-4 border-1.8 w-[96%] ${highlighted ? 'text-zinc-700' : `$text-zinc-300 dark:text-gray-800`}`}
-      />
-      <div className="flex-grow">
+
+      <p className="text-zinc-500 dark:text-zinc-300 mb-4">{description}</p>
+
+      <hr className="border border-zinc-200/70 dark:border-zinc-700/50 mb-4" />
+
+      <div className="flex flex-col gap-3 flex-grow">
         {features.map((feature, index) => (
-          <div key={index} className="flex items-start mb-4 group">
-            <div className="mr-3 mt-1 ">
-              <div
-                className={`w-5 h-5 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center`}
+          <div key={index} className="flex items-start gap-3">
+            <div className="w-5 h-5 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center mt-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-3 w-3 text-white"
+                viewBox="0 0 20 20"
+                fill="currentColor"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className={`h-3 w-3 text-white dark:text-white`}
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
             </div>
-            <div
-              className={`text-gray-500/80 dark:text-gray-300/80 ${highlighted ? 'text-zinc-500/80' : `$text-black/45 dark:text-gray-300`} `}
-            >
+            <p className="text-sm text-zinc-600 dark:text-zinc-300">
               {feature}
-            </div>
+            </p>
           </div>
         ))}
       </div>
 
-      <a href="https://rzp.io/rzp/FuM0wyrD">
-        <Button className="w-full mt-3">Get Started</Button>
+      <a href="https://rzp.io/rzp/FuM0wyrD" className="mt-6">
+        <Button className="w-full">Get Started</Button>
       </a>
     </div>
   );
