@@ -1,8 +1,8 @@
 import {ThemeToggleBtn} from '@/lib/ThemeToggleBtn';
 import {useTheme} from '@/hooks';
-import {Button} from '../Button';
+import {Button} from '@/components/ui/Button';
 import {ReactNode} from 'react';
-import {cn} from '@pkgs/uignite';
+import {cn} from '@/lib/utils';
 import {Menu, X} from 'lucide-react';
 import {useState} from 'react';
 
