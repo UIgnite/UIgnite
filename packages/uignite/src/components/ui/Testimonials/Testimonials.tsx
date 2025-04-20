@@ -1,6 +1,7 @@
 import React from 'react';
 import {Star} from 'lucide-react';
 import {cn} from '@/lib/utils';
+import {Avatar} from '../Avatar';
 
 export interface TestimonialsProps {
   imageSrc?: string;
@@ -28,13 +29,13 @@ const Testimonials: React.FC<TestimonialsProps> = ({
         className
       )}
     >
-      {/* Header: Avatar + Info + Rating */}
+      {/*  Avatar + Info + Rating */}
       <div className="flex items-center justify-between gap-4">
         <div className="flex items-center gap-4">
-          <img
-            src={imageSrc || 'https://avatar.iran.liara.run/public'}
+          <Avatar
+            url={imageSrc || 'https://avatar.iran.liara.run/public'}
             alt={name}
-            className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover border border-zinc-200 dark:border-zinc-700"
+            className="sm:size-14 object-cover"
           />
           <div>
             <div className="font-medium text-base sm:text-lg">{name}</div>
