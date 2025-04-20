@@ -8,7 +8,6 @@ import {
   MessageBot,
   Navbar,
   Testimonials,
-  ThemeToggleBtn,
   VideoPlayer,
 } from '@pkgs/uignite';
 

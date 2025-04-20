@@ -6,7 +6,6 @@ import PricingSection from './pages/PricingPage';
 import ComponentLayout from './pages/components/_layout';
 import {NotFoundPage} from './pages/NotFoundPage';
 import ComponentPreviewPage from './pages/components';
-// import TestCards from './pages/TestCards';
 import FeedbackForm from './pages/FeedbackForm';
 import {LandingPage} from './pages/templates/LandingPage';
 
@@ -25,7 +24,6 @@ const App = () => {
       <Route element={<RootLayout />}>
         <Route path="feedback" element={<FeedbackForm />} />
         <Route path="/docs" element={<Landing />} />
-        {/* <Route path="/testcards" element={<TestCards />} /> */}
 
         <Route path="/journey" element={<OurJourney />}></Route>
         <Route element={<ComponentLayout />}>

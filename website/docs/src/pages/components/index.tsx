@@ -26,10 +26,6 @@ export default function Component() {
   const prevComponentId = getPreviousComponentbyId(componentId);
   const nextComponentId = getNextComponentbyId(componentId);
 
-  // console.log('Some', currComponent);
-  console.log('prev', prevComponentId);
-  console.log('next', nextComponentId);
-
   const navigate = useNavigate();
 
   if (!currComponent) {

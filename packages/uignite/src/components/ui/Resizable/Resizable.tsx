@@ -62,7 +62,6 @@ function Resizable({
     <div
       ref={containerRef}
       onMouseMove={(ev: React.MouseEvent<HTMLDivElement>) => {
-        console.log(ev);
         setMouseX(horizontalValue ? ev.clientY : ev.clientX);
       }}
       className={cn(
