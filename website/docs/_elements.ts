@@ -34,6 +34,7 @@ import {
   VideoPlayer,
   Testimonials,
   cn,
+  StarRating,
 } from '@pkgs/uignite';
 
 import {FiGithub, FiLinkedin} from 'react-icons/fi';
@@ -423,7 +424,7 @@ function Component () {
   `,
       },
       {
-        title: 'Courses Card',
+        title: 'Profile Card',
         code: `
 <Card className="m-0 p-0 max-w-xs rounded-3xl shadow-md overflow-hidden mx-auto bg-zinc-100 dark:bg-zinc-900">
   <CardHeader>
@@ -1136,6 +1137,20 @@ function PasswordInput() {
     ],
   },
   {
+    id: 'StarRating',
+    scope: {StarRating},
+    extraScopes: [
+      {
+        scope: ['StarRating'],
+        from: 'StarRating',
+        isComp: true,
+      },
+    ],
+    element: `<StarRating />
+`,
+    variation: [],
+  },
+  {
     id: 'switch',
     scope: {Switch},
     extraScopes: [
@@ -1158,7 +1173,7 @@ function PasswordInput() {
       },
     ],
     element: `
-<Tabs defaultVal="before">
+<Tabs defaultVal="before" className="max-w-[300px]" >
   <TabList className="w-[400px] ">
     <Tab title="Before" value="before"></Tab>
     <Tab title="After" value="after"></Tab>
@@ -1307,7 +1322,7 @@ function ToastPreview() {
     muted
     autoplay
     loop
-    className="shadow-black dark:shadow-indigo-900 shadow-2xl rounded-xl"
+    className="shadow-black dark:shadow-indigo-900 max-w-[30vw] shadow-2xl rounded-xl"
   />
 </div>
 `,

@@ -636,6 +636,7 @@
       }
     ]
   },
+
   {
     "id": "Skeleton",
     "name": "Skeleton",
@@ -684,6 +685,45 @@
       {
         "prop": "className",
         "type": "string",
+        "desc": "Optional utility classes to control layout, spacing, or positioning.",
+        "defaultValue": "\"\""
+      }
+    ]
+  },
+  {
+    "id": "StarRating",
+    "name": "Star Rating",
+    "desc": "Easy to use ",
+    "path": "/components/ui/StarRating/StarRating.tsx",
+    "previewImageUrl": "",
+    "installation": [
+      {
+        "title": "Import the Spinner",
+        "codeBlock": "",
+        "path": "/components/ui/Spinner/Spinner.tsx"
+      },
+      {
+        "title": "Copy the code",
+        "codeBlock": "npm i lucide-react",
+        "path": "/hooks/theme.ts"
+      }
+    ],
+    "props": [
+      {
+        "prop": "className",
+        "type": "string",
+        "desc": "Optional utility classes to control layout, spacing, or positioning.",
+        "defaultValue": "\"\""
+      },
+      {
+        "prop": "size",
+        "type": "string",
+        "desc": "Optional utility classes to control layout, spacing, or positioning.",
+        "defaultValue": "\"\""
+      },
+      {
+        "prop": "disabled",
+        "type": "boolean",
         "desc": "Optional utility classes to control layout, spacing, or positioning.",
         "defaultValue": "\"\""
       }

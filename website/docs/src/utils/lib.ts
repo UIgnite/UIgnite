@@ -37,9 +37,10 @@ function getCodeStrById(compId: string | undefined) {
 
 function getPreviousComponentbyId(compId: string | undefined) {
   if (!compId) return null;
-  const currInd: number = components.findIndex(
-    (comp) => comp.id !== undefined && comp.id === compId
-  );
+
+  let currInd = -1;
+  currInd = components.findIndex((comp) => comp.id && comp.id === compId);
+  if (currInd === -1) return components[0].id;
   if (currInd === 0) {
     return components[components.length - 1].id;
   }
@@ -49,8 +50,9 @@ function getPreviousComponentbyId(compId: string | undefined) {
 
 function getNextComponentbyId(compId: string | undefined) {
   if (!compId) return null;
-  const currInd: number = components.findIndex((comp) => comp.id === compId);
-
+  let currInd = -1;
+  currInd = components.findIndex((comp) => comp.id === compId);
+  if (currInd === -1) return components[0].id;
   if (currInd == components.length - 1) {
     return components[0].id;
   }

@@ -1,10 +1,7 @@
 import {Outlet, useParams} from 'react-router-dom';
-// import ComponentList from './componentList';
 import {components} from '../../utils/lib';
 import {useNavigate} from 'react-router-dom';
-// import {Button} from '@pkgs/uignite/dist';
 import TableOfContents from './TableOfContent';
-import {Introduction} from './Introduction';
 import {Installation} from './Installation';
 import {cn} from '@pkgs/uignite';
 import {useState} from 'react';
@@ -34,7 +31,7 @@ export default function ComponentLayout() {
         role="button"
         tabIndex={0}
         onClick={toggleSidebar}
-        className="h-10 md:hidden items-center bg-neutral-900 active:bg-neutral-800 transition-colors flex justify-between border-y text-sm px-5 text-neutral-400 border-neutral-600 border-dashed"
+        className="h-10 lg:hidden items-center bg-neutral-900 active:bg-neutral-800 transition-colors flex justify-between border-y text-sm px-5 text-neutral-400 border-neutral-600 border-dashed"
       >
         <div className="flex gap-x-1">
           <span>Components</span>
@@ -51,20 +48,7 @@ export default function ComponentLayout() {
           className="bg-black aria-hidden:hidden md:hidden inset-0 z-20 absolute overflow-y-auto"
         >
           <div className="px-2 py-2 bg-neutral-800/50">Getting Started</div>
-          <div className="flex flex-col gap-y-1">
-            <button
-              onClick={() => handleNavigation('/components/introduction')}
-              className="text-left px-6 text-neutral-200 py-2"
-            >
-              Introduction
-            </button>
-            <button
-              onClick={() => handleNavigation('/components/installation')}
-              className="text-left px-6 text-neutral-200 py-2"
-            >
-              Installation
-            </button>
-          </div>
+
           <div className="px-2 py-2 bg-neutral-800/50">Components</div>
           <div className="flex flex-col gap-y-1">
             {components.map((compo) => (
@@ -83,23 +67,13 @@ export default function ComponentLayout() {
           <SideBar />
 
           <div className="flex-grow max-h-[90vh] md:px-4 scrollable-content overflow-y-scroll scroll-smooth">
-            {componentId ? (
-              componentId === 'Introduction' ? (
-                <>
-                  {' '}
-                  <Introduction />{' '}
-                </>
-              ) : componentId === 'Installation' ? (
-                <>
-                  {' '}
-                  <Installation />
-                </>
-              ) : (
-                <Outlet />
-              )
+            {componentId && componentId === 'Installation' ? (
+              <>
+                {' '}
+                <Installation />
+              </>
             ) : (
-              // <ComponentList />
-              <Introduction />
+              <Outlet />
             )}
           </div>
 
