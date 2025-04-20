@@ -303,7 +303,6 @@ const Home = () => {
               {testimonials.map((testimonial, index) => (
                 <Testimonials
                   key={`first-${index}`}
-                  className="w-[450px] max-h-[200px]"
                   imageSrc={testimonial.imageSrc}
                   name={testimonial.name}
                   title={testimonial.title}
