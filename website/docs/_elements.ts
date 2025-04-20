@@ -34,6 +34,7 @@ import {
   VideoPlayer,
   Testimonials,
   cn,
+  StarRating,
 } from '@pkgs/uignite';
 
 import {FiGithub, FiLinkedin} from 'react-icons/fi';
@@ -1134,6 +1135,20 @@ function PasswordInput() {
         code: `<Spinner variant="loader" className="my-4" />`,
       },
     ],
+  },
+  {
+    id: 'StarRating',
+    scope: {StarRating},
+    extraScopes: [
+      {
+        scope: ['StarRating'],
+        from: 'StarRating',
+        isComp: true,
+      },
+    ],
+    element: `<StarRating />
+`,
+    variation: [],
   },
   {
     id: 'switch',

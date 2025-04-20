@@ -15,7 +15,7 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
     return <div className="text-red-500">Code not found.</div>;
 
   const syntaxHighlighterElement = (
-    <div className="max-w-[80vw] w-full h-full relative ">
+    <div className="max-w-[80vw] w-full  h-full relative ">
       <CopyButton copyText={element.element} />
       <SyntaxHighlighter
         language="javascript"
@@ -26,7 +26,7 @@ const Preview = ({currComponent, element}: PreviewPropT) => {
             background: 'rgb(24, 24, 24)',
           },
         }}
-        className="text-left text-sm h-full max-h-[50vh] rounded-md scrollable-content"
+        className="text-left text-sm h-full min-h-[45px] max-h-[50vh] rounded-md scrollable-content"
       >
         {element.element}
       </SyntaxHighlighter>

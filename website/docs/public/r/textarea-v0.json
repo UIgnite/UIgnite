@@ -7,7 +7,7 @@
     {
       "path": "app/page.tsx",
       "type": "registry:component",
-      "content": "import {TextArea} from '@/components/ui/TextArea'\n\n              \n              function Component(){\n                return (<TextArea placeholder=\"Write something...\" />)\n              }\n              export default Component\n              ",
+      "content": "import {TextArea} from '@/components/ui/TextArea'\n\n              function Component(){\n                return (<TextArea placeholder=\"Write something...\" />)\n              }\n              export default Component\n              ",
       "cssVars": {
         "theme": {
           "--color-dark-primary": "#0f0f0f",
