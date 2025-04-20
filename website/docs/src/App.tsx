@@ -6,23 +6,26 @@ import PricingSection from './pages/PricingPage';
 import ComponentLayout from './pages/components/_layout';
 import {NotFoundPage} from './pages/NotFoundPage';
 import ComponentPreviewPage from './pages/components';
-import TestCards from './pages/TestCards';
+// import TestCards from './pages/TestCards';
 import FeedbackForm from './pages/FeedbackForm';
 import {LandingPage} from './pages/templates/LandingPage';
-import DashboardPage from './pages/DashboardTemplate';
+
 import OurJourney from './pages/components/OurJourney';
+import DashboardPage from './pages/templates/DashboardTemplate';
+import HomePage from './pages/templates/HomePage';
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path ="/templates" element={<HomePage/>} />
       <Route path="/templates/landing" element={<LandingPage />} />
       <Route path="/templates/dashboard" element={<DashboardPage />} />
 
       <Route element={<RootLayout />}>
         <Route path="feedback" element={<FeedbackForm />} />
         <Route path="/docs" element={<Landing />} />
-        <Route path="/testcards" element={<TestCards />} />
+        {/* <Route path="/testcards" element={<TestCards />} /> */}
 
         <Route path="/journey" element={<OurJourney />}></Route>
         <Route element={<ComponentLayout />}>

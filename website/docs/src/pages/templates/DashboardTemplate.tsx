@@ -110,7 +110,6 @@ export default function DashboardPage() {
 
   return (
     <div className="flex h-screen bg-black">
-      {/* Mobile sidebar overlay */}
       {sidebarOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-20 lg:hidden"
@@ -118,7 +117,6 @@ export default function DashboardPage() {
         />
       )}
 
-      {/* Sidebar */}
       <div
         className={`fixed lg:static inset-y-0 left-0 w-64 bg-zinc-900 transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0 transition-transform duration-300 ease-in-out z-30`}
       >
@@ -173,7 +171,7 @@ export default function DashboardPage() {
         </nav>
       </div>
 
-      {/* Main content */}
+      
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Top navigation */}
         <header className="bg-zinc-900 border-b border-zinc-800">
@@ -210,7 +208,6 @@ export default function DashboardPage() {
           </div>
         </header>
 
-        {/* Dashboard content */}
         <main className="flex-1 overflow-y-auto bg-zinc-950 p-4 md:p-6">
           <div className="mb-6 flex flex-col md:flex-row md:items-center md:justify-between">
             <h3 className="text-2xl font-bold text-white mb-3 md:mb-0">
@@ -228,9 +225,9 @@ export default function DashboardPage() {
               </Button>
             </div>
           </div>
-
-          {/* Stats cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-6">
+      
+      <div className='flex flex-col items-center justify-between mb-6'>
+          <div className="max-w-[1200px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             <Card className="bg-gradient-to-br max-w-[290px] from-blue-900 to-black text-white shadow-md shadow-blue-900">
               <CardContent className="p-4">
                 <div className="flex justify-between items-start">
@@ -303,8 +300,8 @@ export default function DashboardPage() {
             </Card>
           </div>
 
-          {/* Charts section */}
-          <div className="grid grid-cols-3 mb-6">
+         
+          <div className="max-w-[1200px] grid grid-cols-3 mb-6 gap-6">
             <Card className="bg-zinc-900 text-white border border-zinc-800">
               <CardContent className="p-4">
                 <div className="flex justify-between items-center mb-4">
@@ -416,9 +413,9 @@ export default function DashboardPage() {
             </Card>
           </div>
 
-          {/* Lower section */}
-          <div className="  flex justify-center items-center gap-5">
-            {/* Recent sales */}
+          
+          <div className=" max-w-[1200px]  flex justify-center items-center gap-5">
+           
             <Card className="bg-zinc-900  w-[1200px] text-white border border-zinc-800 lg:col-span-2">
               <CardContent className="p-4">
                 <div className="flex justify-between items-center mb-4">
@@ -462,9 +459,9 @@ export default function DashboardPage() {
               </CardContent>
             </Card>
 
-            {/* Product Performance */}
+           
             <div className="mt-7 mr-5">
-              {/* Upcoming Events */}
+             
               <Card className="bg-zinc-900 text-white border border-zinc-800">
                 <CardContent className="p-4">
                   <p className="text-lg font-semibold mb-4">Upcoming Events</p>
@@ -489,6 +486,7 @@ export default function DashboardPage() {
                 </CardContent>
               </Card>
             </div>
+          </div>
           </div>
         </main>
       </div>
