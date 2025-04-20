@@ -46,7 +46,7 @@ const PricingSection = () => {
   ];
 
   return (
-    <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-zinc-900">
+    <section className="w-full py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
           <h1 className="text-3xl sm:text-4xl font-bold mb-3 text-zinc-900 dark:text-zinc-100">

@@ -1,131 +1,194 @@
+import {cn} from '@/utils/lib';
+import {useTheme} from '@pkgs/uignite';
+import {JSX} from 'react';
+import {Link} from 'react-router-dom';
 import {FiGithub} from 'react-icons/fi';
 import {FaDiscord} from 'react-icons/fa';
 import {FaXTwitter} from 'react-icons/fa6';
-import {Link} from 'react-router-dom';
-import {useTheme} from '@pkgs/uignite';
 
-const Footer = () => {
+function Footer() {
+  const footerProps = {
+    logoDark:
+      'https://res.cloudinary.com/do2tmd6xp/image/upload/v1745059613/uignite/xfj6lgzo51ov1nv6bben.png',
+    logoLight:
+      'https://res.cloudinary.com/do2tmd6xp/image/upload/v1745059611/uignite/myjfxbyt80uuxvkbpjqu.png',
+    tagline: ` UIgnite brings together design, performance, and TypeScript — so you can ship faster with confidence.`,
+    socialLinks: [
+      {
+        icon: <FiGithub className="icon" />,
+        href: 'https://github.com/UIgnite/UIgnite',
+        label: 'GitHub',
+      },
+      {
+        icon: <FaDiscord className="icon" />,
+        href: 'https://discord.com/invite/WDrH3zuWFb',
+        label: 'Discord',
+      },
+      {
+        icon: <FaXTwitter className="icon" />,
+        href: `https://x.com/UIgnite_`,
+        label: 'X',
+      },
+    ],
+    linkSections: [
+      {
+        title: 'Quick Links',
+        links: [
+          {
+            name: 'Get Started',
+            to: '/components/Installation',
+          },
+          {
+            name: 'Feedback',
+            to: '/feedback',
+          },
+        ],
+      },
+      {
+        title: 'Product',
+        links: [
+          {
+            name: 'Components',
+            to: '/components/Accordion',
+          },
+          {
+            name: 'Templates',
+            to: '/templates',
+          },
+          {
+            name: 'Pricing',
+            to: '/pricing',
+          },
+        ],
+      },
+      {
+        title: 'Legal',
+        links: [
+          {name: 'Terms of Service', to: '/'},
+          {name: 'Privacy Policy', to: '/'},
+          {name: 'Pricing Policy', to: '/'},
+          {name: 'Refund Policy', to: '/'},
+        ],
+      },
+    ],
+    copyrightText: 'UIgnite',
+    builtByText: 'UIgnite',
+    socialLinksStyle: 'hover:text-blue-600 dark:hover:text-gray-50',
+    linkStyle: 'dark:hover:text-zinc-200 hover:text-blue-600',
+  };
+
+  return <FooterComponent {...footerProps} />;
+}
+
+export default Footer;
+
+interface FooterProps {
+  logoDark: string;
+  logoLight: string;
+  tagline: string;
+  socialLinks: {
+    icon: JSX.Element;
+    href: string;
+    label: string;
+  }[];
+  socialLinksStyle?: string;
+  linkSections: {
+    title: string;
+    links: {
+      name: string;
+      to: string;
+    }[];
+  }[];
+  linkStyle?: string;
+  copyrightText: string;
+  builtByText: string;
+  className?: string;
+}
+
+const FooterComponent = ({
+  logoDark,
+  logoLight,
+  tagline,
+  socialLinks,
+  socialLinksStyle,
+  linkSections,
+  linkStyle,
+  copyrightText,
+  builtByText,
+  className = '',
+}: FooterProps) => {
   const {theme} = useTheme();
 
   return (
-    <div className="w-full h-full">
-      <div className="mt-6"></div>
-      <div className="max-w-[1200px] flex flex-col w-full py-5 justify-between mx-auto pb-5">
-        <div className="mt-4 flex justify-between">
-          {/* website */}
-          <div className="flex flex-col gap-6">
-            {/* logo */}
-            <div className="w-56 h-16 transition-all duration-300 ease-in-out hover:scale-105  cursor-pointer -ml-4">
-              <img
-                alt="UIgnite"
-                className="h-full w-full"
-                src={
-                  theme === 'dark'
-                    ? '/dark-mode-logo.png'
-                    : '/light-mode-logo.png'
-                }
-              />
-            </div>
-
-            {/* tagline */}
-            <p className="text-gray-600 dark:text-zinc-400 w-72">
-              UIgnite brings together design, performance, and TypeScript — so
-              you can ship faster with confidence.
-            </p>
-
-            {/* socials */}
-            <div className="flex gap-4 text-zinc-500 ">
-              <FiGithub className="hover:text-blue-600 dark:hover:text-gray-50 size-5 cursor-pointer transition-all duration-200 ease-in-out hover:scale-105" />
-              <FaDiscord className="hover:text-blue-600 dark:hover:text-gray-50 size-5 cursor-pointer transition-all duration-200 ease-in-out hover:scale-105" />
-              <FaXTwitter className="hover:text-blue-600 dark:hover:text-gray-50 size-5 cursor-pointer transition-all duration-200 ease-in-out hover:scale-105" />
-            </div>
+    <footer className={`w-full px-4 sm:px-8 md:px-10 py-6  ${className}`}>
+      <div className="max-w-7xl mx-auto py-8 flex flex-col gap-10 md:flex-row md:justify-between">
+        {/* Left Section */}
+        <div className="flex flex-col gap-6 max-w-md">
+          <div className="w-48 h-12 hover:scale-105 transition-all cursor-pointer -ml-10">
+            <img
+              alt="Logo"
+              className="h-full w-full object-contain"
+              src={theme === 'dark' ? logoDark : logoLight}
+            />
           </div>
 
-          {/* other sections like product getStarted legal */}
-          <div className="flex gap-16 mt-3">
-            <div className="text-zinc-500 dark:text-zinc-400 flex flex-col gap-2">
-              <h2 className="text-zinc-800 dark:text-zinc-100 font-semibold">
-                Quick Links
-              </h2>
-              <Link
-                to={'/'}
-                className="cursor-pointer dark:hover:text-zinc-200 hover:text-blue-600"
+          <p className="text-sm text-gray-600 dark:text-zinc-400">{tagline}</p>
+
+          {/* social links */}
+          <div className="flex gap-4 text-zinc-500">
+            {socialLinks.map(({icon, href, label}) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                aria-label={label}
+                rel="noopener noreferrer"
+                className={cn(
+                  'hover:text-zinc-800 dark:hover:text-zinc-100 hover:scale-105 transition-all',
+                  socialLinksStyle
+                )}
               >
-                Get Started
-              </Link>
-              <Link
-                to={'/feedback'}
-                className="cursor-pointer dark:hover:text-zinc-200 hover:text-blue-600"
-              >
-                Feedback
-              </Link>
-              <Link
-                to={'/'}
-                className="cursor-pointer dark:hover:text-zinc-200 hover:text-blue-600"
-              >
-                Contribute
-              </Link>
-            </div>
-            <div className="text-zinc-500 dark:text-zinc-400 flex flex-col gap-2">
-              <h2 className="text-zinc-800 dark:text-zinc-100 font-semibold">
-                Product
-              </h2>
-              <Link
-                to={'/components'}
-                className="cursor-pointer dark:hover:text-zinc-200 hover:text-blue-600"
-              >
-                Components
-              </Link>
-              <Link
-                to={'/components/Accordion'}
-                className="cursor-pointer dark:hover:text-zinc-200 hover:text-blue-600"
-              >
-                Documentation
-              </Link>
-              <Link
-                to={'/pricing'}
-                className="cursor-pointer dark:hover:text-zinc-200 hover:text-blue-600"
-              >
-                Pricing
-              </Link>
-            </div>
-            <div className="text-zinc-500 dark:text-zinc-400 flex flex-col gap-2">
-              <h2 className="text-zinc-800 dark:text-zinc-100 font-semibold">
-                Legal
-              </h2>
-              <Link
-                to={'/'}
-                className="cursor-pointer dark:hover:text-zinc-200 hover:text-blue-600"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                to={'/'}
-                className="cursor-pointer dark:hover:text-zinc-200 hover:text-blue-600"
-              >
-                Terms of Service
-              </Link>
-              <Link
-                to={'/'}
-                className="cursor-pointer dark:hover:text-zinc-200 hover:text-blue-600"
-              >
-                Licence
-              </Link>
-            </div>
+                {icon}
+              </a>
+            ))}
           </div>
         </div>
 
-        <div className="mt-6 mb-4"></div>
-        <div className="flex justify-between text-zinc-800 dark:text-zinc-300">
-          <div className="">© 2025 UIgnite. All rights reserved.</div>
+        {/* Right Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-sm text-zinc-500 dark:text-zinc-400">
+          {linkSections.map(({title, links}) => (
+            <div key={title} className="flex flex-col gap-2">
+              <h3 className="text-zinc-800 dark:text-zinc-100 font-semibold">
+                {title}
+              </h3>
+              {/* links */}
+              {links.map(({name, to}) => (
+                <Link
+                  key={name}
+                  to={to}
+                  rel="noopener noreferrer"
+                  className={cn(
+                    'hover:text-zinc-700 dark:hover:text-zinc-100',
+                    linkStyle
+                  )}
+                >
+                  {name}
+                </Link>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between text-sm text-zinc-800 dark:text-zinc-300 gap-3">
+          <div>© 2025 {copyrightText}. All rights reserved.</div>
           <div>
-            Built with ❤️ by{' '}
-            <span className="underline cursor-pointer">UIgnite</span>
+            <span>Built with ❤️ by </span>{' '}
+            <span className="underline cursor-pointer">{builtByText}</span>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
-
-export default Footer;
