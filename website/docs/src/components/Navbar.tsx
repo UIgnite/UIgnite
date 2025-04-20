@@ -86,11 +86,12 @@ function MainNavbar() {
             <ThemeToggleBtn
               className={`${pathname === '/' ? 'dark:bg-transparent' : 'dark:bg-transparent'} cursor-pointer p-2 rounded   dark:hover:bg-zinc-800  hover:bg-zinc-200`}
             />
-            <div
+            <a
+            href='https://github.com/UIgnite/UIgnite'
               className={`${pathname === '/' ? 'dark:bg-transparent' : 'dark:bg-transparent'} cursor-pointer p-2 rounded   dark:hover:bg-zinc-800  hover:bg-zinc-200`}
             >
               <GitHubLogoIcon className=" h-4 w-4 " />
-            </div>
+            </a>
           </div>
         </div>
       </div>
