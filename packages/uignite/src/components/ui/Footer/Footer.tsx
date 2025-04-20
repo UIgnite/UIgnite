@@ -1,5 +1,5 @@
 import {cn} from '@/lib/utils';
-import {useTheme} from '@pkgs/uignite';
+import {useTheme} from '@/hooks';
 import {JSX} from 'react';
 
 export interface FooterProps {
