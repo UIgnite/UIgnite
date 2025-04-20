@@ -939,9 +939,10 @@ function PasswordInput() {
         "Access to premium templates",
         "Advanced analytics"
       ]}
-      highlighted={false}
-      theme="dark"
-      popular={false}
+      popular
+      highlighted
+      checkBgColor="bg-blue-600 dark:bg-blue-600"
+      checkTextColor="text-white"
     />
   </div>
   <div className="ml-2 mt-5"> For the best experience, please view the <Link to="/pricing" className="text-blue-600 cursor-pointer">Pricing page</Link> on a larger screen.</div>

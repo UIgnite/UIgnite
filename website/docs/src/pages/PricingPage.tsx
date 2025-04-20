@@ -46,33 +46,35 @@ const PricingSection = () => {
   ];
 
   return (
-    <div className={`min-h-screen py-16 px-4 sm:px-6 lg:px-8`}>
+    <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-zinc-900">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold mb-4">Pricing Plans</h1>
-          <p className="!dark text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        <div className="text-center mb-14">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-3 text-zinc-900 dark:text-zinc-100">
+            Pricing Plans
+          </h1>
+          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Choose the perfect plan for your project needs with flexible options
             and powerful features.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
           {pricingData.map((plan, index) => (
-            <PricingCard
-              key={index}
-              title={plan.title}
-              price={plan.price}
-              validity={plan.validity}
-              description={plan.description}
-              features={plan.features}
-              highlighted={plan.highlighted}
-              popular={plan.popular}
-              // theme={currentTheme}
-            />
+            <div key={index} className="flex-grow basis-[300px] max-w-[400px]">
+              <PricingCard
+                title={plan.title}
+                price={plan.price}
+                validity={plan.validity}
+                description={plan.description}
+                features={plan.features}
+                highlighted={plan.highlighted}
+                popular={plan.popular}
+              />
+            </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
