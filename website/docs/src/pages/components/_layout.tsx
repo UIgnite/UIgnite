@@ -53,12 +53,6 @@ export default function ComponentLayout() {
           <div className="px-2 py-2 bg-neutral-800/50">Getting Started</div>
           <div className="flex flex-col gap-y-1">
             <button
-              onClick={() => handleNavigation('/components/introduction')}
-              className="text-left px-6 text-neutral-200 py-2"
-            >
-              Introduction
-            </button>
-            <button
               onClick={() => handleNavigation('/components/installation')}
               className="text-left px-6 text-neutral-200 py-2"
             >
