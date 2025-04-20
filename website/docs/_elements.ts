@@ -33,7 +33,6 @@ import {
   ThemeToggleBtn,
   VideoPlayer,
   Testimonials,
-  useTheme,
   cn,
 } from '@pkgs/uignite';
 
@@ -424,7 +423,7 @@ function Component () {
   `,
       },
       {
-        title: 'Courses Card',
+        title: 'Profile Card',
         code: `
 <Card className="m-0 p-0 max-w-xs rounded-3xl shadow-md overflow-hidden mx-auto bg-zinc-100 dark:bg-zinc-900">
   <CardHeader>

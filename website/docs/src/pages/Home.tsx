@@ -211,10 +211,10 @@ const Home = () => {
 
           {/* cards  */}
           <div className="mt-20 md:mt-40 lg:mt-40 xl:mt-40  flex flex-col items-center justify-center gap-8 px-4">
-            <div >
+            <div>
               <p className="text-4xl sm:text-7xl md:text-7xl lg:text-7xl font-semibold text-center ">
                 <span className="dark:text-cyan-500 text-cyan-700">Design</span>{' '}
-                that <span >adapts</span> to you.
+                that <span>adapts</span> to you.
               </p>
               <p className="mt-8 sm:mt-8 md:mt-4 lg:mt-4 text-md text-center mx-auto  max-w-[800px] dark:text-zinc-300 text-zinc-600">
                 Uignite lets you tailor every detail with ease. With built-in
@@ -269,7 +269,6 @@ const Home = () => {
                 </div>
               </Card>
             </div>
-           
           </div>
 
           <div className="text-center ">
