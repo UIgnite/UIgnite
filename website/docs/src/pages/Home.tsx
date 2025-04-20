@@ -151,12 +151,14 @@ const Home = () => {
                       Get Started
                     </Button>
                   </Link>
-                  <Button
-                    className="hover:bg-blue-800 text-white font-lg rounded-lg px-6 py-6 text-lg transition duration-300 shadow-md "
-                    data-clipboard-text="npm i uginite"
-                  >
-                    Explore Components
-                  </Button>
+                  <Link to="/components/Accordion">
+                    <Button
+                      className="hover:bg-blue-800 text-white font-lg rounded-lg px-6 py-6 text-lg transition duration-300 shadow-md "
+                      data-clipboard-text="npm i uginite"
+                    >
+                      Explore Components
+                    </Button>
+                  </Link>
                 </div>
                 <TechStack />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-4 mt-3">

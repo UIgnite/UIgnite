@@ -11,6 +11,28 @@ export const Installation = () => {
   const tailwindYarn: string = 'yarn create vite@latest';
   const addComponentCode: string =
     'bunx shadcn add https://uignite.in/r/Accordion.json';
+  const tailwindCode: string = `@import "tailwindcss";`;
+
+  function returnTainwind(code: string) {
+    return (
+      <div className="relative m-2 min-w-[500px]">
+        <CopyButton copyText={code} />
+        <SyntaxHighlighter
+          language="json"
+          style={{
+            ...atomOneDarkReasonable,
+            hljs: {
+              ...atomOneDarkReasonable.hljs,
+              background: '#1e1e21',
+            },
+          }}
+          className="text-left text-sm h-full max-h-[50vh] rounded-md scrollable-content"
+        >
+          {code}
+        </SyntaxHighlighter>
+      </div>
+    );
+  }
 
   function returnViteCode(code: string) {
     return (
@@ -77,6 +99,22 @@ export const Installation = () => {
             <TabContent
               content={returnViteCode(tailwindYarn)}
               value="yarn"
+            ></TabContent>
+          </Tabs>
+        </div>
+
+        <p className="text-muted-foreground mt-4">
+          Replace everything in src/index.css with the following:
+        </p>
+
+        <div className=" mt-3">
+          <Tabs defaultVal="folder">
+            <TabList className="w-[400px] ">
+              <Tab title="src/index.css" value="folder"></Tab>
+            </TabList>
+            <TabContent
+              content={returnTainwind(tailwindCode)}
+              value="folder"
             ></TabContent>
           </Tabs>
         </div>

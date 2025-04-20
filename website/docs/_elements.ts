@@ -939,9 +939,10 @@ function PasswordInput() {
         "Access to premium templates",
         "Advanced analytics"
       ]}
-      highlighted={false}
-      theme="dark"
-      popular={false}
+      popular
+      highlighted
+      checkBgColor="bg-blue-600 dark:bg-blue-600"
+      checkTextColor="text-white"
     />
   </div>
   <div className="ml-2 mt-5"> For the best experience, please view the <Link to="/pricing" className="text-blue-600 cursor-pointer">Pricing page</Link> on a larger screen.</div>
@@ -1173,17 +1174,25 @@ function PasswordInput() {
       },
     ],
     element: `
-<Tabs defaultVal="before" className="max-w-[300px]" >
-  <TabList className="w-[400px] ">
+<Tabs defaultVal="before" className="" >
+  <TabList className=" ">
     <Tab title="Before" value="before"></Tab>
     <Tab title="After" value="after"></Tab>
   </TabList>
   <TabContent
-    content={<div className="m-2 p-2 rounded-md dark:bg-neutral-800"> Preview Content from Tab 1 </div>}
+    content={ 
+      <div className="m-2 p-2 rounded-md dark:bg-neutral-800"> 
+        <img src="/Before.png" alt="" /> 
+      </div>
+    }
     value="before" 
   ></TabContent>
   <TabContent 
-    content={<div className="m-2 p-2 rounded-md dark:bg-neutral-800"> Code Content of Tab 2 </div>} 
+    content={
+      <div className="m-2 p-2 rounded-md dark:bg-neutral-800"> 
+        <img src="/After.png" alt="" /> 
+      </div>
+    } 
     value="after"
   ></TabContent>
 </Tabs>
