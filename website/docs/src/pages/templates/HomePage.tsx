@@ -46,9 +46,9 @@ export default function HomePage() {
                 <div className="flex justify-between items-center">
                   <span className="text-xl font-bold">$10</span>
                   <a href="https://rzp.io/rzp/FuM0wyrD">
-                  <button className="bg-white text-gray-900 cursor-pointer font-semibold px-6 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                    Buy now
-                  </button>
+                    <button className="bg-white text-gray-900 cursor-pointer font-semibold px-6 py-2 rounded-lg hover:bg-gray-200 transition-colors">
+                      Buy now
+                    </button>
                   </a>
                 </div>
               </div>
@@ -83,9 +83,9 @@ export default function HomePage() {
                 <div className="flex justify-between items-center">
                   <span className="text-xl font-bold">$10</span>
                   <a href="https://rzp.io/rzp/FuM0wyrD">
-                  <button className="bg-white text-gray-900 cursor-pointer font-semibold px-6 py-2 rounded-lg hover:bg-gray-200 transition-colors">
-                    Buy now
-                  </button>
+                    <button className="bg-white text-gray-900 cursor-pointer font-semibold px-6 py-2 rounded-lg hover:bg-gray-200 transition-colors">
+                      Buy now
+                    </button>
                   </a>
                 </div>
               </div>

@@ -171,7 +171,6 @@ export default function DashboardPage() {
         </nav>
       </div>
 
-      
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Top navigation */}
         <header className="bg-zinc-900 border-b border-zinc-800">
@@ -225,268 +224,271 @@ export default function DashboardPage() {
               </Button>
             </div>
           </div>
-      
-      <div className='flex flex-col items-center justify-between mb-6'>
-          <div className="max-w-[1200px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            <Card className="bg-gradient-to-br max-w-[290px] from-blue-900 to-black text-white shadow-md shadow-blue-900">
-              <CardContent className="p-4">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="text-blue-100">Total Revenue</p>
-                    <h2 className="text-2xl md:text-3xl font-bold">
-                      $45,231.89
-                    </h2>
-                    <p className="text-green-300 flex items-center mt-1">
-                      <TrendingUp className="h-4 w-4 mr-1" /> +20.1% from last
-                      month
-                    </p>
-                  </div>
-                  <div className="p-2 bg-blue-900 rounded-lg">
-                    <DollarSign className="h-6 w-6" />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br max-w-[290px] from-purple-900 to-black text-white shadow-md shadow-purple-900">
-              <CardContent className="p-4">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="text-purple-100">Subscriptions</p>
-                    <h2 className="text-2xl md:text-3xl font-bold">+2,350</h2>
-                    <p className="text-green-300 flex items-center mt-1 text-sm">
-                      <TrendingUp className="h-4 w-4 mr-1" /> +180.1% from last
-                      month
-                    </p>
-                  </div>
-                  <div className="p-2 bg-purple-900 rounded-lg">
-                    <Users className="h-6 w-6" />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br max-w-[290px] from-green-900 to-black text-white shadow-md shadow-green-900">
-              <CardContent className="p-4">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="text-green-100">Sales</p>
-                    <h2 className="text-2xl md:text-3xl font-bold">+12,234</h2>
-                    <p className="text-green-300 flex items-center mt-1">
-                      <TrendingUp className="h-4 w-4 mr-1" /> +19% from last
-                      month
-                    </p>
-                  </div>
-                  <div className="p-2 bg-green-900 rounded-lg">
-                    <Activity className="h-6 w-6" />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br max-w-[290px] from-red-900 to-black text-white shadow-md shadow-red-900">
-              <CardContent className="p-4">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="text-red-100">Active Now</p>
-                    <h2 className="text-2xl md:text-3xl font-bold">+573</h2>
-                    <p className="text-green-300 flex items-center mt-1">
-                      <TrendingUp className="h-4 w-4 mr-1" /> +201 since last
-                      hour
-                    </p>
-                  </div>
-                  <div className="p-2 bg-red-900 rounded-lg">
-                    <Users className="h-6 w-6" />
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
 
-         
-          <div className="max-w-[1200px] grid grid-cols-3 mb-6 gap-6">
-            <Card className="bg-zinc-900 text-white border border-zinc-800">
-              <CardContent className="p-4">
-                <div className="flex justify-between items-center mb-4">
-                  <p className="text-lg font-semibold">Revenue Overview</p>
-                  <div className="flex items-center text-sm">
-                    <div className="flex items-center mr-3">
-                      <div className="w-3 h-3 rounded-full bg-blue-900 mr-1"></div>
-                      <span>Revenue</span>
+          <div className="flex flex-col items-center justify-between mb-6">
+            <div className="max-w-[1200px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+              <Card className="bg-gradient-to-br max-w-[290px] from-blue-900 to-black text-white shadow-md shadow-blue-900">
+                <CardContent className="p-4">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <p className="text-blue-100">Total Revenue</p>
+                      <h2 className="text-2xl md:text-3xl font-bold">
+                        $45,231.89
+                      </h2>
+                      <p className="text-green-300 flex items-center mt-1">
+                        <TrendingUp className="h-4 w-4 mr-1" /> +20.1% from last
+                        month
+                      </p>
                     </div>
-                    <div className="flex items-center mr-3">
-                      <div className="w-3 h-3 rounded-full bg-red-900 mr-1"></div>
-                      <span>Expenses</span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-3 h-3 rounded-full bg-green-900 mr-1"></div>
-                      <span>Profit</span>
+                    <div className="p-2 bg-blue-900 rounded-lg">
+                      <DollarSign className="h-6 w-6" />
                     </div>
                   </div>
-                </div>
-                <ResponsiveContainer width="100%" height={300}>
-                  <BarChart data={revenueData}>
-                    <XAxis dataKey="name" stroke="#ccc" />
-                    <YAxis stroke="#ccc" />
-                    <Tooltip wrapperClassName="text-black" />
-                    <Bar
-                      dataKey="revenue"
-                      fill="#1e3a8a"
-                      radius={[4, 4, 0, 0]}
-                    />
-                    <Bar
-                      dataKey="expenses"
-                      fill="#7f1d1d"
-                      radius={[4, 4, 0, 0]}
-                    />
-                    <Bar
-                      dataKey="profit"
-                      fill="#14532d"
-                      radius={[4, 4, 0, 0]}
-                    />
-                  </BarChart>
-                </ResponsiveContainer>
-              </CardContent>
-            </Card>
-            <Card className="bg-zinc-900 text-white border border-zinc-800">
-              <CardContent className="p-4">
-                <div className="flex justify-between items-center mb-4">
-                  <p className="text-lg font-semibold">User Activity</p>
-                  <Button className="bg-zinc-800 text-white hover:bg-zinc-700 text-sm">
-                    View Details
-                  </Button>
-                </div>
-                <ResponsiveContainer width="100%" height={300}>
-                  <LineChart data={userActivityData}>
-                    <XAxis dataKey="name" stroke="#ccc" />
-                    <YAxis stroke="#ccc" />
-                    <Tooltip wrapperClassName="text-black" />
-                    <Line
-                      type="monotone"
-                      dataKey="users"
-                      stroke="#8884d8"
-                      strokeWidth={2}
-                      dot={{r: 4}}
-                      activeDot={{r: 6}}
-                    />
-                  </LineChart>
-                </ResponsiveContainer>
-              </CardContent>
-            </Card>
-            <Card className="bg-zinc-900 text-white border border-zinc-800">
-              <CardContent className="p-4">
-                <p className="text-lg font-semibold mb-4">
-                  Product Performance
-                </p>
-                <div className="flex justify-center">
-                  <ResponsiveContainer width="100%" height={200}>
-                    <PieChart>
-                      <Pie
-                        data={productData}
-                        cx="50%"
-                        cy="50%"
-                        labelLine={false}
-                        outerRadius={80}
-                        fill="#8884d8"
-                        dataKey="value"
-                      >
-                        {productData.map((_, index) => (
-                          <Cell
-                            key={`cell-${index}`}
-                            fill={COLORS[index % COLORS.length]}
-                          />
-                        ))}
-                      </Pie>
-                      <Tooltip wrapperClassName="text-black" />
-                    </PieChart>
-                  </ResponsiveContainer>
-                </div>
-                <div className="grid grid-cols-2 gap-2 mt-2">
-                  {productData.map((entry, index) => (
-                    <div key={index} className="flex items-center">
-                      <div
-                        className="w-3 h-3 rounded-full mr-2"
-                        style={{backgroundColor: COLORS[index % COLORS.length]}}
-                      ></div>
-                      <span className="text-sm">{entry.name}</span>
+                </CardContent>
+              </Card>
+              <Card className="bg-gradient-to-br max-w-[290px] from-purple-900 to-black text-white shadow-md shadow-purple-900">
+                <CardContent className="p-4">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <p className="text-purple-100">Subscriptions</p>
+                      <h2 className="text-2xl md:text-3xl font-bold">+2,350</h2>
+                      <p className="text-green-300 flex items-center mt-1 text-sm">
+                        <TrendingUp className="h-4 w-4 mr-1" /> +180.1% from
+                        last month
+                      </p>
                     </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+                    <div className="p-2 bg-purple-900 rounded-lg">
+                      <Users className="h-6 w-6" />
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="bg-gradient-to-br max-w-[290px] from-green-900 to-black text-white shadow-md shadow-green-900">
+                <CardContent className="p-4">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <p className="text-green-100">Sales</p>
+                      <h2 className="text-2xl md:text-3xl font-bold">
+                        +12,234
+                      </h2>
+                      <p className="text-green-300 flex items-center mt-1">
+                        <TrendingUp className="h-4 w-4 mr-1" /> +19% from last
+                        month
+                      </p>
+                    </div>
+                    <div className="p-2 bg-green-900 rounded-lg">
+                      <Activity className="h-6 w-6" />
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="bg-gradient-to-br max-w-[290px] from-red-900 to-black text-white shadow-md shadow-red-900">
+                <CardContent className="p-4">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <p className="text-red-100">Active Now</p>
+                      <h2 className="text-2xl md:text-3xl font-bold">+573</h2>
+                      <p className="text-green-300 flex items-center mt-1">
+                        <TrendingUp className="h-4 w-4 mr-1" /> +201 since last
+                        hour
+                      </p>
+                    </div>
+                    <div className="p-2 bg-red-900 rounded-lg">
+                      <Users className="h-6 w-6" />
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
 
-          
-          <div className=" max-w-[1200px]  flex justify-center items-center gap-5">
-           
-            <Card className="bg-zinc-900  w-[1200px] text-white border border-zinc-800 lg:col-span-2">
-              <CardContent className="p-4">
-                <div className="flex justify-between items-center mb-4">
-                  <p className="text-lg font-semibold">Recent Sales</p>
-                  <Button className="bg-zinc-800 text-white hover:bg-zinc-700 text-sm">
-                    View All
-                  </Button>
-                </div>
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead>
-                      <tr className="text-left text-gray-400 border-b border-zinc-800">
-                        <th className="pb-2">Customer</th>
-                        <th className="pb-2">Amount</th>
-                        <th className="pb-2">Date</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-zinc-800">
-                      {recentSales.map((sale, index) => (
-                        <tr key={index} className="hover:bg-zinc-800">
-                          <td className="py-3">
-                            <div className="flex items-center gap-3">
-                              <div className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center">
-                                <UserCircle className="w-6 h-6 text-gray-400" />
-                              </div>
-                              <div>
-                                <p className="font-medium">{sale.name}</p>
-                                <p className="text-sm text-gray-400">
-                                  {sale.email}
-                                </p>
-                              </div>
-                            </div>
-                          </td>
-                          <td className="py-3 font-semibold">{sale.amount}</td>
-                          <td className="py-3 text-gray-400">{sale.date}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </CardContent>
-            </Card>
-
-           
-            <div className="mt-7 mr-5">
-             
+            <div className="max-w-[1200px] grid grid-cols-3 mb-6 gap-6">
               <Card className="bg-zinc-900 text-white border border-zinc-800">
                 <CardContent className="p-4">
-                  <p className="text-lg font-semibold mb-4">Upcoming Events</p>
-                  <div className="space-y-3">
-                    {upcomingEvents.map((event, index) => (
-                      <div
-                        key={index}
-                        className="flex items-start p-2 rounded bg-zinc-800"
-                      >
-                        <div className="mr-3 p-2 bg-zinc-700 rounded-lg">
-                          <Calendar className="h-5 w-5 text-blue-400" />
-                        </div>
-                        <div>
-                          <p className="font-medium">{event.title}</p>
-                          <p className="text-sm text-gray-400">
-                            {event.time} - {event.date}
-                          </p>
-                        </div>
+                  <div className="flex justify-between items-center mb-4">
+                    <p className="text-lg font-semibold">Revenue Overview</p>
+                    <div className="flex items-center text-sm">
+                      <div className="flex items-center mr-3">
+                        <div className="w-3 h-3 rounded-full bg-blue-900 mr-1"></div>
+                        <span>Revenue</span>
+                      </div>
+                      <div className="flex items-center mr-3">
+                        <div className="w-3 h-3 rounded-full bg-red-900 mr-1"></div>
+                        <span>Expenses</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-3 h-3 rounded-full bg-green-900 mr-1"></div>
+                        <span>Profit</span>
+                      </div>
+                    </div>
+                  </div>
+                  <ResponsiveContainer width="100%" height={300}>
+                    <BarChart data={revenueData}>
+                      <XAxis dataKey="name" stroke="#ccc" />
+                      <YAxis stroke="#ccc" />
+                      <Tooltip wrapperClassName="text-black" />
+                      <Bar
+                        dataKey="revenue"
+                        fill="#1e3a8a"
+                        radius={[4, 4, 0, 0]}
+                      />
+                      <Bar
+                        dataKey="expenses"
+                        fill="#7f1d1d"
+                        radius={[4, 4, 0, 0]}
+                      />
+                      <Bar
+                        dataKey="profit"
+                        fill="#14532d"
+                        radius={[4, 4, 0, 0]}
+                      />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </CardContent>
+              </Card>
+              <Card className="bg-zinc-900 text-white border border-zinc-800">
+                <CardContent className="p-4">
+                  <div className="flex justify-between items-center mb-4">
+                    <p className="text-lg font-semibold">User Activity</p>
+                    <Button className="bg-zinc-800 text-white hover:bg-zinc-700 text-sm">
+                      View Details
+                    </Button>
+                  </div>
+                  <ResponsiveContainer width="100%" height={300}>
+                    <LineChart data={userActivityData}>
+                      <XAxis dataKey="name" stroke="#ccc" />
+                      <YAxis stroke="#ccc" />
+                      <Tooltip wrapperClassName="text-black" />
+                      <Line
+                        type="monotone"
+                        dataKey="users"
+                        stroke="#8884d8"
+                        strokeWidth={2}
+                        dot={{r: 4}}
+                        activeDot={{r: 6}}
+                      />
+                    </LineChart>
+                  </ResponsiveContainer>
+                </CardContent>
+              </Card>
+              <Card className="bg-zinc-900 text-white border border-zinc-800">
+                <CardContent className="p-4">
+                  <p className="text-lg font-semibold mb-4">
+                    Product Performance
+                  </p>
+                  <div className="flex justify-center">
+                    <ResponsiveContainer width="100%" height={200}>
+                      <PieChart>
+                        <Pie
+                          data={productData}
+                          cx="50%"
+                          cy="50%"
+                          labelLine={false}
+                          outerRadius={80}
+                          fill="#8884d8"
+                          dataKey="value"
+                        >
+                          {productData.map((_, index) => (
+                            <Cell
+                              key={`cell-${index}`}
+                              fill={COLORS[index % COLORS.length]}
+                            />
+                          ))}
+                        </Pie>
+                        <Tooltip wrapperClassName="text-black" />
+                      </PieChart>
+                    </ResponsiveContainer>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 mt-2">
+                    {productData.map((entry, index) => (
+                      <div key={index} className="flex items-center">
+                        <div
+                          className="w-3 h-3 rounded-full mr-2"
+                          style={{
+                            backgroundColor: COLORS[index % COLORS.length],
+                          }}
+                        ></div>
+                        <span className="text-sm">{entry.name}</span>
                       </div>
                     ))}
                   </div>
                 </CardContent>
               </Card>
             </div>
-          </div>
+
+            <div className=" max-w-[1200px]  flex justify-center items-center gap-5">
+              <Card className="bg-zinc-900  w-[1200px] text-white border border-zinc-800 lg:col-span-2">
+                <CardContent className="p-4">
+                  <div className="flex justify-between items-center mb-4">
+                    <p className="text-lg font-semibold">Recent Sales</p>
+                    <Button className="bg-zinc-800 text-white hover:bg-zinc-700 text-sm">
+                      View All
+                    </Button>
+                  </div>
+                  <div className="overflow-x-auto">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="text-left text-gray-400 border-b border-zinc-800">
+                          <th className="pb-2">Customer</th>
+                          <th className="pb-2">Amount</th>
+                          <th className="pb-2">Date</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-zinc-800">
+                        {recentSales.map((sale, index) => (
+                          <tr key={index} className="hover:bg-zinc-800">
+                            <td className="py-3">
+                              <div className="flex items-center gap-3">
+                                <div className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center">
+                                  <UserCircle className="w-6 h-6 text-gray-400" />
+                                </div>
+                                <div>
+                                  <p className="font-medium">{sale.name}</p>
+                                  <p className="text-sm text-gray-400">
+                                    {sale.email}
+                                  </p>
+                                </div>
+                              </div>
+                            </td>
+                            <td className="py-3 font-semibold">
+                              {sale.amount}
+                            </td>
+                            <td className="py-3 text-gray-400">{sale.date}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <div className="mt-7 mr-5">
+                <Card className="bg-zinc-900 text-white border border-zinc-800">
+                  <CardContent className="p-4">
+                    <p className="text-lg font-semibold mb-4">
+                      Upcoming Events
+                    </p>
+                    <div className="space-y-3">
+                      {upcomingEvents.map((event, index) => (
+                        <div
+                          key={index}
+                          className="flex items-start p-2 rounded bg-zinc-800"
+                        >
+                          <div className="mr-3 p-2 bg-zinc-700 rounded-lg">
+                            <Calendar className="h-5 w-5 text-blue-400" />
+                          </div>
+                          <div>
+                            <p className="font-medium">{event.title}</p>
+                            <p className="text-sm text-gray-400">
+                              {event.time} - {event.date}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </main>
       </div>

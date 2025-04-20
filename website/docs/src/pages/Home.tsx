@@ -69,7 +69,8 @@ const Home = () => {
 
   const testimonials = [
     {
-      imageSrc: 'hitesh-sir.png',
+      imageSrc:
+        'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059613/uignite/zablzf9i4csffqvlzy76.png',
       name: 'Hitesh Choudhary',
       title: 'Founder of ChaiCode',
       message:
@@ -77,7 +78,8 @@ const Home = () => {
       rating: 5,
     },
     {
-      imageSrc: 'piyush-sir.png',
+      imageSrc:
+        'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059612/uignite/intr9ojetxf32pehtnar.png',
       name: 'Piyush Garg',
       title: 'Co-founder of OnlyFans',
       message:
@@ -85,7 +87,8 @@ const Home = () => {
       rating: 5,
     },
     {
-      imageSrc: 'anirudh-sir.png',
+      imageSrc:
+        'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059613/uignite/b1eotihxzahyjw91uz1i.png',
       name: 'Anirudh Jwala',
       title: 'Gareebo Ko Books Dene Wala',
       message:
@@ -93,7 +96,8 @@ const Home = () => {
       rating: 5,
     },
     {
-      imageSrc: 'mukul-sir.png',
+      imageSrc:
+        'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059612/uignite/tkq3lcujr8m9r1eemu4k.png',
       name: 'Mukul Padwal',
       title: `Everyone's Favourite TA`,
       message:
@@ -101,7 +105,8 @@ const Home = () => {
       rating: 5,
     },
     {
-      imageSrc: 'manu-sir.png',
+      imageSrc:
+        'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059612/uignite/mfwshi7elmim6aqidhgd.png',
       name: 'Manu Arora',
       title: 'Founder of Aceternity',
       message:
@@ -109,7 +114,8 @@ const Home = () => {
       rating: 5,
     },
     {
-      imageSrc: 'vinayak-sir.png',
+      imageSrc:
+        'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059611/uignite/no0t2oerr258iefbhxjx.png',
       name: 'Vinayak Sarawagi',
       title: 'Founder of IntentJS',
       message:
@@ -228,7 +234,7 @@ const Home = () => {
               <Card className="mb-6 border-0 dark:shadow-lg dark:shadow-black bg-gradient-to-tr from-blue-600 via-gray-900 to-black p-6 mt-8 rounded-xl  text-white w-full max-w-xl h-[53%] sm:h-[45%] md:h-[45%] lg:[45%] mx-auto">
                 <div className="flex gap-3 items-center">
                   <img
-                    src="pain.png"
+                    src="https://res.cloudinary.com/dmnh10etf/image/upload/q_70/v1745146415/pain_mkvnpr.png"
                     alt="Album Cover"
                     className="w-32 h-32 rounded-xl object-cover"
                   />
