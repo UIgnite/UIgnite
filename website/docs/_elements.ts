@@ -33,7 +33,6 @@ import {
   ThemeToggleBtn,
   VideoPlayer,
   Testimonials,
-  useTheme,
   cn,
 } from '@pkgs/uignite';
 
