@@ -26,9 +26,11 @@ const OurJourney = () => {
       <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed text-lg">
         Initially, the project was built using React with JSX. But thanks to
         some solid feedback from{' '}
-        <span className="font-medium text-white">Piyush Sir</span>, we migrated
-        the entire codebase to TypeScript — a shift that made everything more
-        scalable and maintainable.
+        <span className="font-medium text-zinc-900 dark:text-white ">
+          Piyush Sir
+        </span>
+        , we migrated the entire codebase to TypeScript — a shift that made
+        everything more scalable and maintainable.
       </p>
 
       <p className="text-neutral-700 dark:text-neutral-300 mb-4 leading-relaxed text-lg">
@@ -43,11 +45,11 @@ const OurJourney = () => {
         — it was about growing as a team and learning by doing.
       </p>
 
-      <hr className="my-6" />
+      <hr className="mt-10 text-zinc-300/70 dark:text-zinc-800/70" />
 
       <div className="flex justify-center items-center px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-7xl">
-          <h2 className="text-3xl font-semibold mt-12 text-center">
+          <h2 className="text-3xl font-semibold mt-10 text-center">
             Meet the Team Behind UIgnite
           </h2>
 

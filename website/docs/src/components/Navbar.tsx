@@ -33,7 +33,7 @@ function MainNavbar() {
     <header className={`w-full py-2 sm:px-6 lg:px-10`}>
       <div className="max-w-7xl mx-auto flex items-center gap-4 sm:justify-between px-3">
         {/* Logo + Nav */}
-        <div className="hidden md:flex gap-4 items-center">
+        <div className="hidden lg:flex gap-4 items-center">
           <NavLink to={'/'}>
             <img
               src={
@@ -56,7 +56,7 @@ function MainNavbar() {
                   cn(
                     'text-sm md:text-base px-3 py-2 rounded-md transition-opacity duration-200 opacity-70 hover:opacity-100',
                     isActive &&
-                      'opacity-100 font-medium text-blue-600 dark:text-blue-400'
+                      'opacity-100 font-medium text-zinc-900 dark:text-zinc-100'
                   )
                 }
               >
@@ -68,7 +68,7 @@ function MainNavbar() {
 
         {/* Hamburger */}
         <button
-          className="md:hidden p-2 rounded hover:bg-zinc-200 dark:hover:bg-zinc-700 transition"
+          className="lg:hidden p-2 rounded hover:bg-zinc-200 dark:hover:bg-zinc-700 transition"
           onClick={toggleMobileMenu}
           aria-label="Toggle Menu"
         >
@@ -105,7 +105,7 @@ function MainNavbar() {
               cn(
                 'mt-1 block px-3 py-2 rounded-md text-sm transition hover:bg-zinc-200 dark:hover:bg-zinc-700',
                 isActive
-                  ? 'font-medium text-blue-600 dark:text-blue-400 bg-zinc-200 dark:bg-zinc-700'
+                  ? 'font-medium text-zinc-900 dark:text-zinc-100 bg-zinc-200 dark:bg-zinc-700'
                   : 'text-zinc-700 dark:text-zinc-300'
               )
             }
@@ -121,7 +121,7 @@ function MainNavbar() {
                 cn(
                   'block px-3 py-2 rounded-md text-sm transition hover:bg-zinc-200 dark:hover:bg-zinc-700',
                   isActive
-                    ? 'font-medium text-blue-600 dark:text-blue-400 bg-zinc-200 dark:bg-zinc-700'
+                    ? 'font-medium text-zinc-900 dark:text-zinc-100 bg-zinc-200 dark:bg-zinc-700'
                     : 'text-zinc-700 dark:text-zinc-300'
                 )
               }
