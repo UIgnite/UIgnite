@@ -92,10 +92,12 @@ function VideoPlayer({
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
-    if (autoplay && !played) timeout = setTimeout(handleTooglePlaying, 0);
-
+    if (autoplay && !played) {
+      setVolumeRange(0);
+      timeout = setTimeout(handleTooglePlaying, 400);
+    }
     return () => {
-      if (timeout) clearTimeout(timeout);
+      clearTimeout(timeout);
     };
   }, [autoplay, videoRef.current, played]);
 
@@ -201,7 +203,6 @@ function VideoPlayer({
         hidden={!played}
         muted={isMuted}
         loop={loop}
-        autoPlay={autoplay}
         className="w-full h-full"
       >
         <source src={src} type={srcType ?? 'video/mp4'} />
