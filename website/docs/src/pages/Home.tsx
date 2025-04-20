@@ -210,7 +210,6 @@ const Home = () => {
             <VideoPlayer
               src="https://res.cloudinary.com/do2tmd6xp/video/upload/v1744979534/5xnmps_2_pr75vu.mp4"
               thumbnailUrl="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
-              muted
               autoplay
               loop
               className="shadow-black max-h-[200px] sm:max-h-[200px] md:max-h-full lg:max-h-full dark:shadow-indigo-900 shadow-2xl rounded-xl"
