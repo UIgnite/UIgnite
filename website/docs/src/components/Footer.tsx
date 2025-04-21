@@ -15,17 +15,17 @@ function Footer() {
     tagline: ` UIgnite brings together design, performance, and TypeScript — so you can ship faster with confidence.`,
     socialLinks: [
       {
-        icon: <FiGithub className="icon" />,
+        icon: <FiGithub className="icon size-5" />,
         href: 'https://github.com/UIgnite/UIgnite',
         label: 'GitHub',
       },
       {
-        icon: <FaDiscord className="icon" />,
+        icon: <FaDiscord className="icon size-5" />,
         href: 'https://discord.com/invite/WDrH3zuWFb',
         label: 'Discord',
       },
       {
-        icon: <FaXTwitter className="icon" />,
+        icon: <FaXTwitter className="icon size-5" />,
         href: `https://x.com/UIgnite_`,
         label: 'X',
       },
@@ -124,7 +124,7 @@ const FooterComponent = ({
       <div className="max-w-7xl mx-auto py-8 flex flex-col md:flex-row md:justify-between gap-10 flex-wrap">
         {/* Left Section */}
         <div className="flex flex-col gap-6 max-w-md">
-          <div className="w-48 h-12 hover:scale-105 transition-all cursor-pointer -ml-10">
+          <div className="w-48 h-12 hover:scale-105 transition-all cursor-pointer -ml-8">
             <img
               alt="Logo"
               className="h-full w-full object-contain"
@@ -132,7 +132,9 @@ const FooterComponent = ({
             />
           </div>
 
-          <p className="text-sm text-gray-600 dark:text-zinc-400">{tagline}</p>
+          <p className="text-base text-gray-600 dark:text-zinc-400">
+            {tagline}
+          </p>
 
           {/* Social links */}
           <div className="flex gap-4 text-zinc-500">
@@ -155,7 +157,7 @@ const FooterComponent = ({
         </div>
 
         {/* Right Section */}
-        <div className="flex flex-wrap gap-10 text-sm text-zinc-500 dark:text-zinc-400">
+        <div className="flex flex-wrap gap-10 text-base text-zinc-500 dark:text-zinc-400">
           {linkSections.map(({title, links}) => (
             <div key={title} className="min-w-[140px] flex flex-col gap-2">
               <h3 className="text-zinc-800 dark:text-zinc-100 font-semibold">
@@ -181,7 +183,7 @@ const FooterComponent = ({
 
       {/* Bottom line */}
       <div>
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-zinc-800 dark:text-zinc-300 gap-2">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-base text-zinc-800 dark:text-zinc-300 gap-2">
           <div>© 2025 {copyrightText}. All rights reserved.</div>
           <div>
             <span>Built with ❤️ by </span>

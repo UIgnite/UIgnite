@@ -33,7 +33,7 @@ function MainNavbar() {
     <header className={`w-full py-2 sm:px-6 lg:px-10`}>
       <div className="max-w-7xl mx-auto flex items-center gap-4 sm:justify-between px-3">
         {/* Logo + Nav */}
-        <div className="hidden lg:flex gap-4 items-center">
+        <div className="hidden lg:flex gap-4 items-center -ml-9">
           <NavLink to={'/'}>
             <img
               src={
@@ -87,7 +87,7 @@ function MainNavbar() {
               className={`${pathname === '/' ? 'dark:bg-transparent' : 'dark:bg-transparent'} cursor-pointer p-2 rounded   dark:hover:bg-zinc-800  hover:bg-zinc-200`}
             />
             <a
-            href='https://github.com/UIgnite/UIgnite'
+              href="https://github.com/UIgnite/UIgnite"
               className={`${pathname === '/' ? 'dark:bg-transparent' : 'dark:bg-transparent'} cursor-pointer p-2 rounded   dark:hover:bg-zinc-800  hover:bg-zinc-200`}
             >
               <GitHubLogoIcon className=" h-4 w-4 " />

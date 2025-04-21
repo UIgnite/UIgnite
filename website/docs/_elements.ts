@@ -438,7 +438,7 @@ function Component () {
     <div className="text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
       Aman Gupta
     </div>
-    <div className="text-sm text-neutral-600 dark:text-zinc-400 ">
+    <div className="text-sm text-neutral-600 dark:text-zinc-400">
       Backend Developer at OnlyDevs
     </div>
   </CardContent>
