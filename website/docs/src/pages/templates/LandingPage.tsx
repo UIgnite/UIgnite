@@ -146,7 +146,7 @@ export const LandingPage = () => {
   const [isPause, setPause] = useState(false);
   const testimonials = [
     {
-      imageSrc: 'hitesh-sir.png',
+      imageSrc: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059613/uignite/zablzf9i4csffqvlzy76.png',
       name: 'Hitesh Choudhary',
       title: 'Founder of ChaiCode',
       message:
@@ -154,7 +154,7 @@ export const LandingPage = () => {
       rating: 5,
     },
     {
-      imageSrc: 'piyush-sir.png',
+      imageSrc: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059612/uignite/intr9ojetxf32pehtnar.png',
       name: 'Piyush Garg',
       title: 'Co-founder of OnlyFans',
       message:
@@ -162,7 +162,7 @@ export const LandingPage = () => {
       rating: 5,
     },
     {
-      imageSrc: 'anirudh-sir.png',
+      imageSrc: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059613/uignite/b1eotihxzahyjw91uz1i.png',
       name: 'Anirudh Jwala',
       title: 'Gareebo Ko Books Dene Wala',
       message:
@@ -170,7 +170,7 @@ export const LandingPage = () => {
       rating: 5,
     },
     {
-      imageSrc: 'mukul-sir.png',
+      imageSrc: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059612/uignite/tkq3lcujr8m9r1eemu4k.png',
       name: 'Mukul Padwal',
       title: `Everyone's Favourite TA`,
       message:
@@ -178,7 +178,7 @@ export const LandingPage = () => {
       rating: 5,
     },
     {
-      imageSrc: 'manu-sir.png',
+      imageSrc: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059612/uignite/mfwshi7elmim6aqidhgd.png',
       name: 'Manu Arora',
       title: 'Founder of Aceternity',
       message:
@@ -186,7 +186,7 @@ export const LandingPage = () => {
       rating: 5,
     },
     {
-      imageSrc: 'vinayak-sir.png',
+      imageSrc: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059611/uignite/no0t2oerr258iefbhxjx.png',
       name: 'Vinayak Sarawagi',
       title: 'Founder of IntentJS',
       message:

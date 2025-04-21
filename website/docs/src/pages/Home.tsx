@@ -43,7 +43,7 @@ const Home = () => {
     },
     {
       icon: <Moon className="text-blue-500" size={24} />,
-      title: 'Light & Dark Mode Support',
+      title: 'Light & Dark Mode',
       description:
         'Every UIgnite component is built to seamlessly adapt to light and dark themes out of the box — no configuration, no overrides.',
     },
@@ -61,7 +61,7 @@ const Home = () => {
     },
     {
       icon: <Layers className="text-blue-500" size={24} />,
-      title: 'Modular and Customizable',
+      title: 'Fully Customizable',
       description:
         'UIgnite offers a modular architecture, allowing you to easily extend, override, and customize components to fit your needs.',
     },
@@ -143,9 +143,9 @@ const Home = () => {
                   </span>
                 </h1>
 
-                <p className="!dark text-gray-600 text-sm sm:text-base md:text-lg max-w-md sm:max-w-lg md:max-w-prose mx-auto dark:text-zinc-400">
+                <p className=" text-gray-600 text-sm sm:text-base md:text-lg max-w-md sm:max-w-lg md:max-w-prose mx-auto dark:text-zinc-400">
                   UIgnite helps you{'  '}
-                  <span className="!dark font-semibold text-blue-900 dark:text-blue-50 drop-shadow-[0_0_4px_rgba(30,64,175,0.1)] dark:drop-shadow-[0_0_4px_rgba(30,64,175,0.8)]">
+                  <span className=" font-semibold text-blue-900 dark:text-blue-50 drop-shadow-[0_0_4px_rgba(30,64,175,0.1)] dark:drop-shadow-[0_0_4px_rgba(30,64,175,0.8)]">
                     skip the design rabbit hole
                   </span>{' '}
                   with ready-to-use components that just look right.
@@ -153,7 +153,7 @@ const Home = () => {
 
                 <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Link to="/components/Installation">
-                    <Button className="!dark dark:hover:text-gray-200  bg-transparent border text-lg dark:hover:border-white/20 dark:border-blue-500 hover:border-blue-800 hover:text-blue-800 hover:bg-transparent text-blue-500 transition duration-300 rounded-lg px-6 py-6">
+                    <Button className=" dark:hover:text-gray-200  bg-transparent border text-lg dark:hover:border-white/20 dark:border-blue-500 hover:border-blue-800 hover:text-blue-800 hover:bg-transparent text-blue-500 transition duration-300 rounded-lg px-6 py-6">
                       Get Started
                     </Button>
                   </Link>
