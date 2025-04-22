@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://uignite.in/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Static Pages -->
+  <url>
+    <loc>https://uignite.in/templates</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://uignite.in/pricing</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uignite.in/journey</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://uignite.in/feedback</loc>
+    <priority>0.8</priority>
+  </url>
+
+
+  <!-- Dynamic Components (replace or auto-generate this section) -->
+  <url>
+    <loc>https://uignite.in/components/Installation</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/Accordion</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/AlertDialogBox</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/Avatar</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/Button</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/Card</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/Carosuel</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/Dropdown</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/Footer</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/Input</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/InputOtp</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/MessageBot</loc>
+  </url>
+<url>
+    <loc>https://uignite.in/components/Navbar</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/PricingCard</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/Skeleton</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/Spinner</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/StarRating</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/Tabs</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/Testimonials</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/TextArea</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/Toast</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/Tooltip</loc>
+  </url>
+  <url>
+    <loc>https://uignite.in/components/VideoPlayer</loc>
+</url>
+</urlset>
