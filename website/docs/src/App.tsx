@@ -12,6 +12,7 @@ import {LandingPage} from './pages/templates/LandingPage';
 import OurJourney from './pages/components/OurJourney';
 import DashboardPage from './pages/templates/DashboardTemplate';
 import HomePage from './pages/templates/HomePage';
+import VSCodeExtensionSvgPage from './pages/VsCodeSvgPage';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Route path="/templates/dashboard" element={<DashboardPage />} />
 
       <Route element={<RootLayout />}>
+      <Route path="/svg-repo" element={<VSCodeExtensionSvgPage />} />
         <Route path="feedback" element={<FeedbackForm />} />
         <Route path="/docs" element={<Landing />} />
 
