@@ -5,6 +5,13 @@
   <url>
     <loc>https://uignite.in/</loc>
     <priority>1.0</priority>
+    <video:video>
+      <video:thumbnail_loc>https://uignite.com/homepage.png</video:thumbnail_loc>
+      <video:title>UIgnite Release Video</video:title>
+      <video:description>Less Tweaking More Shipping</video:description>
+      <video:content_loc>https://res.cloudinary.com/do2tmd6xp/video/upload/v1744979534/5xnmps_2_pr75vu.mp4</video:content_loc>
+      <video:duration>45</video:duration>
+    </video:video>
   </url>
 
   <!-- Static Pages -->
@@ -19,6 +26,36 @@
   <url>
     <loc>https://uignite.in/journey</loc>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059670/uignite/pd6vhwufdxmrvmb1r6dw.png</image:loc>
+      <image:caption>Backend Developer at OnlyDevs</image:caption>
+      <image:title>Aman Gupta</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059670/uignite/tgwysbhygrqweqqfcr0s.jpg</image:loc>
+      <image:caption>Backend Developer at OnlyDevs</image:caption>
+      <image:title>Ram Bhardwaj</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059669/uignite/hvkxluoaw9qraiogewad.png</image:loc>
+      <image:caption>Backend Developer at OnlyDevs</image:caption>
+      <image:title>Saurav Jha</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059669/uignite/hop3sfvj72wdaryxcejf.jpg</image:loc>
+      <image:caption>Programmer at OnlyDevs</image:caption>
+      <image:title>Aditya Sharma</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059668/uignite/wpv97inpphsf6guic703.jpg</image:loc>
+      <image:caption>Designer and Video Editor</image:caption>
+      <image:title>Rohit Singh</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059668/uignite/wmdwgvjrfczaqj4nzsid.jpg</image:loc>
+      <image:caption>Writer</image:caption>
+      <image:title>Jahanwee</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://uignite.in/feedback</loc>
