@@ -61,21 +61,21 @@ const OurJourney = () => {
               {
                 name: 'Aman Gupta',
                 role: 'Backend Developer at OnlyDevs',
-                img: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059670/uignite/pd6vhwufdxmrvmb1r6dw.png',
+                img: 'https://storage.uignite.in/me.png',
                 commits: '199+',
                 prs: '35+',
               },
               {
                 name: 'Ram Bhardwaj',
                 role: 'Backend Developer at OnlyDevs',
-                img: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059670/uignite/tgwysbhygrqweqqfcr0s.jpg',
+                img: 'https://storage.uignite.in/boy.jpg',
                 commits: '251+',
                 prs: '40+',
               },
               {
                 name: 'Saurav Jha',
                 role: 'Backend Developer at OnlyDevs',
-                img: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059669/uignite/hvkxluoaw9qraiogewad.png',
+                img: 'https://storage.uignite.in/saurav.png',
                 commits: '152+',
                 prs: '30+',
               },
@@ -89,7 +89,7 @@ const OurJourney = () => {
               {
                 name: 'Rohit Singh',
                 role: 'Designer and Video Editor',
-                img: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059668/uignite/wpv97inpphsf6guic703.jpg',
+                img: 'https://storage.uignite.in/Rohit_pic.jpeg',
                 commits: '50+',
                 prs: '10+',
               },
@@ -140,7 +140,7 @@ const OurJourney = () => {
                   </div>
                 </CardFooter>
               </Card>
-            ))}
+           ))}
           </div>
         </div>
       </div>
