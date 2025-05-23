@@ -82,7 +82,7 @@ const OurJourney = () => {
               {
                 name: 'Aditya Sharma',
                 role: 'Programmer at OnlyDevs',
-                img: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059669/uignite/hop3sfvj72wdaryxcejf.jpg',
+                img: 'https://storage.uignite.in/IMG_20240721_175409.jpg',
                 commits: '182+',
                 prs: '32+',
               },
