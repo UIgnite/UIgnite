@@ -88,7 +88,7 @@ const OurJourney = () => {
               },
               {
                 name: 'Rohit Singh',
-                role: 'Designer and Video Editor',
+                role: 'Frontend Developer & Designer',
                 img: 'https://storage.uignite.in/Rohit_pic.jpeg',
                 commits: '50+',
                 prs: '10+',
@@ -96,7 +96,7 @@ const OurJourney = () => {
               {
                 name: 'Jahanwee',
                 role: 'Writer',
-                img: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059668/uignite/wmdwgvjrfczaqj4nzsid.jpg',
+                img: '/assets/avatars/jahanwee.png',
                 commits: '50+',
                 prs: '10+',
               },
