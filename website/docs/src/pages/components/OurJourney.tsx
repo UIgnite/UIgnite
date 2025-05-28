@@ -96,7 +96,7 @@ const OurJourney = () => {
               {
                 name: 'Jahanwee',
                 role: 'Writer',
-                img: '/assets/avatars/jahanwee.png',
+                img: '/assets/avatars/jahanwee.jpg',
                 commits: '50+',
                 prs: '10+',
               },
