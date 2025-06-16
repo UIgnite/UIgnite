@@ -208,7 +208,7 @@ const Home = () => {
 
           <div className="flex items-center justify-center ">
             <VideoPlayer
-              src="https://res.cloudinary.com/do2tmd6xp/video/upload/v1744979534/5xnmps_2_pr75vu.mp4"
+              src="https://storage.uignite.in/vid.mp4"
               thumbnailUrl="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
               autoplay
               loop
