@@ -126,8 +126,8 @@ const elements = [
     ],
     element: `
 <div className = "flex flex-row gap-2" >
-  <Avatar url={"https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059612/uignite/intr9ojetxf32pehtnar.png"} alt={"user"} />
-  <Avatar url={"https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059613/uignite/zablzf9i4csffqvlzy76.png"} alt={"user"} />
+  <Avatar url={"https://uignite.in/hitesh-sir.png"} alt={"user"} />
+  <Avatar url={"https://uignite.in/piyush-sir.png"} alt={"user"} />
 </div>
 `,
     variation: [
@@ -138,7 +138,7 @@ const elements = [
   <div className="relative hover:z-20 transition-all duration-300 ease-in-out">
     <Tooltip title="Aman Gupta" options={{ tooltipStyle: { width: 'auto' } }}>
       <Avatar
-        url="https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059670/uignite/pd6vhwufdxmrvmb1r6dw.png"
+        url="https://storage.uignite.in/me.png"
         alt="Aman Gupta"
         className="w-12 h-12 rounded-full object-cover ring-2 ring-white shadow-md hover:scale-110 transition-transform duration-300 ease-in-out"
       />
@@ -147,7 +147,7 @@ const elements = [
   <div className="relative -ml-7 hover:z-20 transition-all duration-300 ease-in-out">
     <Tooltip title="Ram Bhardwaj" options={{ tooltipStyle: { width: 'auto' } }}>
       <Avatar
-        url="https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059670/uignite/tgwysbhygrqweqqfcr0s.jpg"
+        url="https://storage.uignite.in/boy.jpg"
         alt="Ram Bhardwaj"
         className="w-12 h-12 rounded-full object-cover ring-2 ring-white shadow-md hover:scale-110 transition-transform duration-300 ease-in-out"
       />
@@ -156,7 +156,7 @@ const elements = [
   <div className="relative -ml-7 hover:z-20 transition-all duration-300 ease-in-out">
     <Tooltip title="Aditya Sharma" options={{ tooltipStyle: { width: 'auto' } }}>
       <Avatar
-        url="https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059669/uignite/hop3sfvj72wdaryxcejf.jpg"
+        url="https://storage.uignite.in/IMG_20240721_175409.jpg"
         alt="Aditya Sharma"
         className="w-12 h-12 rounded-full object-cover ring-2 ring-white shadow-md hover:scale-110 transition-transform duration-300 ease-in-out"
       />
@@ -165,7 +165,7 @@ const elements = [
   <div className="relative -ml-7 hover:z-20 transition-all duration-300 ease-in-out">
     <Tooltip title="Saurav Jha" options={{ tooltipStyle: { width: 'auto' } }}>
       <Avatar
-        url="https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059669/uignite/hvkxluoaw9qraiogewad.png"
+        url="https://uignite.in/assets/avatars/jahanwee.jpg"
         alt="Saurav Jha"
         className="w-12 h-12 rounded-full object-cover ring-2 ring-white shadow-md hover:scale-110 transition-transform duration-300 ease-in-out"
       />
@@ -174,7 +174,7 @@ const elements = [
   <div className="relative -ml-7 hover:z-20 transition-all duration-300 ease-in-out">
     <Tooltip title="Rohit Singh" options={{ tooltipStyle: { width: 'auto' } }}>
       <Avatar
-        url="https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059668/uignite/wpv97inpphsf6guic703.jpg"
+        url="https://storage.uignite.in/Rohit_pic.jpeg"
         alt="Rohit Singh"
         className="w-12 h-12 rounded-full object-cover ring-2 ring-white shadow-md hover:scale-110 transition-transform duration-300 ease-in-out"
       />
@@ -323,7 +323,7 @@ const elements = [
 <Card className="rounded-2xl shadow-md overflow-hidden w-full max-w-md mx-auto bg-zinc-100 dark:bg-zinc-900">
 <div className="aspect-video">
   <img
-    src="https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059609/uignite/d2d99wj4zkyx51mbiyiu.jpg"
+    src="https://imgproxy.learnyst.com/learnyst-user-assets/school-assets/schools/171024/courses/214297/2Techies_lyst1734202474139.jpg"
     alt="Web Dev Cohort"
     className="object-cover w-full h-full rounded"
   />
@@ -380,7 +380,7 @@ function Component () {
     <Card className="mt-6 rounded-2xl shadow-lg max-h-min bg-zinc-100 dark:bg-zinc-900">
         <CardHeader className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 px-4 pt-4">
           <div className="flex items-center gap-3">
-            <Avatar url="https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059613/uignite/zablzf9i4csffqvlzy76.png" alt="avatar" />
+            <Avatar url="https://uignite.in/hitesh-sir.png" alt="avatar" />
             <div>
               <CardTitle className="text-base">Hitesh Chaudhary</CardTitle>
               <CardDescription className="text-sm text-zinc-600 dark:text-zinc-400">
@@ -428,7 +428,7 @@ function Component () {
 <Card className="m-0 p-0 max-w-xs rounded-3xl shadow-md overflow-hidden mx-auto bg-zinc-100 dark:bg-zinc-900">
   <CardHeader>
     <img
-      src="https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059670/uignite/pd6vhwufdxmrvmb1r6dw.png"
+      src="https://storage.uignite.in/me.png"
       alt=""
       className="w-full h-72 object-cover rounded-t-xl"
     />
@@ -665,8 +665,8 @@ function Component () {
     element: `
 function FooterComponent() {
   const footerProps = {
-    logoDark: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059611/uignite/dtst2deim1sgv2g5dcm6.png',
-    logoLight: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059611/uignite/gzfqtahpfc93ybugfiwr.png',
+    logoDark: 'https://storage.uignite.in/Dark.png',
+    logoLight: 'https://storage.uignite.in/Logo_Light.png',
     tagline: 'Home for programmers',
     socialLinks: [
       {
@@ -891,8 +891,8 @@ function PasswordInput() {
   <div> Upar Dekho Upar... </div>
     <div className="hidden"> 
      <Navbar
-        darkModeLogo="https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059611/uignite/dtst2deim1sgv2g5dcm6.png"
-        lightModoLogo="https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059611/uignite/gzfqtahpfc93ybugfiwr.png"
+        darkModeLogo="https://storage.uignite.in/Dark.png"
+        lightModoLogo="https://storage.uignite.in/Logo_Light.png"
         navbarLinks={[
           {name: 'Cohorts', link: '/'},
           {name: 'Udemy', link: '/'},
@@ -1197,7 +1197,7 @@ function Testimonial () {
     
   const testimonials = [
     {
-      imageSrc: 'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059612/uignite/mfwshi7elmim6aqidhgd.png',
+      imageSrc: 'https://uignite.in/manu-sir.png',
       name: 'Manu Arora',
       title: 'Founder of Aceternity',
       message:
