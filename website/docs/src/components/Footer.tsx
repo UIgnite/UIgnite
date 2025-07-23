@@ -9,9 +9,9 @@ import {FaXTwitter} from 'react-icons/fa6';
 function Footer() {
   const footerProps = {
     logoDark:
-      'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059613/uignite/xfj6lgzo51ov1nv6bben.png',
+      'https://storage.uignite.in/Dark.png',
     logoLight:
-      'https://res.cloudinary.com/do2tmd6xp/image/upload/q_70/v1745059611/uignite/myjfxbyt80uuxvkbpjqu.png',
+      'https://storage.uignite.in/Logo_Light.png',
     tagline: ` UIgnite brings together design, performance, and TypeScript — so you can ship faster with confidence.`,
     socialLinks: [
       {
